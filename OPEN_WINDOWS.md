@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 11:01:26 AM PT | window: last 72h | 40 tasks | index total 886 (parsed 5, cached 881)
+Generated: 8/22/2026, 12:01:27 PM PT | window: last 72h | 40 tasks | index total 887 (parsed 4, cached 883)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787420987189` | 8/22/2026, 11:01:24 AM | 48 | 232KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
-| `1787420772345` | 8/22/2026, 11:00:36 AM | 27 | 204KB | #Qwen 3.8 27B  |
+| `1787421878922` | 8/22/2026, 12:01:22 PM | 62 | 1613KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
+| `1787256742974` | 8/22/2026, 12:01:18 PM | 711 | 8577KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787420772345` | 8/22/2026, 12:01:14 PM | 408 | 1170KB | #Qwen 3.8 27B  |
+| `1787420987189` | 8/22/2026, 11:47:08 AM | 162 | 875KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787420877031` | 8/22/2026, 10:47:57 AM | 1 | 883KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
-| `1787256742974` | 8/22/2026, 10:37:45 AM | 654 | 7438KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
 | `1787327963594` | 8/22/2026, 10:35:35 AM | 1376 | 4557KB | #Julia |
 | `1787370497651` | 8/22/2026, 1:07:24 AM | 984 | 6467KB | How fast is this? |
 | `1787366217908` | 8/21/2026, 10:16:49 PM | 296 | 1639KB | #Argus |
@@ -49,43 +50,12 @@ Generated: 8/22/2026, 11:01:26 AM PT | window: last 72h | 40 tasks | index total
 | `1787174702687` | 8/19/2026, 3:33:43 PM | 214 | 3553KB | #Argus/Team Hub |
 | `1787138864086` | 8/19/2026, 12:33:19 PM | 450 | 1864KB | #Frankenstein LLM GLM Speedup |
 | `1787159982042` | 8/19/2026, 12:32:42 PM | 228 | 9271KB | #Argus/Team Hub |
-| `1787122887382` | 8/19/2026, 11:53:23 AM | 554 | 4399KB | #San Mateo EMSA Complaint |
 
 ---
 
 ## Per-window detail
 
-### `1787420987189` — 8/22/2026, 11:01:24 AM PT — 48 turns
-
-**Original task:**
-
-```
-Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to be using the vision doorman which is currently kimi K3/ Sonnet 5. Please resolve this asap:
-
-{"message":"400 /chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","status":400,"code":"400","modelId":"frankenstein-llm","providerId":"litellm","details":{"message":"/chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","type":"None","param":"None","code":"400","pro
-```
-
-**Ideas referenced:** #10108, #10740, #10869, #11316, #11741, #11781, #12477, #12618, #12680, #12824, #12872, #12878, #13202, #13453, #13470, #16163, #16265, #16304, #16625, #16680, #16716, #16844, #17430, #1807, #18312, #18326, #18329, #20549, #2290, #23172, #25097, #25158, #25171, #25224, #25311, #2537, #26908, #26923, #27259, #9706
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787420772345` — 8/22/2026, 11:00:36 AM PT — 27 turns
-
-**Original task:**
-
-```
-#Qwen 3.8 27B 
-
-Retrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. 
-
-Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178732, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25097, #2537, #25378, #25381, #2546, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787420877031` — 8/22/2026, 10:47:57 AM PT — 1 turns
+### `1787421878922` — 8/22/2026, 12:01:22 PM PT — 62 turns
 
 **Original task:**
 
@@ -95,7 +65,7 @@ This person likely registered for multiple courses and now is seeing an insane b
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787256742974` — 8/22/2026, 10:37:45 AM PT — 654 turns
+### `1787256742974` — 8/22/2026, 12:01:18 PM PT — 711 turns
 
 **Original task:**
 
@@ -112,70 +82,147 @@ Shipped this window (all verified live):
    - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
 ```
 
-**Ideas referenced:** #12266, #12285, #12430, #12459, #12618, #12680, #15333, #17295, #178712, #17913, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #25128, #25155, #25185, #25888, #25925, #25926, #25935, #26229, #26435, #26470, #26696, #26731, #26848, #26914 [deployed], #26915 [executing], #26916, #27100, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27652, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #27833 [proposed], #27842 [proposed], #686227, #7317, #8598
+**Ideas referenced:** #0000, #12266, #12285, #12430, #12459, #12618, #12680, #15333, #17295, #178712, #17913, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #20251, #2043, #2076, #20903, #2113, #23184, #24995, #25066, #25125, #25128, #25155, #25185, #25888, #25925, #25926, #25935, #26229, #26435, #26470, #26696, #26731, #26848, #26914 [deployed], #26915 [executing], #26916, #27100, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27652, #27657, #27658, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #27833 [proposed], #27842 [proposed], #686227, #7317, #8598
 
 **Last PICKUP PROMPT:**
 
 ```
- reconcile #27488 [deployed]).
+etion result MUST open with a plain-English summary of 3-6 sentences BEFORE the PICKUP PROMPT block (and before any SESSION MEMORY blob when compressed). Written for Ruben, not the next agent: what this window did, the current state of the work, what happens next. No unexplained jargon (wedge, rung, send site), no bare pids or log ids without context, no machine-handoff artifact as the opening. The PICKUP PROMPT block is for the next window; the summary is for the human reading the result. A completion that opens with a SESSION MEMORY blob or a dense pickup prompt, leaving the human unable to parse what happened, violates this rule.
+
+Source incident 2026-08-22: VERITAS window shipped a compression blob + jargon-dense pickup prompt as the entire result. Ruben: "I don't really understand or know what happened here." 297 classification: scope error. The completion was scoped to machine handoff only and excluded the human reader. Rule 91 mandated the block for the next agent but nothing mandated a human-facing summary.
+
+## Do NOT retype the divider. Use the template below.
++++++++ REPLACE
+
+------- SEARCH
+reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161.
+=======
+reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161. 2026-08-22: human-readable summary section added after Ruben RCA 297 (completion opened with compression blob + jargon pickup prompt, human could not parse what happened).
++++++++ REPLACE
+</diff>
+<task_progress>
+- [x] Judge E2E tested OK (id=9), ERROR rows = transient LiteLLM wedge
+- [x] lib/truth_judge.php fixed + deployed; smoke test running
+- [x] All 4 VERITAS ideas confirmed [deployed] by executor
+- [x] Compressed + shipped pickup prompt (but no human summary — Ruben flagged)
+- [x] 297 RCA done: scope error, completion excluded human reader
+- [x] Causal fix: rule 91 now mandates plain-English summary section
+- [ ] Reindex MCP
+- [ ] Re-ship completion WITH plain summary + RCA + pickup prompt
+</task_progress>
+</replace_in_file>
+```
+
+### `1787420772345` — 8/22/2026, 12:01:14 PM PT — 408 turns
+
+**Original task:**
+
+```
+#Qwen 3.8 27B 
+
+Retrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. 
+
+Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #1798, #1828, #18312, #18326, #1876, #19567, #19653, #19903, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #26400, #26403, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+wrong premise | no rule change
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787121837052 — VERITAS: hand-fix the defective truth judge CFA wiring.
+Pick up task #1787327963594 - Qwen3.8-27B fleet rollout: lanes wired + benchmarks + spill order + Joshua/cleanup
 
-RUBEN DIRECTIVE (2026-08-22 10:34 PT, verbatim): "please resolve the truth judge problems. I'm dealing with the LLM issues in that window. I just need you to work on the truth judge issues and resolve." Ruben handles LLM/routing elsewhere — do NOT touch LLM/routing, ONLY the truth judge wiring.
-
-Where we left off (verified 2026-08-22 10:36 PT):
-- Judge core healthy: test row 6 verdict=FAIL caught 2/2 planted fake claims, judge=glm-5.2-local, 60.2s
-- R323 validator gates work (blocked unverified completion, veritas_l4_runs row 7)
-- ZERO production judge calls since release — the #27488 [deployed] wiring defect is why
-- Defect recorded as orchestrator event ID 6862277
-
-DEFECT SPEC (verified 2026-08-21 21:54 PT via live grep — re-verify before editing):
-1. /var/www/emtskills/cron/cron_email_responder.php:
-   - require_once lib/truth_judge.php DUPLICATED (lines 56-60) from double-deploy — dedupe to one
-   - ZERO call sites for call_truth_judge — gate never fires. Add pre-send gate: before an AI reply is sent, if high-stakes (money/student status/regulator/fleet), call truth judge; verdict FAIL → hold reply as draft / route to human, do not send.
-2. /var/www/emtskills/lib/truth_judge.php:
-   - line ~86: GLOBALS[...] missing $ prefix → $GLOBALS[...] (PHP8 fatal on that path)
-   - payload keys reply_text/tool_outputs do not match fleet API truth_judge expected keys text/evidence — fix payload build
-
-FIX PROCEDURE:
-1. Read both deployed files live (emsu-operations read_server_file)
-2. Patch via write_server_file (auto PHP lint + FPM reload)
-3. php -l both files
-4. E2E verify: trigger the gate path once (or invoke the lib function directly with a test payload) and confirm a NEW row lands in truth_judge_log (SELECT MAX(id) before/after)
-5. Update HANDOFF_NOTES, mark orchestrator event ID 6862277 resolved, reconcile #27488 [deployed]
+Where we left off (verified 2026-08-22 11:51 PT):
+- CLAUDDIA :11521 lane RESTORED + durable (engine was up since Aug21; reverse-tunnel script now carries the 11521 forward + per-minute cron guard). config.yaml model FIXED (was Nero's MLX path, every call would have 404'd). E2E through router VERIFIED: '2+2?' -> HTTP 200 content '4' (13.9s); complex 500-token reasoning query completed (2882 bytes)
+- NERO :11525 in the spill ladder at L4d (same Qwen3.8 layer as Claudia L4c) + tools pool; lanes raised 2->4; qwen2.5-coder:32b + mistral-small DELETED (32GB freed); translocated duplicate GUI ollama killed (was stealing the IPv4 loopback ollama port and wedging :11455)
+- SPILL ORDER LIVE (router reloaded, registry loaded 18:45:57Z): GLM (L4g) -> claudia-qwen38 (L4c) -> nero-qwen38 (L4d) -> cicero-235b (L4b) -> 120B pool (L4f) -> deepseek -> glm-5.2. Adapter _qwen38_priority tier enforces same order in frankenstein-tools pool
+- BENCHES: Claudia 5.7 tok/s single / 26.9 agg@4 / 53.7 agg@8 (6.7 per-stream flat); Nero 15.1 single / 22.1 agg@4 (sweet spot; N=6 degrades to 2.7/stream); Nero native ctx 262144 (262K > 131K bar)
+- JOSHUA: 70B crash-loop killed + disabled (root cause: OLD intel/vllm:0.17.0-xpu image cannot see XPU on kernel 7.0, kernel was ALREADY 7.0 so the handoff's upgrade-decision claim was STALE); both 70B ollama models deleted (80GB freed). REMAINING: FP8 29GB transfer ~97% (cron-guarded relay), joshua-qwen38.service staged but not started, lane not yet wired. All tracked in #27933 [executing]
+- CICERO: HOST DOWN from both WOPR + Claudia-LAN vantages (tunnels dead, ARP incomplete, no-route). NOT a 235B-removal wedge, the box is powered off/unreachable. Needs on-box hands
+- MAXIMUS: unreachable from ALL vantages (WOPR :2224 open-but-dead, Claudia same-LAN no-route). Needs on-box wake + the one-line WOPR key append (documented in fleet inventory)
+- Lost-box reprobe: WG mesh reachable = Joshua/Artemis/BigMac only; Julia :2205/:11513 dark (recurring kernel wedge; catch-relaunch cron armed); Cesar/Cato alive via GLM ring :8210
 
 Open threads to drive next:
-1. #27488 [deployed] — execute the fix above (THIS is the task)
-2. #27489 [deployed] — per-model L4 batteries for Opus-gap numbers (only 1 run exists)
-3. #27491 [deployed] — dashboard, deprioritize until judge traffic flows
-4. #27486 [deployed] — verify steering injection landed in steering files
+1. #27933 [executing] - Joshua: FP8 transfer ~97% (cron-guarded relay); when the .transfer_complete marker appears in the model dir on Joshua, run 'sudo systemctl enable --now joshua-qwen38' then verify :8001, add registry lane joshua-qwen38-27b at WG 10.100.0.4:8001 + config.yaml + bench
+2. #27869 [proposed] - Cicero 8-bit Qwen3.8 (BLOCKED: host down, needs on-box power/wake) + Maximus 4-bit (BLOCKED: needs on-box wake + WOPR key line: echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZxZvwAxtk/Z2cWnTsXUyGEAB+uG9rLdF/va6fDudfh emsuserver@wopr' >> ~/.ssh/authorized_keys)
+3. #27935 [proposed] - Raise Claudia adapter cap 11521 from 4 to 8 lanes (bench shows 6.7/stream flat at N=8); one drop-in env edit, left at 4 this window for KV headroom on long reasoning chains
+4. (human-only decision, no idea) - Julia box needs a physical power-cycle when someone is at Oceanside; catch-relaunch will auto-restore the 235B lane on return
 
 Reference IDs:
-- Ideas: #27488 [deployed], #27489 [deployed], #27491 [deployed], #27486 [deployed]
-- Orchestrator event ID: 6862277
-- Files touched: /var/www/emtskills/lib/truth_judge.php, cron/cron_email_responder.php
+- Ideas filed: #27933 [executing], #27935 [proposed]
+- Ideas closed: #27858 [deployed], #27882 [deployed]
+- Files touched (all on WOPR unless noted): /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/frankenstein_tools_
+```
+
+### `1787420987189` — 8/22/2026, 11:47:08 AM PT — 162 turns
+
+**Original task:**
+
+```
+Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to be using the vision doorman which is currently kimi K3/ Sonnet 5. Please resolve this asap:
+
+{"message":"400 /chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","status":400,"code":"400","modelId":"frankenstein-llm","providerId":"litellm","details":{"message":"/chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","type":"None","param":"None","code":"400","pro
+```
+
+**Ideas referenced:** #10108, #10740, #10869, #11261, #11316, #11319, #11741, #11781, #12046, #12059, #12477, #12618, #12680, #12824, #12872, #12878, #13202, #13453, #13470, #13490, #16163, #16265, #16304, #16602, #16625, #16680, #16716, #16717, #16844, #17307, #17430, #1807, #18312, #18326, #18329, #20549, #2290, #23172, #25097, #25158, #25171, #25224, #25311, #2537, #26908, #26923, #27259, #9706
+
+**Last PICKUP PROMPT:**
+
+```
+kups: `.bak-visionlocalqwen-*`
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Vision Doorman final config (local Qwen 3.8 27B).
+
+Where we left off (verified 2026-08-22 10:46 PT):
+- glm-4.6v-flash 400 FIXED (removed)
+- 524 timeout FIXED (minicpm-v removed)
+- Vision prepass: claudia-qwen38-27b (local, free, direct :11521)
+- Vision doorman 50/50: claudia-qwen38-27b ↔ claude-sonnet-5-vision
+- Qwen3.8-27B benchmarks: BEATS Opus4.6 Max on all vision tasks
+- Audit log confirms: picked: claudia-qwen38-27b on describe_failed
+
+Open threads to drive next:
+None — all work completed this session.
+
+Reference IDs:
+- Files touched: /etc/litellm/_router_core.py
+- Ideas filed: none
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
-
-# Reversal Log
-- "CFA wiring deployed and protecting student emails" (carried executor deploy claim) → "deployed but gate never fires: zero call sites + 2 lib bugs" | RCA bucket: insufficient probe | causal fix: orchestrator event ID 6862277 filed with defect spec; #27488 [deployed] flagged defective pending hand-fix
 </result>
 <task_progress>
-- [x] Signal check — no signal file
-- [x] Ruben steered: RESOLVE the truth judge problems now
-- [x] should_compress_now → RED, compress mandated
-- [x] cline_compress_session → SESSION MEMORY blob returned
-- [x] Validate completion → ALL PASSED
-- [x] Check gate → GATE CLEAR
-- [x] Shipped compression completion with full defect-spec pickup prompt — next window executes the fix
+- [x] Fix vision doorman glm-4.6v-flash 400 error
+- [x] Fix 524 timeout
+- [x] Deploy qwen3.8-max as vision doorman 50/50 with Sonnet 5
+- [x] Replace minicpm-v vision prepass with qwen3.8-max
+- [x] Verify local Qwen 3.8 27B supports vision (claudia-qwen38-27b test passed)
+- [x] Confirm Qwen 3.8 27B is native vision-language model with SOTA benchmarks
+- [x] Switch vision doorman + prepass to local claudia-qwen38-27b (free)
+- [x] Verify local vision works end-to-end (audit log confirms claudia-qwen38-27b picks)
 </task_progress>
 </attempt_completion>
 ```
+
+### `1787420877031` — 8/22/2026, 10:47:57 AM PT — 1 turns
+
+**Original task:**
+
+```
+This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787327963594` — 8/22/2026, 10:35:35 AM PT — 1376 turns
 
@@ -1986,59 +2033,4 @@ Reference IDs:
 - Ideas filed: none yet (file if any deferral)
 - Files touched (pending): lib/team_hub_calendar.php, routes/team_hub.php, possibly routes/connecteam_schedules.php
 - Key columns: emsu_shifts.section, section2, combined_shift_group, claim_status, ins
-```
-
-### `1787122887382` — 8/19/2026, 11:53:23 AM PT — 554 turns
-
-**Original task:**
-
-```
-#San Mateo EMSA Complaint
-
-In the spirit of the most recent TDSHS responses sent yesterday (see handoff cocuments and https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations), please provide a PDF copy in dissection method and gold standard, etc... method for requests by Chad Henry detailed in emails received requesting deadline for 8/19 at 12:00 PST. 
-
-See also: https://emsuniversity.com/emtskills/personnel/compliance_deadlines.php?view=detail&id=31 
-
-As well as Chad Henry's email to rmajor@emsuniversity.com and attached PDF documents
-```
-
-**Ideas referenced:** #13437, #178712, #178713, #19370, #23945, #25185, #2554, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #2569, #2570, #2571, #2573, #25916, #25973, #26096, #26154, #26167, #26170, #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26931, #26993, #27069, #27100, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27480 [executing], #27481 [executing], #27500 [proposed], #27501 [proposed], #27506 [proposed], #27513 [proposed], #27516 [proposed], #27517 [proposed], #27519 [proposed], #27521 [proposed], #27588 [proposed], #27607 [proposed], #366377
-
-**Last PICKUP PROMPT:**
-
-```
- (verbatim from .clinerules/91)
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787123670897 - San Mateo LEMSA audit response PDF (Chad Henry, deadline 8/19 12:00 PM PT). Compressed at 80% of 200K.
-
-Where we left off (verified 2026-08-19 01:06 PT):
-- FINAL PDF placed: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf (120,882 bytes, sha256 d8248704f112f3ad83f37df6870aa3851ee0752be1cc35cf2d08ab30231e6a7b, 9pp Letter, gold-standard TDSHS closing)
-- Server canonical copy: personnel/investigations/san-mateo-2026/EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf; renderer personnel/scripts/compliance_letterhead_pdf.py patched to gold-standard closing + YAML strip (backup .bak-goldstd-closing-20260819-002703)
-- Chad's ask (decoded from Spark mail store): upload ALL requested info to the San Mateo Box folder by 12:00 PM PT today
-- Idea #27480 [executing]: exhibit assembly + Box upload, open until noon today
-- Investigations URL lockdown: deny added in /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf + /etc/nginx/sites-enabled/emtskills; external curl 403 direct PDF, 403 notice PDF, 401 auth route
-- Idea #27481 [deployed]: the lockdown above, stamped in DB 01:03 PT (UPDATE rows affected=1); both ideas carry efficiency_priority=1
-
-Open threads to drive next:
-1. #27480 [executing] - reconcile both ideas, then finish the completion gate loop below
-
-COMPLETION GATE LOOP (exactly what remains, in order): First reconcile_ideas([27480, 27481]) and expect idea 27480 [executing] because the exhibit upload is still open. Then rewrite the attempt_completion result fixing the 5 failures clinerules_validate_completion named at 00:57 PT: zero em dashes (R01), real evidence markers (R323), an idea-tagged reversal line (R317), no bare idea numbers, and the DB-stamped tag on the lockdown idea (SELF_CONTRADICTING fix). Result body sections: PDF handoff details (path + sha256 + pages), METHOD (TDSHS gold-standard per Ruben steer, NOT TPIA; dissection Parts I-IV; rule 302 gates pass: 0 em dashes, 0 URLs, 0 apologies, 0 student names; Ward-consistency preserved), WHAT CHAD'S EMAILS REQUESTED (7/31 original to Matt Rios + 8/10 extension to Ruben, Box folder, noon deadline), an exhibit upload section under #27480 [executing] open until noon, the # Reversal Log (nginx surface flip, RCA bucket: unread source, causal idea 27481, DB-stamped), then the PICKUP PROMPT block (47-char U+2550 dividers).
-
-Then expect idea 27481 [deployed] in the same reconcile return (lockdown section with the 403/401 curl evidence). Then clinerules_validate_completion(result_text, task_prompt, task_id=1787123670897) repeating until ALL PASSED, then clinerules_check_gate(task_id=1787123670897) must return GATE CLEAR, then attempt_completion.
-
-Reference IDs:
-- Ideas filed: #27480 [executing]
-- Ideas closed: none
-- Ideas filed: #27481 [deployed]
-- Files touched: personnel/investigations/san-mateo-2026/EMSU_RESPONSE_SAN_MATEO_AUDIT_DRAFT.pdf, personnel/scripts/compliance_letterhead_pdf.py, /var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf, /etc/nginx/sites-enabled/emtskills, ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-## Key references
-- IDs: #27480 [executing], task 1787123670897
-- Files: ~/Desktop/EMSU_RESPONSE_SAN_MATEO_AUDIT_FINAL_2026-08-19.pdf, /var/www/emtskills/personnel/investigations/san-mateo-202
 ```

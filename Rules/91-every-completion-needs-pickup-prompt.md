@@ -6,6 +6,12 @@ Hardfloor. 2026-05-19. 2026-08-01: `[queued]` disposition BANNED (Ruben directiv
 
 **Tool-call disqualifier (2026-08-08, idea #25066):** if ANY tool was called after the prior completion — including read-only diagnostic calls (SELECT, grep, read_server_file, ssh_command) — the Q&A exemption does NOT apply. That tool call makes this a follow-up task, not Q&A, regardless of how casual the user's framing is. Example: user asks "can I close this window?" and the agent runs ssh_command to verify executor health — that completion MUST carry a full PICKUP PROMPT block, not a bare conversational reply.
 
+## Human-readable summary (MANDATORY, added 2026-08-22 via Ruben RCA 297)
+
+Every attempt_completion result MUST open with a plain-English summary of 3-6 sentences BEFORE the PICKUP PROMPT block (and before any SESSION MEMORY blob when compressed). Written for Ruben, not the next agent: what this window did, the current state of the work, what happens next. No unexplained jargon (wedge, rung, send site), no bare pids or log ids without context, no machine-handoff artifact as the opening. The PICKUP PROMPT block is for the next window; the summary is for the human reading the result. A completion that opens with a SESSION MEMORY blob or a dense pickup prompt, leaving the human unable to parse what happened, violates this rule.
+
+Source incident 2026-08-22: VERITAS window shipped a compression blob + jargon-dense pickup prompt as the entire result. Ruben: "I don't really understand or know what happened here." 297 classification: scope error. The completion was scoped to machine handoff only and excluded the human reader. Rule 91 mandated the block for the next agent but nothing mandated a human-facing summary.
+
 ## Do NOT retype the divider. Use the template below.
 
 Copy the 47-char U+2550 divider from the template block below — do NOT retype it from memory. Every observed rule-91 failure came from a model retyping the divider and getting the glyphs wrong.
@@ -127,7 +133,7 @@ This is a LAST RESORT. If `create_idea` works, the agent MUST file ideas normall
 
 ## Source
 
-2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed. 2026-07-22 violation #15 (per Cline_Obedience.md): agent shipped a structurally-correct PICKUP PROMPT block inside `task_progress` instead of `result` — added explicit ban + quick-check step 1 rewording to gate on `result` specifically. 2026-08-01: `[queued]` disposition banned by Ruben directive — queued was being used as an excuse to park ideas indefinitely instead of implementing them. reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161.
+2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed. 2026-07-22 violation #15 (per Cline_Obedience.md): agent shipped a structurally-correct PICKUP PROMPT block inside `task_progress` instead of `result` — added explicit ban + quick-check step 1 rewording to gate on `result` specifically. 2026-08-01: `[queued]` disposition banned by Ruben directive — queued was being used as an excuse to park ideas indefinitely instead of implementing them. reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161. 2026-08-22: human-readable summary section added after Ruben RCA 297 (completion opened with compression blob + jargon pickup prompt, human could not parse what happened).
 
 ## Amendment (from reversal, 2026-08-20 02:56 UTC)
 

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-22T10:01:23.552Z",
+ "generated_at": "2026-08-22T11:01:23.871Z",
  "counts": {
   "parsed": 0,
   "reused": 883,
@@ -138878,13 +138878,13 @@
   },
   "1787327963594": {
    "task_id": "1787327963594",
-   "mtime": 1787388154207,
+   "mtime": 1787394198720,
    "created_at": "2026-08-21T15:59:23.594Z",
-   "last_modified": "2026-08-22T08:42:34.207Z",
-   "size_kb": 4485,
-   "turn_count": 1338,
+   "last_modified": "2026-08-22T10:23:18.720Z",
+   "size_kb": 4530,
+   "turn_count": 1358,
    "title": "#Julia\n\nDid Julia/Claudia come back online? \n\nDo not mess with other boxes. Read to be safe:\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=671.4",
-   "pickup_prompt": "fic fact, recorded in handoff)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 — Qwen3.8-27B fleet rollout: Nero DONE, Joshua blocked on kernel, Maximus blocked on SSH key, Cicero unreachable.\n\nWhere we left off (all verified live 2026-08-22 00:02-01:40 PT, full record in HANDOFF_NOTES.md '2026-08-22 — Nero Qwen3.8-27B deployed'):\n- NERO LIVE: nero-qwen38-27b lane serving through LiteLLM router (router POST at 01:39 PT returned content='\\n\\nOK' finish=stop). MLX 4-bit on :11525, LaunchAgent + tunnel forward durable, registry L4d entry.\n- JOSHUA STAGED: 70B stopped (docker inspect 01:40 PT: RestartPolicy=no Status=exited); llm-scaler-vllm:0.21.0-b1 pulled; XPU probe = 0 on kernel 6.17 (BigMac same image + kernel 7.0, in-container probe returned xpu_count: 4); FP8 model downloading to /data/huggingface. Needs Ruben decision: kernel upgrade to 7.0 + reboot.\n- MAXIMUS BLOCKED: needs WOPR ed25519 key in authorized_keys (one-line, must run on Maximus) + ollama too old → MLX path.\n- CICERO UNREACHABLE: :2221 tunnel refused + WG no-route; on-box attention needed before MLX 8-bit deploy.\n\nOpen threads to drive next:\n1. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after key), Joshua launch (after kernel decision)\n2. #27882 [deployed] — Joshua crash-loop fix landed (container stopped, image pulled, root cause documented); the 27B launch itself rides the remaining rollout thread\n\nReference IDs:\n- Ideas in flight: #27869 [proposed], #27882 [deployed]\n- Ideas closed: #27858 [deployed]\n- Files touched: Nero ~/bin/qwen38_serve.sh + ~/Library/LaunchAgents/com.ruben.qwen38-mlx.plist + com.emsu.mini-tunnel.plist (+.bak-20260822); WOPR /etc/litellm/config.yaml (+.bak-nero-qwen38-20260822) + /etc/litellm/frankenstein_registry.yaml (+.bak-nero-qwen38-20260822); Joshua container state (vllm-joshua-70b stopped, restart=no, llm-scaler image pulled)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Cicero: UNREACHABLE this window (:2221 tunnel refused + WG no-route) — needs on-box attention first, documented in handoff\n- [ ] Maximus: blocked on WOPR key in authorized_keys (one-line fix must run on Maximus) + ollama 0.30.11 too old — MLX path documented\n- [x] Nero: DEPLOYED — MLX 4-bit on :11525, LaunchAgent + tunnel forward, LiteLLM lane nero-qwen38-27b verified end-to-end twice\n- [x] Joshua: crash-loop stopped + verified exited; llm-scaler image pulled; root cause = kernel 6.17 (BigMac 7.0 sees 4 XPUs same image); FP8 downloading; kernel upgrade = Ruben decision\n- [x] Wire into registry/config + verify end-to-end — nero lane live through router; handoff notes updated\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "le is right, the wiring isn't)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 — Qwen3.8-27B fleet rollout + VERITAS judge gap.\n\nWhere we left off (probes run 2026-08-22 00:02-03:20 PT; full deploy record in HANDOFF_NOTES.md '2026-08-22 — Nero Qwen3.8-27B deployed'):\n- NERO LIVE: nero-qwen38-27b lane through LiteLLM router (router POST 01:39 PT: content='\\n\\nOK' finish=stop). MLX 4-bit :11525, LaunchAgent + tunnel forward durable.\n- JOSHUA STAGED: 70B stopped (docker inspect 01:40 PT: RestartPolicy=no Status=exited); kernel 6.17 is the blocker (BigMac same image kernel 7.0 = xpu_count 4, Joshua = 0); FP8 downloading to /data/huggingface; kernel upgrade = Ruben decision.\n- MAXIMUS BLOCKED: WOPR key missing in authorized_keys + ollama 0.30.11 too old (412).\n- CICERO UNREACHABLE: :2221 refused + WG no-route.\n- VERITAS: truth_judge MCP transport aborts (fail-closed twice 03:17/03:20 PT) — judge layer down tonight; all claims carry inline probe evidence instead.\n\nOpen threads to drive next:\n1. #27905 [proposed] — truth_judge transport fix (CLI direct / timeout raise / async poll) so rule 323 obligation 5 is enforceable\n2. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after key), Joshua launch (after kernel decision)\n3. #27882 [deployed] — Joshua crash-loop fix landed; 27B launch rides the remaining rollout thread\n\nReference IDs:\n- Ideas filed: #27905 [proposed]\n- Ideas in flight: #27869 [proposed], #27882 [deployed]\n- Ideas closed: #27858 [deployed]\n- Files touched: none this turn (judge attempts + idea filing only)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -139076,6 +139076,7 @@
     "27858": "proposed",
     "27869": "proposed",
     "27882": "proposed",
+    "27905": "proposed",
     "30877": null,
     "39273": null,
     "40738": null,

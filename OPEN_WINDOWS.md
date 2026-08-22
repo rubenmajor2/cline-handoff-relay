@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 3:01:23 AM PT | window: last 72h | 48 tasks | index total 883 (parsed 0, cached 883)
+Generated: 8/22/2026, 4:01:23 AM PT | window: last 72h | 46 tasks | index total 883 (parsed 0, cached 883)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787327963594` | 8/22/2026, 1:42:34 AM | 1338 | 4485KB | #Julia |
+| `1787327963594` | 8/22/2026, 3:23:18 AM | 1358 | 4530KB | #Julia |
 | `1787370497651` | 8/22/2026, 1:07:24 AM | 984 | 6467KB | How fast is this? |
 | `1787366217908` | 8/21/2026, 10:16:49 PM | 296 | 1639KB | #Argus |
 | `1787191612298` | 8/21/2026, 10:10:42 PM | 906 | 25789KB | #Comprehensive System |
@@ -56,14 +56,12 @@ Generated: 8/22/2026, 3:01:23 AM PT | window: last 72h | 48 tasks | index total 
 | `1787136150136` | 8/19/2026, 4:23:02 AM | 26 | 51KB | so after 4 then should i spill to 120B? |
 | `1787128400456` | 8/19/2026, 4:22:39 AM | 152 | 250KB | Which student submitted the most tickets and what was the reason? |
 | `1787132220305` | 8/19/2026, 4:21:05 AM | 400 | 6979KB | #Frankenstein LLM Wedge |
-| `1787096297068` | 8/19/2026, 3:23:20 AM | 892 | 7996KB | #Julia/Claudia |
-| `1787129383579` | 8/19/2026, 3:20:19 AM | 69 | 212KB | Which student submitted the most tickets and what was the reason? |
 
 ---
 
 ## Per-window detail
 
-### `1787327963594` — 8/22/2026, 1:42:34 AM PT — 1338 turns
+### `1787327963594` — 8/22/2026, 3:23:18 AM PT — 1358 turns
 
 **Original task:**
 
@@ -87,44 +85,40 @@ Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
 Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11397, #11741, #11781, #11936, #11942, #11945, #12247, #12251, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12407, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12657, #12716, #12824, #12872, #12878, #13085, #13108, #13202, #13831, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16545, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178713, #178732, #178733, #1798, #1828, #18312, #18326, #19338, #19458, #19491, #19567, #19653, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2230, #2254, #2258, #22584, #22588, #2294, #2298, #2299, #2307, #2314, #23169, #2338, #2358, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #25888, #2589, #25916, #2592, #2597, #26209, #26284 [executing], #26400, #26403, #26663, #26823, #26824, #26825, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27152, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27492, #27494, #27503 [proposed], #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27690 [deployed], #27692, #27698 [deployed], #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27715 [deployed], #27722, #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [proposed], #27869 [proposed], #27882 [proposed], #30877, #39273, #4071, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #475569, #49717, #4987, #50015, #50729, #50837, #5162, #5178, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #5918, #5919, #5930, #64748, #6486, #6487, #6826, #7142, #7149, #7515
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11397, #11741, #11781, #11936, #11942, #11945, #12247, #12251, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12407, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12657, #12716, #12824, #12872, #12878, #13085, #13108, #13202, #13831, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16545, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178713, #178732, #178733, #1798, #1828, #18312, #18326, #19338, #19458, #19491, #19567, #19653, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2230, #2254, #2258, #22584, #22588, #2294, #2298, #2299, #2307, #2314, #23169, #2338, #2358, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #25888, #2589, #25916, #2592, #2597, #26209, #26284 [executing], #26400, #26403, #26663, #26823, #26824, #26825, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27152, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27492, #27494, #27503 [proposed], #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27690 [deployed], #27692, #27698 [deployed], #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27715 [deployed], #27722, #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [proposed], #27869 [proposed], #27882 [proposed], #27905 [proposed], #30877, #39273, #4071, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #475569, #49717, #4987, #50015, #50729, #50837, #5162, #5178, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #5918, #5919, #5930, #64748, #6486, #6487, #6826, #7142, #7149, #7515
 
 **Last PICKUP PROMPT:**
 
 ```
-fic fact, recorded in handoff)
+le is right, the wiring isn't)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787327963594 — Qwen3.8-27B fleet rollout: Nero DONE, Joshua blocked on kernel, Maximus blocked on SSH key, Cicero unreachable.
+Pick up task #1787327963594 — Qwen3.8-27B fleet rollout + VERITAS judge gap.
 
-Where we left off (all verified live 2026-08-22 00:02-01:40 PT, full record in HANDOFF_NOTES.md '2026-08-22 — Nero Qwen3.8-27B deployed'):
-- NERO LIVE: nero-qwen38-27b lane serving through LiteLLM router (router POST at 01:39 PT returned content='\n\nOK' finish=stop). MLX 4-bit on :11525, LaunchAgent + tunnel forward durable, registry L4d entry.
-- JOSHUA STAGED: 70B stopped (docker inspect 01:40 PT: RestartPolicy=no Status=exited); llm-scaler-vllm:0.21.0-b1 pulled; XPU probe = 0 on kernel 6.17 (BigMac same image + kernel 7.0, in-container probe returned xpu_count: 4); FP8 model downloading to /data/huggingface. Needs Ruben decision: kernel upgrade to 7.0 + reboot.
-- MAXIMUS BLOCKED: needs WOPR ed25519 key in authorized_keys (one-line, must run on Maximus) + ollama too old → MLX path.
-- CICERO UNREACHABLE: :2221 tunnel refused + WG no-route; on-box attention needed before MLX 8-bit deploy.
+Where we left off (probes run 2026-08-22 00:02-03:20 PT; full deploy record in HANDOFF_NOTES.md '2026-08-22 — Nero Qwen3.8-27B deployed'):
+- NERO LIVE: nero-qwen38-27b lane through LiteLLM router (router POST 01:39 PT: content='\n\nOK' finish=stop). MLX 4-bit :11525, LaunchAgent + tunnel forward durable.
+- JOSHUA STAGED: 70B stopped (docker inspect 01:40 PT: RestartPolicy=no Status=exited); kernel 6.17 is the blocker (BigMac same image kernel 7.0 = xpu_count 4, Joshua = 0); FP8 downloading to /data/huggingface; kernel upgrade = Ruben decision.
+- MAXIMUS BLOCKED: WOPR key missing in authorized_keys + ollama 0.30.11 too old (412).
+- CICERO UNREACHABLE: :2221 refused + WG no-route.
+- VERITAS: truth_judge MCP transport aborts (fail-closed twice 03:17/03:20 PT) — judge layer down tonight; all claims carry inline probe evidence instead.
 
 Open threads to drive next:
-1. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after key), Joshua launch (after kernel decision)
-2. #27882 [deployed] — Joshua crash-loop fix landed (container stopped, image pulled, root cause documented); the 27B launch itself rides the remaining rollout thread
+1. #27905 [proposed] — truth_judge transport fix (CLI direct / timeout raise / async poll) so rule 323 obligation 5 is enforceable
+2. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after key), Joshua launch (after kernel decision)
+3. #27882 [deployed] — Joshua crash-loop fix landed; 27B launch rides the remaining rollout thread
 
 Reference IDs:
+- Ideas filed: #27905 [proposed]
 - Ideas in flight: #27869 [proposed], #27882 [deployed]
 - Ideas closed: #27858 [deployed]
-- Files touched: Nero ~/bin/qwen38_serve.sh + ~/Library/LaunchAgents/com.ruben.qwen38-mlx.plist + com.emsu.mini-tunnel.plist (+.bak-20260822); WOPR /etc/litellm/config.yaml (+.bak-nero-qwen38-20260822) + /etc/litellm/frankenstein_registry.yaml (+.bak-nero-qwen38-20260822); Joshua container state (vllm-joshua-70b stopped, restart=no, llm-scaler image pulled)
+- Files touched: none this turn (judge attempts + idea filing only)
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
-<task_progress>
-- [x] Cicero: UNREACHABLE this window (:2221 tunnel refused + WG no-route) — needs on-box attention first, documented in handoff
-- [ ] Maximus: blocked on WOPR key in authorized_keys (one-line fix must run on Maximus) + ollama 0.30.11 too old — MLX path documented
-- [x] Nero: DEPLOYED — MLX 4-bit on :11525, LaunchAgent + tunnel forward, LiteLLM lane nero-qwen38-27b verified end-to-end twice
-- [x] Joshua: crash-loop stopped + verified exited; llm-scaler image pulled; root cause = kernel 6.17 (BigMac 7.0 sees 4 XPUs same image); FP8 downloading; kernel upgrade = Ruben decision
-- [x] Wire into registry/config + verify end-to-end — nero lane live through router; handoff notes updated
-</task_progress>
 </attempt_completion>
 ```
 
@@ -2265,104 +2259,3 @@ ROUND 1 (01:34 PT) — SLO drift: FRANK_SLO_TTFB_INTERACTIVE had drifted 30→18
 **Ideas referenced:** #11397, #11953, #11991, #12251, #12269, #12368, #12463, #12584, #13108, #13470, #13831, #13842, #13874, #16590, #16625, #1724 [deployed], #1754, #1755, #178712, #1893 [deployed], #19338, #1989, #19903, #2050, #2100 [deployed], #2254, #2258, #2307, #23169, #24172, #24217, #25171, #25185, #2524 [deployed], #2525 [deployed], #25468, #25471, #2571 [deployed], #25755, #25764, #2579, #2582 [deployed], #26400, #26503, #26773, #26774, #26932, #27447 [deployed], #27494 [executing], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [executing], #27520 [deployed], #27524 [proposed], #27531 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787096297068` — 8/19/2026, 3:23:20 AM PT — 892 turns
-
-**Original task:**
-
-```
-#Julia/Claudia
-
-Get Julia Claudia 235 back online.
-
-Answer to "when did Julia/Claudia go dark" — bracketed by the live router audit log + a fresh probe, all times PT:
-
-- 12:49 — midday flap window: WOPR-side check found nothing listening on :11513/:11514 (the flap period tracked by #27232 [proposed]).
-- 12:58 — Ruben's "Are you alive" via litellm:julia-235b SERVED (audit 19:58:52Z: picked=julia-235b, no substitution).
-- 13:15 — LAST KNOWN-GOOD serve: "say OK" canary picked julia-235b (20:15:51Z). Zero julia-235b picks in the log after this.
-- 14:49-14:53 — Julia confirmed LAYER-2 dark from 3 v
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #178708, #178712, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038 [executing], #2127, #2168, #22584, #2299, #25097, #25185, #2537, #25378, #25381, #2546, #2550, #2552, #2554, #2570 [deployed], #2571 [deployed], #2574 [deployed], #2577 [deployed], #26471, #26475, #26476, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27069 [executing], #27100, #27128, #27129, #27142, #27201, #27203, #27232 [proposed], #27236 [proposed], #27249 [executing], #27250 [executing], #27272, #27276, #27484 [proposed], #27504 [proposed], #366377, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- not a flip of a prior claim.)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787129383579 — Julia/Claudia 235B recovered + serving; protection armed.
-
-Where we left off (verified 2026-08-19 03:08 PT):
-- Julia 235B SERVING: lane :11513 HTTP=200, decode probe OK (real tokens), router audit picked=julia-235b no substitution. fleet_act julia=healthy.
-- One transient wedge 03:05:48 (decode fail) self-recovered 03:08:13; freeze_count=1, catch_relaunch.state=SERVING. No reboot was needed.
-- Claudia UP throughout (sourced the vantage probes); julia-235b is TP=2 over CX7 so Julia's return restores the full lane.
-- Lane-guard #27236 [deployed] live (transition-only alert on lane-dark); babysit watcher running until ~04:27 PT.
-
-Open threads to drive next:
-1. #27236 [deployed] — lane-guard reachability patch is live; monitor for any transition alert. No action needed unless it fires.
-2. #27232 [rejected] — premise superseded (was tunnel-flapping theory; actual cause was L2-dark Julia). Closed against this window's evidence.
-3. (human-only decision - no idea) Confirm wedge-guard auto-reboot on Julia is armed for a PERSISTENT wedge (installed this window; the 03:05 wedge self-healed before reboot was needed, so the reboot path was not exercised).
-
-Reference IDs:
-- Concluded ideas (live reconcile_ideas return):
-  - #27236 [deployed]
-  - #27069 [deployed]
-  - #26711 [deployed]
-  - #26715 [deployed]
-  - #27232 [rejected]
-- In-flight ideas (carried forward):
-  - #21038 [executing]
-  - #26712 [proposed]
-  - #26713 [proposed]
-- Fleet: julia=healthy (fleet_act ok:true)
-- Files touched: /usr/local/bin/emsu-julia-lane-guard.py, /tmp/emsu_julia_babysit.sh, wedge-guard on Julia
-- Patch target: lane-guard + alert sink /usr/local/bin/emsu-alert.sh
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Julia 235B recovered + verified serving (decode OK, router picks julia-235b)
-- [x] fleet_act julia=healthy
-- [x] Wedge-guard auto-reboot installed on Julia
-- [x] Babysit watcher running (90-min window, alerts on wedge, until ~04:27)
-- [x] Reconcile carried ideas (8 ids)
-- [x] Live re-probe: lane HTTP=200, lane-guard ok:true problems:[] reach vllm+ssh true
-- [x] Babysit log: 1 transient WEDGE 03:05:48 self-recovered 03:08:13; freeze_count=1
-- [x] Rule-119: should_compress_now GREEN → no compress; signal file cleared
-- [x] validate round 4: ALL PASSED
-- [x] clinerules_check_gate: GATE CLEAR
-- [x] attempt_completion shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787129383579` — 8/19/2026, 3:20:19 AM PT — 69 turns
-
-**Original task:**
-
-```
-Which student submitted the most tickets and what was the reason?
-```
-
-**Ideas referenced:** #164679, #173178
-
-**Last PICKUP PROMPT:**
-
-```
- the reasons for those tickets.
-
-══════════════════════════════════════════════
-PICKUP PROMPT
-══════════════════════════════════════════════
-Pick up task — Which student submitted the most tickets and what was the reason?
-Where we left off (verified 2026-08-19 03:02 PT):
-- No data retrieved; query attempts failed.
-Open threads to drive next (none — all work attempted in this session.)
-</result>
-</attempt_completion>
-```

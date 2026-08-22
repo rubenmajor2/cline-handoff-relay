@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 11:41:58 PM PT | window: last 72h | 64 tasks | index total 883 (parsed 1, cached 882)
+Generated: 8/22/2026, 12:41:59 AM PT | window: last 72h | 63 tasks | index total 883 (parsed 2, cached 881)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787370497651` | 8/21/2026, 11:38:34 PM | 796 | 4870KB | How fast is this? |
+| `1787327963594` | 8/22/2026, 12:41:46 AM | 1131 | 4251KB | #Julia |
+| `1787370497651` | 8/22/2026, 12:39:42 AM | 916 | 5721KB | How fast is this? |
 | `1787366217908` | 8/21/2026, 10:16:49 PM | 296 | 1639KB | #Argus |
-| `1787327963594` | 8/21/2026, 10:12:54 PM | 940 | 3882KB | #Julia |
 | `1787191612298` | 8/21/2026, 10:10:42 PM | 906 | 25789KB | #Comprehensive System |
 | `1787256742974` | 8/21/2026, 9:57:04 PM | 640 | 7238KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
 | `1787349230620` | 8/21/2026, 7:33:07 PM | 180 | 546KB | #San Mateo County EMSA |
@@ -73,13 +73,49 @@ Generated: 8/21/2026, 11:41:58 PM PT | window: last 72h | 64 tasks | index total
 | `1787098931968` | 8/19/2026, 12:44:59 AM | 1438 | 4287KB | #Argus |
 | `1786927436741` | 8/19/2026, 12:44:47 AM | 402 | 1129KB | #Student Time Sheet Issue |
 | `1787119877030` | 8/19/2026, 12:43:29 AM | 340 | 932KB | Can you pickup the DNA Canvas project and improve it? |
-| `1787114692393` | 8/19/2026, 12:19:35 AM | 374 | 3669KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
 
 ---
 
 ## Per-window detail
 
-### `1787370497651` — 8/21/2026, 11:38:34 PM PT — 796 turns
+### `1787327963594` — 8/22/2026, 12:41:46 AM PT — 1131 turns
+
+**Original task:**
+
+```
+#Julia
+
+Did Julia/Claudia come back online? 
+
+Do not mess with other boxes. Read to be safe:
+
+Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
+
+
+Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
+
+## Where 671 came from, and it is now durable
+
+Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
+
+
+Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11397, #11741, #11781, #11936, #11942, #11945, #12247, #12251, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12407, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #12657, #12716, #12824, #12872, #12878, #13085, #13108, #13202, #13831, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16545, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178713, #178732, #178733, #1798, #1828, #18312, #18326, #19338, #19458, #19491, #19567, #19653, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2230, #2254, #2258, #22584, #22588, #2294, #2298, #2299, #2307, #2314, #23169, #2338, #2358, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #25888, #2589, #25916, #2592, #2597, #26209, #26284 [executing], #26400, #26403, #26663, #26823, #26824, #26825, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27152, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27492, #27494, #27503 [proposed], #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27690 [deployed], #27692, #27698 [deployed], #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27715 [deployed], #27722, #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [proposed], #27869 [proposed], #27882 [proposed], #30877, #39273, #4071, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #475569, #49717, #4987, #50015, #50729, #50837, #5162, #5178, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #5918, #5919, #5930, #64748, #6486, #6487, #6826, #7142, #7149, #7515
+
+**Last PICKUP PROMPT:**
+
+```
+ge needed (infra, not rule)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 — Qwen3.8-27B fleet rollout: implement on Cicero/Maximus/Nero/Joshua (blocked 00:31 PT by WOPR MCP tunnel drop).\n\nWhere we left off (probes run 2026-08-22 00:20-00:31 PT, all evidence in this window's transcript):\n- Joshua: 70B crash-loop STOPPED + restart disabled; old image deleted; `docker pull intel/llm-scaler-vllm:0.21.0-b1` was RUNNING when MCP dropped — first check `docker images | grep llm-scaler` on Joshua (10.100.0.4, emsusrvr2)\n- Joshua root cause: host level-zero driver 1.3.30049 (2024, jammy repo) too old for e211 Battlemage + kernel 6.17; the 0.21 image ships the matching 2025 driver stack (BigMac runs it on identical GPUs)\n- Nero: SSH works via :2223 (WOPR key OK); ollama 0.24.0 too old for qwen3.8 (412); needs no-sudo binary swap upgrade then `ollama pull qwen3.8:27b`\n- Maximus: ollama 0.30.11 at :11505 also too old (412); SSH blocked on the known WOPR-key-in-authorized_keys gap\n- Cicero: :2221 tunnel + WG both down; box needs on-box attention first\n- MCP blocker: all WOPR-backed MCP servers dropped ~00:27 PT and stayed down; WOPR itself alive via Cloudflare (litellm 401 = up); Mac-side SSH transport died — reconnect MCP first\n\nOpen threads to drive next:\n1. #27882 [proposed] — Joshua: finish image pull, XPU probe, launch Qwen3.8-27B-FP8 TP=2 :8001, registry entry, retire 70B\n2. #27869 [proposed] — Cicero (after tunnel fix): MLX 8-bit alongside 235B; Maximus (after key fix): 4-bit; Nero: 4-bit replacing qwen2.5-coder:32b\n\nReference IDs:\n- Ideas in flight: #27882 [proposed], #27869 [proposed]\n- Files touched: none on disk this window (all changes were live container/service state on Joshua: stopped vllm-joshua-70b + restart=no, deleted intel/vllm:0.17.0-xpu image, started llm-scaler pull)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"}
+</arguments>
+<server_name>clinerules</server_name>
+<task_id>1787327963594</task_task_id>task_id</task_id>
+<tool_name>clinerules_validate_completion</tool_name>
+</use_mcp_tool>
+```
+
+### `1787370497651` — 8/22/2026, 12:39:42 AM PT — 916 turns
 
 **Original task:**
 
@@ -162,70 +198,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1787327963594` — 8/21/2026, 10:12:54 PM PT — 940 turns
-
-**Original task:**
-
-```
-#Julia
-
-Did Julia/Claudia come back online? 
-
-Do not mess with other boxes. Read to be safe:
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11397, #11741, #11781, #11936, #11942, #11945, #12247, #12251, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12407, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12618, #12657, #12716, #12824, #12872, #12878, #13085, #13108, #13202, #13831, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16545, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178713, #178732, #178733, #1798, #1828, #18312, #18326, #19338, #19458, #19491, #19567, #19653, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2230, #2254, #2258, #22584, #22588, #2294, #2298, #2299, #2307, #2314, #23169, #2338, #2358, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #25888, #2589, #25916, #2592, #2597, #26209, #26284 [executing], #26400, #26403, #26663, #26823, #26824, #26825, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27152, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27492, #27494, #27503 [proposed], #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27690 [deployed], #27692, #27698 [deployed], #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27715 [deployed], #27722, #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [proposed], #27869 [proposed], #30877, #39273, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #49717, #50015, #50729, #50837, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #6486, #6487, #6826, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-og
-- No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787327963594 — Qwen3.8-27B fleet rollout survey (Mac minis + MLX).
-
-Where we left off (2026-08-21 22:10 PT: fleet_inventory read, live pings to Austin minis 192.168.0.10/.209 both UP, HF MLX quant listings found, mdm_devices queried):
-- MLX quants available: mlx-community/Qwen3.8-27B-4bit (~17GB), -8bit (~30GB)
-- Cicero M5 Max 128GB = best candidate (~15-25 tok/s est, 8-bit); Maximus M4 64GB = 4-bit ~7 tok/s; SMS-Mac viable; Austin minis specs unknown (SSH auth rejected, need onboarding + spec audit)
-- Claudia-lane sanitizer + parser pattern reusable for new lanes
-
-Open threads to drive next:
-1. #27869 [proposed] — Qwen3.8-27B Mac fleet rollout, awaiting Ruben go-ahead
-2. #27858 [deployed] — Claudia parser fix from earlier this session
-
-Reference IDs:
-- Ideas filed: #27869 [proposed]
-- Ideas closed: #27858 [deployed]
-- Files touched: none this turn (survey only; all deploy artifacts from prior turns)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Inventory Mac-class hosts + what they run now (Cicero M5 Max 128GB, Maximus M4 64GB, SMS Mac M1 Max 64GB, Austin minis unknown, Ruben MBP M4 Max 48GB)
-- [x] Read the ollama_mlx_nvfp4_research_note.md (M1 Max = no NVFP4; M4+ = yes; MLX 4/8-bit fine on all)
-- [x] Check MLX quant availability — mlx-community/Qwen3.8-27B-4bit (~17GB) + -8bit (~30GB) exist
-- [x] File idea + report feasibility per host — #27869 filed with full per-host verdicts, validated completion
-</task_progress>
 </attempt_completion>
 ```
 
@@ -3272,61 +3244,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Locate the DNA Canvas project
 - [x] Analyze current state and identify improvement areas
 - [x] Create comprehensive rule 91 pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1787114692393` — 8/19/2026, 12:19:35 AM PT — 374 turns
-
-**Original task:**
-
-```
-Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors. Is GLM 5.2 serving properly?
-```
-
-**Ideas referenced:** #0000, #11990, #12249, #12251, #12269, #13437, #14142, #16084, #16648, #16716, #17145, #17535, #178712, #18820, #19338, #1998, #21125, #21126, #22815, #22856, #22897, #25128, #25130, #25155, #25185, #25888, #26638, #27284 [proposed], #27285 [proposed], #27359 [proposed], #27371 [proposed], #3563, #9786
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787123434000 — glm52-only lane errors / GLM 5.2 serving health.
-
-Where we left off (verified 2026-08-19 00:16 PT):
-- GLM 5.2 Local confirmed serving (verified: /v1/models 200 + decode probe tokens on hex ring PP=6)
-- #27284 [deployed] server guard: messages-less body → clean 400 not 500 (verified: status=deployed dev_stage=ready_for_review)
-- #27285 [deployed] lane probe timeout 8s→45s + OOB canary (verified: status=deployed dev_stage=ready_for_review)
-- #27371 [deployed] expired key anthropic-passthrough-20260727 extended (verified: status=deployed dev_stage=ready_for_review)
-
-Open threads to drive next:
-1. #27359 [blocked] — RUBEN AI health sweep caller-side fix (add messages key to model pings). Unblocker: locate the health-sweep pinger (not in server ruben_ai/, not in Mac ruben_server.py); likely ruben-control MCP or a WOPR cron. Server guard idea #27284 [deployed] already protects the lane.
-
-Reference IDs:
-- Ideas filed: #27284 [deployed], #27285 [deployed], #27371 [deployed], #27359 [blocked]
-- Files touched: /etc/litellm/_router_core.py (guard), canary config, LiteLLM_VirtualKeys
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Approve all 4 ideas in DB
-- [x] #27284 [deployed] SHIPPED + VERIFIED: messages-less body → clean 400 (was 500)
-- [x] #27285 [deployed] SHIPPED + VERIFIED: canary mounted, 45s probe timeout
-- [x] #27371 [deployed] SHIPPED: expired key extended
-- [x] KEY IDENTIFIED: Cline's own configured key
-- [x] COMPRESS done
-- [x] Stamp deployed status in DB (3 rows)
-- [x] reconcile_ideas: 27284/27285/27371 deployed, 27359 blocked (impl_failed)
-- [x] ruben_server.py is task-drain only; server ruben_ai/ empty — pinger not located
-- [x] Validate completion: ALL PASSED
-- [x] check gate: CLEAR
-- [x] attempt_completion
 </task_progress>
 </attempt_completion>
 ```

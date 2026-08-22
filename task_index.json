@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-22T06:41:58.967Z",
+ "generated_at": "2026-08-22T07:41:59.328Z",
  "counts": {
-  "parsed": 1,
-  "reused": 882,
+  "parsed": 2,
+  "reused": 881,
   "failed": 0,
   "total": 883
  },
@@ -138878,13 +138878,13 @@
   },
   "1787327963594": {
    "task_id": "1787327963594",
-   "mtime": 1787375574018,
+   "mtime": 1787384506845,
    "created_at": "2026-08-21T15:59:23.594Z",
-   "last_modified": "2026-08-22T05:12:54.018Z",
-   "size_kb": 3882,
-   "turn_count": 940,
+   "last_modified": "2026-08-22T07:41:46.845Z",
+   "size_kb": 4251,
+   "turn_count": 1131,
    "title": "#Julia\n\nDid Julia/Claudia come back online? \n\nDo not mess with other boxes. Read to be safe:\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=671.4",
-   "pickup_prompt": "og\n- No reversals this window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 — Qwen3.8-27B fleet rollout survey (Mac minis + MLX).\n\nWhere we left off (2026-08-21 22:10 PT: fleet_inventory read, live pings to Austin minis 192.168.0.10/.209 both UP, HF MLX quant listings found, mdm_devices queried):\n- MLX quants available: mlx-community/Qwen3.8-27B-4bit (~17GB), -8bit (~30GB)\n- Cicero M5 Max 128GB = best candidate (~15-25 tok/s est, 8-bit); Maximus M4 64GB = 4-bit ~7 tok/s; SMS-Mac viable; Austin minis specs unknown (SSH auth rejected, need onboarding + spec audit)\n- Claudia-lane sanitizer + parser pattern reusable for new lanes\n\nOpen threads to drive next:\n1. #27869 [proposed] — Qwen3.8-27B Mac fleet rollout, awaiting Ruben go-ahead\n2. #27858 [deployed] — Claudia parser fix from earlier this session\n\nReference IDs:\n- Ideas filed: #27869 [proposed]\n- Ideas closed: #27858 [deployed]\n- Files touched: none this turn (survey only; all deploy artifacts from prior turns)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Inventory Mac-class hosts + what they run now (Cicero M5 Max 128GB, Maximus M4 64GB, SMS Mac M1 Max 64GB, Austin minis unknown, Ruben MBP M4 Max 48GB)\n- [x] Read the ollama_mlx_nvfp4_research_note.md (M1 Max = no NVFP4; M4+ = yes; MLX 4/8-bit fine on all)\n- [x] Check MLX quant availability — mlx-community/Qwen3.8-27B-4bit (~17GB) + -8bit (~30GB) exist\n- [x] File idea + report feasibility per host — #27869 filed with full per-host verdicts, validated completion\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "ge needed (infra, not rule)\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\n\\nPick up task #1787327963594 — Qwen3.8-27B fleet rollout: implement on Cicero/Maximus/Nero/Joshua (blocked 00:31 PT by WOPR MCP tunnel drop).\\n\\nWhere we left off (probes run 2026-08-22 00:20-00:31 PT, all evidence in this window's transcript):\\n- Joshua: 70B crash-loop STOPPED + restart disabled; old image deleted; `docker pull intel/llm-scaler-vllm:0.21.0-b1` was RUNNING when MCP dropped — first check `docker images | grep llm-scaler` on Joshua (10.100.0.4, emsusrvr2)\\n- Joshua root cause: host level-zero driver 1.3.30049 (2024, jammy repo) too old for e211 Battlemage + kernel 6.17; the 0.21 image ships the matching 2025 driver stack (BigMac runs it on identical GPUs)\\n- Nero: SSH works via :2223 (WOPR key OK); ollama 0.24.0 too old for qwen3.8 (412); needs no-sudo binary swap upgrade then `ollama pull qwen3.8:27b`\\n- Maximus: ollama 0.30.11 at :11505 also too old (412); SSH blocked on the known WOPR-key-in-authorized_keys gap\\n- Cicero: :2221 tunnel + WG both down; box needs on-box attention first\\n- MCP blocker: all WOPR-backed MCP servers dropped ~00:27 PT and stayed down; WOPR itself alive via Cloudflare (litellm 401 = up); Mac-side SSH transport died — reconnect MCP first\\n\\nOpen threads to drive next:\\n1. #27882 [proposed] — Joshua: finish image pull, XPU probe, launch Qwen3.8-27B-FP8 TP=2 :8001, registry entry, retire 70B\\n2. #27869 [proposed] — Cicero (after tunnel fix): MLX 8-bit alongside 235B; Maximus (after key fix): 4-bit; Nero: 4-bit replacing qwen2.5-coder:32b\\n\\nReference IDs:\\n- Ideas in flight: #27882 [proposed], #27869 [proposed]\\n- Files touched: none on disk this window (all changes were live container/service state on Joshua: stopped vllm-joshua-70b + restart=no, deleted intel/vllm:0.17.0-xpu image, started llm-scaler pull)\\n\\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\\n═══════════════════════════════════════════════\"}\n</arguments>\n<server_name>clinerules</server_name>\n<task_id>1787327963594</task_task_id>task_id</task_id>\n<tool_name>clinerules_validate_completion</tool_name>\n</use_mcp_tool>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -138925,12 +138925,20 @@
     "2589": null,
     "2592": null,
     "2597": null,
+    "4071": null,
     "4194": null,
+    "4987": null,
+    "5162": null,
+    "5178": null,
+    "5918": null,
+    "5919": null,
+    "5930": null,
     "6486": null,
     "6487": null,
     "6826": null,
     "7142": null,
     "7149": null,
+    "7515": null,
     "10108": null,
     "10740": null,
     "11397": null,
@@ -139066,6 +139074,7 @@
     "27832": null,
     "27858": "proposed",
     "27869": "proposed",
+    "27882": "proposed",
     "30877": null,
     "39273": null,
     "40738": null,
@@ -139092,9 +139101,11 @@
     "53180": null,
     "53284": null,
     "53323": null,
+    "64748": null,
     "178713": null,
     "178732": null,
-    "178733": null
+    "178733": null,
+    "475569": null
    }
   },
   "1787329580892": {
@@ -139240,11 +139251,11 @@
   },
   "1787370497651": {
    "task_id": "1787370497651",
-   "mtime": 1787380714916,
+   "mtime": 1787384382706,
    "created_at": "2026-08-22T03:48:17.651Z",
-   "last_modified": "2026-08-22T06:38:34.916Z",
-   "size_kb": 4870,
-   "turn_count": 796,
+   "last_modified": "2026-08-22T07:39:42.706Z",
+   "size_kb": 5721,
+   "turn_count": 916,
    "title": "How fast is this?",
    "pickup_prompt": "real 200-token completion.\n\n═══════════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════════\nPick up task #none — \"How fast is this?\" fleet speed check\nWhere we left off (verified 2026-08-21 20:04 PT):\n- Answered fleet throughput via frankenstein_host_probe: artemis-120b ~26 tok/s probe (~44-55 sustained), glm52-ring ~9, nero-minicpm-v ~77.\n- julia/cicero/joshua/maximus/ollama-14b probe failed/timed out at this instant (not confirmed down — likely transient).\nOpen threads to drive next:\n(none — informational only, no follow-up work required)\nReference IDs:\n- Ideas filed: none\n- Files touched: none\n═══════════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {

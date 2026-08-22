@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 1:01:27 PM PT | window: last 72h | 38 tasks | index total 887 (parsed 3, cached 884)
+Generated: 8/22/2026, 2:01:28 PM PT | window: last 72h | 40 tasks | index total 889 (parsed 4, cached 885)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787420772345` | 8/22/2026, 1:00:59 PM | 504 | 1558KB | #Qwen 3.8 27B  |
+| `1787420772345` | 8/22/2026, 2:01:27 PM | 878 | 2663KB | #Qwen 3.8 27B  |
+| `1787430120479` | 8/22/2026, 2:00:51 PM | 157 | 1498KB | frankenstein llm may be going rogue. can you check? seems to be drifting tasks |
+| `1787428970611` | 8/22/2026, 2:00:50 PM | 197 | 562KB | #VERITAS TRUTH SYRUM |
+| `1787421878922` | 8/22/2026, 1:32:14 PM | 208 | 2302KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787256742974` | 8/22/2026, 12:58:22 PM | 730 | 9185KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
-| `1787421878922` | 8/22/2026, 12:58:11 PM | 149 | 2018KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787420987189` | 8/22/2026, 11:47:08 AM | 162 | 875KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787420877031` | 8/22/2026, 10:47:57 AM | 1 | 883KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787327963594` | 8/22/2026, 10:35:35 AM | 1376 | 4557KB | #Julia |
@@ -53,7 +55,7 @@ Generated: 8/22/2026, 1:01:27 PM PT | window: last 72h | 38 tasks | index total 
 
 ## Per-window detail
 
-### `1787420772345` — 8/22/2026, 1:00:59 PM PT — 504 turns
+### `1787420772345` — 8/22/2026, 2:01:27 PM PT — 878 turns
 
 **Original task:**
 
@@ -70,31 +72,153 @@ Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.
 **Last PICKUP PROMPT:**
 
 ```
-aught by reading the env back)
+ + bench",
+  "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 — Joshua Qwen3.8-27B-FP8 final bring-up\n\nWhere we left off (verified 2026-08-22 14:00 PT):\n- ALL ROOT CAUSES FIXED ON JOSHUA: (1) GRUB now has pci=realloc,assign-busses,hpbussize=8,pcie_scan_all pcie_aspm=off pcie_port_pm=off (rebooted, /dev/dri shows both GPUs; torch.xpu True inside container... actually verify: pre-reboot torch said False 0 — POST-reboot KeyError moved past device inference, so enumeration FIXED). (2) vLLM KeyError: PlatformEnum.XPU at kernels/linear/__init__.py:355 possible_kernels[current_platform._enum] — the image lacks XPU fp8 kernel registration. FIXED by building intel/llm-scaler-vllm:0.21.0-b1-xpufp8 (docker commit of a container that ran /tmp/xpu_kernel_patch.sh — registers XPUFP8ScaledMMLinearKernel via register_linear_kernel(_XK, PlatformEnum.XPU, kernel_type='fp8') appended before __all__ in the linear kernels __init__.py). (3) Clean single-line unit at /etc/systemd/system/joshua-qwen38.service (multi-backslash mangling cost an hour — single-line ExecStart is the durable pattern; backups: .bak-20260822-xpufix, .bak-broken-ray, .bak-no-tp).\n- MODEL: /data/models/Qwen3.8-27B-FP8 = 29G complete from direct HF pull (8 min, ~55MB/s; WOPR relay abandoned — wg0 20mbit HTB + eno1 45Mbit CAKE ceiling; shaper RESTORED to 20mbit; joshua_hf_pull.sh pattern is THE deploy path).\n- LAST ACTION: manual docker run in background on Joshua (TP=1, enforce-eager, no ray, patched image) launched via ssh; the log redirect got mangled (bash usage text in /tmp/manual_test.log — quoting clash). Container may or may not be alive: check `sudo docker ps | grep qwen` first.\n- PRIOR unit-based attempts failed with status=2/INVALIDARGUMENT EVEN WITH the clean single-line unit — cause never isolated (suspect: --oom-score-adj 500 or StartLimitBurst interplay). The manual run path exists to isolate it. If manual run works: extract its exact docker args, put them verbatim into the unit (single line), daemon-reload, restart, verify :8001/v1/models HTTP 200.\n- THEN: LiteLLM config.yaml handle joshua-qwen38-27b -> http://10.100.0.4:8001/v1 (WG direct), litellm-safe-restart, frankenstein_registry.yaml lane entry (10.100.0.4:8001, qwen3.8-27b, 131072 ctx, mirror nero-qwen38-27b entry shape), registry reload, e2e probe through router, bench tok/s (200-token completion / time), stamp #27933.\n- Reversal Log this window: 'shaper raised to 240mbit would fix transfer' -> corrected: eno1 CAKE 45Mbit is the real ceiling, HF direct pull is the fix; 'ray backend fixes KeyError' -> corrected: KeyError persists in ray path too, real fix = kernel registration patch.\n- Ideas: #27933 [executing] tracks this. #27858/#27882/#27935 [deployed]. #27869 [proposed] Cicero/Maximus.\n\nOpen threads:\n1. #27933 [executing] — verify manual container state, isolate the INVALIDARGUMENT cause, get :8001 serving, wire lane + registry + bench + stamp\n2. #27869 [proposed] — Cicero/Maximus on-box hands\n3. (human-only) — Julia power-cycle\n\nReference IDs:\n- Ideas filed: #27933 [executing]\n- Ideas closed: #27858 [deployed], #27882 [deployed], #27935 [deployed]\n- Files: /etc/systemd/system/joshua-qwen38.service (clean), /tmp/xpu_kernel_patch.sh, /tmp/build_patched_image.sh, /tmp/joshua_hf_pull.sh, image intel/llm-scaler-vllm:0.21.0-b1-xpufp8\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n════════════════════════════
+```
+
+### `1787430120479` — 8/22/2026, 2:00:51 PM PT — 157 turns
+
+**Original task:**
+
+```
+frankenstein llm may be going rogue. can you check? seems to be drifting tasks
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12778, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178743, #18312, #18326, #19490, #25097, #25159, #2537, #25436, #25462, #2602 [deployed], #26050, #26492, #26908, #26923, #27012, #27136, #27259, #27933, #3952
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787327963594 - Qwen3.8-27B fleet rollout: Joshua lane wiring after transfer lands
+Pick up task #1787430120000 — frankenstein-llm rogue suspicion investigation.
 
-Where we left off (verified 2026-08-22 12:55 PT):
-- #27935 [deployed]: Claudia :11521 cap raised 4->8 in all three surfaces, adapter + litellm restarted, e2e verified ('Four' finish=stop). Rollback if needed: sed 11521=8 -> 11521=4 in the drop-in + adapter caps + config.yaml, then daemon-reload + restart both.
-- Joshua FP8 transfer: ~20% at 12:44 PT, ~1.8MB/s over WG, lands ~4:15 PM PT. AUTO-START IS IN THE RELAY (/tmp/fp8_relay2.sh runs 'systemctl enable --now joshua-qwen38' after .transfer_complete; cron-guarded every 2min).
-- joshua-qwen38.service staged: llm-scaler 0.21.0-b1, TP=2, 131072 ctx, qwen3+qwen3_xml tools, :8001.
-- 70B retired: #27882 [deployed]. Claudia + Nero live in spill ladder (GLM -> claudia-qwen38 -> nero-qwen38 -> 120B pool).
+Where we left off (verified 2026-08-22 12:29 PT):
+- frankenstein-llm verified NOT rogue: verify_routing HTTP 200, 0 retries/fallbacks; all pool upstreams decode-live; zero paid spills
+- The 'drift' = (a) emsu_fleet_liveness_probe cron cycling models by design, (b) executor 179 runs/24h with 0 executed (idle queue + safe_write gate aborts on PHP fatals), (c) batch lane mixing model families per today's Qwen3.8 directive
+- Bug library incident row 2602 recorded resolved (verified: bug_library_record returned 'Incident recorded + VERIFIED: frankenstein_router_incidents row 2602, status resolved; Row existence confirmed on WOPR' at 12:29 PT)
 
 Open threads to drive next:
-1. #27933 [executing] - once Joshua :8001 serves: verify /v1/models 200, add registry lane joshua-qwen38-27b at 10.100.0.4:8001 + config.yaml handle, bench per-lane tok/s, then update the idea record
-2. #27869 [proposed] - Cicero 8-bit Qwen3.8 (BLOCKED: host down, on-box hands) + Maximus 4-bit (BLOCKED: on-box wake + WOPR key line in fleet inventory)
-3. (human-only decision, no idea) - Julia needs a physical power-cycle at Oceanside; catch-relaunch cron restores the 235B lane on return
+1. Executor delivery failure (RUBEN issue 3952, approved today 10:20 PT, high) — already in RUBEN's approved pipeline; this session added root-cause evidence: 168 observed = idle polling with 0 tokens, 8 aborted = safe_write gate catching 'Cannot redeclare' fatals in generated code (human-only decision — no idea)
 
 Reference IDs:
-- Ideas filed: #27933 [executing]
-- Ideas closed: #27858 [deployed], #27882 [deployed], #27935 [deployed]
-- Files touched (all on WOPR unless noted): qwen38-lanes drop-in (cap 8), /usr/local/bin/frankenstein_tools_adapter.py (caps 8), /etc/litellm/config.yaml (max_par 8), HANDOFF_NOTES.md, /etc/systemd/system/joshua-qwen38.service (on Joshua, staged)
+- Ideas filed: none
+- Ideas closed: none
+- Bug library: frankenstein_router_incidents row 2602 (resolved)
+- Files touched: none (read-only investigation)
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Check bug library for known 'rogue/drifting' incident (NOVEL_SYMPTOM, gate opened)
+- [x] Verify routing: frankenstein-llm → :11510 adapter (frankenstein-tools pool), HTTP 200, 6.7s
+- [x] Tier health: frankenstein-llm UP; pool upstreams decode-live
+- [x] What served (last 2h): 2015 turns, 18 backends
+- [x] Autoscaler: no model-flipping decisions
+- [x] Registry: clean, matches directives
+- [x] RUBEN state: autonomous, healthy
+- [x] conv_05ffd... identified: emsu_fleet_liveness_probe (health-check cron, by-design cycling)
+- [x] Interactive Cline tasks: stable on frankenstein-tools, no unexpected switching
+- [x] Adapter upstream log: cline lane → BigMac 120B; batch lane → BigMac + Claudia Qwen3.8-27B + GLM ring; zero spills, zero errors
+- [x] RUBEN issues: found #3952 'Executor Delivery Failure - running but not shipping' (high, today 10:20)
+- [x] Verified #3952: 179 runs/24h, ZERO executed (168 observed, 8 aborted, 2 failed)
+- [x] Per-chain: idea-4516 96x observed, ruben_autonomous_auto_deploy 72x observed, ruben_implement_safe_write 8x aborted
+- [x] Abort reasons: safe_write gate catching real PHP fatals (Cannot redeclare) — gate working as designed
+- [x] Observed runs: 0 tokens, 0 model calls, empty summaries = deterministic polling with no work
+- [x] Classified (rule 297): NOT rogue — by-design probe noise + idle executor + safe_write gate aborts
+- [x] Recorded in bug library as incident row 2602 (resolved)
+- [x] clinerules_validate_completion: ALL PASSED
+- [x] clinerules_check_gate: GATE CLEAR
+- [x] attempt_completion delivered
+</task_progress>
+</attempt_completion>
+```
+
+### `1787428970611` — 8/22/2026, 2:00:50 PM PT — 197 turns
+
+**Original task:**
+
+```
+#VERITAS TRUTH SYRUM
+
+Status: VERITAS core is verified working and all 4 build ideas are deployed (verified: mysql SELECT truth_judge_log returned id=9, verdict=FAIL, latency_ms=50328; clinerules_validate_completion IDENTITY ECHO returned all 4 status=deployed at 11:46 PT). You asked 'How is this going? Test and see / advise.' This window hit its context limit, so it is handing off to a fresh window that will run the remaining tests immediately and report back in plain English. What remains: reading back what the executor deployed (email-pipeline wiring, steering injection, eval harness, dashb
+```
+
+**Ideas referenced:** #1130, #1131, #11316, #12249, #12266, #12269, #12588, #12688, #12689, #13470, #14133, #14142, #16345, #16715, #178712, #1828, #19567, #19686, #2063, #2065, #2073, #25155, #25185, #26710, #26915, #26922, #27100, #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], #27802, #27809, #27810 [deployed], #27812, #27858, #27863, #27939 [approved], #27941 [executing], #27942 [proposed], #6825
+
+**Last PICKUP PROMPT:**
+
+```
+ updated: rule 321, rule 29\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787121837052, VERITAS Truth Enforcement.\n\nWhere we left off (verified 2026-08-22 12:59 PT):\n- orchestrator_ideas_status_audit trigger recreated with evidence-based repair exception (verified: mysql SHOW TRIGGERS returned new body with provably-never-built exception, created 2026-08-22 13:56:23)\n- 644 false deployed ideas repaired to approved (verified: mysql UPDATE returned 643 rows + 1 test row; follow-up SELECT COUNT returned 0 remaining)\n- Protection verified: idea #27810 [deployed] downgrade BLOCKED, 0 rows affected\n- Repair verified: idea #27939 [approved] now status=approved, status_changed_by=root@localhost\n- Truth judge core works (verified: mysql SELECT truth_judge_log returned 18 rows, PASS and FAIL verdicts correct)\n- Argus gets rule 323 via frankenstein-llm steering (verified: ssh_command sed _router_core.py returned STEERING_MODELS with frankenstein-llm line 306, _STEERING_HARDFLOOR_FULL with 323 line 363)\n\nOpen threads to drive next:\n1. #27941 [executing] — upgrade executor truth gate from detection-only to detection+repair (auto-heal future false deploys)\n2. #27942 [proposed] — wire call_truth_judge() into argus_proxy.php pre-reply gate (Argus L4)\n3. #27488 [deployed] — wire call_truth_judge() into cron_email_responder.php send path (library included but never called)\n4. #27489 [deployed] — run eval harness cron once to verify: php /var/www/emtskills/cron/cron_veritas_l4_eval.php\n\nReference IDs:\n- Ideas filed: #27941 [executing], #27942 [proposed]\n- Ideas verified deployed: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed]\n- Files touched: admin_portal.orchestrator_ideas_status_audit (trigger recreated), lib/truth_judge.php (URL fix to http://127.0.0.1:8082)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"
+}
+</arguments>
+<task_progress>
+- [x] Check compress signal file (rule 119)
+- [x] Test 1-5: All VERITAS tests passed
+- [x] Report final status to Ruben in plain English
+- [x] Query truth_judge_log for executor/argus usage examples
+- [x] Verify Argus gets truth protocol via frankenstein-llm steering — YES
+- [x] Scope the backfill repair — 91 false-deployed ideas, blocked by trigger
+- [x] Option B: scope the trigger exception — 644 provably-never-built (82 7d, 562 older)
+- [x] Verify exception does NOT touch legitimately-deployed ideas — 11,192 protected, mutually exclusive
+- [x] Drop old trigger
+- [x] Recreate trigger with evidence-based repair exception
+- [x] Test protection path: legit deploy #27810 BLOCKED (0 rows affected)
+- [x] Test repair path: never-built #27939 repaired to approved (1 row)
+- [x] Run the backfill UPDATE — 643 rows repaired
+- [x] Verify the repair — 0 remaining false deploys
+- [x] File idea #27941 for truth gate auto-repair upgrade
+- [x] Promote idea #27941 to execution
+- [x] File idea #27942 for Argus L4 judge wiring
+- [x] Reconcile ideas #27941 [executing], #27942 [proposed]
+- [ ] Fix 5 gate failures and re-validate completion
+- [ ] Report completion
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787421878922` — 8/22/2026, 1:32:14 PM PT — 208 turns
+
+**Original task:**
+
+```
+This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
+```
+
+**Ideas referenced:** #19921, #25256, #27939 [deployed], #6520, #6646
+
+**Last PICKUP PROMPT:**
+
+```
+. No student data was touched.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — qb_invoices class-root coercion fix, balance leak for Alex Smith Jr (26814T-15).
+
+Where we left off (verified 8/22/2026 12:31 PM America/Anchorage):
+- Root cause proven: `qb_invoices.student_id` is int(10) class root (26814); slug `26814T-15` coerces → 26814 → whole-class invoices leak. Real FK = `student_db_id` (100% coverage).
+- Alex (Students.id 8143468) has ZERO own invoices; displayed ~$4,935 belonged to Kevin Keyes Jr (8137519) + 1 other (8139480).
+- PATCHED 5 surfaces to key on `student_db_id`: PaymentVerifier.php, emsu-operations build/index.js + src/index.ts, chatbot_tools.php, StudentAgent.php, Student360.php. All lint-clean, Node service restarted + active, php8.3-fpm reloaded.
+- LIVE-VERIFIED: MCP verify_payment_state for Alex = empty invoices/$0; Kevin regression = 24 invoices intact; SQL proof Alex=0, Kevin=24.
+- Also fixed latent same-bug in check_qb_invoices and public_invoice_lookup.php was already correct.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #27939 [deployed] — balancefix: qb_invoices student_id class-root coercion leaks class-wide invoices (filed 8/22; all 5 surfaces patched + deployed + verified). Monitor: if any other student reports a similar insane balance, run the same `student_db_id` audit query before touching invoices.
+
+Reference IDs:
+- Ticket: (none opened)
+- Ideas filed: #27939 [deployed]
+- Files touched: /var/www/emtskills/lib/PaymentVerifier.php, /var/www/emtskills/mcp-servers/emsu-operations/build/index.js, /var/www/emtskills/mcp-servers/emsu-operations/src/index.ts, /var/www/emtskills/api/livechat/chatbot_tools.php, /var/www/emtskills/src/Agents/StudentAgent.php, /var/www/emtskills/lib/Student360.php (each also backed up as .bak-20260822-balancefix*)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -160,18 +284,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - T#02 mysql SELECT truth_judge_log, id=9 verdict=FAIL claims_unsupported=1 latency_ms=50328 (E2E pass: judge correctly caught the false claim)
 - T#03 ssh_command curl litellm health, HTTP 200 in 15ms (router 
 ```
-
-### `1787421878922` — 8/22/2026, 12:58:11 PM PT — 149 turns
-
-**Original task:**
-
-```
-This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
-```
-
-**Ideas referenced:** #25256, #6520, #6646
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787420987189` — 8/22/2026, 11:47:08 AM PT — 162 turns
 

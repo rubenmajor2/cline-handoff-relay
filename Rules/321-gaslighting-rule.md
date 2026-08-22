@@ -123,3 +123,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-19 deploy-claim reversal: completion claimed 3 mechanisms deployed and stamped orchestrator_ideas status=deployed, but read-back verify found the drift-detector script + scoreboard view NEVER existed on disk/DB (only the truth index existed, under a different name than claimed). Amended behavior: a [deployed] tag or status=deployed stamp REQUIRES a separate read-back probe of the ACTUAL artifact (file on disk via ls/find, or DB object via information_schema) in the same window. An idea-row status stamp is NOT evidence the artifact exists. G5 premature-completion now explicitly covers 'stamped the idea deployed but never built/verified the artifact.'
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-22 21:00 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787121837052
+- RCA bucket: wrong premise
+- Trigger pattern: detection-only gate presented as 'by design'; presenting options instead of acting on a false gate
+- Reversal note: 2026-08-22 VERITAS reversal: a detection-only truth gate and a trigger that blocks all repair are both false gates (G6 hidden gate). Truth that can detect but not repair is decorative. Amended behavior: when a truth/verification system finds a provably-false state (e.g. status=deployed with no artifact and no build history), the repair path must exist and be acted on, not just logged. Presenting options A/B/C instead of acting on a structural blocker is inaction; after human approval of the approach, act immediately.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-22 21:04 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787430120000
+- RCA bucket: wrong premise
+- Trigger pattern: approved buildable work dispositioned as human-only decision instead of being built in-window
+- Reversal note: Within-window reversal: first completion dispositioned approved RUBEN issue 3952 as '(human-only decision — no idea)' — a post-completion deferral of ALREADY-APPROVED work. Ruben: 'Why is this a human decision? This was already approved. This should be built and shipped.' Corrected same window: diagnosed, built, and shipped all three fixes (heartbeat rows, delivery-watchdog run definition, phantom-column repair), verified live, marked the issue resolved. Reinforces existing 321 text: approved = deploy; deferring approved buildable work to a human is a G6 hidden gate.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

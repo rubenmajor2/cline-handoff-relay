@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-22T19:01:27.117Z",
+ "generated_at": "2026-08-22T20:01:27.770Z",
  "counts": {
-  "parsed": 4,
-  "reused": 883,
+  "parsed": 3,
+  "reused": 884,
   "failed": 0,
   "total": 887
  },
@@ -138727,13 +138727,13 @@
   },
   "1787256742974": {
    "task_id": "1787256742974",
-   "mtime": 1787425278932,
+   "mtime": 1787428702590,
    "created_at": "2026-08-20T20:12:22.974Z",
-   "last_modified": "2026-08-22T19:01:18.932Z",
-   "size_kb": 8577,
-   "turn_count": 711,
+   "last_modified": "2026-08-22T19:58:22.590Z",
+   "size_kb": 9185,
+   "turn_count": 730,
    "title": "VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.\n\nGoal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.\n\nShipped this window (all verified live):\n\n1. Rule 323 — Truth Protocol (hardfloor, always-loaded)\n   - Every material claim classified PROVEN / INFERENCE / UNKNOWN\n   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering\n   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pass\n   (verified: write_to_file to ~/Documents/Cline/Rules/323-truth-protocol.md returned success; cli",
-   "pickup_prompt": "etion result MUST open with a plain-English summary of 3-6 sentences BEFORE the PICKUP PROMPT block (and before any SESSION MEMORY blob when compressed). Written for Ruben, not the next agent: what this window did, the current state of the work, what happens next. No unexplained jargon (wedge, rung, send site), no bare pids or log ids without context, no machine-handoff artifact as the opening. The PICKUP PROMPT block is for the next window; the summary is for the human reading the result. A completion that opens with a SESSION MEMORY blob or a dense pickup prompt, leaving the human unable to parse what happened, violates this rule.\n\nSource incident 2026-08-22: VERITAS window shipped a compression blob + jargon-dense pickup prompt as the entire result. Ruben: \"I don't really understand or know what happened here.\" 297 classification: scope error. The completion was scoped to machine handoff only and excluded the human reader. Rule 91 mandated the block for the next agent but nothing mandated a human-facing summary.\n\n## Do NOT retype the divider. Use the template below.\n+++++++ REPLACE\n\n------- SEARCH\nreconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161.\n=======\nreconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161. 2026-08-22: human-readable summary section added after Ruben RCA 297 (completion opened with compression blob + jargon pickup prompt, human could not parse what happened).\n+++++++ REPLACE\n</diff>\n<task_progress>\n- [x] Judge E2E tested OK (id=9), ERROR rows = transient LiteLLM wedge\n- [x] lib/truth_judge.php fixed + deployed; smoke test running\n- [x] All 4 VERITAS ideas confirmed [deployed] by executor\n- [x] Compressed + shipped pickup prompt (but no human summary — Ruben flagged)\n- [x] 297 RCA done: scope error, completion excluded human reader\n- [x] Causal fix: rule 91 now mandates plain-English summary section\n- [ ] Reindex MCP\n- [ ] Re-ship completion WITH plain summary + RCA + pickup prompt\n</task_progress>\n</replace_in_file>",
+   "pickup_prompt": " (verbatim from .clinerules/91)\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787121837052, VERITAS Truth Enforcement. Ruben's latest steer (2026-08-22 12:52 PT): 'How is this going? Test and see / advise.' FIRST: run the tests below, THEN report to Ruben in plain English (no jargon).\n\nWhere we left off (verified 2026-08-22 12:03 PT):\n- Truth judge core works end-to-end: fed it an answer with one deliberately false claim, it returned FAIL, marked the claim CONTRADICTED, named the fix (verified: mysql SELECT on truth_judge_log returned id=9, verdict=FAIL, latency_ms=50328)\n- Two earlier ERROR rows were a transient LiteLLM router wedge, not a judge bug; router healthy (verified: ssh_command curl returned HTTP 200 in 15ms at 11:36 PT)\n- lib/truth_judge.php (PHP helper CFA code uses to call the judge) fixed + deployed (verified: write_server_file BACKED_UP, php -l 'No syntax errors detected', reload_php_fpm OK)\n- All 4 VERITAS build ideas deployed by executor (verified: clinerules_validate_completion IDENTITY ECHO returned all 4 status=deployed at 11:46 PT): #27486 [deployed] steering injection, #27488 [deployed] CFA email/chat/SMS wiring, #27489 [deployed] eval harness, #27491 [deployed] truth ledger dashboard\n- Rule 91 amended to mandate a human-readable summary in every completion (verified: clinerules_reindex returned 'Reindexed: 341 rules, 22 hardfloor' at 11:59 PT)\n\nOpen threads to drive next (this IS the test Ruben asked for):\n1. #27488 [deployed], read back the CFA email wiring: ssh_command grep cron/cron_email_responder.php for call_truth_judge near the ~line 3047 send site; check /tmp/truth_smoke.out and truth_judge_log for a cfa_email row (id>=10). If not actually wired, wire it.\n2. #27486 [deployed], verify rule-323 steering injection is live in weak-model surfaces.\n3. #27489 [deployed], verify the truthfulness eval harness artifact exists and runs.\n4. #27491 [deployed], verify the truth ledger dashboard artifact renders.\n5. Run one fresh live judge call (clinerules_truth_judge with a test claim + evidence) to confirm the judge is healthy RIGHT NOW, then report overall status to Ruben in plain English.\n\nReference IDs:\n- Ideas: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed]\n- Files touched: ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/323-truth-protocol.md, lib/truth_judge.php, api/fleet_api.php, cron/cron_email_responder.php (pending verify), /tmp/truth_smoke.php\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n## Key references\n- Files: ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/323-truth-protocol.md, ~/Documents/Cline/docs/TRUTH_ENFORCEMENT_ARCHITECTURE.md, lib/truth_judge.php, api/fleet_api.php, cron/cron_email_responder.php, /tmp/truth_smoke.php\n- IDs: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], task 1787121837052\n- /tmp artifacts: /tmp/truth_smoke.out\n\n## Session memory (what's already been done this window)\n- T#01 use_mcp_tool(clinerules_truth_judge, test claim with one false statement), judge call logged, ladder fell back to deepseek-v4-pro when GLM ring was slow\n- T#02 mysql SELECT truth_judge_log, id=9 verdict=FAIL claims_unsupported=1 latency_ms=50328 (E2E pass: judge correctly caught the false claim)\n- T#03 ssh_command curl litellm health, HTTP 200 in 15ms (router ",
    "ideas": {
     "1850": null,
     "2043": null,
@@ -139297,13 +139297,13 @@
   },
   "1787420772345": {
    "task_id": "1787420772345",
-   "mtime": 1787425274090,
+   "mtime": 1787428859145,
    "created_at": "2026-08-22T17:46:12.345Z",
-   "last_modified": "2026-08-22T19:01:14.090Z",
-   "size_kb": 1170,
-   "turn_count": 408,
+   "last_modified": "2026-08-22T20:00:59.145Z",
+   "size_kb": 1558,
+   "turn_count": 504,
    "title": "#Qwen 3.8 27B \n\nRetrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. \n\nFix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I do for \n\nFor Argus, I want to make sure that once the GLM lanes (4 that are left for Argus/Batch) a",
-   "pickup_prompt": "wrong premise | no rule change\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 - Qwen3.8-27B fleet rollout: lanes wired + benchmarks + spill order + Joshua/cleanup\n\nWhere we left off (verified 2026-08-22 11:51 PT):\n- CLAUDDIA :11521 lane RESTORED + durable (engine was up since Aug21; reverse-tunnel script now carries the 11521 forward + per-minute cron guard). config.yaml model FIXED (was Nero's MLX path, every call would have 404'd). E2E through router VERIFIED: '2+2?' -> HTTP 200 content '4' (13.9s); complex 500-token reasoning query completed (2882 bytes)\n- NERO :11525 in the spill ladder at L4d (same Qwen3.8 layer as Claudia L4c) + tools pool; lanes raised 2->4; qwen2.5-coder:32b + mistral-small DELETED (32GB freed); translocated duplicate GUI ollama killed (was stealing the IPv4 loopback ollama port and wedging :11455)\n- SPILL ORDER LIVE (router reloaded, registry loaded 18:45:57Z): GLM (L4g) -> claudia-qwen38 (L4c) -> nero-qwen38 (L4d) -> cicero-235b (L4b) -> 120B pool (L4f) -> deepseek -> glm-5.2. Adapter _qwen38_priority tier enforces same order in frankenstein-tools pool\n- BENCHES: Claudia 5.7 tok/s single / 26.9 agg@4 / 53.7 agg@8 (6.7 per-stream flat); Nero 15.1 single / 22.1 agg@4 (sweet spot; N=6 degrades to 2.7/stream); Nero native ctx 262144 (262K > 131K bar)\n- JOSHUA: 70B crash-loop killed + disabled (root cause: OLD intel/vllm:0.17.0-xpu image cannot see XPU on kernel 7.0, kernel was ALREADY 7.0 so the handoff's upgrade-decision claim was STALE); both 70B ollama models deleted (80GB freed). REMAINING: FP8 29GB transfer ~97% (cron-guarded relay), joshua-qwen38.service staged but not started, lane not yet wired. All tracked in #27933 [executing]\n- CICERO: HOST DOWN from both WOPR + Claudia-LAN vantages (tunnels dead, ARP incomplete, no-route). NOT a 235B-removal wedge, the box is powered off/unreachable. Needs on-box hands\n- MAXIMUS: unreachable from ALL vantages (WOPR :2224 open-but-dead, Claudia same-LAN no-route). Needs on-box wake + the one-line WOPR key append (documented in fleet inventory)\n- Lost-box reprobe: WG mesh reachable = Joshua/Artemis/BigMac only; Julia :2205/:11513 dark (recurring kernel wedge; catch-relaunch cron armed); Cesar/Cato alive via GLM ring :8210\n\nOpen threads to drive next:\n1. #27933 [executing] - Joshua: FP8 transfer ~97% (cron-guarded relay); when the .transfer_complete marker appears in the model dir on Joshua, run 'sudo systemctl enable --now joshua-qwen38' then verify :8001, add registry lane joshua-qwen38-27b at WG 10.100.0.4:8001 + config.yaml + bench\n2. #27869 [proposed] - Cicero 8-bit Qwen3.8 (BLOCKED: host down, needs on-box power/wake) + Maximus 4-bit (BLOCKED: needs on-box wake + WOPR key line: echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZxZvwAxtk/Z2cWnTsXUyGEAB+uG9rLdF/va6fDudfh emsuserver@wopr' >> ~/.ssh/authorized_keys)\n3. #27935 [proposed] - Raise Claudia adapter cap 11521 from 4 to 8 lanes (bench shows 6.7/stream flat at N=8); one drop-in env edit, left at 4 this window for KV headroom on long reasoning chains\n4. (human-only decision, no idea) - Julia box needs a physical power-cycle when someone is at Oceanside; catch-relaunch will auto-restore the 235B lane on return\n\nReference IDs:\n- Ideas filed: #27933 [executing], #27935 [proposed]\n- Ideas closed: #27858 [deployed], #27882 [deployed]\n- Files touched (all on WOPR unless noted): /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/frankenstein_tools_",
+   "pickup_prompt": "aught by reading the env back)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 - Qwen3.8-27B fleet rollout: Joshua lane wiring after transfer lands\n\nWhere we left off (verified 2026-08-22 12:55 PT):\n- #27935 [deployed]: Claudia :11521 cap raised 4->8 in all three surfaces, adapter + litellm restarted, e2e verified ('Four' finish=stop). Rollback if needed: sed 11521=8 -> 11521=4 in the drop-in + adapter caps + config.yaml, then daemon-reload + restart both.\n- Joshua FP8 transfer: ~20% at 12:44 PT, ~1.8MB/s over WG, lands ~4:15 PM PT. AUTO-START IS IN THE RELAY (/tmp/fp8_relay2.sh runs 'systemctl enable --now joshua-qwen38' after .transfer_complete; cron-guarded every 2min).\n- joshua-qwen38.service staged: llm-scaler 0.21.0-b1, TP=2, 131072 ctx, qwen3+qwen3_xml tools, :8001.\n- 70B retired: #27882 [deployed]. Claudia + Nero live in spill ladder (GLM -> claudia-qwen38 -> nero-qwen38 -> 120B pool).\n\nOpen threads to drive next:\n1. #27933 [executing] - once Joshua :8001 serves: verify /v1/models 200, add registry lane joshua-qwen38-27b at 10.100.0.4:8001 + config.yaml handle, bench per-lane tok/s, then update the idea record\n2. #27869 [proposed] - Cicero 8-bit Qwen3.8 (BLOCKED: host down, on-box hands) + Maximus 4-bit (BLOCKED: on-box wake + WOPR key line in fleet inventory)\n3. (human-only decision, no idea) - Julia needs a physical power-cycle at Oceanside; catch-relaunch cron restores the 235B lane on return\n\nReference IDs:\n- Ideas filed: #27933 [executing]\n- Ideas closed: #27858 [deployed], #27882 [deployed], #27935 [deployed]\n- Files touched (all on WOPR unless noted): qwen38-lanes drop-in (cap 8), /usr/local/bin/frankenstein_tools_adapter.py (caps 8), /etc/litellm/config.yaml (max_par 8), HANDOFF_NOTES.md, /etc/systemd/system/joshua-qwen38.service (on Joshua, staged)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -139482,14 +139482,18 @@
   },
   "1787421878922": {
    "task_id": "1787421878922",
-   "mtime": 1787425282427,
+   "mtime": 1787428691047,
    "created_at": "2026-08-22T18:04:38.922Z",
-   "last_modified": "2026-08-22T19:01:22.427Z",
-   "size_kb": 1613,
-   "turn_count": 62,
+   "last_modified": "2026-08-22T19:58:11.047Z",
+   "size_kb": 2018,
+   "turn_count": 149,
    "title": "This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?",
    "pickup_prompt": null,
-   "ideas": {}
+   "ideas": {
+    "6520": null,
+    "6646": null,
+    "25256": null
+   }
   }
  }
 }

@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 12:01:27 PM PT | window: last 72h | 40 tasks | index total 887 (parsed 4, cached 883)
+Generated: 8/22/2026, 1:01:27 PM PT | window: last 72h | 38 tasks | index total 887 (parsed 3, cached 884)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787421878922` | 8/22/2026, 12:01:22 PM | 62 | 1613KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
-| `1787256742974` | 8/22/2026, 12:01:18 PM | 711 | 8577KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
-| `1787420772345` | 8/22/2026, 12:01:14 PM | 408 | 1170KB | #Qwen 3.8 27B  |
+| `1787420772345` | 8/22/2026, 1:00:59 PM | 504 | 1558KB | #Qwen 3.8 27B  |
+| `1787256742974` | 8/22/2026, 12:58:22 PM | 730 | 9185KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787421878922` | 8/22/2026, 12:58:11 PM | 149 | 2018KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787420987189` | 8/22/2026, 11:47:08 AM | 162 | 875KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787420877031` | 8/22/2026, 10:47:57 AM | 1 | 883KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787327963594` | 8/22/2026, 10:35:35 AM | 1376 | 4557KB | #Julia |
@@ -48,24 +48,59 @@ Generated: 8/22/2026, 12:01:27 PM PT | window: last 72h | 40 tasks | index total
 | `1787168918854` | 8/19/2026, 6:26:29 PM | 538 | 2724KB | #TDSHS |
 | `1787180391022` | 8/19/2026, 6:12:16 PM | 122 | 1413KB | Is this true for this student? Can you give me a link to thier profile so i can see for my |
 | `1787174702687` | 8/19/2026, 3:33:43 PM | 214 | 3553KB | #Argus/Team Hub |
-| `1787138864086` | 8/19/2026, 12:33:19 PM | 450 | 1864KB | #Frankenstein LLM GLM Speedup |
-| `1787159982042` | 8/19/2026, 12:32:42 PM | 228 | 9271KB | #Argus/Team Hub |
 
 ---
 
 ## Per-window detail
 
-### `1787421878922` — 8/22/2026, 12:01:22 PM PT — 62 turns
+### `1787420772345` — 8/22/2026, 1:00:59 PM PT — 504 turns
 
 **Original task:**
 
 ```
-This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
+#Qwen 3.8 27B 
+
+Retrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. 
+
+Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #1798, #1828, #18312, #18326, #1876, #19567, #19653, #19903, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #26400, #26403, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #7142, #7149
 
-### `1787256742974` — 8/22/2026, 12:01:18 PM PT — 711 turns
+**Last PICKUP PROMPT:**
+
+```
+aught by reading the env back)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787327963594 - Qwen3.8-27B fleet rollout: Joshua lane wiring after transfer lands
+
+Where we left off (verified 2026-08-22 12:55 PT):
+- #27935 [deployed]: Claudia :11521 cap raised 4->8 in all three surfaces, adapter + litellm restarted, e2e verified ('Four' finish=stop). Rollback if needed: sed 11521=8 -> 11521=4 in the drop-in + adapter caps + config.yaml, then daemon-reload + restart both.
+- Joshua FP8 transfer: ~20% at 12:44 PT, ~1.8MB/s over WG, lands ~4:15 PM PT. AUTO-START IS IN THE RELAY (/tmp/fp8_relay2.sh runs 'systemctl enable --now joshua-qwen38' after .transfer_complete; cron-guarded every 2min).
+- joshua-qwen38.service staged: llm-scaler 0.21.0-b1, TP=2, 131072 ctx, qwen3+qwen3_xml tools, :8001.
+- 70B retired: #27882 [deployed]. Claudia + Nero live in spill ladder (GLM -> claudia-qwen38 -> nero-qwen38 -> 120B pool).
+
+Open threads to drive next:
+1. #27933 [executing] - once Joshua :8001 serves: verify /v1/models 200, add registry lane joshua-qwen38-27b at 10.100.0.4:8001 + config.yaml handle, bench per-lane tok/s, then update the idea record
+2. #27869 [proposed] - Cicero 8-bit Qwen3.8 (BLOCKED: host down, on-box hands) + Maximus 4-bit (BLOCKED: on-box wake + WOPR key line in fleet inventory)
+3. (human-only decision, no idea) - Julia needs a physical power-cycle at Oceanside; catch-relaunch cron restores the 235B lane on return
+
+Reference IDs:
+- Ideas filed: #27933 [executing]
+- Ideas closed: #27858 [deployed], #27882 [deployed], #27935 [deployed]
+- Files touched (all on WOPR unless noted): qwen38-lanes drop-in (cap 8), /usr/local/bin/frankenstein_tools_adapter.py (caps 8), /etc/litellm/config.yaml (max_par 8), HANDOFF_NOTES.md, /etc/systemd/system/joshua-qwen38.service (on Joshua, staged)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787256742974` — 8/22/2026, 12:58:22 PM PT — 730 turns
 
 **Original task:**
 
@@ -87,78 +122,56 @@ Shipped this window (all verified live):
 **Last PICKUP PROMPT:**
 
 ```
-etion result MUST open with a plain-English summary of 3-6 sentences BEFORE the PICKUP PROMPT block (and before any SESSION MEMORY blob when compressed). Written for Ruben, not the next agent: what this window did, the current state of the work, what happens next. No unexplained jargon (wedge, rung, send site), no bare pids or log ids without context, no machine-handoff artifact as the opening. The PICKUP PROMPT block is for the next window; the summary is for the human reading the result. A completion that opens with a SESSION MEMORY blob or a dense pickup prompt, leaving the human unable to parse what happened, violates this rule.
-
-Source incident 2026-08-22: VERITAS window shipped a compression blob + jargon-dense pickup prompt as the entire result. Ruben: "I don't really understand or know what happened here." 297 classification: scope error. The completion was scoped to machine handoff only and excluded the human reader. Rule 91 mandated the block for the next agent but nothing mandated a human-facing summary.
-
-## Do NOT retype the divider. Use the template below.
-+++++++ REPLACE
-
-------- SEARCH
-reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161.
-=======
-reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161. 2026-08-22: human-readable summary section added after Ruben RCA 297 (completion opened with compression blob + jargon pickup prompt, human could not parse what happened).
-+++++++ REPLACE
-</diff>
-<task_progress>
-- [x] Judge E2E tested OK (id=9), ERROR rows = transient LiteLLM wedge
-- [x] lib/truth_judge.php fixed + deployed; smoke test running
-- [x] All 4 VERITAS ideas confirmed [deployed] by executor
-- [x] Compressed + shipped pickup prompt (but no human summary — Ruben flagged)
-- [x] 297 RCA done: scope error, completion excluded human reader
-- [x] Causal fix: rule 91 now mandates plain-English summary section
-- [ ] Reindex MCP
-- [ ] Re-ship completion WITH plain summary + RCA + pickup prompt
-</task_progress>
-</replace_in_file>
-```
-
-### `1787420772345` — 8/22/2026, 12:01:14 PM PT — 408 turns
-
-**Original task:**
-
-```
-#Qwen 3.8 27B 
-
-Retrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. 
-
-Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #1798, #1828, #18312, #18326, #1876, #19567, #19653, #19903, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #26400, #26403, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-wrong premise | no rule change
-
+ (verbatim from .clinerules/91)
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787327963594 - Qwen3.8-27B fleet rollout: lanes wired + benchmarks + spill order + Joshua/cleanup
+Pick up task #1787121837052, VERITAS Truth Enforcement. Ruben's latest steer (2026-08-22 12:52 PT): 'How is this going? Test and see / advise.' FIRST: run the tests below, THEN report to Ruben in plain English (no jargon).
 
-Where we left off (verified 2026-08-22 11:51 PT):
-- CLAUDDIA :11521 lane RESTORED + durable (engine was up since Aug21; reverse-tunnel script now carries the 11521 forward + per-minute cron guard). config.yaml model FIXED (was Nero's MLX path, every call would have 404'd). E2E through router VERIFIED: '2+2?' -> HTTP 200 content '4' (13.9s); complex 500-token reasoning query completed (2882 bytes)
-- NERO :11525 in the spill ladder at L4d (same Qwen3.8 layer as Claudia L4c) + tools pool; lanes raised 2->4; qwen2.5-coder:32b + mistral-small DELETED (32GB freed); translocated duplicate GUI ollama killed (was stealing the IPv4 loopback ollama port and wedging :11455)
-- SPILL ORDER LIVE (router reloaded, registry loaded 18:45:57Z): GLM (L4g) -> claudia-qwen38 (L4c) -> nero-qwen38 (L4d) -> cicero-235b (L4b) -> 120B pool (L4f) -> deepseek -> glm-5.2. Adapter _qwen38_priority tier enforces same order in frankenstein-tools pool
-- BENCHES: Claudia 5.7 tok/s single / 26.9 agg@4 / 53.7 agg@8 (6.7 per-stream flat); Nero 15.1 single / 22.1 agg@4 (sweet spot; N=6 degrades to 2.7/stream); Nero native ctx 262144 (262K > 131K bar)
-- JOSHUA: 70B crash-loop killed + disabled (root cause: OLD intel/vllm:0.17.0-xpu image cannot see XPU on kernel 7.0, kernel was ALREADY 7.0 so the handoff's upgrade-decision claim was STALE); both 70B ollama models deleted (80GB freed). REMAINING: FP8 29GB transfer ~97% (cron-guarded relay), joshua-qwen38.service staged but not started, lane not yet wired. All tracked in #27933 [executing]
-- CICERO: HOST DOWN from both WOPR + Claudia-LAN vantages (tunnels dead, ARP incomplete, no-route). NOT a 235B-removal wedge, the box is powered off/unreachable. Needs on-box hands
-- MAXIMUS: unreachable from ALL vantages (WOPR :2224 open-but-dead, Claudia same-LAN no-route). Needs on-box wake + the one-line WOPR key append (documented in fleet inventory)
-- Lost-box reprobe: WG mesh reachable = Joshua/Artemis/BigMac only; Julia :2205/:11513 dark (recurring kernel wedge; catch-relaunch cron armed); Cesar/Cato alive via GLM ring :8210
+Where we left off (verified 2026-08-22 12:03 PT):
+- Truth judge core works end-to-end: fed it an answer with one deliberately false claim, it returned FAIL, marked the claim CONTRADICTED, named the fix (verified: mysql SELECT on truth_judge_log returned id=9, verdict=FAIL, latency_ms=50328)
+- Two earlier ERROR rows were a transient LiteLLM router wedge, not a judge bug; router healthy (verified: ssh_command curl returned HTTP 200 in 15ms at 11:36 PT)
+- lib/truth_judge.php (PHP helper CFA code uses to call the judge) fixed + deployed (verified: write_server_file BACKED_UP, php -l 'No syntax errors detected', reload_php_fpm OK)
+- All 4 VERITAS build ideas deployed by executor (verified: clinerules_validate_completion IDENTITY ECHO returned all 4 status=deployed at 11:46 PT): #27486 [deployed] steering injection, #27488 [deployed] CFA email/chat/SMS wiring, #27489 [deployed] eval harness, #27491 [deployed] truth ledger dashboard
+- Rule 91 amended to mandate a human-readable summary in every completion (verified: clinerules_reindex returned 'Reindexed: 341 rules, 22 hardfloor' at 11:59 PT)
 
-Open threads to drive next:
-1. #27933 [executing] - Joshua: FP8 transfer ~97% (cron-guarded relay); when the .transfer_complete marker appears in the model dir on Joshua, run 'sudo systemctl enable --now joshua-qwen38' then verify :8001, add registry lane joshua-qwen38-27b at WG 10.100.0.4:8001 + config.yaml + bench
-2. #27869 [proposed] - Cicero 8-bit Qwen3.8 (BLOCKED: host down, needs on-box power/wake) + Maximus 4-bit (BLOCKED: needs on-box wake + WOPR key line: echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZxZvwAxtk/Z2cWnTsXUyGEAB+uG9rLdF/va6fDudfh emsuserver@wopr' >> ~/.ssh/authorized_keys)
-3. #27935 [proposed] - Raise Claudia adapter cap 11521 from 4 to 8 lanes (bench shows 6.7/stream flat at N=8); one drop-in env edit, left at 4 this window for KV headroom on long reasoning chains
-4. (human-only decision, no idea) - Julia box needs a physical power-cycle when someone is at Oceanside; catch-relaunch will auto-restore the 235B lane on return
+Open threads to drive next (this IS the test Ruben asked for):
+1. #27488 [deployed], read back the CFA email wiring: ssh_command grep cron/cron_email_responder.php for call_truth_judge near the ~line 3047 send site; check /tmp/truth_smoke.out and truth_judge_log for a cfa_email row (id>=10). If not actually wired, wire it.
+2. #27486 [deployed], verify rule-323 steering injection is live in weak-model surfaces.
+3. #27489 [deployed], verify the truthfulness eval harness artifact exists and runs.
+4. #27491 [deployed], verify the truth ledger dashboard artifact renders.
+5. Run one fresh live judge call (clinerules_truth_judge with a test claim + evidence) to confirm the judge is healthy RIGHT NOW, then report overall status to Ruben in plain English.
 
 Reference IDs:
-- Ideas filed: #27933 [executing], #27935 [proposed]
-- Ideas closed: #27858 [deployed], #27882 [deployed]
-- Files touched (all on WOPR unless noted): /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/frankenstein_tools_
+- Ideas: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed]
+- Files touched: ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/323-truth-protocol.md, lib/truth_judge.php, api/fleet_api.php, cron/cron_email_responder.php (pending verify), /tmp/truth_smoke.php
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+
+## Key references
+- Files: ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/323-truth-protocol.md, ~/Documents/Cline/docs/TRUTH_ENFORCEMENT_ARCHITECTURE.md, lib/truth_judge.php, api/fleet_api.php, cron/cron_email_responder.php, /tmp/truth_smoke.php
+- IDs: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], task 1787121837052
+- /tmp artifacts: /tmp/truth_smoke.out
+
+## Session memory (what's already been done this window)
+- T#01 use_mcp_tool(clinerules_truth_judge, test claim with one false statement), judge call logged, ladder fell back to deepseek-v4-pro when GLM ring was slow
+- T#02 mysql SELECT truth_judge_log, id=9 verdict=FAIL claims_unsupported=1 latency_ms=50328 (E2E pass: judge correctly caught the false claim)
+- T#03 ssh_command curl litellm health, HTTP 200 in 15ms (router 
 ```
+
+### `1787421878922` — 8/22/2026, 12:58:11 PM PT — 149 turns
+
+**Original task:**
+
+```
+This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
+```
+
+**Ideas referenced:** #25256, #6520, #6646
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787420987189` — 8/22/2026, 11:47:08 AM PT — 162 turns
 
@@ -1912,125 +1925,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] attempt_completion shipped
 </task_progress>
 </attempt_completion>
-```
-
-### `1787138864086` — 8/19/2026, 12:33:19 PM PT — 450 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM GLM Speedup
-
-Ok, i iidd pay the API for Deepseek and can’t tell why it’s so much faster. Was it you or Deepseek being paid? Did we fix something in here or no? Are we just using Deepseek now? I’m really confused on all this? Why would we even spill over to deepseek? But stall on GLM 5.2 forever. Like would’t we have gone right to th 23
-
-
-Also there is below to loook atYes, GLM-5.2 is the culprit, and no, we do not settle. Here is what the doc you keep citing says, what is live now, and what remains human-gated.
-
-## Why GLM-5.2 is slow (measured, per your doc's method)
-
-30s co
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11944, #11945, #12314, #12365, #12366, #12368, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178712, #178713, #178714, #1798, #1828, #18312, #18326, #18471, #19567, #1986, #1988, #1989, #20042, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2116, #2127, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2254, #2258, #2298, #2299, #2307, #23169, #2353, #24172, #24217, #25097, #25150, #25185, #25188, #2537, #25378, #25381, #2546, #25470, #25646, #2583 [superseded], #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27236, #27249 [executing], #27250, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524 [proposed], #27531 [proposed], #27533 [executing], #27610 [executing], #27611 [executing], #6826, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787138864086 — Frankenstein LLM GLM speedup questions answered; recovery runbook + research process rules filed.
-
-Where we left off (verified 2026-08-19 12:29 PT):
-- Answered Ruben's 5 questions about DeepSeek speed, paid account, spill ladder, GLM stalling, 235B routing
-- Root cause of perceived slowness: GLM ring flooded at 11 concurrent (0.55 tok/s/stream) while DeepSeek cloud responds in 2-5s; floor removal + admission gate fixed the flood (verified: emsu-operations ssh_command sudo cat /proc/857523/environ returned EMSU_GLM_FLOOR_OFF=1; ring /metrics num_requests_running=3.0 after gate)
-- Julia 235B is NOW SERVING (verified: emsu-operations ssh_command curl :11513/v1/models HTTP 200, qwen3-235b listed)
-- Created rule 91-GLM: GLM ring + Julia/Claudia 235B recovery runbook at Rules-archive/91-glm-ring-235b-recovery-runbook.md
-- Created rule 323: bug library research process (dynamic search + community search) at Rules-archive/323-bug-library-research-process.md
-- Updated _RULE_TREE.md with both rules, reindexed MCP
-- DeepSeek account was drained, Ruben topped it up; spill rung now functional
-
-Open threads to drive next:
-1. #27610 [executing] — Rule 91-GLM filed as idea for executor tracking
-2. #27611 [executing] — Rule 323 filed as idea for executor tracking
-3. Ring decode relaunch: max_num_seqs 15 to 32 with controlled sequence — #27524 [proposed] (from prior window, awaits Ruben)
-4. Rule-91 steering trim: move amendments to case-law files — #27531 [proposed] (from prior window, awaits Ruben)
-5. DeepSeek balance monitoring: account was drained once; consider low-balance alert — (human-only decision, no idea)
-
-Reference IDs:
-- Ideas filed: #27610 [executing], #27611 [executing]
-- Files touched: ~/Documents/Cline/Rules-archive/91-glm-ring-235b-recovery-runbook.md, ~/Documents/Cline/Rules-archive/323-bug-library-research-process.md, ~/Documents/Cline/Rules/_RULE_TREE.md
-- Prior window ideas referenced: #27524 [proposed], #27531 [proposed], #27508 [executing], #27514 [blocked], #27515 [executing], #27494 [executing]
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Answer Ruben's questions about DeepSeek speed, paid vs free, spill ladder, GLM stalling
-- [x] Verify live routing state (registry, adapter logs, DeepSeek status)
-- [x] Create rule 91-GLM: GLM ring + Julia/Claudia recovery runbook
-- [x] Create rule 323: bug library research process (dynamic + community search)
-- [x] File ideas #27610 and #27611
-- [x] Reindex MCP
-- [x] Update rule tree
-- [x] Promote ideas to executor
-- [x] Reconcile ideas (both [executing])
-- [x] Fix gate failures: probe Julia live (now serving HTTP 200), fix verification markers
-- [x] Validate completion (ALL PASSED)
-- [x] Check gate file (GATE CLEAR)
-- [x] Complete with pickup prompt
-- [x] Add summary section per Ruben feedback
-- [x] Re-validate and complete
-</task_progress>
-</attempt_completion>
-```
-
-### `1787159982042` — 8/19/2026, 12:32:42 PM PT — 228 turns
-
-**Original task:**
-
-```
-#Argus/Team Hub
-
-Buttons on this page: https://emsuniversity.com/emtskills/routes/team_hub.php 
-
-for weekly view/monthly view, etc... don't seem to work. The instructors also don't seem to be able to pick up shifts anymore either. I have just heard this from Cori. She said this was put into Argus and Jon tried it also but nothing has materialized. Can you fix this end to end?
-```
-
-**Ideas referenced:** #059669, #0891, #14829, #166534, #1724, #178716, #18941, #21753, #22276, #25185, #2524, #2525, #2563, #2582, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27601 [proposed], #27602 [executing], #27603 [executing], #475569, #5894, #6021, #6366, #64748, #7223, #92400, #9577
-
-**Last PICKUP PROMPT:**
-
-```
-to continue in a fresh window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Team Hub calendar buttons + shift pickup fix (end to end).
-
-Where we left off (verified 2026-08-19 12:32 PT):
-- Task: https://emsuniversity.com/emtskills/routes/team_hub.php — weekly/monthly view buttons and shift pickup broken. Cori reported, Jon tried via Argus, nothing materialized. Fix end to end.
-- Files: routes/team_hub.php (main page) + lib/team_hub_calendar.php (renderWeeklyCalendar + renderMonthlyCalendar). Both fully read this session.
-- BUG 1 ROOT CAUSE (weekly shift cards not clickable / pickup broken): renderWeeklyCalendar emits an inline <script> IIFE mid-page that does `if (!modalEl || !window.bootstrap) return;`. But bootstrap.bundle.min.js is loaded at the VERY END via HubShell::renderFoot (CDN script tag inside the ENDJS nowdoc). So window.bootstrap is undefined when the calendar IIFE runs → early return → NO click handlers attach → clicking "Open - tap to pick up" cards does nothing. FIX: rewrite the weekly modal as a SELF-CONTAINED vanilla-JS overlay (fixed-position div, no bootstrap.Modal dependency) so it works regardless of Bootstrap load order. Claim button POSTs to /emtskills/routes/api/shift_lifecycle.php?action=request_pickup with JSON {shift_id}. Keep the data-* attributes on .thc-shift cards.
-- BUG 2 ROOT CAUSE (combined classes show only one section): emsu_shifts has columns `section` AND `section2` AND `combined_shift_group` (char). Combined classes store the second section in section2. The calendar query getTeamHubCalendarShifts only SELECTs `section` and the card only renders section. FIX: add section2 to the SELECT; in the weekly card + modal, render both sections (e.g. "26912BC + 26913BC") when section2 is non-empty.
-- BUG 3 ROOT CAUSE (monthly "View day" goes to weekly not daily): renderMonthlyCalendar day-cell onclick and "View day" link both use `?view=weekly&date=...`. FIX: change to `?view=daily&date=...`. ALSO must pass date into the daily iframe: team_hub.php builds $__dailyEmbedUrl = '/emtskills/routes/connecteam_schedules.php?embed=1' — need to check connecteam_schedules.php accepts a date param (NOT yet verified) and append it; if it doesn't support date, add date support there or route to a daily rendering. VERIFY connecteam_schedules.php date handling before finalizing bug 3.
-- Deploy via write_server_file (emsu-operations MCP) which auto-lints PHP + reloads FPM. NEVER write_to_file on /var/www paths (rule 144).
-- After deploy: verify by loading team_hub.php?view=weekly and ?view=monthly, confirm cards clickable + modal opens + sections show + monthly View day → daily.
-
-Open threads to drive next:
-1. Implement bug 1 fix (self-contained modal) in lib/team_hub_calendar.php renderWeeklyCalendar — action: rewrite modal HTML+JS.
-2. Implement bug 2 fix (section2) in getTeamHubCalendarShifts SELECT + weekly card/modal render — action: edit lib/team_hub_calendar.php.
-3. Implement bug 3 fix (monthly → daily + date param) in renderMonthlyCalendar + team_hub.php $__dailyEmbedUrl; first verify connecteam_schedules.php date support — action: read connecteam_schedules.php then edit.
-4. Deploy both files + verify end to end in browser.
-
-Reference IDs:
-- Ideas filed: none yet (file if any deferral)
-- Files touched (pending): lib/team_hub_calendar.php, routes/team_hub.php, possibly routes/connecteam_schedules.php
-- Key columns: emsu_shifts.section, section2, combined_shift_group, claim_status, ins
 ```

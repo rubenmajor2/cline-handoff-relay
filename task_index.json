@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-22T00:46:09.760Z",
+ "generated_at": "2026-08-22T02:12:53.967Z",
  "counts": {
-  "parsed": 3,
-  "reused": 878,
+  "parsed": 1,
+  "reused": 880,
   "failed": 0,
   "total": 881
  },
@@ -138825,11 +138825,11 @@
   },
   "1787327963594": {
    "task_id": "1787327963594",
-   "mtime": 1787358916594,
+   "mtime": 1787364767201,
    "created_at": "2026-08-21T15:59:23.594Z",
-   "last_modified": "2026-08-22T00:35:16.594Z",
-   "size_kb": 2342,
-   "turn_count": 364,
+   "last_modified": "2026-08-22T02:12:47.201Z",
+   "size_kb": 2368,
+   "turn_count": 377,
    "title": "#Julia\n\nDid Julia/Claudia come back online? \n\nDo not mess with other boxes. Read to be safe:\n\nPompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  \n\n\nBoth answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.\n\n## Where 671 came from, and it is now durable\n\nWritten to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.\n\n\nTwo counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, divided by elapsed wall seconds:\n\n```javascript\ndecode=12.65 prefill=658.82 TOTAL_TOKENS_PER_S=671.4",
    "pickup_prompt": "s the 235B boxes to be online.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — Qwen3.8-27B-FP8 on Claudia setup.\n\nWhere we left off (verified 2026-08-21 17:34 PT):\n- Qwen3.8-27B-FP8 serving on Claudia :8000 (vLLM PID 2254761, 131K ctx)\n- Tunnel Claudia:8000 → WOPR:11521 active (NOT persistent, needs systemd)\n- Registry entry claudia-qwen38-27b added, served_ctx: 131072\n- Performance: 7.7 tok/s, 275K KV tokens, 8.23x concurrency at 131K ctx\n- Quality test: Qwen3.8-27B gave correct precision/recall answer\n- Julia :11513 and Cicero :11520 both DOWN (cannot compare to 235B)\n\nOpen threads to drive next:\n1. Make tunnel persistent via systemd on Claudia\n2. Restart LiteLLM to activate routing\n3. Investigate Julia/Cicero downtime for proper 235B comparison\n\nReference IDs:\n- Files touched: /etc/litellm/frankenstein_registry.yaml, /home/rubenmajor/claudia_qwen38_launch.sh, /home/rubenmajor/.python-vllm-custom/lib/python3.12/site-packages/vllm/utils/deep_gemm.py\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Qwen3.8-27B-FP8 live on Claudia at 131K ctx\n- [x] Qwen3.8-27B quality test: correct answer\n- [x] Julia :11513 DOWN\n- [x] Cicero :11520 DOWN\n- [x] Reported comparison (235B unavailable for A/B test)\n</task_progress>\n</attempt_completion>",
    "ideas": {

@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 5:46:09 PM PT | window: last 72h | 71 tasks | index total 881 (parsed 3, cached 878)
+Generated: 8/21/2026, 7:12:53 PM PT | window: last 72h | 67 tasks | index total 881 (parsed 1, cached 880)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787327963594` | 8/21/2026, 5:35:16 PM | 364 | 2342KB | #Julia |
+| `1787327963594` | 8/21/2026, 7:12:47 PM | 377 | 2368KB | #Julia |
 | `1787256742974` | 8/21/2026, 5:25:17 PM | 568 | 6210KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
 | `1787191612298` | 8/21/2026, 5:21:58 PM | 836 | 20924KB | #Comprehensive System |
 | `1787349230620` | 8/21/2026, 5:15:27 PM | 146 | 476KB | #San Mateo County EMSA |
@@ -77,16 +77,12 @@ Generated: 8/21/2026, 5:46:09 PM PT | window: last 72h | 71 tasks | index total 
 | `1787113089978` | 8/18/2026, 9:44:39 PM | 207 | 333KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
 | `1787111283634` | 8/18/2026, 9:16:49 PM | 136 | 195KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
 | `1787111101864` | 8/18/2026, 8:45:35 PM | 2 | 2KB | What is the fastest iteration we've ever achieved |
-| `1787103874195` | 8/18/2026, 7:10:36 PM | 98 | 455KB | Deepseek v4 Pro just released a 1.6TB version. Can you look into this and tell me if / how |
-| `1787104113431` | 8/18/2026, 6:48:49 PM | 2 | 7KB | Thoughts on this?  |
-| `1787100985272` | 8/18/2026, 6:07:41 PM | 34 | 315KB | #Frankenstein LLM Misc |
-| `1786989452314` | 8/18/2026, 5:55:33 PM | 360 | 939KB | frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sur |
 
 ---
 
 ## Per-window detail
 
-### `1787327963594` — 8/21/2026, 5:35:16 PM PT — 364 turns
+### `1787327963594` — 8/21/2026, 7:12:47 PM PT — 377 turns
 
 **Original task:**
 
@@ -3347,137 +3343,5 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 ```
 What is the fastest iteration we've ever achieved
 ```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787103874195` — 8/18/2026, 7:10:36 PM PT — 98 turns
-
-**Original task:**
-
-```
-Deepseek v4 Pro just released a 1.6TB version. Can you look into this and tell me if / how we should update our model that we have here in Cline and everywhere on the server? What will this do for us?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11847, #12477, #12584, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #19338, #1998, #25097, #2537, #26908, #26923, #27259 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-owngrade, and that's deployed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #27259 — DeepSeek V4 Pro GA reconciliation (legacy reasoner alias + registry drift).
-
-Where we left off (verified 2026-08-18 19:10 PT):
-- V4 Pro GA (0813) confirmed Aug 12, 2026. 1.6T params MoE, 49B active. Already serving via unpinned `deepseek-v4-pro` everywhere.
-- legacy `deepseek-reasoner` alias was silently resolving to deepseek-v4-flash (probe verified) — repointed to deepseek-v4-pro with `reasoning_effort: high`.
-- litellm restarted clean (63 models, health 200). Registry note fixed (direct primary + OpenRouter fallback). Backup: config.yaml.bak-v4pro-ga-20260818-1903.
-
-Open threads to drive next (each has a real filed idea #):
-1. None — all work from #27259 [deployed] completed this session.
-
-Reference IDs:
-- Idea filed: #27259 [deployed]
-- Files touched: /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, /tmp/ds_probe.py (scratch)
-- Backup: /etc/litellm/config.yaml.bak-v4pro-ga-20260818-1903
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787104113431` — 8/18/2026, 6:48:49 PM PT — 2 turns
-
-**Original task:**
-
-```
-Thoughts on this? 
-
-Your "spill ladder" is mostly solid, but you are missing three critical releases from the last 30 days (July/August 2026) that significantly disrupt the hierarchy. Specifically, the "Small Local" category has completely leapfrogged the older 235B models in reasoning capability.
-Here is the corrected and updated ladder.
-## The Updated Spill Ladder (Mid-August 2026)
-Bold indicates a new or corrected entry.
-
-   1. [Muse Glimmer 30B](https://www.google.com/search?kgmid=FAILED_OR_SKIPPED) / [Gemma 4 31B](https://www.google.com/search?kgmid=FAILED_OR_SKIPPED) (Local)
-   * Why her
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787100985272` — 8/18/2026, 6:07:41 PM PT — 34 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Misc
-
-Rebase and tell me what's next here. Julia/Claudia is back onlind serving
-
---
-Fixed, deployed, and verified. `litellm:julia-235b` now always serves a REAL Qwen3-235B, on every prompt size, with the substitution visible in headers instead of silent.
-
-## What was actually off with my analysis, in one line
-
-Nothing I measured was wrong; the claim I built from it was scoped wrong twice. First flip (earlier): the julia-235b BOX is dead but the NAME serves — the router rewrites `data["model"]` to a sibling. Second flip (this round): I told you that sibling was glm-5.2-local, 
-```
-
-**Ideas referenced:** #178693, #21586 [blocked], #24895 [blocked], #2554, #2569, #26196 [blocked], #26225 [blocked], #26322, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26908 [deployed], #26931, #26932 [deployed], #26934 [blocked], #27097 [awaiting_review], #27109, #27110, #27123 [executing], #27128, #27129, #27201, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #366377
-
-**Last PICKUP PROMPT:**
-
-```
-that this window should build.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786932084 — julia-235b rebase: box re-dark, fallback holding, smart PDU is next.
-
-Where we left off (verified 2026-08-18 18:06 PT):
-- Julia BOX DARK AGAIN second time today (~17:58-18:06 PT). 3-vantage proof: WG 10.100.0.15 dead, LAN 192.168.1.190 dead from Mac, :11513 listener flapped then gone, :2205 refused. Lane-guard #27236 [deployed] fired DARK alert 01:00:06Z + error 01:05:05Z.
-- Recovered window confirmed real: audit 00:40:46Z + 00:57:59Z picked=julia-235b, no substitution. The 8/17 fix holds: cicero :11520 healthy, julia-235b name falls back to real 235B while box is dark.
-- Claudia healthy (192.168.1.115 ping OK, tunnel 11516 stable).
-- litellm healthy (liveness 200). No config changes this window (probe-only).
-
-Open threads to drive next:
-1. #27123 [executing] — substitution transparency headers; independent of Julia power state, executable now.
-2. #27097 [awaiting_review] — RoCE preflight + IPv4 write; gated on next Julia boot.
-3. Smart PDU on Julia/Claudia outlet is the top recovery fix and needs a human decision. (human-only decision, no idea)
-4. Julia physical power press needed now. (human-only decision, no idea)
-5. Orphan-D keep-or-kill: #26934 [blocked], #26225 [blocked], #26196 [blocked], #21586 [blocked], #24895 [blocked]
-
-Reference IDs:
-- Ideas: #27236 [deployed] (proved firing again), #27123 [executing], #27097 [awaiting_review]
-- Prior window artifacts unchanged: config.yaml fallback [cicero-235b], _router_core.py 235B sibling pick (line 4654), backups .bak-julia-fallback-20260817 / .bak-235b-sibling-20260817
-- Files touched this window: none (probe + rebase only)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1786989452314` — 8/18/2026, 5:55:33 PM PT — 360 turns
-
-**Original task:**
-
-```
-frankenstein-llm keeps going down as I'm trying to put back up Cicero and Maximus, not sure if that has anything to do with it, but please correct those issues. It could be the other Cline instances running on Cicero and Maximus interfering and not having the latest info. 
-
-Read this: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durabl
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12403, #12477, #12584, #12618, #12657, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13453, #13470, #13874, #14000, #15823, #16163, #16265, #16304, #16602, #16648, #16844, #17202, #17203, #17205, #18312, #18326, #18786, #18820, #19747, #2007, #2071, #2079, #21586, #22820, #22897, #2299, #23171, #24220, #24895, #25097, #25112, #25133, #25185, #2528, #2537, #25468, #25471, #2549 [deployed], #2550 [deployed], #2552, #25567, #25625, #25627, #25877, #25878, #26123, #26132, #26133, #26134, #26135, #26137, #26138, #26139, #26140, #26145, #26146, #26196, #26225, #26400, #26908 [deployed], #26914, #26922 [deployed], #26923 [deployed], #26927 [deployed], #26932 [deployed], #26934, #27097 [executing], #27123 [executing], #53462, #57769, #57771
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

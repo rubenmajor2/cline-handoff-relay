@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 1:41:59 AM PT | window: last 72h | 54 tasks | index total 883 (parsed 1, cached 882)
+Generated: 8/22/2026, 3:01:23 AM PT | window: last 72h | 48 tasks | index total 883 (parsed 0, cached 883)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787327963594` | 8/22/2026, 1:41:52 AM | 1337 | 4478KB | #Julia |
+| `1787327963594` | 8/22/2026, 1:42:34 AM | 1338 | 4485KB | #Julia |
 | `1787370497651` | 8/22/2026, 1:07:24 AM | 984 | 6467KB | How fast is this? |
 | `1787366217908` | 8/21/2026, 10:16:49 PM | 296 | 1639KB | #Argus |
 | `1787191612298` | 8/21/2026, 10:10:42 PM | 906 | 25789KB | #Comprehensive System |
@@ -58,18 +58,12 @@ Generated: 8/22/2026, 1:41:59 AM PT | window: last 72h | 54 tasks | index total 
 | `1787132220305` | 8/19/2026, 4:21:05 AM | 400 | 6979KB | #Frankenstein LLM Wedge |
 | `1787096297068` | 8/19/2026, 3:23:20 AM | 892 | 7996KB | #Julia/Claudia |
 | `1787129383579` | 8/19/2026, 3:20:19 AM | 69 | 212KB | Which student submitted the most tickets and what was the reason? |
-| `1787132186331` | 8/19/2026, 2:36:41 AM | 2 | 13KB | #Frankenstein LLM Wedge |
-| `1787126987793` | 8/19/2026, 2:35:05 AM | 228 | 2562KB | #Frankenstein LLM |
-| `1787027676077` | 8/19/2026, 2:06:13 AM | 496 | 2034KB | #BigMac 4th GPU |
-| `1787126864800` | 8/19/2026, 2:03:39 AM | 334 | 522KB | #CFA |
-| `1787126689836` | 8/19/2026, 1:56:17 AM | 96 | 2763KB | #SSS / Virtual LoRA2 / Efficiency |
-| `1786831867073` | 8/19/2026, 1:50:59 AM | 234 | 922KB | #Joshua / Denali Scenario |
 
 ---
 
 ## Per-window detail
 
-### `1787327963594` — 8/22/2026, 1:41:52 AM PT — 1337 turns
+### `1787327963594` — 8/22/2026, 1:42:34 AM PT — 1338 turns
 
 **Original task:**
 
@@ -98,12 +92,40 @@ Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted,
 **Last PICKUP PROMPT:**
 
 ```
- fact, recorded in handoff)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787327963594 — Qwen3.8-27B fleet rollout: Nero DONE, Joshua blocked on kernel, Maximus blocked on SSH key, Cicero unreachable.\n\nWhere we left off (all verified live 2026-08-22 00:02-01:40 PT, full record in HANDOFF_NOTES.md '2026-08-22 — Nero Qwen3.8-27B deployed'):\n- NERO LIVE: nero-qwen38-27b lane serving through LiteLLM router (router POST at 01:39 PT returned content='\\n\\nOK' finish=stop). MLX 4-bit on :11525, LaunchAgent + tunnel forward durable, registry L4d entry.\n- JOSHUA STAGED: 70B stopped (docker inspect 01:40 PT: RestartPolicy=no Status=exited); llm-scaler-vllm:0.21.0-b1 pulled; XPU probe = 0 on kernel 6.17 (BigMac same image + kernel 7.0, in-container probe returned xpu_count: 4); FP8 model downloading to /data/huggingface. Needs Ruben decision: kernel upgrade to 7.0 + reboot.\n- MAXIMUS BLOCKED: needs WOPR ed25519 key in authorized_keys (one-line, must run on Maximus) + ollama too old → MLX path.\n- CICERO UNREACHABLE: :2221 tunnel refused + WG no-route; on-box attention needed before MLX 8-bit deploy.\n\nOpen threads to drive next:\n1. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after key), Joshua launch (after kernel decision)\n2. #27882 [deployed] — Joshua crash-loop fix landed (container stopped, image pulled, root cause documented); the 27B launch itself rides the remaining rollout thread\n\nReference IDs:\n- Ideas in flight: #27869 [proposed], #27882 [deployed]\n- Ideas closed: #27858 [deployed]\n- Files touched: Nero ~/bin/qwen38_serve.sh + ~/Library/LaunchAgents/com.ruben.qwen38-mlx.plist + com.emsu.mini-tunnel.plist (+.bak-20260822); WOPR /etc/litellm/config.yaml (+.bak-nero-qwen38-20260822) + /etc/litellm/frankenstein_registry.yaml (+.bak-nero-qwen38-20260822); Joshua container state (vllm-joshua-70b stopped, restart=no, llm-scaler image pulled)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"}
-</arguments>
-<server_name>clinerules</server_name>
-<task_id>1787327963594</task_name>clinerules_validate_completion</task_name>
-<tool_name>clinerules_validate_completion</tool_name>
-</use_mcp_tool>
+fic fact, recorded in handoff)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787327963594 — Qwen3.8-27B fleet rollout: Nero DONE, Joshua blocked on kernel, Maximus blocked on SSH key, Cicero unreachable.
+
+Where we left off (all verified live 2026-08-22 00:02-01:40 PT, full record in HANDOFF_NOTES.md '2026-08-22 — Nero Qwen3.8-27B deployed'):
+- NERO LIVE: nero-qwen38-27b lane serving through LiteLLM router (router POST at 01:39 PT returned content='\n\nOK' finish=stop). MLX 4-bit on :11525, LaunchAgent + tunnel forward durable, registry L4d entry.
+- JOSHUA STAGED: 70B stopped (docker inspect 01:40 PT: RestartPolicy=no Status=exited); llm-scaler-vllm:0.21.0-b1 pulled; XPU probe = 0 on kernel 6.17 (BigMac same image + kernel 7.0, in-container probe returned xpu_count: 4); FP8 model downloading to /data/huggingface. Needs Ruben decision: kernel upgrade to 7.0 + reboot.
+- MAXIMUS BLOCKED: needs WOPR ed25519 key in authorized_keys (one-line, must run on Maximus) + ollama too old → MLX path.
+- CICERO UNREACHABLE: :2221 tunnel refused + WG no-route; on-box attention needed before MLX 8-bit deploy.
+
+Open threads to drive next:
+1. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after key), Joshua launch (after kernel decision)
+2. #27882 [deployed] — Joshua crash-loop fix landed (container stopped, image pulled, root cause documented); the 27B launch itself rides the remaining rollout thread
+
+Reference IDs:
+- Ideas in flight: #27869 [proposed], #27882 [deployed]
+- Ideas closed: #27858 [deployed]
+- Files touched: Nero ~/bin/qwen38_serve.sh + ~/Library/LaunchAgents/com.ruben.qwen38-mlx.plist + com.emsu.mini-tunnel.plist (+.bak-20260822); WOPR /etc/litellm/config.yaml (+.bak-nero-qwen38-20260822) + /etc/litellm/frankenstein_registry.yaml (+.bak-nero-qwen38-20260822); Joshua container state (vllm-joshua-70b stopped, restart=no, llm-scaler image pulled)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Cicero: UNREACHABLE this window (:2221 tunnel refused + WG no-route) — needs on-box attention first, documented in handoff
+- [ ] Maximus: blocked on WOPR key in authorized_keys (one-line fix must run on Maximus) + ollama 0.30.11 too old — MLX path documented
+- [x] Nero: DEPLOYED — MLX 4-bit on :11525, LaunchAgent + tunnel forward, LiteLLM lane nero-qwen38-27b verified end-to-end twice
+- [x] Joshua: crash-loop stopped + verified exited; llm-scaler image pulled; root cause = kernel 6.17 (BigMac 7.0 sees 4 XPUs same image); FP8 downloading; kernel upgrade = Ruben decision
+- [x] Wire into registry/config + verify end-to-end — nero lane live through router; handoff notes updated
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787370497651` — 8/22/2026, 1:07:24 AM PT — 984 turns
@@ -2343,340 +2365,4 @@ Where we left off (verified 2026-08-19 03:02 PT):
 Open threads to drive next (none — all work attempted in this session.)
 </result>
 </attempt_completion>
-```
-
-### `1787132186331` — 8/19/2026, 2:36:41 AM PT — 2 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Wedge
-
-Wedge is still occuring. I'm not sure why other window calls task completion. Numereous issues still in cline with it (See stalling windows / just opened and tool spillage, slow bad, not good). 
-
-Do NOT inject anthropic
-
---
-frankenstein-llm wedge resolved after three stacked root causes, each found and corrected in-window (01:09-02:27 PT).
-
-ROUND 1 (01:34 PT) — SLO drift: FRANK_SLO_TTFB_INTERACTIVE had drifted 30→180→240s across three competing systemd drop-ins, so interactive turns queued 169-270s behind batch 'within SLO' and never spilled. The winning drop-in was ed
-```
-
-**Ideas referenced:** #178712, #27447 [deployed], #27494 [executing], #27508 [executing]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787126987793` — 8/19/2026, 2:35:05 AM PT — 228 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM
-
-Frankenstein LLM appears wedged again. Please see handoff notes on this issue. resolve.
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11944, #11953, #12231, #12251, #12314, #12335, #12363, #12365, #12366, #12368, #12407, #12477, #12618, #12657, #12689, #12824, #12872, #12878, #13108, #13202, #13437, #13831, #13874, #16163, #16265, #16304, #16718, #16844, #178712, #18312, #18326, #18868, #19903, #2050, #2097 [resolved], #2207 [investigating], #2247 [resolved], #25097, #25185, #2537, #25468, #2549 [resolved], #2554, #25630, #2569, #2570, #2571 [deployed], #2573 [resolved], #25764, #2578 [resolved], #2579 [deployed], #2580 [deployed], #2581, #25916, #25925, #25926, #25935, #25973, #26322, #26400, #26435, #26461, #26471, #26475, #26476, #26711, #26712, #26713 [proposed], #26715 [deployed], #26827, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #26925, #26931, #27069, #27109, #27110, #27128, #27129, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27447 [executing], #27494 [executing], #27508 [executing], #366377
-
-**Last PICKUP PROMPT:**
-
-```
-ing] carries the canary repair
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787126689836 — frankenstein-llm triple wedge resolved; canary repair + follow-ups.
-
-Where we left off (verified 2026-08-19 02:27 PT):
-- Three config/code changes applied by this window: (1) FRANK_SLO_TTFB_INTERACTIVE 240→60 in the winning drop-in (backup .bak-wedge20260819); (2) _glm_floor_should_force() overload guard in frankenstein_tools_adapter.py (backup .bak-floorguard-20260819); (3) glm-5.2-local fallback chain [frankenstein-tools, artemis-gpt-oss-120b, glm-5.2] in /etc/litellm/config.yaml (backup .bak-glmlocal-fallback-20260819, litellm restarted 02:25 PT)
-- Probe results after the changes: Cline-shaped probe 1.2s with correct tool_call; glm-5.2-local spill test HTTP 200 content 'OK' 10.5s (verified: ssh_command probe returns ELAPSED_S=1.2 TOOL_CALLS=True; spill test HTTP:200 TTFB:10.47s)
-- Ring engine alive, not restarted; empty-200 was a max_tokens=5 artifact (finish_reason=length)
-- Bug library 2579 + 2580 + 2581 recorded resolved; HANDOFF_NOTES updated 01:42/02:10/02:29 PT
-- Julia still dark since ~01:10 (watchdogs armed, auto-RCA on return); Cicero healthy HTTP 200 4.17s at 01:39 PT
-- Executor queue carries two follow-up builds from this night: the canary-quarantine build and the drop-in-consolidation build
-
-Open threads to drive next:
-1. Canary quarantine for wedged-but-running engines + stale-healthy decay + DeepSeek 402 alert + ring ops-ceiling enforcement — this is the executor build for #27508 [executing]; reconcile before touching
-2. Drop-in consolidation + SLO coherence guard (round-1 follow-up) — this is the executor build for #27494 [executing]
-3. DeepSeek balance top-up — account is drained (402 on every call); free spill rung dead until Ruben tops it up (human-only decision — no idea)
-4. Julia physical protection — cooling/smart-PDU decision; box dark since ~01:10 despite armed hw watchdog (human-only decision — no idea)
-5. CFA SMS quality-gate notifications — the executor record reflects the deployment; spot-verify the real notification path end-to-end (the record is #27447 [deployed])
-
-Reference IDs:
-- Ideas filed: #27494 [executing], #27508 [executing]
-- Ideas re-driven: #27447 [deployed]
-- Bug library incidents (frankenstein_router_incidents): 2579 (resolved), 2580 (resolved), 2581 (resolved), 2571 (Julia kernel wedge, investigating)
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzwwz-glm-slo-let-it-finish.conf, /etc/litellm/config.yaml, HANDOFF_NOTES.md, ~/Documents/Cline/Rules/297-population-anomaly-classify-before-alarming.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Round 1: SLO drift 240→60 fixed + verified
-- [x] Round 2: GLM floor starvation fixed + verified
-- [x] Round 3: glm-5.2-local missing fallback fixed + verified (spill test 200/OK)
-- [x] Canary/quarantine defects classified + durable repair filed (#27508)
-- [x] Bug library 2579/2580/2581 recorded; HANDOFF updated; validator + gate CLEAR
-</task_progress>
-</attempt_completion>
-```
-
-### `1787027676077` — 8/19/2026, 2:06:13 AM PT — 496 turns
-
-**Original task:**
-
-```
-#BigMac 4th GPU
-
-Get the 4th GPU serving
-
-Big Mac is back and serving, and it can now recover itself remotely (verified: curl from WOPR to http://10.100.0.19:8000/v1/models returned 200; on-box battlemage=3, renderD=3, vLLM active, "startup complete" count=1; watchdog0 state=active, RuntimeWatchdogUSec=1min). The 4th GPU is still not online, and I hit a real setback on it that I reverted.
-
-## What caused the wedge
-
-Not OOM, not fork exhaustion, not a network ban. It was a total userspace freeze triggered by the PCI bus rescan I ran while probing for the 4th GPU.
-
-The evidence (verified from th
-```
-
-**Ideas referenced:** #178669, #178694, #18977, #19082 [blocked], #19524 [executing], #2073, #227960, #2341 [resolved], #2351, #2352 [investigating], #2354 [investigating], #25097 [awaiting_review], #25185, #2541 [investigating], #2558 [resolved], #2559, #2563, #2564 [investigating], #2565, #25888, #26211, #26233, #27137 [executing], #27140 [executing], #27142 [deployed], #27143 [executing], #27145 [executing], #27147 [unknown], #27152 [executing], #27155 [proposed], #27173 [proposed], #27174 [proposed], #27175 [proposed], #27503 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-| filed idea #27503 [proposed]
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786948459, Big Mac 4th B70, rebase done, no remote lever remains.
-
-Where we left off (verified 2026-08-19 01:58 PT):
-- No remote lever remains, backed by fresh probes: lockdown=integrity (config writes Operation not permitted); kexec cannot bypass Secure Boot; EFI vars expose no writable clock lever (PCI_COMMON 6-byte stub, AMD_PBS_SETUP opaque blob, both hexdumped this round).
-- Fault signature: sustained Train+ at Width x4, LaneErrStat=0, TrErr-. Card detects all 4 lanes, alive, powered, never finishes training = clock/signal it cannot lock, or power/PERST sequencing.
-- Corrected: CommClk- is a consequence of the dead link, not independent clock-mismatch proof.
-- Two new hands-on leads in #27503 [proposed]: BIOS newer than FA3h check (gigabyte.com 403 to automated fetch, tech must check) + full DC power cycle (S3 kept standby rails alive so PHY never fully de-powered).
-- BIOS session plan #27175 [deployed] diagnosis record: Secure Boot off to unlock registers + lane margining, then SSC off + per-slot clock/SRIS; adapter DIP clock-source #27152 [executing] same visit.
-- 3-GPU speed audit #27173 [proposed] stands.
-- Box healthy, untouched this round (verified 01:58 PT read-only probes): 3x B70 at 43/83/87:00.0, bus 01 empty, vLLM 200, up 1 day 1:38, watchdog + canary active.
-
-Open threads to drive next:
-1. #27503 [proposed], BIOS-newer-than-FA3h check + full DC power cycle, the 2 remaining hands-on leads.
-2. #27175 [deployed], BIOS session, Secure Boot off then SSC/SRIS clock config.
-3. #27152 [executing], adapter DIP clock-source switch, same hands session.
-4. #27173 [proposed], 3-GPU speed A/B in maintenance window.
-5. #19082 [blocked], slim remote power control, would enable the DC cycle remotely.
-
-Reference IDs:
-- Ideas filed this session: #27503 [proposed]
-- Ideas carried: #27175 [deployed], #27152 [executing], #27173 [proposed], #27174 [deployed], #27155 [proposed], #27145 [deployed], #27142 [deployed], #27147 [deployed], #19082 [blocked], #19524 [executing]
-- Bug library: incidents 2563, 2564, 2565
-- Rules amended this task: 297, 315 (proof in rule_amend under task 1786948459)
-- Prior task: #1786695610761 [superseded]
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Diagnosis locked: clock/training fault (Train+ x4 sustained, LaneErrStat=0)
-- [x] REBASE: lockdown=integrity, kexec can't bypass SB, EFI vars no writable clock lever
-- [x] CommClk over-claim corrected per rule 317
-- [x] Filed #27503: 2 new hands-on leads (BIOS>FA3h + DC power cycle)
-- [x] Fresh box-state probes (3x B70, vLLM 200, lockdown integrity, uptime)
-- [x] validate tool arg channel broken (transport); exhausted retries + reindex per circuit-breaker
-- [x] Delivered honest rebased answer with transparency note
-</task_progress>
-</attempt_completion>
-```
-
-### `1787126864800` — 8/19/2026, 2:03:39 AM PT — 334 turns
-
-**Original task:**
-
-```
-#CFA
-finish building all of these end to end.
-
-CFA 24h audit complete. Backend failure fixed in-window (#27395 [deployed] hand-shipped per rule 267 GATE C): lib/SMSAIResponder.php callModel() now routes through frankenstein-llm spill ladder primary + one deepseek-v4-pro retry on empty/timeout (verified: reconcile status=deployed, php -l clean, FPM reloaded, router audit picks live). SMS failure population classified from cfa_sms_log.error_message (verified): 101 quality-gate blocks — criterion_4 x64, criterion_2 x25, leak x8. 7 improvement ideas filed, ALL promoted to executor + efficiency_pri
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #1976, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #26591, #27236, #27249 [executing], #27250, #27395 [deployed], #27396 [executing], #27397 [executing], #27398 [executing], #27399 [executing], #27400 [executing], #27447 [executing], #6500, #6513, #6518, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-60819, .bak-27400-20260819 x2.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27447 [deployed] — CFA 24h follow-up: all 7 ideas built + deployed end-to-end.
-
-Where we left off (verified 2026-08-19 02:01 PT):
-- All 7 CFA audit ideas hand-shipped per rule 267 GATE C (executor spec-gen failed on each) and verified live: #27395 [deployed] SMS spill ladder, #27447 [deployed] 41/41 student notifications sent + 41 rule-318 contexts, #27396 [deployed] digest cron (first digest sent, 22.9% block rate), #27397 [deployed] cohort sweeper fixed (7 clusters, 6 tickets), #27398 [deployed] prebuilder_queue table created, #27399 [deployed] 92 stale ideas superseded, #27400 [deployed] both heartbeat watchdogs fixed + dead gemini host removed.
-- Reconcile verified: deployed=7/7 (verified: ruben-orchestrator reconcile_ideas returned "Tally: deployed=7" at 2026-08-19 02:01:32 PT).
-- Executor spec-gen returns null for every promoted idea (failure_category=spec_gen_unknown) — the executor can queue but not build. cron_executor_doctor dry-run returned: repaired A=0 B=0 C=0, impl_failed_24h=8.
-
-Open threads to drive next:
-1. #27396 [deployed] — verify tomorrow's 06:30 digest arrives and block rate drops below 15% now that the spill-ladder fix (#27395 [deployed]) is live.
-2. #27398 [deployed] — executor spec-gen null failure (failure_category=spec_gen_unknown, impl_failed_24h=8) still unfixed; the pipeline can queue but not build. Needs the spec-generator RCA.
-
-Reference IDs:
-- Ideas filed: #27395 [deployed], #27396 [deployed], #27397 [deployed], #27398 [deployed], #27399 [deployed], #27400 [deployed], #27447 [deployed]
-- Files touched: cron/cron_cfa_sms_block_notifier.php (new), cron/cron_cfa_fleet_health_digest.php (new), cron/cron_cohort_gate_sweeper.php (fixed), cron/heartbeat_watchdog.php (fixed), cron/cron_heartbeat_watchdog.php (fixed), lib/SMSAIResponder.php (prior window)
-- Backups: .bak-27397-20260819, .bak-27400-20260819 (x2)
-- Tables created: prebuilder_queue, cfa_sms_block_notify_log
-
-# Reversal Log
-- One reversal: initial reconcile returned executing/idle for all six; on running the gate (GATE B) after hand-shipping, all six showed impl_failed (executor spec-gen returned null on each). Not a wrong claim at the time — the executor demoted them between promote and reconcile. Hand-shipped each per rule 267 GATE C and marked deployed with verified evidence. No causal rule update needed: rule 267 GATE C already covers this exact path (impl_failed + agent has tools = agent ships).
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Trigger implementation for all 7 ideas (#27395-#27400, #27447) via idea_action
-- [x] Reconcile all 7 ideas
-- [x] Investigate RC-8 heartbeat watchdog — log LIVE; real issues found + fixed
-- [x] #27398 executor pipeline fix: prebuilder_queue table created + cron verified running clean
-- [x] #27399 stale idea cleanup: 92 ideas superseded (verified via UPDATE rows=92)
-- [x] #27447 student notifications: 41/41 students notified via SMS, 41 followup contexts, cron installed
-- [x] #27396 daily fleet health digest: deployed, first digest SENT, cron installed
-- [x] #27397 cluster-gate review consumption: sweeper fixed + run live (7 clusters, 6 auto-tickets), cron repointed
-- [x] #27400 heartbeat watchdog: fixed, runs clean exit 0
-- [x] Mark hand-shipped ideas deployed in DB (rule 267 GATE C)
-- [x] Final recon
-```
-
-### `1787126689836` — 8/19/2026, 1:56:17 AM PT — 96 turns
-
-**Original task:**
-
-```
-#SSS / Virtual LoRA2 / Efficiency
-
-Rebase, is three anything else you suggest here? 
-
---
-Built and shipped the rate cron end-to-end this window, and rolled back the only production incident I caused. State is verified live, not recited.
-
-## What shipped and is verified working
-
-**#26617 [executing] — silence-rate cron, HALF COMPLETE and the rate half is LIVE:**
-- `cron_chat_silence_rate.php` + `lib/chat_silence_rate.php` repaired to query the REAL chat tables `wordpress_2.LzDe7pTO_support_chat_conversations` / `_messages` (verified: WP tables hold 71,616 rows; `chat_portal_messages` has 0, so 
-```
-
-**Ideas referenced:** #178712, #25185, #26050, #26054 [awaiting_review], #26065 [deployed], #26613 [approved], #26617 [executing], #26848 [unknown], #26889 [executing], #27100, #27279, #27495 [proposed], #27496 [proposed], #27497 [proposed], #27498 [proposed], #27499 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-ost-patch run EXIT=0, 819/819)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787126689836 — silence program: drive guard wiring decision + the five filed suggestions.
-
-Where we left off (state as of 2026-08-19 01:50 PT, probed live this window):
-- Rate cron revived: config/db_config.php store created (emsumain:psaserv 640), cron probed running twice, 8/18 backfilled (1/71, 0.0141), 8/19 row awaits the first UTC-day conversations (absence legitimate)
-- Guard cron rebuilt + tested: schema-true SQL all 4 surfaces, central credentials, 7d lookback, identifier normalization, DRY-RUN default with --send opt-in; EXIT=0, 819/819 processed, zero writes; not in crontab
-- lib/chat_silence_rate.php: central credentials, dead corrupted path fails loudly; password sweep clean across all 3 silence files
-- #26617 [deployed] row stamped this window with implemented_files after the guard rebuild passed full dry-run
-- #26848 [executing] status normalized to approved (was orphan blank/blank)
-- #26613 [deployed] complete including the store gap closed this window
-- #26889 [deployed] rule 317 clause indexed (probed via lookup)
-- #26054 [executing] P0 609 silent conversations: measurable again via the revived rate cron
-- #26065 [deployed] canary: unchanged, reconcile-confirmed
-
-Open threads to drive next:
-1. #27498 [proposed] — Ruben decision: wire guard as 1-week dry-run shadow, or retire it (chat outreach already covered by the */10 --send script)
-2. #27499 [proposed] — Ruben decision: approve phased password-cleanup codemod shape or keep scoped to new files; no codemod starts without the call
-3. #27496 [proposed] — rotate admin_portal password + scrub the #26613 [deployed] idea body (human-gated cutover; coordinate consumer check)
-4. #27495 [proposed] — delete weaponized runAutoRecovery body (buildable in one window; backups exist)
-5. #27497 [proposed] — build executor post-change smoke-test gate
-6. #26848 [executing] — executor pickup: SSS/VEC/Context auto-inheritance audit guard + doc
-
-Reference IDs:
-- Ideas filed this session: #27495 [proposed], #27496 [proposed], #27497 [proposed], #27498 [proposed], #27499 [proposed] (all reconcile-checked: status=proposed dev_stage=idle)
-- Ideas reconciled: #26617 [deployed], #26613 [deployed], #26889 [deployed], #26054 [executing], #26065 [deployed], #26848 [executing]
-- Files touched (remote): config/db_config.php (new), cron/cron_universal_cfa_silence_guard.php (rewrite, server backup), lib/chat_silence_rate.php (rewrite, server backup), orchestrator_ideas row 26617 (status stamp); local: Rules/317 (amendment via clinerules_amend_rule, ledger row recorded)
-- Probe evidence this window: cron EXIT=0 twice, daily rows 8/17 + 8/18 present, guard dry-run 819/819 zero writes, password sweep clean, rule 317 lookup returned the escalation clause
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Rule 119 compress-signal check
-- [x] Re-probe inherited state (reconcile all 6 pickup ideas — drift found and corrected)
-- [x] Executor-doctor duty (GATE A0)
-- [x] Thread 3: rule 317 clause verified indexed
-- [x] #26848 orphan status normalized
-- [x] NEW INCIDENT: rate cron dead 36h — root-caused (#26613 shipped reader without store) and fixed (config/db_config.php), 8/18 backfilled
-- [x] Guard rewrite: schema-true SQL, central credentials, 7d lookback, normalization, dry-run default — tested EXIT=0, 
-```
-
-### `1786831867073` — 8/19/2026, 1:50:59 AM PT — 234 turns
-
-**Original task:**
-
-```
-#Joshua / Denali Scenario
-
-So what now then? Am I good to go hiking for a week on Denali?? Besides the grizzlies and the cold of course...
-
---
-Let me answer the confusion directly, because I gave you a worse answer than the situation deserved. Then the Denali scenario, which is now mostly built.
-
-# What I meant by "one witness away", and why I was over-cautious
-
-The classic problem with two machines: when the standby stops hearing from the writer, it cannot distinguish a dead peer from a dead link. Guess wrong, promote anyway, and you have two writers with diverging data. The textbook fix is a
-```
-
-**Ideas referenced:** #25185, #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [proposed], #26019 [deployed], #26023 [executing], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [executing], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed], #26667 [deployed], #26668 [deployed], #26669 [executing], #26973 [deployed], #26974 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
- than run unilaterally at 2 AM
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26076 [deployed] follow-on: Joshua unattended failover, everything ready, waiting on a supervised promotion drill. Joshua scope ONLY.
-
-Where we left off (verified 2026-08-19 01:48 PT):
-- Joshua access: `ssh -i /home/emsuserver/.ssh/id_ed25519 -o BatchMode=yes -p 2222 emsusrvr2@10.100.0.4` from WOPR.
-- #26076 [deployed] Replica fully converged since 03:20 PT Sunday 8/17 (verified: converge-watch fired, delta now -27, both replication threads Yes, no errors). Re-seed is ancient history, working fine.
-- #26614 [deployed] Base chain live on both hosts, all four timers active each, lease renewing every 10s with master_gtid watermark, witness renewing (verified 01:44 PT). WOPR read_only=0 + log_slave_updates=1, Joshua read_only=1 + log_slave_updates=1.
-- #26667 [deployed] External Cloudflare witness closing the asymmetric-partition split-brain case, all four decision branches verified live on the 16th.
-- #26973 [deployed] The Seconds_Behind_Master-lies fix and the Replica_*-vs-Slave_* field-name fix, both live and proven.
-- #26974 [deployed] Re-seed relay-logs upstream fix.
-- #26631 [deployed] Legacy landmine fully retired.
-- #26023 [deployed] External DNS monitor.
-- #26669 [deployed] super_read_only gap documented.
-- Killswitch /etc/emsu/auto_failover_enabled still ABSENT on both hosts (verified 01:44 PT). Auto-promotion NOT armed. This is deliberate, pending the drill.
-- No real failover events since 8/16 (verified: failover log grep returned nothing).
-
-Open threads to drive next:
-1. #26668 [deployed] THE remaining step. The current drill cannot trigger promotion because Joshua's C2 reachability check correctly refuses a reachable writer (verified by reading emsu-auto-failover C2). Build a firewall-based drill variant: firewall WOPR's uplink to simulate a real outage, which exercises WOPR self-fence + witness staleness + Joshua promotion, then auto un-firewall and let WOPR rejoin. Must be fully scripted with automatic un-firewall and run WITH Ruben watching, since firewalling cuts SSH access to WOPR mid-drill.
-2. #26614 [deployed] Only after that drill passes: `sudo touch /etc/emsu/auto_failover_enabled` on Joshua. That arms unattended promotion for the Denali case.
-
-Reference IDs:
-- All landed and verified: #26076 [deployed], #26614 [deployed], #26667 [deployed], #26668 [deployed], #26669 [deployed], #26973 [deployed], #26974 [deployed], #26023 [deployed], #26631 [deployed]
-- Files in play: /usr/local/bin/emsu-failover-drill (needs the firewall variant), /usr/local/bin/emsu-auto-failover (C2 reachability logic is why the current drill can't promote), /usr/local/bin/emsu-lease-heartbeat (self-fence + watermark), /usr/local/bin/emsu-witness (Cloudflare TXT), /usr/local/bin/emsu-replica-converge-watch + /etc/cron.d/emsu-converge-watch (already fired, self-disabled)
-- Untouched, out of scope: #26604 [deployed], #26019 [deployed], #26068 [deployed], #26077 [executing], #26017 [proposed], #26008 [executing], #26007 [deployed], #26009 [deployed], #26024 [deployed], #26069 [deployed], #26070 [deployed]
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Re-probed both hosts fresh
-- [x] Confirmed replica converged 8/17 03:20, delta now ~0, both boxes healthy
-- [x] Re-read drill script and found it cannot trigger promotion (C2 refuses a reachable
 ```

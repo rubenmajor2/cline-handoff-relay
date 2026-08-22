@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/21/2026, 10:41:58 PM PT | window: last 72h | 65 tasks | index total 883 (parsed 3, cached 880)
+Generated: 8/21/2026, 11:41:58 PM PT | window: last 72h | 64 tasks | index total 883 (parsed 1, cached 882)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787370497651` | 8/21/2026, 10:41:37 PM | 505 | 3390KB | How fast is this? |
+| `1787370497651` | 8/21/2026, 11:38:34 PM | 796 | 4870KB | How fast is this? |
 | `1787366217908` | 8/21/2026, 10:16:49 PM | 296 | 1639KB | #Argus |
 | `1787327963594` | 8/21/2026, 10:12:54 PM | 940 | 3882KB | #Julia |
 | `1787191612298` | 8/21/2026, 10:10:42 PM | 906 | 25789KB | #Comprehensive System |
@@ -74,13 +74,12 @@ Generated: 8/21/2026, 10:41:58 PM PT | window: last 72h | 65 tasks | index total
 | `1786927436741` | 8/19/2026, 12:44:47 AM | 402 | 1129KB | #Student Time Sheet Issue |
 | `1787119877030` | 8/19/2026, 12:43:29 AM | 340 | 932KB | Can you pickup the DNA Canvas project and improve it? |
 | `1787114692393` | 8/19/2026, 12:19:35 AM | 374 | 3669KB | Please explain why model litellm:glm52-only is not iterating GLM 5.2 Local withouth errors |
-| `1787118658131` | 8/18/2026, 11:27:20 PM | 82 | 378KB | Please run the fix AVP command on my desktop to get itt running |
 
 ---
 
 ## Per-window detail
 
-### `1787370497651` — 8/21/2026, 10:41:37 PM PT — 505 turns
+### `1787370497651` — 8/21/2026, 11:38:34 PM PT — 796 turns
 
 **Original task:**
 
@@ -3329,46 +3328,5 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] check gate: CLEAR
 - [x] attempt_completion
 </task_progress>
-</attempt_completion>
-```
-
-### `1787118658131` — 8/18/2026, 11:27:20 PM PT — 82 turns
-
-**Original task:**
-
-```
-Please run the fix AVP command on my desktop to get itt running
-```
-
-**Ideas referenced:** #202608, #25185, #25888, #26471, #26476, #26759, #26899 [approved], #27293 [proposed], #27294 [proposed], #27295 [proposed], #366377
-
-**Last PICKUP PROMPT:**
-
-```
-UTO_FILE (amended + reindexed)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27293 [deployed] - AVP Mac Virtual Display reconnect + Rule 297 RCA on idea-filing
-
-Where we left off (verified 2026-08-18 23:25 PT):
-- Ran /Users/rubenmajor/Desktop/fix-avp.sh via fix-avp.command (interactive sudo) - awdl0 restored to active, rapportd/sharingd restarted
-- 297 RCA complete: escaped-hatch marker misused - classification: real bug; causal rule amended + reindexed
-- All three Ruben-approved follow-up ideas built and stamped deployed: #27293 [deployed], #27294 [deployed], #27295 [deployed]
-- fix-avp.sh step 6 now real toggle (blueutil-first + Bluetooth panel fallback); AVP_RECONNECT_RUNBOOK.md written
-
-Open threads to drive next:
-1. #27293 [deployed] - blueutil not yet installed on this Mac; optional: install brew + blueutil so step 6 can toggle discoverability headlessly instead of opening the panel
-2. #27294 [deployed] - runbook PHASE 3 checklist is a living doc; update if visionOS 26 changes the AirPlay Receiver default
-3. #27295 [deployed] - escalation table is a living doc; refine the predictor column after the next real reconnect
-
-Reference IDs:
-- Ideas filed: #27293 [deployed], #27294 [deployed], #27295 [deployed]
-- Files touched: /Users/rubenmajor/Desktop/fix-avp.sh, /Users/rubenmajor/Desktop/AVP_RECONNECT_RUNBOOK.md, /Users/rubenmajor/Documents/Cline/Rules/REQUIREMENT_IDEA_AUTO_FILE.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

@@ -6,15 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 10:01:25 AM PT | window: last 72h | 37 tasks | index total 883 (parsed 0, cached 883)
+Generated: 8/22/2026, 11:01:26 AM PT | window: last 72h | 40 tasks | index total 886 (parsed 5, cached 881)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787327963594` | 8/22/2026, 3:23:18 AM | 1358 | 4530KB | #Julia |
+| `1787420987189` | 8/22/2026, 11:01:24 AM | 48 | 232KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
+| `1787420772345` | 8/22/2026, 11:00:36 AM | 27 | 204KB | #Qwen 3.8 27B  |
+| `1787420877031` | 8/22/2026, 10:47:57 AM | 1 | 883KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
+| `1787256742974` | 8/22/2026, 10:37:45 AM | 654 | 7438KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
+| `1787327963594` | 8/22/2026, 10:35:35 AM | 1376 | 4557KB | #Julia |
 | `1787370497651` | 8/22/2026, 1:07:24 AM | 984 | 6467KB | How fast is this? |
 | `1787366217908` | 8/21/2026, 10:16:49 PM | 296 | 1639KB | #Argus |
 | `1787191612298` | 8/21/2026, 10:10:42 PM | 906 | 25789KB | #Comprehensive System |
-| `1787256742974` | 8/21/2026, 9:57:04 PM | 640 | 7238KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
 | `1787349230620` | 8/21/2026, 7:33:07 PM | 180 | 546KB | #San Mateo County EMSA |
 | `1787256717179` | 8/21/2026, 4:57:45 PM | 254 | 5161KB | ## Externship dates past Sept 1 — identification + mitigation |
 | `1787329580892` | 8/21/2026, 3:33:49 PM | 156 | 464KB | #Executor |
@@ -52,7 +55,129 @@ Generated: 8/22/2026, 10:01:25 AM PT | window: last 72h | 37 tasks | index total
 
 ## Per-window detail
 
-### `1787327963594` — 8/22/2026, 3:23:18 AM PT — 1358 turns
+### `1787420987189` — 8/22/2026, 11:01:24 AM PT — 48 turns
+
+**Original task:**
+
+```
+Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to be using the vision doorman which is currently kimi K3/ Sonnet 5. Please resolve this asap:
+
+{"message":"400 /chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","status":400,"code":"400","modelId":"frankenstein-llm","providerId":"litellm","details":{"message":"/chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","type":"None","param":"None","code":"400","pro
+```
+
+**Ideas referenced:** #10108, #10740, #10869, #11316, #11741, #11781, #12477, #12618, #12680, #12824, #12872, #12878, #13202, #13453, #13470, #16163, #16265, #16304, #16625, #16680, #16716, #16844, #17430, #1807, #18312, #18326, #18329, #20549, #2290, #23172, #25097, #25158, #25171, #25224, #25311, #2537, #26908, #26923, #27259, #9706
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787420772345` — 8/22/2026, 11:00:36 AM PT — 27 turns
+
+**Original task:**
+
+```
+#Qwen 3.8 27B 
+
+Retrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. 
+
+Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178732, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25097, #2537, #25378, #25381, #2546, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787420877031` — 8/22/2026, 10:47:57 AM PT — 1 turns
+
+**Original task:**
+
+```
+This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787256742974` — 8/22/2026, 10:37:45 AM PT — 654 turns
+
+**Original task:**
+
+```
+VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
+
+Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
+
+Shipped this window (all verified live):
+
+1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
+   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
+   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
+   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
+```
+
+**Ideas referenced:** #12266, #12285, #12430, #12459, #12618, #12680, #15333, #17295, #178712, #17913, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #25128, #25155, #25185, #25888, #25925, #25926, #25935, #26229, #26435, #26470, #26696, #26731, #26848, #26914 [deployed], #26915 [executing], #26916, #27100, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27652, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #27833 [proposed], #27842 [proposed], #686227, #7317, #8598
+
+**Last PICKUP PROMPT:**
+
+```
+ reconcile #27488 [deployed]).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052 — VERITAS: hand-fix the defective truth judge CFA wiring.
+
+RUBEN DIRECTIVE (2026-08-22 10:34 PT, verbatim): "please resolve the truth judge problems. I'm dealing with the LLM issues in that window. I just need you to work on the truth judge issues and resolve." Ruben handles LLM/routing elsewhere — do NOT touch LLM/routing, ONLY the truth judge wiring.
+
+Where we left off (verified 2026-08-22 10:36 PT):
+- Judge core healthy: test row 6 verdict=FAIL caught 2/2 planted fake claims, judge=glm-5.2-local, 60.2s
+- R323 validator gates work (blocked unverified completion, veritas_l4_runs row 7)
+- ZERO production judge calls since release — the #27488 [deployed] wiring defect is why
+- Defect recorded as orchestrator event ID 6862277
+
+DEFECT SPEC (verified 2026-08-21 21:54 PT via live grep — re-verify before editing):
+1. /var/www/emtskills/cron/cron_email_responder.php:
+   - require_once lib/truth_judge.php DUPLICATED (lines 56-60) from double-deploy — dedupe to one
+   - ZERO call sites for call_truth_judge — gate never fires. Add pre-send gate: before an AI reply is sent, if high-stakes (money/student status/regulator/fleet), call truth judge; verdict FAIL → hold reply as draft / route to human, do not send.
+2. /var/www/emtskills/lib/truth_judge.php:
+   - line ~86: GLOBALS[...] missing $ prefix → $GLOBALS[...] (PHP8 fatal on that path)
+   - payload keys reply_text/tool_outputs do not match fleet API truth_judge expected keys text/evidence — fix payload build
+
+FIX PROCEDURE:
+1. Read both deployed files live (emsu-operations read_server_file)
+2. Patch via write_server_file (auto PHP lint + FPM reload)
+3. php -l both files
+4. E2E verify: trigger the gate path once (or invoke the lib function directly with a test payload) and confirm a NEW row lands in truth_judge_log (SELECT MAX(id) before/after)
+5. Update HANDOFF_NOTES, mark orchestrator event ID 6862277 resolved, reconcile #27488 [deployed]
+
+Open threads to drive next:
+1. #27488 [deployed] — execute the fix above (THIS is the task)
+2. #27489 [deployed] — per-model L4 batteries for Opus-gap numbers (only 1 run exists)
+3. #27491 [deployed] — dashboard, deprioritize until judge traffic flows
+4. #27486 [deployed] — verify steering injection landed in steering files
+
+Reference IDs:
+- Ideas: #27488 [deployed], #27489 [deployed], #27491 [deployed], #27486 [deployed]
+- Orchestrator event ID: 6862277
+- Files touched: /var/www/emtskills/lib/truth_judge.php, cron/cron_email_responder.php
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+
+# Reversal Log
+- "CFA wiring deployed and protecting student emails" (carried executor deploy claim) → "deployed but gate never fires: zero call sites + 2 lib bugs" | RCA bucket: insufficient probe | causal fix: orchestrator event ID 6862277 filed with defect spec; #27488 [deployed] flagged defective pending hand-fix
+</result>
+<task_progress>
+- [x] Signal check — no signal file
+- [x] Ruben steered: RESOLVE the truth judge problems now
+- [x] should_compress_now → RED, compress mandated
+- [x] cline_compress_session → SESSION MEMORY blob returned
+- [x] Validate completion → ALL PASSED
+- [x] Check gate → GATE CLEAR
+- [x] Shipped compression completion with full defect-spec pickup prompt — next window executes the fix
+</task_progress>
+</attempt_completion>
+```
+
+### `1787327963594` — 8/22/2026, 10:35:35 AM PT — 1376 turns
 
 **Original task:**
 
@@ -81,35 +206,37 @@ Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted,
 **Last PICKUP PROMPT:**
 
 ```
-le is right, the wiring isn't)
+— matches rule 322 discipline)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787327963594 — Qwen3.8-27B fleet rollout + VERITAS judge gap.
+Pick up task #1787327963594 — Qwen3.8-27B fleet rollout: fresh status 2026-08-22 10:35 PT.
 
-Where we left off (probes run 2026-08-22 00:02-03:20 PT; full deploy record in HANDOFF_NOTES.md '2026-08-22 — Nero Qwen3.8-27B deployed'):
-- NERO LIVE: nero-qwen38-27b lane through LiteLLM router (router POST 01:39 PT: content='\n\nOK' finish=stop). MLX 4-bit :11525, LaunchAgent + tunnel forward durable.
-- JOSHUA STAGED: 70B stopped (docker inspect 01:40 PT: RestartPolicy=no Status=exited); kernel 6.17 is the blocker (BigMac same image kernel 7.0 = xpu_count 4, Joshua = 0); FP8 downloading to /data/huggingface; kernel upgrade = Ruben decision.
-- MAXIMUS BLOCKED: WOPR key missing in authorized_keys + ollama 0.30.11 too old (412).
-- CICERO UNREACHABLE: :2221 refused + WG no-route.
-- VERITAS: truth_judge MCP transport aborts (fail-closed twice 03:17/03:20 PT) — judge layer down tonight; all claims carry inline probe evidence instead.
+Where we left off (probes run 10:33-10:35 PT):
+- NERO LIVE: nero-qwen38-27b lane verified through router (reply='\n\nOK' finish=stop at 10:34:37 PT); survived overnight.
+- JOSHUA: 70B crash-loop re-enabled overnight (Up 5 seconds at 10:34:45, restart policy reverted); FP8 download died (sudo python missing huggingface_hub). Kernel 6.17→7.0 upgrade remains the gating Ruben decision.
+- CICERO: both tunnels down (:11520 and :2221 CLOSED at 10:34:19); needs on-box hands.
+- MAXIMUS: :2224 port now OPEN but publickey denied — WOPR key still not in authorized_keys; ollama 0.30.11 too old for qwen3.8.
+- Austin minis: 16GB, skip for 27B (4-bit doesn't fit).
 
 Open threads to drive next:
-1. #27905 [proposed] — truth_judge transport fix (CLI direct / timeout raise / async poll) so rule 323 obligation 5 is enforceable
-2. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after key), Joshua launch (after kernel decision)
-3. #27882 [deployed] — Joshua crash-loop fix landed; 27B launch rides the remaining rollout thread
+1. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after one-line key fix on the Mac), Joshua FP8 launch (after kernel decision + re-download)
+2. #27882 [deployed] — Joshua crash-loop root cause documented; the fix (kernel upgrade) is the pending Ruben decision
 
 Reference IDs:
-- Ideas filed: #27905 [proposed]
 - Ideas in flight: #27869 [proposed], #27882 [deployed]
 - Ideas closed: #27858 [deployed]
-- Files touched: none this turn (judge attempts + idea filing only)
+- Files touched: none this turn (status probes only)
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] Re-probe Nero lane + Cicero reachability + Joshua state + Maximus (fresh state)
+- [x] Deliver per-box status + what's next for each
+</task_progress>
 </attempt_completion>
 ```
 
@@ -253,70 +380,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Validate completion: ALL PASSED (task_id=27858)
 - [x] Check gate: CLEAR
 - [x] Deliver via attempt_completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1787256742974` — 8/21/2026, 9:57:04 PM PT — 640 turns
-
-**Original task:**
-
-```
-VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
-
-Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
-
-Shipped this window (all verified live):
-
-1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
-   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
-   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
-   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
-```
-
-**Ideas referenced:** #12266, #12285, #12430, #12459, #12618, #12680, #15333, #17295, #178712, #17913, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #2043, #2076, #20903, #2113, #25125, #25128, #25155, #25185, #25888, #25925, #25926, #25935, #26229, #26435, #26470, #26696, #26731, #26848, #26914 [deployed], #26915 [executing], #26916, #27100, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27652, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #27833 [proposed], #27842 [proposed], #686227, #7317, #8598
-
-**Last PICKUP PROMPT:**
-
-```
-ged defective pending hand-fix
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 — VERITAS Truth Enforcement: hand-fix #27488 [deployed] CFA gate wiring.
-
-Where we left off (verified 2026-08-21 21:54 PT):
-- Judge core healthy: live test row 6 verdict=FAIL, caught 2/2 planted fake claims, judge=glm-5.2-local, 60.2s
-- R323 gates blocked an unverified completion in production today (veritas_l4_runs row 7)
-- L4 battery: 1 full run done (probe-grounded 54-70%, memory-only 0%)
-- #27488 [deployed] CFA wiring defective: zero call sites in cron_email_responder.php, duplicated require (lines 56-60), lib bugs (GLOBALS missing $ at line 86, wrong payload keys). Orchestrator event ID 6862277 filed.
-
-Open threads to drive next:
-1. #27488 [deployed] — hand-fix the gate: add call_truth_judge call sites in cron_email_responder.php + fix 2 lib bugs + dedupe require (executor spec was right, its patch was not — hand-fix recommended)
-2. #27489 [deployed] — run per-model L4 batteries for real Opus-gap numbers (only 1 run exists)
-3. #27491 [deployed] — truth ledger dashboard; deprioritize until CFA judge traffic flows
-4. #27486 [deployed] — steering injection for weak-model surfaces; verify it landed in the steering files
-
-Reference IDs:
-- Ideas: #27488 [deployed], #27489 [deployed], #27491 [deployed], #27486 [deployed]
-- Orchestrator event ID: 6862277
-- Files touched: /var/www/emtskills/lib/truth_judge.php, cron/cron_email_responder.php, cron/cron_truth_judge_email_gate.php, routes/truth_judge_review.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Signal check — no signal, normal operation
-- [x] truth_judge_log: 6 total calls, last = my own 20:36 test. Zero CFA production traffic
-- [x] veritas_l4_runs: no new runs since id 7
-- [x] Root cause found + verified live: #27488 patch only added require (duplicated), zero call sites, 2 lib bugs
-- [x] Defect record filed: orchestrator event 6862277
-- [x] Reconcile: all 4 ideas [deployed] server-side; #27488 artifact verified defective
-- [x] Compression check: GREEN, no compress needed
-- [x] Validate: ALL PASSED
-- [x] Gate CLEAR — completion shipped
 </task_progress>
 </attempt_completion>
 ```

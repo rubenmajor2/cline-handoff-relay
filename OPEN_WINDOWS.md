@@ -6,10 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/23/2026, 12:54:26 PM PT | window: last 72h | 26 tasks | index total 893 (parsed 0, cached 893)
+Generated: 8/23/2026, 1:54:26 PM PT | window: last 72h | 30 tasks | index total 900 (parsed 7, cached 893)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787517380902` | 8/23/2026, 1:54:25 PM | 67 | 248KB | #VERITAS |
+| `1787516215349` | 8/23/2026, 1:54:23 PM | 119 | 776KB | #Externships |
+| `1787517211429` | 8/23/2026, 1:54:16 PM | 57 | 504KB | #CFA |
+| `1787517352553` | 8/23/2026, 1:53:24 PM | 69 | 386KB | #Argus |
+| `1787516392266` | 8/23/2026, 1:53:17 PM | 165 | 504KB | #Deepseek spillage now vs before |
+| `1787516033804` | 8/23/2026, 1:35:11 PM | 116 | 368KB | #Frankenstein LLM Routing |
+| `1787515058425` | 8/23/2026, 1:31:21 PM | 82 | 325KB | This computer just started and it's very hot and laggy if even after just staring. even af |
 | `1787420987189` | 8/23/2026, 12:37:27 PM | 518 | 3563KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787507044981` | 8/23/2026, 12:35:45 PM | 137 | 612KB | #IMessage Ops |
 | `1787505036683` | 8/23/2026, 12:26:52 PM | 314 | 1114KB | #CFA  |
@@ -33,13 +40,249 @@ Generated: 8/23/2026, 12:54:26 PM PT | window: last 72h | 26 tasks | index total
 | `1787207812240` | 8/21/2026, 9:50:40 AM | 406 | 2495KB | #Extension |
 | `1787256884229` | 8/21/2026, 9:32:00 AM | 152 | 618KB | #Externships/ CAPCE?  |
 | `1787190192283` | 8/21/2026, 9:09:28 AM | 398 | 5694KB | Check CFAs from today, numerous emails in the last few hours about students being locked o |
-| `1787168789833` | 8/20/2026, 1:45:32 PM | 1682 | 9200KB | #Julia/Claudia 235B |
-| `1787253842481` | 8/20/2026, 1:38:22 PM | 100 | 1824KB | #Big Mac |
-| `1787183842548` | 8/20/2026, 1:06:45 PM | 494 | 4519KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
 
 ---
 
 ## Per-window detail
+
+### `1787517380902` — 8/23/2026, 1:54:25 PM PT — 67 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
+```
+
+**Ideas referenced:** #12459, #16345, #178712, #2230, #2338, #2358, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036
+
+**Last PICKUP PROMPT:**
+
+```
+be running)
+- [ ] Confirm corrected verdict on FAIL
+- [ ] Write completion with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787516215349` — 8/23/2026, 1:54:23 PM PT — 119 turns
+
+**Original task:**
+
+```
+#Externships
+
+Rebase and Tell me how this is working right now.
+
+Pick up task #1786491116649: externship Sept-1 cutover. Assignment-timer question answered, assignment plan next.
+
+Where we left off (verified 2026-08-21 4:55 PM PT):
+- ANSWERED Ruben's question "assignments past Sept 1 become placements if no staff response within some timeframe?": NO such timer was decided. Decided + deployed = STUDENT-side 72h confirm-or-forfeit (#26067 [deployed], emsu_offer_window_hours()=72, lib/ExternshipOfferConfirmation.php line 35). Staff-side "confirm OR auto-place after timeout" is DRAFTED in the #259
+```
+
+**Ideas referenced:** #16523, #178649, #24635, #24645, #25822 [deployed], #25888, #25889 [deployed], #25916 [approved], #25950 [deployed], #25973 [deployed], #26002 [deployed], #26027 [deployed], #26067 [deployed], #26071 [deployed], #26089 [deployed], #26663 [approved], #27100, #27490 [deployed], #27492 [deployed], #27858 [deployed], #27933 [deployed], #28034, #28036 [proposed], #28037 [proposed], #28038 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ | causal rule updated: 317\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1786491116649: externship Sept-1 cutover, corrected to the recommendation-to-CS process model.\n\nWhere we left off (verified 2026-08-23 12:53 PT):\n- Ruben corrected the process model: recommendations -> CS confirms -> CS emails agencies manually; agency emails NOT automated.\n- VERIFIED: the auto-assign engine lib/externship_autoassign_gate.php has NEVER run (externship_autoassign_queue=0, externship_autoassign_log=0). Three blockers: cron_externship_autoassign.php not registered; gate queries 7 missing Students columns (only scheduled_didactic_completion_date exists); confirmOrAutoPlace auto-places without CS confirmation + emails via @mail() (contradicts intended process + spec step 3).\n- Only live automation = staff-assignment routing ([Auto-Assign] stamps). The manual CS work in admin_notes IS the current process.\n- Filed: #28038 [proposed] (build real recommendation->CS flow), #28037 [proposed] (dashboard visibility), #28036 [proposed] (scheduling-agent PDO fatal, lower priority now).\n\nOpen threads to drive next:\n1. #28038 [proposed]: build the 7 missing Students columns/sources, register cron_externship_autoassign.php, rewrite confirmOrAutoPlace to surface a recommendation for CS confirmation (no auto-place, no @mail), add Recommendations-awaiting-CS dashboard surface.\n2. #28037 [proposed]: dashboard engine on/off status + Sept-1-semantics card + consecutive-failure alert.\n3. #28036 [proposed]: fix scheduling_agent.php line 1015 enforceThreadStatusOnInsert PDO fatal (only if agency-email agent is being kept; Ruben signaled it is not the focus).\n4. (human-only decision, no idea): the staff-confirm-or-timeout hours for spec step 3 (Vicky/staff confirms OR auto-place after timeout) - still undecided.\n5. (human-only decision, no idea): message to Vicky: Sept 1 is a cutoff not a launch; recommendation engine not live yet; live surface is the CS work queue; report what you see.\n\nReference IDs:\n- Ideas filed this window: #28038 [proposed], #28037 [proposed], #28036 [proposed]\n- Ideas carried: #26067 [deployed], #27492 [deployed], #25973 [deployed], #27490 [deployed], #26663 [approved], #25916 [approved]\n- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md\n- Files read: lib/externship_autoassign_gate.php, docs/compliance-evidence/20260812-externship-autoassign-spec/CANONICAL_GATE_SPEC.md, externship/dashboard.php, externship/agent/scheduling_agent.php, lib/externship_thread_monitor.php\n- Evidence: externship_autoassign_queue=0, externship_autoassign_log=0, information_schema Students has only scheduled_didactic_completion_date of the 8 needed, ExternshipSite has all 6, ExternshipRequest 43 SEPT1-CUTOFF + 19 SEPT1-EXPIRED, /var/log/externship-agent.log 288+ FATALs\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════",
+  "task_id": "1786491116649",
+  "task_prompt": "Rebase and tell me how the externship system is working right now. Then: see the state of where Admin is at, they are confused about what is going on between me and our admin; draw inferences on what is needed to clear up communication issues so we do not have SNAFUs. Ruben correction: the auto-assign portion are recommendations that turn into auto-assignments confirmed by customer service; agency emails are not a great idea now; look at customer service emails to see the current p
+```
+
+### `1787517211429` — 8/23/2026, 1:54:16 PM PT — 57 turns
+
+**Original task:**
+
+```
+#CFA
+
+Pick up task #28031 [proposed] — CFA failure-log watchdog repair.
+
+Where we left off (verified 2026-08-23 11:25 PT):
+- Reversal findings: prior completion's 2 claims re-probed live and found fabricated:
+  (a) '72 of 88 tools missing type' — false. All 88 tools have legal type fields (0 missing/illegal/dupes).
+  (b) 'normalizeParamsSchema() fix' — false. grep -rn normalizeParamsSchema = zero hits. Never written to disk.
+- Confirmed-true claims: tickets.student_id is a slug; emails flowing (1,151 in 48h); voice heartbeat working; crons split emsuserver+cron.d.
+- Systemic correction landed:
+```
+
+**Ideas referenced:** #13120, #13437, #25973 [deployed], #26067 [deployed], #26071 [deployed], #27395, #27492 [deployed], #27690, #27698, #28031 [proposed], #28032 [proposed], #4932, #5431, #7174, #9019
+
+**Last PICKUP PROMPT:**
+
+```
+ test-run
+- [ ] Schedule cron.d
+- [ ] Verify probes
+- [ ] Validate completion + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787517352553` — 8/23/2026, 1:53:24 PM PT — 69 turns
+
+**Original task:**
+
+```
+#Argus
+
+See this and rebase first and discuss / then we can take action after the dicsussion. Update also based on from last analysis below
+
+
+## Argus + Student Lifecycle Fall-Through — Advisory (Ruben, 2026-08-21 21:15 PT)
+
+I worked your actual ask as three parts and shipped the buildable half end-to-end (verified, rule 263).
+
+---
+
+### PART A — "Argus won't build workflows like ChatGPT/Claude" + "the handoff in some invisible queue"
+
+**That description is accurate, and I can now tell you the precise shape of it.**
+
+Argus is a task worker + auto-miner. It can EXECUTE a workflow that already ex
+```
+
+**Ideas referenced:** #2230, #22688, #23036, #2338, #23428, #23468, #23506, #2358, #23675, #23941, #23982, #24926, #24941, #24990, #25142, #25571, #25768, #25916, #2597, #2603, #2605, #26663, #26719, #26823, #26824, #26825, #26895, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27826, #27828, #27832, #27840, #27860 [deployed], #27870 [proposed], #27871 [proposed], #27872 [proposed], #27873 [proposed], #27874 [proposed], #27875 [proposed], #27933, #27935, #27972, #28025, #28026, #28034, #28036
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787516392266` — 8/23/2026, 1:53:17 PM PT — 165 turns
+
+**Original task:**
+
+```
+#Deepseek spillage now vs before
+
+Can you tell me how much deepseek spillage we have been having over the last 12 hours compared to 72 hours ago
+```
+
+**Ideas referenced:** #11945, #12060, #12506, #12584, #12629, #12704, #16265, #1754, #1755, #19338, #19686, #1998, #2050, #2073, #2174, #2294, #2307, #2314, #23169, #24217, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2592, #2603, #2605, #26209, #26284 [executing], #26400, #26403, #26663, #26922 [deployed], #26927 [deployed], #26932, #27492, #27711, #27722, #27811, #27812, #27832, #27933, #27935, #27972, #28025, #28026, #28034, #6826
+
+**Last PICKUP PROMPT:**
+
+```
+ered from a real spill metric.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Deepseek "spillage" root cause: it's direct evaluator traffic, not local-capacity spill.
+
+Where we left off (verified 2026-08-23 12:37 America/Anchorage):
+- deepseek-v4-pro in llm_call_log: 210 calls last 12h (75.5K in / 523 out avg) vs 78 in the 72h-ago window. 2.7x.
+- All deepseek rows: fallback_triggered=0, no substitution fields, no route/tier metadata => direct routed, not pool-full spill.
+- Local model calls rose 4.4x (20/hr -> 89/hr) in the same window; total workload ~doubled starting 08:00 today.
+- llm_spill_log = 0 rows (unused). truth_judge_log = only 16 deepseek rows in 7d (not the judge ladder). llm_judge_* and frank_gate_judge_log empty.
+- deepseek cost recorded as $0.000000 on all rows.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #TBD (human-only decision, no idea) — identify the actual ~08:00 deepseek consumer: it writes to llm_call_log with provider='openai'/'other', ~75K input tokens, no route metadata or surface labels. Check cron registrations and grep for direct deepseek-v4-pro callers in /var/www/emtskills.
+2. #TBD (human-only decision, no idea) — wire llm_spill_log to the router so "spillage" is actually measurable, and fix deepseek cost accounting (cost_usd stays 0.000000).
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none (two open threads are uninvestigated-next steps, not yet formulated as implementable ideas)
+- Files touched: none (read-only SQL)
+</result>
+</attempt_completion>
+```
+
+### `1787516033804` — 8/23/2026, 1:35:11 PM PT — 116 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Routing
+
+Rebase, tell me where this is at now:
+
+Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
+
+Where we left off (verified 2026-08-23 11:35 AM AKDT):
+- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
+- LiteLLM safe-resta
+```
+
+**Ideas referenced:** #12584, #12680, #12824, #12872, #12878, #16345, #178742, #178750, #1876, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ENT_METHOD_AND_RESTORE_RISK.md
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up tasks #1787507044981 + #1787420772345 — frankenstein-llm vision routing + Qwen3.8 fleet rollout (combined rebase done; joshua lane restored; BigMac verified).
+
+Where we left off (verified 2026-08-23 12:34 PM AKDT):
+- Vision doorman fix holding: LiteLLM active/health 200, hard guard at _router_core.py:5738, zero glm-4.6v 400s in audit log. bug 2609 resolved.
+- Qwen3.8: Claudia (L4c) + Nero (L4d) live with enable_thinking:false; Joshua lane joshua-qwen38-27b RESTORED this window (L4e, e2e content=OK through router). Idea #28034 [deployed].
+- Big Mac: pinged 3/3 (1.05ms), HTTP :8000 200 gpt-oss-120b, SSH open, fleet_inventory now 'healthy'. Box is fine; only its heartbeat writer is broken.
+
+Open threads to drive next:
+1. #28033 [proposed] — remote-URL images skip the vision doorman (fire it for image_url too, not just base64/data-URL)
+2. #27869 [proposed] — Cicero + Maximus MLX rollout (needs on-box hands)
+3. #28035 [proposed] — repair BigMac heartbeat writer (locate writer, make it persist across long uptimes, positive-control test)
+4. (human-only decision — no idea) — Julia power-cycle; Joshua 16-seq upgrade (edit /tmp/jw.sh)
+
+Reference IDs:
+- Ticket/tasks: #1787507044981, #1787420772345
+- Ideas filed: #28034 [deployed], #28035 [proposed], #28033 [proposed], #27869 [proposed]
+- Ideas verified deployed (carryover): #27933 [deployed], #27858 [deployed]
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, HANDOFF_NOTES.md, /home/emsuserver/cline_task_ledger.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787515058425` — 8/23/2026, 1:31:21 PM PT — 82 turns
+
+**Original task:**
+
+```
+This computer just started and it's very hot and laggy if even after just staring. even after 3 or 4 restarts. Please resolve
+```
+
+**Ideas referenced:** #28031 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+nts killed and confirmed dead.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — MacBook Pro hot/laggy after startup: resolved, no further work required.
+
+Where we left off (verified 2026-08-23 12:31 PT AKDT):
+- All fixes verified live: FolderActionsDispatcher disabled durably, corrupt folderActions blob purged from prefs, System Events + dispatcher 0 procs, wallpaper static, reduce motion/transparency = 1, disk 5 MB/s (was 41-64), no thermal throttle ever recorded.
+- Load ~4 is trailing storm metric, settling; remaining CPU = VSCode/Cline Electron on Retina panel (expected cost of this session).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #28031 [deployed] — Folder Actions automation loop neutralized on the M5 Max: dispatcher durably disabled, corrupt blob purged, live instances killed, verified dead. Closed. No further action required.
+2. (human-only decision, no idea) — Optional hardening, Ruben decides via System Settings > Spotlight > Privacy: exclude ~/Downloads (3.0G) and ~/Documents/Cline (5 node_modules dirs) from Spotlight indexing to make future post-boot reindexes cheaper. Needs a GUI action; not shippable from CLI.
+
+Reference IDs:
+- Ticket: n/a (direct desktop task)
+- Ideas filed: #28031
+- Files touched: ~/Library/Preferences/com.apple.FolderActionsDispatcher.plist (rewritten, blob removed), launchd disabled-state DB
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1787420987189` — 8/23/2026, 12:37:27 PM PT — 518 turns
 
@@ -1201,161 +1444,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Filed idea #27806, promoted + priority stamped + direct-read verified
 - [x] Validation: ALL PASSED + GATE CLEAR
 - [x] attempt_completion shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787168789833` — 8/20/2026, 1:45:32 PM PT — 1682 turns
-
-**Original task:**
-
-```
-#Julia/Claudia 235B
-
-Julia/Claudia 235B is back online and serving. (verified: curl lane :11513 HTTP=200 + ssh_command lane-guard probe ok:true problems:[] reach vllm=true ssh=true at 03:08 PT; router audit picked=julia-235b no substitution; fleet_act julia=healthy ok:true)
-
-Recovery + verification (this window, all times PT):
-- Julia was L2-dark after the 2026-08-18 outage (last good serve 13:15 PT, confirmed dark 14:49-14:53 from 3 vantages). Physical power cycle restored it.
-- Post-return: Ray head + vLLM relaunched via @reboot. Lane :11513 HTTP=200, decode probe returns real tokens, router
-```
-
-**Ideas referenced:** #0078, #081020, #10108, #10419, #10740, #11741, #11781, #11945, #1241, #12477, #1248, #1252, #1258, #12618, #12824, #12872, #12878, #13108, #13202, #1405 [deployed], #1557, #16163, #16265, #16304, #16648, #16844, #1754, #1755, #1765, #1781, #178634, #178640, #178656, #178671, #178701, #178709, #178712, #178713, #18312, #18326, #1876, #1989, #21038 [executing], #2114, #2254, #2258, #22584, #2271, #2298, #2299, #2303, #2307, #23071, #2311, #2312, #23169, #24172, #24217, #24645, #25097, #25112, #25185, #25229 [deployed], #25238 [executing], #25240 [executing], #25241 [executing], #2526, #25366 [deployed], #2537, #25385, #25468, #2547, #25471, #2548, #2550 [deployed], #25515 [proposed], #25525 [executing], #25528 [deployed], #25530 [executing], #25531 [executing], #25532 [deployed], #25534 [executing], #25535 [executing], #25604, #25646, #2570, #2571, #2573, #25796, #25797, #25798, #25888, #2589 [approved], #2593, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26922, #26923, #26932, #26938, #27011, #27012, #27069 [deployed], #27232 [rejected], #27236 [deployed], #27249 [deployed], #27250 [deployed], #27259, #27271, #27287 [deployed], #27613 [proposed], #27614 [proposed], #27630 [proposed], #27641 [proposed], #27663 [proposed], #27664 [proposed], #27673 [proposed], #27684 [proposed], #27685 [proposed], #27692 [proposed], #27702 [proposed], #27717 [proposed], #27718 [proposed], #27719 [proposed], #27721 [proposed], #27736 [proposed], #27751 [deployed], #27772 [proposed], #2826, #30363, #334155, #3688, #64748, #6826, #8984
-
-**Last PICKUP PROMPT:**
-
-```
-reads, not a rule-file defect.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787129383579 — Julia frozen (not off) since 11:48 PT; WoL exhausted; needs physical power flip; recovery is then fully automatic.
-
-Where we left off (verified 2026-08-20 12:36 PT):
-- Julia HOST frozen: LAN 192.168.1.190 no ARP (FAILED), CX7 192.168.100.2 dead, tunnel 2205 down. NOT a clean power-off.
-- WoL exhausted: guard firing every poll since 11:50 + 3 manual broadcast packets from Claudia at 12:35 → still down. WoL can't wake a frozen kernel. (Guard log's 07:24 "TUNNEL BACK" was Ruben's physical cycle, not WoL.)
-- Morning telemetry (WOPR catch-relaunch log): crash-cycling 08:29-11:19, zero-proc events 11:32+11:43, NIC dead 11:48 — hardware-instability signature preceding the freeze.
-- Recovery on power-restore is 100% hands-free: @reboot (Ray+tunnel) → return-harden reinstalls guards → catch-relaunch relaunches engine → SERVING ~12-15 min. WoL guard keeps polling in case it ever reaches a clean-off state.
-- Router compacting around loss (7/16 lanes); service up on other backends.
-
-Open threads to drive next:
-1. (human-only decision - no idea) PHYSICAL: power-flip Julia at Oceanside (hold 10s, press again). Recovery then fully automatic — watch WOPR:/var/log/emsu-julia-catch-relaunch.log for "LANE SERVING".
-2. #27751 [deployed] — After return: RCA the crash-cycle (Julia:/tmp/vllm_serve_unified.*.crash.log set + dmesg 08:16-11:48 window; suspect thermal/power under TP=2 235B load; consider max-num-seqs 16→8).
-3. #27751 [deployed] — At the box: install hung-task panic sysctls (kernel.hung_task_panic=1, kernel.panic=30 + hardware watchdog if present) so a future freeze self-reboots; this was the one hardening blocked on interactive root.
-4. (human-only decision - no idea) Buy a networked smart plug/PDU for Julia (and ideally all Sparks) — the only 100% closure for frozen-host events.
-
-Reference IDs:
-- Ideas: #27751 [deployed], #27736 [proposed], #27236 [deployed], #27232 [rejected]
-- Julia MAC: 4c:bb:47:2c:6a:e6; Claudia hop: WOPR:2206; Julia LAN 192.168.1.190; site: Oceanside (UDM SE 192.168.1.1)
-- Files: WOPR:/usr/local/bin/emsu-spark-wol-guard.sh + log, /usr/local/bin/emsu-julia-{catch-relaunch,return-harden}.sh + logs, Julia crash logs /tmp/vllm_serve_unified.*.crash.log
-- Rules amended this session: 315, 317 (proofs in rule_amend)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787253842481` — 8/20/2026, 1:38:22 PM PT — 100 turns
-
-**Original task:**
-
-```
-#Big Mac
-
-Ok, tech says 4th card added and working well. And you should be able to see. What's going on? 
-
-#BigMac 4th GPU
-Yes, there was one untried lever class, and I found and spent it this round. Direct answer: I tried 5 new things; none brought the card up, but one produced a new actionable BIOS suspicion.
-
-1. FOUND A ROOT PATH THAT WAS CLOSED BEFORE: emsu-big-mac is in the docker group. A privileged alpine container (docker run --rm --privileged -v /:/host alpine chroot /host ...) gives true root reads and sysfs writes. Lockdown still blocks config-space writes (setpci) even inside the c
-```
-
-**Ideas referenced:** #0000, #081020, #10262, #10263, #1130, #1131, #11990, #11997, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #13084, #15144, #152615, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1754, #1755, #176616, #1779, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #178629, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #1798, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1828, #18308 [rejected], #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [blocked], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #19567, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20042, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663, #20672, #20674, #20676, #20677, #2073, #20806 [proposed], #20985, #2101, #21038 [executing], #2105, #2126, #2127, #2128, #2168, #2221, #2232, #2238, #2242, #22583, #22897 [executing], #2299, #23190 [rejected], #23191 [executing], #23192 [rejected], #23204, #23205 [rejected], #23307 [rejected], #23315 [deployed], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #25378, #25381, #25385 [deployed], #25421, #25422, #25423, #25424, #25442, #2546, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #2573, #25796, #25797, #25798, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152 [executing], #27173 [proposed], #27175 [deployed], #27232 [rejected], #27236 [deployed], #27249 [executing], #27250, #27259, #27271, #27287 [deployed], #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #389249, #7142, #7149, #7223
-
-**Last PICKUP PROMPT:**
-
-```
-g activates until ~2026-08-27.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1786948459 — Big Mac 4-GPU: concurrency tuning deferral recorded for #27173; stable TP=4 config untouched.
-
-Where we left off (verified 2026-08-20 13:36 PT):
-- Idea #27173 [proposed]/idle updated: target dates = 2026-08-27 with deferral note (system stable; revisit max-num-seqs 128, batched-token/chunked-prefill raise, c=64/128/256 measure vs ~815 tok/s plateau). Live re-read confirms row persisted.
-- Big Mac serving state unchanged: 4x B70 TP=4, gpt-oss-120b, knee ~32, 814.9 tok/s at c=64 from earlier live bench.
-- Earlier this window: 4th GPU verified serving, lanes x1 Gen1 sysfs (root lspci -vv still flagged for next physical visit), "1500 concurrent" confirmed absent from fleet record.
-
-Open threads to drive next:
-1. #27173 [proposed] — No action until 2026-08-27. Revisit then: add --max-num-seqs (start 128) + raise max-num-batched-tokens with chunked-prefill; measure c=64/128/256 against the 815 tok/s plateau.
-2. #27503 [deployed] — Next physical visit: root `lspci -vv -s 43:00.0` (and 8b:00.0) to confirm true negotiated lane width vs the x1 sysfs read; verify BIOS bifurcation lane assignment.
-
-Reference IDs:
-- Ticket: #1786948459
-- Ideas: #27173 [proposed] (deferral recorded this turn), #27503 [deployed], #27152 [executing], #27175 [deployed]
-- Files touched: orchestrator_ideas row 27173 only this turn; prior: fleet_inventory id=14, HANDOFF_NOTES.md, cline_task_ledger.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787183842548` — 8/20/2026, 1:06:45 PM PT — 494 turns
-
-**Original task:**
-
-```
-Chat Widget does not appear to be responding to inquires. Can you check, test and resolve?
-```
-
-**Ideas referenced:** #1119, #12364 [deployed], #13440, #13442, #16474, #16732, #178718, #18335, #20050, #21710, #2323, #23477, #23989, #25185, #25701, #25888, #25962, #25965, #25976, #25986, #26229 [approved], #26230, #26349, #27284, #27640 [proposed], #27655 [proposed], #27699 [deployed], #2916, #3970, #6366, #6704, #6751, #7907, #9109, #9112, #9132, #9152, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-nded human-in-the-loop design.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787187212000 — Chat widget fix + Voice C2 exemption + Email/SMS scan.
-
-Where we left off (verified 2026-08-20 13:06 PT):
-- Chat widget healthcheck: 33/33 active sites healthy
-- Gate 5 rebuilt with C2 exemption in lib/AgentReplyPipeline.php
-- Dedupe scope fixed in routes/chat_queue_confidence.php
-- Inbound threaded into guard ctx in lib/emsu_ai_brain.php
-- Voice AI C2 exemption applied: caller utterance threaded into guard ctx at api/vapi/dispatch.php
-- Email AI scan: RequirementAssertionGuard is the proactive fix for invented requirements, working correctly (10 legitimate blocks in 3 days)
-- SMS AI scan: doesn't use the guard, no fix needed
-
-Open threads to drive next:
-None — all work completed this session
-
-Reference IDs:
-- Ideas filed: none
-- Files touched: lib/AgentReplyPipeline.php, lib/emsu_ai_brain.php, routes/chat_queue_confidence.php, api/vapi/dispatch.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-No reversals this window.
-</result>
-<task_progress>
-- [x] Chat widget non-response root-caused and fixed
-- [x] All 33 chat-enabled sites verified healthy
-- [x] CFA fleet analysis complete
-- [x] Extend C2 exemption to Voice AI (thread caller transcript into guard ctx) — applied + lint clean
-- [x] Email AI scan: RequirementAssertionGuard is the proactive fix, working correctly
-- [x] SMS AI scan: doesn't use the guard, no fix needed
-- [x] Explained CFA invented requirements meaning + current state
-- [x] Complete
 </task_progress>
 </attempt_completion>
 ```

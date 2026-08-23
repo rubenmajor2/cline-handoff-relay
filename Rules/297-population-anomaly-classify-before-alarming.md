@@ -116,3 +116,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-21 Argus/lifecycle advisory reversal: raw SQL counted 73 active Students with NULL ea_completion_date and presented them as 'fall-through students proving the gap is real'. Ruben challenged it; live SLS probe + first-day roster cross-reference showed ZERO of the 73 appear on any first-day roster — they are NO-SHOWS (registered, never attended: never logged into Moodle, 0/16 attendance, unsettled payment, unsigned EA), a normal commercial population, not an operational failure. Amended behavior: a NULL-field count over active registrations is never evidence of a processing fall-through until each row is classified against attendance/Moodle-access evidence (on first-day roster? ever logged in?); 'registered but never processed' and 'registered but never showed up' are different populations with different owners (ops bug vs admissions/no-show handling) and must be reported as separate buckets before any gap claim.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-23 20:53 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1786491116649
+- RCA bucket: wrong premise
+- Trigger pattern: diagnosing an automation's missing output against the deployed code's behavior instead of the intended process model
+- Reversal note: Diagnosed the externship SNAFU as 'scheduling agent fatal halts agency emails', assuming the deployed code's agency-email behavior WAS the intended process. Ruben corrected: the current process is recommendations -> CS confirms -> CS emails manually; agency emails are NOT automated. The deployed auto-assign code implemented a superseded fully-automated model. Amended behavior: before declaring an automation broken or underproducing, confirm the INTENDED process model from the canonical spec + owner directive FIRST; deployed code may implement a different (superseded) model, so 'output is missing' must be judged against the intended process, not against what the code happens to do.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

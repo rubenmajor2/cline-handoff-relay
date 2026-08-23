@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/23/2026, 9:16:22 AM PT | window: last 72h | 26 tasks | index total 891 (parsed 0, cached 891)
+Generated: 8/23/2026, 10:35:46 AM PT | window: last 72h | 27 tasks | index total 892 (parsed 5, cached 887)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787420987189` | 8/23/2026, 1:08:24 AM | 429 | 1863KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
-| `1787440605750` | 8/23/2026, 12:55:06 AM | 336 | 1951KB | Help me cure cancer |
-| `1787420772345` | 8/23/2026, 12:47:18 AM | 1782 | 5010KB | #Qwen 3.8 27B  |
-| `1787428970611` | 8/22/2026, 5:55:11 PM | 268 | 930KB | #VERITAS TRUTH SYRUM |
+| `1787428970611` | 8/23/2026, 10:35:35 AM | 283 | 962KB | #VERITAS TRUTH SYRUM |
+| `1787505036683` | 8/23/2026, 10:35:25 AM | 195 | 680KB | #CFA  |
+| `1787420772345` | 8/23/2026, 10:34:37 AM | 1795 | 5123KB | #Qwen 3.8 27B  |
+| `1787420987189` | 8/23/2026, 10:34:25 AM | 437 | 1878KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
+| `1787440605750` | 8/23/2026, 10:31:43 AM | 402 | 2368KB | Help me cure cancer |
 | `1787440904551` | 8/22/2026, 5:29:32 PM | 138 | 1899KB | frankenstein-llm seems to be stalling |
 | `1787430120479` | 8/22/2026, 4:19:46 PM | 186 | 2242KB | frankenstein llm may be going rogue. can you check? seems to be drifting tasks |
 | `1787421878922` | 8/22/2026, 1:32:14 PM | 208 | 2302KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
@@ -41,7 +42,100 @@ Generated: 8/23/2026, 9:16:22 AM PT | window: last 72h | 26 tasks | index total 
 
 ## Per-window detail
 
-### `1787420987189` — 8/23/2026, 1:08:24 AM PT — 429 turns
+### `1787428970611` — 8/23/2026, 10:35:35 AM PT — 283 turns
+
+**Original task:**
+
+```
+#VERITAS TRUTH SYRUM
+
+Status: VERITAS core is verified working and all 4 build ideas are deployed (verified: mysql SELECT truth_judge_log returned id=9, verdict=FAIL, latency_ms=50328; clinerules_validate_completion IDENTITY ECHO returned all 4 status=deployed at 11:46 PT). You asked 'How is this going? Test and see / advise.' This window hit its context limit, so it is handing off to a fresh window that will run the remaining tests immediately and report back in plain English. What remains: reading back what the executor deployed (email-pipeline wiring, steering injection, eval harness, dashb
+```
+
+**Ideas referenced:** #1130, #1131, #11316, #12249, #12266, #12269, #12588, #12688, #12689, #13470, #14133, #14142, #16345, #16715, #178712, #1828, #19567, #19686, #2063, #2065, #2073, #23184, #25155, #25185, #26710, #26915, #26922, #27100, #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], #27802, #27809, #27810 [deployed], #27812, #27858, #27863, #27939 [approved], #27941 [executing], #27942 [proposed], #6825
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052, VERITAS Truth Enforcement.
+
+Where we left off (verified 2026-08-22 16:52 PT):
+- Argus L4 truth gate built and live in api/argus_proxy.php (verified: write_server_file BACKED_UP + php -l OK + FPM reload OK; grep read-back lines 159-196)
+- Gate proven end-to-end: live test returned verdict=FAIL on an unsupported claim (verified: mysql SELECT truth_judge_log surface='argus' returned id=20 FAIL deepseek-v4-pro, id=19 FAIL glm-5.2-local)
+- #27942 [deployed], #27941 [deployed] (verified: reconcile_ideas at 16:47 PT returned both status=deployed)
+
+Open threads to drive next:
+1. #27488 [deployed] — wire call_truth_judge() into cron_email_responder.php send path (library included but the send-path call is not yet invoked)
+2. #27489 [executing] — run eval harness cron once to confirm: php /var/www/emtskills/cron/cron_veritas_l4_eval.php
+
+Reference IDs:
+- Ideas confirmed live: #27942 [deployed], #27941 [deployed], #27486 [deployed], #27488 [deployed], #27489 [executing], #27491 [deployed]
+- Files touched: api/argus_proxy.php (VERITAS L4 truth gate added, lines 159-196)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] All prior VERITAS tests + trigger repair complete
+- [x] Completion shipped, Ruben approved #27942
+- [x] Read argus_proxy.php — found reply-return point at final echo json_encode
+- [x] Read lib/truth_judge.php — call_truth_judge signature confirmed
+- [x] Write argus_proxy.php with VERITAS L4 truth gate before final echo
+- [x] php -l syntax check + reload FPM — all OK
+- [x] Verify the gate is wired (grep read-back) — lines 159-196 present
+- [x] Stamp #27942 as deployed in DB — 1 row affected
+- [x] Reconcile #27942 [deployed] + #27941 [deployed] — both verified
+- [x] Functional proof: truth_judge_log has 2 argus rows, both verdict=FAIL correctly flagging unsupported claims
+- [x] Validate completion — ALL PASSED
+- [x] Check gate file — GATE CLEAR
+- [x] Report completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1787505036683` — 8/23/2026, 10:35:25 AM PT — 195 turns
+
+**Original task:**
+
+```
+#CFA 
+
+Can you do a sweep of the last 48 hours of any outstanding issues that have not been addressed already and address them, as well as correct any CFAs which have failed to do so by increasing their capability, knowledgebase (correcting or increasing) as well as improving the overall process as necessary? Be sure to be looking at the MCPs, SLS, etc... to make sure that truthful and accurate information drives the analysis.
+```
+
+**Ideas referenced:** #16603, #178713, #1852, #1976, #2230, #2338, #2358, #25909, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27152, #27492, #27503 [proposed], #27690 [deployed], #27698 [deployed], #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27972, #4958
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787420772345` — 8/23/2026, 10:34:37 AM PT — 1795 turns
+
+**Original task:**
+
+```
+#Qwen 3.8 27B 
+
+Retrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. 
+
+Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
+```
+
+**Ideas referenced:** #10108, #10281, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12299, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16588, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #178742, #1798, #1828, #18312, #18326, #1876, #19338, #19567, #19653, #19686, #19903, #1998, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2152, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #25847, #2603, #2605 [deployed], #26400, #26403, #26908, #26923, #27100, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #27972, #30877, #36309, #36652, #38927, #39273, #39474, #39815, #39816, #40696, #40738, #40880, #41663, #42317, #42406, #42545, #43565, #45238, #45540, #46384, #46994, #47026, #47650, #48946, #48953, #50021, #50729, #50837, #50850, #51113, #51305, #51655, #52069, #52386, #52735, #52761, #52942, #53065, #53077, #53211, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+n (DONE)",
+  "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787420772345 — Joshua Qwen3.8 follow-ups: 4 items from Ruben.\n\nDONE (verified 2026-08-23 09:18 AKDT):\n- BIGMAC FALSE-DOWN CORRECTED: live probe 10.100.0.19:8000/v1/models = HTTP 200, SSH :22 open. fleet_inventory marked healthy via fleet_act. Root cause: stale heartbeat writer (last write 2026-08-19, 4968min ago); box serving since 8/20 per its own notes (4x B70 TP=4). I violated rule 315 again (recited fleet_now stale status without live probe) — rule 317 already amended for this class.\n- JOSHUA MEASURED: 1 lane, max-num-seqs=8, 11 tok/s single, 64 tok/s aggregate @8 concurrent (960tok/15s).\n- CLAUdia :11521 UP (live probe 200), generation works but content=None when thinking eats budget (idea #27858 approved fix: add --reasoning-parser qwen3 to the MLX server launch on Claudia; access ssh -p 2206 rubenmajor@127.0.0.1 from WOPR, launcher /home/rubenmajor/bin/claudia-qwen38-serve.sh, engine vLLM already has reasoning-parser per 8/22 notes — VERIFY what's actually missing before changing; the 8/22 note says --reasoning-parser qwen3 IS set, so the None-content may be a template/parser mismatch needing different fix — test with max_tokens 500+ first).\n- NERO :11525 WOPR tunnel LISTENING (127.0.0.1:11525) but generation hangs. Nero is the Mac Pro (hardware on WOPR ssh -p 2224? No — Nero = Mac Pro at 10.100.0.x, MLX 4-bit, model path /Users/rubenmajor/.cache/qwen38). Diagnose: curl POST from WOPR through :11525 with generous timeout; if models:200 but gen hangs, check MLX server process on Nero directly (ssh path: find in fleet_inventory or /etc/litellm/config.yaml nero lane entry).\n\nREMAINING (do these):\n1. CLAUDIA FIX: get content returned (not None). Probe with 500+ max_tokens via WOPR:11521. If still None, inspect claudia-qwen38-serve.sh + MLX/vLLM logs on box via ssh -p 2206.\n2. NERO FIX: diagnose generation hang through :11525 tunnel; ssh to Nero (check config.yaml nero lane for api_base/host), restart MLX server if needed.\n3. COMMUNITY BENCHMARK ANSWER: Ruben wants what the community says (most current) for Qwen3.8-27B (aka Qwen3-Next / Qwen3.5-class hybrid GDN 27B) serving throughput + best config on Intel XPU / Battlemage. Sources: vLLM GitHub issues #52735 (W4A16 AutoRound on B70 32GB, 179K ctx, ~63 t/s decode / 5800-7600 t/s prefill per issue 41817 comment), #53211 (AutoRound + graph capture = garbage, enforce-eager required; ARK backend 27 tok/s vs _xpu_C 31 tok/s single on B70), #53065 (MoE Triton tuning). For max-num-seqs: community default 8; issue 52735 used 8. Joshua currently 8 = community-aligned. Can safely go higher? max-num-seqs 16 halves per-stream speed at saturation; the int4 W4A16 on 2x32GB with 9.89GiB KV has room (measured 64 tok/s @8 with no degradation). Recommend: keep 8 for interactive (safe), can test 12-16 for batch only. Use brave_web_search for latest Qwen3.8 27B benchmarks to confirm.\n4. JOSHUA MORE LANES: max-num-seqs is a vLLM engine arg — changing requires container restart (bash /tmp/jw.sh edit). KV at 9.89GiB fits ~131K x several seqs; 8 streams measured no OOM. If community supports 16, could bump — but Ruben said do not risk shutdown. Recommendation: leave at 8 (community default, measured safe), or stage a 16-seq test variant only with his OK.\n\nOpen threads: #27869 [proposed] Cicero/Maximus on-box hands; #27858 [approved] Claudia parser; Julia power-cycle; Argus spill or
+```
+
+### `1787420987189` — 8/23/2026, 10:34:25 AM PT — 437 turns
 
 **Original task:**
 
@@ -104,7 +198,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1787440605750` — 8/23/2026, 12:55:06 AM PT — 336 turns
+### `1787440605750` — 8/23/2026, 10:31:43 AM PT — 402 turns
 
 **Original task:**
 
@@ -112,139 +206,39 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 Help me cure cancer
 ```
 
-**Ideas referenced:** #10108, #10262, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #128300, #12872, #12878, #13202, #15144, #1565, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #18312, #18326, #18836, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25097, #2537, #25378, #25381, #2546, #2563, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27503, #7142, #7149
+**Ideas referenced:** #0000, #081020, #10108, #10262, #10263, #10740, #1130, #1131, #11741, #11781, #11990, #11997, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #128300, #12872, #12878, #13084, #13202, #15144, #152615, #1565, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #176616, #1779, #178020, #178023, #178025, #178026, #178027, #178033, #178034, #178035, #178036, #178037, #178038, #178041, #178042, #178043, #178046, #178052, #178053, #178055, #178059, #178060, #178063, #178068, #178069, #178072, #178073, #178074, #178077, #178088, #178089, #178091, #178095, #178105, #178108, #178129, #178131, #178132, #178139, #178148, #178149, #178151, #178154, #178155, #178160, #178163, #178165, #178172, #178174, #178180, #178190, #178424, #178455, #178483, #178485, #178493, #178495, #178496, #178501, #178518, #178528, #178531, #178553, #178593, #178629, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #1798, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1828, #18308 [rejected], #18312, #18320 [deployed], #18326 [proposed], #18327 [proposed], #18329 [proposed], #18332 [executing], #18337, #18340, #18342, #18345 [executing], #18346 [executing], #18347 [proposed], #18348, #18378, #18379, #18383, #1839, #1845, #18471, #18493, #18494, #18495, #1850, #18536, #18544, #18605, #18676, #18690 [blocked: executor denylist], #18695, #1871, #18720, #1876, #18765, #1877, #18771, #18781, #18795 [queued], #1880, #18808, #18809, #18810, #18811, #18812, #18813, #18817, #18820, #1883, #18832 [rejected], #18836, #18841 [queued], #18842 [queued], #18843 [deployed], #18844 [deployed], #18845 [deployed], #18846, #18848 [deployed], #18849 [executing], #18850 [deployed], #18852 [queued], #18853 [proposed], #18858, #18861, #18862, #18863, #18864 [queued], #18866 [deployed], #18868, #18893 [executing], #18894 [queued], #18896 [deployed], #18915 [proposed], #18916 [queued], #18918 [proposed], #18929 [rejected], #1894, #1896, #18966 [rejected], #1897, #19080 [executing], #19081 [proposed], #19082 [proposed], #19100 [executing], #19102 [executing], #1912, #19126 [executing], #19133 [executing], #19134 [executing], #19135 [executing], #19136 [queued], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19171 [deployed], #19174 [executing], #19184 [rejected], #19185 [rejected as duplicate], #19202 [executing], #19218 [approved], #19227 [proposed], #19230 [approved], #19234 [approved], #19239, #19257, #19258, #19259, #19260 [executing], #19261 [approved], #1927, #1928, #1929, #1930, #1931, #1932, #1933, #1935, #1936, #19387 [executing], #1942, #1944, #19448 [queued], #19458 [rejected], #1948, #1949, #19490, #19491 [deployed], #1952, #1955, #19567, #1961, #1963, #1964, #1965, #1966, #1967, #1968, #1969, #1970, #19704, #1971, #1972, #1973, #1975, #1976, #1986 [resolved], #1987 [resolved], #1988 [resolved], #1989 [resolved], #19891 [rejected], #19893, #1990, #1991, #19957, #19958, #19962, #20004, #20005, #20008, #20014, #20022, #20042, #20110 [rejected], #20122 [executing], #20123 [executing], #20124 [executing], #20125 [executing], #20126 [executing], #20555, #20565, #20569, #20627, #20628, #20629, #2063, #20630, #2065, #20662, #20663, #20672, #20674, #20676, #20677, #2073, #20806 [proposed], #20985, #2101, #21038 [executing], #2105, #2126, #2127, #2128, #2168, #2221, #2232, #2238, #2242, #22583, #22897 [executing], #2299, #23190 [rejected], #23191 [executing], #23192 [rejected], #23204, #23205 [rejected], #23307 [rejected], #23315 [deployed], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #25097, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #2537, #25378, #25381, #25385 [deployed], #25421, #25422, #25423, #25424, #25442, #2546, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #2563, #2573, #25796, #25797, #25798, #25916 [awaiting_review], #26663, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #26908, #26923, #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27249 [executing], #27250, #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #389249, #7142, #7149, #7223
 
 **Last PICKUP PROMPT:**
 
 ```
-ick from the primary evidence.
+w appended 2026-08-23 10:30 PT
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Cancer Action Center page (all work completed this session).
+Pick up task — cancer library full process-improvement pass (all work completed this session).
 
-Where we left off (verified 2026-08-22 23:54 AKDT / UTC-8):
-- `/var/www/emtskills/cancer-action-center.php` — new action page: screening schedule generator, free/low-cost screening programs, action cards, clinical-trial search, red-flag signs. 17,330 bytes, owned by emsumain:psaserv, `php -l` clean, JS `node --check` clean, public HTTP 401 (auth gate live).
-- Dynamic index now auto-discovers 6 cancer pages (cancer-action-center.php added automatically, no link editing).
-- Earlier this session: `/var/www/emtskills/cancer-risk-stack-builder.php` fixed (dynamic MAXPOSS normalization, smoking alone now 11% not 100%); `/var/www/emtskills/cancer-library.php` (dynamic index) + card link on `/var/www/emtskills/routes/reports.php` (line 12042); `admin_profile.php` reverted per steer.
-- emsu-operations MCP unreliable this session; all deploys went over direct SSH (`ssh wopr`, passwordless sudo). Heredoc-through-ssh corrupts; reliable pattern = write file locally, `scp` to wopr:/tmp, then `sudo cp`/`sudo python3` over SSH. FPM reload blocked by sudoers but unnecessary (opcache validate_timestamps=On, 60s).
+Where we left off (verified 2026-08-23 10:30 AKDT / UTC-8):
+- `/var/www/emtskills/cancer-library.php` — dynamic index (globs cancer-*.php, 6 discovered pages) with new green "Start here - Cancer Action Center" banner. Auth gated. Public probe HTTP 401.
+- `/var/www/emtskills/cancer-risk-stack-builder.php` — inflated values fixed. Root cause: hardcoded CAP denominators (smoking 15 vs cap 6 -> clamped 100%). Now dynamic MAXPOSS normalization: smoking alone = 11% (15/135). Heading relabeled "Relative Exposure Index" + "NOT a probability" hint.
+- `/var/www/emtskills/cancer-stack-builder.php` — same defect class fixed (walkback cap 40 < all-factors max 48.2 -> false 100%). Now dynamic maxPossible() normalization. Existing honesty label line 70 untouched.
+- `/var/www/emtskills/cancer-action-center.php` — new Action Center (screening generator, free/low-cost programs, quit/vaccine cards, trial search, red flags), deployed + autodiscovered.
+- `/var/www/emtskills/routes/reports.php` — Cancer Library Index card at line 12042 (from earlier steer). `/var/www/emtskills/admin_profile.php` — reverted per steer.
+- Idea #28023 [proposed] filed (durable rule: dynamic denominators + honesty labels on all 0-100 outputs). Ledger row appended to cline_task_ledger.md 2026-08-23 10:30 PT.
+- All 8 probed pages public HTTP 401 (serving + auth gate). php -l + node --check clean on touched files.
+- emsu-operations MCP was down for much of the earlier session; all edits made over direct SSH (`ssh wopr`, passwordless sudo). mysql MCP worked for idea filing. Local orchestrator API at localhost:8080 unreachable — file ideas via mysql MCP or WOPR-side API instead.
 
 Open threads to drive next:
-None — all work completed this session.
+None — all work completed this session. (Idea #28023 [proposed] is a durable rule for future pages, not a pending build task.)
 
 Reference IDs:
 - Ticket: none
-- Ideas filed: none
-- Files touched: `/var/www/emtskills/cancer-action-center.php` (new), `/var/www/emtskills/cancer-risk-stack-builder.php` (fixed), `/var/www/emtskills/cancer-library.php` (new, earlier), `/var/www/emtskills/routes/reports.php` (card, earlier), `/var/www/emtskills/admin_profile.php` (reverted, earlier)
+- Ideas filed: #28023 [proposed]
+- Files touched: `/var/www/emtskills/cancer-library.php`, `/var/www/emtskills/cancer-risk-stack-builder.php`, `/var/www/emtskills/cancer-stack-builder.php`, `/var/www/emtskills/cancer-action-center.php`, `/var/www/emtskills/routes/reports.php`, `/var/www/emtskills/admin_profile.php` (reverted); ledger `~/Documents/Cline/cline_task_ledger.md`; local scratch `/Users/rubenmajor/Desktop/{cancer-library.php, patch_index_banner.py, patch_cure_stack.py, fix_risk_values.py, insert_dash.py, append_ledger.py, cancer-stack-builder-import.php}`
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1787420772345` — 8/23/2026, 12:47:18 AM PT — 1782 turns
-
-**Original task:**
-
-```
-#Qwen 3.8 27B 
-
-Retrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. 
-
-Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
-```
-
-**Ideas referenced:** #10108, #10281, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12299, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16588, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #178742, #1798, #1828, #18312, #18326, #1876, #19338, #19567, #19653, #19686, #19903, #1998, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2152, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #25847, #2603, #2605 [deployed], #26400, #26403, #26908, #26923, #27100, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #27972, #30877, #36309, #36652, #38927, #39273, #39474, #39815, #39816, #40696, #40738, #40880, #41663, #42317, #42406, #42545, #43565, #45238, #45540, #46384, #46994, #47026, #47650, #48946, #48953, #50021, #50729, #50837, #50850, #51113, #51305, #51655, #52069, #52386, #52735, #52761, #52942, #53077, #53211, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-(bug library, not a rule file)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787420772345 — Joshua Qwen3.8-27B lane live; remaining Qwen3.8 rollout threads.
-
-State as of 2026-08-22 23:45 AKDT:
-- JOSHUA runs qwen3.8-27b: W4A16 int4 on patched image intel/llm-scaler-vllm:0.21.0-b1-xpufp8, container joshua-qwen38 Up, :8001 models:200, TP=2 eager fp8-KV 131K ctx, 1 lane, max-num-seqs=8, ~11 tok/s single-stream, 64 tok/s measured aggregate at 8 concurrent. Router lane joshua-qwen38-27b working end-to-end. Relaunch: bash /tmp/jw.sh on Joshua via WOPR.
-- CLAUDIA :11521 UP and generating (live-probed); needs the reasoning-parser fix (#27858 [approved]) so thinking tokens stop eating the budget and returning content=None. NERO :11525 models:200; generation hangs through the tunnel (needs tunnel check).
-- Bug library entry 2605 records the Joshua working recipe. Rules 156 and 317 amended this task (build-attempt gate; live-probe + capability-claim gate).
-- Dark boxes: Julia (power-cycle), BigMac (down since 8/19), Cicero (tunnels down, on-box hands needed).
-
-Open threads to drive next:
-1. #27869 [proposed] — Cicero + Maximus MLX rollout (both need on-box hands)
-2. #27858 [approved] — apply the Claudia reasoning-parser fix so content stops returning None
-3. (human-only decision — no idea) — Julia power-cycle; BigMac; Nero tunnel; Argus spill-order config (GLM lanes -> Qwen3.8 -> 120Bs)
-
-Reference IDs:
-- Ideas filed: #27933 [deployed], #27869 [proposed]
-- Related open: #27858 [approved] — fix not yet applied
-- Files touched: /tmp/jw.sh, /data/models/Qwen3.8-27B-W4A16, gdn_linear_attn.py (committed image), /etc/litellm/config.yaml, HANDOFF_NOTES.md, bug library entry 2605
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1787428970611` — 8/22/2026, 5:55:11 PM PT — 268 turns
-
-**Original task:**
-
-```
-#VERITAS TRUTH SYRUM
-
-Status: VERITAS core is verified working and all 4 build ideas are deployed (verified: mysql SELECT truth_judge_log returned id=9, verdict=FAIL, latency_ms=50328; clinerules_validate_completion IDENTITY ECHO returned all 4 status=deployed at 11:46 PT). You asked 'How is this going? Test and see / advise.' This window hit its context limit, so it is handing off to a fresh window that will run the remaining tests immediately and report back in plain English. What remains: reading back what the executor deployed (email-pipeline wiring, steering injection, eval harness, dashb
-```
-
-**Ideas referenced:** #1130, #1131, #11316, #12249, #12266, #12269, #12588, #12688, #12689, #13470, #14133, #14142, #16345, #16715, #178712, #1828, #19567, #19686, #2063, #2065, #2073, #25155, #25185, #26710, #26915, #26922, #27100, #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], #27802, #27809, #27810 [deployed], #27812, #27858, #27863, #27939 [approved], #27941 [executing], #27942 [proposed], #6825
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052, VERITAS Truth Enforcement.
-
-Where we left off (verified 2026-08-22 16:52 PT):
-- Argus L4 truth gate built and live in api/argus_proxy.php (verified: write_server_file BACKED_UP + php -l OK + FPM reload OK; grep read-back lines 159-196)
-- Gate proven end-to-end: live test returned verdict=FAIL on an unsupported claim (verified: mysql SELECT truth_judge_log surface='argus' returned id=20 FAIL deepseek-v4-pro, id=19 FAIL glm-5.2-local)
-- #27942 [deployed], #27941 [deployed] (verified: reconcile_ideas at 16:47 PT returned both status=deployed)
-
-Open threads to drive next:
-1. #27488 [deployed] — wire call_truth_judge() into cron_email_responder.php send path (library included but the send-path call is not yet invoked)
-2. #27489 [executing] — run eval harness cron once to confirm: php /var/www/emtskills/cron/cron_veritas_l4_eval.php
-
-Reference IDs:
-- Ideas confirmed live: #27942 [deployed], #27941 [deployed], #27486 [deployed], #27488 [deployed], #27489 [executing], #27491 [deployed]
-- Files touched: api/argus_proxy.php (VERITAS L4 truth gate added, lines 159-196)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] All prior VERITAS tests + trigger repair complete
-- [x] Completion shipped, Ruben approved #27942
-- [x] Read argus_proxy.php — found reply-return point at final echo json_encode
-- [x] Read lib/truth_judge.php — call_truth_judge signature confirmed
-- [x] Write argus_proxy.php with VERITAS L4 truth gate before final echo
-- [x] php -l syntax check + reload FPM — all OK
-- [x] Verify the gate is wired (grep read-back) — lines 159-196 present
-- [x] Stamp #27942 as deployed in DB — 1 row affected
-- [x] Reconcile #27942 [deployed] + #27941 [deployed] — both verified
-- [x] Functional proof: truth_judge_log has 2 argus rows, both verdict=FAIL correctly flagging unsupported claims
-- [x] Validate completion — ALL PASSED
-- [x] Check gate file — GATE CLEAR
-- [x] Report completion
-</task_progress>
 </attempt_completion>
 ```
 

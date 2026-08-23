@@ -6,18 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 8:06:32 PM PT | window: last 72h | 35 tasks | index total 891 (parsed 2, cached 889)
+Generated: 8/22/2026, 11:56:16 PM PT | window: last 72h | 29 tasks | index total 891 (parsed 3, cached 888)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787440605750` | 8/22/2026, 7:15:16 PM | 205 | 1290KB | Help me cure cancer |
-| `1787420772345` | 8/22/2026, 7:15:09 PM | 1665 | 4702KB | #Qwen 3.8 27B  |
+| `1787420987189` | 8/22/2026, 11:56:09 PM | 233 | 1172KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
+| `1787440605750` | 8/22/2026, 11:52:16 PM | 302 | 1732KB | Help me cure cancer |
+| `1787420772345` | 8/22/2026, 11:44:12 PM | 1750 | 4931KB | #Qwen 3.8 27B  |
 | `1787428970611` | 8/22/2026, 5:55:11 PM | 268 | 930KB | #VERITAS TRUTH SYRUM |
 | `1787440904551` | 8/22/2026, 5:29:32 PM | 138 | 1899KB | frankenstein-llm seems to be stalling |
 | `1787430120479` | 8/22/2026, 4:19:46 PM | 186 | 2242KB | frankenstein llm may be going rogue. can you check? seems to be drifting tasks |
 | `1787421878922` | 8/22/2026, 1:32:14 PM | 208 | 2302KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787256742974` | 8/22/2026, 12:58:22 PM | 730 | 9185KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
-| `1787420987189` | 8/22/2026, 11:47:08 AM | 162 | 875KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787420877031` | 8/22/2026, 10:47:57 AM | 1 | 883KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787327963594` | 8/22/2026, 10:35:35 AM | 1376 | 4557KB | #Julia |
 | `1787370497651` | 8/22/2026, 1:07:24 AM | 984 | 6467KB | How fast is this? |
@@ -39,18 +39,63 @@ Generated: 8/22/2026, 8:06:32 PM PT | window: last 72h | 35 tasks | index total 
 | `1787200683126` | 8/20/2026, 1:35:17 AM | 166 | 447KB | #/emtskills slowness |
 | `1787168880963` | 8/20/2026, 1:34:15 AM | 1030 | 5531KB | #GLM / Frankenstein Routing  |
 | `1787205463720` | 8/20/2026, 12:04:52 AM | 120 | 1259KB | #BigMac 4th GPU |
-| `1787203836427` | 8/19/2026, 11:56:02 PM | 188 | 551KB | #Joshua Fallover Test |
-| `1787207665962` | 8/19/2026, 11:43:07 PM | 12 | 121KB | Tell me which LLM is better. Artemis or Big Mac |
-| `1787205596235` | 8/19/2026, 11:00:55 PM | 4 | 11KB | is this working? |
-| `1787203716956` | 8/19/2026, 10:28:37 PM | 1 | 12KB | #Joshua Fallover Test |
-| `1787195257179` | 8/19/2026, 8:47:51 PM | 132 | 442KB | Getting reports of moodle being down (but I can access / but is slow) and emtskills is slo |
-| `1787195519861` | 8/19/2026, 8:29:55 PM | 56 | 1711KB | My bot, ruben imessage ops still responds in chats (sms threads). Is it actually even doin |
 
 ---
 
 ## Per-window detail
 
-### `1787440605750` — 8/22/2026, 7:15:16 PM PT — 205 turns
+### `1787420987189` — 8/22/2026, 11:56:09 PM PT — 233 turns
+
+**Original task:**
+
+```
+Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to be using the vision doorman which is currently kimi K3/ Sonnet 5. Please resolve this asap:
+
+{"message":"400 /chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","status":400,"code":"400","modelId":"frankenstein-llm","providerId":"litellm","details":{"message":"/chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","type":"None","param":"None","code":"400","pro
+```
+
+**Ideas referenced:** #10108, #10740, #10869, #11261, #11316, #11319, #11741, #11781, #12046, #12059, #12477, #12573, #12618, #12680, #12824, #12872, #12878, #13202, #13453, #13470, #13490, #15637, #16163, #16265, #16304, #16602, #16625, #16680, #16716, #16717, #16844, #17307, #17430, #1807, #18312, #18326, #18329, #20549, #2290, #23172, #25097, #25158, #25171, #25224, #25311, #2537, #26908, #26923, #27259, #9706
+
+**Last PICKUP PROMPT:**
+
+```
+27b` on describe_failed events
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Vision Doorman final config (local Qwen 3.8 27B).
+
+Where we left off (verified 2026-08-22 22:43 PT):
+- Vision prepass: claudia-qwen38-27b (local, free, direct :11521)
+- Vision doorman 50/50: claudia-qwen38-27b ↔ claude-sonnet-5-vision
+- Qwen3.8-27B > Sonnet 5 for vision (Sonnet failed EMSU bake-off)
+- Qwen3.8-27B ≈ Qwen3.8-max for OCR (same architecture, 27B is free)
+
+Open threads to drive next:
+None — all work completed this session.
+
+Reference IDs:
+- Files touched: /etc/litellm/_router_core.py
+- Ideas filed: none
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Fix vision doorman glm-4.6v-flash 400 error
+- [x] Fix 524 timeout
+- [x] Deploy qwen3.8-max as vision doorman 50/50 with Sonnet 5
+- [x] Replace minicpm-v vision prepass with qwen3.8-max
+- [x] Verify local Qwen 3.8 27B supports vision
+- [x] Switch vision doorman + prepass to local claudia-qwen38-27b (free)
+- [x] Compare: Qwen 3.8 27B vs Sonnet 5 vs Qwen 3.8-max for vision
+</task_progress>
+</attempt_completion>
+```
+
+### `1787440605750` — 8/22/2026, 11:52:16 PM PT — 302 turns
 
 **Original task:**
 
@@ -58,32 +103,31 @@ Generated: 8/22/2026, 8:06:32 PM PT | window: last 72h | 35 tasks | index total 
 Help me cure cancer
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #1565, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25097, #2537, #25378, #25381, #2546, #2563, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27503, #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #128300, #12872, #12878, #13202, #15144, #1565, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #18312, #18326, #18836, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25097, #2537, #25378, #25381, #2546, #2563, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27503, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-Admin/ExecAdmin/ITAdmin only).
+card link on the reports page.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — cancer research hub + stack builder (role-gated, deployed, verified).
+Pick up task — dynamic Cancer Library Index card on reports.php (steer fully delivered; all work completed this session).
 
-Where we left off (verified 2026-08-22 17:37 PT):
-- /var/www/emtskills/cancer-research-hub.php — 11 searchable cards, 22,007-byte render, includes new FeLV Animal-Model Cross-Read + Cure Economics cards; lint clean.
-- /var/www/emtskills/cancer-stack-builder.php — 14,597 bytes, full JS with 7 synergy combos (non-linear engine); lint clean, render tail complete.
-- Both behind requireRole MasterAdmin/ExecAdmin/ITAdmin; public returns 401 = gate active.
-- Admin dashboard card link injected into admin_profile.php (grep count 1, lint clean).
-- Local scratch files on Desktop: stack_part1.php, stack_part2.php, hub_inject.php, render_stack_test.php, render_hub_test.php, inject_card.php, cancer-research-brief.md, supplements-and-cancer-brief.md.
+Where we left off (verified 2026-08-22 22:51 AKDT / UTC-8):
+- `/var/www/emtskills/cancer-library.php` — dynamic index page (globs cancer-*.php, searchable cards, auth gated to MasterAdmin/ExecAdmin/ITAdmin). Live, returns HTTP 401 publicly. Auto-discovers 5 pages.
+- `/var/www/emtskills/routes/reports.php` — Research Library card added at line 12042, gated to MasterAdmin/ExecAdmin/ITAdmin, links to cancer-library.php. `php -l` clean, page serves HTTP 401.
+- `/var/www/emtskills/admin_profile.php` — reverted (cancer-library.php link count = 0), original block restored.
+- emsu-operations MCP was down mid-session ("Not connected"/"Connection closed"); all remaining edits were completed over direct SSH (`ssh wopr` + passwordless sudo). FPM reload is blocked by sudoers by design and was not needed (opcache validate_timestamps=On, 60s revalidate).
 
 Open threads to drive next:
-1. None — all requested work completed this session (stack fix + non-linear synergy engine + FeLV + cure-economics, all deployed and verified rendering).
+None — all work completed this session.
 
 Reference IDs:
-- Ticket: none (direct Ruben build)
-- Ideas filed: none (no buildable work deferred; everything shipped this session)
-- Files touched: /var/www/emtskills/cancer-research-hub.php, /var/www/emtskills/cancer-stack-builder.php, /var/www/emtskills/admin_profile.php
+- Ticket: none
+- Ideas filed: none
+- Files touched: `/var/www/emtskills/cancer-library.php` (new, earlier this session), `/var/www/emtskills/routes/reports.php` (edited), `/var/www/emtskills/admin_profile.php` (reverted)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -91,7 +135,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787420772345` — 8/22/2026, 7:15:09 PM PT — 1665 turns
+### `1787420772345` — 8/22/2026, 11:44:12 PM PT — 1750 turns
 
 **Original task:**
 
@@ -103,13 +147,36 @@ Retrire anything else bewides qwen 3.8 27b, check for stale containers there and
 Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
 ```
 
-**Ideas referenced:** #10108, #10281, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #178742, #1798, #1828, #18312, #18326, #1876, #19338, #19567, #19653, #19686, #19903, #1998, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2152, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #25847, #2603, #26400, #26403, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #27972, #30877, #36309, #36652, #38927, #39273, #39474, #39815, #39816, #40696, #40738, #40880, #41663, #42317, #42406, #42545, #43565, #45238, #45540, #46384, #46994, #47026, #47650, #48946, #48953, #50021, #50729, #50837, #50850, #51113, #51305, #51655, #52069, #52386, #52735, #52761, #52942, #53077, #53211, #7142, #7149
+**Ideas referenced:** #10108, #10281, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12299, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16588, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #178742, #1798, #1828, #18312, #18326, #1876, #19338, #19567, #19653, #19686, #19903, #1998, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2152, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #25847, #2603, #2605 [deployed], #26400, #26403, #26908, #26923, #27100, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #27972, #30877, #36309, #36652, #38927, #39273, #39474, #39815, #39816, #40696, #40738, #40880, #41663, #42317, #42406, #42545, #43565, #45238, #45540, #46384, #46994, #47026, #47650, #48946, #48953, #50021, #50729, #50837, #50850, #51113, #51305, #51655, #52069, #52386, #52735, #52761, #52942, #53077, #53211, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-question",
-  "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787420772345 — Joshua W4A16 GDN fix, babysit to serving end to end.\n\nWhere we left off (verified 2026-08-22 17:58 AKDT):\n- JOSHUA IS AT models:200 with W4A16 int4 (Vishva007/Qwen3.8-27B-W4A16-AutoRound-GPTQ, 15GB, /data/models/Qwen3.8-27B-W4A16) on image intel/llm-scaler-vllm:0.21.0-b1-xpufp8, container joshua-qwen38, TP=2 eager, fp8 KV, 9.89GiB KV cache, 131K ctx. Launch: bash /tmp/jw.sh on Joshua (10.100.0.4 via WOPR ssh -i /home/emsuserver/.ssh/id_ed25519 emsusrvr2@10.100.0.4). Chat template injected into tokenizer_config.json (from BF16 repo). Startup is FAST (~90s total).\n- CURRENT BUG (first generation crashes): EngineCore dies in gdn_linear_attn.py line 1298 `_gdn_outproj_esimd_eligible`: `w = self.out_proj.weight` -> the W4A16 AutoRound quant wraps out_proj so .weight attr fails (quantized param has no .weight). Fix path: patch the image's /opt/venv/lib/python3.12/site-packages/vllm/model_executor/layers/mamba/gdn_linear_attn.py — make _gdn_outproj_esimd_eligible return False early when the layer is quantized (hasattr(self.out_proj, 'weight') check or try/except AttributeError -> return False). Docker patch pattern (proven this session): cat > /tmp/patch.sh with sed/python edit inside a docker run --entrypoint bash pb-patch container, docker commit, relaunch via /tmp/jw.sh.\n- AFTER FIX: (1) generation test 'Say OK'; (2) 200-token bench (time it, report tok/s); (3) verify LiteLLM lane joshua-qwen38-27b (ALREADY in /etc/litellm/config.yaml on WOPR, api_base http://10.100.0.4:8001/v1, model openai/qwen3.8-27b) — router already restarted; probe direct from WOPR curl http://10.100.0.4:8001/v1/models; (4) stamp idea #27933 [executing]->deployed via mysql UPDATE orchestrator_ideas SET status='deployed' WHERE id=27933; (5) bug_library_record the full saga (FP8 block kernel missing on XPU, BF16 KV OOM at 0.90 util on 2x32GB, torch.compile 70min+ pathological, W4A16 GDN out_proj crash + fix, chat template missing); (6) HANDOFF_NOTES entry.\n- KEY FACTS: BF16 (52GB) does NOT fit 2x32GB with KV (worked to weight-load but KV OOM; also torch.compile takes 70+min/graph — pathological). W4A16 int4 is the community-proven build (GitHub #52735, single B70 32GB, 179K ctx). oneCCL mitigations applied: CCL_ZE_IPC_EXCHANGE=sockets, CCL_TOPO_FABRIC_VERTEX_CONNECTION_CHECK=0. enforce-eager REQUIRED (#53211: AutoRound + graph capture = garbage output).\n- STALE CLEANUP DONE: dead 70B container, intel/vllm:0.17.0-xpu image (30GB), llama3.3-70b-awq (38GB), Qwen3.8-27B-FP8 (29GB) all removed. BF16 (52GB) kept as fallback. Disk /data at 43%.\n- REMAINING ANSWER for Ruben (from earlier feedback): 4B-distilled quality Q — a 4B distill is a DIFFERENT model trained on teacher outputs, not a quantized 27B: simple tasks fine, complex multi-step reasoning/code noticeably degrades; for Mac mini 16GB keep as compute workers; MLX 3-bit 27B (~10-12GB) fits but has own degradation. Recommendation: keep minis as compute workers.\n- Claudia :11521 serving 6.4 tok/s single. Nero :11525 models-up, generation hangs (tunnel).\n\nOpen threads to drive next:\n1. #27933 [executing] — patch GDN, verify serving+bench, stamp deployed\n2. #27869 [proposed] — Cicero/Maximus on-box hands\n3. (human-only decision — no idea) — Julia power-cycle; Nero tunnel\n\nReference IDs:\n- Ideas: #27933 [executing], #27869 [proposed]\n- Files: /tmp/jw.sh (Joshua launch), /data/mo
+ rule change (script artifact)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787420772345 — Joshua Qwen3.8-27B lane; remaining Qwen3.8 rollout threads.
+
+State as of 2026-08-22 19:28 AKDT:
+- JOSHUA runs qwen3.8-27b: W4A16 int4 (Vishva007/Qwen3.8-27B-W4A16-AutoRound-GPTQ) on patched image intel/llm-scaler-vllm:0.21.0-b1-xpufp8, container joshua-qwen38 Up, :8001 models:200, TP=2 eager fp8-KV 131K ctx, ~11 tok/s single-stream, router lane joshua-qwen38-27b working end-to-end (17*23=391 correct). Relaunch: bash /tmp/jw.sh on Joshua via WOPR. GDN patch + chat template live only in the committed image layer + /data/models/Qwen3.8-27B-W4A16.
+- Bug library entry 2605 records the full working recipe (BF16 abandoned: no KV room + 70min compile; W4A16 + eager + oneCCL mitigations required).
+- Stale items removed from Joshua: 70B container/image, llama3.3-70b-awq 38GB, Qwen3.8-FP8 29GB purged; BF16 52GB retained as fallback; /data 43 percent.
+
+Open threads to drive next:
+1. #27869 [proposed] — Cicero (tunnels down, needs on-box relaunch) + Maximus (WOPR key one-liner on the Mac): the MLX rollout work on those two Macs remains to be started
+2. (human-only decision — no idea) — Julia power-cycle; BigMac down since 8/19; Claudia heartbeat stale; Nero generation-hang tunnel check; Argus spill-order config (GLM lanes -> Qwen3.8 -> 120Bs) design if still wanted
+
+Reference IDs:
+- Ideas filed: #27933 [deployed], #27869 [proposed]
+- Ideas closed: #27858 [deployed]
+- Files touched: /tmp/jw.sh, /data/models/Qwen3.8-27B-W4A16 (chat template), gdn_linear_attn.py (in committed image), /etc/litellm/config.yaml (joshua lane), HANDOFF_NOTES.md, bug library entry 2605
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
 ### `1787428970611` — 8/22/2026, 5:55:11 PM PT — 268 turns
@@ -372,60 +439,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - T#01 use_mcp_tool(clinerules_truth_judge, test claim with one false statement), judge call logged, ladder fell back to deepseek-v4-pro when GLM ring was slow
 - T#02 mysql SELECT truth_judge_log, id=9 verdict=FAIL claims_unsupported=1 latency_ms=50328 (E2E pass: judge correctly caught the false claim)
 - T#03 ssh_command curl litellm health, HTTP 200 in 15ms (router 
-```
-
-### `1787420987189` — 8/22/2026, 11:47:08 AM PT — 162 turns
-
-**Original task:**
-
-```
-Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to be using the vision doorman which is currently kimi K3/ Sonnet 5. Please resolve this asap:
-
-{"message":"400 /chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","status":400,"code":"400","modelId":"frankenstein-llm","providerId":"litellm","details":{"message":"/chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.","type":"None","param":"None","code":"400","pro
-```
-
-**Ideas referenced:** #10108, #10740, #10869, #11261, #11316, #11319, #11741, #11781, #12046, #12059, #12477, #12618, #12680, #12824, #12872, #12878, #13202, #13453, #13470, #13490, #16163, #16265, #16304, #16602, #16625, #16680, #16716, #16717, #16844, #17307, #17430, #1807, #18312, #18326, #18329, #20549, #2290, #23172, #25097, #25158, #25171, #25224, #25311, #2537, #26908, #26923, #27259, #9706
-
-**Last PICKUP PROMPT:**
-
-```
-kups: `.bak-visionlocalqwen-*`
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Vision Doorman final config (local Qwen 3.8 27B).
-
-Where we left off (verified 2026-08-22 10:46 PT):
-- glm-4.6v-flash 400 FIXED (removed)
-- 524 timeout FIXED (minicpm-v removed)
-- Vision prepass: claudia-qwen38-27b (local, free, direct :11521)
-- Vision doorman 50/50: claudia-qwen38-27b ↔ claude-sonnet-5-vision
-- Qwen3.8-27B benchmarks: BEATS Opus4.6 Max on all vision tasks
-- Audit log confirms: picked: claudia-qwen38-27b on describe_failed
-
-Open threads to drive next:
-None — all work completed this session.
-
-Reference IDs:
-- Files touched: /etc/litellm/_router_core.py
-- Ideas filed: none
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Fix vision doorman glm-4.6v-flash 400 error
-- [x] Fix 524 timeout
-- [x] Deploy qwen3.8-max as vision doorman 50/50 with Sonnet 5
-- [x] Replace minicpm-v vision prepass with qwen3.8-max
-- [x] Verify local Qwen 3.8 27B supports vision (claudia-qwen38-27b test passed)
-- [x] Confirm Qwen 3.8 27B is native vision-language model with SOTA benchmarks
-- [x] Switch vision doorman + prepass to local claudia-qwen38-27b (free)
-- [x] Verify local vision works end-to-end (audit log confirms claudia-qwen38-27b picks)
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1787420877031` — 8/22/2026, 10:47:57 AM PT — 1 turns
@@ -1451,320 +1464,4 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 <task_progress>
 - [x] Core post-bifurcator test complete + records updated + validated completion shipped
 - [x] Round 2 levers all executed: docker-root path, register reads (Train- on all 4 ports), BIOS lane-assignment suspicion (.2/.3/.4 LnkCap x0), bridge remove+rescan (no chan
-```
-
-### `1787203836427` — 8/19/2026, 11:56:02 PM PT — 188 turns
-
-**Original task:**
-
-```
-#Joshua Fallover Test
-
-Rebase and get ready to test Joshua Fallover
-
---
-Rebased. Short version: everything is built, healthy, and has been sitting ready since Sunday at 3:20 AM. The one thing left is the drill, and while re-checking it I found it cannot actually trigger a promotion the way it is written, which is worth knowing before we run it.
-
-# The state right now, live-verified
-
-The replica converged a long time ago. The watcher I installed fired at 03:20 PT on Sunday the 17th (verified: /var/lib/emsu-converge-notified exists dated Aug 17 03:20, and the watch log shows the delta falling 55
-```
-
-**Ideas referenced:** #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [proposed], #26019 [deployed], #26023 [deployed], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [deployed], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed], #26667 [deployed], #26668 [deployed], #26669 [deployed], #26973 [deployed], #26974 [deployed], #27706 [proposed], #27709 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
- capacity check ordering issue
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #26076 [deployed] follow-on: Joshua failover drill complete, LLM hot standby prepped.
-
-Where we left off (verified 2026-08-19 23:52 PT):
-- Drill v1 ran: WOPR self-fenced correctly (verified: ssh_command tail drill log returned SELF-FENCING), but Joshua never promoted because killswitch was not armed before firewall
-- Manual cleanup completed: firewall removed, WireGuard restarted, WOPR restored to writer role (verified: ssh_command 'cat /etc/emsu/writer_lease' returned writer=wopr)
-- Drill v2 deployed: /usr/local/bin/emsu-failover-drill-v2 arms killswitch BEFORE firewall, so next drill will trigger Joshua promotion
-- LLM hot standby deployed on Joshua: litellm-standby service (disabled), port 4001, DeepSeek cloud LLMs only (verified: ssh_command systemctl is-enabled returned disabled)
-- WireGuard mesh issue found: Joshua and BigMac cannot reach Artemis (10.100.0.5:8000), WOPR can (verified: ssh_command curl from Joshua returned HTTP 000, curl from WOPR returned HTTP 200). Filed as #27709 [proposed]
-
-Open threads to drive next:
-1. #26668 [deployed] Run drill v2 with Ruben watching to verify Joshua promotion works end-to-end
-2. #27709 [proposed] Fix WireGuard mesh so Joshua can reach Artemis (local 120B backends)
-3. #26614 [deployed] After drill v2 passes: sudo touch /etc/emsu/auto_failover_enabled on Joshua to arm unattended promotion
-
-Reference IDs:
-- Ideas filed: #27706 [deployed], #27709 [proposed]
-- Files touched: /usr/local/bin/emsu-failover-drill-v2 (Joshua), /etc/emsu/litellm-standby/config.yaml (Joshua), /etc/emsu/litellm-standby/env (Joshua), /etc/systemd/system/litellm-standby.service (Joshua)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Verify current cluster state (replication, lease, witness, timers)
-- [x] Read existing drill script and failover logic
-- [x] Build firewall-based drill variant
-- [x] Test drill script syntax and safety checks
-- [x] Present drill plan for supervised execution
-- [x] Explain split-brain protections
-- [x] Explain drill duration
-- [x] RUN THE DRILL - WOPR SELF-FENCED CORRECTLY
-- [x] Manual cleanup: remove firewall, restart WireGuard
-- [x] Verify cluster fully restored
-- [x] Identified drill flaw: killswitch not armed before firewall
-- [x] Verified websites back up after WOPR restart
-- [x] Addressed LLM dependency question
-- [x] Fix drill script (v2: arm killswitch before firewall)
-- [x] Deploy fixed script
-- [x] Verify v2 preconditions pass
-- [x] Outline LLM failover options
-- [x] File LLM hot standby idea (#27706)
-- [x] Check BigMac capacity (tight: 9.7Gi available, but LiteLLM is lightweight)
-- [x] Check WOPR LiteLLM config (complex: router_hook, registry, env vars)
-- [x] Check BigMac network reachability - WireGuard BROKEN (100% packet loss)
-- [x] Check Joshua network reachability - WireGuard WORKS (was using wrong WOPR IP)
-- [x] Joshua can reach WOPR + DeepSeek, but NOT Artemis
-- [x] WOPR can reach Artemis (200)
-- [x] Filed WireGuard mesh fix idea (#27709)
-- [x] Check Joshua capacity - 20G disk, 12Gi RAM, docker available
-- [x] Found API keys in /etc/litellm/env
-- [x] Got DeepSeek API key
-- [x] Create config dir on Joshua
-- [x] Create minimal LiteLLM config on Joshua
-- [x] Create env file on Joshua
-- [x] Create systemd service for Joshua LiteLLM
-- [x] Verify service is disabled (not sta
-```
-
-### `1787207665962` — 8/19/2026, 11:43:07 PM PT — 12 turns
-
-**Original task:**
-
-```
-Tell me which LLM is better. Artemis or Big Mac
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #12459, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #27236, #27249 [executing], #27250, #27503 [executing], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-oday it is essentially a wash.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Artemis vs Big Mac LLM comparison follow-up.
-(Cline task id unknown, omitted per rule.)
-
-Where we left off (verified 2026-08-19 23:41 PT):
-- Read-only comparison of Artemis and Big Mac, both healthy and serving gpt-oss-120b.
-- Artemis live probe: 6.16 tok/s single-stream, decode_live=true (peak record ~30 single / ~300 aggregate at 8 lanes).
-- Big Mac: verified serving 23:29 PT (HTTP 200 + real decode), PP=3, only 3 of 4 GPUs enumerate.
-
-Open threads to drive next:
-1. #27503 [executing] — Resolve Big Mac 4th GPU. Only 3x Intel Arc B70 enumerate (43/83/87:00.0); investigate card/adapter/clock path via physical inspection. Next action: have tech confirm card #4 cabling and bifurcator seat, then re-run lspci/dmesg on-box.
-
-Reference IDs:
-- Idea filed/updated: #27503 [executing]
-- Files touched: none (read-only probing via project-frankenstein host probe and fleet_inventory)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787205596235` — 8/19/2026, 11:00:55 PM PT — 4 turns
-
-**Original task:**
-
-```
-is this working?
-```
-
-**Last PICKUP PROMPT:**
-
-```
-5/2.11 settling toward normal)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — health check "is this working".
-
-Where we left off (verified 2026-08-19 23:00 PT):
-- WOPR all core services active (PHP-FPM, MySQL, Nginx), disk 30%, RAM 34Gi/125Gi used after a recent reboot.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-- None — all work completed this session.
-
-Reference IDs:
-- Ideas filed: none
-- Files touched: none
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Probe system health
-- [x] Report status to Ruben
-</task_progress>
-</attempt_completion>
-```
-
-### `1787203716956` — 8/19/2026, 10:28:37 PM PT — 1 turns
-
-**Original task:**
-
-```
-#Joshua Fallover Test
-
-Rebase and get ready to test Joshua Fallover
-
---
-Rebased. Short version: everything is built, healthy, and has been sitting ready since Sunday at 3:20 AM. The one thing left is the drill, and while re-checking it I found it cannot actually trigger a promotion the way it is written, which is worth knowing before we run it.
-
-# The state right now, live-verified
-
-The replica converged a long time ago. The watcher I installed fired at 03:20 PT on Sunday the 17th (verified: /var/lib/emsu-converge-notified exists dated Aug 17 03:20, and the watch log shows the delta falling 55
-```
-
-**Ideas referenced:** #26007 [deployed], #26008 [executing], #26009 [deployed], #26017 [proposed], #26019 [deployed], #26023 [deployed], #26024 [deployed], #26068 [deployed], #26069 [deployed], #26070 [deployed], #26076 [deployed], #26077 [executing], #26604 [deployed], #26614 [deployed], #26631 [deployed], #26667 [deployed], #26668 [deployed], #26669 [deployed], #26973 [deployed], #26974 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787195257179` — 8/19/2026, 8:47:51 PM PT — 132 turns
-
-**Original task:**
-
-```
-Getting reports of moodle being down (but I can access / but is slow) and emtskills is slow also. See emtskills slowness and resolve it asap.
-```
-
-**Ideas referenced:** #12364, #178716, #178719, #20050, #25185, #25281, #25282, #27631, #27640 [deployed], #27646, #27647 [proposed], #27655 [deployed], #27656, #27679 [proposed], #450438, #4988
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787195257000 - OpenAI migration approved and executing
-
-Where we left off (verified 2026-08-19 20:44 PT):
-- Moodle/emtskills slowness resolved (embeddings switched to local bge-m3)
-- OpenAI audit found 59 direct chat calls across 32 files
-- #27679 [executing] approved and promoted to execution for full migration
-- Image generation (gpt-image-2) stays paid, no local equivalent
-
-Open threads to drive next:
-1. #27679 [executing] - Migrate all direct OpenAI API calls to frankenstein-llm/local models
-
-Reference IDs:
-- Ideas filed: #27679 [executing]
-- Files touched: orchestrator_config table (embedding provider change)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Check server health (disk, PHP-FPM, MySQL, load)
-- [x] Identify what's consuming resources (MySQL at 425% CPU, now 83%)
-- [x] Check MySQL processlist (mostly sleeping connections)
-- [x] Check PHP-FPM process counts (not saturated)
-- [x] Check PHP-FPM error logs (OpenAI quota errors, fallback working)
-- [x] Check MySQL slow query log (none found)
-- [x] Check running Moodle cron tasks (normal cron running)
-- [x] Check MySQL InnoDB status (buffer pool healthy, 5 threads running)
-- [x] Check nginx access logs (vec_query.php heavy, OpenAI 429 errors)
-- [x] Read handoff notes (recent chat widget fix, Argus work)
-- [x] Check PHP fatal error spikes (17K fatals cumulative, embedding failures frequent)
-- [x] Test response times (Moodle 0.1s, emtskills 0.015s - fast internally)
-- [x] Test external access from server (0.105s - fast)
-- [x] Test external access from Mac (1.46s - slow, TTFB 1.36s)
-- [x] Check MySQL buffer pool (32GB, nearly full, high rnd_next reads)
-- [x] Test specific Moodle pages locally (fast - 0.005s)
-- [x] Check nginx error log (no upstream issues)
-- [x] Check current MySQL CPU (down to 83%, no active queries)
-- [x] Test emtskills specific pages (fast locally)
-- [x] IDENTIFIED: OpenAI embedding API out of credits, causing timeout delays on every RAG query
-- [x] Local embedding service is running and working (emsu-embeddings.service, bge-m3)
-- [x] Found config location: orchestrator_config.config_json -> emsu_rag_active_embedding_provider
-- [x] Updated embedding provider to 'local'
-- [x] opcache revalidate_freq is 60s, change will be picked up soon
-- [x] RAG endpoint responding in 0.056s
-- [x] OpenAI 429 errors have stopped
-- [x] Final verification of site response times
-- [x] Updated handoff notes
-- [x] Audit all OpenAI usage in codebase (115 files reference OpenAI)
-- [x] Check actual direct OpenAI HTTP calls (59 calls across 32 files)
-- [x] Filed idea #27679 for full migration to local
-- [x] Reconciled idea status (#27679 [proposed])
-- [x] Ruben approved #27679
-- [x] Promoted idea to execution (approved, queued for implementation)
-- [x] Reconciled final status (#27679 [executing])
-</task_progress>
-</attempt_completion>
-```
-
-### `1787195519861` — 8/19/2026, 8:29:55 PM PT — 56 turns
-
-**Original task:**
-
-```
-My bot, ruben imessage ops still responds in chats (sms threads). Is it actually even doing anything? I would like it to stop responding for me. Can you make that happen? I've tried to ask this before, but it still remains or rogue code remains still. 
-
-I would still like to have Cline read my SMS and even respond on-demand, but not automatically unless i specifically ask anymore. Sometimes when I ask this, the system was tyring to turn OFF the orchestrator. I do NOT want to turn off the orchestrator.
-```
-
-**Ideas referenced:** #11764, #12184, #15161, #15324, #15325, #15326, #15342, #15930, #1598, #16188, #24635, #25426, #3875, #3877, #3879, #7189
-
-**Last PICKUP PROMPT:**
-
-```
-launchctl load` the Mac plist.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — disable RUBEN iMessage-ops auto-response (Ruben directive 2026-08-19).
-
-Where we left off (verified 2026-08-19 20:28 PT):
-- Auto-response fully disabled at BOTH delivery paths; verified no auto-sender remains loaded.
-- Orchestrator confirmed still autonomous/not paused; Cline SMS read + on-demand send confirmed working.
-- Change recorded in HANDOFF_NOTES.md to prevent accidental re-enable.
-
-Open threads to drive next:
-None — task complete and verified. Only re-enable if Ruben explicitly asks.
-
-Reference IDs:
-- Ideas filed: none (work completed, nothing proposed)
-- Files touched:
-  - WOPR /etc/cron.d/emsu-ruben-staff-chat-triage -> .DISABLED-20260819-ruben-no-auto-reply
-  - Mac ~/Library/LaunchAgents/com.emsu.ruben-queue-drainer.plist -> .retired-20260819-ruben-no-auto-reply
-  - WOPR HANDOFF_NOTES.md (documented directive + re-enable steps)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Identify the auto-responding mechanism (Mac launchd + /etc/cron.d staff_chat_triage)
-- [x] Determine what code sends automatic replies
-- [x] Found active senders: staff_chat_triage (reactive) + proactive monitors via Mac queue_drainer
-- [x] Confirmed no standing watchdog re-enables them
-- [x] Disable WOPR staff_chat_triage cron (reactive auto-replies)
-- [x] Disable Mac queue_drainer launchd (proactive notification delivery)
-- [x] Verify orchestrator still running (NOT paused)
-- [x] Verify Cline can still read SMS
-- [x] Confirm on-demand send path intact + no other auto-drainer
-- [x] Record in HANDOFF_NOTES to prevent re-enablement
-</task_progress>
-</attempt_completion>
 ```

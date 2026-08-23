@@ -95,3 +95,13 @@ The Kaison fleet-watcher cron (built alongside this rule, idea #12619) tails `/t
 ## Last updated
 
 2026-06-15 — initial. Source: idea #12619 (approved). bug_library_check_before_fix is the mandatory first call for all LLM routing symptoms.
+
+## Amendment (from reversal, 2026-08-23 03:30 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787420772345
+- RCA bucket: wrong premise
+- Trigger pattern: skipping bug-library/community check before launching a new model build on fleet hardware, then burning an hour+ on a configuration the community already proved unworkable
+- Reversal note: 2026-08-22 Joshua Qwen3.8 incident: spent 90+ minutes on a BF16 build that could never serve (52GB weights on 2x32GB cards leaves no KV room; torch.compile pathological at 70min/graph) BEFORE checking the bug library or community. Community search after Ruben's correction instantly found vLLM issue 52735 (the W4A16 int4 build works on this exact hardware class) plus the GDN quantized-out_proj crash fix path and the enforce-eager requirement. Amended behavior: the bug-library-first gate applies BEFORE any multi-hour model-build/launch attempt on fleet hardware (not just before diagnosing routing symptoms) — a serving-build attempt is a diagnosis of what works, and the community has usually already run it.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

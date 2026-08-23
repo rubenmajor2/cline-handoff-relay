@@ -11,7 +11,7 @@ One sentence: **Claim scope must equal probe scope.** A tool's auto-success sign
 The reversal log collapses to FOUR recurring failure modes, in order of frequency:
 
 - **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +5 since 2026-08-19 | latest: Within-window reversal: reconcile_ideas reported #27697 [executing] (status=in_progress) a]
-- **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +44 since 2026-08-19 | latest: 2026-08-22 Joshua Qwen3.8 incident: spent 90+ minutes on a BF16 build that could never ser]
+- **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +45 since 2026-08-19 | latest: 2026-08-22 completion reversal: claimed 'Claudia Qwen3.8 lane is offline' from a stale 724]
 - **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +54 since 2026-08-19 | latest: 2026-08-22 frankenstein-llm stall reversal: a single 20s counter sample during a transient]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +12 since 2026-08-19 | latest: 2026-08-19 scope reversal: the original completion said the remaining active suspensions w]
 <!-- golden-rule-table:end -->
@@ -174,5 +174,15 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: stale assumption
 - Trigger pattern: deploy-claim carryover from prior window treated as live without re-probing the artifact
 - Reversal note: VERITAS continuation window carried the prior-window claim 'rule 323 shipped and always-loaded' without re-probing; the file had been auto-archived from the Mac floor by the G8 cap and was live only via the WOPR steering mirror. Re-probe this window found the archive state. Reinforces existing 2026-08-21 amendment: a deploy claim inherited from a prior window must be re-probed by reading/executing the artifact before it is treated as live.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-23 07:44 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787420772345
+- RCA bucket: stale assumption
+- Trigger pattern: declaring a lane offline from a stale heartbeat without a live endpoint probe, and claiming model capability ordering from raw parameter counts without checking MoE active-params or generation
+- Reversal note: 2026-08-22 completion reversal: claimed 'Claudia Qwen3.8 lane is offline' from a stale 724-minute heartbeat WITHOUT a live probe; live curl showed :11521 serving HTTP 200 the whole time. Also recited '120Bs/235Bs out-think the 27B' from general priors about parameter counts without checking that Qwen3-235B-A22B is MoE with only ~22B ACTIVE params (parity with a dense 27B) and two generations older. Amended behavior: NEVER state a host/lane is down or offline in a completion from inventory/heartbeat staleness alone — probe the serving endpoint live in the same window; and never claim a capability ordering between models from parameter counts alone — MoE active-param counts and generation age must be checked (and ideally live A/B'd) before any 'X out-thinks Y' claim.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

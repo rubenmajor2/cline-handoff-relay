@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-23T06:56:16.013Z",
+ "generated_at": "2026-08-23T07:56:16.387Z",
  "counts": {
   "parsed": 3,
   "reused": 888,
@@ -139297,13 +139297,13 @@
   },
   "1787420772345": {
    "task_id": "1787420772345",
-   "mtime": 1787467452255,
+   "mtime": 1787471238955,
    "created_at": "2026-08-22T17:46:12.345Z",
-   "last_modified": "2026-08-23T06:44:12.255Z",
-   "size_kb": 4931,
-   "turn_count": 1750,
+   "last_modified": "2026-08-23T07:47:18.955Z",
+   "size_kb": 5010,
+   "turn_count": 1782,
    "title": "#Qwen 3.8 27B \n\nRetrire anything else bewides qwen 3.8 27b, check for stale containers there and safely increase lanes for Nero to use. Then tell me total tok/sec per lane and total concurrency. Must have similar build to the one already running on Claudia / must be 131K context or more, etc... again give: 1. individual tok/sec, number of lanes and total concurrency in tok/sec. Make sure it's serving in the same layer as other qwen 3.8 in frankenstein-llm and frankenstein-tools. \n\nFix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I do for \n\nFor Argus, I want to make sure that once the GLM lanes (4 that are left for Argus/Batch) a",
-   "pickup_prompt": " rule change (script artifact)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787420772345 — Joshua Qwen3.8-27B lane; remaining Qwen3.8 rollout threads.\n\nState as of 2026-08-22 19:28 AKDT:\n- JOSHUA runs qwen3.8-27b: W4A16 int4 (Vishva007/Qwen3.8-27B-W4A16-AutoRound-GPTQ) on patched image intel/llm-scaler-vllm:0.21.0-b1-xpufp8, container joshua-qwen38 Up, :8001 models:200, TP=2 eager fp8-KV 131K ctx, ~11 tok/s single-stream, router lane joshua-qwen38-27b working end-to-end (17*23=391 correct). Relaunch: bash /tmp/jw.sh on Joshua via WOPR. GDN patch + chat template live only in the committed image layer + /data/models/Qwen3.8-27B-W4A16.\n- Bug library entry 2605 records the full working recipe (BF16 abandoned: no KV room + 70min compile; W4A16 + eager + oneCCL mitigations required).\n- Stale items removed from Joshua: 70B container/image, llama3.3-70b-awq 38GB, Qwen3.8-FP8 29GB purged; BF16 52GB retained as fallback; /data 43 percent.\n\nOpen threads to drive next:\n1. #27869 [proposed] — Cicero (tunnels down, needs on-box relaunch) + Maximus (WOPR key one-liner on the Mac): the MLX rollout work on those two Macs remains to be started\n2. (human-only decision — no idea) — Julia power-cycle; BigMac down since 8/19; Claudia heartbeat stale; Nero generation-hang tunnel check; Argus spill-order config (GLM lanes -> Qwen3.8 -> 120Bs) design if still wanted\n\nReference IDs:\n- Ideas filed: #27933 [deployed], #27869 [proposed]\n- Ideas closed: #27858 [deployed]\n- Files touched: /tmp/jw.sh, /data/models/Qwen3.8-27B-W4A16 (chat template), gdn_linear_attn.py (in committed image), /etc/litellm/config.yaml (joshua lane), HANDOFF_NOTES.md, bug library entry 2605\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "(bug library, not a rule file)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787420772345 — Joshua Qwen3.8-27B lane live; remaining Qwen3.8 rollout threads.\n\nState as of 2026-08-22 23:45 AKDT:\n- JOSHUA runs qwen3.8-27b: W4A16 int4 on patched image intel/llm-scaler-vllm:0.21.0-b1-xpufp8, container joshua-qwen38 Up, :8001 models:200, TP=2 eager fp8-KV 131K ctx, 1 lane, max-num-seqs=8, ~11 tok/s single-stream, 64 tok/s measured aggregate at 8 concurrent. Router lane joshua-qwen38-27b working end-to-end. Relaunch: bash /tmp/jw.sh on Joshua via WOPR.\n- CLAUDIA :11521 UP and generating (live-probed); needs the reasoning-parser fix (#27858 [approved]) so thinking tokens stop eating the budget and returning content=None. NERO :11525 models:200; generation hangs through the tunnel (needs tunnel check).\n- Bug library entry 2605 records the Joshua working recipe. Rules 156 and 317 amended this task (build-attempt gate; live-probe + capability-claim gate).\n- Dark boxes: Julia (power-cycle), BigMac (down since 8/19), Cicero (tunnels down, on-box hands needed).\n\nOpen threads to drive next:\n1. #27869 [proposed] — Cicero + Maximus MLX rollout (both need on-box hands)\n2. #27858 [approved] — apply the Claudia reasoning-parser fix so content stops returning None\n3. (human-only decision — no idea) — Julia power-cycle; BigMac; Nero tunnel; Argus spill-order config (GLM lanes -> Qwen3.8 -> 120Bs)\n\nReference IDs:\n- Ideas filed: #27933 [deployed], #27869 [proposed]\n- Related open: #27858 [approved] — fix not yet applied\n- Files touched: /tmp/jw.sh, /data/models/Qwen3.8-27B-W4A16, gdn_linear_attn.py (committed image), /etc/litellm/config.yaml, HANDOFF_NOTES.md, bug library entry 2605\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -139473,13 +139473,13 @@
   },
   "1787420987189": {
    "task_id": "1787420987189",
-   "mtime": 1787468169709,
+   "mtime": 1787471713920,
    "created_at": "2026-08-22T17:49:47.189Z",
-   "last_modified": "2026-08-23T06:56:09.709Z",
-   "size_kb": 1172,
-   "turn_count": 233,
+   "last_modified": "2026-08-23T07:55:13.920Z",
+   "size_kb": 1766,
+   "turn_count": 409,
    "title": "Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to be using the vision doorman which is currently kimi K3/ Sonnet 5. Please resolve this asap:\n\n{\"message\":\"400 /chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.\",\"status\":400,\"code\":\"400\",\"modelId\":\"frankenstein-llm\",\"providerId\":\"litellm\",\"details\":{\"message\":\"/chat/completions: Invalid model name passed in model=glm-4.6v-flash. Call `/v1/models` to view available models for your key.\",\"type\":\"None\",\"param\":\"None\",\"code\":\"400\",\"provider_specific_fields\":{\"error\":\"/chat/completions: Invalid model name passed in model=glm-4.6v-flas",
-   "pickup_prompt": "27b` on describe_failed events\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — Vision Doorman final config (local Qwen 3.8 27B).\n\nWhere we left off (verified 2026-08-22 22:43 PT):\n- Vision prepass: claudia-qwen38-27b (local, free, direct :11521)\n- Vision doorman 50/50: claudia-qwen38-27b ↔ claude-sonnet-5-vision\n- Qwen3.8-27B > Sonnet 5 for vision (Sonnet failed EMSU bake-off)\n- Qwen3.8-27B ≈ Qwen3.8-max for OCR (same architecture, 27B is free)\n\nOpen threads to drive next:\nNone — all work completed this session.\n\nReference IDs:\n- Files touched: /etc/litellm/_router_core.py\n- Ideas filed: none\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Fix vision doorman glm-4.6v-flash 400 error\n- [x] Fix 524 timeout\n- [x] Deploy qwen3.8-max as vision doorman 50/50 with Sonnet 5\n- [x] Replace minicpm-v vision prepass with qwen3.8-max\n- [x] Verify local Qwen 3.8 27B supports vision\n- [x] Switch vision doorman + prepass to local claudia-qwen38-27b (free)\n- [x] Compare: Qwen 3.8 27B vs Sonnet 5 vs Qwen 3.8-max for vision\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": " (DocVQA, ChartQA, OCRBench).\"\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787442900000-frankenstein-stall — Vision doorman glm-4.6v-flash 400 error fix.\n\nWhere we left off (verified 2026-08-22 23:46 PT):\n- Vision doorman updated to use qwen3.8-max (50/50 with claude-sonnet-5-vision)\n- cron_ai_grading.php GPT_MODEL_VISION set to qwen3.8-max\n- qwen3.8-max configured in LiteLLM with supports_vision: true\n- No remaining glm-4.6v-flash references in vision code\n\nOpen threads to drive next:\nNone — all work completed this session\n\nReference IDs:\n- Ideas filed: none\n- Files touched: /var/www/emtskills/lib/vision_doorman.php, /var/www/emtskills/cron_ai_grading.php\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Fix vision doorman glm-4.6v-flash 400 error\n- [x] Fix 524 timeout\n- [x] Switch vision doorman to local claudia-qwen38-27b (free)\n- [x] Update vision doorman to use kimi-k3 / claude-sonnet-5-vision (50/50)\n- [x] Fix EMT AI Grader vision model (glm-4.6v-flash → kimi-k3)\n- [x] Search community: Qwen 3.8-max vision capabilities\n- [x] Rule 297 RCA on conflicting info\n- [x] Found: qwen3.8-max IS a vision model (OpenRouter, supports_vision: true)\n- [x] Found: config.yaml says qwen3.8-max should replace kimi-k3 (2026-08-22 directive)\n- [x] Update vision_doorman.php to use qwen3.8-max instead of kimi-k3\n- [x] Add qwen3.8-max to visionCapableModels list\n- [x] Verify the update\n- [x] Update cron_ai_grading.php GPT_MODEL_VISION to qwen3.8-max\n- [x] Verify cron_ai_grading.php update\n- [x] Found 11699 auto_passed submissions in last 30 days\n- [x] Verified GPT_MODEL_VISION is set to qwen3.8-max\n- [x] Verified qwen3.8-max is configured in LiteLLM\n- [x] Verified no other glm-4.6v-flash references in vision doorman\n- [x] Report results\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1807": null,
     "2290": null,
@@ -139530,7 +139530,8 @@
     "25311": null,
     "26908": null,
     "26923": null,
-    "27259": null
+    "27259": null,
+    "178744": null
    }
   },
   "1787421878922": {
@@ -139655,13 +139656,13 @@
   },
   "1787440605750": {
    "task_id": "1787440605750",
-   "mtime": 1787467936269,
+   "mtime": 1787471706553,
    "created_at": "2026-08-22T23:16:45.750Z",
-   "last_modified": "2026-08-23T06:52:16.269Z",
-   "size_kb": 1732,
-   "turn_count": 302,
+   "last_modified": "2026-08-23T07:55:06.553Z",
+   "size_kb": 1951,
+   "turn_count": 336,
    "title": "Help me cure cancer",
-   "pickup_prompt": "card link on the reports page.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — dynamic Cancer Library Index card on reports.php (steer fully delivered; all work completed this session).\n\nWhere we left off (verified 2026-08-22 22:51 AKDT / UTC-8):\n- `/var/www/emtskills/cancer-library.php` — dynamic index page (globs cancer-*.php, searchable cards, auth gated to MasterAdmin/ExecAdmin/ITAdmin). Live, returns HTTP 401 publicly. Auto-discovers 5 pages.\n- `/var/www/emtskills/routes/reports.php` — Research Library card added at line 12042, gated to MasterAdmin/ExecAdmin/ITAdmin, links to cancer-library.php. `php -l` clean, page serves HTTP 401.\n- `/var/www/emtskills/admin_profile.php` — reverted (cancer-library.php link count = 0), original block restored.\n- emsu-operations MCP was down mid-session (\"Not connected\"/\"Connection closed\"); all remaining edits were completed over direct SSH (`ssh wopr` + passwordless sudo). FPM reload is blocked by sudoers by design and was not needed (opcache validate_timestamps=On, 60s revalidate).\n\nOpen threads to drive next:\nNone — all work completed this session.\n\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: `/var/www/emtskills/cancer-library.php` (new, earlier this session), `/var/www/emtskills/routes/reports.php` (edited), `/var/www/emtskills/admin_profile.php` (reverted)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "ick from the primary evidence.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Cancer Action Center page (all work completed this session).\n\nWhere we left off (verified 2026-08-22 23:54 AKDT / UTC-8):\n- `/var/www/emtskills/cancer-action-center.php` — new action page: screening schedule generator, free/low-cost screening programs, action cards, clinical-trial search, red-flag signs. 17,330 bytes, owned by emsumain:psaserv, `php -l` clean, JS `node --check` clean, public HTTP 401 (auth gate live).\n- Dynamic index now auto-discovers 6 cancer pages (cancer-action-center.php added automatically, no link editing).\n- Earlier this session: `/var/www/emtskills/cancer-risk-stack-builder.php` fixed (dynamic MAXPOSS normalization, smoking alone now 11% not 100%); `/var/www/emtskills/cancer-library.php` (dynamic index) + card link on `/var/www/emtskills/routes/reports.php` (line 12042); `admin_profile.php` reverted per steer.\n- emsu-operations MCP unreliable this session; all deploys went over direct SSH (`ssh wopr`, passwordless sudo). Heredoc-through-ssh corrupts; reliable pattern = write file locally, `scp` to wopr:/tmp, then `sudo cp`/`sudo python3` over SSH. FPM reload blocked by sudoers but unnecessary (opcache validate_timestamps=On, 60s).\n\nOpen threads to drive next:\nNone — all work completed this session.\n\nReference IDs:\n- Ticket: none\n- Ideas filed: none\n- Files touched: `/var/www/emtskills/cancer-action-center.php` (new), `/var/www/emtskills/cancer-risk-stack-builder.php` (fixed), `/var/www/emtskills/cancer-library.php` (new, earlier), `/var/www/emtskills/routes/reports.php` (card, earlier), `/var/www/emtskills/admin_profile.php` (reverted, earlier)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,
@@ -139687,6 +139688,7 @@
     "7142": null,
     "7149": null,
     "10108": null,
+    "10262": null,
     "10740": null,
     "11741": null,
     "11781": null,

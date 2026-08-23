@@ -90,3 +90,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-20 Big Mac 297: agent probed a CONTAINERIZED vLLM workload with 'journalctl -u bigmac-vllm.service', which returns EMPTY because the engine runs inside Docker (container bigmac-vllm). The empty output was then treated as corroborating evidence for a wedge verdict. The verdict happened to be correct (docker logs later showed startup-complete=0, :8000 unbound, log dead-ended at Ray 'Creating a new placement group'), but it was reached on non-probative evidence - a wrong-instrument read that would equally have 'confirmed' a healthy box. Amended behavior: before citing ANY log as evidence of engine state, confirm the log source matches the execution substrate - systemd unit -> journalctl -u; Docker container -> docker logs <container>; bare process -> its redirect file. The registry's vllm_logs field names the correct source per host (Big Mac: 'sudo docker logs bigmac-vllm') and MUST be consulted first per the record-first ladder. An EMPTY log read is never evidence of anything unt
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-23 22:05 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: deepseek-spillage-glm-ring-restore-20260823
+- RCA bucket: insufficient probe
+- Trigger pattern: restart loop with proc alive + api down read as engine failure instead of init-in-progress
+- Reversal note: 2026-08-23 GLM ring restore: watchdog 'fail proc=1 api=0' log lines were read as 'engine repeatedly failing' when they actually meant 'engine loading weights (10-30 min) while watchdog tolerance was 15s' — the watchdog itself was killing every relaunch mid-init. Amended behavior: when a restart loop shows PROC alive + API down, classify as INIT-PHASE before diagnosing engine failure; read the container age (docker inspect StartedAt) and the last vllm log line (weight shard progress) before declaring the engine broken. A process at 96% CPU with no error lines is loading, not wedged.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

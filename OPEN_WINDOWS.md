@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/23/2026, 12:56:16 AM PT | window: last 72h | 28 tasks | index total 891 (parsed 3, cached 888)
+Generated: 8/23/2026, 2:16:19 AM PT | window: last 72h | 26 tasks | index total 891 (parsed 0, cached 891)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787420987189` | 8/23/2026, 12:55:13 AM | 409 | 1766KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
+| `1787420987189` | 8/23/2026, 1:08:24 AM | 429 | 1863KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787440605750` | 8/23/2026, 12:55:06 AM | 336 | 1951KB | Help me cure cancer |
 | `1787420772345` | 8/23/2026, 12:47:18 AM | 1782 | 5010KB | #Qwen 3.8 27B  |
 | `1787428970611` | 8/22/2026, 5:55:11 PM | 268 | 930KB | #VERITAS TRUTH SYRUM |
@@ -36,14 +36,12 @@ Generated: 8/23/2026, 12:56:16 AM PT | window: last 72h | 28 tasks | index total
 | `1787183842548` | 8/20/2026, 1:06:45 PM | 494 | 4519KB | Chat Widget does not appear to be responding to inquires. Can you check, test and resolve? |
 | `1787186219913` | 8/20/2026, 12:31:07 PM | 588 | 10280KB | #Argus Improvements from browser window.  |
 | `1787189673001` | 8/20/2026, 12:22:58 PM | 370 | 4933KB | Student is emailing repeatedly. Can you advise what's going on with his account and help r |
-| `1787200683126` | 8/20/2026, 1:35:17 AM | 166 | 447KB | #/emtskills slowness |
-| `1787168880963` | 8/20/2026, 1:34:15 AM | 1030 | 5531KB | #GLM / Frankenstein Routing  |
 
 ---
 
 ## Per-window detail
 
-### `1787420987189` — 8/23/2026, 12:55:13 AM PT — 409 turns
+### `1787420987189` — 8/23/2026, 1:08:24 AM PT — 429 turns
 
 **Original task:**
 
@@ -1336,87 +1334,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Dead-cron RCA + repair (cron_cfa_payment_auto_clear.php)
 - [x] Residue sweep (#27689) — 33 candidates for Vicky review
 - [x] Reconcile all ideas, validate completion, gate CLEAR, ship
-</task_progress>
-</attempt_completion>
-```
-
-### `1787200683126` — 8/20/2026, 1:35:17 AM PT — 166 turns
-
-**Original task:**
-
-```
-#/emtskills slowness
-
-Opened up a Cline window earlier on emtskills sloness. see document on desktop emtskills slowness and write to it as necessary. 
-
-this recurring issue 12x needs a durable solution still and it has not yet been found. We need to find and reaolve that.
-```
-
-**Ideas referenced:** #19370, #19522, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #24026, #25042, #2590 [deployed], #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691 [proposed], #6768
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787168880963` — 8/20/2026, 1:34:15 AM PT — 1030 turns
-
-**Original task:**
-
-```
-#GLM / Frankenstein Routing 
-
-I am working Julia/Claudia 235 in another window. We need to get GLM 5.2 up and running properly and serving in front of the 120Bs and 235Bs in frankenstein-llm. We need to fix the decode issue and whatever is choking out GLM. We need it running in cline 4 lanes and 4 batch / Argus lanes. I’m not sure why 3 is listed on ring concurrency. Something is off with settings. See also: 
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down per
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #11945, #12477, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #1602, #16163, #16265, #16304, #16449, #16527, #16844, #17203, #17205, #1724, #1754, #1755, #178713, #18312, #18326, #18471, #18820, #19686, #1986, #1993, #2050, #2073, #2083, #2116, #2138, #2157, #2159, #2168, #21684, #2174, #2185, #2210, #2258 [resolved], #2294, #2307 [resolved], #2312 [resolved], #2314, #23169, #23308, #2353, #24217, #25097, #25185, #2520 [resolved], #2524, #2525, #2526 [resolved], #2534, #2537, #2546 [resolved], #2547 [resolved], #2574 [resolved], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2587, #2588 [investigating], #2592 [deployed], #26209, #26284 [executing], #26349, #26400, #26403, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #26908, #26917, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27494 [executing], #27508 [executing], #27514 [blocked], #27515 [executing], #27518 [deployed], #27524 [proposed], #27531 [proposed], #27610 [executing], #27611 [executing], #27622 [executing], #27626 [executing], #27648 [proposed], #27687 [proposed], #27711 [proposed], #27722 [proposed], #57606, #6826
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787138864086 — xgrammar bug durably recorded (bug library row 2592 + tracker known-bug section); deferred to week of 2026-08-24 per Ruben.
-
-Where we left off (probes run 01:32-01:33 PT):
-- Bug library row 2592 recorded + verified on WOPR (problem_key glm_ring_xgrammar_fsm_request_termination_2026_08_20; check-before-fix gate will surface it)
-- GLM52_RING_STATE_TRACKER.md: known-bug section added at line 788 with symptom, zero-impact evidence, DO-NOT-HOTFIX note, full daytime fix path, cross-refs to the bug library row + ideas #27722 [proposed] / #27711 [proposed]
-- Ring untouched on the seq-128 ideal build (200, 0 preemptions, 0 waiting)
-
-Open threads to drive next:
-1. Idea #27722 [proposed] — execute the vLLM grammar-backend upgrade the week of 2026-08-24 (Ruben owns timing)
-2. Idea #27687 [proposed] — verify Julia :11513 restoration once the other window finishes
-3. GLM-5.3 local rollout — Ruben's call on timing (human-only decision, no idea)
-4. Idea #27610 [executing] — GLM ring + 235B recovery runbook rule (idle in executor)
-
-Reference IDs:
-- Bug library incident row 2592 (frankenstein_router_incidents): bug_library_record 01:32 PT returned 'Incident recorded + VERIFIED, Row existence confirmed on WOPR'
-- Idea #27722 [proposed]: create_idea 01:26 PT; reconcile_ideas 01:26 PT returned status=proposed dev_stage=idle
-- Idea #27711 [proposed]: reconcile_ideas 01:26 PT returned status=proposed dev_stage=idle
-- Idea #27687 [proposed]: reconcile_ideas 01:26 PT returned status=proposed dev_stage=idle
-- Idea #27648 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
-- Idea #27626 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=idle
-- Idea #27524 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
-- Idea #27531 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
-- Idea #27610 [executing]: reconcile_ideas 01:26 PT returned status=approved dev_stage=idle
-- Idea #27611 [deployed]: reconcile_ideas 01:26 PT returned status=deployed dev_stage=ready_for_review
-- Files touched: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (known-bug section at line 788), frankenstein_router_incidents row 2592 (new)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Bug library row 2592 recorded + verified
-- [x] Tracker known-bug section added (line 788, grep-verified)
-- [x] Validate ALL PASSED + GATE CLEAR
-- [x] Shipped
 </task_progress>
 </attempt_completion>
 ```

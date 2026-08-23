@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/22/2026, 6:21:20 PM PT | window: last 72h | 40 tasks | index total 891 (parsed 3, cached 888)
+Generated: 8/22/2026, 8:06:32 PM PT | window: last 72h | 35 tasks | index total 891 (parsed 2, cached 889)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787440605750` | 8/22/2026, 6:21:12 PM | 143 | 918KB | Help me cure cancer |
-| `1787420772345` | 8/22/2026, 6:20:58 PM | 1454 | 4117KB | #Qwen 3.8 27B  |
+| `1787440605750` | 8/22/2026, 7:15:16 PM | 205 | 1290KB | Help me cure cancer |
+| `1787420772345` | 8/22/2026, 7:15:09 PM | 1665 | 4702KB | #Qwen 3.8 27B  |
 | `1787428970611` | 8/22/2026, 5:55:11 PM | 268 | 930KB | #VERITAS TRUTH SYRUM |
 | `1787440904551` | 8/22/2026, 5:29:32 PM | 138 | 1899KB | frankenstein-llm seems to be stalling |
 | `1787430120479` | 8/22/2026, 4:19:46 PM | 186 | 2242KB | frankenstein llm may be going rogue. can you check? seems to be drifting tasks |
@@ -45,17 +45,12 @@ Generated: 8/22/2026, 6:21:20 PM PT | window: last 72h | 40 tasks | index total 
 | `1787203716956` | 8/19/2026, 10:28:37 PM | 1 | 12KB | #Joshua Fallover Test |
 | `1787195257179` | 8/19/2026, 8:47:51 PM | 132 | 442KB | Getting reports of moodle being down (but I can access / but is slow) and emtskills is slo |
 | `1787195519861` | 8/19/2026, 8:29:55 PM | 56 | 1711KB | My bot, ruben imessage ops still responds in chats (sms threads). Is it actually even doin |
-| `1787178812057` | 8/19/2026, 7:55:42 PM | 334 | 4391KB | Can you review the entire reversal log related to rule 317 for commonalities and systemic  |
-| `1787168962221` | 8/19/2026, 7:35:11 PM | 216 | 746KB | #AZDHS |
-| `1787175621111` | 8/19/2026, 6:52:18 PM | 359 | 9218KB | #Argus Student Issue |
-| `1787169118771` | 8/19/2026, 6:40:30 PM | 312 | 4764KB | #Organize Compliance Gold Standard Response/Dissection, etc... |
-| `1787168918854` | 8/19/2026, 6:26:29 PM | 538 | 2724KB | #TDSHS |
 
 ---
 
 ## Per-window detail
 
-### `1787440605750` — 8/22/2026, 6:21:12 PM PT — 143 turns
+### `1787440605750` — 8/22/2026, 7:15:16 PM PT — 205 turns
 
 **Original task:**
 
@@ -68,35 +63,35 @@ Help me cure cancer
 **Last PICKUP PROMPT:**
 
 ```
-cancer-stack-builder.php`.
+Admin/ExecAdmin/ITAdmin only).
 
-═══════════════════════════════════════════════════
+═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — cancer research hub + stack builder (role-gated, deployed, verified live).
+═══════════════════════════════════════════════
+Pick up task — cancer research hub + stack builder (role-gated, deployed, verified).
 
-Where we left off (verified 2026-08-22 17:09 PT):
-- https://emsuniversity.com/emtskills/cancer-research-hub.php — 9-section searchable hub, requires portal login, role gate MasterAdmin/ExecAdmin/ITAdmin (401 unauthenticated).
-- https://emsuniversity.com/emtskills/cancer-stack-builder.php — interactive 5-outcome percentage calculator (prevent/stop/slow/cure/walk-back), same gate.
-- Card link injected into /var/www/emtskills/admin_profile.php (grep count=1, php -l clean) — gold "Research Library" card with both buttons.
-- Only admins (role gate) can see the card and open the pages.
+Where we left off (verified 2026-08-22 17:37 PT):
+- /var/www/emtskills/cancer-research-hub.php — 11 searchable cards, 22,007-byte render, includes new FeLV Animal-Model Cross-Read + Cure Economics cards; lint clean.
+- /var/www/emtskills/cancer-stack-builder.php — 14,597 bytes, full JS with 7 synergy combos (non-linear engine); lint clean, render tail complete.
+- Both behind requireRole MasterAdmin/ExecAdmin/ITAdmin; public returns 401 = gate active.
+- Admin dashboard card link injected into admin_profile.php (grep count 1, lint clean).
+- Local scratch files on Desktop: stack_part1.php, stack_part2.php, hub_inject.php, render_stack_test.php, render_hub_test.php, inject_card.php, cancer-research-brief.md, supplements-and-cancer-brief.md.
 
 Open threads to drive next:
-1. (Optional, non-blocking — no real idea file needed since this is enhancement of delivered work) — Capture GLM-5.2 ring output and append its contribution to the hub's "cure effort" section. Command from Mac: `ssh wopr 'curl -s --max-time 400 http://127.0.0.1:8210/v1/chat/completions -H "Content-Type: application/json" -d "{\"model\":\"glm-5.2-15pct\",\"messages\":[{\"role\":\"user\",\"content\":\"Write a 200-word technical paragraph on the most promising paths to curing cancer and the key honest caveat.\"}],\"temperature\":0.3,\"max_tokens\":350}" | jq -r ".choices[0].message.content"'`. Ring is verified live (model `glm-5.2-15pct` on :8210) but decode is slow.
-2. (Optional) — Fine-tune the Stack Builder's outcome weights with Ruben's editorial feedback on specific interventions.
+1. None — all requested work completed this session (stack fix + non-linear synergy engine + FeLV + cure-economics, all deployed and verified rendering).
 
 Reference IDs:
-- Ticket: none (direct Ruben-requested build)
-- Ideas filed: none this session (no idea-filing MCP; no buildable work deferred)
-- Files touched: /var/www/emtskills/cancer-research-hub.php, /var/www/emtskills/cancer-stack-builder.php, /var/www/emtskills/admin_profile.php, /Users/rubenmajor/Desktop/cancer-research-brief.md, /Users/rubenmajor/Desktop/supplements-and-cancer-brief.md
+- Ticket: none (direct Ruben build)
+- Ideas filed: none (no buildable work deferred; everything shipped this session)
+- Files touched: /var/www/emtskills/cancer-research-hub.php, /var/www/emtskills/cancer-stack-builder.php, /var/www/emtskills/admin_profile.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
+═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1787420772345` — 8/22/2026, 6:20:58 PM PT — 1454 turns
+### `1787420772345` — 8/22/2026, 7:15:09 PM PT — 1665 turns
 
 **Original task:**
 
@@ -108,16 +103,13 @@ Retrire anything else bewides qwen 3.8 27b, check for stale containers there and
 Fix Joshuas problems. Joshua does not need the 70B anymore if it's using Qwen 3.8. I need the same for Joshua as I
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #178742, #1798, #1828, #18312, #18326, #1876, #19338, #19567, #19653, #19686, #19903, #1998, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #2603, #26400, #26403, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #27972, #7142, #7149
+**Ideas referenced:** #10108, #10281, #10740, #1130, #1131, #11741, #11781, #11936, #11953, #12046, #12059, #12335, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12680, #12689, #12824, #12872, #12878, #13108, #13121, #13202, #13490, #13831, #13874, #15144, #15823, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16523, #16717, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #17307, #1744, #1779, #178732, #178742, #1798, #1828, #18312, #18326, #1876, #19338, #19567, #19653, #19686, #19903, #1998, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2152, #2168, #22583, #2299, #25097, #25112, #25185, #2537, #25378, #25381, #2546, #25764, #25847, #2603, #26400, #26403, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #27858 [deployed], #27869 [proposed], #27882 [deployed], #27933 [proposed], #27935 [proposed], #27972, #30877, #36309, #36652, #38927, #39273, #39474, #39815, #39816, #40696, #40738, #40880, #41663, #42317, #42406, #42545, #43565, #45238, #45540, #46384, #46994, #47026, #47650, #48946, #48953, #50021, #50729, #50837, #50850, #51113, #51305, #51655, #52069, #52386, #52735, #52761, #52942, #53077, #53211, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
 question",
-  "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787420772345 — Babysit Joshua Qwen3.8-27B BF16 to SERVING, end to end.\n\nWhere we left off (verified 2026-08-22 16:43 AKDT):\n- DONE ALREADY: (a) LiteLLM config on WOPR /etc/litellm/config.yaml ALREADY PATCHED with joshua-qwen38-27b entry (api_base http://10.100.0.4:8001/v1, max_parallel 4, fallbacks chain) + YAML validated + litellm-safe-restart DONE, router healthy (health=401 auth-required = up). (b) Joshua BF16 container weights loaded, all blockers cleared. (c) HANDOFF_NOTES has 2 entries covering the full story.\n- CURRENT STATE: Joshua container joshua-qwen38 still in XPU torch.compile — CPU 208%, compile started 16:05 AKDT, now 40min in. This is LONGER than the expected 15-30min. Two options: (1) keep waiting (CPU active = working); (2) at ~17:00 AKDT if still 000, relaunch with --enforce-eager (append to docker run in /tmp/joshua_bf16_run.sh on Joshua, then bash it).\n- CHECK LOOP (every ~60s): ssh wopr -> ssh -i /home/emsuserver/.ssh/id_ed25519 emsusrvr2@10.100.0.4 'curl -s -m 4 -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8001/v1/models'. 200 = SERVING.\n- ON 200: (1) generation test: POST /v1/chat/completions model qwen3.8-27b 'Say OK' max_tokens 10 (direct to Joshua :8001); (2) bench: 200-token story prompt, time it, report tok/s; (3) verify through router: the joshua-qwen38-27b handle is ALREADY in config, just needs the engine up — probe via router with proper auth (or direct to 10.100.0.4:8001 from WOPR); (4) stamp idea #27933 [executing] -> deployed with evidence via UPDATE orchestrator_ideas SET status='deployed' WHERE id=27933; (5) optionally add registry lane entry in /etc/litellm/frankenstein_registry.yaml mirroring nero/claudia.\n- ALSO STILL TO DO: answer Ruben's question from completion feedback: 'What is quality degradation on this or will it be fine if distilled?' (re: Mac mini 16GB needing Qwen3.8-4B-distilled ~3GB instead of 27B-4bit ~17GB). ANSWER TO COMPOSE: a 4B distill is a DIFFERENT model trained on teacher outputs, not a quantized 27B — simple tasks (classification, extraction, routing) fine; complex multi-step reasoning/code noticeably degrades vs the 27B teacher; not recommended for student-facing work. Alternatives: keep minis as compute workers (current), or MLX 3-bit 27B (~10-12GB, fits, but 3-bit quants show measurable degradation on edge-case coding). Recommendation: keep minis as compute workers.\n- KEY FACTS: FP8 on XPU impossible with Intel image (missing fp8 block kernel for GatedDeltaNet). BF16 is path. Image intel/llm-scaler-vllm:0.21.0-b1-xpufp8. Run script /tmp/joshua_bf16_run.sh. Claudia :11521 serving 6.4 tok/s. Nero :11525 models-up generation-hanging (tunnel).\n\nOpen threads to drive next:\n1. #27933 [executing] — babysit to models:200, generation test, bench, stamp deployed\n2. #27869 [proposed] — Cicero/Maximus on-box hands\n3. (human-only decision — no idea) — Julia power-cycle; Nero tunnel generation-hang\n\nReference IDs:\n- Ideas filed: #27933 [executing], #27869 [proposed]\n- Files: /etc/litellm/config.yaml (PATCHED, joshua lane added), /tmp/joshua_bf16_run.sh (Joshua), /etc/litellm/frankenstein_registry.yaml (to add lane)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════",
-  "tool_rounds": [
-    "read full LiteLLM config, found nero/claudia entry shapes",
-    "patched config.yaml: joshua
+  "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787420772345 — Joshua W4A16 GDN fix, babysit to serving end to end.\n\nWhere we left off (verified 2026-08-22 17:58 AKDT):\n- JOSHUA IS AT models:200 with W4A16 int4 (Vishva007/Qwen3.8-27B-W4A16-AutoRound-GPTQ, 15GB, /data/models/Qwen3.8-27B-W4A16) on image intel/llm-scaler-vllm:0.21.0-b1-xpufp8, container joshua-qwen38, TP=2 eager, fp8 KV, 9.89GiB KV cache, 131K ctx. Launch: bash /tmp/jw.sh on Joshua (10.100.0.4 via WOPR ssh -i /home/emsuserver/.ssh/id_ed25519 emsusrvr2@10.100.0.4). Chat template injected into tokenizer_config.json (from BF16 repo). Startup is FAST (~90s total).\n- CURRENT BUG (first generation crashes): EngineCore dies in gdn_linear_attn.py line 1298 `_gdn_outproj_esimd_eligible`: `w = self.out_proj.weight` -> the W4A16 AutoRound quant wraps out_proj so .weight attr fails (quantized param has no .weight). Fix path: patch the image's /opt/venv/lib/python3.12/site-packages/vllm/model_executor/layers/mamba/gdn_linear_attn.py — make _gdn_outproj_esimd_eligible return False early when the layer is quantized (hasattr(self.out_proj, 'weight') check or try/except AttributeError -> return False). Docker patch pattern (proven this session): cat > /tmp/patch.sh with sed/python edit inside a docker run --entrypoint bash pb-patch container, docker commit, relaunch via /tmp/jw.sh.\n- AFTER FIX: (1) generation test 'Say OK'; (2) 200-token bench (time it, report tok/s); (3) verify LiteLLM lane joshua-qwen38-27b (ALREADY in /etc/litellm/config.yaml on WOPR, api_base http://10.100.0.4:8001/v1, model openai/qwen3.8-27b) — router already restarted; probe direct from WOPR curl http://10.100.0.4:8001/v1/models; (4) stamp idea #27933 [executing]->deployed via mysql UPDATE orchestrator_ideas SET status='deployed' WHERE id=27933; (5) bug_library_record the full saga (FP8 block kernel missing on XPU, BF16 KV OOM at 0.90 util on 2x32GB, torch.compile 70min+ pathological, W4A16 GDN out_proj crash + fix, chat template missing); (6) HANDOFF_NOTES entry.\n- KEY FACTS: BF16 (52GB) does NOT fit 2x32GB with KV (worked to weight-load but KV OOM; also torch.compile takes 70+min/graph — pathological). W4A16 int4 is the community-proven build (GitHub #52735, single B70 32GB, 179K ctx). oneCCL mitigations applied: CCL_ZE_IPC_EXCHANGE=sockets, CCL_TOPO_FABRIC_VERTEX_CONNECTION_CHECK=0. enforce-eager REQUIRED (#53211: AutoRound + graph capture = garbage output).\n- STALE CLEANUP DONE: dead 70B container, intel/vllm:0.17.0-xpu image (30GB), llama3.3-70b-awq (38GB), Qwen3.8-27B-FP8 (29GB) all removed. BF16 (52GB) kept as fallback. Disk /data at 43%.\n- REMAINING ANSWER for Ruben (from earlier feedback): 4B-distilled quality Q — a 4B distill is a DIFFERENT model trained on teacher outputs, not a quantized 27B: simple tasks fine, complex multi-step reasoning/code noticeably degrades; for Mac mini 16GB keep as compute workers; MLX 3-bit 27B (~10-12GB) fits but has own degradation. Recommendation: keep minis as compute workers.\n- Claudia :11521 serving 6.4 tok/s single. Nero :11525 models-up, generation hangs (tunnel).\n\nOpen threads to drive next:\n1. #27933 [executing] — patch GDN, verify serving+bench, stamp deployed\n2. #27869 [proposed] — Cicero/Maximus on-box hands\n3. (human-only decision — no idea) — Julia power-cycle; Nero tunnel\n\nReference IDs:\n- Ideas: #27933 [executing], #27869 [proposed]\n- Files: /tmp/jw.sh (Joshua launch), /data/mo
 ```
 
 ### `1787428970611` — 8/22/2026, 5:55:11 PM PT — 268 turns
@@ -1775,249 +1767,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Record in HANDOFF_NOTES to prevent re-enablement
 </task_progress>
 </attempt_completion>
-```
-
-### `1787178812057` — 8/19/2026, 7:55:42 PM PT — 334 turns
-
-**Original task:**
-
-```
-Can you review the entire reversal log related to rule 317 for commonalities and systemic issues needing updates and resolutions and make those adjustments for improvement of the entire system - basically, I'm trying to get this knowledge to work better, smarter and faster on the small as well as the bigger models and the reversal log would have all that info.
-```
-
-**Ideas referenced:** #0000, #13840, #14205, #15268, #16224, #16673, #16849, #17130 [superseded], #17166, #17537, #17619 [deployed], #178718, #18132 [deployed], #18806, #19125, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #2277, #23528, #24241, #24995, #25066, #25150, #25151, #25154, #25155, #25185, #25188, #2523, #2525, #25888, #25906, #25925, #25926, #25935, #26238, #26349, #26435, #26591, #26593, #26617, #26696, #26759, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27524, #27613, #27634 [proposed], #27635 [proposed], #27640 [executing], #27641 [proposed], #27652 [proposed], #5344, #5346, #5348, #8151
-
-**Last PICKUP PROMPT:**
-
-```
-ise | causal rule updated: 317
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787187212000 — rule-317 reversal-log systemic audit + SCOPE_ERROR gate.
-
-Where we left off (verified 2026-08-19 19:54 PT):
-- Audited all 4 distilled failure modes from the 280-row reversal log
-- R317_SCOPE_ERROR gate built, deployed, and verified live (positive + negative controls)
-- INSUFFICIENT_PROBE determined not gateable (probe behavior, not text)
-- Rule 317 golden-rule table updated + mechanically amended (rule_amend proof recorded), MCP rebuilt + restarted + reindexed
-
-Open threads to drive next:
-1. #27634 [deployed] — amend_rule dedup + distilled-table maintenance (complete; verify no further dedup needed)
-2. #27635 [deployed] — auto-ingest amendments into ai_learned_corrections + emsu://reference for small-model retrieval (complete; verify ingestion is running)
-
-Reference IDs:
-- Ideas filed: none this session (gate built in-window per rule 267 GATE A0)
-- Ideas referenced: #27634 [deployed], #27635 [deployed]
-- Files touched: ~/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, ~/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Audit validator: which of the 4 failure modes have structural gates vs prose-only
-- [x] Build missing SCOPE_ERROR gate (R317_SCOPE_ERROR)
-- [x] Add R317_SCOPE_ERROR to corpus feed
-- [x] INSUFFICIENT_PROBE: determined NOT gateable (probe behavior, not text)
-- [x] Rebuild MCP — build OK
-- [x] Debug R317_SCOPE_ERROR positive control — live MCP uses old build
-- [x] Restart clinerules MCP service to load new build
-- [x] Verify R317_SCOPE_ERROR fires on positive control — PASSED
-- [x] Verify negative control (bracketed threads don't false-fire) — PASSED
-- [x] Update rule 317 golden-rule table
-- [x] Reindex MCP
-- [x] Mechanically amend rule 317 (rule_amend proof recorded)
-- [x] Re-validate completion — ALL PASSED
-- [x] Check gate file — GATE CLEAR
-- [x] Ship completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1787168962221` — 8/19/2026, 7:35:11 PM PT — 216 turns
-
-**Original task:**
-
-```
-#AZDHS
-
-Still need the DRAFT PDF opened on my desktop
-AZDHS EMS-26-0495 (Richella Trujillo) handled: unified PDF response built and the matter scheduled properly. Both parts of your ask done.
-
-WHAT THE 8/3 EMAIL IS: Investigator Bevins identified Richella Trujillo as the complainant on EMS-26-0495 (Complaint 914) (verified: mysql fetch_data on admin_portal.compliance_investigation_responses returned rows 149 and 165 documenting the 8/3 Bevins identification email; the literal email itself was not retrievable, so this is sourced from those prior-window DB notes). She is the parent/third-party p
-```
-
-**Ideas referenced:** #1758, #17580, #178712, #25226, #26211, #27100, #27493 [proposed], #450438, #9086
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787175621111` — 8/19/2026, 6:52:18 PM PT — 359 turns
-
-**Original task:**
-
-```
-#Argus Student Issue
-
-See terminal 2408 and fix argus. Argus needs to be able to take action. It should not be telling me which tool to use and then not doing anything. It's really lazy. This is not helpful:
-
-https://emsuniversity.com/emtskills/routes/argus_download.php?tab=browser 
-
-Fix also the student issue there and make appropriate notifications if required.
-```
-
-**Ideas referenced:** #047857, #1565, #178716, #178718, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19338, #19348, #19458, #19491, #2006, #20346, #20547, #21125, #21126, #21262, #2196, #22511, #22583, #23039, #23489, #23852, #23952, #2408 [rejected], #24897, #24900, #25047, #25058, #25185, #2524, #2525, #25269, #25313, #25573, #25642, #26067, #26325, #27243, #27244, #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27631 [proposed], #27634 [executing], #27635 [executing], #27647 [proposed], #30363, #334155, #4338, #495057, #64748, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-ire pattern still unconfirmed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27647 [executing], cron to suspend residue enrolments of archived students. Ruben APPROVED it with a safety mandate: cross-check SLS, ensure no exam enforcement or failed exams involved.
-
-Where we left off (as of 2026-08-19 18:34 PT):
-- Rounds 1 and 2 finished earlier this session: Seth Townley (26424T-05) enrollment repaired, Argus act-don't-recommend steering in production via #27631 [deployed].
-- #27647 [executing] approved in orchestrator (idea_action ok:true, new_status=approved) and efficiency_priority=1 set (rule 267 GATE D).
-- Residue population rebuilt: 196 user_enrolments rows / 146 users. Query: e.courseid NOT IN (41,42,46,23,37) AND ue.status=0 AND ue.timecreated < NOW()-30d AND no role_assignments row in that course context (contextlevel=50).
-- Students signals for the 146: 112 no Students row, 21 archived-email (Archived-%), 9 dropped, 11 failed, 8 not_current, 26 active-risk.
-- Safety cross-checks finished: Moodle local_ai_violations / local_exam_policy_track / local_initial_exam_failures = zero hits. Portal: exam_override_requests=26 users, grievances=1 (26915W-18), proctoring_deadlines=1 (26313FT-06), proctoring_bookings=0.
-- 26-user EXCLUSION LIST (any exam involvement, never suspend): 26118A-04, 26200W-08, 26215W-10, 26217FT-04, 26218A-08, 26313FT-06, 26414T-48, 26415W-06, 26417FT-18, 26424T-05 (Seth), 26513FT-17, 26517FT-13, 26614T-25, 26617FT-11, 26617FT-44, 26713FT-03, 26713FT-19, 26717FT-04, 26815W-47, 26817FT-49, 26823BC-02, 26913FT-16, 26915W-18, 26915W-19, 26916BC-04, 26918A-09.
-- SLS spot-check 26915W-18 (Lindsey Barnes): derived_status=active, cert issued 2026-08-10, correctly excluded by both the override gate and the SLS active gate. Double protection confirmed.
-- SLS API: (new StudentLifecycleState())->lookup(string $needle, ?int $moodleUid=null) returns ['student']['derived_status'], ['gates']['exam_enforcement']['status'], ['gates']['students_row']['status']. File: /var/www/emtskills/lib/StudentLifecycleState.php (constructor line 83, lookup line 176).
-- DB config: /var/www/emtskills/config/config.local.php (moodle_c_live dbname at line 337). Cron bootstrap pattern not yet confirmed: grep another cron (e.g. cron_clearance_queue.php) for its require/bootstrap before writing.
-
-Open threads to drive next:
-1. #27647 [executing], build /var/www/emtskills/cron/cron_suspend_archived_residue_enrolments.php: (a) residue query above; (b) per-user safety gates in order, any hit = EXCLUDE: exam_override_requests(slug), grievances(students.id), proctoring_deadlines+bookings(slug), moodle exam tables by uid, SLS lookup('', uid): EXCLUDE if derived_status active-ish OR gates.exam_enforcement.status != PASS OR gates.students_row.status == PASS; SLS error/exception = EXCLUDE (fail-safe); (c) suspendable tiers: no-Students-row, Archived-% email, dropped, failed, not_current, only after passing all gates; (d) suspend = UPDATE moodle_c_live.user_enrolments SET status=1; (e) modes --dry-run (default) / --apply; (f) log every decision to /var/log/emsu-cleanup-archived-enrolments.log; use write_server_file MCP (auto php -l + backup).
-2. #27647 [executing], run: php -l, then --dry-run, check about 120 users suspendable, 26 excluded by name, Seth (26424T-05) and Lindsey (26915W-18) untouched; then --apply; check residue count drops and excluded users' rows unchanged (re-run residue query + spot-check uid 50701 Lindsey s
-```
-
-### `1787169118771` — 8/19/2026, 6:40:30 PM PT — 312 turns
-
-**Original task:**
-
-```
-#Organize Compliance Gold Standard Response/Dissection, etc...
-
-Please analyze all the responses sent to regulators around here: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-and organize the Gold Standard Response properly based on the recenlty sent ones. The gold standard response is customized according to the state location, rules, regulations, issues, etc... but style, tone, strategy are relatviely similar. The Gold Standard is somewhat disjoined now and needs better organization.
-```
-
-**Ideas referenced:** #0369, #047857, #0891, #10304, #111827, #1368, #1370, #15803, #166534, #16957, #178712, #178716, #19338, #19458, #19491, #21038 [executing], #25185, #2524, #2525, #2563, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27069 [deployed], #27100, #27232 [rejected], #27236 [deployed], #27494, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27613 [rejected], #27614 [approved], #27625 [executing], #27630 [deployed], #27643 [proposed], #27644 [proposed], #334155, #450438, #475569, #600179, #6366, #64748, #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- Ruben voice (rule 01, no em dashes), then attempt_completion with full rule-91 PICKUP PROMPT block (validate_completion + check_gate first). Every recommendation mentioned MUST be filed as an idea in the same turn (REQUIREMENT_IDEA_AUTO_FILE).
-
-Open threads to drive next:
-None, all deployed work verified; the pending action is the 3 idea filings + reply described in Where we left off (idea IDs not yet minted, one timed out mid-flight).
-
-Reference IDs:
-- Ideas filed: none confirmed yet (validator idea timed out, reconcile first)
-- Files touched: templates/regulator_noi/GOLD_STANDARD_RESPONSE_LIBRARY.md (new), personnel/regulator_library_view.php (new), personnel/institutional_compliance.php (panel + buttons; backup institutional_compliance.php.bak-20260819-buttons)
-- Key sources: templates/regulator_noi/POSTURE_RULE.md, REGULATOR_NOI_RESPONSE_TEMPLATE.md, AZ_NOI_2026-04-13_EXEMPLAR.pdf, sent TDSHS responses, rules 302 + 304 (regulator-response discipline)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-
-## Key references
-- Files: /var/www/emtskills/templates/regulator_noi/GOLD_STANDARD_RESPONSE_LIBRARY.md, /var/www/emtskills/personnel/regulator_library_view.php, /var/www/emtskills/personnel/institutional_compliance.php, /var/www/emtskills/personnel/institutional_compliance.php.bak-20260819-buttons, /var/www/emtskills/templates/regulator_noi/POSTURE_RULE.md, /var/www/emtskills/templates/regulator_noi/REGULATOR_NOI_RESPONSE_TEMPLATE.md
-- IDs: task 1787168789833
-
-## Session memory (what's already been done this window)
-- T#01 read_handoff_notes + rules 302/304 lookup -> compliance response discipline context loaded
-- T#02 ssh_command probes -> institutional_compliance.php is 211KB at /var/www/emtskills/personnel/, goldStandard panel buttons linked raw .md files
-- T#03 read_server_file institutional_compliance.php (panel section) -> 3 buttons link GOLD_STANDARD_RESPONSE_LIBRARY.md, REGULATOR_NOI_RESPONSE_TEMPLATE.md, POSTURE_RULE.md + AZ PDF; nginx 403s raw .md in docroot
-- T#04 read_server_file POSTURE_RULE.md + REGULATOR_NOI_RESPONSE_TEMPLATE.md + AZ supplemental + sent AZ/TDSHS responses -> source material for reorganization
-- T#05 write_server_file GOLD_STANDARD_RESPONSE_LIBRARY.md -> 24.6KB v1.0 library, 9 sections, verified via read-back
-- T#06 write_server_file regulator_library_view.php -> auth-gated viewer (whitelist doc param, markdown+table renderer); lint OK, FPM reloaded
-- T#07 curl -sI viewer unauthenticated -> HTTP 401 (auth gate alive, not 500)
-- T#08 FIRST COMPRESSION fired (rule 119) -> shipped SESSION MEMORY blob + PICKUP PROMPT, Ruben replied 'continue'
-- T#09 ssh_command sudo -l -> emsuserver has (ALL) NOPASSWD: ALL (minus a few systemctl exclusions)
-- T#10 ssh_command sudo sed chain -> backup institutional_compliance.php.bak-20260819-buttons, repointed 3 hrefs to regulator_library_view.php?doc=library|template|posture, php -l clean, LIVE_VIEWER_LINKS=3, ownership emsumain:psaserv preserved
-- T#11 ssh_command sed -n 1434,1437p read-back -> all 3 new hrefs confirmed, AZ PDF button untouched
-- T#12 rm stale /tmp/cline_compress_signal_TASK1787168789833.json
-- T#13 update_handoff_notes -> entry recorded (returned 'HANDOFF_NOTES.md updated successfully')
-- T#14 execute_command ledger append -> cline_task_ledger.md row for task 1787168789833 added
-- T#15 clinerules_validate_completion -> 2 R323_FAKE_EVIDENCE failures (semicolon-split markers), fixed with quoted-output markers, then ALL PASSED
-- T#16 clinerules_check_gate -> GATE CLEAR
-- T#17 attempt_completion -> shipped; Ruben feedba
-```
-
-### `1787168918854` — 8/19/2026, 6:26:29 PM PT — 538 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-TDSHS unified PDF delivered. The two matters due tomorrow (1080261810 and 1080261811, both due 2026-08-19) are consolidated into a single PDF, now open on your Desktop.
-
-Deliverable:
-- Desktop: /Users/rubenmajor/Desktop/Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf (70,993 bytes, verified via ls)
-- Server canonical: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf (verified: Aug 19 00:38, 70,993 bytes)
-- Google Drive sendable copy: file id 18sI3y8y7Q10Cqzl93x37tlYI89m3000_
-
-What the consolidated re
-```
-
-**Ideas referenced:** #118003, #118050, #118088, #118126, #118169, #118214, #118251, #118296, #118337, #118374, #13202, #166534, #167370, #1741 [rejected], #178712, #19581, #2312, #249506, #25185, #27073, #27100, #27302 [executing], #27627 [executing], #27628 [rejected], #27645 [proposed], #32539, #4929, #59966, #600179, #6366, #89632, #9753, #97642, #97754
-
-**Last PICKUP PROMPT:**
-
-```
-ion | causal rule updated: 315
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787123639000 — TDSHS responses due tomorrow, unified PDF delivery.
-
-Where we left off (verified 2026-08-19 14:40 PT):
-- Consolidated PDF for matters 1080261810 + 1080261811 (both due 2026-08-19) regenerated and delivered to Desktop, server, and Google Drive
-- All three copies are byte-identical (MD5: 9f528f1fe3bb5d0400b3d11e96284e16, 71,764 bytes)
-- Server canonical: /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf
-- Google Drive: file id 1XdznsO4OYFsEhl0a08n3AajP_IzAqURU (old stale file 1IwAPEXqYfXB-VGyVqpvB187uF_HbYeUo trashed)
-- Response follows rules 302/304: threshold objection, per-matter answers only, no volunteered defenses, public-interest opening
-
-Open threads to drive next:
-1. (human-only decision — no idea) — Ruben to review the PDF wording before sending to TDSHS tomorrow; regulator correspondence is Ruben-only per rule 29 routing
-2. (human-only decision — no idea) — Send the consolidated response to TDSHS by end of day 2026-08-19 (deadline for both matters)
-
-Reference IDs:
-- Ideas filed: none (delivery task, no new recommendations)
-- Files touched: /Users/rubenmajor/Desktop/Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf (local copy), /var/www/emtskills/uploads/tdshs/inspection-5196-2026/Consolidated_Response_1080261810_1080261811_TDSHS_2026-08-19.pdf (server canonical)
-- Matters: TDSHS complaint controls 1080261810, 1080261811
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Verify Desktop PDF exists (70,993 bytes, Aug 19 01:33:22)
-- [x] Verify server canonical PDF (70,993 bytes, Aug 19 00:38:46)
-- [x] Verify Drive upload file id resolves (1IwAPEXqYfXB-VGyVqpvB187uF_HbYeUo)
-- [x] Verify Desktop and server PDFs are byte-identical (MD5 match)
-- [x] Found: attachments folder updated at 13:34 (1:34 PM today) - AFTER PDF generation
-- [x] Checked generation specs - they're for different control numbers
-- [x] Read HTML source - response is complete with threshold objection, per-matter answers, FERPA, reservation of rights
-- [x] Tried regenerating PDF with wkhtmltopdf - failed due to image loading issue
-- [x] Found various PDF generation scripts but none specific to TDSHS consolidated response
-- [x] Found script that mentions control numbers: _view_tdshs_draft_responses_card.php
-- [x] Read the script - it's a web page for drafting responses, not for generating the consolidated PDF
-- [x] Found DOMPDF and TCPDF libraries available
-- [x] Tried generating PDF using DOMPDF - got permission denied error and PDF was only 10,928 bytes (too small)
-- [x] Ruben confirmed: PDF is stale (created at 01:33, but changes made after that)
-- [x] Read HTML source - found image paths: /var/www/emtskills/emsulogo5.png and /var/www/emtskills/uploads/compliance/regulator_correspondence/ruben_major_signature_canonical.jpg
-- [x] Regenerated PDF using wkhtmltopdf with --enable-local-file-access flag (71,764 bytes)
-- [x] Copied regenerated PDF to server canonical location (71,764 bytes, MD5: 9f528f1fe3bb5d0400b3d11e96284e16)
-- [x] Copied regenerated PDF to Desktop (71,764 bytes, MD5: 9f528f1fe3bb5d0400b3d11e96284e16)
-- [x] Uploaded regenerated PDF to Google Drive (file id: 1XdznsO4OYFsEhl0a08n3AajP_IzAqURU)
-- [x] Trashed old stale file from Google Drive
-- [x] Verif
 ```

@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/23/2026, 12:47:15 PM PT | window: last 72h | 26 tasks | index total 893 (parsed 0, cached 893)
+Generated: 8/23/2026, 12:54:26 PM PT | window: last 72h | 26 tasks | index total 893 (parsed 0, cached 893)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-24T19:27:12.893Z",
+ "generated_at": "2026-08-24T20:27:13.006Z",
  "counts": {
-  "parsed": 1,
-  "reused": 902,
+  "parsed": 6,
+  "reused": 901,
   "failed": 0,
-  "total": 903
+  "total": 907
  },
  "tasks": {
   "1784522296714": {
@@ -140827,15 +140827,19 @@
   },
   "1787593935930": {
    "task_id": "1787593935930",
-   "mtime": 1787594986369,
+   "mtime": 1787602702859,
    "created_at": "2026-08-24T17:52:15.930Z",
-   "last_modified": "2026-08-24T18:09:46.369Z",
-   "size_kb": 2318,
-   "turn_count": 56,
+   "last_modified": "2026-08-24T20:18:22.859Z",
+   "size_kb": 2892,
+   "turn_count": 73,
    "title": "This person needs to stop receiving invoices for 13K ->",
    "pickup_prompt": " Log\nNo reversals this window.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787593920000 — stop false $12,860 collection emails to 26814T-15 (cron join coercion fix).\n\nWhere we left off (verified 2026-08-24 10:06 AKDT):\n- Cron fix for the false $12,860 emails is live and dry-run checked; record at #28089 [deployed].\n- #28090 [proposed] — open data question awaiting human review: mirror ties invoice 164951 (Alex's payment-plan invoice, $300 paid / $1,545 open) to Keyes db id 8137519; Alex 8143468 has zero mirror rows. No re-tie performed.\n- Alex suspension 27692 (moodle_suspended=1) left active; CS follow-up on withdraw vs transfer sent 8/24 9:47 AM.\n\nOpen threads to drive next:\n1. #28090 [proposed] — Vicky to check live QB customer for invoice 164951, then re-tie mirror student_db_id to 8143468 if confirmed (human decision, not autonomous).\n2. #28089 [deployed] — optional one-time audit of collection_reminder_log for other suspended students who received section-sum balances (cron live since 2026-04-14).\n\nReference IDs:\n- Ideas filed: #28089 [deployed], #28090 [proposed]\n- Ideas closed: none\n- Files touched: /var/www/emtskills/cron/cron_post_due_reminders.php, /tmp/patch_post_due.py\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Rule 119 pre-turn signal check (compress signal file)\n- [x] Look up student alex.vipersmith@gmail.com (check_student)\n- [x] Verify payment state across Authnet/QB/Affirm (rule 33 aggregator)\n- [x] Identify sender: cron_post_due_reminders.php; root cause = int/varchar join coercion ('26814T-15'→26814) summing whole-section balances ($12,860 = Keyes+Ochoa open invoices)\n- [x] Patch cron join to student_db_id = s.id (2 blocks + escalation subquery)\n- [x] php -l + read-back verify (rule 99)\n- [x] Dry-run cron, confirm Alex excluded\n- [x] File ideas #28089 (deployed) + #28090 (proposed), reconciled\n- [x] Handoff note written\n- [x] Completion passes rule-91 gates + attempt_completion\n</task_progress>\n</attempt_completion>",
    "ideas": {
+    "2036": null,
+    "9086": null,
+    "9168": null,
     "16613": null,
+    "19492": null,
     "25185": null,
     "28043": null,
     "28044": null,
@@ -140846,14 +140850,118 @@
   },
   "1787596912975": {
    "task_id": "1787596912975",
-   "mtime": 1787599443988,
+   "mtime": 1787602788355,
    "created_at": "2026-08-24T18:41:52.975Z",
-   "last_modified": "2026-08-24T19:24:03.988Z",
-   "size_kb": 1387,
-   "turn_count": 9,
+   "last_modified": "2026-08-24T20:19:48.355Z",
+   "size_kb": 1515,
+   "turn_count": 39,
    "title": "We are gettng these. What's going on? Can you correct that?",
    "pickup_prompt": null,
-   "ideas": {}
+   "ideas": {
+    "11629": null,
+    "19426": null
+   }
+  },
+  "1787600344565": {
+   "task_id": "1787600344565",
+   "mtime": 1787602120499,
+   "created_at": "2026-08-24T19:39:04.565Z",
+   "last_modified": "2026-08-24T20:08:40.499Z",
+   "size_kb": 739,
+   "turn_count": 72,
+   "title": "frankenstein-llm getting this error\n\n{\"message\":\"524 status code (no body)\",\"status\":524,\"modelId\":\"frankenstein-llm\",\"providerId\":\"litellm\"}",
+   "pickup_prompt": "4`) — corrected with reversal.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787622244 — frankenstein-llm 524 error (FIXED).\n\nWhere we left off (verified 2026-08-24 12:08 PM AKDT):\n- 524 root cause: timeout misconfiguration (adapter 900s, LiteLLM 180s > Cloudflare ~100s)\n- All fixes deployed and verified: timeouts reduced to 95s, fleet_inventory IP corrected\n- frankenstein-llm test call confirmed working\n- Rule 315 amended (cross-reference registry ssh_access for canonical IP)\n- Bug library #2616 corrected with reversal\n\nOpen threads to drive next:\nNone — all work completed this session. Monitor for 524 recurrence over next 24h.\n\nReference IDs:\n- Ideas filed: #28106 [deployed]\n- Bug library: frankenstein_router_incidents #2616\n- Files touched: /etc/systemd/system/frankenstein-tools.service, /etc/litellm/config.yaml, fleet_inventory table, Rules/315-verify-before-declaring-host-down.md\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Bug library check (NOVEL_SYMPTOM)\n- [x] Fleet state probe\n- [x] llm_call_log analysis (90s hang on frankenstein-llm)\n- [x] Router audit log (admission_control_fast_fail after stall)\n- [x] LiteLLM journal (Prisma DB timeouts)\n- [x] REVERSAL: Big Mac IS UP at 10.100.0.19 (probed wrong IP initially)\n- [x] 317 RCA: rule 315 amended\n- [x] Fix 1: FRANK_TOOLS_TIMEOUT_INTERACTIVE 900→95, adapter restarted\n- [x] Fix 2: LiteLLM request_timeout 180→95, restarted\n- [x] Fix 3: fleet_inventory bigmac IP corrected\n- [x] Verified: frankenstein-llm test call OK\n- [x] Idea #28106 marked deployed\n- [x] Completion delivered\n</task_progress>\n</attempt_completion>",
+   "ideas": {
+    "2616": null,
+    "12299": null,
+    "12584": null,
+    "16588": null,
+    "17203": null,
+    "17205": null,
+    "18820": null,
+    "27284": null,
+    "28106": "proposed",
+    "178762": null
+   }
+  },
+  "1787600722263": {
+   "task_id": "1787600722263",
+   "mtime": 1787602553425,
+   "created_at": "2026-08-24T19:45:22.263Z",
+   "last_modified": "2026-08-24T20:15:53.425Z",
+   "size_kb": 311,
+   "turn_count": 15,
+   "title": "Jon says his overrides are not quite sticking. This is his question:\n\nHow to I make an attempt bottom reappear for a student that has an exam extension already?",
+   "pickup_prompt": "r to set — no guessing needed.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — answer Jon's question on why exam-extension overrides don't bring back the attempt button.\n\nWhere we left off (verified 2026-08-24 12:07 America/Anchorage, UTC-8):\n- Pulled `exam_enforcement_dashboard.php` (authoritative EMSU source) via emsu-operations access_mcp_resource.\n- Confirmed root cause: `quick_override` action writes only `quiz_overrides.timeopen` + `timeclose`, never `attempts`. Extension reopens the window but does not grant a new attempt, so the button stays hidden once finished attempts >= allowed attempts.\n- Confirmed the dashboard's `render_override_cap_banner()` / `search_student` already compute `max_attempts` vs `attempts_used` and show a red \"Override cap: N | Used: N | Remaining: 0\" banner for exactly this state.\n- Answer shipped to Jon with the concrete fix: raise `attempts` on the user override (SQL included), plus the two lookalike cases (stuck attempt -> `unstick_moodle_quiz_attempt`; grade-item close date instead of a real override).\n\nOpen threads to drive next:\n- None — all work completed this session. Optional (not requested, not filed): the dashboard's \"Open Exam for 7 Days\" quick-override button could be enhanced to also set `attempts` when granting a retake, which would eliminate this recurring \"override isn't sticking\" class.\n\nReference IDs:\n- Files touched: /var/www/emtskills/routes/exam_enforcement_dashboard.php (read-only reference)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "ideas": {
+    "1715": null,
+    "2563": null,
+    "3730": null,
+    "4338": null,
+    "6067": null,
+    "6366": null,
+    "9181": null,
+    "9204": null,
+    "9888": null,
+    "14215": null,
+    "15803": null,
+    "78350": null,
+    "92400": null,
+    "155724": null,
+    "166534": null,
+    "374151": null,
+    "831843": null,
+    "856404": null,
+    "004085": null,
+    "059669": null
+   }
+  },
+  "1787601263383": {
+   "task_id": "1787601263383",
+   "mtime": 1787602863204,
+   "created_at": "2026-08-24T19:54:23.383Z",
+   "last_modified": "2026-08-24T20:21:03.204Z",
+   "size_kb": 213,
+   "turn_count": 97,
+   "title": "REgardign:\n\nhttps://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students \n\n--\nReceived this:\n\nHey brother! \nHappy Monday. \nQuestion: I have multiple students queued at 80% and under ready for clearance for NREMT. However, when I go in and review these students they have not completed externships, all the paperwork hasn’t been submitted. Some still have balances but yet they do have a course completion link… \n\nAny ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.",
+   "pickup_prompt": null,
+   "ideas": {
+    "9191": null,
+    "19419": null,
+    "25973": null,
+    "26067": null,
+    "26663": null,
+    "27492": null,
+    "28034": null,
+    "28036": null,
+    "28038": null,
+    "28039": "deployed",
+    "28040": "deployed",
+    "28041": null,
+    "28043": "proposed",
+    "28044": "proposed",
+    "28045": "proposed",
+    "28046": "deployed",
+    "28047": null,
+    "28049": "proposed",
+    "28089": "deployed",
+    "28090": "proposed"
+   }
+  },
+  "1787602675527": {
+   "task_id": "1787602675527",
+   "mtime": 1787602881163,
+   "created_at": "2026-08-24T20:17:55.527Z",
+   "last_modified": "2026-08-24T20:21:21.163Z",
+   "size_kb": 1944,
+   "turn_count": 13,
+   "title": "Fix this issue",
+   "pickup_prompt": null,
+   "ideas": {
+    "2036": null,
+    "9086": null,
+    "19492": null
+   }
   }
  }
 }

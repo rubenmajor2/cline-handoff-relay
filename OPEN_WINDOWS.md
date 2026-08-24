@@ -6,12 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/24/2026, 12:27:12 PM PT | window: last 72h | 28 tasks | index total 903 (parsed 1, cached 902)
+Generated: 8/24/2026, 1:27:13 PM PT | window: last 72h | 32 tasks | index total 907 (parsed 6, cached 901)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787596912975` | 8/24/2026, 12:24:03 PM | 9 | 1387KB | We are gettng these. What's going on? Can you correct that? |
-| `1787593935930` | 8/24/2026, 11:09:46 AM | 56 | 2318KB | This person needs to stop receiving invoices for 13K -> |
+| `1787602675527` | 8/24/2026, 1:21:21 PM | 13 | 1944KB | Fix this issue |
+| `1787601263383` | 8/24/2026, 1:21:03 PM | 97 | 213KB | REgardign: |
+| `1787596912975` | 8/24/2026, 1:19:48 PM | 39 | 1515KB | We are gettng these. What's going on? Can you correct that? |
+| `1787593935930` | 8/24/2026, 1:18:22 PM | 73 | 2892KB | This person needs to stop receiving invoices for 13K -> |
+| `1787600722263` | 8/24/2026, 1:15:53 PM | 15 | 311KB | Jon says his overrides are not quite sticking. This is his question: |
+| `1787600344565` | 8/24/2026, 1:08:40 PM | 72 | 739KB | frankenstein-llm getting this error |
 | `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
 | `1787517380902` | 8/24/2026, 11:02:42 AM | 318 | 1368KB | #VERITAS |
 | `1787516392266` | 8/24/2026, 10:37:22 AM | 672 | 1594KB | #Deepseek spillage now vs before |
@@ -43,7 +47,42 @@ Generated: 8/24/2026, 12:27:12 PM PT | window: last 72h | 28 tasks | index total
 
 ## Per-window detail
 
-### `1787596912975` — 8/24/2026, 12:24:03 PM PT — 9 turns
+### `1787602675527` — 8/24/2026, 1:21:21 PM PT — 13 turns
+
+**Original task:**
+
+```
+Fix this issue
+```
+
+**Ideas referenced:** #19492, #2036, #9086
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787601263383` — 8/24/2026, 1:21:03 PM PT — 97 turns
+
+**Original task:**
+
+```
+REgardign:
+
+https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
+
+--
+Received this:
+
+Hey brother! 
+Happy Monday. 
+Question: I have multiple students queued at 80% and under ready for clearance for NREMT. However, when I go in and review these students they have not completed externships, all the paperwork hasn’t been submitted. Some still have balances but yet they do have a course completion link… 
+
+Any ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.
+```
+
+**Ideas referenced:** #19419, #25973, #26067, #26663, #27492, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28089 [deployed], #28090 [proposed], #9191
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787596912975` — 8/24/2026, 1:19:48 PM PT — 39 turns
 
 **Original task:**
 
@@ -51,9 +90,11 @@ Generated: 8/24/2026, 12:27:12 PM PT | window: last 72h | 28 tasks | index total
 We are gettng these. What's going on? Can you correct that?
 ```
 
+**Ideas referenced:** #11629, #19426
+
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787593935930` — 8/24/2026, 11:09:46 AM PT — 56 turns
+### `1787593935930` — 8/24/2026, 1:18:22 PM PT — 73 turns
 
 **Original task:**
 
@@ -61,7 +102,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 This person needs to stop receiving invoices for 13K ->
 ```
 
-**Ideas referenced:** #16613, #178759, #25185, #28043, #28044, #28089 [deployed], #28090 [proposed]
+**Ideas referenced:** #16613, #178759, #19492, #2036, #25185, #28043, #28044, #28089 [deployed], #28090 [proposed], #9086, #9168
 
 **Last PICKUP PROMPT:**
 
@@ -103,6 +144,105 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] File ideas #28089 (deployed) + #28090 (proposed), reconciled
 - [x] Handoff note written
 - [x] Completion passes rule-91 gates + attempt_completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1787600722263` — 8/24/2026, 1:15:53 PM PT — 15 turns
+
+**Original task:**
+
+```
+Jon says his overrides are not quite sticking. This is his question:
+
+How to I make an attempt bottom reappear for a student that has an exam extension already?
+```
+
+**Ideas referenced:** #004085, #059669, #14215, #155724, #15803, #166534, #1715, #2563, #3730, #374151, #4338, #6067, #6366, #78350, #831843, #856404, #9181, #9204, #92400, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+r to set — no guessing needed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — answer Jon's question on why exam-extension overrides don't bring back the attempt button.
+
+Where we left off (verified 2026-08-24 12:07 America/Anchorage, UTC-8):
+- Pulled `exam_enforcement_dashboard.php` (authoritative EMSU source) via emsu-operations access_mcp_resource.
+- Confirmed root cause: `quick_override` action writes only `quiz_overrides.timeopen` + `timeclose`, never `attempts`. Extension reopens the window but does not grant a new attempt, so the button stays hidden once finished attempts >= allowed attempts.
+- Confirmed the dashboard's `render_override_cap_banner()` / `search_student` already compute `max_attempts` vs `attempts_used` and show a red "Override cap: N | Used: N | Remaining: 0" banner for exactly this state.
+- Answer shipped to Jon with the concrete fix: raise `attempts` on the user override (SQL included), plus the two lookalike cases (stuck attempt -> `unstick_moodle_quiz_attempt`; grade-item close date instead of a real override).
+
+Open threads to drive next:
+- None — all work completed this session. Optional (not requested, not filed): the dashboard's "Open Exam for 7 Days" quick-override button could be enhanced to also set `attempts` when granting a retake, which would eliminate this recurring "override isn't sticking" class.
+
+Reference IDs:
+- Files touched: /var/www/emtskills/routes/exam_enforcement_dashboard.php (read-only reference)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787600344565` — 8/24/2026, 1:08:40 PM PT — 72 turns
+
+**Original task:**
+
+```
+frankenstein-llm getting this error
+
+{"message":"524 status code (no body)","status":524,"modelId":"frankenstein-llm","providerId":"litellm"}
+```
+
+**Ideas referenced:** #12299, #12584, #16588, #17203, #17205, #178762, #18820, #2616, #27284, #28106 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+4`) — corrected with reversal.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787622244 — frankenstein-llm 524 error (FIXED).
+
+Where we left off (verified 2026-08-24 12:08 PM AKDT):
+- 524 root cause: timeout misconfiguration (adapter 900s, LiteLLM 180s > Cloudflare ~100s)
+- All fixes deployed and verified: timeouts reduced to 95s, fleet_inventory IP corrected
+- frankenstein-llm test call confirmed working
+- Rule 315 amended (cross-reference registry ssh_access for canonical IP)
+- Bug library #2616 corrected with reversal
+
+Open threads to drive next:
+None — all work completed this session. Monitor for 524 recurrence over next 24h.
+
+Reference IDs:
+- Ideas filed: #28106 [deployed]
+- Bug library: frankenstein_router_incidents #2616
+- Files touched: /etc/systemd/system/frankenstein-tools.service, /etc/litellm/config.yaml, fleet_inventory table, Rules/315-verify-before-declaring-host-down.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Bug library check (NOVEL_SYMPTOM)
+- [x] Fleet state probe
+- [x] llm_call_log analysis (90s hang on frankenstein-llm)
+- [x] Router audit log (admission_control_fast_fail after stall)
+- [x] LiteLLM journal (Prisma DB timeouts)
+- [x] REVERSAL: Big Mac IS UP at 10.100.0.19 (probed wrong IP initially)
+- [x] 317 RCA: rule 315 amended
+- [x] Fix 1: FRANK_TOOLS_TIMEOUT_INTERACTIVE 900→95, adapter restarted
+- [x] Fix 2: LiteLLM request_timeout 180→95, restarted
+- [x] Fix 3: fleet_inventory bigmac IP corrected
+- [x] Verified: frankenstein-llm test call OK
+- [x] Idea #28106 marked deployed
+- [x] Completion delivered
 </task_progress>
 </attempt_completion>
 ```

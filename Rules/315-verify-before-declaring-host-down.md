@@ -100,3 +100,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-23 GLM ring restore: watchdog 'fail proc=1 api=0' log lines were read as 'engine repeatedly failing' when they actually meant 'engine loading weights (10-30 min) while watchdog tolerance was 15s' — the watchdog itself was killing every relaunch mid-init. Amended behavior: when a restart loop shows PROC alive + API down, classify as INIT-PHASE before diagnosing engine failure; read the container age (docker inspect StartedAt) and the last vllm log line (weight shard progress) before declaring the engine broken. A process at 96% CPU with no error lines is loading, not wedged.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-24 19:54 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787622244
+- RCA bucket: insufficient probe
+- Trigger pattern: Probed a host using an IP from fleet_inventory without cross-referencing the registry ssh_access field, hit a wrong/dead IP, and falsely declared the host down
+- Reversal note: 2026-08-24 524 diagnosis reversal: declared Big Mac 'physically DOWN' by probing 10.100.0.16:8000 (wrong IP, likely from stale fleet_inventory). Big Mac's actual IP is 10.100.0.19 per frankenstein_registry.yaml ssh_access field — live probe confirms it is SERVING gpt-oss-120b. Amended behavior: Step 1 'SEARCH THE RECORD FIRST' must explicitly include cross-referencing the registry ssh_access field for the host's CANONICAL IP before any probe. fleet_inventory IPs can be stale or wrong; the registry's ssh_access line is the authoritative source for a host's WireGuard/LAN IP. Never probe an IP from fleet_inventory alone without confirming it matches the registry.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

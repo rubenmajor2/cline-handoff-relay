@@ -6,18 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/24/2026, 1:27:13 PM PT | window: last 72h | 32 tasks | index total 907 (parsed 6, cached 901)
+Generated: 8/24/2026, 2:41:01 PM PT | window: last 72h | 32 tasks | index total 907 (parsed 5, cached 902)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787602675527` | 8/24/2026, 1:21:21 PM | 13 | 1944KB | Fix this issue |
-| `1787601263383` | 8/24/2026, 1:21:03 PM | 97 | 213KB | REgardign: |
-| `1787596912975` | 8/24/2026, 1:19:48 PM | 39 | 1515KB | We are gettng these. What's going on? Can you correct that? |
-| `1787593935930` | 8/24/2026, 1:18:22 PM | 73 | 2892KB | This person needs to stop receiving invoices for 13K -> |
+| `1787517380902` | 8/24/2026, 2:38:25 PM | 373 | 2237KB | #VERITAS |
+| `1787593935930` | 8/24/2026, 2:37:05 PM | 171 | 4662KB | This person needs to stop receiving invoices for 13K -> |
+| `1787601263383` | 8/24/2026, 2:37:01 PM | 215 | 431KB | REgardign: |
+| `1787602675527` | 8/24/2026, 2:34:55 PM | 136 | 2360KB | Fix this issue |
+| `1787596912975` | 8/24/2026, 2:30:05 PM | 86 | 1661KB | We are gettng these. What's going on? Can you correct that? |
 | `1787600722263` | 8/24/2026, 1:15:53 PM | 15 | 311KB | Jon says his overrides are not quite sticking. This is his question: |
 | `1787600344565` | 8/24/2026, 1:08:40 PM | 72 | 739KB | frankenstein-llm getting this error |
 | `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
-| `1787517380902` | 8/24/2026, 11:02:42 AM | 318 | 1368KB | #VERITAS |
 | `1787516392266` | 8/24/2026, 10:37:22 AM | 672 | 1594KB | #Deepseek spillage now vs before |
 | `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 | `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
@@ -47,54 +47,47 @@ Generated: 8/24/2026, 1:27:13 PM PT | window: last 72h | 32 tasks | index total 
 
 ## Per-window detail
 
-### `1787602675527` — 8/24/2026, 1:21:21 PM PT — 13 turns
+### `1787517380902` — 8/24/2026, 2:38:25 PM PT — 373 turns
 
 **Original task:**
 
 ```
-Fix this issue
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
 ```
 
-**Ideas referenced:** #19492, #2036, #9086
+**Ideas referenced:** #12459, #16345, #16732, #178712, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #4991, #8798
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787601263383` — 8/24/2026, 1:21:03 PM PT — 97 turns
-
-**Original task:**
+**Last PICKUP PROMPT:**
 
 ```
-REgardign:
-
-https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
-
---
-Received this:
-
-Hey brother! 
-Happy Monday. 
-Question: I have multiple students queued at 80% and under ready for clearance for NREMT. However, when I go in and review these students they have not completed externships, all the paperwork hasn’t been submitted. Some still have balances but yet they do have a course completion link… 
-
-Any ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.
+ection FAIL rate below 50%.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787121837052 — VERITAS auto-correction: ground templated emails.\n\nWhere we left off (verified 2026-08-24 13:35 AKDT):\n- Auto-correction core live: judge_and_correct() in lib/truth_judge.php + mailer.php gate (verified prior window, php -l clean, FPM reloaded)\n- FAIL rate analysis: post-fix ~54% (down from ~94%), remainder = templated emails judged with empty evidence (verified: email_send_blocks scan)\n- #28088 deployed: grounding evidence added at routes/login.php:171 ($__veritasEvidenceLogin) and cron/zoom_daily_routing.php:285 ($__zvrEvidence), both passed via veritasEvidence: named-arg (verified: sudo patch OK, php -l clean x2, param name $veritasEvidence confirmed at lib/mailer.php:442, OPcache revalidate_freq=60)\n\nOpen threads to drive next:\n1. #28028 [proposed] — test auto-correction end-to-end with a real false-claim email (still open; do this after confirming FAIL rate drops)\n2. #27942 [deployed] — monitor email_send_blocks for veritas_l4_auto_corrected rows to confirm FAIL rate drops below 50% post-#28088\n\nReference IDs:\n- Ideas filed/deployed: #28043 [deployed] evidence plumbing, #28044 [deployed] cache+ladder+HTML, #28088 [deployed] sender grounding\n- Ideas open: #28028 [proposed] end-to-end test\n- Ideas verified live: #27942 [deployed] Argus judge wiring\n- Files touched: routes/login.php, cron/zoom_daily_routing.php (this window); lib/truth_judge.php, lib/mailer.php (prior window)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n# Reversal Log\nNo reversals this window."
+}
+</arguments>
+<task_progress>
+- [x] #28043 deployed (evidence plumbing, verified)
+- [x] #28044 deployed (cache + ladder + HTML)
+- [x] #28088 promoted + deployed (sender grounding)
+- [x] Diagnosed remaining 54% FAIL: templated emails judged with empty evidence
+- [x] Applied grounding patch to both senders (sudo, php -l clean)
+- [x] Confirmed $veritasEvidence param name (named-arg safe)
+- [x] OPcache auto-revalidate confirmed (60s) — deploy effective
+- [x] Stamp #28088 deployed
+- [x] should_compress_now → GREEN, no compress
+- [x] Handoff note updated
+- [x] Reconcile all ideas (rule 267 GATE B)
+- [ ] Validate completion + check gate
+- [ ] Completion with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
 ```
 
-**Ideas referenced:** #19419, #25973, #26067, #26663, #27492, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28089 [deployed], #28090 [proposed], #9191
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787596912975` — 8/24/2026, 1:19:48 PM PT — 39 turns
-
-**Original task:**
-
-```
-We are gettng these. What's going on? Can you correct that?
-```
-
-**Ideas referenced:** #11629, #19426
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787593935930` — 8/24/2026, 1:18:22 PM PT — 73 turns
+### `1787593935930` — 8/24/2026, 2:37:05 PM PT — 171 turns
 
 **Original task:**
 
@@ -102,7 +95,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 This person needs to stop receiving invoices for 13K ->
 ```
 
-**Ideas referenced:** #16613, #178759, #19492, #2036, #25185, #28043, #28044, #28089 [deployed], #28090 [proposed], #9086, #9168
+**Ideas referenced:** #1456, #16613, #178759, #19492, #2036, #25185, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #4929, #9086, #9168
 
 **Last PICKUP PROMPT:**
 
@@ -145,6 +138,87 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Handoff note written
 - [x] Completion passes rule-91 gates + attempt_completion
 </task_progress>
+</attempt_completion>
+```
+
+### `1787601263383` — 8/24/2026, 2:37:01 PM PT — 215 turns
+
+**Original task:**
+
+```
+REgardign:
+
+https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
+
+--
+Received this:
+
+Hey brother! 
+Happy Monday. 
+Question: I have multiple students queued at 80% and under ready for clearance for NREMT. However, when I go in and review these students they have not completed externships, all the paperwork hasn’t been submitted. Some still have balances but yet they do have a course completion link… 
+
+Any ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.
+```
+
+**Ideas referenced:** #19419 [deployed], #25973, #26067, #26071, #26663, #27492, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117 [deployed], #9191
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787602675527` — 8/24/2026, 2:34:55 PM PT — 136 turns
+
+**Original task:**
+
+```
+Fix this issue
+```
+
+**Ideas referenced:** #0066, #19492, #2036, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #374151, #78350, #9086
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787596912975` — 8/24/2026, 2:30:05 PM PT — 86 turns
+
+**Original task:**
+
+```
+We are gettng these. What's going on? Can you correct that?
+```
+
+**Ideas referenced:** #11629, #19426, #28114 [proposed], #28115 [proposed], #28116 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+Log
+
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — runaway-automation cluster (Cline task_progress injection FIXED; student email loop + dialer loop still open).
+
+Where we left off (verified 2026-08-24 13:29 PT):
+- #28114 [deployed] — Cline `# task_progress RECOMMENDED` / `# TODO LIST UPDATE REQUIRED` auto-injection suppressed. Root cause: injector at `extension.js` offset 19,305,872, `apiRequestCount<10 ? Mhe.recommended : Mhe.apiRequestCount`. Live extension patched (verified: sentinel=1, todo_marker=0, `node --check` OK). Durable Patch 3 added to `patch_cline_extension.sh` with shape-match Stage A + literal-fallback Stage B + WARNING logging (verified: `bash -n` OK, `OVERALL=ALL_CONTROLS_PASS`, fresh-bundle e2e sentinel 0→1 + `JS_SYNTAX_OK` + idempotent re-run `WROTE=False`). DB read-back: `(28114,'deployed','idle',1,2026-08-24 14:27:53)`.
+- Backup retained: `extension.js.bak-pre-taskprogress-suppress-20260824-121541`.
+- PENDING HUMAN ACTION: VS Code window reload required for the running session to load the patched extension.
+- NOT investigated this window: the Candace Hollins enrollment-agreement email loop (~130 sends in 3 days, 47 of them AFTER ticket closure) and the Houston 30-calls-in-one-day dialer complaint. Same class, different systems.
+
+Open threads to drive next:
+1. #28115 [proposed] — Candace Hollins: stop the "Your Enrollment Agreement Is Already on File" resend loop. Student reports ~130 identical emails over 3 days, ~2-3/hour, 47 arriving after she was told ticket closure would stop them. Find the notifier (likely an EA-reminder cron keyed on a `ea_url`/`ea_completion_date` NULL that never clears), confirm why ticket closure does not gate it, add a per-student send-cap plus a dedup/stop condition, then backfill-suppress her specific record and reply to her per rule 02 (no apology language).
+2. #28116 [proposed] — Houston outbound dialer: Google review reports 30+ calls to one prospect in a single day. Audit the lead-followup dialer for a per-lead daily call cap and DNC/stop-on-answer handling; the review explicitly reads as "screams scam", so this is reputational.
+3. (human-only decision — no idea) — reload the VS Code window to activate the patched extension in this session.
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: #28114 [deployed]
+- Ideas to file at pickup: #28115 [proposed], #28116 [proposed]
+- Files touched: `/Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js` (patched), `/Users/rubenmajor/Documents/Cline/scripts/patch_cline_extension.sh` (Patch 3 added + WARNING logging)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
@@ -299,65 +373,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Completed with full PICKUP PROMPT
 </task_progress>
 </attempt_co
-```
-
-### `1787517380902` — 8/24/2026, 11:02:42 AM PT — 318 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase and analyze since last analysis
-
-VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
-
-════
-```
-
-**Ideas referenced:** #12459, #16345, #16732, #178712, #19173, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #4991
-
-**Last PICKUP PROMPT:**
-
-```
-o other reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 - VERITAS email truth-gate tuning
-
-Where we left off (verified 2026-08-24 10:01 AKDT):
-- #28043 [deployed]: evidence plumbing. sendEmail has optional $veritasEvidence param threaded into judge_and_correct; cron_email_responder.php student-reply path builds COMPOSER GROUNDING from tools_used/fixes/studentCtx/intent. Live probe: truthful+evidence PASS, false+evidence FAIL+auto-correct.
-- #28044 [deployed]: verdict cache (78,041ms -> 6ms), email 1-rung ladder, HTML-body correction, review-flag dedupe. Table admin_portal.veritas_verdict_cache.
-- Backups: lib/mailer.php.bak-28043-20260824, cron/cron_email_responder.php.bak-28043-20260824, plus the earlier .bak-veritasfixes-20260823 set.
-- WOPR DB writable (lease epoch 2) after manual promote; the fence re-acquire path is #28078 [executing] (approved, executor auditing).
-
-Open threads to drive next:
-1. #28078 [executing] - HA fence re-acquire branch (approved, in executor auditing; anti-split-brain code)
-2. #28088 [proposed] - wire composer grounding into remaining sendEmail surfaces + monitor post-fix FAIL rate (query truth_judge_log by surface over next 24h; wire grounding into any surface still FAILing >50%)
-
-Reference IDs:
-- Ideas built this session: #28043 [deployed], #28044 [deployed]
-- Ideas filed as follow-ups: #28088 [proposed]
-- Ideas in executor: #28078 [executing]
-- Files touched: lib/mailer.php, lib/truth_judge.php, cron/cron_email_responder.php, routes/api_fleet_inventory.php, admin_portal.veritas_verdict_cache (new table)
-
-When finished, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] 94% FAIL root cause: empty evidence to judge
-- [x] Design + patches applied (mailer + responder), lint clean, backups created
-- [x] Verify CASE1: truthful+evidence → PASS
-- [x] Verify CASE2: false+evidence → FAIL + auto-correct (teeth kept)
-- [x] Stamp #28043 deployed
-- [x] Update handoff notes
-- [x] Reconcile ideas (#28043/#28044 deployed, #28078 executing, #28088 proposed)
-- [x] Validate completion → all gates passed, gate clear
-- [x] Ship attempt_completion
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1787516392266` — 8/24/2026, 10:37:22 AM PT — 672 turns

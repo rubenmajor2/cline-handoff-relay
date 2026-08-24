@@ -126,3 +126,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Diagnosed the externship SNAFU as 'scheduling agent fatal halts agency emails', assuming the deployed code's agency-email behavior WAS the intended process. Ruben corrected: the current process is recommendations -> CS confirms -> CS emails manually; agency emails are NOT automated. The deployed auto-assign code implemented a superseded fully-automated model. Amended behavior: before declaring an automation broken or underproducing, confirm the INTENDED process model from the canonical spec + owner directive FIRST; deployed code may implement a different (superseded) model, so 'output is missing' must be judged against the intended process, not against what the code happens to do.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-24 21:30 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787620675000
+- RCA bucket: insufficient probe
+- Trigger pattern: failing control result attributed to the system under test without first validating the control fixture itself
+- Reversal note: 2026-08-24 detector positive-control: a control test (CONTROL 4b) returned NO and was momentarily read as evidence the newly-built detector was broken. The detector was fine; the CONTROL was invalid — it injected a phantom row for a fabricated user id (99999999) that has no row in the Moodle `user` table, while the detector's query JOINs `user`, so the row could never match by construction. Re-running with a real user id flagged it correctly. Amended behavior: when a negative/failing result comes from a test instrument you just built, classify it as INSTRUMENT-DEFECT vs REAL-DEFECT before reporting it as either; specifically, verify that the synthetic fixture satisfies every JOIN and predicate the query under test depends on. A control that cannot possibly produce a positive is not evidence of anything.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

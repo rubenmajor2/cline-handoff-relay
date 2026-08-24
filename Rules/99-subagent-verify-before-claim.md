@@ -66,3 +66,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-20 flicker-catcher deploy: 'RUNNING=1' was reported for a watcher that never started — the pgrep -fc julia_flicker inside the ssh verification command matched the ssh command line itself. Amended behavior: when verifying a background process by pgrep over ssh, the pattern must exclude the probe (pgrep -f 'bash /tmp/script.sh' exact-form, or bracket trick), AND liveness requires a second artifact (log file created/growing), never a bare count.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-24 21:29 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787620675000
+- RCA bucket: stale assumption
+- Trigger pattern: php -l pass treated as evidence a patch is correct, when the patch introduced an undefined variable reference
+- Reversal note: 2026-08-24 phantom-purge build: a patch to proctoring/api/override_student.php introduced `$assignmentId` in an audit string on the assumption the variable was in scope. `php -l` PASSED because the syntax is valid, and the patch was nearly claimed as applied on that basis. A grep of the file showed the variable never exists anywhere (the codebase uses `$data["assignment_id"]`), so the audit line would have silently logged an empty value. Amended behavior: a lint pass proves SYNTAX ONLY, never that referenced variables/functions exist in scope. Before claiming any patch applied, grep every identifier the patch INTRODUCES against the target file to confirm it is defined there; an undefined-variable reference is a live defect that no linter will catch in PHP.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

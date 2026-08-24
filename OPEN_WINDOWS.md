@@ -6,10 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/24/2026, 11:11:21 AM PT | window: last 72h | 29 tasks | index total 902 (parsed 3, cached 899)
+Generated: 8/24/2026, 12:27:12 PM PT | window: last 72h | 28 tasks | index total 903 (parsed 1, cached 902)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1787596912975` | 8/24/2026, 12:24:03 PM | 9 | 1387KB | We are gettng these. What's going on? Can you correct that? |
 | `1787593935930` | 8/24/2026, 11:09:46 AM | 56 | 2318KB | This person needs to stop receiving invoices for 13K -> |
 | `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
 | `1787517380902` | 8/24/2026, 11:02:42 AM | 318 | 1368KB | #VERITAS |
@@ -37,12 +38,20 @@ Generated: 8/24/2026, 11:11:21 AM PT | window: last 72h | 29 tasks | index total
 | `1787349230620` | 8/21/2026, 7:33:07 PM | 180 | 546KB | #San Mateo County EMSA |
 | `1787256717179` | 8/21/2026, 4:57:45 PM | 254 | 5161KB | ## Externship dates past Sept 1 — identification + mitigation |
 | `1787329580892` | 8/21/2026, 3:33:49 PM | 156 | 464KB | #Executor |
-| `1787258077644` | 8/21/2026, 11:29:40 AM | 288 | 3416KB | #Payments |
-| `1787254375526` | 8/21/2026, 11:27:22 AM | 190 | 568KB | #Argus Improvements |
 
 ---
 
 ## Per-window detail
+
+### `1787596912975` — 8/24/2026, 12:24:03 PM PT — 9 turns
+
+**Original task:**
+
+```
+We are gettng these. What's going on? Can you correct that?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787593935930` — 8/24/2026, 11:09:46 AM PT — 56 turns
 
@@ -1408,118 +1417,5 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Answer Ruben's status question — explained 1,195 vs 566 discrepancy
 - [x] Confirm task complete
 </task_progress>
-</attempt_completion>
-```
-
-### `1787258077644` — 8/21/2026, 11:29:40 AM PT — 288 turns
-
-**Original task:**
-
-```
-#Payments
-
-Please check payments from Quickbooks/WP Forms, etc... We have not had hardly any payments coming through. We have this in the handoff docs somewhere, but something might have made the forms not work properly? Can you check and make necessary repairs to keep the cash flowing?
-```
-
-**Ideas referenced:** #12364, #16732, #178713, #178716, #178720, #178725, #178734, #2230, #23323, #2338, #2358, #24055 [proposed], #2511, #2550, #2589, #2590, #26229, #26495 [deployed], #26496 [deployed], #26508 [proposed], #26509 [proposed], #26823 [executing], #26824 [executing], #26825 [executing], #27152, #27503 [proposed], #27524, #27531, #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27774 [proposed], #27811 [proposed], #27812 [proposed], #450438
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787207812240 — payment flow check + approved idea builds.
-
-Where we left off (verified 8/21/2026 11:27 AM PT):
-- Payment forms healthy: 11/11 registration surfaces PASS, QB merchant volume normal (8/19 $10,030/15, 8/20 $4,760/6)
-- #27812 [deployed] — qb_payment_sync.php batchLimit 80→300, php -l clean, backup .bak-idea27812 (verified: ssh_command grep read-back returned '86:    $batchLimit = 300;')
-- #27811 [deployed] — HANDOFF_NOTES canonical-source note: volume via qb_payments_cache/QB UI, never qb_invoice_payments (verified: update_handoff_notes MCP returned 'HANDOFF_NOTES.md updated successfully' with entry echoed)
-- Both idea rows status=deployed (verified: mysql SELECT returned both deployed at 11:27:18)
-
-Open threads to drive next:
-1. #27812 [deployed] — confirm the 11:30 AM cron run logs 'Checking 300 of ~1272' to prove the new cap is live in production
-2. #27811 [deployed] — none; monitoring only
-
-Reference IDs:
-- Ideas filed: #27811 [deployed], #27812 [deployed]
-- Files touched: /var/www/emtskills/cron/qb_payment_sync.php, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Corrected completion shipped and accepted
-- [x] Ruben approved #27811 + #27812 ("verify again approved")
-- [x] Rule 119: GREEN, no compress
-- [x] Direct read: #27812 approved, #27811 promoted to approved (verified in tool response)
-- [x] Located cap: qb_payment_sync.php $batchLimit = 80; backlog = 1,272 outstanding
-- [x] Log confirms cap binding: "Checking 80 of 1271" every 10-min run
-- [x] Build #27812: cap 80→300 patched, php -l clean, read-back verified (line 86)
-- [x] Build #27811: HANDOFF_NOTES canonical-source note added
-- [x] Stamp both deployed + verified with direct read
-- [x] Validation ALL PASSED + GATE CLEAR
-- [x] Completion shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787254375526` — 8/21/2026, 11:27:22 AM PT — 190 turns
-
-**Original task:**
-
-```
-#Argus Improvements
-
-Context reached the rule-119 COMPRESS threshold (161K of 200K) mid-answer. Compressing per rule 119. Ruben's 12:20 PM status question is the top directive in the PICKUP PROMPT below. Paste it into a fresh window. It will live-probe current state, answer the question, and hand-build the remaining Argus backlog per rule 267 GATE C.
-
-# Reversal Log
-- No reversals this window.
-
-═══════════════════════════════════════════════
-SESSION MEMORY (auto-compressed 2026-08-20T19:23:55Z, original 156K tokens)
-═══════════════════════════════════════════════
-
-## Task
-Argus improvements fr
-```
-
-**Ideas referenced:** #16213, #173178, #174968, #178719, #19415, #22850, #23429, #23506, #25474 [deployed], #25865 [deployed], #26434 [deployed], #26507, #26515, #26934, #27646 [deployed], #27656, #27672 [deployed], #27682 [deployed], #27690, #27712 [deployed], #27734 [executing], #27764 [rejected], #27816 [approved]
-
-**Last PICKUP PROMPT:**
-
-```
-eployed work is internal-only.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1787191612298: Argus user-experience dive. Ruben's open-thread/idea-existence question answered 11:27 AM PT 2026-08-21; CFA idea filed as #27816.
-
-Where we left off (verified 11:27 AM PT 2026-08-21):
-- Filed NEW idea #27816 [approved] P1: "CFA suspension visibility: student-facing view must state the suspension reason + invoice + confirm-payment-details (Argus task 614 feedback)". Target: render reason (unpaid/no_settled_record/declined_checkout/orphaned) + open invoice amount/link + confirm-payment CTA on the student-facing CFA lockout view.
-- Confirmed NO pre-existing idea covered the student-facing CFA visibility scope (4 live searches); all closest work is internal-side and deployed: #27682, #26434, #25865.
-- Reeyan override already resolved (verified earlier): 3 quiz_overrides rows for moodle user 54310; dashboard bug #25474 deployed Aug 18.
-- Truthfulness gap still open: 4 done tasks with deliberation_leak_detected=1 + retry_count=0 (112, 113, 433, 78).
-- Task 633 offloaded -> idea #27764 rejected (user follow-through dropped).
-- Queue healthy: 0 queued / 0 running; 605 done.
-
-Open threads to drive next:
-1. #27816 [approved] — build the student-facing CFA suspension-visibility view: locate the CFA lockout renderer, add reason + invoice + confirm-payment CTA (ground truth against payment_suspensions/SLS gate outcome).
-2. #27734 [approved] — quarantine/retry path for deliberation_leak_detected=1 tasks shipped done with retry_count=0 (the 4 historical leaks).
-3. #27764 [rejected] — decide: re-file task-633 user request or notify the user it was dropped.
-4. #25474 [deployed] — backfill: consume/mark the 12-day-old orphaned Reeyan notes (53/59/61), now verified applied.
-
-Reference IDs:
-- Ideas filed: #27816 [approved], #27734 [approved], #25474 [deployed], #27764 [rejected], #27712 [superseded]
-- Files touched: lib/argus_deliberation_guard.php (verified on disk), /tmp/reeyan_probe.php (temp)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

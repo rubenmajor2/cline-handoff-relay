@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/23/2026, 4:14:47 PM PT | window: last 72h | 30 tasks | index total 900 (parsed 2, cached 898)
+Generated: 8/23/2026, 5:27:51 PM PT | window: last 72h | 30 tasks | index total 900 (parsed 2, cached 898)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787516392266` | 8/23/2026, 4:14:42 PM | 500 | 956KB | #Deepseek spillage now vs before |
-| `1787516215349` | 8/23/2026, 4:14:24 PM | 261 | 4996KB | #Externships |
+| `1787516392266` | 8/23/2026, 5:03:00 PM | 594 | 1137KB | #Deepseek spillage now vs before |
+| `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 | `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
 | `1787517352553` | 8/23/2026, 2:10:08 PM | 138 | 692KB | #Argus |
 | `1787517380902` | 8/23/2026, 2:08:08 PM | 116 | 401KB | #VERITAS |
@@ -45,7 +45,7 @@ Generated: 8/23/2026, 4:14:47 PM PT | window: last 72h | 30 tasks | index total 
 
 ## Per-window detail
 
-### `1787516392266` — 8/23/2026, 4:14:42 PM PT — 500 turns
+### `1787516392266` — 8/23/2026, 5:03:00 PM PT — 594 turns
 
 **Original task:**
 
@@ -55,37 +55,37 @@ Generated: 8/23/2026, 4:14:47 PM PT | window: last 72h | 30 tasks | index total 
 Can you tell me how much deepseek spillage we have been having over the last 12 hours compared to 72 hours ago
 ```
 
-**Ideas referenced:** #11945, #12060, #12506, #12584, #12629, #12704, #16265, #1754, #1755, #178752, #19338, #19686, #1980, #1983, #1984, #1986, #1988, #1989, #1998, #2050, #2073, #2083, #2157, #2159, #2168, #2174, #2185, #2294, #2307, #2314, #23169, #24217, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2592, #2603, #2605, #26209, #26284 [executing], #26400, #26403, #26663, #26922 [deployed], #26927 [deployed], #26932, #27100, #27492, #27711, #27722, #27811, #27812, #27832, #27933, #27935, #27972, #28025, #28026, #28034, #28039 [proposed], #28040 [proposed], #28045 [proposed], #28046 [deployed], #28049 [proposed], #6826
+**Ideas referenced:** #11945, #12060, #12459, #12506, #12584, #12629, #12704, #16265, #1754, #1755, #178752, #19338, #19686, #1980, #1983, #1984, #1986, #1988, #1989, #1998, #2050, #2073, #2083, #2157, #2159, #2168, #2174, #2185, #2294, #2307, #2314, #23169, #24217, #25185, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2592, #2603, #2605, #26209, #26284 [executing], #26400, #26403, #26663, #26922 [deployed], #26927 [deployed], #26932, #27100, #27492, #27711, #27722, #27811, #27812, #27832, #27933, #27935, #27972, #28025, #28026, #28034, #28039 [proposed], #28040 [proposed], #28045 [proposed], #28046 [deployed], #28049 [proposed], #6826
 
 **Last PICKUP PROMPT:**
 
 ```
-ngine-failure classification).
+#28049, window-o writer hunt).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787523900000 — deepseek spillage root cause + GLM ring full restore.
+Pick up task #1787523900000 — ring restored, verified up AND at proper speed; hunt the window-o config writer.
 
-Where we left off (verified 2026-08-23 15:05 America/Anchorage):
-- Ring UP: cato :8210 = 200, generation verified, canary healthy=True decode_live=True (was quarantined fail_streak=4009).
-- Root cause: cato reboot 00:06 lost fabric /30s + transit routes (NM method:auto race) → NCCL init failed → ring down → adapter POOL_SATURATED → frankenstein-llm spilled to deepseek only.
-- Watchdog v2 init-grace patched (~/bin/glm52_watchdog_worker_v2.sh on cato, backup .bak-init-grace-20260823); worker restarted live.
-- frankenstein-llm fallback chain local-first in /etc/litellm/config.yaml; litellm restarted and serving (401 = auth-walled but up).
+Where we left off (verified 2026-08-23 17:02 America/Anchorage):
+- Ring UP + healthy speed: decode=9.62 prefill=363.70 TOTAL=373.32 tok/s (counter method, 40s window), running=8 waiting=0 (verified: live metrics counter samples via ssh_command on :8210/metrics). Above the documented 260-273 healthy baseline.
+- Cause of outage: cato-only hard reset 00:06 (hardware watchdog or power, NOT a rogue window); NM stripped fabric /30s; NCCL died; deepseek-only fallback caught the spill; member-rotation config cron re-armed the deepseek-only chain mid-recovery.
+- Protections live: fabric_guard.sh cron on cato (5-min), watchdog init-grace (35 min), frankenstein-llm fallback local-first.
+- Also down (pre-existing, unrelated): Julia :11513 (host down), Cicero :11520.
 
 Open threads to drive next:
-1. #28049 [proposed] — window-o automation reverts fallback-chain edits; make it read-modify-write or add local rungs to its template (it reverted my patch once at ~14:41 PT).
-2. #28045 [proposed] — persist cato fabric /30s against NetworkManager (NM profiles ipv4.method=auto on enP2p ports strip them at boot; needs root: NM profile change or fabric-service After=network-online + Restart, or idempotent cron).
+1. #28049 [executing] — pinpoint the config-writer inserting WINDOW_O_DOWN comments into /etc/litellm/config.yaml (verified earlier this session: readers referencing window-o markers are cron_litellm_autoscaler_batcher.php, cron_litellm_restart_cooldown.php, cron_litellm_transport_reclassifier.php; next probe is sudo grep -rln WINDOW_O_DOWN /var/www/emtskills/cron/ /var/www/emtskills/lib/), then make the writer read-modify-write or respect a guard marker. MCP note: emsu-operations returned 3 consecutive 'Not connected' errors at 16:25 PT this session (observed directly) — restart it before the hunt if still down.
 
 Reference IDs:
-- Ideas: #28039 [deployed] ring restore, #28040 [deployed] fallback local-first, #28045 [proposed] NM persistence, #28046 [deployed] watchdog init-grace, #28049 [proposed] window-o guard
-- Files touched: /etc/litellm/config.yaml (fallback chain), ~/bin/glm52_watchdog_worker_v2.sh on cato (init-grace), fabric addresses/routes on cato (runtime), HANDOFF_NOTES.md
+- Ideas: #28039 [deployed], #28040 [deployed], #28045 [deployed], #28046 [deployed], #28049 [executing], #26922 [deployed] (prior pattern ref)
+- Files touched: /etc/litellm/config.yaml, ~/bin/glm52_watchdog_worker_v2.sh (cato), ~/bin/glm52_fabric_guard.sh (cato, new + crontab), HANDOFF_NOTES.md
 
 # Reversal Log
-- 'watchdog relaunched the engine (helpful)' → 'watchdog was killing every relaunch mid weight-load (15s tolerance vs 10-30min load)' | RCA bucket: insufficient probe | causal rule updated: 315 (clinerules_amend_rule executed)
-- 'GLM ring not running, no vllm process' → 'ring was in weight-load; process alive at 96% CPU the whole time' | RCA bucket: insufficient probe | causal rule updated: 315 (same amendment)
-- 'independent grader/evaluator consumer' → 'the deepseek calls were my own frankenstein-llm calls from Ruben's Cline window' | RCA bucket: wrong premise | causal rule updated: 315 (the initial probe relied on llm_call_log route metadata which was absent; the amend covers reading the actual serving source, not derived table metadata)
+- 'watchdog relaunched the engine (helpful)' → 'watchdog killed every relaunch mid weight-load' | insufficient probe | causal rule updated: 315 (amend executed)
+- 'ring not running, no process' → 'ring was in weight-load, process at 96% CPU' | insufficient probe | causal rule updated: 315
+- 'independent grader consumer' → 'my own frankenstein-llm calls from Ruben Cline window' | wrong premise | causal rule updated: 315
+- 'all ring nodes down (rack event implied)' → 'cato-only reset; other 5 up 19 days' | insufficient probe | causal rule updated: 315
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
@@ -93,7 +93,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </attempt_completion>
 ```
 
-### `1787516215349` — 8/23/2026, 4:14:24 PM PT — 261 turns
+### `1787516215349` — 8/23/2026, 4:58:00 PM PT — 290 turns
 
 **Original task:**
 
@@ -108,53 +108,49 @@ Where we left off (verified 2026-08-21 4:55 PM PT):
 - ANSWERED Ruben's question "assignments past Sept 1 become placements if no staff response within some timeframe?": NO such timer was decided. Decided + deployed = STUDENT-side 72h confirm-or-forfeit (#26067 [deployed], emsu_offer_window_hours()=72, lib/ExternshipOfferConfirmation.php line 35). Staff-side "confirm OR auto-place after timeout" is DRAFTED in the #259
 ```
 
-**Ideas referenced:** #100100, #16523, #178649, #1971, #20315, #24635, #24645, #25185, #25822 [deployed], #25888, #25889 [deployed], #25916 [approved], #25950 [deployed], #25973 [deployed], #26002 [deployed], #26027 [deployed], #26067 [deployed], #26071 [deployed], #26089 [deployed], #26663 [approved], #27100, #27490 [deployed], #27492 [deployed], #27858 [deployed], #27933 [deployed], #28034, #28036 [proposed], #28037 [proposed], #28038 [proposed], #28041 [proposed], #28047 [deployed], #3926, #3927, #3928, #3929, #3930, #3931, #3933, #3975, #916257, #916275, #916276, #916316
+**Ideas referenced:** #100100, #16523, #178649, #1971, #20315, #24635, #24645, #25185, #25822 [deployed], #25888, #25889 [deployed], #25916 [approved], #25950 [deployed], #25973 [deployed], #26002 [deployed], #26027 [deployed], #26067 [deployed], #26071 [deployed], #26089 [deployed], #26663 [approved], #27100, #27490 [deployed], #27492 [deployed], #27858 [deployed], #27933 [deployed], #28034, #28036 [proposed], #28037 [proposed], #28038 [proposed], #28041 [proposed], #28047 [deployed], #3926, #3927, #3928, #3929, #3930, #3931, #3933, #3941, #3942, #3943, #3945, #3947, #3948, #3949, #3950, #3951, #3952, #3953, #3954, #3956, #3957, #3960, #3963, #3964, #3965, #3967, #3968, #3969, #3970, #3971, #3972, #3973, #3975, #916257, #916275, #916276, #916316
 
 **Last PICKUP PROMPT:**
 
 ```
- Log
-No reversals this window.
+aught it, no amendment needed.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #28047 [deployed] - Externship Sept-1 cutover rebase + repaired 27-day scheduling-agent outage
+Pick up externship Sept-1 cutover rebase — anchor idea #28047 [deployed].
 
-Where we left off (verified 2026-08-23 13:52 AKDT):
-- Rebase complete: request pipeline LIVE (2807 total; 60d = 96 pending / 217 escalated / 139 expired / 134 completed); staff auto-assign request->CS rep live (ran 09:09 today, 1017 total).
-- Sept-1 date cap #27492 [deployed] WORKS for new intake (0/11 past-Sept-1 last 7d); 46 legacy post-Sept-1 requests handled by offer-time ExternshipSept1CutoffGuard.
-- 72h confirm-or-forfeit #26067 [deployed] cron HEALTHY but idle (checked=0 forfeited=0 hourly - no offers exist). Offer/slot layer never carried traffic (available_slots set for 0/2807).
-- FOUND+REPAIRED: scheduling_agent.php FATALed every 5-min run since ~7/27 - enforceThreadStatusOnInsert($status) is a 1-arg string validator but line 1015 passed (PDO, request_id) -> 'Object of class PDO could not be converted to string'. Blocked ALL agency outreach 27d, 96 requests stuck. Repaired line 1015 -> enforceThreadStatusOnInsert('queued'); php -l clean; confirmed agent now queues emails/batches/followups. Filed #28047 [deployed].
-- Placement auto-assign #25973 [deployed] but NOT ARMED: externship_autoassign_config/log/queue all EMPTY.
+Where we left off (verified 2026-08-23 15:55 PT):
+- Rebase done: suggestion layer never ran (available_slots 0/2807, offer layer 0 traffic, autoassign_config empty).
+- 27-day scheduling-agent PDO fatal FIXED + DEPLOYED as #28047 [deployed] (verified: read-back status='deployed').
+- Read Chat 55: Ruben steer = recommendations + CS confirms + CS emails manually (NOT automatic); Vicky sites Gonzales/SpringCreek/Sunnyvale temporarily unavailable.
+- Sibling RCA window already filed #28041 [proposed] (site-unavail state), #28038 [proposed] (rec engine), #28037 [proposed] (admin visibility).
+- #28036 [proposed] is a duplicate of deployed #28047; supersede UPDATE was reverted by the orchestrator_ideas status-audit trigger (status still 'proposed').
 
 Open threads to drive next:
-1. #25973 [deployed] - Placement auto-assign (3-trigger gate + 150-mile): built but externship_autoassign_config is EMPTY, so it cannot fire. Needs ARMING DECISION + config rows before the Sept-1 cutover.
-2. #28047 [deployed] - follow-up: over the next 24h confirm the scheduling agent keeps processing the 96-request backlog without new fatals (check externship_agent_log for agent_run_complete + agency_email_sent; check agent_metrics resumes).
-3. #26663 [awaiting_review] - Outreach batch to 54 students: not sent yet; needs human review + go-ahead before Sept 1.
+1. #28038 [proposed] — build externship recommendation engine to match the CS-confirms process AND arm autoassign_config; this is THE blocker to Sept-1 auto-suggestions.
+2. #28041 [proposed] — add ExternshipSite 'temporarily unavailable until X/TBD' state + reconcile Vicky's stale sites (Gonzales/SpringCreek/Sunnyvale).
+3. #28037 [proposed] — externship admin visibility + kill the Sept-1-launch ambiguity.
+4. #28036 [proposed] — DUPLICATE of deployed #28047; reject/supersede at next approval touch (status-audit trigger blocked direct supersede this window).
 
 Reference IDs:
-- Ideas filed: #28047 [deployed]
-- Files touched: /var/www/emtskills/externship/agent/scheduling_agent.php (line 1015 repair; backup scheduling_agent.php.bak-20260823-r317), HANDOFF_NOTES.md (rebase entry)
+- Ideas filed/touched this session: #28047 [deployed], #28036 [proposed, supersede-blocked].
+- Sibling ideas referenced: #28037 [proposed], #28038 [proposed], #28041 [proposed].
+- Files touched: scheduling_agent.php (fatal fix via #28047).
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Probe live ExternshipRequest state (96 pending, 217 escalated, 139 expired, 134 completed)
-- [x] Probe externship schema (offer_confirmations / autoassign tables exist but EMPTY)
-- [x] Reconcile ideas: 26067/27492/25973/27490 deployed, 26663 awaiting_review
-- [x] externship_autoassign_config = EMPTY (placement gate not armed)
-- [x] Full ExternshipRequest schema (no offer-expiry/confirm columns on main table)
-- [x] Test A: Sept-1 cap HOLDS for new intake (0/11 past-Sept-1); 46 legacy handled by offer-time guard
-- [x] Test B: available_slots populated for ZERO requests (offer layer never carried traffic)
-- [x] Test C: 'expired' = staff auto-assign routing (request→CS rep), live daily
-- [x] Agency email threads DEAD since 7/27; agent_metrics stopped 7/28; agent_log alive 300-900/day
-- [x] Agent reaches routing_selected then STOPS (no email/complete actions, equal 864 counts)
-- [x] No kill-switch in routing_settings; staff auto-assign LIVE (ran today 9:09, 1017 total)
-- [x] Offer-expiry cron (#26067) HEALTHY but idle: checked=0 forfeited=0 hourly (no offers exist)
-- [x] ROOT CAUSE: enforceThreadStatusOnInsert($status) 1-arg validator; line 1015 passed (PDO, request
+- [x] Completed externship Sept-1 cutover rebase + fixed 27-day agent fatal (#28047)
+- [x] Read Chat 55 — found Ruben's steer (recommendations + CS confirms + CS emails manually, NOT automatic) + Vicky's site findings
+- [x] Dedup check — sibling RCA window already filed #28041, #28038, #28037; #28036 duplicates my deployed #28047
+- [x] Attempted #28036 supersede — reverted by status-audit trigger (caught via read-back), flagged as duplicate
+- [x] Reconciled live idea statuses (#28047 deployed; #28036/37/38/41 proposed)
+- [x] Answered Ruben's question honestly + completed with PICKUP PROMPT
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787517211429` — 8/23/2026, 3:09:50 PM PT — 206 turns

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-24T16:11:20.266Z",
+ "generated_at": "2026-08-24T17:11:20.605Z",
  "counts": {
-  "parsed": 0,
-  "reused": 900,
+  "parsed": 3,
+  "reused": 898,
   "failed": 0,
-  "total": 900
+  "total": 901
  },
  "tasks": {
   "1784522296714": {
@@ -140509,11 +140509,11 @@
   },
   "1787516392266": {
    "task_id": "1787516392266",
-   "mtime": 1787536956905,
+   "mtime": 1787591449471,
    "created_at": "2026-08-23T20:19:52.266Z",
-   "last_modified": "2026-08-24T02:02:36.905Z",
-   "size_kb": 1141,
-   "turn_count": 597,
+   "last_modified": "2026-08-24T17:10:49.471Z",
+   "size_kb": 1475,
+   "turn_count": 603,
    "title": "#Deepseek spillage now vs before\n\nCan you tell me how much deepseek spillage we have been having over the last 12 hours compared to 72 hours ago",
    "pickup_prompt": "#28049, window-o writer hunt).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787523900000 — ring restored, verified up AND at proper speed; hunt the window-o config writer.\n\nWhere we left off (verified 2026-08-23 17:02 America/Anchorage):\n- Ring UP + healthy speed: decode=9.62 prefill=363.70 TOTAL=373.32 tok/s (counter method, 40s window), running=8 waiting=0 (verified: live metrics counter samples via ssh_command on :8210/metrics). Above the documented 260-273 healthy baseline.\n- Cause of outage: cato-only hard reset 00:06 (hardware watchdog or power, NOT a rogue window); NM stripped fabric /30s; NCCL died; deepseek-only fallback caught the spill; member-rotation config cron re-armed the deepseek-only chain mid-recovery.\n- Protections live: fabric_guard.sh cron on cato (5-min), watchdog init-grace (35 min), frankenstein-llm fallback local-first.\n- Also down (pre-existing, unrelated): Julia :11513 (host down), Cicero :11520.\n\nOpen threads to drive next:\n1. #28049 [executing] — pinpoint the config-writer inserting WINDOW_O_DOWN comments into /etc/litellm/config.yaml (verified earlier this session: readers referencing window-o markers are cron_litellm_autoscaler_batcher.php, cron_litellm_restart_cooldown.php, cron_litellm_transport_reclassifier.php; next probe is sudo grep -rln WINDOW_O_DOWN /var/www/emtskills/cron/ /var/www/emtskills/lib/), then make the writer read-modify-write or respect a guard marker. MCP note: emsu-operations returned 3 consecutive 'Not connected' errors at 16:25 PT this session (observed directly) — restart it before the hunt if still down.\n\nReference IDs:\n- Ideas: #28039 [deployed], #28040 [deployed], #28045 [deployed], #28046 [deployed], #28049 [executing], #26922 [deployed] (prior pattern ref)\n- Files touched: /etc/litellm/config.yaml, ~/bin/glm52_watchdog_worker_v2.sh (cato), ~/bin/glm52_fabric_guard.sh (cato, new + crontab), HANDOFF_NOTES.md\n\n# Reversal Log\n- 'watchdog relaunched the engine (helpful)' → 'watchdog killed every relaunch mid weight-load' | insufficient probe | causal rule updated: 315 (amend executed)\n- 'ring not running, no process' → 'ring was in weight-load, process at 96% CPU' | insufficient probe | causal rule updated: 315\n- 'independent grader consumer' → 'my own frankenstein-llm calls from Ruben Cline window' | wrong premise | causal rule updated: 315\n- 'all ring nodes down (rack event implied)' → 'cato-only reset; other 5 up 19 days' | insufficient probe | causal rule updated: 315\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -140693,13 +140693,13 @@
   },
   "1787517380902": {
    "task_id": "1787517380902",
-   "mtime": 1787537010293,
+   "mtime": 1787591435021,
    "created_at": "2026-08-23T20:36:20.902Z",
-   "last_modified": "2026-08-24T02:03:30.293Z",
-   "size_kb": 402,
-   "turn_count": 117,
+   "last_modified": "2026-08-24T17:10:35.021Z",
+   "size_kb": 408,
+   "turn_count": 125,
    "title": "#VERITAS\n\nRebase and analyze since last analysis\n\nVERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n════════",
-   "pickup_prompt": " .bak-veritasfixes-20260823, lint clean): (1) correction LLM appended a literal PICKUP PROMPT handoff block into the student email body, added prompt rule 5b + post-extract truncation guard; (2) length sanity check rejected short-text corrections then sent the ORIGINAL flagged, relaxed floor + LENGTH PARITY prompt rule; (3) HTML-template emails were silently sent UNcorrected while the audit claimed Auto-corrected (G5 gaslight class), honest log line added.\n\nDESIGN FINDINGS FILED: #28043 [proposed] (mailer passes empty evidence to judge, every material claim UNSUPPORTED, ~100% FAIL + review-flag spam + UNKNOWN hedging degrading student email; needs evidence plumbing or high-stakes-only scope); #28044 [proposed] (HTML-body replacement gap + 8-23s per-email latency + correction endpoint timeouts under LiteLLM load; recommends text-only MIME alternative, text_hash caching, 1-rung email ladder).\n\nHANDOFF_NOTES.md updated 21:05:16 UTC.\n\n# Reversal Log\n1. conclusion 'truth_judge_log is empty / judge never invoked' → corrected '151 cfa_email judgments since 08-22, 141 FAIL' | RCA bucket: insufficient probe (queried column created_at, actual column is ts) | causal rule: none (tool-usage probe error, corrected by re-probe with correct column).\n2. conclusion 'correction endpoint 401 (LITELLM_MASTER_KEY missing)' → corrected 'key IS defined in config.local.php line 43; isolated snippet had not loaded config.local.php' | RCA bucket: unread source | causal rule: none (probe-scope error, corrected by loading config).\n3. No other reversals this window. All deliverable claims (files patched, backups created, idea ids) verified by independent read-back in-session.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787121837052 - VERITAS auto-correction rebase\n\nWhere we left off (verified 2026-08-23 13:05 AKDT):\n- HTTP-400-on-FAIL root cause fixed in routes/api_fleet_inventory.php (http_response_code(200) added, backup .bak-veritas400-20260823); production auto-corrections now flowing (email_send_blocks rows 40428-40440)\n- 3 secondary bugs fixed in lib/truth_judge.php + lib/mailer.php (PICKUP contamination guard, length parity, HTML honest log; backups .bak-veritasfixes-20260823, lint clean)\n- FPM reload was on cooldown at fix time; opcache revalidate 60s propagates FPM path, CLI probe verified independent\n\nOpen threads to drive next:\n1. #28043 [proposed] - design decision: evidence plumbing vs high-stakes-only judge scope so email stops 100%-FAILing and review-flag spamming\n2. #28044 [proposed] - implement HTML-aware correction (text-only MIME alternative), text_hash judge caching, and 1-rung email ladder to cut 8-23s latency\n3. #27942 [deployed] - continue monitoring veritas_l4_auto_corrected rows; confirm corrected bodies actually ship (plain-text path verified, HTML path logs honest)\n4. #28028 [proposed] - re-run full end-to-end auto-correction test now that FAIL verdicts are correctly seen\n\nReference IDs:\n- Ideas filed: #28043 [proposed], #28044 [proposed]\n- Files touched: routes/api_fleet_inventory.php, lib/truth_judge.php, lib/mailer.php, /tmp/veritas_direct_test.php\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "rung ladder\n- [ ] Verify: lint + live probe\n- [ ] Re-validate + completion with PICKUP PROMPT\n</task_progress>\n</use_mcp_tool>",
    "ideas": {
     "2230": null,
     "2338": null,
@@ -140740,6 +140740,17 @@
     "28044": "proposed",
     "178712": null
    }
+  },
+  "1787591377568": {
+   "task_id": "1787591377568",
+   "mtime": 1787591458443,
+   "created_at": "2026-08-24T17:09:37.568Z",
+   "last_modified": "2026-08-24T17:10:58.443Z",
+   "size_kb": 348,
+   "turn_count": 7,
+   "title": "Server is down? Can you bring ti back up?",
+   "pickup_prompt": null,
+   "ideas": {}
   }
  }
 }

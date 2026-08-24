@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/24/2026, 9:11:20 AM PT | window: last 72h | 29 tasks | index total 900 (parsed 0, cached 900)
+Generated: 8/24/2026, 10:11:20 AM PT | window: last 72h | 28 tasks | index total 901 (parsed 3, cached 898)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787517380902` | 8/23/2026, 7:03:30 PM | 117 | 402KB | #VERITAS |
-| `1787516392266` | 8/23/2026, 7:02:36 PM | 597 | 1141KB | #Deepseek spillage now vs before |
+| `1787591377568` | 8/24/2026, 10:10:58 AM | 7 | 348KB | Server is down? Can you bring ti back up? |
+| `1787516392266` | 8/24/2026, 10:10:49 AM | 603 | 1475KB | #Deepseek spillage now vs before |
+| `1787517380902` | 8/24/2026, 10:10:35 AM | 125 | 408KB | #VERITAS |
 | `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 | `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
 | `1787517352553` | 8/23/2026, 2:10:08 PM | 138 | 692KB | #Argus |
@@ -37,70 +38,22 @@ Generated: 8/24/2026, 9:11:20 AM PT | window: last 72h | 29 tasks | index total 
 | `1787329580892` | 8/21/2026, 3:33:49 PM | 156 | 464KB | #Executor |
 | `1787258077644` | 8/21/2026, 11:29:40 AM | 288 | 3416KB | #Payments |
 | `1787254375526` | 8/21/2026, 11:27:22 AM | 190 | 568KB | #Argus Improvements |
-| `1787207812240` | 8/21/2026, 9:50:40 AM | 406 | 2495KB | #Extension |
-| `1787256884229` | 8/21/2026, 9:32:00 AM | 152 | 618KB | #Externships/ CAPCE?  |
 
 ---
 
 ## Per-window detail
 
-### `1787517380902` — 8/23/2026, 7:03:30 PM PT — 117 turns
+### `1787591377568` — 8/24/2026, 10:10:58 AM PT — 7 turns
 
 **Original task:**
 
 ```
-#VERITAS
-
-Rebase and analyze since last analysis
-
-VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
-
-════
+Server is down? Can you bring ti back up?
 ```
 
-**Ideas referenced:** #12459, #16345, #178712, #2230, #2338, #2358, #25888, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28043 [proposed], #28044 [proposed]
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-**Last PICKUP PROMPT:**
-
-```
- .bak-veritasfixes-20260823, lint clean): (1) correction LLM appended a literal PICKUP PROMPT handoff block into the student email body, added prompt rule 5b + post-extract truncation guard; (2) length sanity check rejected short-text corrections then sent the ORIGINAL flagged, relaxed floor + LENGTH PARITY prompt rule; (3) HTML-template emails were silently sent UNcorrected while the audit claimed Auto-corrected (G5 gaslight class), honest log line added.
-
-DESIGN FINDINGS FILED: #28043 [proposed] (mailer passes empty evidence to judge, every material claim UNSUPPORTED, ~100% FAIL + review-flag spam + UNKNOWN hedging degrading student email; needs evidence plumbing or high-stakes-only scope); #28044 [proposed] (HTML-body replacement gap + 8-23s per-email latency + correction endpoint timeouts under LiteLLM load; recommends text-only MIME alternative, text_hash caching, 1-rung email ladder).
-
-HANDOFF_NOTES.md updated 21:05:16 UTC.
-
-# Reversal Log
-1. conclusion 'truth_judge_log is empty / judge never invoked' → corrected '151 cfa_email judgments since 08-22, 141 FAIL' | RCA bucket: insufficient probe (queried column created_at, actual column is ts) | causal rule: none (tool-usage probe error, corrected by re-probe with correct column).
-2. conclusion 'correction endpoint 401 (LITELLM_MASTER_KEY missing)' → corrected 'key IS defined in config.local.php line 43; isolated snippet had not loaded config.local.php' | RCA bucket: unread source | causal rule: none (probe-scope error, corrected by loading config).
-3. No other reversals this window. All deliverable claims (files patched, backups created, idea ids) verified by independent read-back in-session.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 - VERITAS auto-correction rebase
-
-Where we left off (verified 2026-08-23 13:05 AKDT):
-- HTTP-400-on-FAIL root cause fixed in routes/api_fleet_inventory.php (http_response_code(200) added, backup .bak-veritas400-20260823); production auto-corrections now flowing (email_send_blocks rows 40428-40440)
-- 3 secondary bugs fixed in lib/truth_judge.php + lib/mailer.php (PICKUP contamination guard, length parity, HTML honest log; backups .bak-veritasfixes-20260823, lint clean)
-- FPM reload was on cooldown at fix time; opcache revalidate 60s propagates FPM path, CLI probe verified independent
-
-Open threads to drive next:
-1. #28043 [proposed] - design decision: evidence plumbing vs high-stakes-only judge scope so email stops 100%-FAILing and review-flag spamming
-2. #28044 [proposed] - implement HTML-aware correction (text-only MIME alternative), text_hash judge caching, and 1-rung email ladder to cut 8-23s latency
-3. #27942 [deployed] - continue monitoring veritas_l4_auto_corrected rows; confirm corrected bodies actually ship (plain-text path verified, HTML path logs honest)
-4. #28028 [proposed] - re-run full end-to-end auto-correction test now that FAIL verdicts are correctly seen
-
-Reference IDs:
-- Ideas filed: #28043 [proposed], #28044 [proposed]
-- Files touched: routes/api_fleet_inventory.php, lib/truth_judge.php, lib/mailer.php, /tmp/veritas_direct_test.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1787516392266` — 8/23/2026, 7:02:36 PM PT — 597 turns
+### `1787516392266` — 8/24/2026, 10:10:49 AM PT — 603 turns
 
 **Original task:**
 
@@ -146,6 +99,32 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
+```
+
+### `1787517380902` — 8/24/2026, 10:10:35 AM PT — 125 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
+```
+
+**Ideas referenced:** #12459, #16345, #178712, #2230, #2338, #2358, #25888, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28043 [proposed], #28044 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+rung ladder
+- [ ] Verify: lint + live probe
+- [ ] Re-validate + completion with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
 ```
 
 ### `1787516215349` — 8/23/2026, 4:58:00 PM PT — 290 turns
@@ -1418,103 +1397,5 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1787207812240` — 8/21/2026, 9:50:40 AM PT — 406 turns
-
-**Original task:**
-
-```
-#Extension
-
-Why is this extension needed? Can we/should we resolve it? 
-
-Got the three sections Vicky: 26818A, 26718A, 26118A.
-
-Jon, flagging for you.
-She needs the extension tonight, waiting on your call.
-
-Check Chat 55 on it
-```
-
-**Ideas referenced:** #1000, #1001, #1002, #1003, #1004, #1005, #1006, #1007, #1015, #1021, #1022, #1039, #1040, #1046, #1047, #1048, #1049, #1050, #1051, #1052, #1053, #1054, #1055, #1061, #1062, #1071, #1073, #1074, #1075, #1076, #1077, #1078, #1079, #1080, #1094, #1112, #1119, #1121, #1122, #1123, #1124, #1125, #1126, #1127, #1128, #1134, #1194, #1201, #1203, #1204, #1205, #1206, #1207, #1208, #1209, #1210, #1224, #1242, #1249, #1251, #1252, #1253, #1254, #1255, #1256, #1257, #1258, #1264, #1304, #1305, #1346, #1353, #1354, #1355, #1356, #1357, #1358, #1359, #1360, #1361, #1369, #1376, #1394, #1401, #1402, #1403, #1404, #1405, #1406, #1407, #1408, #1409, #1416, #1480, #1520, #1521, #1527, #1528, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1536, #1544, #1550, #1551, #1568, #1569, #1575, #1576, #1577, #1578, #1579, #1580, #1581, #1582, #1583, #1584, #1590, #1591, #16069, #16817, #1697, #1698, #1699, #1700, #1701, #1702, #1703, #1704, #1745, #1746, #1747, #1748, #1749, #1750, #1751, #1752, #178713, #178720, #1858, #1859, #1860, #1861, #1862, #1863, #1864, #1865, #18944, #18951, #1903, #1904, #1905, #1906, #1907, #1908, #1909, #1910, #19163, #2016, #2017, #2018, #2019, #2020, #2021, #2022, #2023, #2064, #2065, #2066, #2067, #2068, #2069, #2070, #2071, #2117, #2149, #2150, #2156, #2157, #2158, #2159, #2160, #2161, #2162, #2163, #2164, #2165, #2173, #2179, #2180, #2197, #2198, #2204, #2205, #2206, #2207, #2208, #2209, #2210, #2211, #2212, #2213, #2219, #2220, #2230, #2258, #2275, #2296, #2317, #2338, #23483, #2358, #2379, #25185, #2550, #25888, #2589, #2590, #25909, #26443, #26834, #26898, #26899, #26900, #27152, #27203, #27251, #27252, #27253, #2748, #27503, #27524, #27531, #27604 [executing], #2763, #27648, #27663, #27673, #27684, #27685, #27691, #27692, #27699, #27715 [deployed], #27724 [deployed], #27793 [proposed], #27794 [proposed], #3098, #3843, #3848, #3850, #3851, #3852, #3870, #3871, #3872, #3875, #3877, #3879, #3890, #3894, #3895 [deployed], #3897, #3899 [deployed], #3901 [deployed], #3902 [deployed], #3903, #3904, #3905, #4929, #6785, #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-filed idea #27794 [rejected].
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1787207812240 - MWF Exam 5 extension for sections 26818A/26718A/26118A/26918A.
-
-Where we left off (verified 2026-08-21 09:49 PT):
-- Extension ALREADY APPLIED: all 9 18A sections carry group-override close epoch 1787320799 = 2026-08-20 23:59:59 PT; quiz timeclose=0 (sole binding constraint = the override).
-- Chat 55 thread recovered (imessage_messages chat_id=55): Vicky rows 519895/519896/519926, Ruben ack 519976; ruben_imessage_issues chain 3895 through 3905.
-- Ticket 26443 (Gurneet Sanghera 26818A-04) left Open: root cause documented, verified state commented, awaiting fresh decision if she still needs Exam 5 after the Aug 20 window.
-- Rule 317 amended for the within-window detector wrong-premise reversal.
-- Clock-skew idea #27794 [rejected]: direct server probe disproved the lag, NTP synced, timestamps match. Plain-language explanation delivered in the parent completion.
-- Duplicate-comment idea #27793 [deployed]: dedup fix implemented, ready_for_review.
-
-Open threads to drive next:
-1. #27793 [deployed] - review the implemented EXAM-EXT-FLAG dedup fix on ticket 26443 (13 identical internal comments in ~24h); confirm it posts once per ticket and does not repeat; per Ruben: if a bug, fix the dedup, if an override, route to Jon, if exam enforcement, use the standard enforcement path.
-2. Ticket 26443 - decide whether Gurneet Sanghera needs a fresh Exam 5 extension now that the Aug 20 23:59:59 PT window is closed (human-only decision, no idea).
-
-Reference IDs:
-- Ticket: 26443 (TKT-20260819-51CD34FB)
-- Ruben imessage issues: 3895, 3899, 3901, 3902, 3903, 3904, 3905
-- Ideas filed: #27793 [deployed], #27794 [rejected], #27604 [rejected], #27724 [deployed]
-- Moodle quizzes: 681, 732, 954
-- Files touched: none (read-only investigation + ticket comment + issue/idea updates)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787256884229` — 8/21/2026, 9:32:00 AM PT — 152 turns
-
-**Original task:**
-
-```
-#Externships/ CAPCE? 
-
-The affiliation agreements coming from the portal apparently have a citation about being CAPCE accredited that needs to be removed
-```
-
-**Ideas referenced:** #64748
-
-**Last PICKUP PROMPT:**
-
-```
-ne and nothing was lost with it.
-
-═════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═════════════════════════════════════════════
-Pick up the CAPCE-citation removal task — affiliation agreements from the portal.
-
-Where we left off (verified 2026-08-21 09:31 PT):
-- Root cause: agreement "parties" paragraph cited CAPCE accreditation in `AgreementPDFGenerator.php`; the AI outreach prompt in `campaign_api.php` claimed CAPCE approval. Both removed (backups: `*.bak-capce-20260820-132613` and `*.bak-capce-20260820-133110`).
-- Diff verified: only the 3-line CAPCE accreditation sentence was removed; the paragraph now reads "EMSU is a nationally recognized emergency medical services education institution providing EMT and Paramedic training programs." No other content changed.
-- All 9 render methods intact (title page, agreement body, notices, signature page/block, Exhibit A, Exhibit B, program addendum) — document is full-length.
-- Regenerated 4 PDFs verified CAPCE-free via `pdftotext`: signed 0002 is 7 pages (12,896 chars), 0004 / PREVIEW / REVIEW are 4 pages (~7,900 chars each).
-- Handoff note appended to `HANDOFF_NOTES.md`.
-
-Open threads to drive next:
-1. None — all work completed this session. Only non-default human-preference action remains: if Ruben wants a browsable link, a regenerated PDF would need copying to a public-vhost temp location or the full text pasted in-line (human-preference, no idea id filed).
-
-Reference IDs:
-- Ticket: externships/CAPCE affiliation-agreement citation removal
-- Ideas filed: none (no deferrable work)
-- Files touched: `/var/www/emtskills/externship/lib/AgreementPDFGenerator.php`, `/var/www/emtskills/externship/campaign_api.php`, 4 agreement PDFs, `/var/www/emtskills/docs/HANDOFF_NOTES.md`
-- Backups: `AgreementPDFGenerator.php.bak-capce-20260820-132613`, `campaign_api.php.bak-capce-20260820-133110`
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═════════════════════════════════════════════</result>
 </attempt_completion>
 ```

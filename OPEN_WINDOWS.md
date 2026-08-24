@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/24/2026, 10:11:20 AM PT | window: last 72h | 28 tasks | index total 901 (parsed 3, cached 898)
+Generated: 8/24/2026, 11:11:21 AM PT | window: last 72h | 29 tasks | index total 902 (parsed 3, cached 899)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787591377568` | 8/24/2026, 10:10:58 AM | 7 | 348KB | Server is down? Can you bring ti back up? |
-| `1787516392266` | 8/24/2026, 10:10:49 AM | 603 | 1475KB | #Deepseek spillage now vs before |
-| `1787517380902` | 8/24/2026, 10:10:35 AM | 125 | 408KB | #VERITAS |
+| `1787593935930` | 8/24/2026, 11:09:46 AM | 56 | 2318KB | This person needs to stop receiving invoices for 13K -> |
+| `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
+| `1787517380902` | 8/24/2026, 11:02:42 AM | 318 | 1368KB | #VERITAS |
+| `1787516392266` | 8/24/2026, 10:37:22 AM | 672 | 1594KB | #Deepseek spillage now vs before |
 | `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 | `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
 | `1787517352553` | 8/23/2026, 2:10:08 PM | 138 | 692KB | #Argus |
@@ -43,7 +44,61 @@ Generated: 8/24/2026, 10:11:20 AM PT | window: last 72h | 28 tasks | index total
 
 ## Per-window detail
 
-### `1787591377568` — 8/24/2026, 10:10:58 AM PT — 7 turns
+### `1787593935930` — 8/24/2026, 11:09:46 AM PT — 56 turns
+
+**Original task:**
+
+```
+This person needs to stop receiving invoices for 13K ->
+```
+
+**Ideas referenced:** #16613, #178759, #25185, #28043, #28044, #28089 [deployed], #28090 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787593920000 — stop false $12,860 collection emails to 26814T-15 (cron join coercion fix).
+
+Where we left off (verified 2026-08-24 10:06 AKDT):
+- Cron fix for the false $12,860 emails is live and dry-run checked; record at #28089 [deployed].
+- #28090 [proposed] — open data question awaiting human review: mirror ties invoice 164951 (Alex's payment-plan invoice, $300 paid / $1,545 open) to Keyes db id 8137519; Alex 8143468 has zero mirror rows. No re-tie performed.
+- Alex suspension 27692 (moodle_suspended=1) left active; CS follow-up on withdraw vs transfer sent 8/24 9:47 AM.
+
+Open threads to drive next:
+1. #28090 [proposed] — Vicky to check live QB customer for invoice 164951, then re-tie mirror student_db_id to 8143468 if confirmed (human decision, not autonomous).
+2. #28089 [deployed] — optional one-time audit of collection_reminder_log for other suspended students who received section-sum balances (cron live since 2026-04-14).
+
+Reference IDs:
+- Ideas filed: #28089 [deployed], #28090 [proposed]
+- Ideas closed: none
+- Files touched: /var/www/emtskills/cron/cron_post_due_reminders.php, /tmp/patch_post_due.py
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Rule 119 pre-turn signal check (compress signal file)
+- [x] Look up student alex.vipersmith@gmail.com (check_student)
+- [x] Verify payment state across Authnet/QB/Affirm (rule 33 aggregator)
+- [x] Identify sender: cron_post_due_reminders.php; root cause = int/varchar join coercion ('26814T-15'→26814) summing whole-section balances ($12,860 = Keyes+Ochoa open invoices)
+- [x] Patch cron join to student_db_id = s.id (2 blocks + escalation subquery)
+- [x] php -l + read-back verify (rule 99)
+- [x] Dry-run cron, confirm Alex excluded
+- [x] File ideas #28089 (deployed) + #28090 (proposed), reconciled
+- [x] Handoff note written
+- [x] Completion passes rule-91 gates + attempt_completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1787591377568` — 8/24/2026, 11:06:23 AM PT — 164 turns
 
 **Original task:**
 
@@ -51,9 +106,112 @@ Generated: 8/24/2026, 10:11:20 AM PT | window: last 72h | 28 tasks | index total
 Server is down? Can you bring ti back up?
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Ideas referenced:** #10469, #13063, #13709, #13757, #1391, #16523, #16839, #16851, #17483, #177918, #177926, #178746, #1837, #21582, #22066, #2242, #24635, #24645, #25194, #25280, #25294, #26068, #2613, #2615, #26628, #26881, #26895, #27126, #2740, #27702, #27860, #28077 [deployed], #28078, #28082 [proposed], #28085 [proposed], #28086 [proposed], #3023, #3093, #4016, #4802, #4863, #4906, #4907, #5080, #5129, #5247, #5387, #5749, #6064, #6105, #6277, #706520, #706522, #706524, #9215, #9320
 
-### `1787516392266` — 8/24/2026, 10:10:49 AM PT — 603 turns
+**Last PICKUP PROMPT:**
+
+```
+-trigger separation amendment)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787461448415 — WOPR nginx outage: recovery + recovery-gap fix done; blip 297 done, UDM-level trigger pending credentials.
+
+Where we left off (verified 2026-08-24 10:05 PT):
+- Site restored: nginx active, Restart=always override live, WRITER-SERVE invariant in emsu-lease-heartbeat (controlled test passed: stop -> one heartbeat -> auto-start, log line + external HTTP 200).
+- 297 on the blip COMPLETE to the access boundary: WOPR proven innocent (kern clean, eno1 traffic continued at 604 p/s, EDEV 0 errors); pure-DNS failure ruled out (1.1.1.1 IP-literal probe also failed); onset ~03:54 (last inbound SMTP 03:53:34, last outbound LLM call 03:53); WAN back by <=09:20 (litellm tunnel curl 200); failover worked as designed (Joshua wrote hourly system_health 04:46-09:46 during WOPR read_only; failback 10:17; witness writer=wopr epoch=2). Classification: UNKNOWN at UDM/ISP level (bucket: unknown per rule 297), localized to UDM-WAN/ISP segment.
+- EVIDENCE GAP: UDM-SE (MAC 6C63F8703B65) creds in NO record; fleet_inventory has no UDM row; WOPR journald for the window purged.
+- SHIPPED: probe self-diagnostics (per-probe curl rc: 6=DNS 7=refused 28=timeout 35=TLS + PARTIAL-EGRESS 10-min-rate-limited signal) in emsu-lease-heartbeat, syntax-checked, live via 10s timer.
+
+Open threads to drive next:
+1. #28086 [proposed] — UDM-level trigger closure: needs Ruben to provide UDM admin access (human-only decision — credentials), then read UDM WAN/uptime logs for 03:54 AKDT; candidates ranked ISP maintenance > UDM auto-update > WAN DHCP renew. Full 297 findings already appended to the idea description.
+2. #28085 [proposed] — WOPR journald history loss investigation + persistent retention (why pre-10:25 journal gone; /etc/machine-id regen suspicion).
+3. #28077 [deployed] — Restart=always override (covers crash exits only; NOT administrative stops — documented in #2615). (verified: reconcile status=deployed)
+4. #28082 [deployed] — trigger identification; completed in-window, residual questions live in #28086/#28085. (verified: reconcile status=deployed)
+
+Reference IDs:
+- Ideas filed: #28077 [deployed], #28082 [deployed], #28085 [proposed], #28086 [proposed]
+- Bug library: frankenstein_router_incidents #2613 (symptom), #2615 (true root cause + fix, resolved)
+- Files touched (WOPR): /usr/local/bin/emsu-lease-heartbeat (WRITER-SERVE + probe diagnostics; backups .bak-nginxinvariant-20260824-104749), /etc/systemd/system/nginx.service.d/respawn.conf
+- Rules amended: 317 (three flips: amplifier-vs-trigger; Restart= vs administrative stop; scope)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Recovery complete: nginx up, Restart=always live, site HTTP 200
+- [x] RECOVERY GAP FIXED: WRITER-SERVE invariant in emsu-lease-heartbeat; controlled test passed
+- [x] 297 on the blip: WOPR proven innocent; pure-DNS ruled out; timeline pinned; failover proven worked; classified UNKNOWN at UDM/ISP level (access boundary named)
+- [x] Probe self-diagnostics shipped (next blip self-classifies)
+- [x] Bug library #2613 + #2615; ideas #28077 [deployed], #28082 [deployed], #28085 [proposed], #28086 [proposed] (297 findings appended)
+- [x] Rule 317 amended for all three within-window reversals; all ideas reconciled
+- [x] Completed with full PICKUP PROMPT
+</task_progress>
+</attempt_co
+```
+
+### `1787517380902` — 8/24/2026, 11:02:42 AM PT — 318 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
+```
+
+**Ideas referenced:** #12459, #16345, #16732, #178712, #19173, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #4991
+
+**Last PICKUP PROMPT:**
+
+```
+o other reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052 - VERITAS email truth-gate tuning
+
+Where we left off (verified 2026-08-24 10:01 AKDT):
+- #28043 [deployed]: evidence plumbing. sendEmail has optional $veritasEvidence param threaded into judge_and_correct; cron_email_responder.php student-reply path builds COMPOSER GROUNDING from tools_used/fixes/studentCtx/intent. Live probe: truthful+evidence PASS, false+evidence FAIL+auto-correct.
+- #28044 [deployed]: verdict cache (78,041ms -> 6ms), email 1-rung ladder, HTML-body correction, review-flag dedupe. Table admin_portal.veritas_verdict_cache.
+- Backups: lib/mailer.php.bak-28043-20260824, cron/cron_email_responder.php.bak-28043-20260824, plus the earlier .bak-veritasfixes-20260823 set.
+- WOPR DB writable (lease epoch 2) after manual promote; the fence re-acquire path is #28078 [executing] (approved, executor auditing).
+
+Open threads to drive next:
+1. #28078 [executing] - HA fence re-acquire branch (approved, in executor auditing; anti-split-brain code)
+2. #28088 [proposed] - wire composer grounding into remaining sendEmail surfaces + monitor post-fix FAIL rate (query truth_judge_log by surface over next 24h; wire grounding into any surface still FAILing >50%)
+
+Reference IDs:
+- Ideas built this session: #28043 [deployed], #28044 [deployed]
+- Ideas filed as follow-ups: #28088 [proposed]
+- Ideas in executor: #28078 [executing]
+- Files touched: lib/mailer.php, lib/truth_judge.php, cron/cron_email_responder.php, routes/api_fleet_inventory.php, admin_portal.veritas_verdict_cache (new table)
+
+When finished, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] 94% FAIL root cause: empty evidence to judge
+- [x] Design + patches applied (mailer + responder), lint clean, backups created
+- [x] Verify CASE1: truthful+evidence → PASS
+- [x] Verify CASE2: false+evidence → FAIL + auto-correct (teeth kept)
+- [x] Stamp #28043 deployed
+- [x] Update handoff notes
+- [x] Reconcile ideas (#28043/#28044 deployed, #28078 executing, #28088 proposed)
+- [x] Validate completion → all gates passed, gate clear
+- [x] Ship attempt_completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1787516392266` — 8/24/2026, 10:37:22 AM PT — 672 turns
 
 **Original task:**
 
@@ -68,63 +226,29 @@ Can you tell me how much deepseek spillage we have been having over the last 12 
 **Last PICKUP PROMPT:**
 
 ```
-#28049, window-o writer hunt).
+that is not deepseek spillage.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task — Deepseek spillage comparison (last 12h vs 72-84h ago).
 
-Pick up task #1787523900000 — ring restored, verified up AND at proper speed; hunt the window-o config writer.
+Where we left off (verified 2026-08-24 ~09:35 AM PT):
+- Answer delivered: 0 deepseek spills in last 12h, 0 in the 72-84h window. No change.
+- 15 spill/tracking tables probed via MySQL this session; all deepseek-targeted tables are empty except ruben_spill_log, whose 26 deepseek_direct rows all predate both windows (6/26-7/22).
 
-Where we left off (verified 2026-08-23 17:02 America/Anchorage):
-- Ring UP + healthy speed: decode=9.62 prefill=363.70 TOTAL=373.32 tok/s (counter method, 40s window), running=8 waiting=0 (verified: live metrics counter samples via ssh_command on :8210/metrics). Above the documented 260-273 healthy baseline.
-- Cause of outage: cato-only hard reset 00:06 (hardware watchdog or power, NOT a rogue window); NM stripped fabric /30s; NCCL died; deepseek-only fallback caught the spill; member-rotation config cron re-armed the deepseek-only chain mid-recovery.
-- Protections live: fabric_guard.sh cron on cato (5-min), watchdog init-grace (35 min), frankenstein-llm fallback local-first.
-- Also down (pre-existing, unrelated): Julia :11513 (host down), Cicero :11520.
-
-Open threads to drive next:
-1. #28049 [executing] — pinpoint the config-writer inserting WINDOW_O_DOWN comments into /etc/litellm/config.yaml (verified earlier this session: readers referencing window-o markers are cron_litellm_autoscaler_batcher.php, cron_litellm_restart_cooldown.php, cron_litellm_transport_reclassifier.php; next probe is sudo grep -rln WINDOW_O_DOWN /var/www/emtskills/cron/ /var/www/emtskills/lib/), then make the writer read-modify-write or respect a guard marker. MCP note: emsu-operations returned 3 consecutive 'Not connected' errors at 16:25 PT this session (observed directly) — restart it before the hunt if still down.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session (read-only verification; no system state changed).
 
 Reference IDs:
-- Ideas: #28039 [deployed], #28040 [deployed], #28045 [deployed], #28046 [deployed], #28049 [executing], #26922 [deployed] (prior pattern ref)
-- Files touched: /etc/litellm/config.yaml, ~/bin/glm52_watchdog_worker_v2.sh (cato), ~/bin/glm52_fabric_guard.sh (cato, new + crontab), HANDOFF_NOTES.md
+- Ticket: none
+- Ideas filed: none
+- Files touched: none (read-only MySQL queries only)
 
-# Reversal Log
-- 'watchdog relaunched the engine (helpful)' → 'watchdog killed every relaunch mid weight-load' | insufficient probe | causal rule updated: 315 (amend executed)
-- 'ring not running, no process' → 'ring was in weight-load, process at 96% CPU' | insufficient probe | causal rule updated: 315
-- 'independent grader consumer' → 'my own frankenstein-llm calls from Ruben Cline window' | wrong premise | causal rule updated: 315
-- 'all ring nodes down (rack event implied)' → 'cato-only reset; other 5 up 19 days' | insufficient probe | causal rule updated: 315
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1787517380902` — 8/24/2026, 10:10:35 AM PT — 125 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase and analyze since last analysis
-
-VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
-
-════
-```
-
-**Ideas referenced:** #12459, #16345, #178712, #2230, #2338, #2358, #25888, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28043 [proposed], #28044 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-rung ladder
-- [ ] Verify: lint + live probe
-- [ ] Re-validate + completion with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
 ```
 
 ### `1787516215349` — 8/23/2026, 4:58:00 PM PT — 290 turns

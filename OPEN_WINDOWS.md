@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/23/2026, 5:27:51 PM PT | window: last 72h | 30 tasks | index total 900 (parsed 2, cached 898)
+Generated: 8/24/2026, 3:11:17 AM PT | window: last 72h | 30 tasks | index total 900 (parsed 0, cached 900)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787516392266` | 8/23/2026, 5:03:00 PM | 594 | 1137KB | #Deepseek spillage now vs before |
+| `1787517380902` | 8/23/2026, 7:03:30 PM | 117 | 402KB | #VERITAS |
+| `1787516392266` | 8/23/2026, 7:02:36 PM | 597 | 1141KB | #Deepseek spillage now vs before |
 | `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 | `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
 | `1787517352553` | 8/23/2026, 2:10:08 PM | 138 | 692KB | #Argus |
-| `1787517380902` | 8/23/2026, 2:08:08 PM | 116 | 401KB | #VERITAS |
 | `1787516033804` | 8/23/2026, 1:35:11 PM | 116 | 368KB | #Frankenstein LLM Routing |
 | `1787515058425` | 8/23/2026, 1:31:21 PM | 82 | 325KB | This computer just started and it's very hot and laggy if even after just staring. even af |
 | `1787420987189` | 8/23/2026, 12:37:27 PM | 518 | 3563KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
@@ -45,7 +45,63 @@ Generated: 8/23/2026, 5:27:51 PM PT | window: last 72h | 30 tasks | index total 
 
 ## Per-window detail
 
-### `1787516392266` — 8/23/2026, 5:03:00 PM PT — 594 turns
+### `1787517380902` — 8/23/2026, 7:03:30 PM PT — 117 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
+```
+
+**Ideas referenced:** #12459, #16345, #178712, #2230, #2338, #2358, #25888, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28043 [proposed], #28044 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ .bak-veritasfixes-20260823, lint clean): (1) correction LLM appended a literal PICKUP PROMPT handoff block into the student email body, added prompt rule 5b + post-extract truncation guard; (2) length sanity check rejected short-text corrections then sent the ORIGINAL flagged, relaxed floor + LENGTH PARITY prompt rule; (3) HTML-template emails were silently sent UNcorrected while the audit claimed Auto-corrected (G5 gaslight class), honest log line added.
+
+DESIGN FINDINGS FILED: #28043 [proposed] (mailer passes empty evidence to judge, every material claim UNSUPPORTED, ~100% FAIL + review-flag spam + UNKNOWN hedging degrading student email; needs evidence plumbing or high-stakes-only scope); #28044 [proposed] (HTML-body replacement gap + 8-23s per-email latency + correction endpoint timeouts under LiteLLM load; recommends text-only MIME alternative, text_hash caching, 1-rung email ladder).
+
+HANDOFF_NOTES.md updated 21:05:16 UTC.
+
+# Reversal Log
+1. conclusion 'truth_judge_log is empty / judge never invoked' → corrected '151 cfa_email judgments since 08-22, 141 FAIL' | RCA bucket: insufficient probe (queried column created_at, actual column is ts) | causal rule: none (tool-usage probe error, corrected by re-probe with correct column).
+2. conclusion 'correction endpoint 401 (LITELLM_MASTER_KEY missing)' → corrected 'key IS defined in config.local.php line 43; isolated snippet had not loaded config.local.php' | RCA bucket: unread source | causal rule: none (probe-scope error, corrected by loading config).
+3. No other reversals this window. All deliverable claims (files patched, backups created, idea ids) verified by independent read-back in-session.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052 - VERITAS auto-correction rebase
+
+Where we left off (verified 2026-08-23 13:05 AKDT):
+- HTTP-400-on-FAIL root cause fixed in routes/api_fleet_inventory.php (http_response_code(200) added, backup .bak-veritas400-20260823); production auto-corrections now flowing (email_send_blocks rows 40428-40440)
+- 3 secondary bugs fixed in lib/truth_judge.php + lib/mailer.php (PICKUP contamination guard, length parity, HTML honest log; backups .bak-veritasfixes-20260823, lint clean)
+- FPM reload was on cooldown at fix time; opcache revalidate 60s propagates FPM path, CLI probe verified independent
+
+Open threads to drive next:
+1. #28043 [proposed] - design decision: evidence plumbing vs high-stakes-only judge scope so email stops 100%-FAILing and review-flag spamming
+2. #28044 [proposed] - implement HTML-aware correction (text-only MIME alternative), text_hash judge caching, and 1-rung email ladder to cut 8-23s latency
+3. #27942 [deployed] - continue monitoring veritas_l4_auto_corrected rows; confirm corrected bodies actually ship (plain-text path verified, HTML path logs honest)
+4. #28028 [proposed] - re-run full end-to-end auto-correction test now that FAIL verdicts are correctly seen
+
+Reference IDs:
+- Ideas filed: #28043 [proposed], #28044 [proposed]
+- Files touched: routes/api_fleet_inventory.php, lib/truth_judge.php, lib/mailer.php, /tmp/veritas_direct_test.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1787516392266` — 8/23/2026, 7:02:36 PM PT — 597 turns
 
 **Original task:**
 
@@ -258,62 +314,6 @@ Real-time PT on all timestamps named from tool output: last verified action 2026
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 Pick up task — Argus #27874 blank-status backfill + #27875 workflow engi
-```
-
-### `1787517380902` — 8/23/2026, 2:08:08 PM PT — 116 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase and analyze since last analysis
-
-VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
-
-════
-```
-
-**Ideas referenced:** #12459, #16345, #178712, #2230, #2338, #2358, #25888, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28043 [proposed], #28044 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
- .bak-veritasfixes-20260823, lint clean): (1) correction LLM appended a literal PICKUP PROMPT handoff block into the student email body, added prompt rule 5b + post-extract truncation guard; (2) length sanity check rejected short-text corrections then sent the ORIGINAL flagged, relaxed floor + LENGTH PARITY prompt rule; (3) HTML-template emails were silently sent UNcorrected while the audit claimed Auto-corrected (G5 gaslight class), honest log line added.
-
-DESIGN FINDINGS FILED: #28043 [proposed] (mailer passes empty evidence to judge, every material claim UNSUPPORTED, ~100% FAIL + review-flag spam + UNKNOWN hedging degrading student email; needs evidence plumbing or high-stakes-only scope); #28044 [proposed] (HTML-body replacement gap + 8-23s per-email latency + correction endpoint timeouts under LiteLLM load; recommends text-only MIME alternative, text_hash caching, 1-rung email ladder).
-
-HANDOFF_NOTES.md updated 21:05:16 UTC.
-
-# Reversal Log
-1. conclusion 'truth_judge_log is empty / judge never invoked' → corrected '151 cfa_email judgments since 08-22, 141 FAIL' | RCA bucket: insufficient probe (queried column created_at, actual column is ts) | causal rule: none (tool-usage probe error, corrected by re-probe with correct column).
-2. conclusion 'correction endpoint 401 (LITELLM_MASTER_KEY missing)' → corrected 'key IS defined in config.local.php line 43; isolated snippet had not loaded config.local.php' | RCA bucket: unread source | causal rule: none (probe-scope error, corrected by loading config).
-3. No other reversals this window. All deliverable claims (files patched, backups created, idea ids) verified by independent read-back in-session.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 - VERITAS auto-correction rebase
-
-Where we left off (verified 2026-08-23 13:05 AKDT):
-- HTTP-400-on-FAIL root cause fixed in routes/api_fleet_inventory.php (http_response_code(200) added, backup .bak-veritas400-20260823); production auto-corrections now flowing (email_send_blocks rows 40428-40440)
-- 3 secondary bugs fixed in lib/truth_judge.php + lib/mailer.php (PICKUP contamination guard, length parity, HTML honest log; backups .bak-veritasfixes-20260823, lint clean)
-- FPM reload was on cooldown at fix time; opcache revalidate 60s propagates FPM path, CLI probe verified independent
-
-Open threads to drive next:
-1. #28043 [proposed] - design decision: evidence plumbing vs high-stakes-only judge scope so email stops 100%-FAILing and review-flag spamming
-2. #28044 [proposed] - implement HTML-aware correction (text-only MIME alternative), text_hash judge caching, and 1-rung email ladder to cut 8-23s latency
-3. #27942 [deployed] - continue monitoring veritas_l4_auto_corrected rows; confirm corrected bodies actually ship (plain-text path verified, HTML path logs honest)
-4. #28028 [proposed] - re-run full end-to-end auto-correction test now that FAIL verdicts are correctly seen
-
-Reference IDs:
-- Ideas filed: #28043 [proposed], #28044 [proposed]
-- Files touched: routes/api_fleet_inventory.php, lib/truth_judge.php, lib/mailer.php, /tmp/veritas_direct_test.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
 ```
 
 ### `1787516033804` — 8/23/2026, 1:35:11 PM PT — 116 turns

@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 9:50:15 AM PT | window: last 72h | 27 tasks | index total 908 (parsed 0, cached 908)
+Generated: 8/25/2026, 10:50:16 AM PT | window: last 72h | 25 tasks | index total 908 (parsed 0, cached 908)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -35,8 +35,6 @@ Generated: 8/25/2026, 9:50:15 AM PT | window: last 72h | 27 tasks | index total 
 | `1787430120479` | 8/22/2026, 4:19:46 PM | 186 | 2242KB | frankenstein llm may be going rogue. can you check? seems to be drifting tasks |
 | `1787421878922` | 8/22/2026, 1:32:14 PM | 208 | 2302KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787256742974` | 8/22/2026, 12:58:22 PM | 730 | 9185KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
-| `1787420877031` | 8/22/2026, 10:47:57 AM | 1 | 883KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
-| `1787327963594` | 8/22/2026, 10:35:35 AM | 1376 | 4557KB | #Julia |
 
 ---
 
@@ -1303,77 +1301,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - T#01 use_mcp_tool(clinerules_truth_judge, test claim with one false statement), judge call logged, ladder fell back to deepseek-v4-pro when GLM ring was slow
 - T#02 mysql SELECT truth_judge_log, id=9 verdict=FAIL claims_unsupported=1 latency_ms=50328 (E2E pass: judge correctly caught the false claim)
 - T#03 ssh_command curl litellm health, HTTP 200 in 15ms (router 
-```
-
-### `1787420877031` — 8/22/2026, 10:47:57 AM PT — 1 turns
-
-**Original task:**
-
-```
-This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787327963594` — 8/22/2026, 10:35:35 AM PT — 1376 turns
-
-**Original task:**
-
-```
-#Julia
-
-Did Julia/Claudia come back online? 
-
-Do not mess with other boxes. Read to be safe:
-
-Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii (repeats ring)  
-
-
-Both answered. The method is now written down permanently, and on the safety question my answer changed once I read the boot log.
-
-## Where 671 came from, and it is now durable
-
-Written to `/var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md` so it survives this window.
-
-
-Two counters off cato's `:8210/metrics`, sampled 60 seconds apart, subtracted, 
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11397, #11741, #11781, #11936, #11942, #11945, #12247, #12251, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12407, #1241, #12425, #12459, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #12657, #12716, #12824, #12872, #12878, #13085, #13108, #13202, #13831, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16545, #16718, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1754, #1755, #1779, #178713, #178732, #178733, #1798, #1828, #18312, #18326, #19338, #19458, #19491, #19567, #19653, #1989, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2230, #2254, #2258, #22584, #22588, #2294, #2298, #2299, #2307, #2314, #23169, #2338, #2358, #24172, #24217, #25097, #25185, #2537, #25378, #25381, #2546, #25470, #2550, #25646, #2571, #2573, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25812, #25888, #2589, #25916, #2592, #2597, #26209, #26284 [executing], #26400, #26403, #26663, #26823, #26824, #26825, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932 [deployed], #27152, #27236, #27249 [executing], #27250, #27259, #27271, #27447, #27492, #27494, #27503 [proposed], #27508, #27514, #27515, #27524, #27531, #27663, #27673, #27684, #27685, #27690 [deployed], #27692, #27698 [deployed], #27702, #27711, #27712 [executing], #27713 [proposed], #27714 [proposed], #27715 [deployed], #27722, #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [proposed], #27869 [proposed], #27882 [proposed], #27905 [proposed], #30877, #39273, #4071, #40738, #40831, #40880, #41726, #4194, #42406, #43565, #43728, #45834, #46862, #475569, #49717, #4987, #50015, #50729, #50837, #5162, #5178, #51812, #52654, #52734, #52805, #52816, #52852, #52942, #53116, #53180, #53284, #53323, #5918, #5919, #5930, #64748, #6486, #6487, #6826, #7142, #7149, #7515
-
-**Last PICKUP PROMPT:**
-
-```
-— matches rule 322 discipline)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787327963594 — Qwen3.8-27B fleet rollout: fresh status 2026-08-22 10:35 PT.
-
-Where we left off (probes run 10:33-10:35 PT):
-- NERO LIVE: nero-qwen38-27b lane verified through router (reply='\n\nOK' finish=stop at 10:34:37 PT); survived overnight.
-- JOSHUA: 70B crash-loop re-enabled overnight (Up 5 seconds at 10:34:45, restart policy reverted); FP8 download died (sudo python missing huggingface_hub). Kernel 6.17→7.0 upgrade remains the gating Ruben decision.
-- CICERO: both tunnels down (:11520 and :2221 CLOSED at 10:34:19); needs on-box hands.
-- MAXIMUS: :2224 port now OPEN but publickey denied — WOPR key still not in authorized_keys; ollama 0.30.11 too old for qwen3.8.
-- Austin minis: 16GB, skip for 27B (4-bit doesn't fit).
-
-Open threads to drive next:
-1. #27869 [proposed] — remaining rollout: Cicero 8-bit (after box access), Maximus 4-bit (after one-line key fix on the Mac), Joshua FP8 launch (after kernel decision + re-download)
-2. #27882 [deployed] — Joshua crash-loop root cause documented; the fix (kernel upgrade) is the pending Ruben decision
-
-Reference IDs:
-- Ideas in flight: #27869 [proposed], #27882 [deployed]
-- Ideas closed: #27858 [deployed]
-- Files touched: none this turn (status probes only)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Re-probe Nero lane + Cicero reachability + Joshua state + Maximus (fresh state)
-- [x] Deliver per-box status + what's next for each
-</task_progress>
-</attempt_completion>
 ```

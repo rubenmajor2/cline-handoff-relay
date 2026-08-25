@@ -10,10 +10,10 @@ One sentence: **Claim scope must equal probe scope.** A tool's auto-success sign
 
 The reversal log collapses to FOUR recurring failure modes, in order of frequency:
 
-- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +5 since 2026-08-19 | latest: Within-window reversal: reconcile_ideas reported #27697 [executing] (status=in_progress) a]
+- **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +6 since 2026-08-19 | latest: 2026-08-25 Argus repair window: two files (cron_argus_offloaded_task_reconciler.php, cron_]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +49 since 2026-08-19 | latest: 2026-08-24 524 diagnosis reversal: declared Big Mac 'physically DOWN' by probing 10.100.0.]
 - **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +60 since 2026-08-19 | latest: 2026-08-24 detector positive-control: a control test (CONTROL 4b) returned NO and was mome]
-- **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +12 since 2026-08-19 | latest: 2026-08-19 scope reversal: the original completion said the remaining active suspensions w]
+- **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +13 since 2026-08-19 | latest: 2026-08-25 Argus repair window, second flip: the first completion reported the offload swe]
 <!-- golden-rule-table:end -->
 
 English-only, always (narration included); domain context never justifies language switching.
@@ -234,5 +234,25 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: unread source
 - Trigger pattern: empty portal mirror table treated as evidence of missing student paperwork without probing the Moodle source-of-truth or resolving archived-vs-live Moodle accounts
 - Reversal note: 2026-08-24 PD-80 paperwork reversal: initial framing treated the empty admin_portal.ExternshipFormSubmission rows (67 of 168 students at the 80% anchor with <5 portal forms) as evidence of missing externship paperwork and of idea #19419 being a false deploy. Live probe of the Moodle side reversed it: the simplecertificate availability trees ALREADY gate the EOC cert on the 5 paperwork assign modules, and sample student Kotturu had ALL paperwork submitted in Moodle under her LIVE account (uid 53198) while Students.moodle_url pointed at her ARCHIVED account (53174) and the portal table had 0 rows. Amended behavior: before claiming a compliance artifact is missing, enumerate EVERY surface where that artifact can legitimately live (portal table AND Moodle assign modules AND the cert availability tree) and probe the LIVE identity (archived accounts resolved to live) — an empty row count in one mirror table is never evidence the artifact does not exist.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-25 22:34 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: argus-repairs-20260825
+- RCA bucket: insufficient probe
+- Trigger pattern: script behavior claimed from source reading instead of execution; silent-failure path (error printed, exit 0) missed entirely
+- Reversal note: 2026-08-25 Argus repair window: two files (cron_argus_offloaded_task_reconciler.php, cron_argus_offloaded_task_resolver.php) were first reported as a runtime-error nuisance based on READING them. Live EXECUTION showed they fail SILENTLY: they print 'Unknown column t.idea_id' and then 'No offloaded tasks requiring reconciliation' with EXIT=0. A false-clean is materially worse than a crash because monitoring and humans read it as success. Amended behavior: a claim about what a script DOES must come from executing it and reading BOTH its output and its exit code; a non-zero-error/zero-exit combination must be explicitly checked for and reported as a false-clean, never summarized as 'it errors'.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-25 22:34 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: argus-repairs-20260825
+- RCA bucket: scope error
+- Trigger pattern: pipeline declared healthy after probing only the stage that produced the visible symptom; downstream notify/escalate stage never exercised
+- Reversal note: 2026-08-25 Argus repair window, second flip: the first completion reported the offload sweep as working and blamed only the confidence auto-reject cron. A later probe of the sweep's ESCALATION path (not just its classification path) found its INSERT referenced three columns that do not exist on ruben_imessage_issues (task_queue_id, idea_id, issue_text), so it exited(1) before alerting and six stranded staff requests were invisible to humans for days. Amended behavior: when a multi-stage pipeline (classify -> act -> notify/escalate) is declared healthy, EVERY stage must be probed, not just the one that produced the visible symptom; a stage that runs after the observed output is the most likely place for an unnoticed failure, and claim scope must equal probe scope across all stages.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

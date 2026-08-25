@@ -6,24 +6,25 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 3:01:06 PM PT | window: last 72h | 23 tasks | index total 908 (parsed 0, cached 908)
+Generated: 8/25/2026, 4:01:07 PM PT | window: last 72h | 24 tasks | index total 909 (parsed 8, cached 901)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787659574256` | 8/25/2026, 6:39:06 AM | 380 | 2179KB | #Argus |
-| `1787517380902` | 8/25/2026, 5:25:18 AM | 454 | 5158KB | #VERITAS |
-| `1787593935930` | 8/25/2026, 5:21:34 AM | 216 | 6240KB | This person needs to stop receiving invoices for 13K -> |
+| `1787593935930` | 8/25/2026, 4:00:25 PM | 247 | 8213KB | This person needs to stop receiving invoices for 13K -> |
+| `1787602675527` | 8/25/2026, 4:00:15 PM | 167 | 2482KB | Fix this issue |
+| `1787697242661` | 8/25/2026, 4:00:15 PM | 57 | 155KB | #Payment Suspensions |
+| `1787517380902` | 8/25/2026, 3:59:29 PM | 551 | 7531KB | #VERITAS |
+| `1787596912975` | 8/25/2026, 3:58:59 PM | 127 | 1869KB | We are gettng these. What's going on? Can you correct that? |
+| `1787516033804` | 8/25/2026, 3:53:55 PM | 136 | 454KB | #Frankenstein LLM Routing |
+| `1787516392266` | 8/25/2026, 3:43:28 PM | 678 | 1605KB | #Deepseek spillage now vs before |
+| `1787659574256` | 8/25/2026, 3:41:39 PM | 454 | 2302KB | #Argus |
 | `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
-| `1787602675527` | 8/24/2026, 2:34:55 PM | 136 | 2360KB | Fix this issue |
-| `1787596912975` | 8/24/2026, 2:30:05 PM | 86 | 1661KB | We are gettng these. What's going on? Can you correct that? |
 | `1787600722263` | 8/24/2026, 1:15:53 PM | 15 | 311KB | Jon says his overrides are not quite sticking. This is his question: |
 | `1787600344565` | 8/24/2026, 1:08:40 PM | 72 | 739KB | frankenstein-llm getting this error |
 | `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
-| `1787516392266` | 8/24/2026, 10:37:22 AM | 672 | 1594KB | #Deepseek spillage now vs before |
 | `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 | `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
 | `1787517352553` | 8/23/2026, 2:10:08 PM | 138 | 692KB | #Argus |
-| `1787516033804` | 8/23/2026, 1:35:11 PM | 116 | 368KB | #Frankenstein LLM Routing |
 | `1787515058425` | 8/23/2026, 1:31:21 PM | 82 | 325KB | This computer just started and it's very hot and laggy if even after just staring. even af |
 | `1787420987189` | 8/23/2026, 12:37:27 PM | 518 | 3563KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787507044981` | 8/23/2026, 12:35:45 PM | 137 | 612KB | #IMessage Ops |
@@ -38,75 +39,65 @@ Generated: 8/25/2026, 3:01:06 PM PT | window: last 72h | 23 tasks | index total 
 
 ## Per-window detail
 
-### `1787659574256` — 8/25/2026, 6:39:06 AM PT — 380 turns
+### `1787593935930` — 8/25/2026, 4:00:25 PM PT — 247 turns
 
 **Original task:**
 
 ```
-#Argus
-
-Jon says Argus stopped functioning properly. Please take a look and advise what needs to be resolved as well as do 5 tests on it. I can run tests in the terminal if you can't easily identify the issue. But supposedly Jon explains that it's totally ineffectual in the last 12-24 hours or so.
+This person needs to stop receiving invoices for 13K ->
 ```
 
-**Ideas referenced:** #19419, #20547, #22688, #23036, #23428, #23468, #23506, #23675, #23941, #23982 [rejected], #24897, #24926, #24941, #24990, #25142, #25185, #25571, #25768, #25973, #2603, #2605, #26067, #26400, #26663, #26895, #27243, #27492, #27646 [deployed], #27860, #27933, #27935, #27972, #28025, #28026, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28108, #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28122 [proposed], #28123, #28125, #28127, #28133 [proposed], #28134 [proposed], #28145, #28146, #28147, #28155 [proposed], #28161 [rejected], #7387
+**Ideas referenced:** #1456, #16613, #178759, #178769, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #28206 [proposed], #28207 [proposed], #4929, #9086, #9168
 
 **Last PICKUP PROMPT:**
 
 ```
-but never its escalation path)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #28155 [deployed] — Argus repair verification + remaining latency work.
-
-Where we left off (verified 2026-08-25 06:35 AKDT):
-- 5 of 6 repairs DEPLOYED and verified live: requeue-loop gate, offload-idea auto-reject exemption, verdict/quality retry split, offload-sweep schema repair, dead-file archival
-- NEW defect found and repaired this window: cron_argus_offloaded_task_sweep.php escalation INSERT used 3 non-existent columns; all 6 stranded tasks now escalated (ruben_imessage_issues rows 4029-4034)
-- Queue rows 651/658/659 are queued again after silent cancellation; the exam-override row demonstrated the retry split live (deliberation-heavy then requeued then "claimed (attempt 1+1)" at 06:32:03, impossible yesterday)
-- Backups for every edit: .bak-28155-20260825
-
-Open threads to drive next:
-1. #28155 [deployed] — confirm the three revived queue rows reached terminal state (orphan-reclaim at 15min covers a stall); then trim the terminal_query prompt floor (18.5K-94K tokens) and re-rank Argus-lane upstreams, with a before/after latency benchmark. This is the remaining latency cause and was deliberately left for its own window.
-2. #28122 [proposed] — awaiting human disposition (no longer auto-rejectable)
-3. #28133 [proposed] — awaiting human disposition (no longer auto-rejectable)
-4. #28134 [proposed] — awaiting human disposition (no longer auto-rejectable)
-
-Reference IDs:
-- Ideas: #28155 [deployed], #28122 [proposed], #28133 [proposed], #28134 [proposed]
-- Files touched: /var/www/emtskills/cron_requeue_stale_offloads.php, cron/cron_idea_confidence_auto_act.php, routes/cron_argus_task_worker.php, cron/cron_argus_offloaded_task_sweep.php, 4 files archived to cron/_archive and lib/_archive
-- Evidence: /var/log/argus_task_worker.log, ruben_imessage_issues 4029-4034, argus_task_queue rows 651-663
-
-Afterwards, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
+═══════════════════════════\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787697840000 — stop dunning emails to Alex (alex.vipersmith@gmail.com); audit balance-email recurrence.\n\nWhere we left off (checked 2026-08-25 14:56 AKDT):\n- Ruben directive: Alex must stop receiving ~$13K suspension/invoice emails; the 13K mis-tie no longer reaches him; the cron still duns him for his real $1,545; only 1 other balance email in 24h (Bolling $150 via ai_ticket_agent).\n- PROVEN: mysql execute_query returned 372130 (8/25 09:02, $1,545) source=cron_post_due_reminders; 371347 (8/24) carried wrong $12,860; 371702 Bolling $150 source=ai_ticket_agent.\n- PROVEN: ssh_command grep of cron_post_due_reminders.php lines 293-362 returned SMS-only suppression; no email hold.\n- #28206 [proposed] = the cron email-suppression change; next window builds it in-window per rule 267 GATE A0.\n- #28207 [proposed] = the ai_ticket_agent balance-send audit (Ruben-ordered anyone-else audit).\n\nOpen threads to drive next:\n1. #28206 [proposed] — build in-window: read the cron target SELECT fully; add email-side suppression (Students dunning_email_hold flag + skip students with open withdrawal/billing-dispute tickets); set the hold for Alex (resolve Students row by email); php -l then push the patch per rule 42; then query email_outbound_log on the next run to check no send to Alex.\n2. #28115 [executing] — watch the bulk re-tie of mis-tied qb mirror rows through to the end; spot-check zero slug/int mis-ties after.\n3. #28207 [proposed] — audit ai_ticket_agent balance sends last 18h (includes 371702 Bolling $150) against SLS ground truth; repair wrongful sends.\n\nReference IDs:\n- Ideas created this window: #28206 [proposed]\n- Ideas created this window: #28207 [proposed]\n- Carried: #28115 [executing]\n- Files touched: none written; read /var/www/emtskills/cron/cron_post_due_reminders.php (grep only)\n- Key rows: email_outbound_log 372130, 371702, 371347\n\nCarried from prior windows: #28089 [deployed] (verified: reconcile_ideas returned status=deployed for 28089 this window).\n\nAfter the next window's work, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n# Reversal Log\nNo reversals this window."}
+</arguments>
 <task_progress>
-- [x] Read handoff notes for Argus context
-- [x] Locate Argus components (worker, API, crons)
-- [x] Analyze task queue activity trend (8/14-8/25)
-- [x] Trace failed/offloaded/canceled tasks to root causes
-- [x] Identify offload-idea auto-rejection mechanism
-- [x] Identify infinite requeue loop
-- [x] Test 1: worker preflight health
-- [x] Test 2: simple terminal_query live probe
-- [x] Test 3: frankenstein-llm routing probe
-- [x] Test 4: realistic agentic task probe
-- [x] Test 5: offload fallback chain verification
-- [x] File repair package idea (#28155)
-- [x] R1: deploy + verify requeue-loop gate
-- [x] R2: deploy + verify offload-idea auto-reject exemption
-- [x] R3: deploy + verify verdict/quality retry split (10/10 harness)
-- [x] R4: find + repair offload-sweep schema defect (new finding)
-- [x] R5: archive dead fictional-schema files
-- [x] R6: revive 3 silently-canceled staff requests
-- [x] End-to-end proof: retry split confirmed live in production
-- [x] Pass rule-91 completion gates
+- [x] Rule 119 pre-turn signal check (no signal file)
+- [x] Re-probe email_outbound_log: Alex re-emailed 8/25 09:02 ($1,545, cron_post_due_reminders); 24h scan = 2 balance emails total
+- [x] Identify sender of $1,545 email (cron_post_due_reminders) and check for hold mechanism (none for email)
+- [x] File fix ideas (#28206 cron email suppression, #28207 ai_ticket_agent audit)
+- [x] Reconcile ideas for live tags (28089 deployed, 28115 executing, 28206/28207 proposed)
+- [x] Compress session per rule 119 (X >= 0.75W)
+- [ ] Validate completion + gate check (iterating on gate failures)
+- [ ] attempt_completion with human summary + blob + rule-91 pickup block
 </task_progress>
-</attempt_completion>
+</use_mcp_tool>
 ```
 
-### `1787517380902` — 8/25/2026, 5:25:18 AM PT — 454 turns
+### `1787602675527` — 8/25/2026, 4:00:15 PM PT — 167 turns
+
+**Original task:**
+
+```
+Fix this issue
+```
+
+**Ideas referenced:** #0066, #19492, #2036, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #374151, #78350, #9086
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787697242661` — 8/25/2026, 4:00:15 PM PT — 57 turns
+
+**Original task:**
+
+```
+#Payment Suspensions
+
+How is this going now? 
+
+Found and fixed the root cause of the wrongful "financial holds" and the late suspensions Jon flagged. The invoice attribution in qb_invoices is broken two ways, and every payment surface was reading it wrong.
+
+The two defects (verified this session): (1) qb_invoices.student_id is an INT column, so binding a slug like '26913FT-01' coerces to the section prefix 26913 and matches EVERY invoice in the section — that is why Kamdyn Sheets' profile showed 18+ rows of other students' invoices with red balances (verified: mysql SELECT returned 79 rows acr
+```
+
+**Ideas referenced:** #12661, #17580, #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #90461, #90462, #90463, #90464, #90465, #90466, #90467, #90468, #90469, #90470, #90471, #90472, #90473, #90474, #90475, #90476, #90477, #90478, #90479, #90480, #90481, #90482, #90483, #90484, #90485, #90486, #90487, #90488, #90489, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787517380902` — 8/25/2026, 3:59:29 PM PT — 551 turns
 
 **Original task:**
 
@@ -120,33 +111,34 @@ VERITAS auto-correction is now live. Instead of blocking false emails into a bla
 ════
 ```
 
-**Ideas referenced:** #12459, #16345, #16732, #178712, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #4991, #8798
+**Ideas referenced:** #12459, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #4991, #8798
 
 **Last PICKUP PROMPT:**
 
 ```
-), filed as #28153 [proposed].
+dently validates the pipeline.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787121837052 — VERITAS rebase + analyze since last analysis.
+Pick up task #1787121837052 — VERITAS auto-correction: build the #28153 [proposed] evidence-passing fix.
 
-Where we left off (verified 2026-08-25 04:22 AKDT):
-- VERITAS auto-correction live: 443 emails auto-corrected (email_send_blocks reason=veritas_l4_auto_corrected), all flagged=0, all sent
-- CRITICAL FIX APPLIED: email judge had 31% ERROR rate (213/687) because EMAIL-1RUNG (#28044 [deployed]) removed the deepseek fallback rung for email surfaces; judge_and_correct fails OPEN on ERROR, so 213 emails went out unjudged
-- Fixed: restored ['glm-5.2-local','deepseek-v4-pro'] ladder for email surfaces in lib/truth_judge.php judge_ladder() line 596 via sudo (php -l clean, backup created, live via OPcache revalidate_freq=60)
-- Secondary issue: auto-correction only fixes 17.6% of failing emails (16/91 pass re-judge)
+Where we left off (verified 2026-08-25 14:44 AKDT):
+- Auto-correction live: 367 veritas_l4_auto_corrected rows since 04:22 (all flagged=0, sent)
+- #28154 [deployed] working: email-judge ERROR rate 31%→13.9% (82/589), deepseek fallback firing (155 calls)
+- #27942 [deployed] monitoring complete: this rebase checked email_send_blocks, confirmed 367 auto-corrected rows
+- #28153 [proposed] root cause FOUND: correction re-judge only 17 PASS/91 FAIL (~16%). Dominant FAIL = class-reminder emails (lib/class_reminders.php, cron/cron_class_start_reminder.php, cron/cron_auto_send_zoom_links.php) with real schedule data judged UNSUPPORTED (no evidence passed). sendEmail() $veritasEvidence param exists but reminder callers pass empty. correct_truth_failures() only passes CONTRADICTED not UNSUPPORTED claims.
+- #28028 [proposed] synthetic e2e kicked background PID 3293831 (output /tmp/veritas_e2e_out.txt); production data validates pipeline
 
 Open threads to drive next:
-1. #28154 [deployed] — verify the email-judge fallback fix in production: watch truth_judge_log / email_send_blocks for the ERROR rate dropping from 31% toward ~0 on cfa_email surface
-2. #28153 [proposed] — improve auto-correction effectiveness (only 17.6% of failing emails pass re-judge; investigate why corrections fail)
-3. #28028 [proposed] — test auto-correction end-to-end with a real false-claim email
+1. #28153 [proposed] — BUILD the fix (Ruben approved 2026-08-25): (a) pass schedule evidence from class_reminders.php + cron_class_start_reminder.php + cron_auto_send_zoom_links.php into sendEmail's $veritasEvidence param; (b) extend correct_truth_failures() to pass UNSUPPORTED claims to the correction LLM.
+2. #28028 [proposed] — check /tmp/veritas_e2e_out.txt for the synthetic e2e result (judge_and_correct on a false $5000-refund claim) (Ruben approved 2026-08-25).
 
 Reference IDs:
-- Ideas filed: #28154 [deployed], #28153 [proposed], #28028 [proposed], #27942 [deployed]
-- Files touched: lib/truth_judge.php (line 596 judge_ladder email rung restored)
+- Ideas filed: #28153 [proposed], #28028 [proposed], #28154 [deployed], #27942 [deployed]
+- Files touched: lib/truth_judge.php, lib/mailer.php (prior window); this window read-only analysis + /tmp/veritas_e2e_test.php
+- Key files for #28153 [proposed] fix: lib/class_reminders.php, cron/cron_class_start_reminder.php, cron/cron_auto_send_zoom_links.php, lib/truth_judge.php (correct_truth_failures)
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
@@ -155,118 +147,21 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 No reversals this window.
 </result>
 <task_progress>
-- [x] Prior: #28043/#28044/#28088 deployed, 592 auto-corrected rows confirmed
-- [x] STEER: fresh check since last check (2026-08-24 13:45 AKDT)
-- [x] email_send_blocks: 443 veritas_l4_auto_corrected, all flagged=0
-- [x] Judge verdicts: 17 PASS / 457 FAIL / 213 ERROR (31% error rate)
-- [x] ROOT CAUSE: EMAIL-1RUNG (#28044) removed fallback for email surfaces; glm-5.2-local timeouts → ERROR → fail-open → sent unjudged
-- [x] judge_and_correct FAILS OPEN on ERROR (213 emails sent unjudged)
-- [x] Correction funnel: only 16/91 (17.6%) corrected emails pass re-judge
-- [x] FIX APPLIED via sudo: line 596 now ['glm-5.2-local', 'deepseek-v4-pro'], php -l clean, backup created
-- [x] OPcache revalidate_freq=60 → fix is live via auto-revalidation
-- [x] Filed idea #28153 for PROBLEM 2 (low correction effectiveness)
-- [x] Compression check: GREEN (no compress needed)
-- [x] Reconciled #27942 [deployed], #28028 [proposed], #28153 [proposed]
-- [x] Filed idea #28154 for the EMAIL-1RUNG fallback fix + stamped deployed
-- [x] Validate completion: ALL PASSED
-- [x] Check gate: GATE CLEAR
-- [x] attempt_completion
+- [x] Prior: #28154 deployed (email-judge fallback rung restored), 443 auto-corrected rows
+- [x] Ruben APPROVED #28153 + #28028 → executing both in-window
+- [x] REBASE: 367 veritas_l4_auto_corrected since 04:22 (all flagged=0); 233 email_composer_send_failure rows noted
+- [x] REBASE: ERROR rate dropped 31%→13.9% (82/589) after #28154; deepseek fallback firing (155 calls)
+- [x] REBASE: correction re-judge still only 17 PASS / 91 FAIL (~16%) → #28153 target confirmed live
+- [x] ROOT CAUSE #28153: class-reminder emails pass no evidence → true schedule data judged UNSUPPORTED → correction can't fix true-but-unproven claims. sendEmail() $veritasEvidence param exists but callers pass empty. Correction prompt only passes CONTRADICTED not UNSUPPORTED claims.
+- [x] #28028: synthetic e2e kicked background (PID 3293831); production data independently validates pipeline
+- [x] Reconciled #28153/#28028 [proposed], #28154 [deployed], #27942 [deployed]
+- [x] Validate completion: ALL PASSED → check_gate CLEAR
+- [x] attempt_completion shipped
 </task_progress>
 </attempt_completion>
 ```
 
-### `1787593935930` — 8/25/2026, 5:21:34 AM PT — 216 turns
-
-**Original task:**
-
-```
-This person needs to stop receiving invoices for 13K ->
-```
-
-**Ideas referenced:** #1456, #16613, #178759, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #4929, #9086, #9168
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787593935930 — audit last-18h CFA suspension/payment emails vs SLS + advise (Ruben steer 2026-08-25 04:14 AK).
-
-Where we left off (verified 2026-08-25 04:15 PT):
-- Prior directive closed: Alex Vipersmith $12,860 dunning stopped at root. cron_post_due_reminders slug-to-int join fix deployed (#28089 [deployed]); mirror row 164951 re-tied Keyes to Alex (read-back Keyes tie 0 rows); live QB SELECT = zero invoices for Alex; internal findings comment on ticket 27144.
-- CURRENT DELIVERABLE: Ruben saw other suspension emails today. Audit ALL CFA sends (email/chat/SMS/ticket auto-reply) about suspension or payments in the last 18 hours (window opens ~2026-08-24 10:15 AK); check each for mistakes; cross-check every named student against SLS (get_student_lifecycle_state / verify_payment_state); advise which sends are proper and which are wrong, with evidence per student.
-- Compressed at 159K/200K per rule 119 (watchdog status file stale at 0 tokens; raw X past 0.75xW).
-
-Open threads to drive next:
-1. #28115 [executing] — executor working bulk qb_invoices mirror re-tie (2735 rows own-email subset) + attribution queue for 3rd-party payers.
-2. (human-only decision — no idea) CS processes Alex withdrawal + confirms dunning hold on ticket 27144.
-
-Reference IDs:
-- Ideas filed: #28089 [deployed].
-
-- Ideas in progress: #28115 [executing].
-
-- Files touched: /var/www/emtskills/cron/cron_post_due_reminders.php
-- Tickets: 27144 (TKT-20260822-2FF7E9CE)
-- Audit sources: email_outbound_log + CFA conversation tables for sends; SLS gates for truth; rule 33 verify_payment_state for money claims.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Rule 119 pre-turn signal check (compress signal file)
-- [x] Look up student alex.vipersmith@gmail.com (check_student)
-- [x] Verify payment state across Authnet/QB/Affirm (rule 33 aggregator)
-- [x] Identify what is sending the $12,860 suspension/invoice emails
-- [x] Stop the dunning emails (fix root cause: re-tie mirror row + cron join fix #28089 deployed)
-- [x] Verify emails stopped + record outcome (read-backs, QB SELECT zero, ticket 27144 comment)
-- [x] Compress at 159K per rule 119 + ship gated completion (validate ALL PASSED, gate CLEAR)
-- [ ] NEXT WINDOW: audit last-18h CFA suspension/payment emails vs SLS + advise (Ruben steer 04:14 AK)
-</task_progress>
-</attempt_completion>
-```
-
-### `1787601263383` — 8/25/2026, 5:05:03 AM PT — 385 turns
-
-**Original task:**
-
-```
-REgardign:
-
-https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
-
---
-Received this:
-
-Hey brother! 
-Happy Monday. 
-Question: I have multiple students queued at 80% and under ready for clearance for NREMT. However, when I go in and review these students they have not completed externships, all the paperwork hasn’t been submitted. Some still have balances but yet they do have a course completion link… 
-
-Any ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.
-```
-
-**Ideas referenced:** #13257, #13258, #16610, #16613, #166534, #19419 [deployed], #19920, #19921, #2563, #25973, #26067, #26071, #26434, #26515, #26663, #27301, #27302, #27303, #27304, #27305, #27306, #27307, #27308, #27433, #27435, #27492, #27657, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #39909, #39983, #40050, #40124, #40125, #40126, #40127, #40128, #40159, #40160, #40161, #64244, #9086, #9168, #9191, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787602675527` — 8/24/2026, 2:34:55 PM PT — 136 turns
-
-**Original task:**
-
-```
-Fix this issue
-```
-
-**Ideas referenced:** #0066, #19492, #2036, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #374151, #78350, #9086
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787596912975` — 8/24/2026, 2:30:05 PM PT — 86 turns
+### `1787596912975` — 8/25/2026, 3:58:59 PM PT — 127 turns
 
 **Original task:**
 
@@ -274,7 +169,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 We are gettng these. What's going on? Can you correct that?
 ```
 
-**Ideas referenced:** #11629, #19426, #28114 [proposed], #28115 [proposed], #28116 [proposed]
+**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #28114 [proposed], #28115 [proposed], #28116 [proposed]
 
 **Last PICKUP PROMPT:**
 
@@ -311,6 +206,184 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </result>
 </attempt_completion>
 ```
+
+### `1787516033804` — 8/25/2026, 3:53:55 PM PT — 136 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Routing
+
+Rebase, tell me where this is at now:
+
+Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
+
+Where we left off (verified 2026-08-23 11:35 AM AKDT):
+- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
+- LiteLLM safe-resta
+```
+
+**Ideas referenced:** #11945, #12584, #12680, #12824, #12872, #12878, #16345, #178742, #178750, #1876, #2073, #2294, #2307, #2314, #23169, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2597, #2603, #2605, #26209, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed], #28208 [proposed], #6826
+
+**Last PICKUP PROMPT:**
+
+```
+E_TRACKER.md (read this turn).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up fleet LLM health + routing repair — follow-up to root analysis 2026-08-25.
+
+Where we left off (verified 2026-08-25 14:52 PM AKDT):
+- Read-only probe done. Healthy: BigMac/Artemis/Joshua/Claudia/GLM-ring(:8210 master)/WOPR 18002-4+18006. Broken: Nero (:11525 MLX wedged, quarantined fail_streak=1665), Julia (:11513 dark), WOPR :18001 (far-side ollama reset) + :18005 (no tunnel). Misroutes: nero lane api_base=11513 (dead), julia-120b lane api_base=11513 (dark).
+- No system/LLM actions taken; advisory filed #28208.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #28208 [proposed] — execute repair order: repoint nero lane to :11525 + relaunch MLX, rebuild :18001 ollama + :18005 tunnel, GLM per-node rank check from Cato, Julia decision.
+2. #28033 [proposed] — remote-URL images skip the vision doorman (make image_url fire it like base64/data-URL).
+3. #28035 [proposed] — repair BigMac heartbeat writer (recurring false-down root cause).
+
+Reference IDs:
+- Ideas filed: #28208 [proposed], #28033 [proposed], #28035 [proposed], #27869 [proposed], #28034 [deployed]
+- Reference docs: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
+- Files touched this turn: none (read-only); ledger row not yet appended pending your repair go-ahead.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787516392266` — 8/25/2026, 3:43:28 PM PT — 678 turns
+
+**Original task:**
+
+```
+#Deepseek spillage now vs before
+
+Can you tell me how much deepseek spillage we have been having over the last 12 hours compared to 72 hours ago
+```
+
+**Ideas referenced:** #11945, #12060, #12459, #12506, #12584, #12629, #12704, #16265, #1754, #1755, #178752, #19338, #19686, #1980, #1983, #1984, #1986, #1988, #1989, #1998, #2050, #2073, #2083, #2157, #2159, #2168, #2174, #2185, #2294, #2307, #2314, #23169, #24217, #25185, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2592, #2603, #2605, #26209, #26284 [executing], #26400, #26403, #26663, #26922 [deployed], #26927 [deployed], #26932, #27100, #27492, #27711, #27722, #27811, #27812, #27832, #27933, #27935, #27972, #28025, #28026, #28034, #28039 [proposed], #28040 [proposed], #28045 [proposed], #28046 [deployed], #28049 [proposed], #6826
+
+**Last PICKUP PROMPT:**
+
+```
+days ago. Nothing has changed.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Deepseek spillage comparison follow-up ("How is this going now?").
+
+Where we left off (verified 2026-08-25 ~07:42 AM PT):
+- Re-ran the spill comparison fresh with current server NOW() (2026-08-25 15:42 UTC).
+- Result unchanged: 0 deepseek spills in last 12h, 0 in the 72-84h window.
+- Key sources re-probed: cato_spill_events (spilled_to_deepseek flag), frankenstein_spill_events, deepseek_call_logs, ruben_spill_log spill_type='deepseek_direct'.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session (read-only verification; no system state changed).
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none
+- Files touched: none (read-only MySQL queries only)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787659574256` — 8/25/2026, 3:41:39 PM PT — 454 turns
+
+**Original task:**
+
+```
+#Argus
+
+Jon says Argus stopped functioning properly. Please take a look and advise what needs to be resolved as well as do 5 tests on it. I can run tests in the terminal if you can't easily identify the issue. But supposedly Jon explains that it's totally ineffectual in the last 12-24 hours or so.
+```
+
+**Ideas referenced:** #19419, #20547, #21134, #22688, #23036, #23428, #23468, #23506, #23675, #23941, #23982 [rejected], #24897, #24926, #24941, #24990, #25142, #25185, #25571, #25768, #25973, #2603, #2605, #26067, #26400, #26663, #26895, #27100, #27243, #27492, #27646 [deployed], #27652, #27860, #27933, #27935, #27972, #28025, #28026, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28108, #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28122 [proposed], #28123, #28125, #28127, #28132, #28133 [proposed], #28134 [proposed], #28145, #28146, #28147, #28155 [proposed], #28161 [rejected], #28205 [proposed], #7387
+
+**Last PICKUP PROMPT:**
+
+```
+ before reporting the outcome)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #28205 [proposed] — Argus prompt-floor trim (the remaining root cause).
+
+Where we left off (verified 2026-08-25 14:39 AKDT):
+- Yesterday's data-loss bugs are repaired and verified (#28155 [deployed]): requeue loop gated, offload ideas exempt from the confidence scorer, quality-vs-verdict retry split, offload-sweep schema repaired, 4 dead files archived
+- Measured the prompt floor with 3 controlled probes: 1,030 tokens (argus tag + trivial) vs 11,393 (no tag, control) vs 8,877 (argus tag + EMSU-domain query). The steering exemption works; _inject_corpus() at _router_core.py:1251 ignores it because it gates on query CONTENT, not surface
+- The 3 revived staff tasks retried then re-offloaded at 06:37-06:46 with 'unusable output on 4 attempts' — retry mechanism fires correctly, output quality is still the blocker
+- Rule 317 amended twice this window (ledger proof under task argus-repairs-20260825)
+
+Open threads to drive next:
+1. #28205 [proposed] — add a surface-aware gate to _inject_corpus(), re-measure A/B/C, and track deliberation-heavy rejection counts 48h before/after. Needs a correctness bench, not a blind trim: the corpus is what prevents invented EMSU facts
+2. #28122 [proposed] — Jayvee: Team Hub add/remove/edit shifts + shift notes throwing errors for ~1 week, screenshot attached. Real production bug, needs a human or a build
+3. #28133 [proposed] — Jon: extend boot camp exam dates to 2026-08-29. Small schedule change, was quoted 4-6 weeks by mistake
+4. #28134 [proposed] — Jerra: approved exam overrides not appearing in the enforcement dashboard for Marcus Carter, Curt Spencer, Summer Graham, Jackson Tippner. Finals this weekend, most time-sensitive
+
+Reference IDs:
+- Ideas: #28155 [deployed], #28205 [proposed], #28122 [proposed], #28133 [proposed], #28134 [proposed]
+- Files touched this window: /var/www/emtskills/cron_requeue_stale_offloads.php, cron/cron_idea_confidence_auto_act.php, routes/cron_argus_task_worker.php, cron/cron_argus_offloaded_task_sweep.php, ~/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, 4 files archived to cron/_archive and lib/_archive
+- Evidence: /tmp/meta_with.json, /tmp/meta_without.json, /tmp/meta_domain.json, ruben_imessage_issues rows 4029-4034, argus_task_queue rows 651/658/659
+
+Afterwards, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read handoff notes for Argus context
+- [x] Locate Argus components (worker, API, crons)
+- [x] Analyze task queue activity trend (8/14-8/25)
+- [x] Trace failed/offloaded/canceled tasks to root causes
+- [x] Identify offload-idea auto-rejection mechanism
+- [x] Identify infinite requeue loop
+- [x] Test 1: worker preflight health
+- [x] Test 2: simple terminal_query live probe
+- [x] Test 3: frankenstein-llm routing probe
+- [x] Test 4: realistic agentic task probe
+- [x] Test 5: offload fallback chain verification
+- [x] File repair package idea (#28155)
+- [x] R1: deploy + verify requeue-loop gate
+- [x] R2: deploy + verify offload-idea auto-reject exemption
+- [x] R3: deploy + verify verdict/quality retry split (10/10 harness)
+- [x] R4: find + repair offload-sweep schema defect
+- [x] R5: archive dead fictional-schema files
+- [x] R6: revive 3 silently-canceled staff requests
+- [x] Explain prompt-floor in plain terms with A/B/C token measurements
+- [x] Execute the rul
+```
+
+### `1787601263383` — 8/25/2026, 5:05:03 AM PT — 385 turns
+
+**Original task:**
+
+```
+REgardign:
+
+https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
+
+--
+Received this:
+
+Hey brother! 
+Happy Monday. 
+Question: I have multiple students queued at 80% and under ready for clearance for NREMT. However, when I go in and review these students they have not completed externships, all the paperwork hasn’t been submitted. Some still have balances but yet they do have a course completion link… 
+
+Any ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.
+```
+
+**Ideas referenced:** #13257, #13258, #16610, #16613, #166534, #19419 [deployed], #19920, #19921, #2563, #25973, #26067, #26071, #26434, #26515, #26663, #27301, #27302, #27303, #27304, #27305, #27306, #27307, #27308, #27433, #27435, #27492, #27657, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #39909, #39983, #40050, #40124, #40125, #40126, #40127, #40128, #40159, #40160, #40161, #64244, #9086, #9168, #9191, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787600722263` — 8/24/2026, 1:15:53 PM PT — 15 turns
 
@@ -463,46 +536,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Completed with full PICKUP PROMPT
 </task_progress>
 </attempt_co
-```
-
-### `1787516392266` — 8/24/2026, 10:37:22 AM PT — 672 turns
-
-**Original task:**
-
-```
-#Deepseek spillage now vs before
-
-Can you tell me how much deepseek spillage we have been having over the last 12 hours compared to 72 hours ago
-```
-
-**Ideas referenced:** #11945, #12060, #12459, #12506, #12584, #12629, #12704, #16265, #1754, #1755, #178752, #19338, #19686, #1980, #1983, #1984, #1986, #1988, #1989, #1998, #2050, #2073, #2083, #2157, #2159, #2168, #2174, #2185, #2294, #2307, #2314, #23169, #24217, #25185, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2592, #2603, #2605, #26209, #26284 [executing], #26400, #26403, #26663, #26922 [deployed], #26927 [deployed], #26932, #27100, #27492, #27711, #27722, #27811, #27812, #27832, #27933, #27935, #27972, #28025, #28026, #28034, #28039 [proposed], #28040 [proposed], #28045 [proposed], #28046 [deployed], #28049 [proposed], #6826
-
-**Last PICKUP PROMPT:**
-
-```
-that is not deepseek spillage.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Deepseek spillage comparison (last 12h vs 72-84h ago).
-
-Where we left off (verified 2026-08-24 ~09:35 AM PT):
-- Answer delivered: 0 deepseek spills in last 12h, 0 in the 72-84h window. No change.
-- 15 spill/tracking tables probed via MySQL this session; all deepseek-targeted tables are empty except ruben_spill_log, whose 26 deepseek_direct rows all predate both windows (6/26-7/22).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-- None — all work completed this session (read-only verification; no system state changed).
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none (read-only MySQL queries only)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1787516215349` — 8/23/2026, 4:58:00 PM PT — 290 turns
@@ -670,57 +703,6 @@ Real-time PT on all timestamps named from tool output: last verified action 2026
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 Pick up task — Argus #27874 blank-status backfill + #27875 workflow engi
-```
-
-### `1787516033804` — 8/23/2026, 1:35:11 PM PT — 116 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Routing
-
-Rebase, tell me where this is at now:
-
-Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
-
-Where we left off (verified 2026-08-23 11:35 AM AKDT):
-- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
-- LiteLLM safe-resta
-```
-
-**Ideas referenced:** #12584, #12680, #12824, #12872, #12878, #16345, #178742, #178750, #1876, #25916, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-ENT_METHOD_AND_RESTORE_RISK.md
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up tasks #1787507044981 + #1787420772345 — frankenstein-llm vision routing + Qwen3.8 fleet rollout (combined rebase done; joshua lane restored; BigMac verified).
-
-Where we left off (verified 2026-08-23 12:34 PM AKDT):
-- Vision doorman fix holding: LiteLLM active/health 200, hard guard at _router_core.py:5738, zero glm-4.6v 400s in audit log. bug 2609 resolved.
-- Qwen3.8: Claudia (L4c) + Nero (L4d) live with enable_thinking:false; Joshua lane joshua-qwen38-27b RESTORED this window (L4e, e2e content=OK through router). Idea #28034 [deployed].
-- Big Mac: pinged 3/3 (1.05ms), HTTP :8000 200 gpt-oss-120b, SSH open, fleet_inventory now 'healthy'. Box is fine; only its heartbeat writer is broken.
-
-Open threads to drive next:
-1. #28033 [proposed] — remote-URL images skip the vision doorman (fire it for image_url too, not just base64/data-URL)
-2. #27869 [proposed] — Cicero + Maximus MLX rollout (needs on-box hands)
-3. #28035 [proposed] — repair BigMac heartbeat writer (locate writer, make it persist across long uptimes, positive-control test)
-4. (human-only decision — no idea) — Julia power-cycle; Joshua 16-seq upgrade (edit /tmp/jw.sh)
-
-Reference IDs:
-- Ticket/tasks: #1787507044981, #1787420772345
-- Ideas filed: #28034 [deployed], #28035 [proposed], #28033 [proposed], #27869 [proposed]
-- Ideas verified deployed (carryover): #27933 [deployed], #27858 [deployed]
-- Files touched: /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, HANDOFF_NOTES.md, /home/emsuserver/cline_task_ledger.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
 ```
 
 ### `1787515058425` — 8/23/2026, 1:31:21 PM PT — 82 turns

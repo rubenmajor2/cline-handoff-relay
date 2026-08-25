@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/24/2026, 2:41:01 PM PT | window: last 72h | 32 tasks | index total 907 (parsed 5, cached 902)
+Generated: 8/25/2026, 5:24:55 AM PT | window: last 72h | 27 tasks | index total 908 (parsed 4, cached 904)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787517380902` | 8/24/2026, 2:38:25 PM | 373 | 2237KB | #VERITAS |
-| `1787593935930` | 8/24/2026, 2:37:05 PM | 171 | 4662KB | This person needs to stop receiving invoices for 13K -> |
-| `1787601263383` | 8/24/2026, 2:37:01 PM | 215 | 431KB | REgardign: |
+| `1787659574256` | 8/25/2026, 5:24:50 AM | 183 | 1231KB | #Argus |
+| `1787517380902` | 8/25/2026, 5:24:42 AM | 451 | 5140KB | #VERITAS |
+| `1787593935930` | 8/25/2026, 5:21:34 AM | 216 | 6240KB | This person needs to stop receiving invoices for 13K -> |
+| `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
 | `1787602675527` | 8/24/2026, 2:34:55 PM | 136 | 2360KB | Fix this issue |
 | `1787596912975` | 8/24/2026, 2:30:05 PM | 86 | 1661KB | We are gettng these. What's going on? Can you correct that? |
 | `1787600722263` | 8/24/2026, 1:15:53 PM | 15 | 311KB | Jon says his overrides are not quite sticking. This is his question: |
@@ -36,18 +37,26 @@ Generated: 8/24/2026, 2:41:01 PM PT | window: last 72h | 32 tasks | index total 
 | `1787256742974` | 8/22/2026, 12:58:22 PM | 730 | 9185KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
 | `1787420877031` | 8/22/2026, 10:47:57 AM | 1 | 883KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
 | `1787327963594` | 8/22/2026, 10:35:35 AM | 1376 | 4557KB | #Julia |
-| `1787370497651` | 8/22/2026, 1:07:24 AM | 984 | 6467KB | How fast is this? |
-| `1787366217908` | 8/21/2026, 10:16:49 PM | 296 | 1639KB | #Argus |
-| `1787191612298` | 8/21/2026, 10:10:42 PM | 906 | 25789KB | #Comprehensive System |
-| `1787349230620` | 8/21/2026, 7:33:07 PM | 180 | 546KB | #San Mateo County EMSA |
-| `1787256717179` | 8/21/2026, 4:57:45 PM | 254 | 5161KB | ## Externship dates past Sept 1 — identification + mitigation |
-| `1787329580892` | 8/21/2026, 3:33:49 PM | 156 | 464KB | #Executor |
 
 ---
 
 ## Per-window detail
 
-### `1787517380902` — 8/24/2026, 2:38:25 PM PT — 373 turns
+### `1787659574256` — 8/25/2026, 5:24:50 AM PT — 183 turns
+
+**Original task:**
+
+```
+#Argus
+
+Jon says Argus stopped functioning properly. Please take a look and advise what needs to be resolved as well as do 5 tests on it. I can run tests in the terminal if you can't easily identify the issue. But supposedly Jon explains that it's totally ineffectual in the last 12-24 hours or so.
+```
+
+**Ideas referenced:** #19419, #20547, #22688, #23036, #23428, #23468, #23506, #23675, #23941, #23982, #24897, #24926, #24941, #24990, #25142, #25571, #25768, #25973, #2603, #2605, #26067, #26400, #26663, #26895, #27492, #27860, #27933, #27935, #27972, #28025, #28026, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28108, #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28122, #28123, #28125, #28127, #28133, #28134, #28145, #28146, #28147, #7387
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787517380902` — 8/25/2026, 5:24:42 AM PT — 451 turns
 
 **Original task:**
 
@@ -61,33 +70,33 @@ VERITAS auto-correction is now live. Instead of blocking false emails into a bla
 ════
 ```
 
-**Ideas referenced:** #12459, #16345, #16732, #178712, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #4991, #8798
+**Ideas referenced:** #12459, #16345, #16732, #178712, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #4991, #8798
 
 **Last PICKUP PROMPT:**
 
 ```
-ection FAIL rate below 50%.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787121837052 — VERITAS auto-correction: ground templated emails.\n\nWhere we left off (verified 2026-08-24 13:35 AKDT):\n- Auto-correction core live: judge_and_correct() in lib/truth_judge.php + mailer.php gate (verified prior window, php -l clean, FPM reloaded)\n- FAIL rate analysis: post-fix ~54% (down from ~94%), remainder = templated emails judged with empty evidence (verified: email_send_blocks scan)\n- #28088 deployed: grounding evidence added at routes/login.php:171 ($__veritasEvidenceLogin) and cron/zoom_daily_routing.php:285 ($__zvrEvidence), both passed via veritasEvidence: named-arg (verified: sudo patch OK, php -l clean x2, param name $veritasEvidence confirmed at lib/mailer.php:442, OPcache revalidate_freq=60)\n\nOpen threads to drive next:\n1. #28028 [proposed] — test auto-correction end-to-end with a real false-claim email (still open; do this after confirming FAIL rate drops)\n2. #27942 [deployed] — monitor email_send_blocks for veritas_l4_auto_corrected rows to confirm FAIL rate drops below 50% post-#28088\n\nReference IDs:\n- Ideas filed/deployed: #28043 [deployed] evidence plumbing, #28044 [deployed] cache+ladder+HTML, #28088 [deployed] sender grounding\n- Ideas open: #28028 [proposed] end-to-end test\n- Ideas verified live: #27942 [deployed] Argus judge wiring\n- Files touched: routes/login.php, cron/zoom_daily_routing.php (this window); lib/truth_judge.php, lib/mailer.php (prior window)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n# Reversal Log\nNo reversals this window."
+filed as #28153 [proposed].\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787121837052 — VERITAS rebase + analyze since last analysis.\n\nWhere we left off (verified 2026-08-25 04:22 AKDT):\n- VERITAS auto-correction live: 443 emails auto-corrected (email_send_blocks reason=veritas_l4_auto_corrected), all flagged=0, all sent\n- CRITICAL FIX APPLIED: email judge had 31% ERROR rate (213/687) because EMAIL-1RUNG (#28044 [deployed]) removed the deepseek fallback rung for email surfaces; judge_and_correct fails OPEN on ERROR, so 213 emails went out unjudged\n- Fixed: restored ['glm-5.2-local','deepseek-v4-pro'] ladder for email surfaces in lib/truth_judge.php judge_ladder() line 596 via sudo (php -l clean, backup created, live via OPcache revalidate_freq=60)\n- Secondary issue: auto-correction only fixes 17.6% of failing emails (16/91 pass re-judge)\n\nOpen threads to drive next:\n1. #28154 [deployed] — verify the email-judge fallback fix in production: watch truth_judge_log / email_send_blocks for the ERROR rate dropping from 31% toward ~0 on cfa_email surface\n2. #28153 [proposed] — improve auto-correction effectiveness (only 17.6% of failing emails pass re-judge; investigate why corrections fail)\n3. #28028 [proposed] — test auto-correction end-to-end with a real false-claim email\n\nReference IDs:\n- Ideas filed: #28154 [deployed], #28153 [proposed], #28028 [proposed], #27942 [deployed]\n- Files touched: lib/truth_judge.php (line 596 judge_ladder email rung restored)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n# Reversal Log\nNo reversals this window.",
+  "task_prompt": "#VERITAS\n\nRebase and analyze since last analysis\n\nVERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.\n\nPickup prompt referenced ideas #27942 [deployed] and #28028 [proposed]. Task id #1787121837052."
 }
 </arguments>
 <task_progress>
-- [x] #28043 deployed (evidence plumbing, verified)
-- [x] #28044 deployed (cache + ladder + HTML)
-- [x] #28088 promoted + deployed (sender grounding)
-- [x] Diagnosed remaining 54% FAIL: templated emails judged with empty evidence
-- [x] Applied grounding patch to both senders (sudo, php -l clean)
-- [x] Confirmed $veritasEvidence param name (named-arg safe)
-- [x] OPcache auto-revalidate confirmed (60s) — deploy effective
-- [x] Stamp #28088 deployed
-- [x] should_compress_now → GREEN, no compress
-- [x] Handoff note updated
-- [x] Reconcile all ideas (rule 267 GATE B)
-- [ ] Validate completion + check gate
-- [ ] Completion with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+- [x] Prior: #28043/#28044/#28088 deployed, 592 auto-corrected rows confirmed
+- [x] STEER: fresh check since last check (2026-08-24 13:45 AKDT)
+- [x] email_send_blocks: 443 veritas_l4_auto_corrected, all flagged=0
+- [x] Judge verdicts: 17 PASS / 457 FAIL / 213 ERROR (31% error rate)
+- [x] ROOT CAUSE: EMAIL-1RUNG (#28044) removed fallback for email surfaces; glm-5.2-local timeouts → ERROR → fail-open → sent unjudged
+- [x] judge_and_correct FAILS OPEN on ERROR (213 emails sent unjudged)
+- [x] Correction funnel: only 16/91 (17.6%) corrected emails pass re-judge
+- [x] FIX APPLIED via sudo: line 596 now ['glm-5.2-local', 'deepseek-v4-pro'], php -l clean, backup created
+- [x] OPcache revalidate_freq=60 → fix is live via auto-revalidation
+- [x] Filed idea #28153 for PROBLEM 2 (low correction effectiveness)
+- [x] Compression check: GREEN (no compress needed)
+- [x] Reconciled #27942 [deployed], #28028 [proposed], #28153 [proposed]
+- [x] Filed idea #28154 for the EMAIL-1RUNG fallback fix + stamped deployed
+- [x] Validate completion: fixed bare #280
 ```
 
-### `1787593935930` — 8/24/2026, 2:37:05 PM PT — 171 turns
+### `1787593935930` — 8/25/2026, 5:21:34 AM PT — 216 turns
 
 **Original task:**
 
@@ -95,7 +104,7 @@ ection FAIL rate below 50%.\n\n════════════════�
 This person needs to stop receiving invoices for 13K ->
 ```
 
-**Ideas referenced:** #1456, #16613, #178759, #19492, #2036, #25185, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #4929, #9086, #9168
+**Ideas referenced:** #1456, #16613, #178759, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #4929, #9086, #9168
 
 **Last PICKUP PROMPT:**
 
@@ -107,21 +116,25 @@ No reversals this window.
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787593920000 — stop false $12,860 collection emails to 26814T-15 (cron join coercion fix).
+Pick up task #1787593935930 — audit last-18h CFA suspension/payment emails vs SLS + advise (Ruben steer 2026-08-25 04:14 AK).
 
-Where we left off (verified 2026-08-24 10:06 AKDT):
-- Cron fix for the false $12,860 emails is live and dry-run checked; record at #28089 [deployed].
-- #28090 [proposed] — open data question awaiting human review: mirror ties invoice 164951 (Alex's payment-plan invoice, $300 paid / $1,545 open) to Keyes db id 8137519; Alex 8143468 has zero mirror rows. No re-tie performed.
-- Alex suspension 27692 (moodle_suspended=1) left active; CS follow-up on withdraw vs transfer sent 8/24 9:47 AM.
+Where we left off (verified 2026-08-25 04:15 PT):
+- Prior directive closed: Alex Vipersmith $12,860 dunning stopped at root. cron_post_due_reminders slug-to-int join fix deployed (#28089 [deployed]); mirror row 164951 re-tied Keyes to Alex (read-back Keyes tie 0 rows); live QB SELECT = zero invoices for Alex; internal findings comment on ticket 27144.
+- CURRENT DELIVERABLE: Ruben saw other suspension emails today. Audit ALL CFA sends (email/chat/SMS/ticket auto-reply) about suspension or payments in the last 18 hours (window opens ~2026-08-24 10:15 AK); check each for mistakes; cross-check every named student against SLS (get_student_lifecycle_state / verify_payment_state); advise which sends are proper and which are wrong, with evidence per student.
+- Compressed at 159K/200K per rule 119 (watchdog status file stale at 0 tokens; raw X past 0.75xW).
 
 Open threads to drive next:
-1. #28090 [proposed] — Vicky to check live QB customer for invoice 164951, then re-tie mirror student_db_id to 8143468 if confirmed (human decision, not autonomous).
-2. #28089 [deployed] — optional one-time audit of collection_reminder_log for other suspended students who received section-sum balances (cron live since 2026-04-14).
+1. #28115 [executing] — executor working bulk qb_invoices mirror re-tie (2735 rows own-email subset) + attribution queue for 3rd-party payers.
+2. (human-only decision — no idea) CS processes Alex withdrawal + confirms dunning hold on ticket 27144.
 
 Reference IDs:
-- Ideas filed: #28089 [deployed], #28090 [proposed]
-- Ideas closed: none
-- Files touched: /var/www/emtskills/cron/cron_post_due_reminders.php, /tmp/patch_post_due.py
+- Ideas filed: #28089 [deployed].
+
+- Ideas in progress: #28115 [executing].
+
+- Files touched: /var/www/emtskills/cron/cron_post_due_reminders.php
+- Tickets: 27144 (TKT-20260822-2FF7E9CE)
+- Audit sources: email_outbound_log + CFA conversation tables for sends; SLS gates for truth; rule 33 verify_payment_state for money claims.
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
@@ -130,18 +143,16 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Rule 119 pre-turn signal check (compress signal file)
 - [x] Look up student alex.vipersmith@gmail.com (check_student)
 - [x] Verify payment state across Authnet/QB/Affirm (rule 33 aggregator)
-- [x] Identify sender: cron_post_due_reminders.php; root cause = int/varchar join coercion ('26814T-15'→26814) summing whole-section balances ($12,860 = Keyes+Ochoa open invoices)
-- [x] Patch cron join to student_db_id = s.id (2 blocks + escalation subquery)
-- [x] php -l + read-back verify (rule 99)
-- [x] Dry-run cron, confirm Alex excluded
-- [x] File ideas #28089 (deployed) + #28090 (proposed), reconciled
-- [x] Handoff note written
-- [x] Completion passes rule-91 gates + attempt_completion
+- [x] Identify what is sending the $12,860 suspension/invoice emails
+- [x] Stop the dunning emails (fix root cause: re-tie mirror row + cron join fix #28089 deployed)
+- [x] Verify emails stopped + record outcome (read-backs, QB SELECT zero, ticket 27144 comment)
+- [x] Compress at 159K per rule 119 + ship gated completion (validate ALL PASSED, gate CLEAR)
+- [ ] NEXT WINDOW: audit last-18h CFA suspension/payment emails vs SLS + advise (Ruben steer 04:14 AK)
 </task_progress>
 </attempt_completion>
 ```
 
-### `1787601263383` — 8/24/2026, 2:37:01 PM PT — 215 turns
+### `1787601263383` — 8/25/2026, 5:05:03 AM PT — 385 turns
 
 **Original task:**
 
@@ -160,7 +171,7 @@ Question: I have multiple students queued at 80% and under ready for clearance f
 Any ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.
 ```
 
-**Ideas referenced:** #19419 [deployed], #25973, #26067, #26071, #26663, #27492, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117 [deployed], #9191
+**Ideas referenced:** #13257, #13258, #16610, #16613, #166534, #19419 [deployed], #19920, #19921, #2563, #25973, #26067, #26071, #26434, #26515, #26663, #27301, #27302, #27303, #27304, #27305, #27306, #27307, #27308, #27433, #27435, #27492, #27657, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #39909, #39983, #40050, #40124, #40125, #40126, #40127, #40128, #40159, #40160, #40161, #64244, #9086, #9168, #9191, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -1280,297 +1291,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 <task_progress>
 - [x] Re-probe Nero lane + Cicero reachability + Joshua state + Maximus (fresh state)
 - [x] Deliver per-box status + what's next for each
-</task_progress>
-</attempt_completion>
-```
-
-### `1787370497651` — 8/22/2026, 1:07:24 AM PT — 984 turns
-
-**Original task:**
-
-```
-How fast is this?
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12299, #12459, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16588, #16844, #18312, #18326, #1951, #25097, #2537, #26908, #26923, #27259
-
-**Last PICKUP PROMPT:**
-
-```
-real 200-token completion.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task #none — "How fast is this?" fleet speed check
-Where we left off (verified 2026-08-21 20:04 PT):
-- Answered fleet throughput via frankenstein_host_probe: artemis-120b ~26 tok/s probe (~44-55 sustained), glm52-ring ~9, nero-minicpm-v ~77.
-- julia/cicero/joshua/maximus/ollama-14b probe failed/timed out at this instant (not confirmed down — likely transient).
-Open threads to drive next:
-(none — informational only, no follow-up work required)
-Reference IDs:
-- Ideas filed: none
-- Files touched: none
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787366217908` — 8/21/2026, 10:16:49 PM PT — 296 turns
-
-**Original task:**
-
-```
-#Argus
-
-Argus itself won't build out the workflows like Chat GPT and Claude per Jon. 
-
-Like the handoff in some imaginarey queue that can't be seen - is that getting better? 
-
-Jon conversation on some ideas below for improvement. Not sure how this is going for sure as these are Jon's random thoughts but look into them and advise. 
-
-But I wanna get into the back and stuff I don't know how easy it isThrough all the students that register right and then they end up on a roster for the first day instructor goes into that roster and starts marking him as either present or absence they keep screwing
-```
-
-**Ideas referenced:** #1715, #178713, #178736, #19492, #2036, #2230, #22688, #23036, #2338, #23428, #23468, #23506, #2358, #23675, #23941, #23982, #24926, #24941, #24990, #25142, #25185, #2550, #25571, #25768, #2589, #2590, #25916, #2597, #26663, #26719, #26823, #26824, #26825, #26895, #27152, #27492, #27503 [proposed], #27524, #27531, #27648, #27655 [deployed], #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27826, #27828, #27832, #27840, #27859 [proposed], #27860 [proposed], #27861 [proposed], #27870 [proposed], #27871 [proposed], #27872 [proposed], #27873 [proposed], #27874 [proposed], #27875 [proposed], #3079, #450438, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-gus-offload-sweep` (new).
-
----
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus invisible-queue fix + student lifecycle fall-through advisory (2026-08-21).
-
-Where we left off (verified 2026-08-21 21:15 PT):
-- Argus offload queue reconciled: 4 stuck tasks now `canceled` with `rejection_reason`, queue offload count = 0.
-- Sweep cron installed at `/etc/cron.d/argus-offload-sweep` (every 10 min) — this was the "invisible queue" root cause.
-- Idea #27860 [deployed]. 98-student cohort scanned; fall-through = ~38% payment (human-gated), ~19% EA, ~16% quiz1/CPR, live duplicate Bryce Albay (26224T1-04 + 26223BC-27).
-
-Open threads to drive next (every item has a real filed idea #):
-1. #27860 [deployed] — Verify the `routes/_view_argus_offloaded_sweeper.php` panel actually renders (API GET returned nginx 404 on the route — confirm nginx location → api route wiring, then probe the panel URL with a logged-in session).
-2. #27874 [proposed] — Backfill blank `status` on auto-generated Argus offload idea rows (UPDATE orchestrator_ideas SET status='proposed' WHERE title LIKE 'Argus background task #%' AND (status IS NULL OR status='') after a COUNT(*) check).
-3. #27870 [proposed] — Build the first-day roster → CS task trigger (payments/EA due day-one, not week-end). This is Jon's core idea; implement in `routes/` + cron + CS task queue, pattern-matched against existing `alert_ticket_sla_aging` / `cron_payment_enrollment_gap_drainer`.
-4. #27872 [proposed] — Roster dedup scan + Archived-01- email cleanup + first-day attendance marking validation.
-5. #27871 [proposed] and #27873 [proposed] — Wire EA day-one chase (use existing `ea_redrive`/`ea_resend_form_link`) and Boot Camp payment day-one enforcement.
-6. #27875 [proposed] — Argus workflow-builder gap: give Argus a stable workflow-definition API to EXECUTE workflows Cline designs.
-
-Reference IDs:
-- Ideas filed: #27860, #27870, #27871, #27872, #27873, #27874, #27875
-- Files touched: lib/argus_offloaded_task_sweep.php, api/argus_offloaded_task_sweep.php, cron/cron_argus_offloaded_task_sweep.php, routes/_view_argus_offloaded_sweeper.php, routes/cron_argus_task_worker.php, /etc/cron.d/argus-offload-sweep
-- Prior related ideas (reconciled offloads): #26719, #27826, #27828, #27840
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787191612298` — 8/21/2026, 10:10:42 PM PT — 906 turns
-
-**Original task:**
-
-```
-#Comprehensive System
-
-I don't really know how to quantify this, but our system is so comprehenive and complex. I wonder how frankenstein-llm can keep track of all of it better? I mean a lot of repair requests and information are difficult to find, and sometimes CFAs fail, sometimes Argus fails, and sometimes even Cline fails. The failrus seem too often. Why is everything so complex? Whatt do we do on all this to help resolve untruths better?
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #12364, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13047, #13202, #13437, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16224, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #178713, #178716, #178724, #178725, #17913, #1793, #1798, #1828, #18312, #18326, #19567, #20042, #20251, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #21667, #2168, #2299, #2316, #25097, #25185, #2524, #2525, #2537, #25378, #25381, #2546, #25925, #25926, #25935, #26229, #26591, #26696, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #27100, #27236, #27249 [executing], #27250, #27259, #27395, #27494, #27503, #27508 [executing], #27514, #27515, #27518 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27634 [deployed], #27635 [executing], #27640 [deployed], #27646, #27647 [proposed], #27659 [proposed], #27660 [rejected], #27661 [proposed], #27662 [proposed], #27675 [proposed], #27677 [proposed], #27680 [proposed], #27681 [proposed], #27690 [proposed], #27698 [proposed], #27767 [proposed], #27771 [deployed], #27773 [proposed], #27774 [proposed], #277773, #27831 [executing], #27843 [proposed], #27858 [proposed], #27863 [proposed], #5197, #5431, #5574, #7142, #7149, #7174, #9222
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #27858 [deployed] — Claudia Qwen3.8-27B reasoning parser + durable serve.
-
-Where we left off (verified 2026-08-21 10:05 PM PT):
-- #27858 [deployed] reasoning parser live (PID 2562208, --reasoning-parser qwen3)
-- #27863 [deployed] durable launcher (script + @reboot cron installed)
-- #27843 [deployed] cron cull + retirement-aware orphan audit (dev_stage=ready_for_review)
-- Claudia fleet_inventory corrected: serves qwen3.8-27b independently (was mislabeled Ray worker)
-
-Open threads to drive next:
-1. #27843 [deployed] — human review of the orphan-audit change when convenient (dev_stage=ready_for_review)
-
-Reference IDs:
-- Ideas filed: #27858 [deployed], #27863 [deployed]
-- Ideas closed: #27858 [deployed], #27863 [deployed], #27843 [deployed]
-- Files touched: /home/rubenmajor/bin/claudia-qwen38-serve.sh (Claudia), Claudia crontab (@reboot line), fleet_inventory (claudia row)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Prior: shipped #27771/#27773/#27774, complexity diagnosis, disabled orphan-audit noise, filed #27843
-- [x] Ruben approved #27858 — reasoning parser confirmed live (PID 2562208, --reasoning-parser qwen3)
-- [x] Correct SSH path: tunnel :2206 rubenmajor@127.0.0.1
-- [x] Durability gap confirmed: no systemd/cron for vllm, PPID=1 (won't survive reboot)
-- [x] Execute #27863: launcher script created + @reboot cron installed
-- [x] Stamp DB records for #27858 + #27863 (2 rows affected)
-- [x] Verify status: both deployed
-- [x] Reconcile ideas: #27858 [deployed], #27863 [deployed], #27843 [deployed]
-- [x] Correct stale fleet_inventory annotation for Claudia
-- [x] Validate completion: ALL PASSED (task_id=27858)
-- [x] Check gate: CLEAR
-- [x] Deliver via attempt_completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1787349230620` — 8/21/2026, 7:33:07 PM PT — 180 turns
-
-**Original task:**
-
-```
-#San Mateo County EMSA
-
-San Mateo EMSA sent a message to jthompson and program director matt rios demanding now an inspection of records snce January 2025. 
-
-I think the inspection is / can be objected to due to on the basis of the recency of the complaint/investigation as well as short notice of less than 3 business days notice
-
-See/Log: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-See: 
-
-2:19
-2 Messages
-ヘ
-く
-CH
-From: Chad Henry >
-To: Matt Rios ›
-Cc: Jonathan Thompson > HS_EMS_Investigations_SM
-Susie Castoria ›
-Today at 12:06 PM
-ACTION REQUIRE
-```
-
-**Ideas referenced:** #18545, #18546, #18822, #18823, #25185, #25636 [proposed], #25637 [proposed], #25638 [proposed], #25639 [proposed], #27521, #27830 [proposed], #27834 [approved], #27841 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787256717179` — 8/21/2026, 4:57:45 PM PT — 254 turns
-
-**Original task:**
-
-```
-## Externship dates past Sept 1 — identification + mitigation
-
-### 1. IDENTIFICATION — the students you saw in the outbox
-
-**60 ExternshipRequest rows** have at least one preferred date past 2026-09-01 (verified live against admin_portal.ExternshipRequest, preferred_date_1..5). Breakdown by action needed:
-
-**54 need action** (51 pending + 3 escalated). **6 are moot** (5 completed, 1 cancelled/archived).
-
-**MOST URGENT — 12 students whose ONLY offered dates are ALL past Sept 1** (no valid ≤Sept-1 date at all; these are the ones whose confirmations you saw and who have zero in-window options):
--
-```
-
-**Ideas referenced:** #178649, #178713, #198754, #2230, #2338, #2358, #25185, #2550, #25821, #25822 [deployed], #25889 [awaiting_review], #2589, #2590, #25916 [awaiting_review], #25950 [awaiting_review], #25973 [awaiting_review], #26002 [awaiting_review], #26027 [awaiting_review], #26066, #26067 [deployed], #26071 [executing], #26089 [deployed], #26663 [awaiting_review], #27152, #27486, #27488, #27489, #27490 [proposed], #27491, #27492 [proposed], #27503 [proposed], #27524, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27767 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28584, #5447
-
-**Last PICKUP PROMPT:**
-
-```
-nd ledger, task 1786491116649)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1786491116649: externship Sept-1 cutover. Assignment-timer question answered, assignment plan next.
-
-Where we left off (verified 2026-08-21 4:55 PM PT):
-- ANSWERED Ruben's question "assignments past Sept 1 become placements if no staff response within some timeframe?": NO such timer was decided. Decided + deployed = STUDENT-side 72h confirm-or-forfeit (#26067 [deployed], emsu_offer_window_hours()=72, lib/ExternshipOfferConfirmation.php line 35). Staff-side "confirm OR auto-place after timeout" is DRAFTED in the #25973 [deployed] canonical spec but the timeout was never decided; deployed gate code (lib/externship_autoassign_gate.php confirmOrAutoPlace) auto-places immediately after site notification.
-- Post-Sept-1 dates can never become placements: #27492 [deployed] hard cap on all surfaces + SEPT1-EXPIRED stamps on all-past-Sept-1 requests (verified: mysql execute_query on admin_portal.ExternshipRequest, 62 rows past 2026-09-01, 2026-08-21 16:22 PT).
-- The 6 "completed" requests with post-Sept-1 dates (Tran 26420FT-13, Nguyen 26413FT-30, Kuruvadi 26715W-39, Ngo 26918A-08, Jacobs 26918A-18, Ramesh 26914t-46) have ZERO ExternshipPlacement rows (verified: mysql execute_query, 138-row table probed exact + LIKE, 0 matches, 2026-08-21 4:50 PM PT). Completed ≠ placed.
-- Idea tags refreshed against the live DB this window (validator identity echo read, 4:54 PM PT): #26071 [deployed], #26002 [deployed], #25950 [deployed], #26027 [deployed], #25889 [deployed], #25916 [approved].
-
-Open threads to drive next:
-1. (human-only decision, no idea): staff-response window. Does Ruben want "staff doesn't act within X hours, then auto-solidify or escalate"? Never decided. If yes: pick hours, build into externship_autoassign_gate.
-2. (human-only decision, no idea): the 6 completed students with no placement rows. Trace where their externships actually live (Moodle / form submissions), or leave them.
-3. (human-only decision, no idea): concrete assignment plan. Student → date + location grounded in real agency capacity + eligibility. Region clusters identified (Houston/San Antonio/Phoenix/Bay Area/SoCal). Next = capacity query + eligibility join.
-4. #27492 [deployed]: Sept-1 cap live on all surfaces + SEPT1-EXPIRED stamps.
-5. #26067 [deployed]: 72h confirm-or-forfeit + completion-ordered waitlist.
-6. #25973 [deployed]: auto-assign gate; spec's staff-confirm-or-timeout still UNDECIDED (DRAFT).
-7. #26663 [approved]: outreach batch to the 54 students with past-Sept-1 requests.
-8. #27490 [deployed]: FLIP queue tracker.
-
-Reference IDs:
-- Ideas filed this session: none (Q&A + probe window)
-- Ideas carried (tags = live DB read 2026-08-21 4:54 PM PT): #26071 [deployed], #26002 [deployed], #25916 [approved], #26089 [deployed], #25950 [deployed], #26027 [deployed], #25889 [deployed], #25822 [deployed]
-- Files touched: none
-- Files read this session: lib/externship_autoassign_gate.php, docs/compliance-evidence/20260812-externship-autoassign-spec/CANONICAL_GATE_SPEC.md, lib/ExternshipOfferConfirmation.php
-- Evidence: admin_portal.ExternshipPlacement (138 rows, 0 matching the 6 completed slugs), admin_portal.ExternshipRequest (62 rows past 2026-09-01)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Ruben follow-up question answered with live evidence
-- [x] Placement
-```
-
-### `1787329580892` — 8/21/2026, 3:33:49 PM PT — 156 turns
-
-**Original task:**
-
-```
-#Executor
-
-Can you check the executor and make sure it's working properly. If not take appropriate action to et it working and drain the backlog ideas safely. For example see this task -> __The one thing I'd genuinely flag as "how is it doing" beyond Argus itself:__ the executor silent-ghost pattern. #27734 has been approved since 2:28 AM yesterday, but the executor chain produced zero execution rows again, and no other window touched the remaining items (grep found no new 27734 markers; argus_task_status.php and the action catalog are unchanged since yesterday). The only reason Argus has its 
-```
-
-**Ideas referenced:** #12184, #17102, #17292, #17295, #178720, #25185, #25426, #2563, #2597 [deployed], #27646 [deployed], #27672 [deployed], #27712 [deployed], #27734 [approved], #27809 [executing], #27810 [executing], #78350, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787207812240 — Executor silent-ghost pattern fix and backlog drain.
-
-Where we left off (verified 2026-08-21 15:33 PT):
-- TASK COMPLETE: Executor pipeline repaired and verified working
-- 31 executions since fix, 693 ideas eligible and draining
-- Root cause fix ideas filed and in executor queue
-
-Open threads to drive next:
-1. #27809 [executing] — Fix guidance generator: ideas stuck in needs_guidance with NULL guidance_question (root cause fix)
-2. #27810 [executing] — Auto-clear stale session_handoffs blocking idea re-promotion (root cause fix)
-
-Reference IDs:
-- Ideas filed: #27809 [executing], #27810 [executing]
-- Bug library: incident 2597 (executor_silentghost_pattern_approved_ideas_like)
-- Files touched: none (DB updates only)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Executor silent-ghost pattern diagnosed and fixed (3 blockers cleared)
-- [x] 566 ideas made eligible for promotion (now 693)
-- [x] Root cause fix ideas filed (#27809, #27810)
-- [x] Verify current executor state — autonomous mode, not paused
-- [x] Check if executions are happening since fix — 31 executions since 9:45 AM
-- [x] Check current eligible count — 693 eligible
-- [x] Answer Ruben's status question — explained 1,195 vs 566 discrepancy
-- [x] Confirm task complete
 </task_progress>
 </attempt_completion>
 ```

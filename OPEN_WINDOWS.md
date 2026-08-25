@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 5:24:55 AM PT | window: last 72h | 27 tasks | index total 908 (parsed 4, cached 904)
+Generated: 8/25/2026, 6:50:14 AM PT | window: last 72h | 27 tasks | index total 908 (parsed 1, cached 907)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787659574256` | 8/25/2026, 5:24:50 AM | 183 | 1231KB | #Argus |
-| `1787517380902` | 8/25/2026, 5:24:42 AM | 451 | 5140KB | #VERITAS |
+| `1787659574256` | 8/25/2026, 6:39:06 AM | 380 | 2179KB | #Argus |
+| `1787517380902` | 8/25/2026, 5:25:18 AM | 454 | 5158KB | #VERITAS |
 | `1787593935930` | 8/25/2026, 5:21:34 AM | 216 | 6240KB | This person needs to stop receiving invoices for 13K -> |
 | `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
 | `1787602675527` | 8/24/2026, 2:34:55 PM | 136 | 2360KB | Fix this issue |
@@ -42,7 +42,7 @@ Generated: 8/25/2026, 5:24:55 AM PT | window: last 72h | 27 tasks | index total 
 
 ## Per-window detail
 
-### `1787659574256` — 8/25/2026, 5:24:50 AM PT — 183 turns
+### `1787659574256` — 8/25/2026, 6:39:06 AM PT — 380 turns
 
 **Original task:**
 
@@ -52,11 +52,65 @@ Generated: 8/25/2026, 5:24:55 AM PT | window: last 72h | 27 tasks | index total 
 Jon says Argus stopped functioning properly. Please take a look and advise what needs to be resolved as well as do 5 tests on it. I can run tests in the terminal if you can't easily identify the issue. But supposedly Jon explains that it's totally ineffectual in the last 12-24 hours or so.
 ```
 
-**Ideas referenced:** #19419, #20547, #22688, #23036, #23428, #23468, #23506, #23675, #23941, #23982, #24897, #24926, #24941, #24990, #25142, #25571, #25768, #25973, #2603, #2605, #26067, #26400, #26663, #26895, #27492, #27860, #27933, #27935, #27972, #28025, #28026, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28108, #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28122, #28123, #28125, #28127, #28133, #28134, #28145, #28146, #28147, #7387
+**Ideas referenced:** #19419, #20547, #22688, #23036, #23428, #23468, #23506, #23675, #23941, #23982 [rejected], #24897, #24926, #24941, #24990, #25142, #25185, #25571, #25768, #25973, #2603, #2605, #26067, #26400, #26663, #26895, #27243, #27492, #27646 [deployed], #27860, #27933, #27935, #27972, #28025, #28026, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28108, #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28122 [proposed], #28123, #28125, #28127, #28133 [proposed], #28134 [proposed], #28145, #28146, #28147, #28155 [proposed], #28161 [rejected], #7387
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1787517380902` — 8/25/2026, 5:24:42 AM PT — 451 turns
+```
+but never its escalation path)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #28155 [deployed] — Argus repair verification + remaining latency work.
+
+Where we left off (verified 2026-08-25 06:35 AKDT):
+- 5 of 6 repairs DEPLOYED and verified live: requeue-loop gate, offload-idea auto-reject exemption, verdict/quality retry split, offload-sweep schema repair, dead-file archival
+- NEW defect found and repaired this window: cron_argus_offloaded_task_sweep.php escalation INSERT used 3 non-existent columns; all 6 stranded tasks now escalated (ruben_imessage_issues rows 4029-4034)
+- Queue rows 651/658/659 are queued again after silent cancellation; the exam-override row demonstrated the retry split live (deliberation-heavy then requeued then "claimed (attempt 1+1)" at 06:32:03, impossible yesterday)
+- Backups for every edit: .bak-28155-20260825
+
+Open threads to drive next:
+1. #28155 [deployed] — confirm the three revived queue rows reached terminal state (orphan-reclaim at 15min covers a stall); then trim the terminal_query prompt floor (18.5K-94K tokens) and re-rank Argus-lane upstreams, with a before/after latency benchmark. This is the remaining latency cause and was deliberately left for its own window.
+2. #28122 [proposed] — awaiting human disposition (no longer auto-rejectable)
+3. #28133 [proposed] — awaiting human disposition (no longer auto-rejectable)
+4. #28134 [proposed] — awaiting human disposition (no longer auto-rejectable)
+
+Reference IDs:
+- Ideas: #28155 [deployed], #28122 [proposed], #28133 [proposed], #28134 [proposed]
+- Files touched: /var/www/emtskills/cron_requeue_stale_offloads.php, cron/cron_idea_confidence_auto_act.php, routes/cron_argus_task_worker.php, cron/cron_argus_offloaded_task_sweep.php, 4 files archived to cron/_archive and lib/_archive
+- Evidence: /var/log/argus_task_worker.log, ruben_imessage_issues 4029-4034, argus_task_queue rows 651-663
+
+Afterwards, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read handoff notes for Argus context
+- [x] Locate Argus components (worker, API, crons)
+- [x] Analyze task queue activity trend (8/14-8/25)
+- [x] Trace failed/offloaded/canceled tasks to root causes
+- [x] Identify offload-idea auto-rejection mechanism
+- [x] Identify infinite requeue loop
+- [x] Test 1: worker preflight health
+- [x] Test 2: simple terminal_query live probe
+- [x] Test 3: frankenstein-llm routing probe
+- [x] Test 4: realistic agentic task probe
+- [x] Test 5: offload fallback chain verification
+- [x] File repair package idea (#28155)
+- [x] R1: deploy + verify requeue-loop gate
+- [x] R2: deploy + verify offload-idea auto-reject exemption
+- [x] R3: deploy + verify verdict/quality retry split (10/10 harness)
+- [x] R4: find + repair offload-sweep schema defect (new finding)
+- [x] R5: archive dead fictional-schema files
+- [x] R6: revive 3 silently-canceled staff requests
+- [x] End-to-end proof: retry split confirmed live in production
+- [x] Pass rule-91 completion gates
+</task_progress>
+</attempt_completion>
+```
+
+### `1787517380902` — 8/25/2026, 5:25:18 AM PT — 454 turns
 
 **Original task:**
 
@@ -75,10 +129,35 @@ VERITAS auto-correction is now live. Instead of blocking false emails into a bla
 **Last PICKUP PROMPT:**
 
 ```
-filed as #28153 [proposed].\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787121837052 — VERITAS rebase + analyze since last analysis.\n\nWhere we left off (verified 2026-08-25 04:22 AKDT):\n- VERITAS auto-correction live: 443 emails auto-corrected (email_send_blocks reason=veritas_l4_auto_corrected), all flagged=0, all sent\n- CRITICAL FIX APPLIED: email judge had 31% ERROR rate (213/687) because EMAIL-1RUNG (#28044 [deployed]) removed the deepseek fallback rung for email surfaces; judge_and_correct fails OPEN on ERROR, so 213 emails went out unjudged\n- Fixed: restored ['glm-5.2-local','deepseek-v4-pro'] ladder for email surfaces in lib/truth_judge.php judge_ladder() line 596 via sudo (php -l clean, backup created, live via OPcache revalidate_freq=60)\n- Secondary issue: auto-correction only fixes 17.6% of failing emails (16/91 pass re-judge)\n\nOpen threads to drive next:\n1. #28154 [deployed] — verify the email-judge fallback fix in production: watch truth_judge_log / email_send_blocks for the ERROR rate dropping from 31% toward ~0 on cfa_email surface\n2. #28153 [proposed] — improve auto-correction effectiveness (only 17.6% of failing emails pass re-judge; investigate why corrections fail)\n3. #28028 [proposed] — test auto-correction end-to-end with a real false-claim email\n\nReference IDs:\n- Ideas filed: #28154 [deployed], #28153 [proposed], #28028 [proposed], #27942 [deployed]\n- Files touched: lib/truth_judge.php (line 596 judge_ladder email rung restored)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n# Reversal Log\nNo reversals this window.",
-  "task_prompt": "#VERITAS\n\nRebase and analyze since last analysis\n\nVERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.\n\nPickup prompt referenced ideas #27942 [deployed] and #28028 [proposed]. Task id #1787121837052."
-}
-</arguments>
+), filed as #28153 [proposed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052 — VERITAS rebase + analyze since last analysis.
+
+Where we left off (verified 2026-08-25 04:22 AKDT):
+- VERITAS auto-correction live: 443 emails auto-corrected (email_send_blocks reason=veritas_l4_auto_corrected), all flagged=0, all sent
+- CRITICAL FIX APPLIED: email judge had 31% ERROR rate (213/687) because EMAIL-1RUNG (#28044 [deployed]) removed the deepseek fallback rung for email surfaces; judge_and_correct fails OPEN on ERROR, so 213 emails went out unjudged
+- Fixed: restored ['glm-5.2-local','deepseek-v4-pro'] ladder for email surfaces in lib/truth_judge.php judge_ladder() line 596 via sudo (php -l clean, backup created, live via OPcache revalidate_freq=60)
+- Secondary issue: auto-correction only fixes 17.6% of failing emails (16/91 pass re-judge)
+
+Open threads to drive next:
+1. #28154 [deployed] — verify the email-judge fallback fix in production: watch truth_judge_log / email_send_blocks for the ERROR rate dropping from 31% toward ~0 on cfa_email surface
+2. #28153 [proposed] — improve auto-correction effectiveness (only 17.6% of failing emails pass re-judge; investigate why corrections fail)
+3. #28028 [proposed] — test auto-correction end-to-end with a real false-claim email
+
+Reference IDs:
+- Ideas filed: #28154 [deployed], #28153 [proposed], #28028 [proposed], #27942 [deployed]
+- Files touched: lib/truth_judge.php (line 596 judge_ladder email rung restored)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+
+# Reversal Log
+No reversals this window.
+</result>
 <task_progress>
 - [x] Prior: #28043/#28044/#28088 deployed, 592 auto-corrected rows confirmed
 - [x] STEER: fresh check since last check (2026-08-24 13:45 AKDT)
@@ -93,7 +172,11 @@ filed as #28153 [proposed].\n\n════════════════�
 - [x] Compression check: GREEN (no compress needed)
 - [x] Reconciled #27942 [deployed], #28028 [proposed], #28153 [proposed]
 - [x] Filed idea #28154 for the EMAIL-1RUNG fallback fix + stamped deployed
-- [x] Validate completion: fixed bare #280
+- [x] Validate completion: ALL PASSED
+- [x] Check gate: GATE CLEAR
+- [x] attempt_completion
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787593935930` — 8/25/2026, 5:21:34 AM PT — 216 turns

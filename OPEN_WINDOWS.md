@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 12:50:17 PM PT | window: last 72h | 25 tasks | index total 908 (parsed 0, cached 908)
+Generated: 8/25/2026, 2:01:06 PM PT | window: last 72h | 23 tasks | index total 908 (parsed 0, cached 908)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -33,8 +33,6 @@ Generated: 8/25/2026, 12:50:17 PM PT | window: last 72h | 25 tasks | index total
 | `1787440605750` | 8/23/2026, 10:31:43 AM | 402 | 2368KB | Help me cure cancer |
 | `1787440904551` | 8/22/2026, 5:29:32 PM | 138 | 1899KB | frankenstein-llm seems to be stalling |
 | `1787430120479` | 8/22/2026, 4:19:46 PM | 186 | 2242KB | frankenstein llm may be going rogue. can you check? seems to be drifting tasks |
-| `1787421878922` | 8/22/2026, 1:32:14 PM | 208 | 2302KB | This person likely registered for multiple courses and now is seeing an insane balance. Ca |
-| `1787256742974` | 8/22/2026, 12:58:22 PM | 730 | 9185KB | VERITAS Truth Enforcement System — core shipped, remainder filed and promoted. |
 
 ---
 
@@ -1199,106 +1197,4 @@ After that work lands, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Filed idea 27945: drain 379 unprocessed critical events (now approved by pipeline → [executing])
 - [x] Reconciled: 27943/27944 [proposed], 27945 since approved (live echo)
 - [x] Amended rule 321 with this w
-```
-
-### `1787421878922` — 8/22/2026, 1:32:14 PM PT — 208 turns
-
-**Original task:**
-
-```
-This person likely registered for multiple courses and now is seeing an insane balance. Can you please fix this?
-```
-
-**Ideas referenced:** #19921, #25256, #27939 [deployed], #6520, #6646
-
-**Last PICKUP PROMPT:**
-
-```
-. No student data was touched.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — qb_invoices class-root coercion fix, balance leak for Alex Smith Jr (26814T-15).
-
-Where we left off (verified 8/22/2026 12:31 PM America/Anchorage):
-- Root cause proven: `qb_invoices.student_id` is int(10) class root (26814); slug `26814T-15` coerces → 26814 → whole-class invoices leak. Real FK = `student_db_id` (100% coverage).
-- Alex (Students.id 8143468) has ZERO own invoices; displayed ~$4,935 belonged to Kevin Keyes Jr (8137519) + 1 other (8139480).
-- PATCHED 5 surfaces to key on `student_db_id`: PaymentVerifier.php, emsu-operations build/index.js + src/index.ts, chatbot_tools.php, StudentAgent.php, Student360.php. All lint-clean, Node service restarted + active, php8.3-fpm reloaded.
-- LIVE-VERIFIED: MCP verify_payment_state for Alex = empty invoices/$0; Kevin regression = 24 invoices intact; SQL proof Alex=0, Kevin=24.
-- Also fixed latent same-bug in check_qb_invoices and public_invoice_lookup.php was already correct.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #27939 [deployed] — balancefix: qb_invoices student_id class-root coercion leaks class-wide invoices (filed 8/22; all 5 surfaces patched + deployed + verified). Monitor: if any other student reports a similar insane balance, run the same `student_db_id` audit query before touching invoices.
-
-Reference IDs:
-- Ticket: (none opened)
-- Ideas filed: #27939 [deployed]
-- Files touched: /var/www/emtskills/lib/PaymentVerifier.php, /var/www/emtskills/mcp-servers/emsu-operations/build/index.js, /var/www/emtskills/mcp-servers/emsu-operations/src/index.ts, /var/www/emtskills/api/livechat/chatbot_tools.php, /var/www/emtskills/src/Agents/StudentAgent.php, /var/www/emtskills/lib/Student360.php (each also backed up as .bak-20260822-balancefix*)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787256742974` — 8/22/2026, 12:58:22 PM PT — 730 turns
-
-**Original task:**
-
-```
-VERITAS Truth Enforcement System — core shipped, remainder filed and promoted.
-
-Goal: make lower-param models (120Bs, GLM, 7B) deliver Opus-grade truthful answers by forcing truth, validation, and review STRUCTURALLY (tools + gates + judge), not just via prompt.
-
-Shipped this window (all verified live):
-
-1. Rule 323 — Truth Protocol (hardfloor, always-loaded)
-   - Every material claim classified PROVEN / INFERENCE / UNKNOWN
-   - Ground-truth-tool-first: call the tool that returns ground truth BEFORE answering
-   - High-stakes claims (money, student status, regulator, fleet) REQUIRE a judge pas
-```
-
-**Ideas referenced:** #0000, #12266, #12285, #12430, #12459, #12618, #12680, #15333, #17295, #178712, #17913, #18135, #18357, #18438, #18442, #1850, #19490, #19509, #19629, #20251, #2043, #2076, #20903, #2113, #23184, #24995, #25066, #25125, #25128, #25155, #25185, #25888, #25925, #25926, #25935, #26229, #26435, #26470, #26696, #26731, #26848, #26914 [deployed], #26915 [executing], #26916, #27100, #27238, #27397, #27399, #27480, #27486 [approved], #27488 [approved], #27489 [approved], #27491 [approved], #27635, #27652, #27657, #27658, #27781 [approved], #27807 [proposed], #27808 [proposed], #27809 [deployed], #27810 [deployed], #27811 [deployed], #27833 [proposed], #27842 [proposed], #686227, #7317, #8598
-
-**Last PICKUP PROMPT:**
-
-```
- (verbatim from .clinerules/91)
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052, VERITAS Truth Enforcement. Ruben's latest steer (2026-08-22 12:52 PT): 'How is this going? Test and see / advise.' FIRST: run the tests below, THEN report to Ruben in plain English (no jargon).
-
-Where we left off (verified 2026-08-22 12:03 PT):
-- Truth judge core works end-to-end: fed it an answer with one deliberately false claim, it returned FAIL, marked the claim CONTRADICTED, named the fix (verified: mysql SELECT on truth_judge_log returned id=9, verdict=FAIL, latency_ms=50328)
-- Two earlier ERROR rows were a transient LiteLLM router wedge, not a judge bug; router healthy (verified: ssh_command curl returned HTTP 200 in 15ms at 11:36 PT)
-- lib/truth_judge.php (PHP helper CFA code uses to call the judge) fixed + deployed (verified: write_server_file BACKED_UP, php -l 'No syntax errors detected', reload_php_fpm OK)
-- All 4 VERITAS build ideas deployed by executor (verified: clinerules_validate_completion IDENTITY ECHO returned all 4 status=deployed at 11:46 PT): #27486 [deployed] steering injection, #27488 [deployed] CFA email/chat/SMS wiring, #27489 [deployed] eval harness, #27491 [deployed] truth ledger dashboard
-- Rule 91 amended to mandate a human-readable summary in every completion (verified: clinerules_reindex returned 'Reindexed: 341 rules, 22 hardfloor' at 11:59 PT)
-
-Open threads to drive next (this IS the test Ruben asked for):
-1. #27488 [deployed], read back the CFA email wiring: ssh_command grep cron/cron_email_responder.php for call_truth_judge near the ~line 3047 send site; check /tmp/truth_smoke.out and truth_judge_log for a cfa_email row (id>=10). If not actually wired, wire it.
-2. #27486 [deployed], verify rule-323 steering injection is live in weak-model surfaces.
-3. #27489 [deployed], verify the truthfulness eval harness artifact exists and runs.
-4. #27491 [deployed], verify the truth ledger dashboard artifact renders.
-5. Run one fresh live judge call (clinerules_truth_judge with a test claim + evidence) to confirm the judge is healthy RIGHT NOW, then report overall status to Ruben in plain English.
-
-Reference IDs:
-- Ideas: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed]
-- Files touched: ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/323-truth-protocol.md, lib/truth_judge.php, api/fleet_api.php, cron/cron_email_responder.php (pending verify), /tmp/truth_smoke.php
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-## Key references
-- Files: ~/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, ~/Documents/Cline/Rules/323-truth-protocol.md, ~/Documents/Cline/docs/TRUTH_ENFORCEMENT_ARCHITECTURE.md, lib/truth_judge.php, api/fleet_api.php, cron/cron_email_responder.php, /tmp/truth_smoke.php
-- IDs: #27486 [deployed], #27488 [deployed], #27489 [deployed], #27491 [deployed], task 1787121837052
-- /tmp artifacts: /tmp/truth_smoke.out
-
-## Session memory (what's already been done this window)
-- T#01 use_mcp_tool(clinerules_truth_judge, test claim with one false statement), judge call logged, ladder fell back to deepseek-v4-pro when GLM ring was slow
-- T#02 mysql SELECT truth_judge_log, id=9 verdict=FAIL claims_unsupported=1 latency_ms=50328 (E2E pass: judge correctly caught the false claim)
-- T#03 ssh_command curl litellm health, HTTP 200 in 15ms (router 
 ```

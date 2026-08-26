@@ -143,3 +143,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Within-window reversal: first completion dispositioned approved RUBEN issue 3952 as '(human-only decision — no idea)' — a post-completion deferral of ALREADY-APPROVED work. Ruben: 'Why is this a human decision? This was already approved. This should be built and shipped.' Corrected same window: diagnosed, built, and shipped all three fixes (heartbeat rows, delivery-watchdog run definition, phantom-column repair), verified live, marked the issue resolved. Reinforces existing 321 text: approved = deploy; deferring approved buildable work to a human is a G6 hidden gate.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 04:11 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: argus-repairs-20260825c
+- RCA bucket: scope error
+- Trigger pattern: work routed to a team that structurally lacks the authority or tooling to resolve it, creating a ticket that can never be actioned
+- Reversal note: 2026-08-25: a window escalated 35 stranded exam-override decisions to Customer Service as ticket 27843. Ruben: 'Escalating an override as a ticket to customer service is a false gate and it is gaslighting' — CS has no authority or tooling to resolve overrides (argus_role_permissions: CustomerService tier=0, read_only=1), so the ticket could never be actioned by its recipient. Amended behavior (G6 hidden gate): before routing ANY item to a team or role, verify that role actually has the authority AND the tooling to resolve it — check the permissions/role table, not the item's topic. Routing work to a recipient who structurally cannot act on it is a false gate even when the ticket is real and well-documented; the correct move is to resolve it yourself per rule 29 or route to the role that holds the capability.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

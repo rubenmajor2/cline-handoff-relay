@@ -136,3 +136,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-24 detector positive-control: a control test (CONTROL 4b) returned NO and was momentarily read as evidence the newly-built detector was broken. The detector was fine; the CONTROL was invalid — it injected a phantom row for a fabricated user id (99999999) that has no row in the Moodle `user` table, while the detector's query JOINs `user`, so the row could never match by construction. Re-running with a real user id flagged it correctly. Amended behavior: when a negative/failing result comes from a test instrument you just built, classify it as INSTRUMENT-DEFECT vs REAL-DEFECT before reporting it as either; specifically, verify that the synthetic fixture satisfies every JOIN and predicate the query under test depends on. A control that cannot possibly produce a positive is not evidence of anything.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:23 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 26816BC-17-phantom-rca
+- RCA bucket: wrong premise
+- Trigger pattern: row-shape anomaly purged as bug without splitting the population on its by-design discriminator
+- Reversal note: 2026-08-25 reversal: a population of synthetic zero-score quiz_attempts rows (timestart=timefinish, no question data) was classified as 'bug artifacts' from row shape alone and purged. The population was actually two buckets: students with an ACTIVE quiz_override (the bug class, enforcement zeros burn the extension the staff just granted) and students with NO override (missed-deadline students whose zeros are by-design enforcement records, and whose course-fail is the designed outcome). Only the first bucket is a lockout bug. Amended behavior: before quantifying or acting on any anomaly population, enumerate the discriminator that splits by-design from bug (here: active override presence) and report each bucket separately; row shape is a hypothesis, the discriminator is the classification.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787697242661
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - 'stamper gone, no live INSERT path' -> 'didactic_deadline.php alive in Moodle tree, daily run re-stamped purged students' | RCA: insufficient probe | causal rule updated: 317
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

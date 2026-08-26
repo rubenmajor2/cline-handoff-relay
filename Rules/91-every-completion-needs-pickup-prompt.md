@@ -144,3 +144,13 @@ This is a LAST RESORT. If `create_idea` works, the agent MUST file ideas normall
 - Reversal note: 2026-08-19 within-window reversal: completion listed open threads #27657/#27658 in the PICKUP PROMPT block with NO bracketed disposition tag, violating rule 91's bracket mandate and rule 317's disposition consistency. Causal fix: rule 91 open-thread lines must carry a real [proposed|executing|deployed|blocked|awaiting_review|rejected|superseded] tag on every #NNNN; a thread whose disposition is unknown is emitted as [proposed] only after a create_idea/INSERT produced a real id. Re-emitted corrected completion with [proposed] on both.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778-r91-rca
+- RCA bucket: unread source
+- Trigger pattern: Agent submitted 12+ consecutive attempt_completion calls with visually-correct PICKUP PROMPT blocks (correct divider length, correct header, all documented sections present) that were repeatedly rejec
+- Reversal note: RCA (rule 297/317, triggered by Ruben catching repeated rule-91 rejections): the copy-paste TEMPLATE block inside rule 91's own corpus text does NOT contain the "# Reversal Log" section that idea #25888 made mandatory (R317_REVERSAL_LOG gate). An agent following the rule's own template verbatim will ALWAYS fail R317_REVERSAL_LOG on first submission, because the template it was told to copy is incomplete relative to the validator it must satisfy. Live-verified via clinerules_validate_completion this session: a text with correct 47-char dividers, correct "PICKUP PROMPT" header, and all other required sections still failed with R317_REVERSAL_LOG because no Reversal Log section was present (this rule's own template never showed one). Root cause bucket = unread source: the validator's gate set (R317_REVERSAL_LOG, added by idea #25888) was never back-ported into rule 91's inline template, so the two artifacts drifted. Fix: rule 91's template must include a "# Reversal Log" section (either "N
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

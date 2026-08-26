@@ -11,9 +11,9 @@ One sentence: **Claim scope must equal probe scope.** A tool's auto-success sign
 The reversal log collapses to FOUR recurring failure modes, in order of frequency:
 
 - **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +7 since 2026-08-19 | latest: 2026-08-25 Argus follow-up: three staff requests were carried into a completion as items ']
-- **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +49 since 2026-08-19 | latest: 2026-08-24 524 diagnosis reversal: declared Big Mac 'physically DOWN' by probing 10.100.0.]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +61 since 2026-08-19 | latest: 2026-08-25: a window escalated 35 stranded exam-override decisions to Customer Service as ]
-- **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +13 since 2026-08-19 | latest: 2026-08-25 Argus repair window, second flip: the first completion reported the offload swe]
+- **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +51 since 2026-08-19 | latest: Rebase-status window: during a rule-91 gate loop the completion asserted 'cron_state entri]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +64 since 2026-08-19 | latest: - 'stamper gone, no live INSERT path' -> 'didactic_deadline.php alive in Moodle tree, dail]
+- **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +14 since 2026-08-19 | latest: 2026-08-25 reversal: a population of synthetic zero-score quiz_attempts rows (timestart=ti]
 <!-- golden-rule-table:end -->
 
 English-only, always (narration included); domain context never justifies language switching.
@@ -264,5 +264,35 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: scope error
 - Trigger pattern: staff-reported production bugs listed as awaiting-human disposition without first probing them to a root cause the window could fix
 - Reversal note: 2026-08-25 Argus follow-up: three staff requests were carried into a completion as items 'needing a human or a build' (#28122/#28133/#28134). Ruben pushed back: these are BUGS and should have been resolved without asking. On probe, #28134 was a dead cron plus a one-line HY093 bind defect, both fixable in-window in ~15 tool calls, and the same defect class also explained #28122. Amended behavior: before listing a staff-reported item as awaiting-human, probe it to a named root cause first; an item whose cause is an unscheduled cron, a bind error, or any defect the window has tools to fix is undone work, never an open thread. 'Real production bug, needs a human or a build' is only a valid disposition after the root cause is identified and shown to require a human policy decision.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:22 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 26816BC-17-phantom-rca
+- RCA bucket: insufficient probe
+- Trigger pattern: row-shape classified as bug without the population discriminator; writer declared dead from a single-directory search
+- Reversal note: 2026-08-25 reversal: completion claimed the phantom stamper was gone (didactic_deadline.php 'no longer exists') after searching only /var/www/emtskills/cron, and claimed 7 purged students were bug-caused lockouts. Live record showed didactic_deadline.php alive at /var/www/moodle/ems/local/exam_enforcement/crons/ (registered in routes/scheduled_tasks.php, daily 00:00, log /var/log/exam_enforcement.log) re-stamping the purged students nightly, and the 3 current purged students had ZERO quiz_overrides rows, i.e. they were never the bug class; their zeros were by-design enforcement records. Amended behavior: (a) before declaring any writer/cron dead, search ALL docroots (emtskills AND moodle trees), the scheduled_tasks registry, and the registry's named log file, and quote the log's last run; (b) a synthetic-looking quiz_attempts row (timestart=timefinish, no question data) is NOT by itself a bug artifact: it is by-design enforcement unless the student carries an ACTIVE quiz_override; purg
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:23 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 28031
+- RCA bucket: insufficient probe
+- Trigger pattern: unverified DB-state claim carried into a completion while looping on the rule-91 gate
+- Reversal note: Rebase-status window: during a rule-91 gate loop the completion asserted 'cron_state entries confirm watchdogs update state' without probing; a live mysql SELECT of cron_state for both watchdog slugs returned EMPTY. Amended behavior: any DB-state claim in a completion must carry a probe quote; an empty result set is reported as 'no rows returned', never as 'confirms state'.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787697242661
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - 'stamper gone, no live INSERT path' -> 'didactic_deadline.php alive in Moodle tree, daily run re-stamped purged students' | RCA: insufficient probe | causal rule updated: 317
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -6,19 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 10:12:24 PM PT | window: last 72h | 24 tasks | index total 911 (parsed 0, cached 911)
+Generated: 8/26/2026, 12:25:24 AM PT | window: last 72h | 27 tasks | index total 914 (parsed 9, cached 905)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787600722263` | 8/25/2026, 9:37:39 PM | 67 | 1206KB | Jon says his overrides are not quite sticking. This is his question: |
-| `1787596912975` | 8/25/2026, 9:34:51 PM | 273 | 2736KB | We are gettng these. What's going on? Can you correct that? |
-| `1787517352553` | 8/25/2026, 9:17:07 PM | 176 | 799KB | #Argus |
+| `1787727918566` | 8/26/2026, 12:25:15 AM | 45 | 2178KB | frankenstein-llm experiencing issues iterating here in cline. resolve. |
+| `1787726772970` | 8/26/2026, 12:24:51 AM | 55 | 938KB | Why does this say Hi Moodle and was the student's issue resolved? I've asked on this befor |
+| `1787517211429` | 8/26/2026, 12:24:46 AM | 241 | 1715KB | #CFA |
+| `1787596912975` | 8/26/2026, 12:24:41 AM | 321 | 3089KB | We are gettng these. What's going on? Can you correct that? |
+| `1787728419915` | 8/26/2026, 12:24:14 AM | 13 | 462KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
+| `1787602675527` | 8/26/2026, 12:23:53 AM | 353 | 4960KB | Fix this issue |
+| `1787517352553` | 8/26/2026, 12:14:19 AM | 246 | 1286KB | #Argus |
+| `1787600722263` | 8/26/2026, 12:12:40 AM | 82 | 1366KB | Jon says his overrides are not quite sticking. This is his question: |
+| `1787517380902` | 8/25/2026, 11:58:44 PM | 710 | 10060KB | #VERITAS |
 | `1787705478563` | 8/25/2026, 9:16:06 PM | 216 | 758KB | #Argus |
 | `1787593935930` | 8/25/2026, 9:13:10 PM | 284 | 9503KB | This person needs to stop receiving invoices for 13K -> |
-| `1787517380902` | 8/25/2026, 9:09:25 PM | 650 | 9937KB | #VERITAS |
 | `1787707484695` | 8/25/2026, 7:12:27 PM | 82 | 423KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
 | `1787516033804` | 8/25/2026, 6:19:04 PM | 206 | 742KB | #Frankenstein LLM Routing |
-| `1787602675527` | 8/25/2026, 6:14:31 PM | 262 | 2819KB | Fix this issue |
 | `1787697242661` | 8/25/2026, 6:00:11 PM | 106 | 366KB | #Payment Suspensions |
 | `1787516392266` | 8/25/2026, 3:43:28 PM | 678 | 1605KB | #Deepseek spillage now vs before |
 | `1787659574256` | 8/25/2026, 3:41:39 PM | 454 | 2302KB | #Argus |
@@ -26,7 +30,6 @@ Generated: 8/25/2026, 10:12:24 PM PT | window: last 72h | 24 tasks | index total
 | `1787600344565` | 8/24/2026, 1:08:40 PM | 72 | 739KB | frankenstein-llm getting this error |
 | `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
 | `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
-| `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
 | `1787515058425` | 8/23/2026, 1:31:21 PM | 82 | 325KB | This computer just started and it's very hot and laggy if even after just staring. even af |
 | `1787420987189` | 8/23/2026, 12:37:27 PM | 518 | 3563KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787507044981` | 8/23/2026, 12:35:45 PM | 137 | 612KB | #IMessage Ops |
@@ -39,47 +42,76 @@ Generated: 8/25/2026, 10:12:24 PM PT | window: last 72h | 24 tasks | index total
 
 ## Per-window detail
 
-### `1787600722263` — 8/25/2026, 9:37:39 PM PT — 67 turns
+### `1787727918566` — 8/26/2026, 12:25:15 AM PT — 45 turns
 
 **Original task:**
 
 ```
-Jon says his overrides are not quite sticking. This is his question:
-
-How to I make an attempt bottom reappear for a student that has an exam extension already?
+frankenstein-llm experiencing issues iterating here in cline. resolve.
 ```
 
-**Ideas referenced:** #004085, #059669, #14215, #155724, #15803, #166534, #1715, #2563, #3730, #374151, #4338, #6067, #6366, #78350, #831843, #856404, #9181, #9204, #92400, #9888
+**Ideas referenced:** #10740, #11944, #11953, #12247, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12657, #13108, #13874, #19903, #2050, #25630, #25764, #2625, #26400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787726772970` — 8/26/2026, 12:24:51 AM PT — 55 turns
+
+**Original task:**
+
+```
+Why does this say Hi Moodle and was the student's issue resolved? I've asked on this before 2x so this is a repeat issue on the name issue. The other, lmk
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787517211429` — 8/26/2026, 12:24:46 AM PT — 241 turns
+
+**Original task:**
+
+```
+#CFA
+
+Pick up task #28031 [proposed] — CFA failure-log watchdog repair.
+
+Where we left off (verified 2026-08-23 11:25 PT):
+- Reversal findings: prior completion's 2 claims re-probed live and found fabricated:
+  (a) '72 of 88 tools missing type' — false. All 88 tools have legal type fields (0 missing/illegal/dupes).
+  (b) 'normalizeParamsSchema() fix' — false. grep -rn normalizeParamsSchema = zero hits. Never written to disk.
+- Confirmed-true claims: tickets.student_id is a slug; emails flowing (1,151 in 48h); voice heartbeat working; crons split emsuserver+cron.d.
+- Systemic correction landed:
+```
+
+**Ideas referenced:** #13120, #13437, #25185, #25888, #25973 [deployed], #26067 [deployed], #26071 [deployed], #27395, #27492 [deployed], #27690, #27698, #28031 [proposed], #28032 [proposed], #28048 [proposed], #4932, #5431, #7174, #9019
 
 **Last PICKUP PROMPT:**
 
 ```
-r to set — no guessing needed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — answer Jon's question on why exam-extension overrides don't bring back the attempt button.
-
-Where we left off (verified 2026-08-24 12:07 America/Anchorage, UTC-8):
-- Pulled `exam_enforcement_dashboard.php` (authoritative EMSU source) via emsu-operations access_mcp_resource.
-- Confirmed root cause: `quick_override` action writes only `quiz_overrides.timeopen` + `timeclose`, never `attempts`. Extension reopens the window but does not grant a new attempt, so the button stays hidden once finished attempts >= allowed attempts.
-- Confirmed the dashboard's `render_override_cap_banner()` / `search_student` already compute `max_attempts` vs `attempts_used` and show a red "Override cap: N | Used: N | Remaining: 0" banner for exactly this state.
-- Answer shipped to Jon with the concrete fix: raise `attempts` on the user override (SQL included), plus the two lookalike cases (stuck attempt -> `unstick_moodle_quiz_attempt`; grade-item close date instead of a real override).
-
-Open threads to drive next:
-- None — all work completed this session. Optional (not requested, not filed): the dashboard's "Open Exam for 7 Days" quick-override button could be enhanced to also set `attempts` when granting a retake, which would eliminate this recurring "override isn't sticking" class.
-
-Reference IDs:
-- Files touched: /var/www/emtskills/routes/exam_enforcement_dashboard.php (read-only reference)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+riggers-297-and-rule-update\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #28031 - CFA failure-log watchdog rebase status\n\nWhere we left off (verified 2026-08-25 23:23 AKDT):\n- Both watchdogs (cron_cfa_sms_watchdog.php + cron_cfa_failure_watchdog.php) deployed, scheduled in /etc/cron.d, and RUNNING every 10 min (verified: ssh tail of both logs returned fresh 00:10/00:20 start+complete lines this probe).\n- False zero-rung alarm FIXED: SMS watchdog reports 'Model rungs configured: anthropic' (verified: ssh tail cfa_sms_watchdog.log).\n- 0 real CFA model failures in last 48h = healthy-quiet (verified: mysql COUNT cfa_model_failure_log=9 all Aug-23 testfire; COUNT orchestrator_event_log source=cfa_sms_watchdog 48h=0).\n- CORRECTION: cron_state rows for the two watchdogs are EMPTY - earlier 'cron_state confirms state' claim was unverified/incorrect. Watchdogs run fine without it.\n- email_alert_log table created; evaluateLockoutKeywordThreshold() runs clean (count=0).\n- Ideas #28031 [deployed] + #28032 [deployed] stamped.\n\nOpen threads to drive next:\n1. #28048 [proposed] - Build cfa_keyword_hit_log table + wire inbound keyword capture into SMS flow, then flip api_cfa_failure_log_status.php + _view_cfa_failure_log_health.php from honest 0/ok degradation to real counts. Not started; only remaining gap.\n\nReference IDs:\n- Ideas filed: #28031 [deployed], #28032 [deployed], #28048 [proposed]\n- Files touched: /var/www/emtskills/cron/cron_cfa_sms_watchdog.php, /var/www/emtskills/cron/cron_cfa_failure_watchdog.php, /var/www/emtskills/cron/cron_cfa_testfire_failure_log.php, /var/www/emtskills/lib/cfa_health_hardening.php, /var/www/emtskills/lib/cfa_failure_log_testfire.php, /var/www/emtskills/api/cfa_failure_log_status.php, /var/www/emtskills/routes/_view_cfa_failure_log_health.php, /etc/cron.d/emsu-cfa-sms-watchdog, /etc/cron.d/emsu-cfa-failure-watchdog\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════"
+}
+</arguments>
+<task_progress>
+- [x] All broken writers + callers inventoried
+- [x] Root cause of false zero-rung + real rung source
+- [x] Core schemas locked
+- [x] All corrected files staged + deployed
+- [x] php -l all clean + testfire + SMS watchdog run clean
+- [x] Both watchdogs scheduled in /etc/cron.d
+- [x] Verify DB read-back (testfire row, orchestrator bridge)
+- [x] Verify route/testfire callers work
+- [x] REBASE probe round 1: 0 new rows + 0 bridge rows in 48h
+- [x] REBASE probe round 2: watchdogs RUNNING, healthy-quiet; cron_state empty
+- [x] Got canonical rule-91 block via get_rule91_template
+- [x] Pre-validate round 1: 5 failures named
+- [x] Recorded reversal amendment (rule 317) for cron_state flip
+- [x] Rebuilt result fixing all 5 failures
+- [ ] Re-validate (round 2)
+- [ ] clinerules_check_gate
+- [ ] Emit ONE clean attempt_completion
+</task_progress>
+</use_mcp_tool>
 ```
 
-### `1787596912975` — 8/25/2026, 9:34:51 PM PT — 273 turns
+### `1787596912975` — 8/26/2026, 12:24:41 AM PT — 321 turns
 
 **Original task:**
 
@@ -87,77 +119,65 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 We are gettng these. What's going on? Can you correct that?
 ```
 
-**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #27819, #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550
+**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #25888, #27819 [proposed], #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550, #99999
 
 **Last PICKUP PROMPT:**
 
 ```
-.
+alidate_completion`'s divider/header logic is NOT broken. The repeated "missing PICKUP PROMPT header" / "missing divider lines" errors I got from raw `attempt_completion` calls are a **different, client-side gate** (Cline extension itself), not this MCP tool — and I never once called this diagnostic tool during my 12+ failed attempts. That is the actual process failure (rule 297: insufficient probe). Now checking what actually served this window, per rule 322/315, before writing the RCA.
 
-Thus we can mark #28116 as completed.
-
-Now produce the final completion with PICKUP PROMPT.
-
-Attempt_completion follows.Attempt_completion
-<result>
-The voice‑repeat‑caller system has been double‑checked and confirmed not to be continuing unchecked.
-
-### Findings
-1. **Guard flag** – `voice_call_rate_guard_enabled` is **1** (true).  
-2. **Call counts (last 30 days)** – Daily and total counts for the suspect numbers:
-   - **+18175248667** – max 6 calls on a single day (2026‑08‑25); total 11 calls.  
-   - **+19793204698** – max 5 calls on a single day; total 5 calls.  
-   - **+15202699470** – max 4 calls on a single day; total 7 calls.  
-   - **+15203549040** – max 2 calls on a single day; total 5 calls.  
-3. **Guard thresholds** (from `VoiceCallRateGuard.php**):
-   - **Soft** 4 calls/24 h → tickets are filed (as observed).
-   - **Hard** 8 calls/24 h → cooldown; **no** number exceeds this.
-   - **Burst** 5 calls/60 min → would trigger cooldown; the only day with 6 calls (+18175248667) did not exceed the burst threshold in any 60‑minute window (the timestamps for that day show spaced calls, not a burst).  
-4. **Tickets** – All repeat‑caller tickets currently open/in‑progress correspond to the Soft‑limit level and are being handled as designed.
-
-### Conclusion
-The voice‑repeat‑caller mechanism is functioning as intended:
-- The guard is enabled.  
-- No number has breached the Hard or Burst limits.  
-- Tickets are correctly generated for Soft‑limit repeats.  
-- No systemic unchecked repeats remain.
-
-### Current state
-- **EA reminder loop** – fully resolved (section swap, suppression, cron and mailer patches, Rule‑02 reply delivered).  
-- **Voice repeat‑caller** – guard active, thresholds respected, no hard‑limit violations.
-
-### Open threads (real idea numbers)
-1. #28116 [executing] – Continue monitoring the voice‑repeat‑caller guard; adjust thresholds only if future Hard‑limit breaches appear.
-
-#### Reference IDs
-- Ticket #27819 (EA loop resolved).  
-- Communication log #61430 (Rule‑02 reply).  
-- Ideas #28114, #28115, #28116.  
-- Files /var/www/emtskills/cron/cron_ea_enrollment_reminders.php, /var/www/emtskills/lib/ea_already_on_file_mailer.php, /var/www/emtskills/lib/VoiceCallRateGuard.php.  
-
-═══════════════════════════════════════════════
-═══════════════════════════════════════════════
-Pick up task #<none> — verification of EA loop & voice repeat‑caller system (completed).
-
-Where we left off (verified 2026‑08‑25 22:22 PT):
-- Candace 26124T – section corrected, EA completed, reminders stopped.
-- Voice repeat‑caller guard enabled; all suspect numbers below Hard‑limit; tickets filed for Soft‑limit repeats.
-
-Open threads to drive next (EVERY item MUST have a real idea #):
-1. #28116 — Monitor voice‑repeat‑caller guard for future Hard‑limit breaches (continue as needed).
-
-Reference IDs:
-- Ticket: 27819
-- Ideas: #28114, #28115, #28116
-- Files: /var/www/emtskills/cron/cron_ea_enrollment_reminders.php, /var/www/emtskills/lib/ea_already_on_file_mailer.php, /var/www/emtskills/lib/VoiceCallRateGuard.php
-- Logs: communication_log id 61430, voice_call_log counts (see above)
-
-When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
-</result>
-</Attempt_completion>
 ```
 
-### `1787517352553` — 8/25/2026, 9:17:07 PM PT — 176 turns
+### `1787728419915` — 8/26/2026, 12:24:14 AM PT — 13 turns
+
+**Original task:**
+
+```
+Student seems to claim MANY others are having issues along withthemselves. Unsure if that's true. But can you help track down resolve this particular issue in moodle durably. Tell me why Kaison did not detect and repair this? That should have already been done in advance.
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787602675527` — 8/26/2026, 12:23:53 AM PT — 353 turns
+
+**Original task:**
+
+```
+Fix this issue
+```
+
+**Ideas referenced:** #0066, #19492, #2036, #25194, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #28215 [proposed], #374151, #78350, #9086, #9215, #9320
+
+**Last PICKUP PROMPT:**
+
+```
+ng was dropped per the steer).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Phantom auto-fail attempts blocking Moodle Attempt button (7 students, TKT-20260823-FF0DB606 class).
+
+Where we left off (verified 2026-08-25 17:13 PT):
+- 21 synthetic quiz_attempts purged via /var/www/emtskills/lib/PhantomAttemptPurge.php (idea #28112 [deployed]); all 7 pairs verified released=YES, remaining=0, detectBrokenAccess()=0.
+- Standing detector wired: /etc/cron.d/emsu line 29 runs cron_phantom_attempt_detector.php --auto-heal every 30 min; manual run as www-data returned EXIT=0.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #28215 [proposed] — Suspend/merge 4 archived duplicate Moodle accounts (uids 51849, 53637, 54227, 54555) that remain phantom sinks, via moodle_account_merger or suspended=1; optionally exclude Archived-NN- usernames in the detector.
+2. #28112 [deployed] — Confirm the */30 detector produces clean auto-heal log lines over the next 24h (/var/log/emsu_phantom_attempt_detector.log).
+
+Reference IDs:
+- Ticket: TKT-20260823-FF0DB606 (source incident for idea #28112)
+- Ideas filed: #28215 [proposed] (this session); #28112 [deployed] (canonical purge lib); #28116 [superseded] (abandoned framing)
+- Files touched: /etc/cron.d/emsu (schedule wiring); /var/www/emtskills/cron/cron_phantom_attempt_detector.php + lib/PhantomAttemptPurge.php (verified on disk, unchanged)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787517352553` — 8/26/2026, 12:14:19 AM PT — 246 turns
 
 **Original task:**
 
@@ -180,37 +200,129 @@ I worked your actual ask as three parts and shipped the buildable half end-to-en
 Argus is a task worker + auto-miner. It can EXECUTE a workflow that already ex
 ```
 
-**Ideas referenced:** #178712, #19419, #198754, #2230, #22688, #23036, #2338, #23428, #23468, #23506, #2358, #23675, #23941, #23982, #24926, #24941, #24990, #25142, #25571, #25768, #25916, #2597, #25973, #2603, #2605, #26067, #26663, #26719, #26823, #26824, #26825, #26895, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27826, #27828, #27832, #27840, #27860 [deployed], #27870 [proposed], #27871 [proposed], #27872 [proposed], #27873 [proposed], #27874 [proposed], #27875 [proposed], #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28227 [deployed]
+**Ideas referenced:** #1711, #1712, #178712, #18693, #19419, #198754, #2230, #22688, #23036, #2338, #23428, #23468, #23506, #2358, #23675, #23941, #23982, #24926, #24941, #24990, #25142, #25571, #25768, #25916, #2597, #25973, #2603, #2605, #26067, #26663, #26719, #26823, #26824, #26825, #26895, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27826, #27828, #27832, #27840, #27860 [deployed], #27870 [proposed], #27871 [proposed], #27872 [proposed], #27873 [proposed], #27874 [proposed], #27875 [proposed], #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28056, #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28122, #28125, #28127, #28133, #28134, #28145, #28146, #28147, #28153, #28155, #28187, #28189, #28199, #28201, #28213 [proposed], #28227 [deployed], #28232 [deployed], #28234 [proposed], #7990, #9086, #9168, #9306, #9339
 
 **Last PICKUP PROMPT:**
 
 ```
- cause. Handoff notes updated.
+, the artifacts clear with it.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task — Argus rebase + Jon's NREMT widget restoration (2026-08-25).
+Pick up task — Argus/Bryson Q&A + enforcement analysis (2026-08-25).
 
-Where we left off (verified 2026-08-25 21:16 PT):
-- #27874/#27875 rebase verified: workflow-engine cron firing every 2min, 0 blank Argus rows, both ideas deployed, engine idle (no production workflows defined yet).
-- #28227 [deployed]: NREMT banner restored to pd_80_percent_review.php (seeded from studentsAt80) + report_viewer.php renders it in empty AND non-empty states. Backups .bak-nremtwidget-20260825 both files, lint-clean, banner composes with live data (237 unpaid / 31 mismatches).
+Where we left off (verified 2026-08-25 23:13 PT):
+- Q1: 10 open offloaded Argus tasks (all visible, quality-gate pattern); Q3: #28042 real (6,322 rows); Q4: Bryson enforcement CONFIRMED as class-date-driven error — 3 zeroed Final attempts at FT didactic date 6/21 with 0 question_attempts (never sat it); self-heal exists but only covers future-didactic-date cases.
+- Task #679 answered + closed; #28232 closed; #28234 [proposed] holds the full repair spec (section decision is human-gated for Jon).
 
 Open threads to drive next:
-1. #28042 [proposed] — 6,350 blank-status orchestrator_ideas rows need a policy decision on batch normalization (2,468 silent-ghost blockers, 1,424 DEADMAN RCA retrains, 546 TIER-4 bug-heal). NOT executed pending Ruben call.
+1. #28234 [proposed] — Bryson record repair: (a) extend the ghost-attempt self-heal to passed-didactic-date cases where question_attempts=0 (cron_ai_watchdog_ext.php 1601-1766 pattern); (b) merge 2 stale rows; (c) Jon's section conversation gates EA/section/exam-deadline fixes.
+2. #28042 [proposed] — 6,322 blank-status rows policy decision (Ruben's call).
 
 Reference IDs:
-- Ideas: #28227 [deployed], #28042 [proposed]
-- Ideas verified stable from prior session: #27874 [deployed], #27875 [deployed]
-- Files touched: routes/pd_80_percent_review.php, routes/report_viewer.php, docs/HANDOFF_NOTES.md
-- Data verified: nremt_candidate_tracking (991 rows, fresh 2026-08-25 18:01)
+- Ideas: #28234 [proposed], #28042 [proposed]
+- Closed: #28232 [deployed], Argus task #679
+- Code evidence: cron_ai_watchdog_ext.php:1601-1766 (self-heal, future-dates-only gap), quiz_attempts 656748/663532/674023 (0 questions), Students.scheduled_didactic_completion_date=2026-06-21
+- Files touched: docs/HANDOFF_NOTES.md (3 entries this session)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
+```
+
+### `1787600722263` — 8/26/2026, 12:12:40 AM PT — 82 turns
+
+**Original task:**
+
+```
+Jon says his overrides are not quite sticking. This is his question:
+
+How to I make an attempt bottom reappear for a student that has an exam extension already?
+```
+
+**Ideas referenced:** #004085, #059669, #13984, #13985, #13986, #14215, #155724, #15803, #166534, #1715, #2563, #3730, #374151, #4338, #6067, #6366, #78350, #831843, #856404, #9181, #9204, #92400, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+d and automatically clear any orphaned attempts).
+
+───────────────────────
+════ PICKUP PROMPT ════
+Pick up task — resolve Jon’s “override not sticking” issue and confirm Kaison auto‑resolve works.
+
+Where we left off (verified 2026‑08‑25 10:52 PT):
+- Analyzed Jon’s question and identified the missing `attempts` update.
+- Verified the quick‑override code in `exam_enforcement_dashboard.php`.
+- Patched `wopr_quiz_unstick.php` to connect to the correct Moodle DB.
+
+Open threads to drive next (none – all work completed this session).
+
+Reference IDs:
+- Files touched: /var/www/emtskills/lib/wopr_quiz_unstick.php (patched connection logic)
+───────────────────────
+</result>
 </attempt_completion>
+```
+
+### `1787517380902` — 8/25/2026, 11:58:44 PM PT — 710 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
+```
+
+**Ideas referenced:** #12459, #13441, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #23184, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28221, #28233 [deployed], #4991, #6230, #8798
+
+**Last PICKUP PROMPT:**
+
+```
+ rather than leaked as a fact.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052 - VERITAS pre-generation fact grounding
+
+Where we left off (verified 2026-08-25 22:57 AKDT):
+- Root cause of residual L4 auto-corrections identified: lib/EmsuUniversalGrounding.php injects policy corpus + the INSTRUCTION "do not invent" but ZERO per-student facts, so the model has nothing to be faithful to and fills gaps by generation (verified: read_server_file of EmsuUniversalGrounding.php shows corpus + ANSWER GUARD only, no fact block)
+- Built + deployed lib/PreGenerationFactGrounding.php: closed-world ledger = VERIFIED FACTS (assertable) + NOT VERIFIED (13 high-stakes fields forbidden to assert/confirm/deny) + no-absence-as-negative rule (verified: ls shows 9902 bytes on disk, php -l clean)
+- Wired into lib/EmailAIResponder.php after EmsuUniversalGrounding::inject, before the LLM call (verified: grep -c PreGenerationFactGrounding::inject = 1, $studentCtx in scope, php -l clean)
+- 4/4 functional tests pass: facts listed, refund named unverified, idempotent marker_count=1, fail-open prompt_unchanged=YES, placeholder junk filtered (verified: php /tmp/test_fact_ledger.php output)
+- Routing untouched, no Anthropic introduced (verified: grep -ci anthropic/claude in new file = 0; responder still frankenstein-llm + deepseek fallback)
+- Fail-open fix applied mid-build after own test caught ledger firing on zero-verified-fact senders
+
+Open threads to drive next:
+1. #28233 [deployed] - measure the ledger's effect: compare email_send_blocks veritas_l4_auto_corrected rate for the 24h before vs after 2026-08-25 23:00 AKDT. Expect the ~10/hr high-stakes corrections to drop at the source.
+2. #28213 [proposed] - correction LLM call exceeds 60s timeout; still unfixed. The ledger reduces how often correction runs but does not fix the timeout itself. Fix: raise timeout, make correction async, or use a faster correction model.
+3. #28220 [proposed] - sample ~20 post-gate veritas_l4_auto_corrected rows, classify warranted vs over-strict vs meaning-changed; tune judge if >30% bad.
+
+Reference IDs:
+- Ideas filed: #28233 [deployed], #28220 [proposed], #28218 [deployed], #28213 [proposed], #27942 [deployed], #28028 [deployed]
+- Files touched: lib/PreGenerationFactGrounding.php (new), lib/EmailAIResponder.php, lib/mailer.php
+- Backup: /tmp/EmailAIResponder.php.bak-factledger-20260825-235557
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+
+# Reversal Log
+- "fail-open on empty context works" -> corrected: first build INJECTED a 13-line forbidden ledger for senders with zero verified facts (TEST 3 showed prompt_unchanged=NO), which would make the assistant cagey about general policy for prospective students | RCA bucket: insufficient probe (claimed fail-open from the code's documented intent rather than from executing it) | causal rule already covers this: rule 317 GOLDEN RULE (claim scope must equal probe scope) + rule 99 amendment 2026-08-24 (a lint pass proves syntax only, never behavior). Caught pre-ship by executing the test rather than reading the code; fixed by requiring >=1 verified fact before the ledger engages, retested 4/4 pass.
+</result>
+<task_progress>
+- [x] Root cause: grounding had policy corpus + "do not invent" but ZERO per-student facts
+- [x] Built lib/PreGenerationFactGrounding.php (closed-world ledger, names unknowns)
+- [x] Wired into EmailAIResponder
 ```
 
 ### `1787705478563` — 8/25/2026, 9:16:06 PM PT — 216 turns
@@ -288,68 +400,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Rule 297 + 317 amendments filed via clinerules_amend_rule
 - [x] clinerules_validate_completion ALL PASSED + check_gate CLEAR
 - [x] Completion shipped with rule-91 pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1787517380902` — 8/25/2026, 9:09:25 PM PT — 650 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase and analyze since last analysis
-
-VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
-
-════
-```
-
-**Ideas referenced:** #12459, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #4991, #8798
-
-**Last PICKUP PROMPT:**
-
-```
- the judge is not over-strict.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 - VERITAS auto-correction, high-stakes scoping
-
-Where we left off (verified 2026-08-25 17:53 AKDT):
-- VERITAS auto-correction live: judge_and_correct() in lib/truth_judge.php judges -> auto-corrects on FAIL -> re-judges -> sends corrected (verified: prior window write_server_file + php -l + FPM reload)
-- High-stakes-only gate deployed in lib/mailer.php: judge/auto-correct runs ONLY on high-stakes emails (money/refund/enrollment/NREMT/graduation/externship/certificate/eligibility/regulator keywords), not routine messages (verified: php -l clean, 1 gate + 1 judge call no dupes, regex 10/10 high-stakes caught + 6/6 routine skipped)
-- Production impact measured: auto-corrections ~30/hr pre-gate -> 10.2/hr projected post-gate (>=17:45 AKDT) = ~3x reduction, gate working (verified: email_send_blocks 11 rows in 65min post-gate window)
-- #28218 [deployed] filed for the high-stakes gate; #28220 [proposed] filed to sample post-gate auto-corrections for judge strictness
-
-Open threads to drive next:
-1. #28213 [proposed] - correction LLM call exceeds 60s timeout; high-stakes gate reduced volume but the timeout itself is unfixed. Fix: raise timeout, make correction async, or use a faster correction model.
-2. #28220 [proposed] - sample ~20 post-gate veritas_l4_auto_corrected rows, classify warranted vs over-strict vs meaning-changed; tune judge if >30% bad.
-
-Reference IDs:
-- Ideas filed: #28218 [deployed], #28220 [proposed], #27942 [deployed], #28028 [deployed], #28213 [proposed]
-- Files touched: lib/mailer.php, lib/truth_judge.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-No reversals this window.
-</result>
-<task_progress>
-- [x] VERITAS rebase: #28153b deployed, #28028 e2e, #28213 latency finding
-- [x] Ruben's architecture question answered
-- [x] ACT: high-stakes-only gate deployed (sophisticated stem regex)
-- [x] php -l clean + no duplicates + regex verified (10/10 high-stakes, 6/6 routine skipped)
-- [x] Production impact: pre-gate ~30/hr → post-gate 10.2/hr (3x reduction, gate working)
-- [x] Reconciled #27942/#28028 [deployed], #28213 [proposed]
-- [x] Filed + deployed #28218 (high-stakes gate)
-- [x] Filed #28220 (monitoring follow-up)
-- [x] validate_completion ALL PASSED
-- [x] check_gate CLEAR → shipped attempt_completion
 </task_progress>
 </attempt_completion>
 ```
@@ -439,45 +489,6 @@ Reference IDs:
 - Ticket: (primary) task #1787507044981
 - Ideas filed: #28033 [proposed], #28035 [proposed]
 - Files touched: /etc/cron.d/emsu-fleet-inventory-autosync (+ .bak-20260825-181027), /var/www/emtskills/cron/cron_fleet_inventory_autosync.php (+ .bak-bigmac-20260825-180703)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787602675527` — 8/25/2026, 6:14:31 PM PT — 262 turns
-
-**Original task:**
-
-```
-Fix this issue
-```
-
-**Ideas referenced:** #0066, #19492, #2036, #25194, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #28215 [proposed], #374151, #78350, #9086, #9215, #9320
-
-**Last PICKUP PROMPT:**
-
-```
-ng was dropped per the steer).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Phantom auto-fail attempts blocking Moodle Attempt button (7 students, TKT-20260823-FF0DB606 class).
-
-Where we left off (verified 2026-08-25 17:13 PT):
-- 21 synthetic quiz_attempts purged via /var/www/emtskills/lib/PhantomAttemptPurge.php (idea #28112 [deployed]); all 7 pairs verified released=YES, remaining=0, detectBrokenAccess()=0.
-- Standing detector wired: /etc/cron.d/emsu line 29 runs cron_phantom_attempt_detector.php --auto-heal every 30 min; manual run as www-data returned EXIT=0.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #28215 [proposed] — Suspend/merge 4 archived duplicate Moodle accounts (uids 51849, 53637, 54227, 54555) that remain phantom sinks, via moodle_account_merger or suspended=1; optionally exclude Archived-NN- usernames in the detector.
-2. #28112 [deployed] — Confirm the */30 detector produces clean auto-heal log lines over the next 24h (/var/log/emsu_phantom_attempt_detector.log).
-
-Reference IDs:
-- Ticket: TKT-20260823-FF0DB606 (source incident for idea #28112)
-- Ideas filed: #28215 [proposed] (this session); #28112 [deployed] (canonical purge lib); #28116 [superseded] (abandoned framing)
-- Files touched: /etc/cron.d/emsu (schedule wiring); /var/www/emtskills/cron/cron_phantom_attempt_detector.php + lib/PhantomAttemptPurge.php (verified on disk, unchanged)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -832,57 +843,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Reconciled live idea statuses (#28047 deployed; #28036/37/38/41 proposed)
 - [x] Answered Ruben's question honestly + completed with PICKUP PROMPT
 </task_progress>
-</attempt_completion>
-```
-
-### `1787517211429` — 8/23/2026, 3:09:50 PM PT — 206 turns
-
-**Original task:**
-
-```
-#CFA
-
-Pick up task #28031 [proposed] — CFA failure-log watchdog repair.
-
-Where we left off (verified 2026-08-23 11:25 PT):
-- Reversal findings: prior completion's 2 claims re-probed live and found fabricated:
-  (a) '72 of 88 tools missing type' — false. All 88 tools have legal type fields (0 missing/illegal/dupes).
-  (b) 'normalizeParamsSchema() fix' — false. grep -rn normalizeParamsSchema = zero hits. Never written to disk.
-- Confirmed-true claims: tickets.student_id is a slug; emails flowing (1,151 in 48h); voice heartbeat working; crons split emsuserver+cron.d.
-- Systemic correction landed:
-```
-
-**Ideas referenced:** #13120, #13437, #25973 [deployed], #26067 [deployed], #26071 [deployed], #27395, #27492 [deployed], #27690, #27698, #28031 [proposed], #28032 [proposed], #28048 [proposed], #4932, #5431, #7174, #9019
-
-**Last PICKUP PROMPT:**
-
-```
-ire into the inbound SMS flow.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #28031 — CFA failure-log watchdog repair (both code repairs shipped + verified this window).
-
-Where we left off (verified 2026-08-23 15:09 PT):
-- All 7 corrected files deployed to WOPR (`/var/www/emtskills/...`): cron_cfa_sms_watchdog.php, cron_cfa_failure_watchdog.php, cron_cfa_testfire_failure_log.php, lib/cfa_health_hardening.php, lib/cfa_failure_log_testfire.php, api/cfa_failure_log_status.php, routes/_view_cfa_failure_log_health.php
-- Watchdogs scheduled: /etc/cron.d/emsu-cfa-sms-watchdog + emsu-cfa-failure-watchdog (`*/10`, www-data, logs → /var/log/emsu/)
-- email_alert_log table created in admin_portal (alert_type, message, created_at)
-- Ideas #28031 [deployed] + #28032 [deployed] stamped deployed_at=NOW()
-- Live-probe evidence: testfire row id=3 in cfa_model_failure_log; bridge row 7017105 in orchestrator_event_log (severity=error, event_status=open); watchdog prints "Model rungs configured: anthropic" (no false zero-rung); harness EXIT=0
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #28048 [proposed] — Build the lockout-keyword capture feature: create `cfa_keyword_hit_log` table, wire capture into the inbound SMS/keyword flow, then flip api/cfa_failure_log_status.php + routes/_view_cfa_failure_log_health.php from honest 0/ok degradation to real counts. (This is the only remaining gap; everything else in this sweep is done.)
-
-Reference IDs:
-- Task: #28031
-- Ideas filed/updated: #28031 [deployed], #28032 [deployed], #28048 [proposed]
-- Files touched (WOPR): /var/www/emtskills/cron/cron_cfa_sms_watchdog.php, /var/www/emtskills/cron/cron_cfa_failure_watchdog.php, /var/www/emtskills/cron/cron_cfa_testfire_failure_log.php, /var/www/emtskills/lib/cfa_health_hardening.php, /var/www/emtskills/lib/cfa_failure_log_testfire.php, /var/www/emtskills/api/cfa_failure_log_status.php, /var/www/emtskills/routes/_view_cfa_failure_log_health.php, /etc/cron.d/emsu-cfa-sms-watchdog, /etc/cron.d/emsu-cfa-failure-watchdog
-- Files staged locally (Mac): /Users/rubenmajor/Desktop/cfa_fix/
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 

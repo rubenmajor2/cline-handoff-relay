@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 9:12:24 PM PT | window: last 72h | 24 tasks | index total 911 (parsed 6, cached 905)
+Generated: 8/25/2026, 10:12:24 PM PT | window: last 72h | 24 tasks | index total 911 (parsed 0, cached 911)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787593935930` | 8/25/2026, 9:12:21 PM | 283 | 9495KB | This person needs to stop receiving invoices for 13K -> |
-| `1787705478563` | 8/25/2026, 9:12:12 PM | 205 | 698KB | #Argus |
-| `1787600722263` | 8/25/2026, 9:11:39 PM | 17 | 316KB | Jon says his overrides are not quite sticking. This is his question: |
+| `1787600722263` | 8/25/2026, 9:37:39 PM | 67 | 1206KB | Jon says his overrides are not quite sticking. This is his question: |
+| `1787596912975` | 8/25/2026, 9:34:51 PM | 273 | 2736KB | We are gettng these. What's going on? Can you correct that? |
+| `1787517352553` | 8/25/2026, 9:17:07 PM | 176 | 799KB | #Argus |
+| `1787705478563` | 8/25/2026, 9:16:06 PM | 216 | 758KB | #Argus |
+| `1787593935930` | 8/25/2026, 9:13:10 PM | 284 | 9503KB | This person needs to stop receiving invoices for 13K -> |
 | `1787517380902` | 8/25/2026, 9:09:25 PM | 650 | 9937KB | #VERITAS |
-| `1787596912975` | 8/25/2026, 7:28:57 PM | 249 | 2651KB | We are gettng these. What's going on? Can you correct that? |
 | `1787707484695` | 8/25/2026, 7:12:27 PM | 82 | 423KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
 | `1787516033804` | 8/25/2026, 6:19:04 PM | 206 | 742KB | #Frankenstein LLM Routing |
 | `1787602675527` | 8/25/2026, 6:14:31 PM | 262 | 2819KB | Fix this issue |
@@ -26,7 +27,6 @@ Generated: 8/25/2026, 9:12:24 PM PT | window: last 72h | 24 tasks | index total 
 | `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
 | `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 | `1787517211429` | 8/23/2026, 3:09:50 PM | 206 | 1273KB | #CFA |
-| `1787517352553` | 8/23/2026, 2:10:08 PM | 138 | 692KB | #Argus |
 | `1787515058425` | 8/23/2026, 1:31:21 PM | 82 | 325KB | This computer just started and it's very hot and laggy if even after just staring. even af |
 | `1787420987189` | 8/23/2026, 12:37:27 PM | 518 | 3563KB | Frankenstein-llm is not supposed to be using 4.6 flash for screenshots. It's supposed to b |
 | `1787507044981` | 8/23/2026, 12:35:45 PM | 137 | 612KB | #IMessage Ops |
@@ -39,44 +39,7 @@ Generated: 8/25/2026, 9:12:24 PM PT | window: last 72h | 24 tasks | index total 
 
 ## Per-window detail
 
-### `1787593935930` — 8/25/2026, 9:12:21 PM PT — 283 turns
-
-**Original task:**
-
-```
-This person needs to stop receiving invoices for 13K ->
-```
-
-**Ideas referenced:** #1456, #16613, #178759, #178768, #178769, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #28206 [proposed], #28207 [proposed], #4929, #9086, #9168
-
-**Last PICKUP PROMPT:**
-
-```
-115 approved, 28089 deployed.\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1787680000000 — stop stale $12,860 dunning emails to Alex Vipersmith 26910FT-15 + SLS-ground balance-email senders.\n\nWhere we left off (checked 2026-08-25 20:10 PT):\n- Alex true balance $1,545 of $2,890 (verify_payment_state: two $672.50 settled Authnet, one open QB invoice); $12,860 was stale mis-tied mirror artifact.\n- 8/25 09:02 cron email to Alex quoted correct $1,545 (#28089 [deployed] join coercion correction live since 8/24; evidence: mysql SELECT this turn returned status=deployed).\n- Wrong-balance sender now = cron_ai_ticket_agent (cohort: 372130 Alex + 371702 Bolling $150 paid-in-full; evidence: mysql execute_query returned 2 rows source=ai_ticket_agent).\n- No email hold flag exists (evidence: ssh_command grep lines 293-362 returned SMS-only suppression); suppression build = #28206 [executing]; DB status approved, stamped 21:08:25 PT (evidence: mysql SELECT this turn).\n- Mirror re-tie = #28115 [executing]; DB status approved (evidence: mysql SELECT this turn; tag executing per rule 161 approved=executing).\n\nOpen threads to drive next:\n1. #28206 [executing] — executor builds email dunning suppression (hold flag + open-withdrawal-ticket check) in cron_post_due_reminders.php; probe the hold path live after the build lands.\n2. #28207 [executing] — executor builds ai_ticket_agent balance-email audit + SLS grounding (covers Alex + Bolling 371702); confirm no stale-mirror quotes after it lands.\n3. #28115 [executing] — mirror re-tie; once it lands, Vicky closes Alex's open QB invoice ($1,545 stays owed until then).\n\nReference IDs:\n- Ideas filed this session: #28206 [executing], #28207 [executing]\n- Ideas carried: #28089 [deployed], #28115 [executing]\n- Files touched: none this window (server reads only); targets named in ideas: cron/cron_post_due_reminders.php, cron_ai_ticket_agent.php\n- Student: 26910FT-15 (moodle 53198); emails 371347, 372130; tickets 1952, 1957\n\n# Reversal Log\n- $12,860 is Alex's current balance -> stale mirror artifact; true balance $1,545 | wrong premise | rule 297 amended (SCOPE GATE item 7 corroboration scan)\n- cron_post_due_reminders blamed for 8/25 wrong email -> 8/25 cron email correct ($1,545); wrong sender was ai_ticket_agent | insufficient probe | rule 317 amended (sender attribution requires source field + body quote)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════", "task_prompt": "This person needs to stop receiving invoices for 13K -> (screenshot: Suspension Notification - Outstanding Balance of $12,860.00 to alex.vipersmith@gmail.com)"}
-</arguments>
-</use_mcp_tool>
-```
-
-### `1787705478563` — 8/25/2026, 9:12:12 PM PT — 205 turns
-
-**Original task:**
-
-```
-#Argus
-
-Does anythign else in Argus need repair or resolution? Evaluate since last check:
-
-approved
-- #28205 [proposed] — add a surface-aware gate to _inject_corpus(), re-measure A/B/C, and track deliberation-heavy rejection counts 48h before/after. Needs a correctness bench, not a blind trim: the corpus is what prevents invented EMSU facts
-
-approved, but why do i need to do this, isn't this a bug and should have been approved iwhtout my authorization? -> #28122 [proposed] — Jayvee: Team Hub add/remove/edit shifts + shift notes throwing errors for ~1 week, screenshot attached. Real production 
-```
-
-**Ideas referenced:** #1399, #1523, #1525, #1526, #1527, #1528, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1536, #1537, #1538, #1540, #1566, #1567, #1568, #1570, #1573, #1583, #1594, #1612, #1615, #1616, #1632, #1633, #1634, #1638, #1641, #1642, #1686, #1687, #1688, #1711 [deployed], #1712, #1715, #1725, #1727, #1730, #1731, #1740, #1741, #1745, #1746, #1758, #1759, #1763, #2167, #23982, #24645, #24723, #25185, #26663, #27100, #27863, #27864, #27865, #27866, #27867, #27868, #27869, #28122 [proposed], #28127, #28132, #28133 [proposed], #28134 [proposed], #28155 [deployed], #28205 [proposed], #28214 [proposed], #28215, #28221 [deployed], #28225 [proposed], #28226 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787600722263` — 8/25/2026, 9:11:39 PM PT — 17 turns
+### `1787600722263` — 8/25/2026, 9:37:39 PM PT — 67 turns
 
 **Original task:**
 
@@ -113,6 +76,219 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
+</attempt_completion>
+```
+
+### `1787596912975` — 8/25/2026, 9:34:51 PM PT — 273 turns
+
+**Original task:**
+
+```
+We are gettng these. What's going on? Can you correct that?
+```
+
+**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #27819, #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550
+
+**Last PICKUP PROMPT:**
+
+```
+.
+
+Thus we can mark #28116 as completed.
+
+Now produce the final completion with PICKUP PROMPT.
+
+Attempt_completion follows.Attempt_completion
+<result>
+The voice‑repeat‑caller system has been double‑checked and confirmed not to be continuing unchecked.
+
+### Findings
+1. **Guard flag** – `voice_call_rate_guard_enabled` is **1** (true).  
+2. **Call counts (last 30 days)** – Daily and total counts for the suspect numbers:
+   - **+18175248667** – max 6 calls on a single day (2026‑08‑25); total 11 calls.  
+   - **+19793204698** – max 5 calls on a single day; total 5 calls.  
+   - **+15202699470** – max 4 calls on a single day; total 7 calls.  
+   - **+15203549040** – max 2 calls on a single day; total 5 calls.  
+3. **Guard thresholds** (from `VoiceCallRateGuard.php**):
+   - **Soft** 4 calls/24 h → tickets are filed (as observed).
+   - **Hard** 8 calls/24 h → cooldown; **no** number exceeds this.
+   - **Burst** 5 calls/60 min → would trigger cooldown; the only day with 6 calls (+18175248667) did not exceed the burst threshold in any 60‑minute window (the timestamps for that day show spaced calls, not a burst).  
+4. **Tickets** – All repeat‑caller tickets currently open/in‑progress correspond to the Soft‑limit level and are being handled as designed.
+
+### Conclusion
+The voice‑repeat‑caller mechanism is functioning as intended:
+- The guard is enabled.  
+- No number has breached the Hard or Burst limits.  
+- Tickets are correctly generated for Soft‑limit repeats.  
+- No systemic unchecked repeats remain.
+
+### Current state
+- **EA reminder loop** – fully resolved (section swap, suppression, cron and mailer patches, Rule‑02 reply delivered).  
+- **Voice repeat‑caller** – guard active, thresholds respected, no hard‑limit violations.
+
+### Open threads (real idea numbers)
+1. #28116 [executing] – Continue monitoring the voice‑repeat‑caller guard; adjust thresholds only if future Hard‑limit breaches appear.
+
+#### Reference IDs
+- Ticket #27819 (EA loop resolved).  
+- Communication log #61430 (Rule‑02 reply).  
+- Ideas #28114, #28115, #28116.  
+- Files /var/www/emtskills/cron/cron_ea_enrollment_reminders.php, /var/www/emtskills/lib/ea_already_on_file_mailer.php, /var/www/emtskills/lib/VoiceCallRateGuard.php.  
+
+═══════════════════════════════════════════════
+═══════════════════════════════════════════════
+Pick up task #<none> — verification of EA loop & voice repeat‑caller system (completed).
+
+Where we left off (verified 2026‑08‑25 22:22 PT):
+- Candace 26124T – section corrected, EA completed, reminders stopped.
+- Voice repeat‑caller guard enabled; all suspect numbers below Hard‑limit; tickets filed for Soft‑limit repeats.
+
+Open threads to drive next (EVERY item MUST have a real idea #):
+1. #28116 — Monitor voice‑repeat‑caller guard for future Hard‑limit breaches (continue as needed).
+
+Reference IDs:
+- Ticket: 27819
+- Ideas: #28114, #28115, #28116
+- Files: /var/www/emtskills/cron/cron_ea_enrollment_reminders.php, /var/www/emtskills/lib/ea_already_on_file_mailer.php, /var/www/emtskills/lib/VoiceCallRateGuard.php
+- Logs: communication_log id 61430, voice_call_log counts (see above)
+
+When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66 per `.clinerules/EXECUTE_ORDER_66`.
+</result>
+</Attempt_completion>
+```
+
+### `1787517352553` — 8/25/2026, 9:17:07 PM PT — 176 turns
+
+**Original task:**
+
+```
+#Argus
+
+See this and rebase first and discuss / then we can take action after the dicsussion. Update also based on from last analysis below
+
+
+## Argus + Student Lifecycle Fall-Through — Advisory (Ruben, 2026-08-21 21:15 PT)
+
+I worked your actual ask as three parts and shipped the buildable half end-to-end (verified, rule 263).
+
+---
+
+### PART A — "Argus won't build workflows like ChatGPT/Claude" + "the handoff in some invisible queue"
+
+**That description is accurate, and I can now tell you the precise shape of it.**
+
+Argus is a task worker + auto-miner. It can EXECUTE a workflow that already ex
+```
+
+**Ideas referenced:** #178712, #19419, #198754, #2230, #22688, #23036, #2338, #23428, #23468, #23506, #2358, #23675, #23941, #23982, #24926, #24941, #24990, #25142, #25571, #25768, #25916, #2597, #25973, #2603, #2605, #26067, #26663, #26719, #26823, #26824, #26825, #26895, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27826, #27828, #27832, #27840, #27860 [deployed], #27870 [proposed], #27871 [proposed], #27872 [proposed], #27873 [proposed], #27874 [proposed], #27875 [proposed], #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28227 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+ cause. Handoff notes updated.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — Argus rebase + Jon's NREMT widget restoration (2026-08-25).
+
+Where we left off (verified 2026-08-25 21:16 PT):
+- #27874/#27875 rebase verified: workflow-engine cron firing every 2min, 0 blank Argus rows, both ideas deployed, engine idle (no production workflows defined yet).
+- #28227 [deployed]: NREMT banner restored to pd_80_percent_review.php (seeded from studentsAt80) + report_viewer.php renders it in empty AND non-empty states. Backups .bak-nremtwidget-20260825 both files, lint-clean, banner composes with live data (237 unpaid / 31 mismatches).
+
+Open threads to drive next:
+1. #28042 [proposed] — 6,350 blank-status orchestrator_ideas rows need a policy decision on batch normalization (2,468 silent-ghost blockers, 1,424 DEADMAN RCA retrains, 546 TIER-4 bug-heal). NOT executed pending Ruben call.
+
+Reference IDs:
+- Ideas: #28227 [deployed], #28042 [proposed]
+- Ideas verified stable from prior session: #27874 [deployed], #27875 [deployed]
+- Files touched: routes/pd_80_percent_review.php, routes/report_viewer.php, docs/HANDOFF_NOTES.md
+- Data verified: nremt_candidate_tracking (991 rows, fresh 2026-08-25 18:01)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+</attempt_completion>
+```
+
+### `1787705478563` — 8/25/2026, 9:16:06 PM PT — 216 turns
+
+**Original task:**
+
+```
+#Argus
+
+Does anythign else in Argus need repair or resolution? Evaluate since last check:
+
+approved
+- #28205 [proposed] — add a surface-aware gate to _inject_corpus(), re-measure A/B/C, and track deliberation-heavy rejection counts 48h before/after. Needs a correctness bench, not a blind trim: the corpus is what prevents invented EMSU facts
+
+approved, but why do i need to do this, isn't this a bug and should have been approved iwhtout my authorization? -> #28122 [proposed] — Jayvee: Team Hub add/remove/edit shifts + shift notes throwing errors for ~1 week, screenshot attached. Real production 
+```
+
+**Ideas referenced:** #1399, #1523, #1525, #1526, #1527, #1528, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1536, #1537, #1538, #1540, #1566, #1567, #1568, #1570, #1573, #1583, #1594, #1612, #1615, #1616, #1632, #1633, #1634, #1638, #1641, #1642, #1686, #1687, #1688, #1711 [deployed], #1712, #1715, #1725, #1727, #1730, #1731, #1740, #1741, #1745, #1746, #1758, #1759, #1763, #2167, #23982, #24645, #24723, #25185, #26663, #27100, #27863, #27864, #27865, #27866, #27867, #27868, #27869, #28122 [proposed], #28127, #28132, #28133 [proposed], #28134 [proposed], #28155 [deployed], #28205 [proposed], #28214 [proposed], #28215, #28221 [deployed], #28225 [proposed], #28226 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787593935930` — 8/25/2026, 9:13:10 PM PT — 284 turns
+
+**Original task:**
+
+```
+This person needs to stop receiving invoices for 13K ->
+```
+
+**Ideas referenced:** #1456, #16613, #178759, #178768, #178769, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #28206 [proposed], #28207 [proposed], #4929, #9086, #9168
+
+**Last PICKUP PROMPT:**
+
+```
+28115 approved, 28089 deployed.
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787680000000 — stop stale $12,860 dunning emails to Alex Vipersmith 26910FT-15 + SLS-ground balance-email senders.
+
+Where we left off (checked 2026-08-25 20:10 PT):
+- Alex true balance $1,545 of $2,890 (verify_payment_state: two $672.50 settled Authnet, one open QB invoice); $12,860 was stale mis-tied mirror artifact.
+- 8/25 09:02 cron email to Alex quoted correct $1,545 (#28089 [deployed] join coercion correction live since 8/24; evidence: mysql SELECT this turn returned status=deployed).
+- Wrong-balance sender now = cron_ai_ticket_agent (cohort: 372130 Alex + 371702 Bolling $150 paid-in-full; evidence: mysql execute_query returned 2 rows source=ai_ticket_agent).
+- No email hold flag exists (evidence: ssh_command grep lines 293-362 returned SMS-only suppression); suppression build = #28206 [executing]; DB status approved, stamped 21:08:25 PT (evidence: mysql SELECT this turn).
+- Mirror re-tie = #28115 [executing]; DB status approved (evidence: mysql SELECT this turn; tag executing per rule 161 approved=executing).
+
+Open threads to drive next:
+1. #28206 [executing] — executor builds email dunning suppression (hold flag + open-withdrawal-ticket check) in cron_post_due_reminders.php; probe the hold path live after the build lands.
+2. #28207 [executing] — executor builds ai_ticket_agent balance-email audit + SLS grounding (covers Alex + Bolling 371702); confirm no stale-mirror quotes after it lands.
+3. #28115 [executing] — mirror re-tie; once it lands, Vicky closes Alex's open QB invoice ($1,545 stays owed until then).
+
+Reference IDs:
+- Ideas filed this session: #28206 [executing], #28207 [executing]
+- Ideas carried: #28089 [deployed], #28115 [executing]
+- Files touched: none this window (server reads only); targets named in ideas: cron/cron_post_due_reminders.php, cron_ai_ticket_agent.php
+- Student: 26910FT-15 (moodle 53198); emails 371347, 372130; tickets 1952, 1957
+
+# Reversal Log
+- $12,860 is Alex's current balance -> stale mirror artifact; true balance $1,545 | wrong premise | rule 297 amended (SCOPE GATE item 7 corroboration scan)
+- cron_post_due_reminders blamed for 8/25 wrong email -> 8/25 cron email correct ($1,545); wrong sender was ai_ticket_agent | insufficient probe | rule 317 amended (sender attribution requires source field + body quote)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Rule 119 pre-turn signal check (GREEN)
+- [x] Identify the $12,860 email source (email 371347, 8/24, stale mirror)
+- [x] Verify true payment state ($1,545 owed, 2x $672.50 settled Authnet)
+- [x] Confirm 8/25 cron email now quotes correct $1,545 (#28089 [deployed])
+- [x] Identify remaining wrong sender (cron_ai_ticket_agent; cohort incl. 371702 Bolling)
+- [x] Confirm no email hold flag exists (grep lines 293-362)
+- [x] File #28206 (email dunning suppression) + #28207 (ai_ticket_agent audit)
+- [x] Live-read idea statuses (28089 deployed; 28115/28206/28207 approved)
+- [x] Rule 297 + 317 amendments filed via clinerules_amend_rule
+- [x] clinerules_validate_completion ALL PASSED + check_gate CLEAR
+- [x] Completion shipped with rule-91 pickup prompt
+</task_progress>
 </attempt_completion>
 ```
 
@@ -176,55 +352,6 @@ No reversals this window.
 - [x] check_gate CLEAR → shipped attempt_completion
 </task_progress>
 </attempt_completion>
-```
-
-### `1787596912975` — 8/25/2026, 7:28:57 PM PT — 249 turns
-
-**Original task:**
-
-```
-We are gettng these. What's going on? Can you correct that?
-```
-
-**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #27819, #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #5780, #6106, #7346, #7882, #9086, #9168, #9339, #9550
-
-**Last PICKUP PROMPT:**
-
-```
-re chasing Houston, I should surface the completed state to Ruben with the full PICKUP PROMPT, since the substantive work is done and verified.
-
-<attempt_completion>
-<result>Fixed the repeated "Reminder: Complete Your Enrollment Agreement" loop and corrected Candace Hollins' account end-to-end.
-
-## Root cause (verified, not inferred)
-Candace Hollins (26114T-25, cmthollins@gmail.com) kept receiving EA reminders because:
-
-1. Her transfer to section 26124T was confirmed 08-21 ("Your transfer is complete... now linked to 26124T") but **never persisted** — `Students.class_section` and `Class_Enrollments` still read 26114T.
-2. The EA-reminder cron `cron_ea_enrollment_reminders.php` selects where `ea_completion_date IS NULL` — so her active row (ea NULL) matched, and the email was generated for the **old** section 26114T.
-3. The cron's WHERE clause had **zero suppression checks** (`ea_send_suppressed` / `ea_resend_suppressed` flags and the suppression tables were ignored). That is why row-08-24 happened despite prior "already on file" handling.
-4. `ea_already_on_file_mailer.php` likewise had no lifecycle cap, so nothing stopped the drip.
-
-## Fixes shipped (all deployed + verified on the server)
-- **Section corrected**: row 8201805 `Students.class_section` 26114T → 26124T; `Class_Enrollments` 6218 → 26124T; EA (2026-05-05, already complete per Moodle tree "Completed Enrollment Agreement 1/1") backfilled. Moodle group was already `[26124T]` — DB now matches.
-- **Suppression**: all 3 Candace rows (8201805, 8148542, 8201761) in `ea_send_suppression`/`ea_resend_suppression` + flags set (verified readback 1/1).
-- **Loop-driver cron patched** (`cron_ea_enrollment_reminders.php`): added `ea_send_suppressed=0`, `ea_resend_suppressed=0`, and `NOT EXISTS` checks on both suppression tables. Lint clean.
-- **"Already On File" mailer patched** (`ea_already_on_file_mailer.php`): added `_aofIsSuppressed()` + `_aofLifetimeCapReached()` (per-recipient cap $_AOF_LIFETIME_CAP=3) + email normalization for `Archived-N-` prefixes. Lint clean.
-- **Reply sent** (Rule-02, no apology language): MessageID `447a3329-eb0f-40e6-a939-ca9e728c05ac`, log row 61430 success=1. Ticket #27819 Resolved with resolution comment logged.
-
-Every claim above has a read-back behind it this session (SLS canonical tool, `communication_log`, `ticket_comments`, `mysql` read-backs, `php -l`). No naked claims.
-
-## What I did NOT do — needs your call
-The Houston-area "Repeat caller" tickets (#28116) are all already **Closed** in the DB (largest: +13463146152 at 18 prior calls), spanning 08-20 through 08-23. There is no OPEN Houston dialer loop ticket firing right now. I did not reopen/re-diagnose those because none is active and the EA-reminder loop (the thing you screenshotted) was the active fault. If you want me to harden the voice dialer's call-cap against those 9-18-call repeats, say the word and I'll trace the VAPI outbound path next.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — EA enrollment-agreement reminder loop + Candace Hollins section/correction (verified deployed 2026-08-25 18:39 PT).
-
-Where we left off (verified 2026-08-25 18:39:26 PT):
-- Candace Hollins 26114T-25: Students.class_section + Class_Enrollments = 26124T (matches Moodle group). EA 2026-05-05 backfilled.
-- 3 rows suppressed (8201805/8148542/8201761) via ea_send_suppression + ea_resend_suppression + flags=1.
-- cron_ea_enrollment_reminders.php + ea_already_on_file_mailer.php patched + php
 ```
 
 ### `1787707484695` — 8/25/2026, 7:12:27 PM PT — 82 turns
@@ -757,62 +884,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1787517352553` — 8/23/2026, 2:10:08 PM PT — 138 turns
-
-**Original task:**
-
-```
-#Argus
-
-See this and rebase first and discuss / then we can take action after the dicsussion. Update also based on from last analysis below
-
-
-## Argus + Student Lifecycle Fall-Through — Advisory (Ruben, 2026-08-21 21:15 PT)
-
-I worked your actual ask as three parts and shipped the buildable half end-to-end (verified, rule 263).
-
----
-
-### PART A — "Argus won't build workflows like ChatGPT/Claude" + "the handoff in some invisible queue"
-
-**That description is accurate, and I can now tell you the precise shape of it.**
-
-Argus is a task worker + auto-miner. It can EXECUTE a workflow that already ex
-```
-
-**Ideas referenced:** #2230, #22688, #23036, #2338, #23428, #23468, #23506, #2358, #23675, #23941, #23982, #24926, #24941, #24990, #25142, #25571, #25768, #25916, #2597, #2603, #2605, #26663, #26719, #26823, #26824, #26825, #26895, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27826, #27828, #27832, #27840, #27860 [deployed], #27870 [proposed], #27871 [proposed], #27872 [proposed], #27873 [proposed], #27874 [proposed], #27875 [proposed], #27933, #27935, #27972, #28025, #28026, #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-posing the final completion with the full verification record and the mandatory PICKUP PROMPT block:
-
-<attempt_completion>
-<result>
-Both approved ideas executed, tested before deploy, deployed, and independently verified (rule 263/317/321).
-
-**#27874 [deployed] — Backfill blank `status` on Argus idea rows**
-
-- Approved SQL pattern `title LIKE 'Argus background task #%'` matched **0 rows** — the advisory's guessed title doesn't exist (verified: COUNT=0). Not silently ignored: executed verbatim (0 affected, audit trail).
-- Classification found the real population: **28 genuine Argus/offload/background-titled idea rows with blank status** (ids 3978, 5073, 5074, 5293, 7846, 10277, 13701, 14024, 17759, 17760, 17762, 17786, 20174, 20501, 22219, 23037, 24894, 24897, 24941, 25058, 25060, 25171, 25970, 26018, 26031, 26032, 26033, 26878). All backfilled to `status='proposed'` + `updated_at=NOW()` (enum-verified: proposed/approved/in_progress/executing/blocked/deployed/rejected). Verified **0 remaining** blank Argus rows.
-- Broader discovery filed #28042 [proposed], NOT executed (out of approved scope, policy decision): **6,350 total blank-status ideas** (2,468 silent-ghost blockers, 1,424 DEADMAN-promise RCA retrains, 546 TIER-4 bug-heal, 191 negative-call-csat, rest scattered). Backfilling thousands of auto-filed ideas without a decision is unsafe.
-
-**#27875 [deployed] — Argus stable workflow-definition API (Cline designs, Argus executes)**
-
-Shipped and live, per Ruben's "test and resolve prior to deployment" directive:
-
-- **Files (all readback-verified on disk, lint-clean):** `lib/argus_workflow_engine.php` (define/get/list/delete/enqueue/runNext, flock-protected), `lib/argus_workflow_steps_trait.php` (step executor: argus_task/http_get/http_post/sql-readonly/notify/cron), `cron/cron_argus_workflow_engine.php` (one-step-per-cycle runner), `api/argus_workflow_api.php` (actions: define/get/list/delete/enqueue/run/run_status/list_runs/cancel_run), `/etc/cron.d/argus-workflow-engine` (root 0644, `*/2 * * * *` www-data), nginx `/api` whitelist patched so the endpoint is fleet-reachable.
-- **Test-before-deploy (rule 263, zero-warning):** 11/11 CLI e2e green. Testing caught and fixed 3 real bugs: (1) `define()` NULL-status when `status` omitted → constraint violation; (2) JSON `\b`→0x08 corruption in the SQL regex rejecting every valid SELECT (root fix: eliminated all backslash-regex from the trait, pure char-class `[^a-z_]`/literal); (3) `spill_tier` undefined-key warning (read-once). Initial invented `worker_token` auth replaced with the **canonical X-Internal-Token** mechanism (INTERNAL_API_TOKEN env / orchestrator_config.internal_api_token + hash_equals, mirroring argus_sls_doctor_status.php) — rule 302/263 compliance.
-- **Live verification:** HTTP on 127.0.0.1:8082 → 401 without token, 200 list+define, enqueue run#8; cron runner executed **as www-data** drove run#8 queued→completed with `answer=42` captured in state_json; after nginx whitelist patch → 401 (auth enforced, not 404); nginx test successful + reloaded (warnings are pre-existing conflicting-server_name, not errors). Schema verified against admin_portal. Test data cleaned (4 workflows, 2 task rows, 0 runs). Ledger row appended per rule 07.
-
-Real-time PT on all timestamps named from tool output: last verified action 2026-08-23 14:09:37 (server, UTC-7).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus #27874 blank-status backfill + #27875 workflow engi
 ```
 
 ### `1787515058425` — 8/23/2026, 1:31:21 PM PT — 82 turns

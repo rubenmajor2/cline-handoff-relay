@@ -11,7 +11,7 @@ One sentence: **Claim scope must equal probe scope.** A tool's auto-success sign
 The reversal log collapses to FOUR recurring failure modes, in order of frequency:
 
 - **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +10 since 2026-08-19 | latest: Follow-up ledger stamp for task 1787606148778-mailer-rca (same fix as tasks 1787606148778 ]
-- **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +53 since 2026-08-19 | latest: 2026-08-26 reversal: claimed 'Qwen3.8-27B cannot obey the 280K-char Cline system prompt' a]
+- **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +55 since 2026-08-19 | latest: 2026-08-26 VERITAS reversal (ledger stamp for the shipping task id; same fix as task 17876]
 - **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +65 since 2026-08-19 | latest: Within-window reversal: idea #28239 diagnosed a sendEmail() hang as the Postmark suppressi]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +14 since 2026-08-19 | latest: 2026-08-25 reversal: a population of synthetic zero-score quiz_attempts rows (timestart=ti]
 <!-- golden-rule-table:end -->
@@ -304,5 +304,25 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: insufficient probe
 - Trigger pattern: Named a specific function as a hang's root cause based on proximity/naming similarity to the symptom, without reading that function's actual timeout configuration, then explaining the fix surfaced the
 - Reversal note: Within-window reversal: idea #28239 diagnosed a sendEmail() hang as the Postmark suppression-dump curl call. When asked to explain the fix, a source read of mailer.php showed isPostmarkSuppressed() already has an explicit CURLOPT_TIMEOUT=4, ruling it out. The real cause was the VERITAS L4 truth-judge gate (TruthJudgeClient, 250s default timeout, ~230s worst-case per its own code comment), triggered because the reply email matched a high-stakes keyword regex on the word "complete". The original diagnosis was reached by inference (a hang near mailer.php's suppression-check comments) rather than by reading every guard sendEmail() actually executes. Filed corrected idea #28242, rejected #28239 as superseded. Reinforces existing rule text: a hang/timeout root cause is not established until every code path between the call site and the failure is read, not just the one whose name matches the symptom.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 17:56 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778-minicheck
+- RCA bucket: wrong premise
+- Trigger pattern: slow-and-wrong verification subsystem diagnosed correctly but remediated by relocating it (async/post-send) instead of replacing the mechanism
+- Reversal note: 2026-08-26 VERITAS reversal: the prior completion recommended moving the LLM truth-judge OFF the synchronous send path to a post-send async audit. Ruben rejected the direction ("addresses my point, but does not completely solve the underlying issue... consult the community"). Async auditing only relocates a wrong answer downstream; the student still receives it. The community-standard fix (MiniCheck, EMNLP 2024 arXiv:2404.10774) is a small ENTAILMENT model checking claims against evidence already retrieved, at GPT-4 accuracy and ~400x lower cost — verified on our own fleet at 320ms warm vs 42,500ms, 6/6 correct. Amended behavior: when a verification/quality subsystem is measured as both slow AND wrong, do NOT propose relocating it (async, batching, sampling) as the fix — that preserves the defective mechanism. Search the literature/community for whether a different MECHANISM solves the class, and prefer a cheap deterministic or small-model check over an LLM-as-judge whenever the questi
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 17:58 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778
+- RCA bucket: wrong premise
+- Trigger pattern: slow-and-wrong verification subsystem remediated by relocating it instead of replacing the mechanism
+- Reversal note: 2026-08-26 VERITAS reversal (ledger stamp for the shipping task id; same fix as task 1787606148778-minicheck). Prior completion proposed moving the LLM truth-judge OFF the synchronous send path to a post-send async audit. Ruben rejected the direction: async only relocates a wrong answer downstream, the student still receives it. The mechanism was wrong, not its position. Community-standard replacement shipped instead (MiniCheck, EMNLP 2024 arXiv:2404.10774): a small entailment model checking claims against evidence already retrieved, verified on our own fleet at 320ms warm vs 42,500ms, 6/6 correct. Amended behavior: when a verification/quality subsystem is measured as both slow AND wrong, do NOT propose relocating it (async, batching, sampling) — that preserves the defective mechanism. Search the literature for whether a different MECHANISM solves the class, and prefer a cheap deterministic or small-model check over LLM-as-judge whenever the question can be posed as entailment against 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

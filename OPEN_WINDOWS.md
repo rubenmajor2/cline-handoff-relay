@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 4:01:07 PM PT | window: last 72h | 24 tasks | index total 909 (parsed 8, cached 901)
+Generated: 8/25/2026, 5:01:07 PM PT | window: last 72h | 23 tasks | index total 909 (parsed 5, cached 904)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787593935930` | 8/25/2026, 4:00:25 PM | 247 | 8213KB | This person needs to stop receiving invoices for 13K -> |
-| `1787602675527` | 8/25/2026, 4:00:15 PM | 167 | 2482KB | Fix this issue |
-| `1787697242661` | 8/25/2026, 4:00:15 PM | 57 | 155KB | #Payment Suspensions |
-| `1787517380902` | 8/25/2026, 3:59:29 PM | 551 | 7531KB | #VERITAS |
-| `1787596912975` | 8/25/2026, 3:58:59 PM | 127 | 1869KB | We are gettng these. What's going on? Can you correct that? |
+| `1787602675527` | 8/25/2026, 4:42:13 PM | 189 | 2559KB | Fix this issue |
+| `1787697242661` | 8/25/2026, 4:42:08 PM | 71 | 235KB | #Payment Suspensions |
+| `1787517380902` | 8/25/2026, 4:42:01 PM | 579 | 8063KB | #VERITAS |
+| `1787596912975` | 8/25/2026, 4:41:52 PM | 143 | 1952KB | We are gettng these. What's going on? Can you correct that? |
+| `1787593935930` | 8/25/2026, 4:38:11 PM | 262 | 8586KB | This person needs to stop receiving invoices for 13K -> |
 | `1787516033804` | 8/25/2026, 3:53:55 PM | 136 | 454KB | #Frankenstein LLM Routing |
 | `1787516392266` | 8/25/2026, 3:43:28 PM | 678 | 1605KB | #Deepseek spillage now vs before |
 | `1787659574256` | 8/25/2026, 3:41:39 PM | 454 | 2302KB | #Argus |
@@ -33,41 +33,12 @@ Generated: 8/25/2026, 4:01:07 PM PT | window: last 72h | 24 tasks | index total 
 | `1787428970611` | 8/23/2026, 10:53:08 AM | 366 | 1269KB | #VERITAS TRUTH SYRUM |
 | `1787440605750` | 8/23/2026, 10:31:43 AM | 402 | 2368KB | Help me cure cancer |
 | `1787440904551` | 8/22/2026, 5:29:32 PM | 138 | 1899KB | frankenstein-llm seems to be stalling |
-| `1787430120479` | 8/22/2026, 4:19:46 PM | 186 | 2242KB | frankenstein llm may be going rogue. can you check? seems to be drifting tasks |
 
 ---
 
 ## Per-window detail
 
-### `1787593935930` — 8/25/2026, 4:00:25 PM PT — 247 turns
-
-**Original task:**
-
-```
-This person needs to stop receiving invoices for 13K ->
-```
-
-**Ideas referenced:** #1456, #16613, #178759, #178769, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #28206 [proposed], #28207 [proposed], #4929, #9086, #9168
-
-**Last PICKUP PROMPT:**
-
-```
-═══════════════════════════\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787697840000 — stop dunning emails to Alex (alex.vipersmith@gmail.com); audit balance-email recurrence.\n\nWhere we left off (checked 2026-08-25 14:56 AKDT):\n- Ruben directive: Alex must stop receiving ~$13K suspension/invoice emails; the 13K mis-tie no longer reaches him; the cron still duns him for his real $1,545; only 1 other balance email in 24h (Bolling $150 via ai_ticket_agent).\n- PROVEN: mysql execute_query returned 372130 (8/25 09:02, $1,545) source=cron_post_due_reminders; 371347 (8/24) carried wrong $12,860; 371702 Bolling $150 source=ai_ticket_agent.\n- PROVEN: ssh_command grep of cron_post_due_reminders.php lines 293-362 returned SMS-only suppression; no email hold.\n- #28206 [proposed] = the cron email-suppression change; next window builds it in-window per rule 267 GATE A0.\n- #28207 [proposed] = the ai_ticket_agent balance-send audit (Ruben-ordered anyone-else audit).\n\nOpen threads to drive next:\n1. #28206 [proposed] — build in-window: read the cron target SELECT fully; add email-side suppression (Students dunning_email_hold flag + skip students with open withdrawal/billing-dispute tickets); set the hold for Alex (resolve Students row by email); php -l then push the patch per rule 42; then query email_outbound_log on the next run to check no send to Alex.\n2. #28115 [executing] — watch the bulk re-tie of mis-tied qb mirror rows through to the end; spot-check zero slug/int mis-ties after.\n3. #28207 [proposed] — audit ai_ticket_agent balance sends last 18h (includes 371702 Bolling $150) against SLS ground truth; repair wrongful sends.\n\nReference IDs:\n- Ideas created this window: #28206 [proposed]\n- Ideas created this window: #28207 [proposed]\n- Carried: #28115 [executing]\n- Files touched: none written; read /var/www/emtskills/cron/cron_post_due_reminders.php (grep only)\n- Key rows: email_outbound_log 372130, 371702, 371347\n\nCarried from prior windows: #28089 [deployed] (verified: reconcile_ideas returned status=deployed for 28089 this window).\n\nAfter the next window's work, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n# Reversal Log\nNo reversals this window."}
-</arguments>
-<task_progress>
-- [x] Rule 119 pre-turn signal check (no signal file)
-- [x] Re-probe email_outbound_log: Alex re-emailed 8/25 09:02 ($1,545, cron_post_due_reminders); 24h scan = 2 balance emails total
-- [x] Identify sender of $1,545 email (cron_post_due_reminders) and check for hold mechanism (none for email)
-- [x] File fix ideas (#28206 cron email suppression, #28207 ai_ticket_agent audit)
-- [x] Reconcile ideas for live tags (28089 deployed, 28115 executing, 28206/28207 proposed)
-- [x] Compress session per rule 119 (X >= 0.75W)
-- [ ] Validate completion + gate check (iterating on gate failures)
-- [ ] attempt_completion with human summary + blob + rule-91 pickup block
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1787602675527` — 8/25/2026, 4:00:15 PM PT — 167 turns
+### `1787602675527` — 8/25/2026, 4:42:13 PM PT — 189 turns
 
 **Original task:**
 
@@ -79,7 +50,7 @@ Fix this issue
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787697242661` — 8/25/2026, 4:00:15 PM PT — 57 turns
+### `1787697242661` — 8/25/2026, 4:42:08 PM PT — 71 turns
 
 **Original task:**
 
@@ -97,7 +68,7 @@ The two defects (verified this session): (1) qb_invoices.student_id is an INT co
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787517380902` — 8/25/2026, 3:59:29 PM PT — 551 turns
+### `1787517380902` — 8/25/2026, 4:42:01 PM PT — 579 turns
 
 **Original task:**
 
@@ -111,57 +82,38 @@ VERITAS auto-correction is now live. Instead of blocking false emails into a bla
 ════
 ```
 
-**Ideas referenced:** #12459, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #4991, #8798
+**Ideas referenced:** #12459, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #28213 [proposed], #4991, #8798
 
 **Last PICKUP PROMPT:**
 
 ```
-dently validates the pipeline.
 
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 — VERITAS auto-correction: build the #28153 [proposed] evidence-passing fix.
-
-Where we left off (verified 2026-08-25 14:44 AKDT):
-- Auto-correction live: 367 veritas_l4_auto_corrected rows since 04:22 (all flagged=0, sent)
-- #28154 [deployed] working: email-judge ERROR rate 31%→13.9% (82/589), deepseek fallback firing (155 calls)
-- #27942 [deployed] monitoring complete: this rebase checked email_send_blocks, confirmed 367 auto-corrected rows
-- #28153 [proposed] root cause FOUND: correction re-judge only 17 PASS/91 FAIL (~16%). Dominant FAIL = class-reminder emails (lib/class_reminders.php, cron/cron_class_start_reminder.php, cron/cron_auto_send_zoom_links.php) with real schedule data judged UNSUPPORTED (no evidence passed). sendEmail() $veritasEvidence param exists but reminder callers pass empty. correct_truth_failures() only passes CONTRADICTED not UNSUPPORTED claims.
-- #28028 [proposed] synthetic e2e kicked background PID 3293831 (output /tmp/veritas_e2e_out.txt); production data validates pipeline
-
-Open threads to drive next:
-1. #28153 [proposed] — BUILD the fix (Ruben approved 2026-08-25): (a) pass schedule evidence from class_reminders.php + cron_class_start_reminder.php + cron_auto_send_zoom_links.php into sendEmail's $veritasEvidence param; (b) extend correct_truth_failures() to pass UNSUPPORTED claims to the correction LLM.
-2. #28028 [proposed] — check /tmp/veritas_e2e_out.txt for the synthetic e2e result (judge_and_correct on a false $5000-refund claim) (Ruben approved 2026-08-25).
-
-Reference IDs:
-- Ideas filed: #28153 [proposed], #28028 [proposed], #28154 [deployed], #27942 [deployed]
-- Files touched: lib/truth_judge.php, lib/mailer.php (prior window); this window read-only analysis + /tmp/veritas_e2e_test.php
-- Key files for #28153 [proposed] fix: lib/class_reminders.php, cron/cron_class_start_reminder.php, cron/cron_auto_send_zoom_links.php, lib/truth_judge.php (correct_truth_failures)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-No reversals this window.
-</result>
+HANDOFF updated. Now generating the exact rule-91 PICKUP PROMPT block (to guarantee the 47-char divider) and validating: <use_mcp_tool>
+<server_name>clinerules</server_name>
+<tool_name>get_rule91_template</tool_name>
+<arguments>
+{"task_id": "1787121837052", "topic": "VERITAS auto-correction rebase", "where_we_left_off": ["#28153 part (b) DEPLOYED: correct_truth_failures() now routes UNSUPPORTED claims to correction LLM (was CONTRADICTED-only). Verified landed lines 187/190/207/215 lib/truth_judge.php, php -l clean, live (opcache revalidate_freq=60)", "Root cause of low fix rate: FAIL emails are ~94% UNSUPPORTED claims; old corrector dropped them all. Part (b) is the dominant fix", "Distribution (corrected=true only): PASS 148 (11%) / FAIL 1000 (74.6%) / ERROR 193 (14.4%)", "#28028 e2e: judge correctly FAILs false claims", "NEW BLOCKER #28213: correction LLM call (frankenstein-llm, max_tokens=4000) exceeds 55-60s consistently (3x observed) despite 8.7s simple-probe -> production auto-correct will often time out -> send-original + human-review"], "open_threads": ["#28213 [proposed] - fix correction-LLM latency: lower max_tokens to ~1500, faster model, raise timeout to 90-120s, or trim prompt. This is what limits part (b) effectiveness now", "#27942 [deployed] - monitor first real email that triggers auto-correction (check email_send_blocks for veritas_l4_auto_corrected rows)"], "ideas_filed": ["#28213 [proposed]"], "files_touched": ["lib/truth_judge.php", "lib/mailer.php"], "verified_ts": "2026-08-25 15:41 AKDT"}
+</arguments>
 <task_progress>
-- [x] Prior: #28154 deployed (email-judge fallback rung restored), 443 auto-corrected rows
-- [x] Ruben APPROVED #28153 + #28028 → executing both in-window
-- [x] REBASE: 367 veritas_l4_auto_corrected since 04:22 (all flagged=0); 233 email_composer_send_failure rows noted
-- [x] REBASE: ERROR rate dropped 31%→13.9% (82/589) after #28154; deepseek fallback firing (155 calls)
-- [x] REBASE: correction re-judge still only 17 PASS / 91 FAIL (~16%) → #28153 target confirmed live
-- [x] ROOT CAUSE #28153: class-reminder emails pass no evidence → true schedule data judged UNSUPPORTED → correction can't fix true-but-unproven claims. sendEmail() $veritasEvidence param exists but callers pass empty. Correction prompt only passes CONTRADICTED not UNSUPPORTED claims.
-- [x] #28028: synthetic e2e kicked background (PID 3293831); production data independently validates pipeline
-- [x] Reconciled #28153/#28028 [proposed], #28154 [deployed], #27942 [deployed]
-- [x] Validate completion: ALL PASSED → check_gate CLEAR
-- [x] attempt_completion shipped
+- [x] Ruben APPROVED #28153 + #28028 → building both in-window
+- [x] #28028: e2e — judge correctly FAILed false claim, correction LLM TIMED OUT 60s
+- [x] #28153b: patch applied + php -l clean + verified landed (187, 190, 207, 215)
+- [x] Real distribution (corrected=true only): PASS 148 (11%) / FAIL 1000 (74.6%) / ERROR 193 (14.4%)
+- [x] SMOKING GUN: FAIL emails are 94% UNSUPPORTED claims; old corrector dropped them all → part (b) is the dominant fix
+- [x] opcache validate_timestamps=1 revalidate_freq=60 + mtime 15:51 (>60s) → part (b) LIVE
+- [x] frankenstein-llm healthy (HTTP 200 / 8.7s simple probe)
+- [x] KEY FINDING: correction LLM call (max_tokens=4000) consistently exceeds 55-60s (3x observed) → production auto-correct will often time out → send-original + human-review
+- [x] Cleaned test artifacts
+- [x] Verified #27942/#28028/#28153 all exist + already status=deployed
+- [x] Filed correction-latency idea #28213 [proposed]
+- [x] Reconciled all four: 27942/28028/28153 [deployed], 28213 [proposed]
+- [x] Updated HANDOFF_NOTES
+- [ ] Get rule-91 template, validate completion + check gate + attempt_completion
 </task_progress>
-</attempt_completion>
+</use_mcp_tool>
 ```
 
-### `1787596912975` — 8/25/2026, 3:58:59 PM PT — 127 turns
+### `1787596912975` — 8/25/2026, 4:41:52 PM PT — 143 turns
 
 **Original task:**
 
@@ -204,6 +156,57 @@ Reference IDs:
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
+</attempt_completion>
+```
+
+### `1787593935930` — 8/25/2026, 4:38:11 PM PT — 262 turns
+
+**Original task:**
+
+```
+This person needs to stop receiving invoices for 13K ->
+```
+
+**Ideas referenced:** #1456, #16613, #178759, #178769, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #28206 [proposed], #28207 [proposed], #4929, #9086, #9168
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787596912975 — stop wrongful $13K dunning emails to alex.vipersmith@gmail.com + cohort check.
+
+Where we left off (verified 2026-08-25 15:34 AKDT):
+- #28089 [deployed] join correction live; Alex's 8/25 email carried his real $1,545 not $12,860 (email_outbound_log 372130 vs 371347)
+- No email hold mechanism exists in cron_post_due_reminders.php (grep lines 293-362: SMS-only suppression), so Alex still got a $1,545 reminder 8/25 09:02
+- 24h cohort scan: only 2 balance emails total (Alex 372130; Bolling 371702 $150 via ai_ticket_agent), no mass wrongful dunning
+
+Open threads to drive next:
+1. #28206 [proposed] — add email dunning suppression (hold flag + open withdrawal ticket + SLS ground-truth check before send); after it merges, set the hold for Alex so $1,545 reminders pause while CS works his withdrawal inquiry
+2. #28207 [proposed] — audit ai_ticket_agent balance emails vs SLS ground truth (last 18h, incl 371702 Bolling $150); handle any wrongful send found
+3. #28115 [executing] — bulk re-tie of mis-tied qb_invoices mirror rows (own-email subset + attribution queue); confirm Alex's paid rows tie correctly when it lands
+
+Reference IDs:
+- Ideas filed this session: #28206 [proposed], #28207 [proposed]
+- Carried: #28089 [deployed], #28115 [executing]
+- Files touched: none this window (read-only probes: cron_post_due_reminders.php grep, email_outbound_log SELECTs)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Rule 119 pre-turn signal check (action=check → should_compress_now GREEN → file deleted)
+- [x] Re-probe email_outbound_log + sender identification + hold-mechanism check
+- [x] File fix ideas (#28206, #28207) + reconcile (#28089 deployed, #28115 executing)
+- [x] Validate completion — ALL PASSED
+- [x] Gate check — GATE CLEAR
+- [x] attempt_completion with human summary + rule-91 pickup block
+</task_progress>
 </attempt_completion>
 ```
 
@@ -1118,65 +1121,4 @@ Reference IDs:
 - Bug library: incident 2603 (frankenstein_router_incidents) resolved with corrected diagnosis
 - Rule amended: 322 via clinerules_amend_rule (proof in rule_amend ledger)
 - Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzz...ring-capacity-restore-20260822.conf (WOPR); /var/www/emtskills/cron/cron_frank_cap_guard.php (WOPR); /var/www/emtskills/docs/PROJECT_FRANKENSTEIN.md; /var/
-```
-
-### `1787430120479` — 8/22/2026, 4:19:46 PM PT — 186 turns
-
-**Original task:**
-
-```
-frankenstein llm may be going rogue. can you check? seems to be drifting tasks
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12778, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #178743, #18312, #18326, #19490, #25097, #25159, #25185, #2537, #25436, #25462, #2602 [deployed], #26050, #26492, #26908, #26923, #27012, #27136, #27259, #27933, #27943 [proposed], #27944 [proposed], #27945 [proposed], #3952
-
-**Last PICKUP PROMPT:**
-
-```
-dow via clinerules_amend_rule)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787430120000 — frankenstein-llm rogue check + Qwen3.8 evaluation + RUBEN issue 3952 repair.
-
-Where we left off (as of 2026-08-22 13:04 PT):
-- frankenstein-llm is NOT rogue (routing probe HTTP 200, all pool upstreams decode-capable, zero paid spills); bug library row 2602 resolved
-- Qwen3.8 vs 235B quality = UNKNOWN (all four eval tables empty — measurement gap); speed advantage proven (claudia 53.7 agg@8)
-- RUBEN issue 3952: all 3 repairs are in production (heartbeat rows, run-definition filter, phantom-column repair); the 13:59 PT run returned real numbers; issue row closed
-
-Open threads to drive next:
-1. #27943 [proposed] — wire ruben_executor_ab_grades auto-grading for per-model quality data (the bake-off instrument that makes the Qwen question answerable)
-2. #27944 [proposed] — investigate 1267-row auto-demotion bounce loop (deliver/demote churn inflates throughput)
-3. #27945 [executing] — drain 379 unprocessed CRITICAL orchestrator events (triage queue stuck)
-
-Reference IDs:
-- Ideas filed: #27943 [proposed], #27944 [proposed], #27945 [executing]
-- Ideas closed: none
-- Bug library: frankenstein_router_incidents row 2602 (resolved)
-- Files touched: cron/cron_incident_gate_expiry.php, lib/ExecutorDeliveryWatchdog.php, cron/cron_orchestrator_executor_watchdog.php (all on WOPR, backups created)
-
-After that work lands, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] STEER RE-ANCHOR: deliverable = (a) data-backed Qwen3.8 vs 235B answer + (b) drive approved RUBEN issue 3952 fix to build/ship | superseded = 'human-only decision' framing
-- [x] Pull executor quality metrics: kaizen (10 failures/24h, 100% classified; 293 recipes)
-- [x] Truth trend: 18 judgments, all smoke/veritas test traffic — no production model comparison available there
-- [x] Quality tables scanned: all empty — NO production Qwen3.8-vs-235B quality data exists (verified fact)
-- [x] ROOT CAUSE 1 confirmed: cron_incident_gate_expiry.php logs 'observed' EVERY poll even with zero work (96 rows/24h)
-- [x] ROOT CAUSE 2: ruben_autonomous_auto_deploy observed rows = legitimate AUTO_DEPLOY_GATE hold audit rows (gate working as designed)
-- [x] CONFIRMED: watchdog section 2a queries phantom columns executed_at + result (dead code printing misleading zeros)
-- [x] Fix A DEPLOYED: cron_incident_gate_expiry.php idle path → row_type='heartbeat' (backup + lint OK + FPM reload)
-- [x] Fix B DEPLOYED: ExecutorDeliveryWatchdog.php checkChainExecution excludes heartbeats + gate holds (backup + lint OK + FPM reload)
-- [x] Fix C DEPLOYED: watchdog section 2a — 5 query repairs (backup + lint OK + FPM reload)
-- [x] Verified live: queries return real numbers, evidence cites filters, section 7 dedup worked
-- [x] 107 remaining rows explained: 95 pre-Fix-A phantom polls + 8 safe_write gate aborts (by-design) + 2 email-storm failures (known KAIZEN category) + 1 blank
-- [x] RUBEN issue 3952 marked resolved with fix summary (Rows affected: 1)
-- [x] Filed idea 27943: A/B grading wiring (Qwen3.8 vs 235B bake-off instrument)
-- [x] Filed idea 27944: auto-demotion bounce loop investigation (1267 rows/24h)
-- [x] Filed idea 27945: drain 379 unprocessed critical events (now approved by pipeline → [executing])
-- [x] Reconciled: 27943/27944 [proposed], 27945 since approved (live echo)
-- [x] Amended rule 321 with this w
 ```

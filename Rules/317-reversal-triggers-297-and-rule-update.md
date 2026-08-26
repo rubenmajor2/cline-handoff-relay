@@ -12,7 +12,7 @@ The reversal log collapses to FOUR recurring failure modes, in order of frequenc
 
 - **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +10 since 2026-08-19 | latest: Follow-up ledger stamp for task 1787606148778-mailer-rca (same fix as tasks 1787606148778 ]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +55 since 2026-08-19 | latest: 2026-08-26 VERITAS reversal (ledger stamp for the shipping task id; same fix as task 17876]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +65 since 2026-08-19 | latest: Within-window reversal: idea #28239 diagnosed a sendEmail() hang as the Postmark suppressi]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +67 since 2026-08-19 | latest: - 'run_moodle_query wedged' -> 'wrapper mysql password stale; ssh mysql via .my.cnf works ]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +14 since 2026-08-19 | latest: 2026-08-25 reversal: a population of synthetic zero-score quiz_attempts rows (timestart=ti]
 <!-- golden-rule-table:end -->
 
@@ -324,5 +324,25 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: wrong premise
 - Trigger pattern: slow-and-wrong verification subsystem remediated by relocating it instead of replacing the mechanism
 - Reversal note: 2026-08-26 VERITAS reversal (ledger stamp for the shipping task id; same fix as task 1787606148778-minicheck). Prior completion proposed moving the LLM truth-judge OFF the synchronous send path to a post-send async audit. Ruben rejected the direction: async only relocates a wrong answer downstream, the student still receives it. The mechanism was wrong, not its position. Community-standard replacement shipped instead (MiniCheck, EMNLP 2024 arXiv:2404.10774): a small entailment model checking claims against evidence already retrieved, verified on our own fleet at 320ms warm vs 42,500ms, 6/6 correct. Amended behavior: when a verification/quality subsystem is measured as both slow AND wrong, do NOT propose relocating it (async, batching, sampling) — that preserves the defective mechanism. Search the literature for whether a different MECHANISM solves the class, and prefer a cheap deterministic or small-model check over LLM-as-judge whenever the question can be posed as entailment against 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 22:20 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787782950000
+- RCA bucket: scope error
+- Trigger pattern: batch remediation population derived from the artifact table's time window instead of the defect log itself
+- Reversal note: 2026-08-26 resend near-miss: the 48h resend script's first dry run returned 22 candidates from a ticket-window query alone; 5 of those tickets' notifications were never blocked (they had gone out fine) and would have been duplicate-sent. Amended behavior: any batch resend driven by a block/defect log must cross-reference the candidate population against the ORIGINAL block rows (EXISTS match on recipient + subject + block reason), never a time-window pull of the artifact table alone; the dry-run output is compared to the known blocked population before --send is allowed.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 22:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 27435-sweep-20260826
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - 'run_moodle_query wedged' -> 'wrapper mysql password stale; ssh mysql via .my.cnf works but is adminportal-only' | RCA: insufficient probe | causal rule updated: 317 (existing am
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

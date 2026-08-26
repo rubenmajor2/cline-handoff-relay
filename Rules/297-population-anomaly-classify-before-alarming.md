@@ -156,3 +156,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - 'stamper gone, no live INSERT path' -> 'didactic_deadline.php alive in Moodle tree, daily run re-stamped purged students' | RCA: insufficient probe | causal rule updated: 317
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 08:51 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: frankenstein-llm-slow-low-quality-20260826
+- RCA bucket: wrong premise
+- Trigger pattern: model blamed for a behavioral failure from a parameter-count/context-size prior without probing served max_model_len or reproducing the behavior against that model
+- Reversal note: 2026-08-26 reversal: claimed 'Qwen3.8-27B cannot obey the 280K-char Cline system prompt' as the cause of rule-91/tool-obedience failures. That is a MODEL-CAPABILITY claim asserted from a general prior about parameter count, with zero probe of the model's actual served context or its actual tool-call behavior. Both refuted in one turn: claudia :11521 /v1/models reports max_model_len=131072 (and the family supports up to 1M), and a live tool-bearing probe through the adapter returned finish_reason=tool_calls with a valid, well-formed tool call. Amended behavior: before attributing a behavioral failure (tool disobedience, truncation, format violation) to a MODEL's capability, run the capability probe that would falsify it — read the served max_model_len from /v1/models and send one request exercising the exact behavior in question. A parameter count is never evidence of a capability limit; the failing behavior must be reproduced against that specific model, at that specific served context
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

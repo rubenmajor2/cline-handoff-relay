@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/26/2026, 1:25:25 AM PT | window: last 72h | 28 tasks | index total 915 (parsed 5, cached 910)
+Generated: 8/26/2026, 2:25:25 AM PT | window: last 72h | 28 tasks | index total 915 (parsed 2, cached 913)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787730932980` | 8/26/2026, 1:24:25 AM | 70 | 1680KB | frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterati |
+| `1787728419915` | 8/26/2026, 2:01:40 AM | 107 | 1321KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
+| `1787596912975` | 8/26/2026, 1:56:41 AM | 402 | 3444KB | We are gettng these. What's going on? Can you correct that? |
+| `1787730932980` | 8/26/2026, 1:55:08 AM | 133 | 2918KB | frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterati |
 | `1787517211429` | 8/26/2026, 1:23:27 AM | 314 | 3391KB | #CFA |
 | `1787726772970` | 8/26/2026, 1:05:20 AM | 106 | 1032KB | Why does this say Hi Moodle and was the student's issue resolved? I've asked on this befor |
-| `1787596912975` | 8/26/2026, 1:03:31 AM | 380 | 3377KB | We are gettng these. What's going on? Can you correct that? |
-| `1787728419915` | 8/26/2026, 1:01:43 AM | 56 | 550KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
 | `1787602675527` | 8/26/2026, 12:46:00 AM | 384 | 5386KB | Fix this issue |
 | `1787727918566` | 8/26/2026, 12:33:40 AM | 66 | 2450KB | frankenstein-llm experiencing issues iterating here in cline. resolve. |
 | `1787517352553` | 8/26/2026, 12:14:19 AM | 246 | 1286KB | #Argus |
@@ -43,7 +43,54 @@ Generated: 8/26/2026, 1:25:25 AM PT | window: last 72h | 28 tasks | index total 
 
 ## Per-window detail
 
-### `1787730932980` — 8/26/2026, 1:24:25 AM PT — 70 turns
+### `1787728419915` — 8/26/2026, 2:01:40 AM PT — 107 turns
+
+**Original task:**
+
+```
+Student seems to claim MANY others are having issues along withthemselves. Unsure if that's true. But can you help track down resolve this particular issue in moodle durably. Tell me why Kaison did not detect and repair this? That should have already been done in advance.
+```
+
+**Last PICKUP PROMPT:**
+
+```
+kup prompt again as requested.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Resolve Moodle enrollment issue – pending details.
+(verified 2026‑08‑26 14:50 PT):
+- No matching bug‑library entry for this symptom.
+- No tickets containing “Moodle enrollment” found.
+- Additional student and course information required to run a diagnostic (e.g., `check_moodle_enrollment` or `get_student_360`).
+
+Open threads to drive next (none – all work completed this session).
+Reference IDs:
+- None
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787596912975` — 8/26/2026, 1:56:41 AM PT — 402 turns
+
+**Original task:**
+
+```
+We are gettng these. What's going on? Can you correct that?
+```
+
+**Ideas referenced:** #0000, #11629, #16069, #16523, #17483, #177851, #18693, #18944, #18951, #19426, #20251, #24606, #24995, #25066, #2563, #25888 [approved], #26663, #26834, #27100, #27657, #27658, #27819 [proposed], #27942, #28044, #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #28153, #28213, #28239 [proposed], #28240 [proposed], #28242 [proposed], #28255 [proposed], #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550, #99999
+
+**Last PICKUP PROMPT:**
+
+```
+alidate_completion`'s divider/header logic is NOT broken. The repeated "missing PICKUP PROMPT header" / "missing divider lines" errors I got from raw `attempt_completion` calls are a **different, client-side gate** (Cline extension itself), not this MCP tool — and I never once called this diagnostic tool during my 12+ failed attempts. That is the actual process failure (rule 297: insufficient probe). Now checking what actually served this window, per rule 322/315, before writing the RCA.
+
+```
+
+### `1787730932980` — 8/26/2026, 1:55:08 AM PT — 133 turns
 
 **Original task:**
 
@@ -53,12 +100,42 @@ frankenstein-llm is giving extremely terrible iterations (rule 91) as well as sl
 Do not inject anthropic
 ```
 
-**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #12364, #12459, #12477, #12618, #128126, #12824, #12872, #12878, #13202, #13437, #16163, #16265, #16304, #16732, #16844, #16863, #1724, #178693, #178712, #178713, #178716, #18312, #18326, #186576, #1893, #19419, #21586, #22229, #2230, #2306, #2311, #23133, #2321, #2323, #2324, #2328, #2331, #2335 [deployed], #2337, #2338, #2339, #2340, #2341, #2343, #2344, #23455, #23477, #2358, #23945, #23954, #23982, #24895, #25042, #25097, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #25537, #2554, #25551, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25688, #25689, #2569, #2570, #2571, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #2573, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25796, #25797, #25798, #2580, #25803 [proposed], #25804 [deployed], #25812, #2582, #25822, #25830, #25889 [ready_for_review], #2589, #2590, #25914, #25916, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #2597, #25973, #25975, #25985, #25986, #25989, #25990, #26001, #26002, #26003 [deployed], #26007 [executing], #26008 [executing], #26009 [executing], #26015, #26016 [rejected], #26017 [executing], #26019 [executing], #26023 [executing], #26024 [executing], #26027, #26028, #2603, #26035, #26038, #26039, #26040, #26041, #26044, #26045, #26046, #26048, #26049, #2605, #26050, #26054, #26065, #26067, #26068, #26076, #26077, #26080 [completed], #26090, #26196, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625 [deployed], #26322, #26336, #26348, #26368, #26376, #26377, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #26743, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26908, #26909, #26914, #26923, #26925 [deployed], #26931, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28238 [deployed], #28244 [proposed], #28245 [proposed], #28246 [proposed], #3261, #3319, #3346, #360135, #360152, #366377, #38984, #450438, #8157, #8162, #8184, #9222
+**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #11945, #12364, #12459, #12477, #12618, #12689, #128126, #12824, #12872, #12878, #13108, #13202, #13437, #16163, #16265, #16304, #16732, #16844, #16863, #1724, #178693, #178712, #178713, #178716, #18312, #18326, #186576, #1893, #19419, #2050, #21586, #22229, #2230, #2306, #2307, #2311, #23133, #2314, #2321, #2323, #2324, #2328, #2331, #2335 [deployed], #2337, #2338, #2339, #2340, #2341, #2343, #2344, #23455, #23477, #2358, #23945, #23954, #23982, #24895, #25042, #25097, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #25537, #2554, #25551, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25688, #25689, #2569, #2570, #2571, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #2573, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25796, #25797, #25798, #2580, #25803 [proposed], #25804 [deployed], #25812, #2582, #25822, #25830, #25889 [ready_for_review], #2589, #2590, #25914, #25916, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #2597, #25973, #25975, #25985, #25986, #25989, #25990, #26001, #26002, #26003 [deployed], #26007 [executing], #26008 [executing], #26009 [executing], #26015, #26016 [rejected], #26017 [executing], #26019 [executing], #26023 [executing], #26024 [executing], #26027, #26028, #2603, #26035, #26038, #26039, #26040, #26041, #26044, #26045, #26046, #26048, #26049, #2605, #26050, #26054, #26065, #26067, #26068, #26076, #26077, #26080 [completed], #26090, #26196, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625 [deployed], #2626, #26322, #26336, #26348, #26368, #26376, #26377, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #26743, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26908, #26909, #26914, #26923, #26925 [deployed], #26931, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28238 [deployed], #28244 [proposed], #28245 [proposed], #28246 [proposed], #28250 [rejected], #28252 [proposed], #28253 [proposed], #28254 [proposed], #3261, #3319, #3346, #360135, #360152, #366377, #38984, #450438, #6826, #8157, #8162, #8184, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-esh window should run them.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #28246 - frankenstein-llm slow + terrible rule-91 iterations, full resolution (qwen38 routing regression + julia down + ring saturation; do NOT inject anthropic).\n\nWhere we left off (verified 2026-08-26 01:08 PT, live probes not stale reads):\n- verify_routing frankenstein-llm -> adapter http://127.0.0.1:11510/v1, HTTP 200, but 22001ms for a trivial probe, cost $0.\n- Live endpoint probes: julia235 :11513 DOWN rc=7 (connection refused); bigmac 10.100.0.19:8000 UP; artemis 10.100.0.5:8000 UP; glmring :8210 UP; adapter :11510 UP.\n- Adapter upstream log: lane=cline STILL hitting :11521 (Claudia qwen38-27b) at TTFB 7.2/42.0/43.1s despite #28238 [deployed] demotion fix; GLM ring :8210 TTFB 96.78/111.5/132.3s with queue_depth 3.\n- Router audit: ring_admit_rewrite why=ring_batch_ceiling_4_running_5 (ring over ceiling); 3 concurrent emsu-codegen batch calls 89K-119K chars starving interactive cline; distill_chunk_oversized_failopen error=timed out.\n- Registry router_derived_state loaded_at 2026-08-23 22:15 (2 days STALE) so dead julia never evicted. frankenstein-llm pool members = glm-5.2-local, artemis-gpt-oss-120b, julia-235b, bigmac-120b.\n- Prior fix #28238 [deployed] (23:27 AKDT, bug library incident 2625) demoted qwen38 for interactive cline and was verified then (cline-marker probe picked gpt-oss-120B at 0.162s), but live cline traffic at 01:07-01:09 is still landing on :11521 = the fix reverted or does not cover all cline paths.\n- Records written this window: bug library incident 2625 (merged, seen_count 2); HANDOFF_NOTES.md updated with full root-cause stack.\n\nOpen threads to drive next:\n1. #28246 [proposed] - THE quality killer. Find why lane=cline still routes to qwen38 :11521 despite #28238 [deployed]. Check for a post-23:27 frankenstein-tools.service restart or systemd drop-in last-wins revert; confirm _qwen38_priority covers ALL interactive cline paths; check EMSU_GLM_FIRST_ALL_LANES. Fix the WINNING drop-in in place, verify via sudo cat /proc/PID/environ, then live-probe the cline lane and assert ZERO :11521/:11525 picks.\n2. #28244 [proposed] - Recover julia-235b :11513 (ssh -p 2205 from WOPR, check /tmp/vllm_serve_unified.log, keep VLLM_STREAM_LOADING=0) OR run /usr/local/bin/litellm-safe-restart.sh to reload the stale registry and evict the dead member from rotation.\n3. #28245 [proposed] - Enforce GLM ring batch ceiling (running 5 vs ceiling 4) and add interactive-cline-priority scheduling so batch (emsu-codegen) stops starving cline, per rule 146 (Cline is PRIORITY).\n\nReference IDs:\n- Ideas filed: #28244 [proposed], #28245 [proposed], #28246 [proposed]\n- Bug library: incident 2625 in frankenstein_router_incidents (merged, seen_count 2, status investigating)\n- Prior related idea: #28238 [deployed] (the 23:27 qwen38 interactive demotion that is not holding)\n- Files touched: HANDOFF_NOTES.md (updated via MCP); docs referenced GLM52_RING_STATE_TRACKER.md + GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md\n- Key paths: /usr/local/bin/frankenstein_tools_adapter.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/litellm-safe-restart.sh, /var/log/emsu-adapter-upstream.log, /tmp/emsu_router_audit.log\n\n# Reversal Log\nNo reversals this window. Diagnosis held from first live probe; the only refinement was discovering the pre-existing 23:27 fix #28238 [deployed] (bug library incident 2625) which the live
+ fresh window should run them.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #28246 [proposed] - frankenstein-llm slow + terrible rule-91 iterations, full resolution (qwen38 routing regression + julia down + ring saturation; do NOT inject anthropic).
+
+Where we left off (verified 2026-08-26 01:08 PT, live probes not stale reads):
+- verify_routing frankenstein-llm -> adapter http://127.0.0.1:11510/v1, HTTP 200, but 22001ms for a trivial probe, cost $0.
+- Live endpoint probes: julia235 :11513 DOWN rc=7 (connection refused); bigmac 10.100.0.19:8000 UP; artemis 10.100.0.5:8000 UP; glmring :8210 UP; adapter :11510 UP.
+- Adapter upstream log: lane=cline STILL hitting :11521 (Claudia qwen38-27b) at TTFB 7.2/42.0/43.1s despite #28238 [deployed] demotion fix; GLM ring :8210 TTFB 96.78/111.5/132.3s with queue_depth 3.
+- Router audit: ring_admit_rewrite why=ring_batch_ceiling_4_running_5 (ring over ceiling); 3 concurrent emsu-codegen batch calls 89K-119K chars starving interactive cline; distill_chunk_oversized_failopen error=timed out.
+- Registry router_derived_state loaded_at 2026-08-23 22:15 (2 days STALE) so dead julia never evicted. frankenstein-llm pool members = glm-5.2-local, artemis-gpt-oss-120b, julia-235b, bigmac-120b.
+- Prior fix #28238 [deployed] (23:27 AKDT, bug library incident 2625) demoted qwen38 for interactive cline and was verified then (cline-marker probe picked gpt-oss-120B at 0.162s), but live cline traffic at 01:07-01:09 is still landing on :11521 = the fix reverted or does not cover all cline paths.
+- Records written this window: bug library incident 2625 (merged, seen_count 2); HANDOFF_NOTES.md updated with full root-cause stack.
+
+Open threads to drive next:
+1. #28246 [proposed] - THE quality killer. Find why lane=cline still routes to qwen38 :11521 despite #28238 [deployed]. Check for a post-23:27 frankenstein-tools.service restart or systemd drop-in last-wins revert; confirm _qwen38_priority covers ALL interactive cline paths; check EMSU_GLM_FIRST_ALL_LANES. Fix the WINNING drop-in in place, verify via sudo cat /proc/PID/environ, then live-probe the cline lane and assert ZERO :11521/:11525 picks.
+2. #28244 [proposed] - Recover julia-235b :11513 (ssh -p 2205 from WOPR, check /tmp/vllm_serve_unified.log, keep VLLM_STREAM_LOADING=0) OR run /usr/local/bin/litellm-safe-restart.sh to reload the stale registry and evict the dead member from rotation.
+3. #28245 [proposed] - Enforce GLM ring batch ceiling (running 5 vs ceiling 4) and add interactive-cline-priority scheduling so batch (emsu-codegen) stops starving cline, per rule 146 (Cline is PRIORITY).
+
+Reference IDs:
+- Ideas filed: #28244 [proposed], #28245 [proposed], #28246 [proposed]
+- Bug library: incident 2625 in frankenstein_router_incidents (merged, seen_count 2, status investigating)
+- Prior related idea: #28238 [deployed] (the 23:27 qwen38 interactive demotion that is not holding)
+- Files touched: HANDOFF_NOTES.md (updated via MCP); docs referenced GLM52_RING_STATE_TRACKER.md + GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
+- Key paths: /usr/local/bin/frankenstein_tools_adapter.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/litellm-safe-restart.sh, /var/log/emsu-adapter-upstream.log, /tmp/emsu_router_audit.log
+
+# Reversal Log
+No reversals this window. Diagnosis held from first live probe; the only refinement was discovering the pre-existing 23:27 fix #28238 [deployed] (bug library incident 2625) which the live adapter log pro
 ```
 
 ### `1787517211429` — 8/26/2026, 1:23:27 AM PT — 314 turns
@@ -139,53 +216,6 @@ Why does this say Hi Moodle and was the student's issue resolved? I've asked on 
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787596912975` — 8/26/2026, 1:03:31 AM PT — 380 turns
-
-**Original task:**
-
-```
-We are gettng these. What's going on? Can you correct that?
-```
-
-**Ideas referenced:** #0000, #11629, #16069, #16523, #17483, #177851, #18693, #18944, #18951, #19426, #20251, #24606, #24995, #25066, #2563, #25888 [approved], #26663, #26834, #27100, #27657, #27658, #27819 [proposed], #27942, #28044, #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #28153, #28213, #28239 [proposed], #28240 [proposed], #28242 [proposed], #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550, #99999
-
-**Last PICKUP PROMPT:**
-
-```
-alidate_completion`'s divider/header logic is NOT broken. The repeated "missing PICKUP PROMPT header" / "missing divider lines" errors I got from raw `attempt_completion` calls are a **different, client-side gate** (Cline extension itself), not this MCP tool — and I never once called this diagnostic tool during my 12+ failed attempts. That is the actual process failure (rule 297: insufficient probe). Now checking what actually served this window, per rule 322/315, before writing the RCA.
-
-```
-
-### `1787728419915` — 8/26/2026, 1:01:43 AM PT — 56 turns
-
-**Original task:**
-
-```
-Student seems to claim MANY others are having issues along withthemselves. Unsure if that's true. But can you help track down resolve this particular issue in moodle durably. Tell me why Kaison did not detect and repair this? That should have already been done in advance.
-```
-
-**Last PICKUP PROMPT:**
-
-```
-kup prompt again as requested.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Resolve Moodle enrollment issue – pending details.
-(verified 2026‑08‑26 14:50 PT):
-- No matching bug‑library entry for this symptom.
-- No tickets containing “Moodle enrollment” found.
-- Additional student and course information required to run a diagnostic (e.g., `check_moodle_enrollment` or `get_student_360`).
-
-Open threads to drive next (none – all work completed this session).
-Reference IDs:
-- None
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1787602675527` — 8/26/2026, 12:46:00 AM PT — 384 turns
 

@@ -153,3 +153,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-25: a window escalated 35 stranded exam-override decisions to Customer Service as ticket 27843. Ruben: 'Escalating an override as a ticket to customer service is a false gate and it is gaslighting' — CS has no authority or tooling to resolve overrides (argus_role_permissions: CustomerService tier=0, read_only=1), so the ticket could never be actioned by its recipient. Amended behavior (G6 hidden gate): before routing ANY item to a team or role, verify that role actually has the authority AND the tooling to resolve it — check the permissions/role table, not the item's topic. Routing work to a recipient who structurally cannot act on it is a false gate even when the ticket is real and well-documented; the correct move is to resolve it yourself per rule 29 or route to the role that holds the capability.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:41 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787697242661
+- RCA bucket: scope error
+- Trigger pattern: override/mercy decision routed to a role (CS) that structurally lacks the authority; disposition owner not checked against the permissions table
+- Reversal note: 2026-08-25: a completion open thread routed the mercy-override decision for 3 course-failed students to Customer Service ('CS grants extension via exam_override.php'). Live probes: argus_role_permissions CustomerService tier=0 read-only; exam_override.php force-approve restricted to MasterAdmin/ITAdmin/jthompson (lines 8, 101-109). CS structurally cannot adjudicate overrides; routing it there is a G6 false gate. Amended behavior: any disposition naming who can override genuine exam enforcement must name Jon/MasterAdmin/ITAdmin (or the AI-validated documented-excuse path), never CS; CS intent is intake, SLS-grounded fault classification, comms, and our-fault standard remedies only. Filed #28241 to codify the split in emsu://reference/exam-retake-policy.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

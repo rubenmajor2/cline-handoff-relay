@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/26/2026, 12:25:24 AM PT | window: last 72h | 27 tasks | index total 914 (parsed 9, cached 905)
+Generated: 8/26/2026, 1:25:25 AM PT | window: last 72h | 28 tasks | index total 915 (parsed 5, cached 910)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787727918566` | 8/26/2026, 12:25:15 AM | 45 | 2178KB | frankenstein-llm experiencing issues iterating here in cline. resolve. |
-| `1787726772970` | 8/26/2026, 12:24:51 AM | 55 | 938KB | Why does this say Hi Moodle and was the student's issue resolved? I've asked on this befor |
-| `1787517211429` | 8/26/2026, 12:24:46 AM | 241 | 1715KB | #CFA |
-| `1787596912975` | 8/26/2026, 12:24:41 AM | 321 | 3089KB | We are gettng these. What's going on? Can you correct that? |
-| `1787728419915` | 8/26/2026, 12:24:14 AM | 13 | 462KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
-| `1787602675527` | 8/26/2026, 12:23:53 AM | 353 | 4960KB | Fix this issue |
+| `1787730932980` | 8/26/2026, 1:24:25 AM | 70 | 1680KB | frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterati |
+| `1787517211429` | 8/26/2026, 1:23:27 AM | 314 | 3391KB | #CFA |
+| `1787726772970` | 8/26/2026, 1:05:20 AM | 106 | 1032KB | Why does this say Hi Moodle and was the student's issue resolved? I've asked on this befor |
+| `1787596912975` | 8/26/2026, 1:03:31 AM | 380 | 3377KB | We are gettng these. What's going on? Can you correct that? |
+| `1787728419915` | 8/26/2026, 1:01:43 AM | 56 | 550KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
+| `1787602675527` | 8/26/2026, 12:46:00 AM | 384 | 5386KB | Fix this issue |
+| `1787727918566` | 8/26/2026, 12:33:40 AM | 66 | 2450KB | frankenstein-llm experiencing issues iterating here in cline. resolve. |
 | `1787517352553` | 8/26/2026, 12:14:19 AM | 246 | 1286KB | #Argus |
 | `1787600722263` | 8/26/2026, 12:12:40 AM | 82 | 1366KB | Jon says his overrides are not quite sticking. This is his question: |
 | `1787517380902` | 8/25/2026, 11:58:44 PM | 710 | 10060KB | #VERITAS |
@@ -42,29 +43,25 @@ Generated: 8/26/2026, 12:25:24 AM PT | window: last 72h | 27 tasks | index total
 
 ## Per-window detail
 
-### `1787727918566` — 8/26/2026, 12:25:15 AM PT — 45 turns
+### `1787730932980` — 8/26/2026, 1:24:25 AM PT — 70 turns
 
 **Original task:**
 
 ```
-frankenstein-llm experiencing issues iterating here in cline. resolve.
+frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterations, etc... Unsure what's going on, but needs complete analysis and reslution. 
+
+Do not inject anthropic
 ```
 
-**Ideas referenced:** #10740, #11944, #11953, #12247, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12657, #13108, #13874, #19903, #2050, #25630, #25764, #2625, #26400
+**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #12364, #12459, #12477, #12618, #128126, #12824, #12872, #12878, #13202, #13437, #16163, #16265, #16304, #16732, #16844, #16863, #1724, #178693, #178712, #178713, #178716, #18312, #18326, #186576, #1893, #19419, #21586, #22229, #2230, #2306, #2311, #23133, #2321, #2323, #2324, #2328, #2331, #2335 [deployed], #2337, #2338, #2339, #2340, #2341, #2343, #2344, #23455, #23477, #2358, #23945, #23954, #23982, #24895, #25042, #25097, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #25537, #2554, #25551, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25688, #25689, #2569, #2570, #2571, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #2573, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25796, #25797, #25798, #2580, #25803 [proposed], #25804 [deployed], #25812, #2582, #25822, #25830, #25889 [ready_for_review], #2589, #2590, #25914, #25916, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #2597, #25973, #25975, #25985, #25986, #25989, #25990, #26001, #26002, #26003 [deployed], #26007 [executing], #26008 [executing], #26009 [executing], #26015, #26016 [rejected], #26017 [executing], #26019 [executing], #26023 [executing], #26024 [executing], #26027, #26028, #2603, #26035, #26038, #26039, #26040, #26041, #26044, #26045, #26046, #26048, #26049, #2605, #26050, #26054, #26065, #26067, #26068, #26076, #26077, #26080 [completed], #26090, #26196, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625 [deployed], #26322, #26336, #26348, #26368, #26376, #26377, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #26743, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26908, #26909, #26914, #26923, #26925 [deployed], #26931, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28238 [deployed], #28244 [proposed], #28245 [proposed], #28246 [proposed], #3261, #3319, #3346, #360135, #360152, #366377, #38984, #450438, #8157, #8162, #8184, #9222
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787726772970` — 8/26/2026, 12:24:51 AM PT — 55 turns
-
-**Original task:**
+**Last PICKUP PROMPT:**
 
 ```
-Why does this say Hi Moodle and was the student's issue resolved? I've asked on this before 2x so this is a repeat issue on the name issue. The other, lmk
+esh window should run them.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #28246 - frankenstein-llm slow + terrible rule-91 iterations, full resolution (qwen38 routing regression + julia down + ring saturation; do NOT inject anthropic).\n\nWhere we left off (verified 2026-08-26 01:08 PT, live probes not stale reads):\n- verify_routing frankenstein-llm -> adapter http://127.0.0.1:11510/v1, HTTP 200, but 22001ms for a trivial probe, cost $0.\n- Live endpoint probes: julia235 :11513 DOWN rc=7 (connection refused); bigmac 10.100.0.19:8000 UP; artemis 10.100.0.5:8000 UP; glmring :8210 UP; adapter :11510 UP.\n- Adapter upstream log: lane=cline STILL hitting :11521 (Claudia qwen38-27b) at TTFB 7.2/42.0/43.1s despite #28238 [deployed] demotion fix; GLM ring :8210 TTFB 96.78/111.5/132.3s with queue_depth 3.\n- Router audit: ring_admit_rewrite why=ring_batch_ceiling_4_running_5 (ring over ceiling); 3 concurrent emsu-codegen batch calls 89K-119K chars starving interactive cline; distill_chunk_oversized_failopen error=timed out.\n- Registry router_derived_state loaded_at 2026-08-23 22:15 (2 days STALE) so dead julia never evicted. frankenstein-llm pool members = glm-5.2-local, artemis-gpt-oss-120b, julia-235b, bigmac-120b.\n- Prior fix #28238 [deployed] (23:27 AKDT, bug library incident 2625) demoted qwen38 for interactive cline and was verified then (cline-marker probe picked gpt-oss-120B at 0.162s), but live cline traffic at 01:07-01:09 is still landing on :11521 = the fix reverted or does not cover all cline paths.\n- Records written this window: bug library incident 2625 (merged, seen_count 2); HANDOFF_NOTES.md updated with full root-cause stack.\n\nOpen threads to drive next:\n1. #28246 [proposed] - THE quality killer. Find why lane=cline still routes to qwen38 :11521 despite #28238 [deployed]. Check for a post-23:27 frankenstein-tools.service restart or systemd drop-in last-wins revert; confirm _qwen38_priority covers ALL interactive cline paths; check EMSU_GLM_FIRST_ALL_LANES. Fix the WINNING drop-in in place, verify via sudo cat /proc/PID/environ, then live-probe the cline lane and assert ZERO :11521/:11525 picks.\n2. #28244 [proposed] - Recover julia-235b :11513 (ssh -p 2205 from WOPR, check /tmp/vllm_serve_unified.log, keep VLLM_STREAM_LOADING=0) OR run /usr/local/bin/litellm-safe-restart.sh to reload the stale registry and evict the dead member from rotation.\n3. #28245 [proposed] - Enforce GLM ring batch ceiling (running 5 vs ceiling 4) and add interactive-cline-priority scheduling so batch (emsu-codegen) stops starving cline, per rule 146 (Cline is PRIORITY).\n\nReference IDs:\n- Ideas filed: #28244 [proposed], #28245 [proposed], #28246 [proposed]\n- Bug library: incident 2625 in frankenstein_router_incidents (merged, seen_count 2, status investigating)\n- Prior related idea: #28238 [deployed] (the 23:27 qwen38 interactive demotion that is not holding)\n- Files touched: HANDOFF_NOTES.md (updated via MCP); docs referenced GLM52_RING_STATE_TRACKER.md + GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md\n- Key paths: /usr/local/bin/frankenstein_tools_adapter.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/litellm-safe-restart.sh, /var/log/emsu-adapter-upstream.log, /tmp/emsu_router_audit.log\n\n# Reversal Log\nNo reversals this window. Diagnosis held from first live probe; the only refinement was discovering the pre-existing 23:27 fix #28238 [deployed] (bug library incident 2625) which the live
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787517211429` — 8/26/2026, 12:24:46 AM PT — 241 turns
+### `1787517211429` — 8/26/2026, 1:23:27 AM PT — 314 turns
 
 **Original task:**
 
@@ -81,37 +78,69 @@ Where we left off (verified 2026-08-23 11:25 PT):
 - Systemic correction landed:
 ```
 
-**Ideas referenced:** #13120, #13437, #25185, #25888, #25973 [deployed], #26067 [deployed], #26071 [deployed], #27395, #27492 [deployed], #27690, #27698, #28031 [proposed], #28032 [proposed], #28048 [proposed], #4932, #5431, #7174, #9019
+**Ideas referenced:** #13120, #13437, #25185, #25888, #25973 [deployed], #26067 [deployed], #26071 [deployed], #27100, #27395, #27447, #27492 [deployed], #27690, #27698, #28031 [proposed], #28032 [proposed], #28048 [proposed], #28243 [proposed], #4932, #5431, #7174, #9019
 
 **Last PICKUP PROMPT:**
 
 ```
-riggers-297-and-rule-update\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #28031 - CFA failure-log watchdog rebase status\n\nWhere we left off (verified 2026-08-25 23:23 AKDT):\n- Both watchdogs (cron_cfa_sms_watchdog.php + cron_cfa_failure_watchdog.php) deployed, scheduled in /etc/cron.d, and RUNNING every 10 min (verified: ssh tail of both logs returned fresh 00:10/00:20 start+complete lines this probe).\n- False zero-rung alarm FIXED: SMS watchdog reports 'Model rungs configured: anthropic' (verified: ssh tail cfa_sms_watchdog.log).\n- 0 real CFA model failures in last 48h = healthy-quiet (verified: mysql COUNT cfa_model_failure_log=9 all Aug-23 testfire; COUNT orchestrator_event_log source=cfa_sms_watchdog 48h=0).\n- CORRECTION: cron_state rows for the two watchdogs are EMPTY - earlier 'cron_state confirms state' claim was unverified/incorrect. Watchdogs run fine without it.\n- email_alert_log table created; evaluateLockoutKeywordThreshold() runs clean (count=0).\n- Ideas #28031 [deployed] + #28032 [deployed] stamped.\n\nOpen threads to drive next:\n1. #28048 [proposed] - Build cfa_keyword_hit_log table + wire inbound keyword capture into SMS flow, then flip api_cfa_failure_log_status.php + _view_cfa_failure_log_health.php from honest 0/ok degradation to real counts. Not started; only remaining gap.\n\nReference IDs:\n- Ideas filed: #28031 [deployed], #28032 [deployed], #28048 [proposed]\n- Files touched: /var/www/emtskills/cron/cron_cfa_sms_watchdog.php, /var/www/emtskills/cron/cron_cfa_failure_watchdog.php, /var/www/emtskills/cron/cron_cfa_testfire_failure_log.php, /var/www/emtskills/lib/cfa_health_hardening.php, /var/www/emtskills/lib/cfa_failure_log_testfire.php, /var/www/emtskills/api/cfa_failure_log_status.php, /var/www/emtskills/routes/_view_cfa_failure_log_health.php, /etc/cron.d/emsu-cfa-sms-watchdog, /etc/cron.d/emsu-cfa-failure-watchdog\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════"
-}
-</arguments>
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #28048 [deployed] - CFA lockout-keyword capture activated
+
+Where we left off (verified 2026-08-26 01:02 AKDT):
+- ROOT CAUSE: lib/CFALockoutSelfDiagnosis.php was procedural-only, but all 4 call sites invoke CFALockoutSelfDiagnosis::detectLockoutIntent(array) guarded by class_exists which was FALSE -> capture skipped, enqueueEvent never called, cfa_lockout_events empty (verified: grep no class + 0 rows).
+- FIX: appended class CFALockoutSelfDiagnosis facade matching the caller signature; calls enqueueEvent -> populates cfa_lockout_events.detected_keyword (verified: harness class_exists=true, capture row id=1 then id=2).
+- No new table: cfa_lockout_events already existed with detected_keyword/channel/message/created_at. Built on it instead of duplicating.
+- Flipped 3 readers off fictional email_alert_log/session_logs onto real cfa_lockout_events: evaluateLockoutKeywordThreshold, api/cfa_failure_log_status.php, routes/_view_cfa_failure_log_health.php (verified: execute_command over ssh ran php /tmp/cfa_28048_harness.php, printed 'count=2 hit_count=2 threshold_exceeded=false', 2026-08-26 01:02 AKDT).
+- Fixed phantom students.lifecycle_state column in getLifecycleState (graceful guard).
+- All 4 files php -l clean + deployed with backups; test rows cleaned (2 deleted). #28031 [deployed], #28032 [deployed], #28048 [deployed] reconciled.
+
+Reference IDs:
+- Idea completed this task: #28048 [deployed]
+- Prior related ideas: #28031 [deployed], #28032 [deployed]
+- Files touched: /var/www/emtskills/lib/CFALockoutSelfDiagnosis.php, /var/www/emtskills/lib/cfa_health_hardening.php, /var/www/emtskills/api/cfa_failure_log_status.php, /var/www/emtskills/routes/_view_cfa_failure_log_health.php
+
+Open threads to drive next:
+1. #28243 [proposed] - Enrich lockout remediation with real lifecycle state. Not built, not started. Currently the auto-remediation text is generic ('contact support') because get_student_lifecycle_state MCP is not callable from PHP.
+
+When finished, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
 <task_progress>
-- [x] All broken writers + callers inventoried
-- [x] Root cause of false zero-rung + real rung source
-- [x] Core schemas locked
-- [x] All corrected files staged + deployed
-- [x] php -l all clean + testfire + SMS watchdog run clean
-- [x] Both watchdogs scheduled in /etc/cron.d
-- [x] Verify DB read-back (testfire row, orchestrator bridge)
-- [x] Verify route/testfire callers work
-- [x] REBASE probe round 1: 0 new rows + 0 bridge rows in 48h
-- [x] REBASE probe round 2: watchdogs RUNNING, healthy-quiet; cron_state empty
-- [x] Got canonical rule-91 block via get_rule91_template
-- [x] Pre-validate round 1: 5 failures named
-- [x] Recorded reversal amendment (rule 317) for cron_state flip
-- [x] Rebuilt result fixing all 5 failures
-- [ ] Re-validate (round 2)
-- [ ] clinerules_check_gate
-- [ ] Emit ONE clean attempt_completion
+- [x] CFA watchdog repair deployed + verified running (rebase confirmed)
+- [x] #28048 approved by Ruben -> now EXECUTING (rule 161)
+- [x] cfa_lockout_events = keyword-hit log already exists (detected_keyword col)
+- [x] ROOT CAUSE CONFIRMED: lib procedural, callers expect class -> capture dead
+- [x] Appended class facade to lib (activates capture via enqueueEvent)
+- [x] Flipped all 3 readers to cfa_lockout_events
+- [x] Deployed all 4 + php -l clean
+- [x] Live test: capture WORKS, threshold reads real table, phantom column fixed (EXIT=0)
+- [x] Cleaned up synthetic test rows (2 deleted)
+- [x] Stamped #28048 deployed + reconciled (all 3 [deployed])
+- [x] Filed follow-up idea #28243 for lifecycle remediation
+- [x] Pre-validate: ALL PASSED
+- [x] check_gate: CLEAR
+- [x] Emitted completion
 </task_progress>
-</use_mcp_tool>
+</attempt_completion>
 ```
 
-### `1787596912975` — 8/26/2026, 12:24:41 AM PT — 321 turns
+### `1787726772970` — 8/26/2026, 1:05:20 AM PT — 106 turns
+
+**Original task:**
+
+```
+Why does this say Hi Moodle and was the student's issue resolved? I've asked on this before 2x so this is a repeat issue on the name issue. The other, lmk
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787596912975` — 8/26/2026, 1:03:31 AM PT — 380 turns
 
 **Original task:**
 
@@ -119,7 +148,7 @@ riggers-297-and-rule-update\n\n════════════════�
 We are gettng these. What's going on? Can you correct that?
 ```
 
-**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #25888, #27819 [proposed], #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550, #99999
+**Ideas referenced:** #0000, #11629, #16069, #16523, #17483, #177851, #18693, #18944, #18951, #19426, #20251, #24606, #24995, #25066, #2563, #25888 [approved], #26663, #26834, #27100, #27657, #27658, #27819 [proposed], #27942, #28044, #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #28153, #28213, #28239 [proposed], #28240 [proposed], #28242 [proposed], #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550, #99999
 
 **Last PICKUP PROMPT:**
 
@@ -128,7 +157,7 @@ alidate_completion`'s divider/header logic is NOT broken. The repeated "missing 
 
 ```
 
-### `1787728419915` — 8/26/2026, 12:24:14 AM PT — 13 turns
+### `1787728419915` — 8/26/2026, 1:01:43 AM PT — 56 turns
 
 **Original task:**
 
@@ -136,9 +165,29 @@ alidate_completion`'s divider/header logic is NOT broken. The repeated "missing 
 Student seems to claim MANY others are having issues along withthemselves. Unsure if that's true. But can you help track down resolve this particular issue in moodle durably. Tell me why Kaison did not detect and repair this? That should have already been done in advance.
 ```
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1787602675527` — 8/26/2026, 12:23:53 AM PT — 353 turns
+```
+kup prompt again as requested.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Resolve Moodle enrollment issue – pending details.
+(verified 2026‑08‑26 14:50 PT):
+- No matching bug‑library entry for this symptom.
+- No tickets containing “Moodle enrollment” found.
+- Additional student and course information required to run a diagnostic (e.g., `check_moodle_enrollment` or `get_student_360`).
+
+Open threads to drive next (none – all work completed this session).
+Reference IDs:
+- None
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787602675527` — 8/26/2026, 12:46:00 AM PT — 384 turns
 
 **Original task:**
 
@@ -146,34 +195,94 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Fix this issue
 ```
 
-**Ideas referenced:** #0066, #19492, #2036, #25194, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #28215 [proposed], #374151, #78350, #9086, #9215, #9320
+**Ideas referenced:** #0066, #178769, #19492, #2036, #25194, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #28215 [proposed], #28241 [proposed], #374151, #64748, #78350, #9086, #9215, #9320
 
 **Last PICKUP PROMPT:**
 
 ```
-ng was dropped per the steer).
+ror | causal rule updated: 321
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Phantom auto-fail attempts blocking Moodle Attempt button (7 students, TKT-20260823-FF0DB606 class).
+Pick up task #1787697242661 — CS/enforcement authority split answer + phantom RCA follow-up.
 
-Where we left off (verified 2026-08-25 17:13 PT):
-- 21 synthetic quiz_attempts purged via /var/www/emtskills/lib/PhantomAttemptPurge.php (idea #28112 [deployed]); all 7 pairs verified released=YES, remaining=0, detectBrokenAccess()=0.
-- Standing detector wired: /etc/cron.d/emsu line 29 runs cron_phantom_attempt_detector.php --auto-heal every 30 min; manual run as www-data returned EXIT=0.
+Where we left off (verified 2026-08-25 23:42 PT):
+- RCA complete: Eesha fixed pre-session; sweep population mis-classified; stamper alive and by-design; rules 317/297/321 amended.
+- Authority split confirmed: CS = intake + our-fault remedies; overrides on genuine enforcement = AI-validated excuse or Jon/MasterAdmin force-approve.
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #28215 [proposed] — Suspend/merge 4 archived duplicate Moodle accounts (uids 51849, 53637, 54227, 54555) that remain phantom sinks, via moodle_account_merger or suspended=1; optionally exclude Archived-NN- usernames in the detector.
-2. #28112 [deployed] — Confirm the */30 detector produces clean auto-heal log lines over the next 24h (/var/log/emsu_phantom_attempt_detector.log).
+Open threads to drive next:
+1. #28241 [proposed] — codify CS vs Jon/MasterAdmin split in emsu://reference/exam-retake-policy.
+2. (human-only decision — no idea) mercy override for Summer Graham 52939 / Nathan Reyes 54488 / Riley Raff 52399 (course-failed tonight by design) = Jon/MasterAdmin, not CS.
+3. #28215 [proposed] — suspend/merge the 4 Archived-duplicate Moodle accounts.
+4. #28112 [deployed] — keep override-gated purge mechanism + detector; no un-gated sweeps.
 
 Reference IDs:
-- Ticket: TKT-20260823-FF0DB606 (source incident for idea #28112)
-- Ideas filed: #28215 [proposed] (this session); #28112 [deployed] (canonical purge lib); #28116 [superseded] (abandoned framing)
-- Files touched: /etc/cron.d/emsu (schedule wiring); /var/www/emtskills/cron/cron_phantom_attempt_detector.php + lib/PhantomAttemptPurge.php (verified on disk, unchanged)
+- Ticket: TKT-20260823-FF0DB606
+- Ideas filed: #28241 [proposed], #28215 [proposed], #28112 [deployed], #28116 [superseded]
+- Files touched: Rules/317, Rules/297, Rules/321 (amended this window)
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] Grounded CS/override authority split (tier rows + exam_override.php gates)
+- [x] Filed #28241 [proposed] codification idea
+- [x] Amended 321 for the misrouted-disposition flip
+- [x] Validated (ALL PASSED) + shipped answer completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1787727918566` — 8/26/2026, 12:33:40 AM PT — 66 turns
+
+**Original task:**
+
+```
+frankenstein-llm experiencing issues iterating here in cline. resolve.
+```
+
+**Ideas referenced:** #10740, #11944, #11953, #12247, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12657, #13108, #13874, #178772, #19903, #2050, #25630, #25764, #2625, #26400, #28238 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+ 2625 + idea #28238 [deployed]
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787729040000 — frankenstein-llm Cline iteration fix.
+
+Where we left off (verified 2026-08-25 23:28 AKDT):
+- Adapter patched + restarted: 27B last-resort on interactive cline lane (verified: ssh_command curl probe returned model=gpt-oss-120b, adapter log lane=cline upstream=http://10.100.0.19:8000 ttfb_s=0.162 at 2026-08-26T00:23:49Z)
+- #28238 [deployed] record idea (verified: reconcile_ideas returned deployed; mysql SELECT returned status=deployed updated_at=2026-08-26 00:26:29)
+- Bug library incident 2625 recorded resolved (verified: bug_library_record tool returned 'Incident recorded + VERIFIED: frankenstein_router_incidents 2625' at 2026-08-25 23:25 AKDT)
+
+Open threads to drive next:
+1. (human-only decision — no idea) EMSU_GLM_FIRST_ALL_LANES=1 + EMSU_GLM_FLOOR_OFF=1 remain set on frankenstein-tools.service: interactive GLM 30pct floor is disabled and GLM-first is forced on all lanes. Leave as-is unless Ruben wants speed-first interactive; the 27B demotion is orthogonal and works under either setting.
+
+Reference IDs:
+- Ideas filed: #28238 [deployed]
+- Ideas closed: none
+- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (+ .bak-20260825-qwen38), HANDOFF_NOTES.md, bug library incident 2625
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Pre-turn compress signal check (rule 119)
+- [x] Bug library gate check before diagnosing (rule 156)
+- [x] Live-verify frankenstein-llm routing/backend (rule 140/315)
+- [x] Router audit + adapter upstream log analysis (root cause found)
+- [x] Patch v2 (lane_interactive gate) + compile + restart
+- [x] Re-probe cline lane ordering live (0.162s on 120B, no 27B)
+- [x] Record bug library incident #2625
+- [x] File record idea #28238 + stamp deployed + reconcile
+- [x] Handoff note
+- [x] Validate completion + check gate + attempt_completion
+</task_progress>
 </attempt_completion>
 ```
 

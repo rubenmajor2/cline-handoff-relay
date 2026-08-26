@@ -50,9 +50,15 @@ Reference IDs:
 - Ideas closed: #<id> [tag], ...
 - Files touched: <paths>
 
+# Reversal Log
+No reversals this window. (Or: "- initial → corrected | RCA bucket | causal rule updated (file/slug) or filed idea #NNNN [tag]" for each within-window flip.)
+
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 ```
+
+**The `# Reversal Log` section is MANDATORY** (added 2026-08-26 per idea #25888's R317_REVERSAL_LOG gate — this template was drifting from the live validator, causing agents who copied it verbatim to fail on first submission every time). Write "No reversals this window." if nothing flipped, or itemize every within-window correction per rule 317.
+
 
 ## Valid dispositions (NO `[queued]` — 2026-08-01 ban)
 
@@ -152,5 +158,25 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: unread source
 - Trigger pattern: Agent submitted 12+ consecutive attempt_completion calls with visually-correct PICKUP PROMPT blocks (correct divider length, correct header, all documented sections present) that were repeatedly rejec
 - Reversal note: RCA (rule 297/317, triggered by Ruben catching repeated rule-91 rejections): the copy-paste TEMPLATE block inside rule 91's own corpus text does NOT contain the "# Reversal Log" section that idea #25888 made mandatory (R317_REVERSAL_LOG gate). An agent following the rule's own template verbatim will ALWAYS fail R317_REVERSAL_LOG on first submission, because the template it was told to copy is incomplete relative to the validator it must satisfy. Live-verified via clinerules_validate_completion this session: a text with correct 47-char dividers, correct "PICKUP PROMPT" header, and all other required sections still failed with R317_REVERSAL_LOG because no Reversal Log section was present (this rule's own template never showed one). Root cause bucket = unread source: the validator's gate set (R317_REVERSAL_LOG, added by idea #25888) was never back-ported into rule 91's inline template, so the two artifacts drifted. Fix: rule 91's template must include a "# Reversal Log" section (either "N
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:39 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778
+- RCA bucket: unread source
+- Trigger pattern: Agent submitted 12+ consecutive attempt_completion calls with visually-correct PICKUP PROMPT blocks that were repeatedly rejected because rule 91's own template omitted the mandatory Reversal Log sect
+- Reversal note: Follow-up ledger stamp for task 1787606148778 (same fix as task 1787606148778-r91-rca): rule 91's copy-paste template lacked the mandatory Reversal Log section required by idea #25888's R317_REVERSAL_LOG gate. Template edited on disk to add the section after Reference IDs; MCP reindexed.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:59 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778-mailer-rca
+- RCA bucket: unread source
+- Trigger pattern: Agent submitted 12+ consecutive attempt_completion calls with visually-correct PICKUP PROMPT blocks that were repeatedly rejected because rule 91's own template omitted the mandatory Reversal Log sect
+- Reversal note: Follow-up ledger stamp for task 1787606148778-mailer-rca (same fix as tasks 1787606148778 and 1787606148778-r91-rca): rule 91's copy-paste template lacked the mandatory Reversal Log section required by idea #25888's R317_REVERSAL_LOG gate. Template edited on disk to add the section after Reference IDs; MCP reindexed.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -6,16 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/25/2026, 5:01:07 PM PT | window: last 72h | 23 tasks | index total 909 (parsed 5, cached 904)
+Generated: 8/25/2026, 6:01:07 PM PT | window: last 72h | 23 tasks | index total 910 (parsed 6, cached 904)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787602675527` | 8/25/2026, 4:42:13 PM | 189 | 2559KB | Fix this issue |
-| `1787697242661` | 8/25/2026, 4:42:08 PM | 71 | 235KB | #Payment Suspensions |
-| `1787517380902` | 8/25/2026, 4:42:01 PM | 579 | 8063KB | #VERITAS |
-| `1787596912975` | 8/25/2026, 4:41:52 PM | 143 | 1952KB | We are gettng these. What's going on? Can you correct that? |
+| `1787602675527` | 8/25/2026, 6:01:03 PM | 227 | 2711KB | Fix this issue |
+| `1787516033804` | 8/25/2026, 6:00:48 PM | 171 | 609KB | #Frankenstein LLM Routing |
+| `1787705478563` | 8/25/2026, 6:00:40 PM | 101 | 511KB | #Argus |
+| `1787596912975` | 8/25/2026, 6:00:27 PM | 173 | 2103KB | We are gettng these. What's going on? Can you correct that? |
+| `1787697242661` | 8/25/2026, 6:00:11 PM | 106 | 366KB | #Payment Suspensions |
+| `1787517380902` | 8/25/2026, 5:48:05 PM | 584 | 8134KB | #VERITAS |
 | `1787593935930` | 8/25/2026, 4:38:11 PM | 262 | 8586KB | This person needs to stop receiving invoices for 13K -> |
-| `1787516033804` | 8/25/2026, 3:53:55 PM | 136 | 454KB | #Frankenstein LLM Routing |
 | `1787516392266` | 8/25/2026, 3:43:28 PM | 678 | 1605KB | #Deepseek spillage now vs before |
 | `1787659574256` | 8/25/2026, 3:41:39 PM | 454 | 2302KB | #Argus |
 | `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
@@ -32,13 +33,12 @@ Generated: 8/25/2026, 5:01:07 PM PT | window: last 72h | 23 tasks | index total 
 | `1787420772345` | 8/23/2026, 10:55:08 AM | 1900 | 5340KB | #Qwen 3.8 27B  |
 | `1787428970611` | 8/23/2026, 10:53:08 AM | 366 | 1269KB | #VERITAS TRUTH SYRUM |
 | `1787440605750` | 8/23/2026, 10:31:43 AM | 402 | 2368KB | Help me cure cancer |
-| `1787440904551` | 8/22/2026, 5:29:32 PM | 138 | 1899KB | frankenstein-llm seems to be stalling |
 
 ---
 
 ## Per-window detail
 
-### `1787602675527` — 8/25/2026, 4:42:13 PM PT — 189 turns
+### `1787602675527` — 8/25/2026, 6:01:03 PM PT — 227 turns
 
 **Original task:**
 
@@ -50,70 +50,74 @@ Fix this issue
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787697242661` — 8/25/2026, 4:42:08 PM PT — 71 turns
+### `1787516033804` — 8/25/2026, 6:00:48 PM PT — 171 turns
 
 **Original task:**
 
 ```
-#Payment Suspensions
+#Frankenstein LLM Routing
 
-How is this going now? 
+Rebase, tell me where this is at now:
 
-Found and fixed the root cause of the wrongful "financial holds" and the late suspensions Jon flagged. The invoice attribution in qb_invoices is broken two ways, and every payment surface was reading it wrong.
+Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
 
-The two defects (verified this session): (1) qb_invoices.student_id is an INT column, so binding a slug like '26913FT-01' coerces to the section prefix 26913 and matches EVERY invoice in the section — that is why Kamdyn Sheets' profile showed 18+ rows of other students' invoices with red balances (verified: mysql SELECT returned 79 rows acr
+Where we left off (verified 2026-08-23 11:35 AM AKDT):
+- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
+- LiteLLM safe-resta
 ```
 
-**Ideas referenced:** #12661, #17580, #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #90461, #90462, #90463, #90464, #90465, #90466, #90467, #90468, #90469, #90470, #90471, #90472, #90473, #90474, #90475, #90476, #90477, #90478, #90479, #90480, #90481, #90482, #90483, #90484, #90485, #90486, #90487, #90488, #90489, #9168, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787517380902` — 8/25/2026, 4:42:01 PM PT — 579 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase and analyze since last analysis
-
-VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
-
-════
-```
-
-**Ideas referenced:** #12459, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #28213 [proposed], #4991, #8798
+**Ideas referenced:** #11945, #12584, #12680, #12824, #12872, #12878, #16345, #16663, #16696, #178742, #178750, #1876, #19338, #19458, #19491, #2073, #2294, #2307, #2314, #23169, #2341, #2343, #2344, #25097 [implemented], #25111, #25122 [implemented], #25125 [implemented], #25196 [executing], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2597, #2603, #2605, #26209, #26211, #26233, #26663, #26823, #26824, #26825, #27492, #27503, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed], #28208 [proposed], #6826
 
 **Last PICKUP PROMPT:**
 
 ```
+E_TRACKER.md (read this turn).
 
-HANDOFF updated. Now generating the exact rule-91 PICKUP PROMPT block (to guarantee the 47-char divider) and validating: <use_mcp_tool>
-<server_name>clinerules</server_name>
-<tool_name>get_rule91_template</tool_name>
-<arguments>
-{"task_id": "1787121837052", "topic": "VERITAS auto-correction rebase", "where_we_left_off": ["#28153 part (b) DEPLOYED: correct_truth_failures() now routes UNSUPPORTED claims to correction LLM (was CONTRADICTED-only). Verified landed lines 187/190/207/215 lib/truth_judge.php, php -l clean, live (opcache revalidate_freq=60)", "Root cause of low fix rate: FAIL emails are ~94% UNSUPPORTED claims; old corrector dropped them all. Part (b) is the dominant fix", "Distribution (corrected=true only): PASS 148 (11%) / FAIL 1000 (74.6%) / ERROR 193 (14.4%)", "#28028 e2e: judge correctly FAILs false claims", "NEW BLOCKER #28213: correction LLM call (frankenstein-llm, max_tokens=4000) exceeds 55-60s consistently (3x observed) despite 8.7s simple-probe -> production auto-correct will often time out -> send-original + human-review"], "open_threads": ["#28213 [proposed] - fix correction-LLM latency: lower max_tokens to ~1500, faster model, raise timeout to 90-120s, or trim prompt. This is what limits part (b) effectiveness now", "#27942 [deployed] - monitor first real email that triggers auto-correction (check email_send_blocks for veritas_l4_auto_corrected rows)"], "ideas_filed": ["#28213 [proposed]"], "files_touched": ["lib/truth_judge.php", "lib/mailer.php"], "verified_ts": "2026-08-25 15:41 AKDT"}
-</arguments>
-<task_progress>
-- [x] Ruben APPROVED #28153 + #28028 → building both in-window
-- [x] #28028: e2e — judge correctly FAILed false claim, correction LLM TIMED OUT 60s
-- [x] #28153b: patch applied + php -l clean + verified landed (187, 190, 207, 215)
-- [x] Real distribution (corrected=true only): PASS 148 (11%) / FAIL 1000 (74.6%) / ERROR 193 (14.4%)
-- [x] SMOKING GUN: FAIL emails are 94% UNSUPPORTED claims; old corrector dropped them all → part (b) is the dominant fix
-- [x] opcache validate_timestamps=1 revalidate_freq=60 + mtime 15:51 (>60s) → part (b) LIVE
-- [x] frankenstein-llm healthy (HTTP 200 / 8.7s simple probe)
-- [x] KEY FINDING: correction LLM call (max_tokens=4000) consistently exceeds 55-60s (3x observed) → production auto-correct will often time out → send-original + human-review
-- [x] Cleaned test artifacts
-- [x] Verified #27942/#28028/#28153 all exist + already status=deployed
-- [x] Filed correction-latency idea #28213 [proposed]
-- [x] Reconciled all four: 27942/28028/28153 [deployed], 28213 [proposed]
-- [x] Updated HANDOFF_NOTES
-- [ ] Get rule-91 template, validate completion + check gate + attempt_completion
-</task_progress>
-</use_mcp_tool>
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up fleet LLM health + routing repair — follow-up to root analysis 2026-08-25.
+
+Where we left off (verified 2026-08-25 14:52 PM AKDT):
+- Read-only probe done. Healthy: BigMac/Artemis/Joshua/Claudia/GLM-ring(:8210 master)/WOPR 18002-4+18006. Broken: Nero (:11525 MLX wedged, quarantined fail_streak=1665), Julia (:11513 dark), WOPR :18001 (far-side ollama reset) + :18005 (no tunnel). Misroutes: nero lane api_base=11513 (dead), julia-120b lane api_base=11513 (dark).
+- No system/LLM actions taken; advisory filed #28208.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #28208 [proposed] — execute repair order: repoint nero lane to :11525 + relaunch MLX, rebuild :18001 ollama + :18005 tunnel, GLM per-node rank check from Cato, Julia decision.
+2. #28033 [proposed] — remote-URL images skip the vision doorman (make image_url fire it like base64/data-URL).
+3. #28035 [proposed] — repair BigMac heartbeat writer (recurring false-down root cause).
+
+Reference IDs:
+- Ideas filed: #28208 [proposed], #28033 [proposed], #28035 [proposed], #27869 [proposed], #28034 [deployed]
+- Reference docs: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
+- Files touched this turn: none (read-only); ledger row not yet appended pending your repair go-ahead.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1787596912975` — 8/25/2026, 4:41:52 PM PT — 143 turns
+### `1787705478563` — 8/25/2026, 6:00:40 PM PT — 101 turns
+
+**Original task:**
+
+```
+#Argus
+
+Does anythign else in Argus need repair or resolution? Evaluate since last check:
+
+approved
+- #28205 [proposed] — add a surface-aware gate to _inject_corpus(), re-measure A/B/C, and track deliberation-heavy rejection counts 48h before/after. Needs a correctness bench, not a blind trim: the corpus is what prevents invented EMSU facts
+
+approved, but why do i need to do this, isn't this a bug and should have been approved iwhtout my authorization? -> #28122 [proposed] — Jayvee: Team Hub add/remove/edit shifts + shift notes throwing errors for ~1 week, screenshot attached. Real production 
+```
+
+**Ideas referenced:** #1399, #1711, #1712, #1715, #1725, #1727, #1730, #1731, #1740, #1741, #1745, #1746, #1758, #1759, #1763, #23982, #24645, #24723, #28122 [proposed], #28127, #28132, #28133 [proposed], #28134 [proposed], #28155 [deployed], #28205 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787596912975` — 8/25/2026, 6:00:27 PM PT — 173 turns
 
 **Original task:**
 
@@ -121,7 +125,7 @@ HANDOFF updated. Now generating the exact rule-91 PICKUP PROMPT block (to guaran
 We are gettng these. What's going on? Can you correct that?
 ```
 
-**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #28114 [proposed], #28115 [proposed], #28116 [proposed]
+**Ideas referenced:** #11629, #16523, #17483, #177851, #18693, #19426, #24606, #2563, #27819, #28114 [proposed], #28115 [proposed], #28116 [proposed], #5780, #6106
 
 **Last PICKUP PROMPT:**
 
@@ -156,6 +160,121 @@ Reference IDs:
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
+</attempt_completion>
+```
+
+### `1787697242661` — 8/25/2026, 6:00:11 PM PT — 106 turns
+
+**Original task:**
+
+```
+#Payment Suspensions
+
+How is this going now? 
+
+Found and fixed the root cause of the wrongful "financial holds" and the late suspensions Jon flagged. The invoice attribution in qb_invoices is broken two ways, and every payment surface was reading it wrong.
+
+The two defects (verified this session): (1) qb_invoices.student_id is an INT column, so binding a slug like '26913FT-01' coerces to the section prefix 26913 and matches EVERY invoice in the section — that is why Kamdyn Sheets' profile showed 18+ rows of other students' invoices with red balances (verified: mysql SELECT returned 79 rows acr
+```
+
+**Ideas referenced:** #12661, #17580, #25888, #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #90461, #90462, #90463, #90464, #90465, #90466, #90467, #90468, #90469, #90470, #90471, #90472, #90473, #90474, #90475, #90476, #90477, #90478, #90479, #90480, #90481, #90482, #90483, #90484, #90485, #90486, #90487, #90488, #90489, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #28119 [deployed] — qb_invoices attribution root cause + wrongful suspension cleanup.
+
+Where we left off (verified 2026-08-25 16:57 PT):
+- Root cause fixed and backfilled: qb_invoices.student_db_id mirrors qb_customers (0 mismatches), all 114 orphan open invoices resolved (29 email-relink + 54 customer rows created + 22 stale-cid relink), 8 remaining are placeholder '000000test' rows with no email.
+- Auto-clear run2: cleared=942 still_owed=642 errors=0; active suspensions 1,584 → 663; Molly Ji 26817FT-07 hold lifted (0 active).
+- All payment surfaces read via qb_customers join (deployed 2026-08-24, ideas #28118 [deployed], #28119 [deployed]).
+
+Open threads to drive next:
+None — both original open threads (student_db_id backfill + orphan qb_customers rows) completed this session (verified above). The hourly auto-clear cron remains scheduled in crontab and needs no new idea.
+
+Reference IDs:
+- Ideas filed: #28118 [deployed], #28119 [deployed]
+- Earlier this window (completed prior session): #28110 [deployed], #28111 [deployed], #28117 [deployed]
+- Files touched (2026-08-24 deploy): lib/StudentLifecyclePaymentService.php, cron/cron_payment_reconciliation.php, cron/cron_cfa_payment_auto_clear.php, routes/pd_80_percent_review.php, scripts/check_pd_80_percent.php, routes/report_viewer.php, admin_profile.php
+- DB touched this session: qb_invoices (3,981 student_db_id backfills total), qb_customers (54 rows created)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787517380902` — 8/25/2026, 5:48:05 PM PT — 584 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
+```
+
+**Ideas referenced:** #12459, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #28213 [proposed], #4991, #8798
+
+**Last PICKUP PROMPT:**
+
+```
+0 (74.6%) / ERROR 193 (14.4%).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787121837052 - VERITAS auto-correction rebase
+
+Where we left off (verified 2026-08-25 15:41 AKDT):
+- #28153 [deployed] part (b) DEPLOYED: correct_truth_failures() now routes UNSUPPORTED claims to correction LLM (was CONTRADICTED-only). Verified landed lines 187/190/207/215 lib/truth_judge.php, php -l clean, live (opcache revalidate_freq=60)
+- Root cause of low fix rate: FAIL emails are ~94% UNSUPPORTED claims; old corrector dropped them all. Part (b) is the dominant fix
+- Distribution (corrected=true only): PASS 148 (11%) / FAIL 1000 (74.6%) / ERROR 193 (14.4%)
+- #28028 [deployed] e2e: judge correctly FAILs false claims
+- NEW BLOCKER #28213 [proposed]: correction LLM call (frankenstein-llm, max_tokens=4000) exceeds 55-60s consistently (3x observed) despite 8.7s simple-probe -> production auto-correct will often time out -> send-original + human-review
+
+Open threads to drive next:
+1. #28213 [proposed] - fix correction-LLM latency: lower max_tokens to ~1500, faster model, raise timeout to 90-120s, or trim prompt. This is what limits part (b) effectiveness now
+2. #27942 [deployed] - monitor first real email that triggers auto-correction (check email_send_blocks for veritas_l4_auto_corrected rows)
+
+Reference IDs:
+- Ideas filed: #28213 [proposed]
+- Ideas closed: #27942 [deployed], #28028 [deployed], #28153 [deployed]
+- Files touched: lib/truth_judge.php, lib/mailer.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+
+# Reversal Log
+No reversals this window.</result>
+<task_progress>
+- [x] Ruben APPROVED #28153 + #28028 → building both in-window
+- [x] #28028: e2e — judge correctly FAILed false claim, correction LLM TIMED OUT 60s
+- [x] #28153b: patch applied + php -l clean + verified landed (187, 190, 207, 215)
+- [x] Real distribution (corrected=true only): PASS 148 (11%) / FAIL 1000 (74.6%) / ERROR 193 (14.4%)
+- [x] SMOKING GUN: FAIL emails are 94% UNSUPPORTED claims; old corrector dropped them all → part (b) is the dominant fix
+- [x] opcache validate_timestamps=1 revalidate_freq=60 + mtime 15:51 (>60s) → part (b) LIVE
+- [x] frankenstein-llm healthy (HTTP 200 / 8.7s simple probe)
+- [x] KEY FINDING: correction LLM call (max_tokens=4000) consistently exceeds 55-60s (3x observed) → production auto-correct will often time out → send-original + human-review
+- [x] Cleaned test artifacts
+- [x] Verified #27942/#28028/#28153 all exist + already status=deployed
+- [x] Filed correction-latency idea #28213 [proposed]
+- [x] Reconciled all four: 27942/28028/28153 [deployed], 28213 [proposed]
+- [x] Updated HANDOFF_NOTES
+- [x] validate_completion ALL PASSED + identity echo matches
+- [x] check_gate GATE CLEAR → attempt_completion shipped
+</task_progress>
 </attempt_completion>
 ```
 
@@ -207,54 +326,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Gate check — GATE CLEAR
 - [x] attempt_completion with human summary + rule-91 pickup block
 </task_progress>
-</attempt_completion>
-```
-
-### `1787516033804` — 8/25/2026, 3:53:55 PM PT — 136 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Routing
-
-Rebase, tell me where this is at now:
-
-Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
-
-Where we left off (verified 2026-08-23 11:35 AM AKDT):
-- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
-- LiteLLM safe-resta
-```
-
-**Ideas referenced:** #11945, #12584, #12680, #12824, #12872, #12878, #16345, #178742, #178750, #1876, #2073, #2294, #2307, #2314, #23169, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2597, #2603, #2605, #26209, #26663, #26823, #26824, #26825, #27492, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed], #28208 [proposed], #6826
-
-**Last PICKUP PROMPT:**
-
-```
-E_TRACKER.md (read this turn).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up fleet LLM health + routing repair — follow-up to root analysis 2026-08-25.
-
-Where we left off (verified 2026-08-25 14:52 PM AKDT):
-- Read-only probe done. Healthy: BigMac/Artemis/Joshua/Claudia/GLM-ring(:8210 master)/WOPR 18002-4+18006. Broken: Nero (:11525 MLX wedged, quarantined fail_streak=1665), Julia (:11513 dark), WOPR :18001 (far-side ollama reset) + :18005 (no tunnel). Misroutes: nero lane api_base=11513 (dead), julia-120b lane api_base=11513 (dark).
-- No system/LLM actions taken; advisory filed #28208.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #28208 [proposed] — execute repair order: repoint nero lane to :11525 + relaunch MLX, rebuild :18001 ollama + :18005 tunnel, GLM per-node rank check from Cato, Julia decision.
-2. #28033 [proposed] — remote-URL images skip the vision doorman (make image_url fire it like base64/data-URL).
-3. #28035 [proposed] — repair BigMac heartbeat writer (recurring false-down root cause).
-
-Reference IDs:
-- Ideas filed: #28208 [proposed], #28033 [proposed], #28035 [proposed], #27869 [proposed], #28034 [deployed]
-- Reference docs: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
-- Files touched this turn: none (read-only); ledger row not yet appended pending your repair go-ahead.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -1080,45 +1151,4 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1787440904551` — 8/22/2026, 5:29:32 PM PT — 138 turns
-
-**Original task:**
-
-```
-frankenstein-llm seems to be stalling
-```
-
-**Ideas referenced:** #10108, #10158, #10178, #10528, #10740, #11261, #11296, #11302, #11335, #11383, #11384, #11385, #11386, #11414, #11741, #11781, #11945, #11953, #12046, #12059, #12060, #12061, #12247, #12262, #12459, #12473, #12477, #12618, #12672, #12689, #12824, #12872, #12878, #13202, #13832, #16163, #16265, #16304, #16844, #1754, #1755, #178744, #18312, #18326, #18471, #18940, #1986, #20264, #20272, #2050, #2073, #2083, #2157, #2159, #2168, #21684, #2174, #2185, #2247, #2294, #2307, #2314, #23169, #24217, #25097, #2537, #25471, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #2582, #2592, #2603, #26209, #26284 [executing], #26400, #26403, #26908, #26922 [deployed], #26923, #26927 [deployed], #26932, #27100, #27259, #27711, #27722, #27972 [deployed], #27974 [proposed], #41477, #6711, #6719, #6826, #9624, #9636, #9637, #9651, #9655, #9656, #9661, #9662, #9697, #9718
-
-**Last PICKUP PROMPT:**
-
-```
- mid-task, not a probe failure
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787442900000 — frankenstein-llm stall: diagnosed, fixed, hardened + Joshua Qwen3.8 verified (2026-08-22).
-
-Where we left off (verified 2026-08-22 17:28 PT):
-- frankenstein-llm stall RESOLVED: ssh_command curl probe returned HTTP=200 TOTAL=4.624353s with x-litellm-response-cost-original=0.0 (was 524s/timeouts); LiteLLM /health/readiness returned HTTP 200.
-- GLM ring NOT restarted (reversal: single 20s sample misled; ssh_command 60s counter returned TOTAL=260.40 tok/s healthy; engine log showed 13-min transient PP=6 stall-burst 23:18-23:31 UTC that self-recovered). Rule 322 amended with persistence-evidence requirement.
-- Ring capacity restored via zzzz...ring-capacity-restore-20260822.conf (48 z's, sorts last): FRANK_BOX_CAPACITY=8000=14,11513=8,10.100.0.19:8000=6,8210=8,8211=8,11521=8,11525=4; adapter restarted. ssh_command read-back returned: systemctl is-active=active, resolved Environment contains the full capacity map.
-- Watchdog v2 live on cato (~/bin/glm52_watchdog_worker_v2.sh, @reboot crontab entry): counter-method wedge detection (3 consecutive 60s zero-decode windows with running>0) auto-relaunches via ~/bin/glm52_relaunch_seq128.sh (persistent path, preserves CFG_MAX_SEQS=128). ssh_command read-back returned: pgrep PID 2331171 + log line 'WV2: watchdog v2 started pid 2331171'.
-- Cap-guard cron (cron_frank_cap_guard.php) extended to watch FRANK_BOX_CAPACITY report-only. ssh_command run returned: 'FRANK_BOX_CAPACITY live=...8210=8,8211=8... OK (report-only)' + 'CAP_GUARD: no drift.'
-- Joshua Qwen3.8-27B: parallel window's joshua-qwen38 container Up (started 2026-08-23T00:05:38Z), Qwen3.8-27B-BF16 vLLM TP=2, host port 8001, 131072 ctx. STILL WARMING at 17:27 PT (ssh_command returned: docker logs grep startup-complete count=0, curl :8001 HTTP=000 in 0.028s). NOT in registry/config yet.
-- Qwen3.8 docs updated: PROJECT_FRANKENSTEIN.md (Claudia :11521 L4c + Nero :11525 L4d + qwen3.8-max vision doorman replacing kimi-k3 + Joshua in-flight section) + GLM52_RING_STATE_TRACKER.md (stall event + reversal + durable fixes + 5-upstream federation).
-
-Open threads to drive next:
-1. #27974 [proposed] — wire joshua-qwen38 (:8001) into registry + config once warm: registry row, config.yaml entry, optional terminal-drop-in upstream + capacity key (never clobber 8210/8211), rule-140 header probe + counter verification. (verify: mysql fetch_data returned status=proposed)
-2. Julia :11513 host PHYSICALLY DOWN (ssh_command ping returned 100% packet loss; port 2205 refused) — needs power/on-box recovery (human-only decision — no idea; physical box access). When host is back: re-add http://127.0.0.1:11513 to FRANK_TOOLS_UPSTREAMS in a terminal drop-in, capacity key 11513=8 already pre-staged, systemctl restart frankenstein-tools, verify canary rejoins.
-
-Reference IDs:
-- Ideas filed: #27972 [deployed] (verify: mysql fetch_data returned status=deployed, deployed_at=2026-08-22 17:15:19), #27974 [proposed] (verify: mysql fetch_data returned status=proposed)
-- Bug library: incident 2603 (frankenstein_router_incidents) resolved with corrected diagnosis
-- Rule amended: 322 via clinerules_amend_rule (proof in rule_amend ledger)
-- Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzz...ring-capacity-restore-20260822.conf (WOPR); /var/www/emtskills/cron/cron_frank_cap_guard.php (WOPR); /var/www/emtskills/docs/PROJECT_FRANKENSTEIN.md; /var/
 ```

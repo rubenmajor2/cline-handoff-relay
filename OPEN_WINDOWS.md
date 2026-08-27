@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/27/2026, 6:49:47 AM PT | window: last 72h | 28 tasks | index total 923 (parsed 0, cached 923)
+Generated: 8/27/2026, 12:56:52 PM PT | window: last 72h | 27 tasks | index total 923 (parsed 0, cached 923)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -37,7 +37,6 @@ Generated: 8/27/2026, 6:49:47 AM PT | window: last 72h | 28 tasks | index total 
 | `1787659574256` | 8/25/2026, 3:41:39 PM | 454 | 2302KB | #Argus |
 | `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
 | `1787600344565` | 8/24/2026, 1:08:40 PM | 72 | 739KB | frankenstein-llm getting this error |
-| `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
 
 ---
 
@@ -1211,58 +1210,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Completion delivered
 </task_progress>
 </attempt_completion>
-```
-
-### `1787591377568` — 8/24/2026, 11:06:23 AM PT — 164 turns
-
-**Original task:**
-
-```
-Server is down? Can you bring ti back up?
-```
-
-**Ideas referenced:** #10469, #13063, #13709, #13757, #1391, #16523, #16839, #16851, #17483, #177918, #177926, #178746, #1837, #21582, #22066, #2242, #24635, #24645, #25194, #25280, #25294, #26068, #2613, #2615, #26628, #26881, #26895, #27126, #2740, #27702, #27860, #28077 [deployed], #28078, #28082 [proposed], #28085 [proposed], #28086 [proposed], #3023, #3093, #4016, #4802, #4863, #4906, #4907, #5080, #5129, #5247, #5387, #5749, #6064, #6105, #6277, #706520, #706522, #706524, #9215, #9320
-
-**Last PICKUP PROMPT:**
-
-```
--trigger separation amendment)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787461448415 — WOPR nginx outage: recovery + recovery-gap fix done; blip 297 done, UDM-level trigger pending credentials.
-
-Where we left off (verified 2026-08-24 10:05 PT):
-- Site restored: nginx active, Restart=always override live, WRITER-SERVE invariant in emsu-lease-heartbeat (controlled test passed: stop -> one heartbeat -> auto-start, log line + external HTTP 200).
-- 297 on the blip COMPLETE to the access boundary: WOPR proven innocent (kern clean, eno1 traffic continued at 604 p/s, EDEV 0 errors); pure-DNS failure ruled out (1.1.1.1 IP-literal probe also failed); onset ~03:54 (last inbound SMTP 03:53:34, last outbound LLM call 03:53); WAN back by <=09:20 (litellm tunnel curl 200); failover worked as designed (Joshua wrote hourly system_health 04:46-09:46 during WOPR read_only; failback 10:17; witness writer=wopr epoch=2). Classification: UNKNOWN at UDM/ISP level (bucket: unknown per rule 297), localized to UDM-WAN/ISP segment.
-- EVIDENCE GAP: UDM-SE (MAC 6C63F8703B65) creds in NO record; fleet_inventory has no UDM row; WOPR journald for the window purged.
-- SHIPPED: probe self-diagnostics (per-probe curl rc: 6=DNS 7=refused 28=timeout 35=TLS + PARTIAL-EGRESS 10-min-rate-limited signal) in emsu-lease-heartbeat, syntax-checked, live via 10s timer.
-
-Open threads to drive next:
-1. #28086 [proposed] — UDM-level trigger closure: needs Ruben to provide UDM admin access (human-only decision — credentials), then read UDM WAN/uptime logs for 03:54 AKDT; candidates ranked ISP maintenance > UDM auto-update > WAN DHCP renew. Full 297 findings already appended to the idea description.
-2. #28085 [proposed] — WOPR journald history loss investigation + persistent retention (why pre-10:25 journal gone; /etc/machine-id regen suspicion).
-3. #28077 [deployed] — Restart=always override (covers crash exits only; NOT administrative stops — documented in #2615). (verified: reconcile status=deployed)
-4. #28082 [deployed] — trigger identification; completed in-window, residual questions live in #28086/#28085. (verified: reconcile status=deployed)
-
-Reference IDs:
-- Ideas filed: #28077 [deployed], #28082 [deployed], #28085 [proposed], #28086 [proposed]
-- Bug library: frankenstein_router_incidents #2613 (symptom), #2615 (true root cause + fix, resolved)
-- Files touched (WOPR): /usr/local/bin/emsu-lease-heartbeat (WRITER-SERVE + probe diagnostics; backups .bak-nginxinvariant-20260824-104749), /etc/systemd/system/nginx.service.d/respawn.conf
-- Rules amended: 317 (three flips: amplifier-vs-trigger; Restart= vs administrative stop; scope)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Recovery complete: nginx up, Restart=always live, site HTTP 200
-- [x] RECOVERY GAP FIXED: WRITER-SERVE invariant in emsu-lease-heartbeat; controlled test passed
-- [x] 297 on the blip: WOPR proven innocent; pure-DNS ruled out; timeline pinned; failover proven worked; classified UNKNOWN at UDM/ISP level (access boundary named)
-- [x] Probe self-diagnostics shipped (next blip self-classifies)
-- [x] Bug library #2613 + #2615; ideas #28077 [deployed], #28082 [deployed], #28085 [proposed], #28086 [proposed] (297 findings appended)
-- [x] Rule 317 amended for all three within-window reversals; all ideas reconciled
-- [x] Completed with full PICKUP PROMPT
-</task_progress>
-</attempt_co
 ```

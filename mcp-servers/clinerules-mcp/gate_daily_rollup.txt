@@ -1,8 +1,11 @@
-GATE DAILY ROLLUP 2026-08-26
-Heartbeat last_validated_at=2026-08-26T08:56:02Z last=PASS validations=1157 blocks=757 marker=CHECK_IS_ON
-2026-08-26 rule 91: 52
-2026-08-26 rule 317: 11
-2026-08-26 rule 01: 1
+GATE DAILY ROLLUP 2026-08-27
+Heartbeat last_validated_at=2026-08-27T04:53:45Z last=PASS validations=1226 blocks=802 marker=CHECK_IS_ON
+2026-08-27 rule 91: 9
+2026-08-27 rule 01: 2
+2026-08-27 rule 317: 1
+2026-08-26 rule 91: 144
+2026-08-26 rule 317: 20
+2026-08-26 rule 01: 5
 2026-08-25 rule 91: 38
 2026-08-25 rule 317: 2
 2026-08-24 rule 91: 49
@@ -32,4 +35,4 @@ Heartbeat last_validated_at=2026-08-26T08:56:02Z last=PASS validations=1157 bloc
 2026-08-16 rule 91: 18
 2026-08-16 rule 317: 12
 2026-08-16 rule 01: 5
-blocks last 24h = 104
+blocks last 24h = 181

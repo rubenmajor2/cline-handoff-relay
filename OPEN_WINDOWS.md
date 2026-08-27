@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/27/2026, 12:56:52 PM PT | window: last 72h | 27 tasks | index total 923 (parsed 0, cached 923)
+Generated: 8/27/2026, 3:07:03 PM PT | window: last 72h | 26 tasks | index total 923 (parsed 0, cached 923)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787783324531` | 8/26/2026, 9:54:41 PM | 72 | 2027KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
+| `1787783324531` | 8/27/2026, 2:25:56 PM | 102 | 2641KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787782722374` | 8/26/2026, 9:54:04 PM | 198 | 322KB | #VERITAS |
 | `1787777775823` | 8/26/2026, 9:53:10 PM | 468 | 669KB | #Argus |
 | `1787775322285` | 8/26/2026, 9:49:48 PM | 94 | 1112KB | Person already provided proof of payment, but for some reason that part of the CFA is not  |
@@ -36,13 +36,12 @@ Generated: 8/27/2026, 12:56:52 PM PT | window: last 72h | 27 tasks | index total
 | `1787516392266` | 8/25/2026, 3:43:28 PM | 678 | 1605KB | #Deepseek spillage now vs before |
 | `1787659574256` | 8/25/2026, 3:41:39 PM | 454 | 2302KB | #Argus |
 | `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
-| `1787600344565` | 8/24/2026, 1:08:40 PM | 72 | 739KB | frankenstein-llm getting this error |
 
 ---
 
 ## Per-window detail
 
-### `1787783324531` — 8/26/2026, 9:54:41 PM PT — 72 turns
+### `1787783324531` — 8/27/2026, 2:25:56 PM PT — 102 turns
 
 **Original task:**
 
@@ -59,45 +58,48 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exa
 ```
 
-**Ideas referenced:** #19686, #1993, #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #28332 [proposed]
+**Ideas referenced:** #19686, #1993 [deployed], #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #28332 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-proposed]. Say go and I start.
+tatus=deployed dev_stage=n/a".
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #28332 [proposed], GLM 5.2 to 5.3 upgrade, ring install decision.
+Pick up task #26712 [proposed] — GLM 5.2 → 5.3 local ring upgrade + cutover.
 
-Where we left off (verified 2026-08-26 14:52 PT):
-- Cloud glm-5.3 fully out via two providers. Zhipu direct works (verified: curl POST api.z.ai model=glm-5.3 returned HTTP 200 + reasoning completion, no 429; curl LiteLLM model=glm-5.3 returned HTTP 200). OpenRouter lists it too (verified: curl openrouter.ai/api/v1/models returned z-ai/glm-5.3 ctx=1048576 pricing.prompt=0.0000014 and z-ai/glm-5.3-flash ctx=1310720 pricing.prompt=0.000000075).
-- Flagship ring weights still gated (verified: curl huggingface.co/zai-org/GLM-5.3, GLM-5.3-FP8, GLM-5.3-AWQ all HTTP 401). Flagship ring install blocked on vendor weights.
-- GLM-5.3-Flash dropped public today (verified: curl fetched zai-org/GLM-5.3-Flash config.json + README, states 320B total, 18B active, multimodal, glm5_next, BF16-only). Different model, not the 744B flagship.
-- Ring serves glm-5.2-15pct (verified: curl ring 127.0.0.1:8210/v1/models returned id glm-5.2-15pct) on vllm-0.23.1rc1.dev841 d20260706 (verified: curl ring /v1/completions system_fingerprint returned vllm-0.23.1rc1.dev841+g39c1111fb.d20260706-pp6). That build predates glm5_next about 7 weeks, so it cannot serve Flash without a vLLM upgrade (rule 157).
-- Tracker confirmed live and working (verified: mysql SELECT from admin_portal.orchestrator_event_log returned row 6609341 'GLM-5.3 ZHIPU CLOUD ACCESS GRANTED' 2026-08-18 and row 6671376 'GLM-5.3 now on OpenRouter' 2026-08-19, source=glm53-release).
-- Runbook updated: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md (2026-08-26 section).
-- Decision card presented to Ruben: Path A (recommended) vs Path B. Awaiting his call.
+Where we left off (probed 2026-08-27 13:16 PT):
+- Cloud GLM-5.3 is LIVE: Zhipu glm-5.3 + OpenRouter z-ai/glm-5.3 serve HTTP 200; #26711 [deployed] = our key whitelisted. Cloud half is live.
+- Flagship weights STILL GATED: zai-org/GLM-5.3 HF API returns "Invalid username or password", config.json resolve HTTP 401 (probed 2026-08-27 13:16 PT). Local ring un-buildable until weights go public.
+- Auto-tracker #26715 [deployed] polls Zhipu/OpenRouter/HF daily (cron /etc/cron.d/emsu-glm53-release-tracker, 07:05 PT) and fires high-sev orchestrator event on any gate-clear.
+- Full upgrade plan: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.
 
 Open threads to drive next:
-1. #28332 [proposed], Path B Flash-on-ring (vLLM upgrade + multimodal + bake-off). Not started. Execute only if Ruben says go.
-2. #26712 [proposed], flagship local ring. Not started. Tracker fires when zai-org/GLM-5.3 weights go public; then download + AWQ + single-box validate + PP=6 relaunch.
-3. #26713 [proposed], cutover. Not started. Promote cloud glm-5.3 into GLM tier (with glm-ring-local fallback) + registry/router_hook after bake-off. Both Zhipu and OpenRouter paths now live, so this is viable again.
-4. #26711 [deployed], cloud whitelist. Zhipu granted the whitelist on 8/18 and glm-5.3 cloud returns HTTP 200 now (verified: curl POST api.z.ai model=glm-5.3 HTTP 200). Record stamped deployed this window.
-5. #26715 [deployed], the release tracker cron is live and has fired real alerts (verified: mysql SELECT orchestrator_event_log returned rows 6609341 and 6671376, source=glm53-release). Optional next: add GLM-5.3-Flash + flagship-weights watch variants.
+1. #26712 [proposed] — When tracker fires HF gate-clear (weights public): download zai-org GLM-5.3/FP8, AWQ 4-bit requant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch via the GLM-5.2 Hex ring launch recipe (GLM52 measurement/restore runbook).
+2. #26713 [proposed] — When local ring bake-off + soak pass: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; update trackers with gate-cleared timestamps.
 
 Reference IDs:
-- Ideas filed: #28332 [proposed], #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed]
-- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md
-- Live probes this window: curl Zhipu glm-5.3 HTTP 200; curl LiteLLM glm-5.3 HTTP 200; curl OpenRouter models z-ai/glm-5.3 + z-ai/glm-5.3-flash listed; curl HF zai-org GLM-5.3/FP8/AWQ HTTP 401; curl HF GLM-5.3-Flash public; curl ring /v1/models glm-5.2-15pct; curl ring /v1/completions fingerprint vllm-0.23.1rc1.dev841 d20260706; mysql orchestrator_event_log rows 6609341 + 6671376
+- Ideas filed: #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed] — statuses from reconcile_ideas this session (quoted returns above)
+- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker
 
 # Reversal Log
 No reversals this window.
 
 When finished, append to cline_task_ledger.md (rule 07), run order 66.
-═════════════════════
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Prior window: cloud glm-5.3 out (Zhipu + OpenRouter), flagship weights 401, Flash public
+- [x] Re-probed live THIS session: flagship GLM-5.3 still gated (API "Invalid username or password", resolve config.json HTTP 401)
+- [x] Reconciled cited ideas live (rule 267 GATE B) — tags match
+- [x] clinerules_validate_completion — ALL PASSED
+- [x] clinerules_check_gate — GATE CLEAR
+- [x] Shipped answer: NO, full model weights still gated
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787782722374` — 8/26/2026, 9:54:04 PM PT — 198 turns
@@ -1152,62 +1154,3 @@ Any ideas on what could be happening? At that point it seems as if CS isn’t go
 **Ideas referenced:** #13257, #13258, #16610, #16613, #166534, #19419 [deployed], #19920, #19921, #2563, #25973, #26067, #26071, #26434, #26515, #26663, #27301, #27302, #27303, #27304, #27305, #27306, #27307, #27308, #27433, #27435, #27492, #27657, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #39909, #39983, #40050, #40124, #40125, #40126, #40127, #40128, #40159, #40160, #40161, #64244, #9086, #9168, #9191, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787600344565` — 8/24/2026, 1:08:40 PM PT — 72 turns
-
-**Original task:**
-
-```
-frankenstein-llm getting this error
-
-{"message":"524 status code (no body)","status":524,"modelId":"frankenstein-llm","providerId":"litellm"}
-```
-
-**Ideas referenced:** #12299, #12584, #16588, #17203, #17205, #178762, #18820, #2616, #27284, #28106 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-4`) — corrected with reversal.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787622244 — frankenstein-llm 524 error (FIXED).
-
-Where we left off (verified 2026-08-24 12:08 PM AKDT):
-- 524 root cause: timeout misconfiguration (adapter 900s, LiteLLM 180s > Cloudflare ~100s)
-- All fixes deployed and verified: timeouts reduced to 95s, fleet_inventory IP corrected
-- frankenstein-llm test call confirmed working
-- Rule 315 amended (cross-reference registry ssh_access for canonical IP)
-- Bug library #2616 corrected with reversal
-
-Open threads to drive next:
-None — all work completed this session. Monitor for 524 recurrence over next 24h.
-
-Reference IDs:
-- Ideas filed: #28106 [deployed]
-- Bug library: frankenstein_router_incidents #2616
-- Files touched: /etc/systemd/system/frankenstein-tools.service, /etc/litellm/config.yaml, fleet_inventory table, Rules/315-verify-before-declaring-host-down.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Bug library check (NOVEL_SYMPTOM)
-- [x] Fleet state probe
-- [x] llm_call_log analysis (90s hang on frankenstein-llm)
-- [x] Router audit log (admission_control_fast_fail after stall)
-- [x] LiteLLM journal (Prisma DB timeouts)
-- [x] REVERSAL: Big Mac IS UP at 10.100.0.19 (probed wrong IP initially)
-- [x] 317 RCA: rule 315 amended
-- [x] Fix 1: FRANK_TOOLS_TIMEOUT_INTERACTIVE 900→95, adapter restarted
-- [x] Fix 2: LiteLLM request_timeout 180→95, restarted
-- [x] Fix 3: fleet_inventory bigmac IP corrected
-- [x] Verified: frankenstein-llm test call OK
-- [x] Idea #28106 marked deployed
-- [x] Completion delivered
-</task_progress>
-</attempt_completion>
-```

@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/26/2026, 4:09:02 PM PT | window: last 72h | 29 tasks | index total 923 (parsed 5, cached 918)
+Generated: 8/26/2026, 10:12:47 PM PT | window: last 72h | 28 tasks | index total 923 (parsed 5, cached 918)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787783324531` | 8/26/2026, 4:01:13 PM | 53 | 1382KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787777775823` | 8/26/2026, 3:59:02 PM | 373 | 529KB | #Argus |
-| `1787707484695` | 8/26/2026, 3:46:18 PM | 219 | 3037KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
-| `1787782722374` | 8/26/2026, 3:43:40 PM | 139 | 206KB | #VERITAS |
-| `1787775322285` | 8/26/2026, 3:42:57 PM | 91 | 1110KB | Person already provided proof of payment, but for some reason that part of the CFA is not  |
+| `1787783324531` | 8/26/2026, 9:54:41 PM | 72 | 2027KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
+| `1787782722374` | 8/26/2026, 9:54:04 PM | 198 | 322KB | #VERITAS |
+| `1787777775823` | 8/26/2026, 9:53:10 PM | 468 | 669KB | #Argus |
+| `1787775322285` | 8/26/2026, 9:49:48 PM | 94 | 1112KB | Person already provided proof of payment, but for some reason that part of the CFA is not  |
+| `1787707484695` | 8/26/2026, 9:47:07 PM | 220 | 3041KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
 | `1787600722263` | 8/26/2026, 3:37:34 PM | 246 | 2406KB | Jon says his overrides are not quite sticking. This is his question: |
 | `1787602675527` | 8/26/2026, 3:33:03 PM | 514 | 9832KB | Fix this issue |
 | `1787728419915` | 8/26/2026, 3:28:52 PM | 244 | 5671KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
@@ -38,13 +38,12 @@ Generated: 8/26/2026, 4:09:02 PM PT | window: last 72h | 29 tasks | index total 
 | `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
 | `1787600344565` | 8/24/2026, 1:08:40 PM | 72 | 739KB | frankenstein-llm getting this error |
 | `1787591377568` | 8/24/2026, 11:06:23 AM | 164 | 2227KB | Server is down? Can you bring ti back up? |
-| `1787516215349` | 8/23/2026, 4:58:00 PM | 290 | 6067KB | #Externships |
 
 ---
 
 ## Per-window detail
 
-### `1787783324531` — 8/26/2026, 4:01:13 PM PT — 53 turns
+### `1787783324531` — 8/26/2026, 9:54:41 PM PT — 72 turns
 
 **Original task:**
 
@@ -61,11 +60,66 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exa
 ```
 
-**Ideas referenced:** #19686, #1993, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26715 [deployed]
+**Ideas referenced:** #19686, #1993, #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #28332 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+proposed]. Say go and I start.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #28332 [proposed], GLM 5.2 to 5.3 upgrade, ring install decision.
+
+Where we left off (verified 2026-08-26 14:52 PT):
+- Cloud glm-5.3 fully out via two providers. Zhipu direct works (verified: curl POST api.z.ai model=glm-5.3 returned HTTP 200 + reasoning completion, no 429; curl LiteLLM model=glm-5.3 returned HTTP 200). OpenRouter lists it too (verified: curl openrouter.ai/api/v1/models returned z-ai/glm-5.3 ctx=1048576 pricing.prompt=0.0000014 and z-ai/glm-5.3-flash ctx=1310720 pricing.prompt=0.000000075).
+- Flagship ring weights still gated (verified: curl huggingface.co/zai-org/GLM-5.3, GLM-5.3-FP8, GLM-5.3-AWQ all HTTP 401). Flagship ring install blocked on vendor weights.
+- GLM-5.3-Flash dropped public today (verified: curl fetched zai-org/GLM-5.3-Flash config.json + README, states 320B total, 18B active, multimodal, glm5_next, BF16-only). Different model, not the 744B flagship.
+- Ring serves glm-5.2-15pct (verified: curl ring 127.0.0.1:8210/v1/models returned id glm-5.2-15pct) on vllm-0.23.1rc1.dev841 d20260706 (verified: curl ring /v1/completions system_fingerprint returned vllm-0.23.1rc1.dev841+g39c1111fb.d20260706-pp6). That build predates glm5_next about 7 weeks, so it cannot serve Flash without a vLLM upgrade (rule 157).
+- Tracker confirmed live and working (verified: mysql SELECT from admin_portal.orchestrator_event_log returned row 6609341 'GLM-5.3 ZHIPU CLOUD ACCESS GRANTED' 2026-08-18 and row 6671376 'GLM-5.3 now on OpenRouter' 2026-08-19, source=glm53-release).
+- Runbook updated: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md (2026-08-26 section).
+- Decision card presented to Ruben: Path A (recommended) vs Path B. Awaiting his call.
+
+Open threads to drive next:
+1. #28332 [proposed], Path B Flash-on-ring (vLLM upgrade + multimodal + bake-off). Not started. Execute only if Ruben says go.
+2. #26712 [proposed], flagship local ring. Not started. Tracker fires when zai-org/GLM-5.3 weights go public; then download + AWQ + single-box validate + PP=6 relaunch.
+3. #26713 [proposed], cutover. Not started. Promote cloud glm-5.3 into GLM tier (with glm-ring-local fallback) + registry/router_hook after bake-off. Both Zhipu and OpenRouter paths now live, so this is viable again.
+4. #26711 [deployed], cloud whitelist. Zhipu granted the whitelist on 8/18 and glm-5.3 cloud returns HTTP 200 now (verified: curl POST api.z.ai model=glm-5.3 HTTP 200). Record stamped deployed this window.
+5. #26715 [deployed], the release tracker cron is live and has fired real alerts (verified: mysql SELECT orchestrator_event_log returned rows 6609341 and 6671376, source=glm53-release). Optional next: add GLM-5.3-Flash + flagship-weights watch variants.
+
+Reference IDs:
+- Ideas filed: #28332 [proposed], #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed]
+- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md
+- Live probes this window: curl Zhipu glm-5.3 HTTP 200; curl LiteLLM glm-5.3 HTTP 200; curl OpenRouter models z-ai/glm-5.3 + z-ai/glm-5.3-flash listed; curl HF zai-org GLM-5.3/FP8/AWQ HTTP 401; curl HF GLM-5.3-Flash public; curl ring /v1/models glm-5.2-15pct; curl ring /v1/completions fingerprint vllm-0.23.1rc1.dev841 d20260706; mysql orchestrator_event_log rows 6609341 + 6671376
+
+# Reversal Log
+No reversals this window.
+
+When finished, append to cline_task_ledger.md (rule 07), run order 66.
+═════════════════════
+```
+
+### `1787782722374` — 8/26/2026, 9:54:04 PM PT — 198 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase as we may have made changes on this in another window / do an assessment and consult the community/give your optinoin on best plan
+
+Yes - correcting before the LLM writes is strictly better, and it is possible. I built and deployed it.
+
+Why the post-hoc judge was needed at all: the email responder's pre-generation grounding (lib/EmsuUniversalGrounding.php) injects the general EMSU policy corpus plus the instruction "do not invent", but it injects zero facts about the specific student. A model asked "has my refund been processed?" with no refund fact in its context has only two
+```
+
+**Ideas referenced:** #174558, #178712, #18853, #26663, #26851, #27942 [deployed], #28028 [deployed], #28043, #28044, #28088, #28213 [proposed], #28218 [deployed], #28220 [proposed], #28233 [deployed], #28256 [proposed], #28306 [deployed], #28307 [proposed], #28308 [proposed], #28330 [deployed], #28331 [deployed], #28370 [deployed], #3354, #3559 [rejected], #4958, #9132, #9222
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787777775823` — 8/26/2026, 3:59:02 PM PT — 373 turns
+### `1787777775823` — 8/26/2026, 9:53:10 PM PT — 468 turns
 
 **Original task:**
 
@@ -85,100 +139,56 @@ approved
 - #28205 [proposed] — Argus prompt-floor: _inject_corpus() at _router_core.py:1251 gates on query
 ```
 
-**Ideas referenced:** #10740, #12403, #12589, #12590, #15776, #16069, #17078, #1763, #1773, #1774, #1775, #178778, #19898, #19904, #21125, #21126, #21134, #23428, #23468, #23483, #24897, #24990, #25142, #25171, #25185, #25186, #25768, #25888, #25916, #25925, #25926, #25935, #26435, #26661, #26663, #26914 [deployed], #26915 [executing], #26916, #27243, #27939, #27949, #28122 [deployed], #28125, #28127, #28133 [proposed], #28134 [deployed], #28155, #28189, #28199, #28201, #28205 [proposed], #28214 [executing], #28221 [deployed], #28225 [deployed], #28226 [proposed], #28232, #28249, #28256, #28309 [proposed], #28310 [proposed], #4929, #9910
+**Ideas referenced:** #10740, #12403, #12589, #12590, #15776, #16069, #17078, #1763, #1773, #1774, #1775, #178778, #19898, #19904, #21125, #21126, #21134, #23428, #23468, #23483, #23676, #23677, #23678, #23679, #23680, #23681, #23682, #23683, #23684, #23685, #23686, #23687, #23688, #23689, #23690, #23691, #23692, #23693, #23694, #23695, #23941, #23982, #24897, #24941, #24990, #25142, #25171, #25185, #25186, #25768, #25888, #25916, #25925, #25926, #25935, #26435, #26661, #26663, #26895, #26914 [deployed], #26915 [executing], #26916, #27243, #27939, #27949, #28122 [deployed], #28125, #28127, #28133 [proposed], #28134 [deployed], #28155, #28189, #28199, #28201, #28205 [proposed], #28214 [executing], #28221 [deployed], #28225 [deployed], #28226 [proposed], #28232, #28249, #28256, #28309 [proposed], #28310 [proposed], #28337 [proposed], #28369 [deployed], #4863, #4929, #9910
 
 **Last PICKUP PROMPT:**
 
 ```
-roof under task 1787782950000)
+er covers the probe-gap class)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787782950000 - Argus 12h health + execute 28226/28205/28225 directives
+Pick up task #1787782950000 - Argus offload-bug fix + earlier 28226/28205/28225 executes
 
-Where we left off (verified 2026-08-26 15:19 PT):
-- Argus 12h sweep: 3 tasks (1 finished, 2 offloaded), workers healthy, fast-lane self-running every 5min (scanned=34, systemic=0), override decider live with 2 decisions today, 0 queued backlog
-- #28226 [deployed] ExternshipSeasonDateGate.php written + mailer duplicate collapsed; E2E verified via sendEmail(), zero warnings; 5/5 positive/negative controls pass
-- #28205 [deployed] surface-aware corpus cap live: Argus prompt floor 8,877 -> 1,172 tokens (-87%), control B unchanged (12,069), grounding intact (honest 'contact info@' answers); kill-switch EMSU_ARGUS_CORPUS_CAP=0
-- #28225 [deployed] 48h resend executed: 15 blocked override notifications re-sent to 8 students, zero duplicates, verified in email_outbound_log
-- Jon has NOT replied to msg 166 on task 658 (boot camp exam dates); no jthompson messages in last 96h beyond 'Build it now' (8/24, task 656)
-- Probe B first 2 attempts failed on transport errors (empty reply / restart window); B4 control landed at 12,069 tokens no-metadata vs 1,172 with surface
+Where we left off (verified 2026-08-26 21:51 PT):
+- #28369 [deployed] offload bug FIXED and live-proven: canary 699 finished on attempt 1 (identical task to canary 685, which offloaded 4x pre-fix). 3 fixes in routes/cron_argus_task_worker.php: PCRE2-safe regex, delib-salvage pass, retry directive. Backup .bak-delib-fix-20260826
+- #28337 [rejected] canary 685's offload was the bug itself, superseded by the deployed fix
+- #28309 [rejected] Jon's 26115W-14 timesheet ask: already graded (portal auto_passed + Moodle 1.0); Jon notified on task page 683
+- #28226 [deployed] ExternshipSeasonDateGate written, mailer duplicate collapsed, E2E verified
+- #28205 [deployed] corpus cap live: Argus prompt floor 8,877 to 1,172 tokens; control unchanged 12,069
+- #28225 [deployed] 48h resend: 15 emails to 8 students, zero duplicates
+- Jon notified on his Argus task page (683): the grading was already on file, the offload bug is repaired, his tasks should go through now
+- Salvage tuning note: if new tasks still offload 'deliberation-heavy' after the fix, pull the exact rejected body from result_summary and re-tune the salvage regexes; the unit-test harness is /tmp/salvage_test2.php on WOPR
 
 Open threads to drive next:
-1. #28133 [proposed] - waiting on Jon's reply on Argus task page 658 (which boot camp sections, which exams move to 2026-08-29). The date change is made the moment he answers. Nudge him if silent past 48h.
-2. #28309 [proposed] - offloaded task 683 (grade 26115W-14 externship timesheet): needs a human/executor to grade the timesheet directly.
-3. #28310 [proposed] - offloaded task 684 (institutional compliance certs UI drag-drop broken): needs a UI repair build.
-4. #28214 [executing] - HY093 sweep across 543 sites: next window should rank by blast radius and patch using the :n -> :n2 pattern; add as pre-deploy gate.
-5. #28221 [deployed] - follow-on: wire auto_resolved to Kaizen recipe executor + surface fast-lane state in Argus UI so reporters see progress.
+1. #28133 [proposed] - still waiting on Jon's reply for boot camp exam dates (task 658, msg 166). The date change is made the moment he answers.
+2. #28310 [proposed] - TeamHub shift UI drag-drop/add/edit broken (CFrench report, task 684). Real UI repair build, still open.
+3. #28214 [executing] - HY093 sweep: rank 543 sites by blast radius, patch with the :n -> :n2 shape.
+4. #28221 [deployed] - follow-on: wire auto_resolved to Kaizen recipe executor; surface fast-lane state in Argus UI.
 
 Reference IDs:
-- Ideas filed: #28226 [deployed], #28205 [deployed], #28225 [deployed]
-- Files touched: /var/www/emtskills/lib/ExternshipSeasonDateGate.php, /var/www/emtskills/lib/mailer.php (duplicate block collapsed, backup .bak-28226-20260826), /etc/litellm/_router_core.py (corpus cap at line ~1271, backup .bak-28205-20260826), /var/www/emtskills/scripts/resend_blocked_override_emails_28225.php, /var/www/emtskills/HANDOFF_NOTES.md
+- Ideas: #28369 [deployed], #28337 [rejected], #28309 [rejected], #28226 [deployed], #28205 [deployed], #28225 [deployed], #28133 [proposed], #28310 [proposed]
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php (3 fixes, backup .bak-delib-fix-20260826), /var/www/emtskills/lib/ExternshipSeasonDateGate.php (new), /var/www/emtskills/lib/mailer.php (duplicate collapsed, backup .bak-28226-20260826), /etc/litellm/_router_core.py (corpus cap, backup .bak-28205-20260826), /var/www/emtskills/scripts/resend_blocked_override_emails_28225.php (new), /var/www/emtskills/HANDOFF_NOTES.md
+- Canary tasks: 685 (pre-fix reproduction), 699 (post-fix proof); Jon notified via argus_task_messages on task 683
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Rule 119 signal check
-- [x] Argus 12h health sweep (tasks, messages, fast-lane, override decider, errors)
-- [x] Check Jon's reply on Argus task page (#28133 — no reply yet, msg 166 still last)
-- [x] #28226 [deployed]: ExternshipSeasonDateGate written, mailer duplicate collapsed, E2E verified
-- [x] #28225 [deployed]: 48h resend executed — 15 emails to 8 students, zero duplicates
-- [x] #28205 [deployed]: surface-aware corpus cap live, bench A/B/D complete (8,877→1,172; control 12,069)
-- [x] Reconcile ideas + validate completion + gate clear
-</task_progress>
-</attempt_completion>
+- [x] Argus 12h health sweep + 28226/28225/28205 executes (earlier this window)
+- [x] Reproduce Jon's report: canary 685 offloaded 4x (deliberation-heavy)
+- [x] Root cause 1: broken PCRE2 regex in SMALL-N gate (never compiled since morning deploy)
+- [x] Root cause 2: no salvage for narration-wrapped answers — salvage pass built + unit-tested (1/1 → 0/1)
+- [x] Root cause 3: identical retries — directive note added from attempt 2
+- [x] Live proof: canary 699 (identical task) DONE on attempt 1 with real data
+- [x] Jon's grading ask closed: 26115W-14 timesheet already graded both sides; Jon notified on task page
+- [x] #28369 [deployed] stamped; #28337/#28309 [rejected] as superseded/resolved; reconciled; gate clear
+</task_pro
 ```
 
-### `1787707484695` — 8/26/2026, 3:46:18 PM PT — 219 turns
-
-**Original task:**
-
-```
-See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-as well as latest (cost estimate letter / see latest email using spark, etc... from openrecords DSHS) as well as Cost estimate  A07292026.0450006.pdf in downloads folder. 
-
-Craft a response for me. We are sending the check today/tomorrow. So obviously need to accept it.
-```
-
-**Ideas referenced:** #111827, #166534, #16957, #178712, #19419, #19587, #19595 [executing], #19599, #20734, #2563, #25973, #2603, #2605, #26067, #26663, #27492, #27933, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28219 [proposed], #394149, #450438, #475569, #600179, #623992, #64748, #709171, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- be monitored for delivery.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #28219 [proposed]: DSHS/HHSC Open Records reconciliation + remaining sends.\n\nWhere we left off (verified 2026-08-26 14:42 PT):\n- ACCEPTANCE SENT + CHECK MAILED: Jon Thompson email to OpenRecords cc Ruben 3:30 PM 8/26; check #7091718227 $2,318.40 mailed 8/26, USPS 9410 8301 0935 5011 0022 15 signature required (source: Ruben-provided screenshot of sent email + texts).\n- Compliance page documented: rows 202-209 under investigation 16 (verified: mysql insert_data returned Row ID 202 through 209 across this task).\n- Local docs updated with SENT RECORD: responses md, sunshine report section 5, copy page note (verified: replace_in_file tool returned The content was successfully saved for each file, 2026-08-26 14:35-14:42 PT).\n\nOpen threads to drive next:\n1. #28219 [proposed] — send full EMAIL 1 (determination request + rolling production + discrepancy ask) from Ruben's mailbox by 2026-09-09, or fold those positions into Doc 3; Jon's 3:30 PM email did not carry them.\n2. #28219 [proposed] — send EMAIL 2 (TPIA-010 follow-up; 552.221 period expired 2026-08-24) promptly; file DOC 3 AG complaint by 2026-09-09 after/same-day as EMAIL 1; monitor USPS 9410 8301 0935 5011 0022 15 for delivery and record delivery on a new compliance row.\n\nReference IDs:\n- Ideas filed: #28219 [proposed]\n- Files touched: admin_portal.compliance_investigation_responses rows 208-209; /Users/rubenmajor/Desktop/DSHS_openrecords_responses_2026-08-25.md; /Users/rubenmajor/Desktop/tdshs_tpia/SUPPLEMENTAL_SUNSHINE_REPORT_2026-08-26.md; /Users/rubenmajor/Desktop/DSHS_openrecords_copy_emails.html\n\n# Reversal Log\nNo reversals this window.\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"
-}
-</arguments>
-<task_progress>
-- [x] Three-doc set + compliance rows 202-209 + copy page
-- [x] Sent record added to responses md + sunshine report + copy page note
-- [ ] Validate + gate check + completion
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1787782722374` — 8/26/2026, 3:43:40 PM PT — 139 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase as we may have made changes on this in another window / do an assessment and consult the community/give your optinoin on best plan
-
-Yes - correcting before the LLM writes is strictly better, and it is possible. I built and deployed it.
-
-Why the post-hoc judge was needed at all: the email responder's pre-generation grounding (lib/EmsuUniversalGrounding.php) injects the general EMSU policy corpus plus the instruction "do not invent", but it injects zero facts about the specific student. A model asked "has my refund been processed?" with no refund fact in its context has only two
-```
-
-**Ideas referenced:** #178712, #26663, #27942 [deployed], #28028 [deployed], #28043, #28044, #28088, #28213 [proposed], #28218 [deployed], #28220 [proposed], #28233 [deployed], #28256 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787775322285` — 8/26/2026, 3:42:57 PM PT — 91 turns
+### `1787775322285` — 8/26/2026, 9:49:48 PM PT — 94 turns
 
 **Original task:**
 
@@ -209,6 +219,61 @@ Reference IDs:
 - Ticket: (none)
 - Ideas filed: (none)
 - Files touched: (none)
+```
+
+### `1787707484695` — 8/26/2026, 9:47:07 PM PT — 220 turns
+
+**Original task:**
+
+```
+See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
+
+as well as latest (cost estimate letter / see latest email using spark, etc... from openrecords DSHS) as well as Cost estimate  A07292026.0450006.pdf in downloads folder. 
+
+Craft a response for me. We are sending the check today/tomorrow. So obviously need to accept it.
+```
+
+**Ideas referenced:** #111827, #166534, #16957, #178712, #178778, #19419, #19587, #19595 [executing], #19599, #20734, #2563, #25973, #2603, #2605, #26067, #26663, #27492, #27933, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28219 [proposed], #394149, #450438, #475569, #600179, #623992, #64748, #709171, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ Log
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787784000000 — DSHS ORR A07292026.0450006 cost estimate acceptance.
+
+Where we left off (verified 2026-08-26 2:45 PM AKDT):
+- Acceptance letter drafted and saved to /var/www/emtskills/docs/regulator_responses/dshs_orr_A07292026.0450006_responses.md
+- regulator_compliance rows 202-209 updated to responded, response_sent_at 2026-08-26
+- Copy page dshs_orr_A07292026.0450006_copy.php has the acceptance note
+- Check ($1,825.00) is being mailed today/tomorrow to Melissa Hernandez, MC 1946, P.O. Box 149347, Austin TX 78714-9347
+
+Open threads to drive next:
+1. #28219 [proposed] — Track the mailed check (log tracking number once sent) and calendar the 60-business-day production deadline from 2026-08-26
+
+Reference IDs:
+- Ideas filed: #28219 [proposed]
+- Files touched: /var/www/emtskills/docs/regulator_responses/dshs_orr_A07292026.0450006_responses.md, /var/www/emtskills/routes/regulator_compliance/dshs_orr_A07292026.0450006_copy.php
+
+# Reversal Log
+No reversals this window.
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Three-doc set + compliance rows 202-209 + copy page
+- [x] Sent record added to responses md + compliance rows + copy page note
+- [x] Validation ALL PASSED
+- [x] Gate check CLEAR
+- [x] Completion shipped
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787600722263` — 8/26/2026, 3:37:34 PM PT — 246 turns
@@ -1200,64 +1265,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Completed with full PICKUP PROMPT
 </task_progress>
 </attempt_co
-```
-
-### `1787516215349` — 8/23/2026, 4:58:00 PM PT — 290 turns
-
-**Original task:**
-
-```
-#Externships
-
-Rebase and Tell me how this is working right now.
-
-Pick up task #1786491116649: externship Sept-1 cutover. Assignment-timer question answered, assignment plan next.
-
-Where we left off (verified 2026-08-21 4:55 PM PT):
-- ANSWERED Ruben's question "assignments past Sept 1 become placements if no staff response within some timeframe?": NO such timer was decided. Decided + deployed = STUDENT-side 72h confirm-or-forfeit (#26067 [deployed], emsu_offer_window_hours()=72, lib/ExternshipOfferConfirmation.php line 35). Staff-side "confirm OR auto-place after timeout" is DRAFTED in the #259
-```
-
-**Ideas referenced:** #100100, #16523, #178649, #1971, #20315, #24635, #24645, #25185, #25822 [deployed], #25888, #25889 [deployed], #25916 [approved], #25950 [deployed], #25973 [deployed], #26002 [deployed], #26027 [deployed], #26067 [deployed], #26071 [deployed], #26089 [deployed], #26663 [approved], #27100, #27490 [deployed], #27492 [deployed], #27858 [deployed], #27933 [deployed], #28034, #28036 [proposed], #28037 [proposed], #28038 [proposed], #28041 [proposed], #28047 [deployed], #3926, #3927, #3928, #3929, #3930, #3931, #3933, #3941, #3942, #3943, #3945, #3947, #3948, #3949, #3950, #3951, #3952, #3953, #3954, #3956, #3957, #3960, #3963, #3964, #3965, #3967, #3968, #3969, #3970, #3971, #3972, #3973, #3975, #916257, #916275, #916276, #916316
-
-**Last PICKUP PROMPT:**
-
-```
-aught it, no amendment needed.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up externship Sept-1 cutover rebase — anchor idea #28047 [deployed].
-
-Where we left off (verified 2026-08-23 15:55 PT):
-- Rebase done: suggestion layer never ran (available_slots 0/2807, offer layer 0 traffic, autoassign_config empty).
-- 27-day scheduling-agent PDO fatal FIXED + DEPLOYED as #28047 [deployed] (verified: read-back status='deployed').
-- Read Chat 55: Ruben steer = recommendations + CS confirms + CS emails manually (NOT automatic); Vicky sites Gonzales/SpringCreek/Sunnyvale temporarily unavailable.
-- Sibling RCA window already filed #28041 [proposed] (site-unavail state), #28038 [proposed] (rec engine), #28037 [proposed] (admin visibility).
-- #28036 [proposed] is a duplicate of deployed #28047; supersede UPDATE was reverted by the orchestrator_ideas status-audit trigger (status still 'proposed').
-
-Open threads to drive next:
-1. #28038 [proposed] — build externship recommendation engine to match the CS-confirms process AND arm autoassign_config; this is THE blocker to Sept-1 auto-suggestions.
-2. #28041 [proposed] — add ExternshipSite 'temporarily unavailable until X/TBD' state + reconcile Vicky's stale sites (Gonzales/SpringCreek/Sunnyvale).
-3. #28037 [proposed] — externship admin visibility + kill the Sept-1-launch ambiguity.
-4. #28036 [proposed] — DUPLICATE of deployed #28047; reject/supersede at next approval touch (status-audit trigger blocked direct supersede this window).
-
-Reference IDs:
-- Ideas filed/touched this session: #28047 [deployed], #28036 [proposed, supersede-blocked].
-- Sibling ideas referenced: #28037 [proposed], #28038 [proposed], #28041 [proposed].
-- Files touched: scheduling_agent.php (fatal fix via #28047).
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Completed externship Sept-1 cutover rebase + fixed 27-day agent fatal (#28047)
-- [x] Read Chat 55 — found Ruben's steer (recommendations + CS confirms + CS emails manually, NOT automatic) + Vicky's site findings
-- [x] Dedup check — sibling RCA window already filed #28041, #28038, #28037; #28036 duplicates my deployed #28047
-- [x] Attempted #28036 supersede — reverted by status-audit trigger (caught via read-back), flagged as duplicate
-- [x] Reconciled live idea statuses (#28047 deployed; #28036/37/38/41 proposed)
-- [x] Answered Ruben's question honestly + completed with PICKUP PROMPT
-</task_progress>
-</attempt_completion>
 ```

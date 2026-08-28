@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 4:53:11 AM PT | window: last 72h | 32 tasks | index total 928 (parsed 0, cached 928)
+Generated: 8/28/2026, 5:53:12 AM PT | window: last 72h | 31 tasks | index total 928 (parsed 0, cached 928)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -41,7 +41,6 @@ Generated: 8/28/2026, 4:53:11 AM PT | window: last 72h | 32 tasks | index total 
 | `1787697242661` | 8/25/2026, 6:00:11 PM | 106 | 366KB | #Payment Suspensions |
 | `1787516392266` | 8/25/2026, 3:43:28 PM | 678 | 1605KB | #Deepseek spillage now vs before |
 | `1787659574256` | 8/25/2026, 3:41:39 PM | 454 | 2302KB | #Argus |
-| `1787601263383` | 8/25/2026, 5:05:03 AM | 385 | 2642KB | REgardign: |
 
 ---
 
@@ -1506,26 +1505,3 @@ Afterwards, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Explain prompt-floor in plain terms with A/B/C token measurements
 - [x] Execute the rul
 ```
-
-### `1787601263383` — 8/25/2026, 5:05:03 AM PT — 385 turns
-
-**Original task:**
-
-```
-REgardign:
-
-https://emsuniversity.com/emtskills/routes/report_viewer.php?report=pd_80_percent_students 
-
---
-Received this:
-
-Hey brother! 
-Happy Monday. 
-Question: I have multiple students queued at 80% and under ready for clearance for NREMT. However, when I go in and review these students they have not completed externships, all the paperwork hasn’t been submitted. Some still have balances but yet they do have a course completion link… 
-
-Any ideas on what could be happening? At that point it seems as if CS isn’t going their due diligence and just clearing people.
-```
-
-**Ideas referenced:** #13257, #13258, #16610, #16613, #166534, #19419 [deployed], #19920, #19921, #2563, #25973, #26067, #26071, #26434, #26515, #26663, #27301, #27302, #27303, #27304, #27305, #27306, #27307, #27308, #27433, #27435, #27492, #27657, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [proposed], #28044 [proposed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #39909, #39983, #40050, #40124, #40125, #40126, #40127, #40128, #40159, #40160, #40161, #64244, #9086, #9168, #9191, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

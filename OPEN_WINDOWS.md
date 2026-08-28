@@ -6,15 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 11:53:15 AM PT | window: last 72h | 34 tasks | index total 931 (parsed 1, cached 930)
+Generated: 8/28/2026, 3:10:56 PM PT | window: last 72h | 34 tasks | index total 931 (parsed 1, cached 930)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787937972952` | 8/28/2026, 11:38:46 AM | 332 | 595KB | #GLM 5.3 Local |
+| `1787876909491` | 8/28/2026, 3:10:40 PM | 365 | 2378KB | #PostMark Issue  |
+| `1787937972952` | 8/28/2026, 12:17:12 PM | 548 | 849KB | #GLM 5.3 Local |
 | `1787931475695` | 8/28/2026, 10:45:33 AM | 132 | 22802KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
 | `1787937882474` | 8/28/2026, 10:24:43 AM | 1 | 7KB | #GLM 5.3 |
 | `1787783324531` | 8/28/2026, 10:22:16 AM | 1712 | 11444KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787876909491` | 8/28/2026, 9:28:25 AM | 358 | 1744KB | #PostMark Issue  |
 | `1787901041894` | 8/28/2026, 9:15:14 AM | 480 | 1743KB | What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow a |
 | `1787874780128` | 8/28/2026, 1:31:03 AM | 202 | 11050KB | Rebased on the MiniCheck work another window shipped this morning, audited it against live |
 | `1787872718679` | 8/28/2026, 1:18:29 AM | 272 | 4748KB | HOw is this going now?  |
@@ -49,7 +49,51 @@ Generated: 8/28/2026, 11:53:15 AM PT | window: last 72h | 34 tasks | index total
 
 ## Per-window detail
 
-### `1787937972952` — 8/28/2026, 11:38:46 AM PT — 332 turns
+### `1787876909491` — 8/28/2026, 3:10:40 PM PT — 365 turns
+
+**Original task:**
+
+```
+#PostMark Issue 
+
+Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
+```
+
+**Ideas referenced:** #10234, #14748, #15905, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1998, #22086, #23483, #25909, #2640, #2642, #26663, #26712, #26713, #28256, #28307, #28316, #28331, #28543 [proposed], #28546 [proposed], #333333, #888888
+
+**Last PICKUP PROMPT:**
+
+```
+dger row appended per rule 07.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task - Postmark SMTP outage: backlog drained + HTTP fallback + mailer-guard fix
+
+Where we left off (verified 2026-08-28 08:26 PT):
+- 169 backlog emails resent via Postmark HTTP API with real MessageIDs (verified against communication_log + email_outbound_log)
+- 22 rows remain unsent, all correctly excluded: 12 postmark_suppression, 2 danger (61538 spam "40HQ", 61866 spam "DashCam"), 8 dup-already-delivered
+- HTTP-API auto-fallback live in lib/mailer.php line 1476 with attachment passthrough (#28543 [executing]); php -l clean, php-fpm reloaded; backup mailer.php.bak-httpfallback-20260828
+- ai_ticket_agent mailer-guard short-circuit live in cron_ai_ticket_agent.php line 507 (#28546 [executing]): internal "Outbound email blocked" tickets auto-close with zero student-facing reply
+- nremt.org added to MailerUrlAllowlist_TrustedExternal line 26; stale guard tickets 28253 + 28402 closed; mollyji1818 correct NREMT email delivered (comm 62305, msgid 85a4eaf4), wrong bounce-echo 62307 never sent
+
+Open threads to drive next:
+1. #28546 [executing] - verify mailer-guard short-circuit fires on the next cron pass by checking cron_ai_ticket_agent log for "MAILER-GUARD auto-closed" entries; add a ticket title-prefix block test
+2. #28543 [executing] - formalize http_resend_full.php into a reused lib with a smoke test, and probe the HTTP fallback path (not just the rescue script) so it is exercised before the next real SMTP outage
+
+Reference IDs:
+- Ticket: guard tickets 28402, 28253 (closed)
+- Ideas filed: #28543 [executing], #28546 [executing]
+- Files touched: /var/www/emtskills/lib/mailer.php, /var/www/emtskills/lib/MailerUrlAllowlist_TrustedExternal.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /home/emsuserver/http_resend_full.php, /Users/rubenmajor/Desktop/cline_task_ledger.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787937972952` — 8/28/2026, 12:17:12 PM PT — 548 turns
 
 **Original task:**
 
@@ -63,39 +107,39 @@ When I said to preserve the OG, i meant just drop in replace, not keep the name 
 GLM 5.3 local ring upgrade is DONE and serving (verified: curl http://127.0.0.1:8210/v1/models returned id=glm-5.3-15pct at 10:21 PT; /etc/litellm/config.yaml has 7 ref
 ```
 
-**Ideas referenced:** #10108, #10869, #11991, #12584, #12618, #12672, #12680, #12688, #12689, #12825, #13453, #13470, #14133, #14142, #16063, #16265, #16602, #16625, #16646, #16648, #16680, #16715, #17145, #17174, #17202, #17203, #17205, #17300, #17307, #178787, #178793, #18312, #1876, #18820, #18868, #19338, #19585, #19686, #1998, #20264, #20495, #22856, #22897, #25468, #25607, #25757, #25759, #25764, #2640, #2641 [deployed], #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #27100, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #28581 [proposed], #9706
+**Ideas referenced:** #10108, #10869, #11991, #12584, #12618, #12672, #12680, #12688, #12689, #12825, #13121, #13453, #13470, #14133, #14142, #16063, #16265, #16602, #16625, #16646, #16648, #16680, #16715, #17145, #17174, #17202, #17203, #17205, #17300, #17307, #178787, #178793, #18312, #1876, #18820, #18868, #19338, #19585, #1967, #19686, #1986, #1998, #20264, #20495, #2083, #21045, #2157, #2159, #2168, #2174, #2185, #22583, #22856, #22897, #23206, #25468, #25607, #25757, #25759, #25764, #2640, #2641 [deployed], #2642, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #27100, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #28581 [proposed], #28586 [proposed], #9706
 
 **Last PICKUP PROMPT:**
 
 ```
-d zero WINDOW_O_DOWN markers).
+liance firing on live traffic.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787931475695 - GLM 5.3 local lane rename + serving verification (drop-in replace)
+Pick up task #1787931475695 - GLM 5.3 local lane rename + serving verification + follow-up check
 
-Where we left off (verified 2026-08-28 11:37 PT):
-- Ring serves glm-5.3-15pct on :8210 PP=6 Hexarchy, 131K ctx, NVFP4 (verified: curl /v1/models + canary healthy pass_streak 21)
-- ALL 8 lanes renamed 5.2->5.3 and PONG-verified: glm-5.3-local, frankenstein-glm53-local, glm53-only, glm-5.3-max/smart/obedient/local-direct, argus-chat
-- glm-5.3-obedient repaired: was pointing at dead :11511 adapter (broken pre-rename), now on healthy :11510 (verified PONG)
-- Ring split out of paid glm-5.2 dual pool; glm-5.2 is cloud-only now; steering + r91 gates fire on new names in live traffic
-- /v1/model/info shows all 5.3 lanes registered, zero 5.2-local left; qwen rung QWEN_OK
-- Dead /tmp cron entries removed; stale glm52-health-monitor.service disabled; 8 PHP crons + livechat + alltastic + ctx-ceiling + ring-status callers renamed
+Where we left off (verified 2026-08-28 12:16 PT):
+- Ring serving glm-5.3-15pct after full wedge recovery (verified: gen PONG 12:15 PT, canary healthy tok_s=7.67 un-quarantined, watchdog state=serving, 3 requests running)
+- Last-hour traffic: 311 GLM-lane requests; post-rename 53 on new 5.3 names, ZERO on old 5.2 names
+- All 8 renamed lanes PONG-verified earlier (glm-5.3-local, frankenstein-glm53-local, glm53-only, glm-5.3-max/smart/obedient/local-direct, argus-chat)
+- WOPR watchdog repointed to durable relauncher ~/bin/glm53_relaunch_seq128.sh (both watchdog layers armed)
+- Bug library: incident 2641 (lane rename) + incident 2642 (watchdog /tmp-wipe abort) recorded
 
 Open threads to drive next:
-1. #28581 [deployed] — GLM 5.3 lane rename complete (verified: reconcile_ideas returned "status=deployed dev_stage=n/a"; live read-backs: 8-lane PONG suite, /v1/model/info registry listing, router audit log traffic)
-2. Watch item (monitoring, no idea) — keep_warm first-token latency on cold ring moments; rotation daemon 90s slow-decode window may CHAT_WEDGE-mark the ring during load spikes (by-design stall-bursts, self-recovers; zero members dropped)
+1. #28586 [proposed] — ring load-ranker disadvantage tuning (raise EMSU_GLM_LANES_BATCH ceiling for the faster NVFP4 build; re-tune adapter per-upstream SLO derivation; measure 5.3 per-stream profile under seq=128)
+2. #28581 [deployed] — lane rename complete (verified: reconcile_ideas call returned status=deployed dev_stage=n/a for id 28581 at 11:34 PT; live read-backs: 8-lane PONG suite, /v1/model/info registry listing, router audit traffic)
+3. Watch item (monitoring, no idea) — wedge frequency under seq=128 load; if the 11:52-style wedge recurs within 24h, consider lowering max_num_seqs or scheduling ring reboots off-peak
 
 Reference IDs:
-- Ideas filed: #28581 [deployed]
+- Ideas filed: #28581 [deployed], #28586 [proposed]
 - Ideas closed: none
-- Bug library: frankenstein_router_incidents 2641 (glm53_lane_rename_drop_in_replace_2026_08_28)
-- Files touched: /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/hooks/frankenstein_glm52.py, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/api/livechat/webhook.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/api/glm_context_ceiling.php, /var/www/emtskills/api/glm52_ctx_ring_status.php, /var/www/emtskills/cron/ (8 cron files), /var/www/emtskills/clinerules/LLM_FLEET_STATE.md, /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, cline_task_ledger.md
+- Bug library: frankenstein_router_incidents 2641 (lane rename), 2642 (watchdog /tmp-wipe abort fix)
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/hooks/frankenstein_glm52.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/glm52_ring_watchdog.sh, /var/www/emtskills/api/livechat/webhook.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/api/glm_context_ceiling.php, /var/www/emtskills/api/glm52_ctx_ring_status.php, /var/www/emtskills/cron/ (8 cron files), /var/www/emtskills/clinerules/LLM_FLEET_STATE.md, /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, HANDOFF_NOTES.md, cline_task_ledger.md
 
 # Reversal Log
-No reversals this window. (Two pre-existing defects were discovered during the verification sweep and fixed in-window: the obedient lane's dead :11511 target, and the free-ring-in-paid-pool mixing. Both were repairs of pre-existing breakage, not corrections of claims made earlier in this window; both are recorded in bug-library incident 2641.)
+No reversals this window. (The 11:52 ring wedge was an external production event, not a correction of a claim made in this window; recovery was verified live and is documented in HANDOFF_NOTES.)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
@@ -107,7 +151,7 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Update _router_core.py + router_hook.py + lane hook (STEERING_MODELS, L4g tier, priority gate, SERVED_CTX, RING_DIRECT, no-reroute, surface map)
 - [x] Update frankenstein_registry.yaml + PHP callers (livechat webhook, alltastic, ctx ceiling, ring status dual-match, 8 cron files)
 - [x] Clean dead /tmp cron entries + disable stale glm52-health-monitor unit
-- [x] Safe-restart litellm + verify end-to-end (8/8 l
+- [x] Safe-restart litellm + verify end-to-end (8/8 lanes PONG, qwen rung OK, live traffic on new name
 ```
 
 ### `1787931475695` — 8/28/2026, 10:45:33 AM PT — 132 turns
@@ -222,50 +266,6 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1787876909491` — 8/28/2026, 9:28:25 AM PT — 358 turns
-
-**Original task:**
-
-```
-#PostMark Issue 
-
-Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
-```
-
-**Ideas referenced:** #10234, #14748, #15905, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #22086, #23483, #25909, #26663, #28256, #28307, #28331, #28543 [proposed], #28546 [proposed], #333333, #888888
-
-**Last PICKUP PROMPT:**
-
-```
-dger row appended per rule 07.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task - Postmark SMTP outage: backlog drained + HTTP fallback + mailer-guard fix
-
-Where we left off (verified 2026-08-28 08:26 PT):
-- 169 backlog emails resent via Postmark HTTP API with real MessageIDs (verified against communication_log + email_outbound_log)
-- 22 rows remain unsent, all correctly excluded: 12 postmark_suppression, 2 danger (61538 spam "40HQ", 61866 spam "DashCam"), 8 dup-already-delivered
-- HTTP-API auto-fallback live in lib/mailer.php line 1476 with attachment passthrough (#28543 [executing]); php -l clean, php-fpm reloaded; backup mailer.php.bak-httpfallback-20260828
-- ai_ticket_agent mailer-guard short-circuit live in cron_ai_ticket_agent.php line 507 (#28546 [executing]): internal "Outbound email blocked" tickets auto-close with zero student-facing reply
-- nremt.org added to MailerUrlAllowlist_TrustedExternal line 26; stale guard tickets 28253 + 28402 closed; mollyji1818 correct NREMT email delivered (comm 62305, msgid 85a4eaf4), wrong bounce-echo 62307 never sent
-
-Open threads to drive next:
-1. #28546 [executing] - verify mailer-guard short-circuit fires on the next cron pass by checking cron_ai_ticket_agent log for "MAILER-GUARD auto-closed" entries; add a ticket title-prefix block test
-2. #28543 [executing] - formalize http_resend_full.php into a reused lib with a smoke test, and probe the HTTP fallback path (not just the rescue script) so it is exercised before the next real SMTP outage
-
-Reference IDs:
-- Ticket: guard tickets 28402, 28253 (closed)
-- Ideas filed: #28543 [executing], #28546 [executing]
-- Files touched: /var/www/emtskills/lib/mailer.php, /var/www/emtskills/lib/MailerUrlAllowlist_TrustedExternal.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /home/emsuserver/http_resend_full.php, /Users/rubenmajor/Desktop/cline_task_ledger.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 

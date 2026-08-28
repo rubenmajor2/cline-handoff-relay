@@ -12,7 +12,7 @@ The reversal log collapses to FOUR recurring failure modes, in order of frequenc
 
 - **SELF_CONTRADICTING_DISPOSITION** (dominant: 251 of 280 telemetry failures; the #1 gate blocker). Prose says DONE/FIXED/VERIFIED next to an idea bracket that still says [proposed]/[executing]/[blocked]. Stamp the record first (UPDATE orchestrator_ideas SET status=deployed, then reconcile_ideas), THEN write the claim; or keep the honest bracket. Never write FIXED next to [proposed]. [auto-sync: +11 since 2026-08-19 | latest: 2026-08-27 reversal (Ruben caught it): the Exam 5 root-cause completion shipped an 'Open t]
 - **R317_UNVERIFIED_STATE** (24 of 280 telemetry failures). Asserting fleet/routing/pod/model-health or deliverable state from memory without a live probe returning proof. Probe first and quote the result, or label the claim UNVERIFIED. [auto-sync: +55 since 2026-08-19 | latest: 2026-08-26 VERITAS reversal (ledger stamp for the shipping task id; same fix as task 17876]
-- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +67 since 2026-08-19 | latest: - 'run_moodle_query wedged' -> 'wrapper mysql password stale; ssh mysql via .my.cnf works ]
+- **INSUFFICIENT_PROBE** (the mechanism behind most amendment case law). One auth error against one endpoint with one header is NOT a dead credential; one EACCES is NOT a permission wall (probe sudo -n / the succeeding header first); one failed id resolve is NOT a missing file; a php -l pass is NOT a working JS page; a chmod is NOT complete until the consumer process re-runs clean. Acquire the probative artifact before declaring ANY negative or completion state. [auto-sync: +70 since 2026-08-19 | latest: - "frankenstein-llm's rule 91 text is too shallow" → corrected: the rule TEXT was adequate]
 - **SCOPE_ERROR** (completion over-scoped to DONE). Enumerate EVERY visible defect / every deliverable in the set before claiming resolved; the undone ones become open threads with real idea ids, not hidden by a "done" headline. [auto-sync: +14 since 2026-08-19 | latest: 2026-08-25 reversal: a population of synthetic zero-score quiz_attempts rows (timestart=ti]
 <!-- golden-rule-table:end -->
 
@@ -344,5 +344,15 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - RCA bucket: insufficient probe
 - Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
 - Reversal note: - 'run_moodle_query wedged' -> 'wrapper mysql password stale; ssh mysql via .my.cnf works but is adminportal-only' | RCA: insufficient probe | causal rule updated: 317 (existing am
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-28 07:58 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1779186100000
+- RCA bucket: wrong premise
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - "frankenstein-llm's rule 91 text is too shallow" → corrected: the rule TEXT was adequate; the ENFORCEMENT GATE was dead code (_r91_validate returned None, 0-byte violations log, 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.

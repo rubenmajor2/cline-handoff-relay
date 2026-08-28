@@ -6,21 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 12:53:10 AM PT | window: last 72h | 32 tasks | index total 928 (parsed 11, cached 917)
+Generated: 8/28/2026, 1:53:10 AM PT | window: last 72h | 32 tasks | index total 928 (parsed 2, cached 926)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787516033804` | 8/28/2026, 12:53:00 AM | 263 | 934KB | #Frankenstein LLM Routing |
-| `1787602675527` | 8/28/2026, 12:52:48 AM | 543 | 11473KB | Fix this issue |
-| `1787876909491` | 8/28/2026, 12:52:46 AM | 81 | 711KB | #PostMark Issue  |
-| `1787874780128` | 8/28/2026, 12:52:31 AM | 167 | 7708KB | Rebased on the MiniCheck work another window shipped this morning, audited it against live |
-| `1787872718679` | 8/28/2026, 12:52:26 AM | 229 | 2547KB | HOw is this going now?  |
-| `1787783324531` | 8/28/2026, 12:52:23 AM | 237 | 6597KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
+| `1787874780128` | 8/28/2026, 1:31:03 AM | 202 | 11050KB | Rebased on the MiniCheck work another window shipped this morning, audited it against live |
+| `1787783324531` | 8/28/2026, 1:29:27 AM | 316 | 8977KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
+| `1787872718679` | 8/28/2026, 1:18:29 AM | 272 | 4748KB | HOw is this going now?  |
+| `1787876909491` | 8/28/2026, 1:17:06 AM | 161 | 937KB | #PostMark Issue  |
+| `1787901041894` | 8/28/2026, 1:00:41 AM | 228 | 672KB | What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow a |
+| `1787602675527` | 8/28/2026, 12:58:52 AM | 554 | 11878KB | Fix this issue |
+| `1787516033804` | 8/28/2026, 12:56:36 AM | 268 | 988KB | #Frankenstein LLM Routing |
 | `1787517352553` | 8/28/2026, 12:52:07 AM | 338 | 1504KB | #Argus |
 | `1787517380902` | 8/28/2026, 12:51:50 AM | 862 | 10297KB | #VERITAS |
 | `1787777775823` | 8/28/2026, 12:51:47 AM | 614 | 2139KB | #Argus |
 | `1787516215349` | 8/28/2026, 12:51:31 AM | 344 | 9691KB | #Externships |
-| `1787901041894` | 8/28/2026, 12:51:25 AM | 197 | 584KB | What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow a |
 | `1787600722263` | 8/28/2026, 12:14:11 AM | 366 | 7164KB | Jon says his overrides are not quite sticking. This is his question: |
 | `1787875233227` | 8/28/2026, 12:06:32 AM | 142 | 1460KB | #VERITAS |
 | `1787764336166` | 8/27/2026, 11:59:33 PM | 140 | 2535KB | Asked  this befroe -->  |
@@ -47,109 +47,180 @@ Generated: 8/28/2026, 12:53:10 AM PT | window: last 72h | 32 tasks | index total
 
 ## Per-window detail
 
-### `1787516033804` — 8/28/2026, 12:53:00 AM PT — 263 turns
+### `1787874780128` — 8/28/2026, 1:31:03 AM PT — 202 turns
 
 **Original task:**
 
 ```
-#Frankenstein LLM Routing
+Rebased on the MiniCheck work another window shipped this morning, audited it against live production, found three defects, and fixed all three. The short version: the fact-checking layer was live but pointed at the wrong emails, and the LLM judge behind it was actively making true sentences sound uncertain. The email system now checks model-written claims against the student's actual record in about a third of a second, and it no longer second-guesses template text it has no evidence for. All three fixes are deployed and verified against real data, not just linted.
 
-Rebase, tell me where this is at now:
-
-Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
-
-Where we left off (verified 2026-08-23 11:35 AM AKDT):
-- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
-- LiteLLM safe-resta
+The one thing worth your a
 ```
 
-**Ideas referenced:** #11945, #12584, #12680, #12824, #12872, #12878, #16345, #16663, #16696, #178742, #178750, #1807, #18671, #1876, #19338, #19458, #19491, #2073, #21582, #2294, #2307, #2314, #23169, #2341, #2343, #2344, #25097 [implemented], #25111, #25122 [implemented], #25125 [implemented], #25196 [executing], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2597, #2603, #2605, #26209, #26211, #26233, #26663, #26823, #26824, #26825, #27492, #27503, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed], #28208 [proposed], #6826
+**Ideas referenced:** #11316, #14741, #14742, #14749, #16069, #16817, #178712, #178760, #18944, #18951, #19419, #2050, #23483, #25185, #25909, #2625, #2626, #2628, #2629, #2631 [investigating], #26663, #26834, #26851, #27942 [deployed], #28028 [deployed], #28043 [deployed], #28044 [deployed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28205 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28225 [deployed], #28226 [deployed], #28233 [deployed], #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255 [rejected], #28256, #28306 [deployed], #28307 [proposed], #28308 [proposed], #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28332, #28369 [deployed], #28370 [deployed], #28511 [proposed], #30043, #30515, #3098, #31646, #4930, #4958, #5431, #5779, #5794, #5795, #5819, #5908, #78350, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-<attempt_completion>
-<result>
-═════════════════════════════════════════════════
-PICKUP PROMPT
-═════════════════════════════════════════════════
-Pick up task #1787507044981 — frankenstein‑llm vision routing fix (glm‑4.6v‑flash 400s).
-
-Where we left off (verified 2026‑08‑27 23:10 PT):
-- LiteLLM service **active**, health endpoint HTTP 200.
-- Guard patch present in `/etc/litellm/_router_core.py` (lines 5758‑5805) and `/etc/litellm/router_hook.py` (line 520).
-- Vision‑doorman picks only `kimi‑k3` / `claude‑sonnet‑5‑vision`; zero `glm‑4.6v‑flash` 400 errors.
-- Backup `router_hook.py.bak‑visiondoorman‑kimi‑sonnet‑20260823‑122303` exists; generic `_router_core.py.bak` exists.
-- Audit log `/tmp/emsu_router_audit.log` shows recent vision‑doorman entries, no glm‑4.6v‑flash errors.
-- Idea #28033 [proposed] status: idle.
-
-Open threads to drive next:
-1. #28033 [proposed] — Patch vision‑doorman to fire on remote‑URL images (currently only base64 screenshots trigger it; URL‑based images fall through to the text ladder).
-
-Reference IDs:
-- Files touched: `/etc/litellm/_router_core.py`, `/etc/litellm/router_hook.py` (backup: `router_hook.py.bak‑visiondoorman‑kimi‑sonnet‑20260823‑122303`).
-- Ideas filed: #28033 [proposed].
-- Log: `/tmp/emsu_router_audit.log`.
-
-═════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787602675527` — 8/28/2026, 12:52:48 AM PT — 543 turns
-
-**Original task:**
-
-```
-Fix this issue
-```
-
-**Ideas referenced:** #0066, #178760, #178769, #178772, #178778, #19492, #2036, #25185, #25194, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #28118, #28215 [proposed], #28241 [proposed], #28326 [proposed], #28492 [proposed], #374151, #64748, #78350, #9086, #9168, #9215, #9306, #9320, #9339, #9786
-
-**Last PICKUP PROMPT:**
-
-```
-AK.
-═══ END SESSION MEMORY ═══
+hat off rather than colliding.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787602675527 — student 26816BC-17 Final Exam Attempt button repair.
+Pick up task #1787121837052 - VERITAS email truth stack audit (MiniCheck + L4 judge)
 
-Where we left off (verified 2026-08-27 22:59 AK):
-- T#01 3 zombie attempt rows (status finished, sumgrades 0.00, timestart=timefinish=1783277940 = course end-date epoch 2026-07-05 11:59 PM AK) consumed all base attempts; student never sat the exam
-- T#02 staff extension override id 11730 (Summer/Vicky, 2026-08-23) grants +1 attempt and close 2026-08-25 14:21 AK, but button still absent because the burned attempts were never unstuck/purged
-- T#03 297 split: with-active-override = lockout bug bucket (Eesha); no-override = by-design missed-deadline bucket
-- T#04 repair recipe filed as #28492 [proposed], not yet executed
+Where we left off (verified 2026-08-28 00:17 AKDT):
+- Rebased onto the MiniCheck pre-gate and audited. The three prior-window changes are in production; re-read each artifact.
+- KEY FINDING: high-volume senders lacking evidence are static TEMPLATES, not model-written text, so remaining plumbing is small.
+- #28220 [deployed] quantified: ~95% of the 822-row auto-correct population is template hedging, ~5% (71) are LLM ticket-replies; 93% are UNSUPPORTED (over-strict), not contradicted.
+- REVERSAL: lib/mailer.php carries a concurrent window's unsupported-async impl (MiniCheck first, UNSUPPORTED->judge async, CONTRADICTED blocks inline, no auto-correct), not the empty-evidence skip I inherited. End goal met.
+- REVERSAL: two files share basename cron_student_notifications.php; cron/ is a dead stub, the real sender is notifications/cron_student_notifications.php, which a concurrent window already plumbed (buildStudentEvidence). Not overwritten per rule 274.
+- Positive control on the checker: 4/4 (CLEAN 586ms / UNSUPPORTED 916ms / SKIPPED no_checkworthy / SKIPPED no_evidence fail-open).
 
 Open threads to drive next:
-1. #28492 [proposed] — execute the repair: unstick attempts 284701/284702/284703 (recompute sumgrades from question_attempts; if no saved answers, purge the rows), keep override 11730 so the Attempt button appears before the 2026-08-25 14:21 AK close, purge Moodle cache, verify the button live as the student. Time-critical: proctored session today.
+1. #28213 [deployed] - correction-timeout fix is recorded as deployed. My 48h measurement (56s avg, 189 ERROR rows) spans the broken period; confirm clean judge latency over the next week.
+2. #28220 [deployed] - sampling/classification largely answered this window (95% template, 93% UNSUPPORTED over-strict). Residual is small.
+3. #28233 [deployed] - measure the pre-generation fact ledger effect once a week of post-deployment data exists; use MiniCheck verdicts not judge rates.
+4. #28307 [proposed] - widen evidence plumbing. Corrected scope this window: the high-volume targets (student notifications, chatbot_tools) are canned templates needing no evidence; the one real LLM-composed target is OutreachCampaignEngine.php (9 sendEmail sites, no evidence). A concurrent window is active here, so coordinate rather than collide.
+5. #28308 [proposed] - do not retire the L4 judge yet; its volume collapsed to ~0, keep as escalation path. Revisit after a week of clean data.
+6. #28511 [proposed] - add a header hint stating the listed evidence fields are exhaustive, so wrong-VALUE claims can move from UNSUPPORTED toward CONTRADICTED. Cheap wording experiment before any bigger model.
 
 Reference IDs:
-- Ideas filed: #28492 [proposed]
-- Ideas closed: none
-- Files touched: none this window (diagnosis only)
-- Ticket: 27435 (TKT-20260823-FF0DB606); student 26816BC-17 (moodle uid 52246)
+- Files touched: HANDOFF_NOTES.md (appended audit entry), /tmp/vc_pos.php (positive-control probe)
+- Ideas reconciled: #28213 [deployed], #28220 [deployed], #28233 [deployed], #28330 [deployed], #28331 [deployed], #28370 [deployed], #28307 [proposed], #28308 [proposed]
+- Ideas filed: #28511 [proposed]
+
+# Reversal Log
+- 'mailer.php = empty-evidence skip (inherited)' -> 'the running mailer.php is a concurrent window's unsupported-async implementation; the skip was superseded and the end goal is met' | RCA bucket: stale assumption | causal rule updated: 317 (re-probe inherited deploy claims by reading the artifact)
+- 'cron/cron_student_notifications.php is the student-notifications sender needing plumbing' -> 'two files share the basename; cron/ is a dead stub, the real sender is notifications/cron_student_notifications.php, already plumbed by a concurrent window' | RCA bucket: insufficient probe | causal rule updated: 317 (verify basename/path before claiming a file's role)
+
+
+```
+
+### `1787783324531` — 8/28/2026, 1:29:27 AM PT — 316 turns
+
+**Original task:**
+
+```
+# GLM 5.3: reminder set + your "why can't we use it" question answered
+
+IS IT OUT NOW? Can we download and get started/upgrade?
+
+## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?
+ 
+Because **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:
+
+- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode":"1220","message":"You do not have permission to access glm-5.3"}}`
+- The exa
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17205, #17246, #1744, #1779, #1798, #1828, #18947, #19567, #19686, #1993 [deployed], #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25185, #25378, #25381, #2546, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27236, #27249 [executing], #27250, #27503, #28332 [proposed], #28434 [proposed], #28498 [executing], #28499 [proposed], #5197, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ GLM lane (#26713 [proposed]).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26713 [proposed] — GLM 5.2 -> 5.3 cutover (bake-off + registry flip), building on cloud wiring #26711 [deployed].
+
+Where we left off (verified 2026-08-28 00:24 PT):
+- GLM-5.3 cloud is live: ZhipuAI whitelist cleared 8/18; direct probe HTTP 200 + real gen. OpenRouter lists z-ai/glm-5.3 + z-ai/glm-5.3-flash.
+- #26711 [deployed]: OpenRouter fallback wired this session (fallbacks:[{glm-5.3:[glm-5.3-openrouter]}] in /etc/litellm/config.yaml), litellm restarted clean, both lanes probed HTTP 200 with real generation. A ZhipuAI 429 now auto-spills to OpenRouter.
+- Flagship zai-org HF weights still 401-gated -> local PP=6 Hex ring upgrade blocked (#26712 [proposed]). GLM-5.3-Flash weights public 8/26 but different model + needs vLLM bump.
+
+Open threads to drive next:
+1. #26713 [proposed] — Bake-off glm-5.3 vs glm-5.2 (rule 121: matched prompts, judge quality, compare latency/cost). If 5.3 wins, flip registry tier L3/L4g + router_hook GLM-first target + FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h soak.
+2. #26712 [proposed] — Local ring: when tracker fires HF gate-clear (hf=1), download zai-org GLM-5.3, AWQ 4-bit requant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), then PP=6 Hex ring relaunch via the GLM52 PP=6 recipe.
+3. #26715 [deployed] — Monitor: tracker cron fires daily 07:05 PT; check orchestrator_event_log source=glm53-release rows appear. If no rows in 48h, check /var/log/cron + run /usr/local/bin/emsu_glm53_release_tracker.sh manually.
+
+Reference IDs:
+- Ideas: #26711 [deployed] cloud wiring, #26712 [proposed] local ring, #26713 [proposed] cutover, #26715 [deployed] tracker
+- Files touched: /etc/litellm/config.yaml (glm-5.3-openrouter fallback), /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md
+- Live-probe evidence: glm-5.3 -> api.z.ai 200; glm-5.3-openrouter -> openrouter.ai 200
 
 # Reversal Log
 No reversals this window.
 
-When finished, append to cline_task_ledger.md per rule 07.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Check compress signal (rule 119)
-- [x] Diagnose missing Attempt button (3 zombie zero attempts consumed; extension granted; bucket split by quiz_override)
-- [x] File repair idea #28492 for trackable handoff
-- [x] Compress session per rule 119 (X >= 0.75W)
-- [x] Fix gate failures (real task id + strip completion language), validate, gate, complete
+- [x] GLM-5.3 cloud LIVE: direct probe HTTP 200 + real generation
+- [x] OpenRouter lists z-ai/glm-5.3 + glm-5.3-flash
+- [x] Flagship HF weights still 401; GLM-5.3-Flash public but different model
+- [x] Wire + verify glm-5.3-openrouter fallback (primary + fallback both 200 real gen)
+- [x] Reconcile idea dispositions
+- [x] Record config change in HANDOFF_NOTES
+- [x] Fix bare numbers + wrong #1993 ref + re-scope completion language to #26711
+- [x] Pre-validate completion block (rule 91) — ALL PASSED
+- [x] Deliver answer
 </task_progress>
 </attempt_completion>
 ```
 
-### `1787876909491` — 8/28/2026, 12:52:46 AM PT — 81 turns
+### `1787872718679` — 8/28/2026, 1:18:29 AM PT — 272 turns
+
+**Original task:**
+
+```
+HOw is this going now? 
+
+build and ship and check / repair the executor durably so it works properly 
+- #28313 [blocked] - executor impl_failed on fleet-truth v2 (live-probe endpoint + freshness-stamped state file). Unblocker: retry the executor or hand-ship it per rule 267 GATE C
+
+approved
+- #28317 [executing] - lane backtest harness; same follow-through
+
+- #28316 [proposed] - canary decode-liveness quarantine + :8211 rung fix + retire :11506/:11507 (implements approved #28254 [approved] and #28252 [approved])
+
+--
+FIXED. The Invalid API Response errors are gone, and here is the whole story in
+```
+
+**Ideas referenced:** #12430, #12597, #15367, #178769, #18395, #18930, #19080, #19100, #19188, #19261, #19273, #19360, #19363, #19379, #19404, #19407, #19416, #19423, #19435, #19439, #19454, #19491, #19509, #19629, #20206, #2043, #2076, #20903, #2113, #23281, #25185, #27284, #28252 [approved], #28254 [approved], #28313 [blocked], #28314 [deployed], #28315 [executing], #28316 [proposed], #28317 [executing], #28497 [deployed], #28500 [deployed], #8598, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+sitting in the executor queue.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787697242661 — executor durable repair shipped; three fleet-truth ideas queued behind it.
+
+Where we left off (verified 2026-08-28 00:11 AKDT):
+- Executor durable repair #28500 [deployed]: cron_ruben_implement.php callLlm() spill branch now logs dead DeepSeek 402s, caps max_tokens, and falls back to a local 120b rung that returns parseable JSON. Root cause was a dead DeepSeek spill lane (HTTP 402, empty content) plus zombie adapter upstreams producing an empty primary spec.
+- Canary hardening #28316 [deployed] (decode-liveness quarantine + dead :8211 rung fix + decommissioned-membership) recovered through the local rung; it implements #28254 [deployed] and #28252 [deployed], both stamped to match the live artifact.
+- Executor health (verified: mysql fetch_data returned impl_failed last 2h = 0, successful builds last 2h = 9, impl_failed last 24h = 0, successful builds last 24h = 20 at 2026-08-28 00:10 AKDT): no impl_failed in the last 24h.
+
+Open threads to drive next:
+1. #28313 [executing] — fleet-truth v2 (live-probe API endpoint + freshness-stamped state file); in the executor queue at idle, next cycle builds it
+2. #28315 [executing] — mechanical fleet-claim validator gate + probe-evidence requirement; in the executor queue at idle
+3. #28317 [executing] — standing lane backtest harness (weekly measured end-to-end latency); in the executor queue at idle
+
+Reference IDs:
+- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php, /var/www/emtskills/HANDOFF_NOTES.md
+- Bug library: incident 2631 (tool-name mangling, prior window)
+- Ideas serving in production: #28500 [deployed], #28316 [deployed], #28254 [deployed], #28252 [deployed]
+
+# Reversal Log
+- initial: "executor is failing on its own logic" → corrected: the impl_failed flood came from a dead DeepSeek spill lane (HTTP 402, empty content) and zombie adapter upstreams feeding an empty spec, not executor logic | RCA bucket: wrong premise | causal rule updated: 317 (a failure flood must be traced to the input the consumer actually received before blaming the consumer)
+- initial: treated #28254 [deployed] and #28252 [deployed] as still open → corrected: both are implemented by #28316 [deployed]; records stamped to match the live artifact | RCA bucket: stale assumption | causal rule updated: 317 (disposition tags must come from a live read; when a child idea lands, the parent ideas it implements are stamped to match)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787876909491` — 8/28/2026, 1:17:06 AM PT — 161 turns
 
 **Original task:**
 
@@ -159,7 +230,7 @@ When finished, append to cline_task_ledger.md per rule 07.
 Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
 ```
 
-**Ideas referenced:** #15905, #177918, #333333, #888888
+**Ideas referenced:** #15905, #177918, #23483, #25909, #26663, #28256, #28307, #333333, #888888
 
 **Last PICKUP PROMPT:**
 
@@ -184,100 +255,149 @@ Reference IDs:
 </attempt_completion>
 ```
 
-### `1787874780128` — 8/28/2026, 12:52:31 AM PT — 167 turns
+### `1787901041894` — 8/28/2026, 1:00:41 AM PT — 228 turns
 
 **Original task:**
 
 ```
-Rebased on the MiniCheck work another window shipped this morning, audited it against live production, found three defects, and fixed all three. The short version: the fact-checking layer was live but pointed at the wrong emails, and the LLM judge behind it was actively making true sentences sound uncertain. The email system now checks model-written claims against the student's actual record in about a third of a second, and it no longer second-guesses template text it has no evidence for. All three fixes are deployed and verified against real data, not just linted.
+What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow and not helpful. I'm getting terrible iterations here that need immediate resoltuion. See this: 
 
-The one thing worth your a
+I’ve identified that the Postmark SMTP credentials in RedriveEaGeneration.php are placeholders:
+
+```php
+$mail->Username   = 'YOUR_POSTMARK_API_TOKEN';
+$mail->Password   = '';
 ```
 
-**Ideas referenced:** #11316, #14741, #14742, #14749, #16069, #16817, #178712, #178760, #18944, #18951, #19419, #2050, #23483, #25909, #2625, #2626, #2628, #2629, #2631 [investigating], #26663, #26834, #26851, #27942 [deployed], #28028 [deployed], #28043 [deployed], #28044 [deployed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28205 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28225 [deployed], #28226 [deployed], #28233 [deployed], #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255 [rejected], #28256, #28306 [deployed], #28307 [proposed], #28308 [proposed], #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28332, #28369 [deployed], #28370 [deployed], #30043, #30515, #3098, #31646, #4930, #4958, #5431, #5779, #5794, #5795, #5819, #5908, #78350, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787872718679` — 8/28/2026, 12:52:26 AM PT — 229 turns
-
-**Original task:**
-
-```
-HOw is this going now? 
-
-build and ship and check / repair the executor durably so it works properly 
-- #28313 [blocked] - executor impl_failed on fleet-truth v2 (live-probe endpoint + freshness-stamped state file). Unblocker: retry the executor or hand-ship it per rule 267 GATE C
-
-approved
-- #28317 [executing] - lane backtest harness; same follow-through
-
-- #28316 [proposed] - canary decode-liveness quarantine + :8211 rung fix + retire :11506/:11507 (implements approved #28254 [approved] and #28252 [approved])
-
---
-FIXED. The Invalid API Response errors are gone, and here is the whole story in
+To complete the fix, I need the actual Postmark API token (used as the SMTP username) and any required password. Please provide these credentials (or specify where they should be stored) so I can update the file and verify email deli
 ```
 
-**Ideas referenced:** #12430, #12597, #15367, #178769, #18395, #18930, #19080, #19100, #19188, #19261, #19273, #19360, #19363, #19379, #19404, #19407, #19416, #19423, #19435, #19439, #19454, #19491, #19509, #19629, #20206, #2043, #2076, #20903, #2113, #23281, #25185, #27284, #28252 [approved], #28254 [approved], #28313 [blocked], #28314 [deployed], #28315 [executing], #28316 [proposed], #28317 [executing], #28497 [deployed], #28500 [deployed], #8598, #9222
+**Ideas referenced:** #0000, #12249, #12251, #12266, #12269, #12345 [deployed], #12588, #12589, #12590, #12688, #12689, #13470, #14133, #14142, #16648, #16715, #17202, #17203, #17205, #17300, #17673, #177918, #18670, #18671, #1876, #20251, #2277, #22820, #22897, #24995, #25066, #25155, #25185, #2525, #25888, #2636 [deployed], #2637 [deployed], #26503, #26505, #26774, #27657, #27658, #28503 [deployed], #28508 [proposed], #28509 [proposed], #99988, #999888
 
 **Last PICKUP PROMPT:**
 
 ```
- fallback makes it non-urgent.
+orrectly reported DEAD (rc=1).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787697242661 - executor spill-path change in place; fleet-truth ideas driving through it
+Pick up task #1779186100000 — frankenstein-llm clinerules disobedience root cause.
 
-Where we left off (verified 2026-08-27 23:22 AKDT):
-- #28500 [deployed] (built in-window): executor empty-content spill repair in cron/cron_ruben_implement.php callLlm() (backup cron_ruben_implement.php.bak-execspill-20260827, php -l clean). Root cause: spec-gen empty-content recovery spilled to direct DeepSeek which has no balance (verified: curl user/balance returned total_balance=-0.30, spill got HTTP 402), sent max_tokens=60000 (deepseek-chat caps 8192), and failed silently (non-200 never logged). Change: cap deepseek tokens to 8192, log non-200 + ruben_spill_log 'deepseek_spill_http_fail', add LOCAL gpt-oss-120b fallback rung (BigMac 10.100.0.19:8000 then Artemis 10.100.0.5:8000, free-local-first rule 146)
-- Live-path evidence from the #28316 [executing] build (verified: worker log shows 'SPILL: direct deepseek FAILED HTTP 402' -> 'SPILL: local 120b (bigmac) SUCCESS on empty-content (6083 chars)' -> 'Spec generated' -> Phase 2 codegen; mysql SELECT showed dev_stage idle->drafting, file reports/_view_canary_hardening_card.php 2811 bytes). Standalone rung test returned parseable JSON spec (keys files_to_create/files_to_modify/database_changes/notes)
-- Task ideas approved + efficiency_priority=1 (top of queue): #28313 [executing], #28316 [executing], #28317 [executing]; #28316 [executing] implements #28254 [executing] + #28252 [executing]
-- HANDOFF_NOTES entry written 2026-08-27 (section 'Executor durable repair')
-
-Open threads to drive next:
-1. #28316 [executing] - canary decode-liveness quarantine + :8211 rung fix + retire :11506/:11507/:11525 - actively building (Phase 2 codegen). This is the SEPARATE root cause of the primary-lane empty content (zombie adapter upstreams). Drive it forward; it cleans the pool so the primary lane stops returning empty
-2. #28313 [executing] - fleet-truth v2 (live-probe endpoint + freshness-stamped state file) - queued top-priority, was impl_failed; retry through the executor with the new spill path and confirm it progresses, hand-ship per rule 267 GATE C if it fails again
-3. #28317 [executing] - lane backtest harness - queued top-priority; same follow-through
-4. #28254 [executing] + #28252 [executing] - the canary/dead-rung parent ideas; both implemented via #28316 [executing], so drive them by driving #28316 [executing] forward
-5. (human-only decision - no idea) - TOP UP DEEPSEEK BALANCE: it is -$0.30 (HTTP 402 Insufficient Balance). The paid spill lane is dead until topped up. The local 120b fallback rung makes this non-critical for executor success, but restoring it re-arms the paid backup lane
-6. #28315 [executing] - mechanical fleet-claim validator gate (from prior window) - confirm the executor picks it up
-
-Reference IDs:
-- Ideas filed: #28500 [deployed] (the executor spill repair, built in-window)
-- Ideas driving: #28313 [executing], #28316 [executing], #28317 [executing], #28254 [executing], #28252 [executing], #28315 [executing], #28314 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_ruben_implement.php (spill repair), backup cron_ruben_implement.php.bak-execspill-20260827, /var/www/emtskills/HANDOFF_NOTES.md
-- Evidence: ruben_spill_log rows 'deepseek_spill_http_fail' + 'local_120b_empty_content_spill'; worker log /tmp/ruben-impl-worker-28316.log
-
-# Reversal Log
-No reversals this wind
+Where we left off (verified 2026-08-28 00:56 PT):
+- ROOT CAUSE 1 FIXED: _r91_validate() in /etc/litellm/_router_core.py was a truncated stub with no terminal return, returning None for all input >= 50 chars, making the BLOCK+RETRY gate dead code since it shipped (verified: apply_r91_patch.py printed "Old _r91_validate: lines 4906-4916, 7 stmts, last=If" then "New _r91_validate: lines 4906-5057, 3 returns, last=Return"; grep -c r91_block_retry /tmp/emsu_router_audit.log returned 0; ls -la /tmp/emsu_rule91_violations.log showed 0 bytes). Rewritten with 8 gate families + guaranteed terminal return + fail-open try/except. Idea #28503 [deployed].
+- ROOT CAUSE 2 FIXED: two steering strings stated the binary gate by QUOTING a 3-char divider example, teaching the model the wrong header shape it emitted. Both restated by name (verified: patch_steering.py printed "rule91_skeleton occurrences found: 1", "_RULE91_TAIL_TEXT occurrences found: 1", "remaining 3-char 'PICKUP PROMPT' examples in file: 0 (must be 0)"). Added LOOK IT UP FIRST (rule 29/323) + BLOCKED WORK IS NEVER 'None'. Idea #28503 [deployed].
+- VERIFIED LIVE IN CONTAINER: docker exec litellm python3 calling rc._r91_validate on the verbatim bad output printed "LIVE CONTAINER validate() returned type: list", "violation count: 4", the four codes DIVIDER_WRONG_LENGTH / R317_REVERSAL_LOG / BLOCKED_WORK_REPORTED_AS_NONE / R29_ASKED_INSTEAD_OF_LOOKING_UP, and "gate would BLOCK+RETRY: True"; a second probe on a 200-char string printed "returns type: list | MISSING_PICKUP_BLOCK caught: True". The regression suite printed "RESULT: 7/7 passed" against the AST-extracted LIVE function.
+- STEERING VERIFIED IN CONTAINER: docker exec calling rc._build_steering_text() printed "steering chars: 45922", "shape-fix marker in steering: True", "wrong 3-char PICKUP example present: False", "real 47-char divider present: True", "LOOK IT UP FIRST present: True", "BLOCKED WORK IS NEVER present: True".
+- POSTMARK CLAIM WAS FABRICATED: grep -rn YOUR_POSTMARK_API_TOKEN across lib/ and config/ returned zero matches (output was just the ---grep-done--- sentinel). Real lines are 72-73 of lib/RedriveEaGeneration.php using POSTMARK_ACCOUNT_TOKEN from config/secrets.php; a php probe printed "token_len=36 prefix=fff724b9" and curl against api.postmarkapp.com/deliverystats with X-Postmark-Server-Token returned email_HTTP=200. No code change was needed or made.
+- BAD GATEWAY WAS MY OWN RESTART WINDOW, not a fault: docker inspect printed "StartedAt=2026-08-28T07:40:57.599224792Z RestartCount=0"; journalctl -u cloudflared showed "dial tcp 127.0.0.1:4000: connect: connection refused" only at 00:41:23, 00:41:24, 00:41:25, 00:41:26; the same grep since 00:44:00 returned count 0; an hourly histogram over 24h showed all 152 refusals inside the single 00:00 hour; and 8 consecutive curls to https://litellm.emsuniversity.com/v1/model/info returned 200 (0.33s-1.51s) with 72 models and frankenstein-llm api_base http://127.0.0.1:11510/v1.
+- litellm-safe-restart.sh hardened: NOTICE quoting the exact client-visible 502 JSON, PHASE 2 public-edge verification (exits 4 if origin up but edge still 502), 5s->2s poll (verified: patch printed "bash -n: syntax OK" and "PATCHED OK", then sudo bash -n on the live file printed "SYNTAX OK", ls showed -rwxr-xr-x 3607 bytes, 
 ```
 
-### `1787783324531` — 8/28/2026, 12:52:23 AM PT — 237 turns
+### `1787602675527` — 8/28/2026, 12:58:52 AM PT — 554 turns
 
 **Original task:**
 
 ```
-# GLM 5.3: reminder set + your "why can't we use it" question answered
-
-IS IT OUT NOW? Can we download and get started/upgrade?
-
-## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?
- 
-Because **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:
-
-- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode":"1220","message":"You do not have permission to access glm-5.3"}}`
-- The exa
+Fix this issue
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18947, #19567, #19686, #1993 [deployed], #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25185, #25378, #25381, #2546, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27236, #27249 [executing], #27250, #27503, #28332 [proposed], #28434 [proposed], #28498 [executing], #28499 [proposed], #7142, #7149
+**Ideas referenced:** #0066, #178760, #178769, #178772, #178778, #19492, #2036, #25185, #25194, #27100, #27435 [rejected], #28112 [proposed], #28116 [proposed], #28118, #28215 [proposed], #28241 [proposed], #28326 [proposed], #28492 [proposed], #28510 [proposed], #374151, #64748, #78350, #9086, #9168, #9215, #9306, #9320, #9339, #9786
 
 **Last PICKUP PROMPT:**
 
 ```
-26-08-18",
-  "pickup_prompt": "═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26712 / #28499 — GLM-5.3 local PP=6 ring autonomous installer: arm cron + verify watch; then Argus capability reframe.\n\nWhere we left off (verified 2026-08-27 23:48 PT):\n- GLM-5.3 CLOUD already wired 2026-08-18: LiteLLM handle zai/glm-5.3 live (verified: rule 322 corpus record 'glm-5.2 cloud entry, now wired to zai/glm-5.3 after 2026-08-18'; re-probe the handle next window before claiming serving).\n- LOCAL: flagship weights still gated as of last probe; HF page = 'Upcoming release' with countdown to ~2026-08-28 07:00 PT. Detection criterion baked into installer: HF API 200 + safetensors in model list = live.\n- Ruben approved FULL autonomous pipeline, NO bake-off: detect -> download best variant (AWQ > FP8 > BF16) -> single-box validate on test port -> replace glm-5.2 on the PP=6 Hex ring. 5.2 weights kept for rollback.\n- Installer script WRITTEN to WOPR /usr/local/bin/emsu_glm53_local_installer.sh (verified: write_server_file returned 'File written successfully'). State machine WATCH->DISCOVER->DOWNLOAD->VALIDATE->CUTOVER, flock single-instance, resumable, halts+alerts rather than bricks. NOT ARMED YET.\n- Ring topology (Ruben-verified this session): Pompeii (50c0) <-> Marcus (63ce) <-> Tiberius (e9e0) <-> Cesar (3b41) <-> Cato (2aa8) <-> Augustus (e3b2) <-> Pompeii. PP=6, max_num_seqs=15, 671 tok/s aggregate (two-counter :8210/metrics 60s-delta method, never decode-only).\n- CANONICAL docs to read BEFORE touching the ring: /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md (topology, live config, federation members, known patterns) + /var/www/emtskills/docs/GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md (671 method + restore risk). Federation principle: never manually remove a member.\n- Node access from WOPR reverse tunnels: Cato rank0 ssh -p 2204 rubenmajor@127.0.0.1, Cesar -p 2203, Julia/Augustus -p 2205, Claudia -p 2206, Tiberius via ProxyJump through Cesar. Pompeii + Marcus NOT in fleet_inventory -> installer DISCOVER phase reads live topology from rank0 instead of hardcoding.\n- Argus reframe PENDING: Ruben rejected 'new harness' direction (#28499) - 'we already mostly have this.' New direction: increase Argus capabilities + role-based task visibility (MasterAdmin sees all; other roles only their permitted tasks). Kaison answer: it is a conservative replay engine for KNOWN repairs (rule 147), not a general fix agent - extending fix capacity is the gap.\n\nOpen threads to drive next:\n1. #26712 [executing] - ARM the installer: (a) write /var/www/emtskills/cron/notify_glm53_event.php inserting admin_portal.orchestrator_event_log (severity/subject/payload args), (b) chmod +x installer, (c) add /etc/cron.d/emsu-glm53-local-installer every 10 min, (d) run once manually: WATCH phase must log 'not public yet' and exit 0. Then let it catch the ~8/28 07:00 drop.\n2. #26712 [executing] - Before cutover fires: read GLM52_RING_STATE_TRACKER.md live config and reconcile the installer's cutover sed assumptions (model path /home/rubenmajor/glm52-awq-15pct, served id glm-5.2-15pct, port 8210) against the ACTUAL supervisor script on Cato; adjust if drifted.\n3. #28499 [proposed] - REJECT as superseded (harness direction rejected by Ruben); file replacements: (a) Argus capability-increase backlog, (b) role-based task visibility extending argus_role_permissions so non-MasterAdmin roles see only permitted tasks, (c) general-fix capa
+t detector + auto-repair cron.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787602675527 — 26816BC-17 Final Exam Attempt-button repair (approved) + KAIZEN zombie-attempt fix.
+
+Where we left off (verified 2026-08-27 23:56 AK):
+- Root cause proven: 3 zombie attempts 284701/284702/284703 on quiz cm 455 (course 25, Final Exam) are state=finished, 0.00/150, timestart=timefinish=1783277940. They consume all 3 base attempts -> 'No more attempts are allowed' -> no Attempt button.
+- Override 11730 (Summer, 8/23) grants +1 attempt but its timeclose = 2026-08-25 14:21 AK is PAST. Button still missing.
+- Rule-297 classification: students WITH active override = lockout BUG; WITHOUT override = by-design enforcement.
+- Ruben APPROVED the repair 2026-08-27 23:50 AK and steered: 'if it's a bug then what's wrong with Kaizon? Fix Kaizon so it can find and resolve these before we have to.'
+- Nothing executed yet; compressed at 162K/200K per rule 119.
+
+Open threads to drive next:
+1. #28492 [proposed] — execute the approved repair: (a) confirm zero saved answers via question_attempts for 284701-284703; (b) purge the 3 zombie rows via ssh_command mysql on WOPR (Moodle DB, rule 144); (c) extend override 11730 timeclose to now+7d, keep +1 attempt; (d) purge_moodle_cache course 25; (e) verify live: run_moodle_query attempt count + override for uid 52246, confirm Attempt button visible; (f) internal comment on ticket 27435; (g) after executing, UPDATE orchestrator_ideas status for #28492 [proposed] and reconcile_ideas before completion.
+2. #28510 [proposed] — build the KAIZEN zombie-attempt detector + auto-repair in-window (rule 267 GATE A0, rule 300): cron sweep splitting the population on the active-override discriminator; auto-repair the with-override bucket (purge zero-answer zombies, keep/extend override, purge cache, audit row); route the without-override bucket to enforcement review; seed kaizen recipe zombie_attempt_lockout via kaizen_seed_recipe; Discord alert. Positive control: 26816BC-17 attempts 284701-284703 must be flagged by the detector dry-run.
+
+Reference IDs:
+- Student: Eesha Cheema 26816BC-17, Moodle uid 52246, ticket 27435 (TKT-20260823-FF0DB606)
+- Quiz: cm 455 course 25 (Final Exam); attempts 284701/284702/284703; override 11730
+- Ideas filed: #28492 [proposed], #28510 [proposed]
+- Files touched: none this window
+- Policy: emsu://reference/exam-retake-policy (SEB + proctored Zoom required; never tell student to take it on her own)
+
+# Reversal Log
+No reversals this window.
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Diagnose missing Attempt button (zombie attempts + override)
+- [x] File repair idea #28492
+- [x] Compress session (rule 119)
+- [x] File KAIZEN detector idea #28510
+- [x] Re-validate completion (ALL PASSED)
+- [x] check_gate CLEAR + attempt_completion shipped
+- [ ] New window: execute repair #28492
+- [ ] New window: build KAIZEN detector #28510
+</task_progress>
+</attempt_completion>
+```
+
+### `1787516033804` — 8/28/2026, 12:56:36 AM PT — 268 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Routing
+
+Rebase, tell me where this is at now:
+
+Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
+
+Where we left off (verified 2026-08-23 11:35 AM AKDT):
+- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
+- LiteLLM safe-resta
+```
+
+**Ideas referenced:** #11945, #12584, #12680, #12824, #12872, #12878, #16345, #16663, #16696, #178742, #178750, #1807, #18671, #1876, #19338, #19458, #19491, #2073, #21582, #2294, #2307, #2314, #23169, #2341, #2343, #2344, #25097 [implemented], #25111, #25122 [implemented], #25125 [implemented], #25196 [executing], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2597, #2603, #2605, #26209, #26211, #26233, #26663, #26823, #26824, #26825, #27492, #27503, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed], #28208 [proposed], #6826
+
+**Last PICKUP PROMPT:**
+
+```
+nnet-20260823-122303` present.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
+
+Where we left off (verified 2026-08-27 23:55 PT):
+- glm-4.6v-flash 400 fix is LIVE and healthy: `systemctl is-active litellm` = active, `/health/liveliness` = HTTP 200, guard present in /etc/litellm/_router_core.py (lines 5758-5805) + router_hook.py line 520, zero glm-4.6v-flash 400s in audit log.
+- #28033 is CONFIRMED STILL OPEN and was live-reproduced: remote-URL image POST fired the doorman (audit 07:52:56Z picked=claude-sonnet-5-vision) but the response came from gpt-oss-120b (text-only) saying "I can't view the image"; the model's reasoning admits the image is replaced with "[Unsupported Image]".
+- Corrected mechanism: doorman FIRES on URL parts (type-based at _router_core.py:5954), but the remote URL is never fetched into base64, so the image is dropped and the call degrades to a text model. Title should be re-scoped from "falls through the doorman" to "remote-URL image content is dropped after the doorman fires."
+
+Open threads to drive next:
+1. #28033 [proposed] — patch /etc/litellm/_router_core.py so remote-URL image_url parts are fetched and converted to base64 (or inlined) BEFORE the upstream placeholder replacement, so a vision model receives actual pixels. Live test harness ready: KEY=$(sudo grep LITELLM_MASTER_KEY /etc/litellm/env), POST to http://127.0.0.1:4000/v1/chat/completions with a remote-URL image and assert the response model is a vision model (not gpt-oss-120b).
+
+Reference IDs:
+- Ticket: task #1787507044981
+- Ideas filed: #28033 [proposed]
+- Files touched: /etc/litellm/_router_core.py, /etc/litellm/router_hook.py (backup router_hook.py.bak-visiondoorman-kimi-sonnet-20260823-122303)
+- Test artifact: /tmp/remote_url_test_out.json (remote-URL image response from gpt-oss-120b)
+- Log: /tmp/emsu_router_audit.log
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1787517352553` — 8/28/2026, 12:52:07 AM PT — 338 turns
@@ -529,118 +649,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Shipped completion
 </task_progress>
 </attempt_completion>
-```
-
-### `1787901041894` — 8/28/2026, 12:51:25 AM PT — 197 turns
-
-**Original task:**
-
-```
-What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow and not helpful. I'm getting terrible iterations here that need immediate resoltuion. See this: 
-
-I’ve identified that the Postmark SMTP credentials in RedriveEaGeneration.php are placeholders:
-
-```php
-$mail->Username   = 'YOUR_POSTMARK_API_TOKEN';
-$mail->Password   = '';
-```
-
-To complete the fix, I need the actual Postmark API token (used as the SMTP username) and any required password. Please provide these credentials (or specify where they should be stored) so I can update the file and verify email deli
-```
-
-**Ideas referenced:** #0000, #12249, #12251, #12266, #12269, #12345 [deployed], #12588, #12589, #12590, #12688, #12689, #13470, #14133, #14142, #16648, #16715, #17202, #17203, #17205, #17300, #17673, #177918, #18670, #18671, #1876, #20251, #2277, #22820, #22897, #24995, #25066, #25155, #2525, #25888, #2636, #26503, #26505, #26774, #27657, #27658, #28503 [deployed], #99988, #999888
-
-**Last PICKUP PROMPT:**
-
-```
-step is to obtain it "
-    "from the appropriate source.\n\n"
-    + EQ + "\n=== PICKUP PROMPT ===\n" + EQ + "\n"
-    "Pick up task #1779186100000 - PostMark Issue.\n\n"
-    "Where we left off:\n- Placeholder credentials identified.\n\n"
-    "Open threads to drive next (EVERY item MUST have a real #ID):\n- None.\n\n"
-    "Reference IDs:\n- Files touched: RedriveEaGeneration.php\n" + EQ + "\n"
-)
-
-# Known-good fixture: a fully compliant completion must NOT be flagged, or the
-# gate is over-firing and will block legitimate work.
-GOOD = (
-    "The Postmark redrive path was already wired correctly and needed no change. "
-    "The credential resolves from config/secrets.php and a live probe returned "
-    "HTTP 200. I fixed the router validator that had been letting malformed "
-    "completions through. Nothing is blocked and no human decision is pending.\n\n"
-    + D + "\n"
-    "PICKUP PROMPT (paste into a fresh Cline window)\n"
-    + D + "\n\n"
-    "Pick up task #1779186100000 - Postmark redrive verification.\n\n"
-    "Where we left off (verified 2026-08-28 00:30 PT):\n"
-    "- Token live-verified HTTP 200; idea #28503 [deployed] closed.\n\n"
-    "Open threads to drive next:\n"
-    "None - all work completed this session.\n\n"
-    "Reference IDs:\n"
-    "- Ideas filed: #28503 [deployed]\n"
-    "- Files touched: /etc/litellm/_router_core.py\n\n"
-    "# Reversal Log\n"
-    "No reversals this window.\n\n"
-    "When done, append to cline_task_ledger.md (rule 07), run order 66.\n"
-    + D + "\n"
-)
-
-# The bad fixture must trip at least these. If a gate silently stops matching,
-# that is a partial regression worth alerting on.
-REQUIRED_CODES = {
-    "DIVIDER_WRONG_LENGTH",
-    "BLOCKED_WORK_REPORTED_AS_NONE",
-    "R29_ASKED_INSTEAD_OF_LOOKING_UP",
-    "R317_REVERSAL_LOG",
-}
-
-
-def load_live_validator():
-    src = open(PATH, encoding="utf-8").read()
-    for node in ast.walk(ast.parse(src)):
-        if isinstance(node, ast.FunctionDef) and node.name == "_r91_validate":
-            lines = src.splitlines(keepends=True)
-            fn_src = "".join(lines[node.lineno - 1:node.end_lineno])
-            # Structural assertion: the bug was a missing terminal return.
-            ends_in_return = isinstance(node.body[-1], ast.Return)
-            ns = {"_r91_re": re, "_R91_DIVIDER": D, "_audit": lambda *a, **k: None}
-            exec(compile(fn_src, "live_r91", "exec"), ns)
-            return ns["_r91_validate"], ends_in_return
-    return None, False
-
-
-def alert(status, detail):
-    line = "R91_GATE_CANARY %s: %s" % (status, detail)
-    print(line, file=sys.stderr)
-    payload = json.dumps({
-        "canary": "r91_gate",
-        "status": status,
-        "detail": detail,
-        "checked_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
-    })
-    try:
-        subprocess.run(
-            ["php", "-r",
-             'require "/var/www/emtskills/config/config.php";'
-             '$p=json_decode($argv[1],true);'
-             '$db=new PDO("mysql:host=localhost;dbname=admin_portal;charset=utf8mb4",'
-             ' DB_USER, DB_PASS);'
-             '$s=$db->prepare("INSERT INTO orchestrator_event_log'
-             ' (event_type,source,subject,severity,payload,created_at)'
-             ' VALUES (?,?,?,?,?,NOW())");'
-             '$s->execute(["system_health","r91_gate_canary",'
-             ' "R91 completion gate: ".$p["status"], "critical", $argv[1]]);',
-             "--", payload],
-            capture_output=True, timeout=20)
-    except Exception:
-        pass
-
-
-def main():
-    try:
-        validate, ends_in_return = load_live_validator()
-    except Ex
 ```
 
 ### `1787600722263` — 8/28/2026, 12:14:11 AM PT — 366 turns

@@ -110,3 +110,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-24 524 diagnosis reversal: declared Big Mac 'physically DOWN' by probing 10.100.0.16:8000 (wrong IP, likely from stale fleet_inventory). Big Mac's actual IP is 10.100.0.19 per frankenstein_registry.yaml ssh_access field — live probe confirms it is SERVING gpt-oss-120b. Amended behavior: Step 1 'SEARCH THE RECORD FIRST' must explicitly include cross-referencing the registry ssh_access field for the host's CANONICAL IP before any probe. fleet_inventory IPs can be stale or wrong; the registry's ssh_access line is the authoritative source for a host's WireGuard/LAN IP. Never probe an IP from fleet_inventory alone without confirming it matches the registry.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-28 07:58 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1779186100000
+- RCA bucket: wrong premise
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - "frankenstein-llm's rule 91 text is too shallow" → corrected: the rule TEXT was adequate; the ENFORCEMENT GATE was dead code (_r91_validate returned None, 0-byte violations log, 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

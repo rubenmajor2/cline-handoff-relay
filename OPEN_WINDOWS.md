@@ -6,23 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/27/2026, 6:05:24 PM PT | window: last 72h | 31 tasks | index total 927 (parsed 13, cached 914)
+Generated: 8/27/2026, 11:51:22 PM PT | window: last 72h | 31 tasks | index total 927 (parsed 0, cached 927)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787875233227` | 8/27/2026, 6:05:23 PM | 74 | 851KB | #VERITAS |
-| `1787517380902` | 8/27/2026, 6:05:18 PM | 757 | 10130KB | #VERITAS |
-| `1787783324531` | 8/27/2026, 6:04:58 PM | 177 | 4096KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787777775823` | 8/27/2026, 6:04:36 PM | 537 | 761KB | #Argus |
-| `1787872718679` | 8/27/2026, 6:04:15 PM | 111 | 260KB | HOw is this going now?  |
-| `1787600722263` | 8/27/2026, 6:04:06 PM | 297 | 5464KB | Jon says his overrides are not quite sticking. This is his question: |
-| `1787516033804` | 8/27/2026, 6:03:23 PM | 215 | 772KB | #Frankenstein LLM Routing |
-| `1787707484695` | 8/27/2026, 6:03:08 PM | 269 | 3534KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
-| `1787874780128` | 8/27/2026, 6:02:33 PM | 69 | 1928KB | Rebased on the MiniCheck work another window shipped this morning, audited it against live |
-| `1787764336166` | 8/27/2026, 6:02:24 PM | 107 | 1857KB | Asked  this befroe -->  |
+| `1787764336166` | 8/27/2026, 6:37:24 PM | 131 | 2348KB | Asked  this befroe -->  |
+| `1787516033804` | 8/27/2026, 6:37:24 PM | 233 | 824KB | #Frankenstein LLM Routing |
+| `1787876909491` | 8/27/2026, 6:33:45 PM | 29 | 523KB | #PostMark Issue  |
+| `1787600722263` | 8/27/2026, 6:26:32 PM | 331 | 6085KB | Jon says his overrides are not quite sticking. This is his question: |
+| `1787777775823` | 8/27/2026, 6:25:08 PM | 553 | 779KB | #Argus |
+| `1787874780128` | 8/27/2026, 6:25:05 PM | 85 | 4021KB | Rebased on the MiniCheck work another window shipped this morning, audited it against live |
+| `1787875233227` | 8/27/2026, 6:25:01 PM | 113 | 1177KB | #VERITAS |
+| `1787517380902` | 8/27/2026, 6:25:01 PM | 783 | 10166KB | #VERITAS |
+| `1787872718679` | 8/27/2026, 6:24:59 PM | 143 | 296KB | HOw is this going now?  |
+| `1787707484695` | 8/27/2026, 6:17:32 PM | 280 | 3843KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
+| `1787783324531` | 8/27/2026, 6:09:09 PM | 182 | 4227KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787517352553` | 8/27/2026, 5:58:50 PM | 324 | 1466KB | #Argus |
 | `1787516215349` | 8/27/2026, 5:52:44 PM | 330 | 9331KB | #Externships |
-| `1787876909491` | 8/27/2026, 5:49:20 PM | 9 | 458KB | #PostMark Issue  |
 | `1787775322285` | 8/27/2026, 5:09:12 PM | 104 | 1131KB | Person already provided proof of payment, but for some reason that part of the CFA is not  |
 | `1787602675527` | 8/27/2026, 4:52:56 PM | 521 | 10138KB | Fix this issue |
 | `1787782722374` | 8/26/2026, 9:54:04 PM | 198 | 322KB | #VERITAS |
@@ -46,144 +46,185 @@ Generated: 8/27/2026, 6:05:24 PM PT | window: last 72h | 31 tasks | index total 
 
 ## Per-window detail
 
-### `1787875233227` — 8/27/2026, 6:05:23 PM PT — 74 turns
+### `1787764336166` — 8/27/2026, 6:37:24 PM PT — 131 turns
 
 **Original task:**
 
 ```
-#VERITAS
+Asked  this befroe --> 
 
-I had about 3-4 ideas I just approved for VERITAS working on them and window died. Pick those back up. Had to do with you had said fixing issues before they become issues with the smaller LLMs and tha the documentation supported the premise. Remember? If not, lmk, but I did just approve thse in the last 10 minutes before the window died.
+Why does this say Hi Moodle and was the student's issue resolved? I've asked on this before 2x so this is a repeat issue on the name issue. The other, lmk
 ```
 
-**Ideas referenced:** #081020, #15158, #178634, #178640, #178649, #178656, #178671, #178694, #178701, #178709, #178712, #19653 [queued], #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #19934, #19969, #20135, #20163, #2025, #20556, #20698, #20727, #20776, #20777, #20783, #20798, #20801, #20812, #20866, #20868, #20912, #20921, #20928, #20929, #20937, #20943, #20952, #21024, #21035, #21036, #21038 [executing], #21060, #21063, #25468, #25471, #25515 [proposed], #2573, #25796, #25797, #25798, #25916 [awaiting_review], #26663, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #27933, #27942 [deployed], #27972, #28023 [proposed], #28028 [proposed], #28034, #28043 [proposed], #28044 [deployed], #28078 [proposed], #28088 [proposed], #28153 [proposed], #28154, #28212 [proposed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28226 [proposed], #28233 [deployed], #28239, #28313 [blocked], #28385, #37492, #38124, #38910, #39296, #39362, #41522, #709171
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787517380902` — 8/27/2026, 6:05:18 PM PT — 757 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase and analyze since last analysis
-
-VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
-
-════
-```
-
-**Ideas referenced:** #12459, #13441, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #23184, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28221, #28233 [deployed], #4991, #6230, #8798
+**Ideas referenced:** #10024, #13085, #13121, #1617, #1618, #1674, #1754, #1755, #1816, #18748 [approved], #18786 [deployed], #18820, #18843 [deployed], #18844 [deployed], #18845 [deployed], #18852, #18853 [proposed], #1921, #19239 [rejected], #19261, #22750 [proposed], #22751 [proposed], #252532, #26167, #32324, #48242, #5387, #5920, #65039, #7053, #7074, #716420, #7212, #7553, #787890, #7882, #8082, #8563, #856404, #8596, #8597, #8598, #8639, #8798, #8811, #9083, #9086, #9225, #9577, #9578, #9579, #9878
 
 **Last PICKUP PROMPT:**
 
 ```
- rather than leaked as a fact.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787121837052 - VERITAS pre-generation fact grounding
-
-Where we left off (verified 2026-08-25 22:57 AKDT):
-- Root cause of residual L4 auto-corrections identified: lib/EmsuUniversalGrounding.php injects policy corpus + the INSTRUCTION "do not invent" but ZERO per-student facts, so the model has nothing to be faithful to and fills gaps by generation (verified: read_server_file of EmsuUniversalGrounding.php shows corpus + ANSWER GUARD only, no fact block)
-- Built + deployed lib/PreGenerationFactGrounding.php: closed-world ledger = VERIFIED FACTS (assertable) + NOT VERIFIED (13 high-stakes fields forbidden to assert/confirm/deny) + no-absence-as-negative rule (verified: ls shows 9902 bytes on disk, php -l clean)
-- Wired into lib/EmailAIResponder.php after EmsuUniversalGrounding::inject, before the LLM call (verified: grep -c PreGenerationFactGrounding::inject = 1, $studentCtx in scope, php -l clean)
-- 4/4 functional tests pass: facts listed, refund named unverified, idempotent marker_count=1, fail-open prompt_unchanged=YES, placeholder junk filtered (verified: php /tmp/test_fact_ledger.php output)
-- Routing untouched, no Anthropic introduced (verified: grep -ci anthropic/claude in new file = 0; responder still frankenstein-llm + deepseek fallback)
-- Fail-open fix applied mid-build after own test caught ledger firing on zero-verified-fact senders
-
-Open threads to drive next:
-1. #28233 [deployed] - measure the ledger's effect: compare email_send_blocks veritas_l4_auto_corrected rate for the 24h before vs after 2026-08-25 23:00 AKDT. Expect the ~10/hr high-stakes corrections to drop at the source.
-2. #28213 [proposed] - correction LLM call exceeds 60s timeout; still unfixed. The ledger reduces how often correction runs but does not fix the timeout itself. Fix: raise timeout, make correction async, or use a faster correction model.
-3. #28220 [proposed] - sample ~20 post-gate veritas_l4_auto_corrected rows, classify warranted vs over-strict vs meaning-changed; tune judge if >30% bad.
-
-Reference IDs:
-- Ideas filed: #28233 [deployed], #28220 [proposed], #28218 [deployed], #28213 [proposed], #27942 [deployed], #28028 [deployed]
-- Files touched: lib/PreGenerationFactGrounding.php (new), lib/EmailAIResponder.php, lib/mailer.php
-- Backup: /tmp/EmailAIResponder.php.bak-factledger-20260825-235557
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-
-# Reversal Log
-- "fail-open on empty context works" -> corrected: first build INJECTED a 13-line forbidden ledger for senders with zero verified facts (TEST 3 showed prompt_unchanged=NO), which would make the assistant cagey about general policy for prospective students | RCA bucket: insufficient probe (claimed fail-open from the code's documented intent rather than from executing it) | causal rule already covers this: rule 317 GOLDEN RULE (claim scope must equal probe scope) + rule 99 amendment 2026-08-24 (a lint pass proves syntax only, never behavior). Caught pre-ship by executing the test rather than reading the code; fixed by requiring >=1 verified fact before the ledger engages, retested 4/4 pass.
+2026‑06‑15 23:02 PT.*
 </result>
-<task_progress>
-- [x] Root cause: grounding had policy corpus + "do not invent" but ZERO per-student facts
-- [x] Built lib/PreGenerationFactGrounding.php (closed-world ledger, names unknowns)
-- [x] Wired into EmailAIResponder
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #<none> — Resolve “Hi Moodle” greeting question.
+(Verified 2026‑08‑26 10:30 PT)
+
+Where we left off (verified 2026‑08‑26 10:30 PT):
+- No open tickets or ideas pending on this issue.
+
+Open threads to drive next (none).
+
+Reference IDs:
+- Ticket #7553 — Email‑template name placeholder bug (status resolved).
+- File `lib/EmailGreetingTemplate.php` (updated commit c3f9a1b).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+════════════════════════════════════════───────
+
 ```
 
-### `1787783324531` — 8/27/2026, 6:04:58 PM PT — 177 turns
+### `1787516033804` — 8/27/2026, 6:37:24 PM PT — 233 turns
 
 **Original task:**
 
 ```
-# GLM 5.3: reminder set + your "why can't we use it" question answered
+#Frankenstein LLM Routing
 
-IS IT OUT NOW? Can we download and get started/upgrade?
+Rebase, tell me where this is at now:
 
-## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?
- 
-Because **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:
+Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
 
-- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode":"1220","message":"You do not have permission to access glm-5.3"}}`
-- The exa
+Where we left off (verified 2026-08-23 11:35 AM AKDT):
+- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
+- LiteLLM safe-resta
 ```
 
-**Ideas referenced:** #19686, #1993 [deployed], #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #28332 [proposed]
+**Ideas referenced:** #11945, #12584, #12680, #12824, #12872, #12878, #16345, #16663, #16696, #178742, #178750, #1876, #19338, #19458, #19491, #2073, #21582, #2294, #2307, #2314, #23169, #2341, #2343, #2344, #25097 [implemented], #25111, #25122 [implemented], #25125 [implemented], #25196 [executing], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2597, #2603, #2605, #26209, #26211, #26233, #26663, #26823, #26824, #26825, #27492, #27503, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed], #28208 [proposed], #6826
 
 **Last PICKUP PROMPT:**
 
 ```
-irmed by the clean manual run.
+n so the row reflects reality.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
+
+Where we left off (verified 2026-08-25 5:17 PM AKDT):
+- Vision routing fix is LIVE: litellm `active`, /health/liveliness HTTP 200, hard guard present in /etc/litellm/_router_core.py (5738/5742/5747/5774/5780) + router_hook.py:520. Doorman picks are kimi-k3 / claude-sonnet-5-vision only; zero glm-4.6v-flash 400s in audit log. Backup router_hook.py.bak-visiondoorman-kimi-sonnet-20260823-122303 present.
+- Discrepancy: no 122303-tagged _router_core.py backup found (only Aug-22 vision* backups); current _router_core.py DOES carry the guard, so fix is intact but rollback backup unconfirmed.
+- Side fix shipped: BigMac heartbeat writer — added bigmac:8000 to cron_fleet_inventory_autosync.php $REGISTRY + removed double-flock self-deadlock in /etc/cron.d/emsu-fleet-inventory-autosync; bigmac now `healthy`, last_heartbeat 2026-08-25 18:09:42.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #28033 [proposed] — patch vision doorman to fire on remote-URL images (currently only base64 screenshots trigger it; URL images fall through to text ladder). Tool: read /etc/litellm/_router_core.py vision-prep branch, add URL-image detection, py_compile + litellm-safe-restart + synthetic URL-image curl test.
+2. #28035 [proposed] — advance the (already-deployed) BigMac heartbeat fix through idea_action so the row reflects reality; confirm the next hourly cron.d run completes without "already running" and BigMac heartbeat stays fresh.
+
+Reference IDs:
+- Ticket: (primary) task #1787507044981
+- Ideas filed: #28033 [proposed], #28035 [proposed]
+- Files touched: /etc/cron.d/emsu-fleet-inventory-autosync (+ .bak-20260825-181027), /var/www/emtskills/cron/cron_fleet_inventory_autosync.php (+ .bak-bigmac-20260825-180703)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787876909491` — 8/27/2026, 6:33:45 PM PT — 29 turns
+
+**Original task:**
+
+```
+#PostMark Issue 
+
+Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
+```
+
+**Ideas referenced:** #15905, #177918, #333333, #888888
+
+**Last PICKUP PROMPT:**
+
+```
+code accordingly.
+</result>
+═══════════════════════════════════════════════
+═══ PICKUP PROMPT ══
+═══════════════════════════════════════════════
+Pick up task #1779186100000 — PostMark Issue.
+(1779186100000 = the numeric Cline task ID from the current window.)
+
+Where we left off (verified 2026‑08‑27 05:27 PT):
+- Updated RedriveEaGeneration.php with placeholder Postmark credentials (see file content above).
+
+Open threads to drive next (EVERY item MUST have a real #ID):
+1. #137 — star this task (mark as important) [executing]
+2. #0 — request Postmark API token from the user (human‑only decision, no idea)
+
+Reference IDs:
+- Files touched: RedriveEaGeneration.php
+- Ideas filed: none
+═══════════════════════════════════════════════
+</attempt_completion>
+```
+
+### `1787600722263` — 8/27/2026, 6:26:32 PM PT — 331 turns
+
+**Original task:**
+
+```
+Jon says his overrides are not quite sticking. This is his question:
+
+How to I make an attempt bottom reappear for a student that has an exam extension already?
+```
+
+**Ideas referenced:** #004085, #059669, #12184, #139139, #139140, #139144, #139145, #13984, #13985 [blocked], #13986, #14215, #155724, #15803, #166534, #1715, #25256, #2563, #28477 [proposed], #3730, #374151, #4338, #6067, #6366, #6520, #78350, #831843, #856404, #9086, #9181, #9204, #92400, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+ield control, deploy + verify.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #26712 [proposed] — GLM 5.3 local Hex ring build + cutover.
+Pick up task #28477 [proposed] — Give Jon full exam-override capabilities (set attempts, not just close date).
 
-Where we left off (state as of 2026-08-27 16:52 PT):
-- Cloud GLM-5.3 is live and serving: Zhipu key whitelisted Aug 18 + OpenRouter lists z-ai/glm-5.3 (probe this session: /api/v1/models HTTP 200 listing z-ai/glm-5.3; event log 6609341, 6671375, 6671376).
-- Flagship weights still gated: zai-org/GLM-5.3 config.json resolve HTTP 401 (probe 2026-08-27 15:44 PT). Local ring un-buildable until public.
-- Tracker healthy: state zcloud=0 or=1 hf=0 (401), cron /etc/cron.d/emsu-glm53-release-tracker daily 07:05 PT, dedup explains silence since Aug 19, manual run 16:48 PT clean (event 7351821).
-- Runbook: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.
+Where we left off (verified 2026-08-27 16:24 AKDT):
+- Jon's exam extensions are Moodle quiz user overrides created with attempts=NULL (close-date-only).
+- For students who EXHAUSTED their attempts, the attempt button does NOT reappear even with a valid future extension; extending close date does NOT grant a new attempt.
+- Verified live: recent quiz_overrides rows (students 52144, 51419, 53139, 54072, 51105) ALL attempts=NULL.
+- Student 52144 example: overrides quiz 954 (Exam 5), 964 (Exam 6), 966 (Final Exam), all closing 2026-09-14, attempts NULL; has attempts remaining (used 1 of 3 on 954) so their button shows. Blocked students are the attempt-exhausted ones.
+- admin_portal.local_exam_policy_track has 0 admin_override rows (overrides created in Moodle, not via EMSU policy path).
+- THE BUTTON FIX: on the student's quiz user override set BOTH future Close date AND Attempts allowed > attempts already used, then purge Moodle cache.
+- Diagnosis complete + advised. Build NOT started (context compressed before investigation).
 
 Open threads to drive next:
-1. #26712 [proposed] — When tracker fires hf=1: download zai-org GLM-5.3/FP8, AWQ 4-bit requant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), PP=6 Hex ring relaunch per GLM52 recipe.
-2. #26713 [proposed] — After bake-off + soak: flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h.
+1. #28477 [proposed] — Locate the override/extension creation tool Jon uses (exam_override.php or custom EMSU tool; Jon=jthompson already has force-approve access), add attempts-field control so Jon can grant attempts when a student exhausted them, deploy + verify end-to-end.
 
 Reference IDs:
-- Pending ideas:
-  - #26712 [proposed] (reconcile: proposed / idle)
-  - #26713 [proposed] (reconcile: proposed / idle)
-- Files touched: /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker, /var/lib/emsu/glm53_release_state
-- Event log: 6609341, 6671375, 6671376 (Aug 18-19 gate-clears), 7351821 (manual run re-fire)
+- Ideas filed: #28477 [proposed]
+- Files touched: none (read-only so far)
+- Tables queried: moodle_c_live.quiz_overrides, quiz_attempts, quiz; admin_portal.local_exam_policy_track
 
 # Reversal Log
 No reversals this window.
 
-On completion, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Prior window: cloud glm-5.3 out (Zhipu + OpenRouter), flagship weights 401, Flash public
-- [x] Re-probed live THIS session: flagship GLM-5.3 still gated (resolve config.json HTTP 401, probed 2026-08-27 15:44 PT)
-- [x] Tracker healthy: state zcloud=0 or=1 hf=0 (401), dedup explains silence since Aug 19, manual run clean
-- [x] Reconcile ideas — all 4 tags verified server-side
-- [x] Fresh OpenRouter probe: HTTP 200, z-ai/glm-5.3 listed (cloud-live evidence)
-- [x] clinerules_validate_completion: ALL PASSED
-- [x] clinerules_check_gate: GATE CLEAR
-- [x] attempt_completion shipped
+- [x] Diagnose why Jon's overrides don't bring button back (attempts=NULL)
+- [x] File build task as idea #28477
+- [x] Compress session + build handoff result
+- [x] Validate completion (all gates passed)
+- [x] Check structural gate (CLEAR)
+- [x] attempt_completion
 </task_progress>
 </attempt_completion>
 ```
 
-### `1787777775823` — 8/27/2026, 6:04:36 PM PT — 537 turns
+### `1787777775823` — 8/27/2026, 6:25:08 PM PT — 553 turns
 
 **Original task:**
 
@@ -252,7 +293,68 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </task_pro
 ```
 
-### `1787872718679` — 8/27/2026, 6:04:15 PM PT — 111 turns
+### `1787874780128` — 8/27/2026, 6:25:05 PM PT — 85 turns
+
+**Original task:**
+
+```
+Rebased on the MiniCheck work another window shipped this morning, audited it against live production, found three defects, and fixed all three. The short version: the fact-checking layer was live but pointed at the wrong emails, and the LLM judge behind it was actively making true sentences sound uncertain. The email system now checks model-written claims against the student's actual record in about a third of a second, and it no longer second-guesses template text it has no evidence for. All three fixes are deployed and verified against real data, not just linted.
+
+The one thing worth your a
+```
+
+**Ideas referenced:** #11316, #14741, #14742, #14749, #16069, #16817, #178712, #178760, #18944, #18951, #19419, #2050, #23483, #25909, #2625, #2626, #2628, #2629, #2631 [investigating], #26663, #26834, #26851, #27942 [deployed], #28028 [deployed], #28043 [deployed], #28044 [deployed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28205 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28225 [deployed], #28226 [deployed], #28233 [deployed], #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255 [rejected], #28256, #28306 [deployed], #28307 [proposed], #28308 [proposed], #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28332, #28369 [deployed], #28370 [deployed], #30043, #30515, #3098, #31646, #4930, #4958, #5431, #5779, #5794, #5795, #5819, #5908, #78350, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787875233227` — 8/27/2026, 6:25:01 PM PT — 113 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+I had about 3-4 ideas I just approved for VERITAS working on them and window died. Pick those back up. Had to do with you had said fixing issues before they become issues with the smaller LLMs and tha the documentation supported the premise. Remember? If not, lmk, but I did just approve thse in the last 10 minutes before the window died.
+```
+
+**Ideas referenced:** #081020, #15158, #178634, #178640, #178649, #178656, #178671, #178694, #178701, #178709, #178712, #19653 [queued], #19671 [rejected], #19686 [queued], #19689 [queued], #19776 [executing], #19777 [proposed], #19778, #19785 [deployed], #19788 [proposed], #19789 [proposed], #19934, #19969, #20135, #20163, #2025, #20556, #20698, #20727, #20776, #20777, #20783, #20798, #20801, #20812, #20866, #20868, #20912, #20921, #20928, #20929, #20937, #20943, #20952, #21024, #21035, #21036, #21038 [executing], #21060, #21063, #25468, #25471, #25515 [proposed], #2573, #25796, #25797, #25798, #25916 [awaiting_review], #26663, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #27933, #27942 [deployed], #27972, #28023 [proposed], #28028 [proposed], #28034, #28043 [proposed], #28044 [deployed], #28078 [proposed], #28088 [proposed], #28153 [proposed], #28154, #28212 [proposed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28226 [proposed], #28233 [deployed], #28239, #28307, #28313 [blocked], #28385, #28481 [proposed], #37492, #38124, #38910, #39296, #39362, #41522, #709171
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787517380902` — 8/27/2026, 6:25:01 PM PT — 783 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and analyze since last analysis
+
+VERITAS auto-correction is now live. Instead of blocking false emails into a black hole, the system now: (1) judges the email, (2) if FAIL, sends it to the LLM with the judge's named fixes to auto-correct, (3) re-judges the corrected version, (4) sends the corrected email. If it still fails after correction, it flags for human review but still sends (per your directive: better to send corrected than block). Verified: judge_and_correct function deployed to lib/truth_judge.php, mailer.php gate updated to call it, php -l clean, FPM reloaded.
+
+════
+```
+
+**Ideas referenced:** #12459, #13441, #16069, #16345, #16732, #178712, #18944, #18951, #19173, #19684, #2230, #23184, #2338, #2358, #25185, #2563, #25888, #25896, #25916, #25925, #25926, #25935, #2597, #2603, #2605, #26663, #26823, #26824, #26825, #26834, #26914 [deployed], #26915 [executing], #26916, #27492, #27690 [deployed], #27698 [deployed], #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27874, #27933, #27935, #27942 [deployed], #27972, #28025, #28026, #28028 [proposed], #28034, #28036, #28038, #28041, #28042 [proposed], #28043 [proposed], #28044 [proposed], #28078 [proposed], #28088 [proposed], #28110, #28111, #28117, #28153 [proposed], #28154 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28221, #28233 [deployed], #4991, #6230, #8798
+
+**Last PICKUP PROMPT:**
+
+```
+'\ns=io.open(p,encoding='utf-8').read()\n\nold_strip = \"\"\"        foreach (['PICKUP PROMPT', 'Pick up task', 'Where we left off', str_repeat(\"\\xE2\\x95\\x90\", 10)] as $__m) {\"\"\"\nnew_strip = \"\"\"        foreach (['PICKUP PROMPT', 'Pick up task', 'Where we left off', '<use_mcp_tool', '<invoke', '<function_calls', str_repeat(\"\\xE2\\x95\\x90\", 10)] as $__m) {\"\"\"\n\nold_cache = \"\"\"    if ($__key !== null && $__pdo !== null) {\n        try {\n            $__st = $__pdo->prepare('INSERT INTO veritas_verdict_cache (cache_key, surface, original_verdict, final_verdict, corrected_text, corrected, needs_review) VALUES (?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE final_verdict=VALUES(final_verdict), corrected_text=VALUES(corrected_text), corrected=VALUES(corrected), needs_review=VALUES(needs_review), created_at=NOW()');\"\"\"\nnew_cache = \"\"\"    // #28213 fix (2026-08-27): ERROR means the judge/correction infrastructure failed\n    // (timeout, HTTP error), NOT that the text is fine. Caching it would replay the\n    // fail-open outcome for the cache TTL on every identical body. Only cache real\n    // verdicts (PASS/FAIL) so transient errors retry on the next send.\n    if ($__key !== null && $__pdo !== null && $__result['verdict'] !== 'ERROR') {\n        try {\n            $__st = $__pdo->prepare('INSERT INTO veritas_verdict_cache (cache_key, surface, original_verdict, final_verdict, corrected_text, corrected, needs_review) VALUES (?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE final_verdict=VALUES(final_verdict), corrected_text=VALUES(corrected_text), corrected=VALUES(corrected), needs_review=VALUES(needs_review), created_at=NOW()');\"\"\"\n\nassert s.count(old_strip)==1, 'strip anchor count=%d' % s.count(old_strip)\ns=s.replace(old_strip,new_strip,1)\nassert s.count(old_cache)==1, 'cache anchor count=%d' % s.count(old_cache)\ns=s.replace(old_cache,new_cache,1)\nio.open(p,'w',encoding='utf-8').write(s)\nprint('PATCHED')\nPYEOF\necho '=== LINT ===' && php -l lib/truth_judge.php && echo '=== READ-BACK FIX A ===' && grep -n \"verdict'] !== 'ERROR'\" lib/truth_judge.php && echo '=== READ-BACK FIX B ===' && grep -n 'use_mcp_tool' lib/truth_judge.php | head -2"}
+</arguments>
+<task_progress>
+- [x] Rule 119 compress-signal check (none present)
+- [x] #28213: patch applied — max_tokens 4000→1600, timeout 60→120 config-driven, 1 retry
+- [x] #28213: e2e chain verified (157s full chain, no timeout)
+- [x] Found: correction model can emit tool-call XML as "corrected text" + ERROR verdicts cached
+- [ ] #28213: apply both new fixes with correct anchors
+- [ ] #28220: classify sample + template-recurrence finding
+- [ ] Reconcile ideas + validate + ship completion
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787872718679` — 8/27/2026, 6:24:59 PM PT — 143 turns
 
 **Original task:**
 
@@ -271,115 +373,11 @@ approved
 FIXED. The Invalid API Response errors are gone, and here is the whole story in
 ```
 
-**Ideas referenced:** #12430, #12597, #15367, #178769, #18395, #18930, #19188, #19261, #19273, #19360, #19363, #19379, #19404, #19407, #19416, #19423, #19435, #19439, #19454, #19491, #19509, #19629, #20206, #2043, #2076, #20903, #2113, #23281, #27284, #28252 [approved], #28254 [approved], #28313 [blocked], #28314 [deployed], #28315 [executing], #28316 [proposed], #28317 [executing], #9222
+**Ideas referenced:** #12430, #12597, #15367, #178769, #18395, #18930, #19188, #19261, #19273, #19360, #19363, #19379, #19404, #19407, #19416, #19423, #19435, #19439, #19454, #19491, #19509, #19629, #20206, #2043, #2076, #20903, #2113, #23281, #27284, #28252 [approved], #28254 [approved], #28313 [blocked], #28314 [deployed], #28315 [executing], #28316 [proposed], #28317 [executing], #8598, #9222
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787600722263` — 8/27/2026, 6:04:06 PM PT — 297 turns
-
-**Original task:**
-
-```
-Jon says his overrides are not quite sticking. This is his question:
-
-How to I make an attempt bottom reappear for a student that has an exam extension already?
-```
-
-**Ideas referenced:** #004085, #059669, #139139, #139140, #139144, #139145, #13984, #13985 [blocked], #13986, #14215, #155724, #15803, #166534, #1715, #2563, #28477 [proposed], #3730, #374151, #4338, #6067, #6366, #78350, #831843, #856404, #9086, #9181, #9204, #92400, #9888
-
-**Last PICKUP PROMPT:**
-
-```
-ield control, deploy + verify.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #28477 [proposed] — Give Jon full exam-override capabilities (set attempts, not just close date).
-
-Where we left off (verified 2026-08-27 16:24 AKDT):
-- Jon's exam extensions are Moodle quiz user overrides created with attempts=NULL (close-date-only).
-- For students who EXHAUSTED their attempts, the attempt button does NOT reappear even with a valid future extension; extending close date does NOT grant a new attempt.
-- Verified live: recent quiz_overrides rows (students 52144, 51419, 53139, 54072, 51105) ALL attempts=NULL.
-- Student 52144 example: overrides quiz 954 (Exam 5), 964 (Exam 6), 966 (Final Exam), all closing 2026-09-14, attempts NULL; has attempts remaining (used 1 of 3 on 954) so their button shows. Blocked students are the attempt-exhausted ones.
-- admin_portal.local_exam_policy_track has 0 admin_override rows (overrides created in Moodle, not via EMSU policy path).
-- THE BUTTON FIX: on the student's quiz user override set BOTH future Close date AND Attempts allowed > attempts already used, then purge Moodle cache.
-- Diagnosis complete + advised. Build NOT started (context compressed before investigation).
-
-Open threads to drive next:
-1. #28477 [proposed] — Locate the override/extension creation tool Jon uses (exam_override.php or custom EMSU tool; Jon=jthompson already has force-approve access), add attempts-field control so Jon can grant attempts when a student exhausted them, deploy + verify end-to-end.
-
-Reference IDs:
-- Ideas filed: #28477 [proposed]
-- Files touched: none (read-only so far)
-- Tables queried: moodle_c_live.quiz_overrides, quiz_attempts, quiz; admin_portal.local_exam_policy_track
-
-# Reversal Log
-No reversals this window.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Diagnose why Jon's overrides don't bring button back (attempts=NULL)
-- [x] File build task as idea #28477
-- [x] Compress session + build handoff result
-- [x] Validate completion (all gates passed)
-- [x] Check structural gate (CLEAR)
-- [x] attempt_completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1787516033804` — 8/27/2026, 6:03:23 PM PT — 215 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Routing
-
-Rebase, tell me where this is at now:
-
-Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
-
-Where we left off (verified 2026-08-23 11:35 AM AKDT):
-- Patched /etc/litellm/_router_core.py + router_hook.py: vision doorman 50/50 now ONLY kimi-k3 / claude-sonnet-5-vision; glm-4.6v-flash removed from describe-prepass fallback; hard guard rewrites glm-4.6v-flash -> kimi-k3 (verified: emsu-operations ssh_command ran the patch script and returned 'ALL PATCHES APPLIED', py_compile exit 0, backups tagged 20260823-122303)
-- LiteLLM safe-resta
-```
-
-**Ideas referenced:** #11945, #12584, #12680, #12824, #12872, #12878, #16345, #16663, #16696, #178742, #178750, #1876, #19338, #19458, #19491, #2073, #21582, #2294, #2307, #2314, #23169, #2341, #2343, #2344, #25097 [implemented], #25111, #25122 [implemented], #25125 [implemented], #25196 [executing], #25747, #25754, #25755, #25757, #25759, #25764, #25765, #25812, #25916, #2597, #2603, #2605, #26209, #26211, #26233, #26663, #26823, #26824, #26825, #27492, #27503, #27690 [deployed], #27698 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27858 [deployed], #27869 [proposed], #27933 [deployed], #27935, #27972, #28025, #28026, #28033 [proposed], #28034 [deployed], #28035 [proposed], #28208 [proposed], #6826
-
-**Last PICKUP PROMPT:**
-
-```
-n so the row reflects reality.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1787507044981 — frankenstein-llm vision routing fix (glm-4.6v-flash 400s).
-
-Where we left off (verified 2026-08-25 5:17 PM AKDT):
-- Vision routing fix is LIVE: litellm `active`, /health/liveliness HTTP 200, hard guard present in /etc/litellm/_router_core.py (5738/5742/5747/5774/5780) + router_hook.py:520. Doorman picks are kimi-k3 / claude-sonnet-5-vision only; zero glm-4.6v-flash 400s in audit log. Backup router_hook.py.bak-visiondoorman-kimi-sonnet-20260823-122303 present.
-- Discrepancy: no 122303-tagged _router_core.py backup found (only Aug-22 vision* backups); current _router_core.py DOES carry the guard, so fix is intact but rollback backup unconfirmed.
-- Side fix shipped: BigMac heartbeat writer — added bigmac:8000 to cron_fleet_inventory_autosync.php $REGISTRY + removed double-flock self-deadlock in /etc/cron.d/emsu-fleet-inventory-autosync; bigmac now `healthy`, last_heartbeat 2026-08-25 18:09:42.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #28033 [proposed] — patch vision doorman to fire on remote-URL images (currently only base64 screenshots trigger it; URL images fall through to text ladder). Tool: read /etc/litellm/_router_core.py vision-prep branch, add URL-image detection, py_compile + litellm-safe-restart + synthetic URL-image curl test.
-2. #28035 [proposed] — advance the (already-deployed) BigMac heartbeat fix through idea_action so the row reflects reality; confirm the next hourly cron.d run completes without "already running" and BigMac heartbeat stays fresh.
-
-Reference IDs:
-- Ticket: (primary) task #1787507044981
-- Ideas filed: #28033 [proposed], #28035 [proposed]
-- Files touched: /etc/cron.d/emsu-fleet-inventory-autosync (+ .bak-20260825-181027), /var/www/emtskills/cron/cron_fleet_inventory_autosync.php (+ .bak-bigmac-20260825-180703)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787707484695` — 8/27/2026, 6:03:08 PM PT — 269 turns
+### `1787707484695` — 8/27/2026, 6:17:32 PM PT — 280 turns
 
 **Original task:**
 
@@ -396,91 +394,108 @@ Craft a response for me. We are sending the check today/tomorrow. So obviously n
 **Last PICKUP PROMPT:**
 
 ```
-d-back before quoting figures)
+d logged in the prior window.)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787784000000 — DSHS ORR A07292026.0450006 cost estimate acceptance + three-document set.
+Pick up task #1787784000000: DSHS ORR A07292026.0450006 cost estimate acceptance + three-document set.
 
-Where we left off (verified 2026-08-27 3:55 PM AKDT):
-- Acceptance + payment already sent: Jon Thompson email 2026-08-26 3:30 PM to OpenRecords@dshs.texas.gov, check #7091718227 for $2,318.40 mailed 2026-08-26 (USPS 9410 8301 0935 5011 0022 15)
-- Three-doc set drafted in ~/Desktop/DSHS_openrecords_responses_2026-08-25.md (Doc A acceptance+determination+rolling, Doc B TPIA-010 follow-up, Doc C AG complaint re excessive date)
-- Pricing: itemized total $2,318.40 is operative; letter body's $680.40 is an internal discrepancy we flagged and asked HHSC to confirm
-- All three emails presented inline to Ruben this session
+Where we left off (verified 2026-08-27 5:03 PM AKDT):
+- Acceptance + payment already sent: Jon Thompson email 2026-08-26 3:30 PM; check #7091718227 for $2,318.40 mailed 2026-08-26 (USPS 9410 8301 0935 5011 0022 15)
+- Copy-paste HTML updated rev 2026-08-27: ~/Desktop/DSHS_openrecords_copy_emails.html. All 3 emails incorporate Jon's email + anti-waiver/anti-delay clauses; browser-verified
+- Pricing operative: $2,318.40 (letter body $680.40 = internal discrepancy, flagged)
 
 Open threads to drive next:
-1. #28219 [proposed] — Track check #7091718227 delivery + assert Doc A positions (excessive-date determination, rolling production, $680.40 confirmation) from Ruben's mailbox by 2026-09-09; send Doc B; file Doc C with TX AG by 2026-09-09 (verify AG intake address first)
+1. #28219 [proposed] (verified: direct mysql SELECT of orchestrator_ideas at 2026-08-27 5:03 PM AKDT returned id=28219, status=proposed, dev_stage=idle). Send Email 1 as reply-in-thread to Jon's, send Email 2, file Doc 3 with TX AG, all by 2026-09-09; verify AG intake address first; track check delivery
 
 Reference IDs:
 - Ideas filed: #28219 [proposed]
-- Files touched: ~/Desktop/DSHS_openrecords_responses_2026-08-25.md (read), admin_portal.compliance_investigation_responses rows 202-208 (read)
+- Files touched: ~/Desktop/DSHS_openrecords_copy_emails.html (rewritten rev 2026-08-27)
 
 # Reversal Log
-- "check is $1,825.00" (prior-window completion) → corrected to "$2,318.40" | RCA bucket: insufficient probe | causal rule updated: 317
+No reversals this window.
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
+<command>open /Users/rubenmajor/Desktop/DSHS_openrecords_copy_emails.html</command>
 <task_progress>
-- [x] Located the real record (investigation 16, rows 202-208)
-- [x] Pricing discrepancy resolved: $2,318.40 is operative (not $1,825); letter's $680.40 is internal discrepancy
-- [x] All 3 emails presented inline
-- [x] Completion shipped with reversal log
+- [x] Updated HTML with Jon-incorporated emails
+- [x] Verified rendering in browser
+- [x] Direct-read reconcile substitute for #28219 (status=proposed)
+- [x] Context budget check: GREEN
+- [x] Validate completion: ALL PASSED
+- [x] Gate CLEAR, completion shipped
 </task_progress>
 </attempt_completion>
 ```
 
-### `1787874780128` — 8/27/2026, 6:02:33 PM PT — 69 turns
+### `1787783324531` — 8/27/2026, 6:09:09 PM PT — 182 turns
 
 **Original task:**
 
 ```
-Rebased on the MiniCheck work another window shipped this morning, audited it against live production, found three defects, and fixed all three. The short version: the fact-checking layer was live but pointed at the wrong emails, and the LLM judge behind it was actively making true sentences sound uncertain. The email system now checks model-written claims against the student's actual record in about a third of a second, and it no longer second-guesses template text it has no evidence for. All three fixes are deployed and verified against real data, not just linted.
+# GLM 5.3: reminder set + your "why can't we use it" question answered
 
-The one thing worth your a
+IS IT OUT NOW? Can we download and get started/upgrade?
+
+## Direct answer: why can't we use GLM-5.3 cloud via z.ai in Cline / frankenstein-llm today?
+ 
+Because **Zhipu has not granted your account access yet — it is a server-side gate, not something we can configure around.** I proved this with a live request a few minutes ago, not a guess:
+
+- `POST https://api.z.ai/api/paas/v4/chat/completions` with `model=glm-5.3` using your real key returneode":"1220","message":"You do not have permission to access glm-5.3"}}`
+- The exa
 ```
 
-**Ideas referenced:** #11316, #14741, #14742, #14749, #178712, #178760, #19419, #2050, #2625, #2626, #2628, #2629, #2631 [investigating], #26663, #26851, #27942 [deployed], #28028 [deployed], #28043 [deployed], #28044 [deployed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28205 [deployed], #28213 [proposed], #28218 [deployed], #28220 [proposed], #28225 [deployed], #28226 [deployed], #28233 [deployed], #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255 [rejected], #28306 [deployed], #28307 [proposed], #28308 [proposed], #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28332, #28369 [deployed], #28370 [deployed], #30043, #30515, #31646, #4930, #4958, #5431, #5779, #5794, #5795, #5819, #5908
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787764336166` — 8/27/2026, 6:02:24 PM PT — 107 turns
-
-**Original task:**
-
-```
-Asked  this befroe --> 
-
-Why does this say Hi Moodle and was the student's issue resolved? I've asked on this before 2x so this is a repeat issue on the name issue. The other, lmk
-```
-
-**Ideas referenced:** #10024, #13085, #13121, #1617, #1618, #1674, #1754, #1755, #1816, #18748 [approved], #18786 [deployed], #18820, #18843 [deployed], #18844 [deployed], #18845 [deployed], #18852, #18853 [proposed], #1921, #19239 [rejected], #19261, #22750 [proposed], #22751 [proposed], #26167, #48242, #5387, #5920, #65039, #7053, #7074, #7212, #7553, #7882, #8082, #8563, #8596, #8597, #8598, #8639, #8798, #8811, #9083, #9086, #9225, #9577, #9578, #9579, #9878
+**Ideas referenced:** #19686, #1993 [deployed], #25185, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #28332 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-2026‑06‑15 23:02 PT.*
-</result>
+d] and idea #26713 [proposed].
+
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #<none> — Resolve “Hi Moodle” greeting question.
-(Verified 2026‑08‑26 10:30 PT)
 
-Where we left off (verified 2026‑08‑26 10:30 PT):
-- No open tickets or ideas pending on this issue.
+Pick up task #26712 [proposed] — GLM 5.3 local Hex ring build + straight-to-5.3 cutover.
 
-Open threads to drive next (none).
+Where we left off (state as of 2026-08-27 17:59 PT):
+- Cloud GLM-5.3 is live and serving: Zhipu key whitelisted + OpenRouter lists z-ai/glm-5.3 (probe this session: /api/v1/models HTTP 200; event log 6609341, 6671375, 6671376).
+- Flagship weights still gated: zai-org/GLM-5.3 resolve config.json + repo API both HTTP 401 (probe 2026-08-27 16:55 PT; control GLM-4.5 = 307 public). Local ring un-buildable until public.
+- Tracker healthy: state zcloud=0 or=1 hf=0 (401), cron /etc/cron.d/emsu-glm53-release-tracker daily 07:05 PT, manual run 16:48 PT clean (event 7351821).
+- Bake-off removed per Ruben 2026-08-27: go straight to 5.3, no 5.2-vs-5.3 comparison. Cutover idea updated to match.
+- Runbook: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md (bake-off section to be removed at cutover).
+
+Open threads to drive next:
+1. #26712 [proposed] — When tracker fires hf=1: download zai-org GLM-5.3/FP8, AWQ 4-bit requant, single-box vLLM validate (glm47 tool parser / glm45 reasoning), PP=6 Hex ring relaunch per GLM52 recipe.
+2. #26713 [proposed] — After single-box validation + soak (straight to 5.3, no bake-off): flip registry tier L3/L4g, router_hook GLM-first target, FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h; strip the bake-off section from the runbook.
 
 Reference IDs:
-- Ticket #7553 — Email‑template name placeholder bug (status resolved).
-- File `lib/EmailGreetingTemplate.php` (updated commit c3f9a1b).
+- Pending ideas:
+  - #26712 [proposed] (direct read: proposed / idle)
+  - #26713 [proposed] (direct read: proposed / idle, updated 2026-08-27 17:59 PT)
+- Files touched: /usr/local/bin/emsu_glm53_release_tracker.sh, /etc/cron.d/emsu-glm53-release-tracker, /var/lib/emsu/glm53_release_state
+- Event log: 6609341, 6671375, 6671376 (Aug 18-19 gate-clears), 7351821 (manual run re-fire)
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-════════════════════════════════════════───────
+# Reversal Log
+No reversals this window.
 
+On completion, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Prior window: cloud glm-5.3 out (Zhipu + OpenRouter), flagship weights 401
+- [x] Fresh probe THIS turn: flagship GLM-5.3 still 401 gated (resolve + repo API), control GLM-4.5 = 307 public → gate is real
+- [x] Updated #26713 to drop bake-off (straight to 5.3) — read-back confirms new text present, old gone
+- [x] Direct DB read = reconcile substitute (rule 267 amendment): 26711 deployed, 26712 proposed, 26713 proposed, 26715 deployed
+- [x] clinerules_validate_completion: ALL PASSED
+- [x] clinerules_check_gate: GATE CLEAR
+- [x] attempt_completion shipped
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787517352553` — 8/27/2026, 5:58:50 PM PT — 324 turns
@@ -587,18 +602,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] check_gate CLEAR + shipped compressed result
 - [ ] (next window) Build + s
 ```
-
-### `1787876909491` — 8/27/2026, 5:49:20 PM PT — 9 turns
-
-**Original task:**
-
-```
-#PostMark Issue 
-
-Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787775322285` — 8/27/2026, 5:09:12 PM PT — 104 turns
 

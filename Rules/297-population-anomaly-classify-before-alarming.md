@@ -166,3 +166,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-26 reversal: claimed 'Qwen3.8-27B cannot obey the 280K-char Cline system prompt' as the cause of rule-91/tool-obedience failures. That is a MODEL-CAPABILITY claim asserted from a general prior about parameter count, with zero probe of the model's actual served context or its actual tool-call behavior. Both refuted in one turn: claudia :11521 /v1/models reports max_model_len=131072 (and the family supports up to 1M), and a live tool-bearing probe through the adapter returned finish_reason=tool_calls with a valid, well-formed tool call. Amended behavior: before attributing a behavioral failure (tool disobedience, truncation, format violation) to a MODEL's capability, run the capability probe that would falsify it — read the served max_model_len from /v1/models and send one request exercising the exact behavior in question. A parameter count is never evidence of a capability limit; the failing behavior must be reproduced against that specific model, at that specific served context
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-28 22:43 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787931475695
+- RCA bucket: wrong premise
+- Trigger pattern: recommending a capacity ceiling raise on a serving ring from utilization/tuning priors alone, without probing the ring's recent wedge/relaunch history
+- Reversal note: 2026-08-28 reversal: recommended raising the GLM ring admission ceiling as the 'obvious' next improvement BEFORE probing the wedge-rate population; the ring had wedged 3x in 3 hours under seq=128 load (each a 14-min hard failure), which the recommendation never weighed. Bug-library precedent (entry 2182) supports raising ONLY when the aggregate curve is verified rising. Amended behavior: before recommending any admission/concurrency ceiling RAISE on a serving ring, probe the failure population first (wedge/relaunch count over the trailing 24h) and the aggregate throughput curve; a ring with active wedge events gets a measure-first or lower-admission recommendation, never a raise.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

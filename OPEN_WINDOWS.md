@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 10:53:15 AM PT | window: last 72h | 34 tasks | index total 931 (parsed 3, cached 928)
+Generated: 8/28/2026, 11:53:15 AM PT | window: last 72h | 34 tasks | index total 931 (parsed 1, cached 930)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787937972952` | 8/28/2026, 10:52:24 AM | 41 | 147KB | #GLM 5.3 Local |
+| `1787937972952` | 8/28/2026, 11:38:46 AM | 332 | 595KB | #GLM 5.3 Local |
 | `1787931475695` | 8/28/2026, 10:45:33 AM | 132 | 22802KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
 | `1787937882474` | 8/28/2026, 10:24:43 AM | 1 | 7KB | #GLM 5.3 |
 | `1787783324531` | 8/28/2026, 10:22:16 AM | 1712 | 11444KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
@@ -49,7 +49,7 @@ Generated: 8/28/2026, 10:53:15 AM PT | window: last 72h | 34 tasks | index total
 
 ## Per-window detail
 
-### `1787937972952` — 8/28/2026, 10:52:24 AM PT — 41 turns
+### `1787937972952` — 8/28/2026, 11:38:46 AM PT — 332 turns
 
 **Original task:**
 
@@ -63,9 +63,52 @@ When I said to preserve the OG, i meant just drop in replace, not keep the name 
 GLM 5.3 local ring upgrade is DONE and serving (verified: curl http://127.0.0.1:8210/v1/models returned id=glm-5.3-15pct at 10:21 PT; /etc/litellm/config.yaml has 7 ref
 ```
 
-**Ideas referenced:** #11991, #12584, #12825, #13470, #16063, #16265, #16602, #16625, #16680, #17202, #17203, #17205, #17300, #17307, #178787, #18312, #1876, #19338, #19686, #1998, #20264, #20495, #22897, #25468, #25607, #25757, #25759, #25764, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed]
+**Ideas referenced:** #10108, #10869, #11991, #12584, #12618, #12672, #12680, #12688, #12689, #12825, #13453, #13470, #14133, #14142, #16063, #16265, #16602, #16625, #16646, #16648, #16680, #16715, #17145, #17174, #17202, #17203, #17205, #17300, #17307, #178787, #178793, #18312, #1876, #18820, #18868, #19338, #19585, #19686, #1998, #20264, #20495, #22856, #22897, #25468, #25607, #25757, #25759, #25764, #2640, #2641 [deployed], #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #27100, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #28581 [proposed], #9706
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+d zero WINDOW_O_DOWN markers).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787931475695 - GLM 5.3 local lane rename + serving verification (drop-in replace)
+
+Where we left off (verified 2026-08-28 11:37 PT):
+- Ring serves glm-5.3-15pct on :8210 PP=6 Hexarchy, 131K ctx, NVFP4 (verified: curl /v1/models + canary healthy pass_streak 21)
+- ALL 8 lanes renamed 5.2->5.3 and PONG-verified: glm-5.3-local, frankenstein-glm53-local, glm53-only, glm-5.3-max/smart/obedient/local-direct, argus-chat
+- glm-5.3-obedient repaired: was pointing at dead :11511 adapter (broken pre-rename), now on healthy :11510 (verified PONG)
+- Ring split out of paid glm-5.2 dual pool; glm-5.2 is cloud-only now; steering + r91 gates fire on new names in live traffic
+- /v1/model/info shows all 5.3 lanes registered, zero 5.2-local left; qwen rung QWEN_OK
+- Dead /tmp cron entries removed; stale glm52-health-monitor.service disabled; 8 PHP crons + livechat + alltastic + ctx-ceiling + ring-status callers renamed
+
+Open threads to drive next:
+1. #28581 [deployed] — GLM 5.3 lane rename complete (verified: reconcile_ideas returned "status=deployed dev_stage=n/a"; live read-backs: 8-lane PONG suite, /v1/model/info registry listing, router audit log traffic)
+2. Watch item (monitoring, no idea) — keep_warm first-token latency on cold ring moments; rotation daemon 90s slow-decode window may CHAT_WEDGE-mark the ring during load spikes (by-design stall-bursts, self-recovers; zero members dropped)
+
+Reference IDs:
+- Ideas filed: #28581 [deployed]
+- Ideas closed: none
+- Bug library: frankenstein_router_incidents 2641 (glm53_lane_rename_drop_in_replace_2026_08_28)
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/hooks/frankenstein_glm52.py, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/api/livechat/webhook.php, /var/www/emtskills/routes/alltastic_api.php, /var/www/emtskills/api/glm_context_ceiling.php, /var/www/emtskills/api/glm52_ctx_ring_status.php, /var/www/emtskills/cron/ (8 cron files), /var/www/emtskills/clinerules/LLM_FLEET_STATE.md, /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, cline_task_ledger.md
+
+# Reversal Log
+No reversals this window. (Two pre-existing defects were discovered during the verification sweep and fixed in-window: the obedient lane's dead :11511 target, and the free-ring-in-paid-pool mixing. Both were repairs of pre-existing breakage, not corrections of claims made earlier in this window; both are recorded in bug-library incident 2641.)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Verify GLM 5.3 ring serving live (:8210 + :8211 both serve glm-5.3-15pct, 131K ctx; rotation daemon kai=ready)
+- [x] Map blast radius: all callers mapped (config lanes, _router_core refs, registry, PHP callers, systemd, /tmp crons)
+- [x] Rename lanes glm-5.2* -> glm-5.3* in config.yaml + fallback chains + split dual glm-5.2 pool (ring -> glm-5.3-local-direct)
+- [x] Update _router_core.py + router_hook.py + lane hook (STEERING_MODELS, L4g tier, priority gate, SERVED_CTX, RING_DIRECT, no-reroute, surface map)
+- [x] Update frankenstein_registry.yaml + PHP callers (livechat webhook, alltastic, ctx ceiling, ring status dual-match, 8 cron files)
+- [x] Clean dead /tmp cron entries + disable stale glm52-health-monitor unit
+- [x] Safe-restart litellm + verify end-to-end (8/8 l
+```
 
 ### `1787931475695` — 8/28/2026, 10:45:33 AM PT — 132 turns
 

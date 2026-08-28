@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 8:53:13 AM PT | window: last 72h | 32 tasks | index total 929 (parsed 4, cached 925)
+Generated: 8/28/2026, 9:53:14 AM PT | window: last 72h | 32 tasks | index total 929 (parsed 3, cached 926)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787783324531` | 8/28/2026, 8:53:12 AM | 556 | 10294KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787876909491` | 8/28/2026, 8:52:58 AM | 279 | 1438KB | #PostMark Issue  |
-| `1787931475695` | 8/28/2026, 8:52:57 AM | 47 | 892KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
-| `1787901041894` | 8/28/2026, 8:51:59 AM | 355 | 1581KB | What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow a |
+| `1787783324531` | 8/28/2026, 9:53:04 AM | 1207 | 11004KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
+| `1787931475695` | 8/28/2026, 9:40:01 AM | 93 | 22353KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
+| `1787876909491` | 8/28/2026, 9:28:25 AM | 358 | 1744KB | #PostMark Issue  |
+| `1787901041894` | 8/28/2026, 9:15:14 AM | 480 | 1743KB | What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow a |
 | `1787874780128` | 8/28/2026, 1:31:03 AM | 202 | 11050KB | Rebased on the MiniCheck work another window shipped this morning, audited it against live |
 | `1787872718679` | 8/28/2026, 1:18:29 AM | 272 | 4748KB | HOw is this going now?  |
 | `1787602675527` | 8/28/2026, 12:58:52 AM | 554 | 11878KB | Fix this issue |
@@ -47,7 +47,7 @@ Generated: 8/28/2026, 8:53:13 AM PT | window: last 72h | 32 tasks | index total 
 
 ## Per-window detail
 
-### `1787783324531` — 8/28/2026, 8:53:12 AM PT — 556 turns
+### `1787783324531` — 8/28/2026, 9:53:04 AM PT — 1207 turns
 
 **Original task:**
 
@@ -64,22 +64,58 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exa
 ```
 
-**Ideas referenced:** #1130, #1131, #12364, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16648, #16778, #16802, #16803, #16839, #16851, #17145, #17202, #17205, #17246, #1744, #1779, #1798, #1828, #18471, #18947, #19567, #19686, #1986, #1993 [deployed], #20042, #20272, #20495, #20536, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2127, #2157, #2159, #2168, #21684, #2174, #2185, #22856, #22897, #2299, #2307, #2314, #25185, #25378, #25381, #2546, #2603, #26209, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27236, #27249 [executing], #27250, #27503, #28332 [proposed], #28434 [proposed], #28498 [executing], #28499 [proposed], #28545, #5197, #7142, #7149
+**Ideas referenced:** #1130, #1131, #12299, #12364, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16588, #16648, #16778, #16802, #16803, #16839, #16851, #17145, #17202, #17205, #17246, #1744, #1779, #1798, #1828, #18442, #18471, #18695, #1876, #18947, #19205, #19227, #19338, #19458, #19491, #19567, #19615, #19686, #1986, #1993 [deployed], #20042, #20272, #20495, #20536, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2127, #2157, #2159, #2168, #21684, #2174, #2185, #2238, #22856, #22897, #2299, #2307, #2314, #2336, #2337, #2338, #2340, #25185, #25378, #25381, #2546, #2571, #25887, #2603, #26209, #2637 [resolved], #2638 [open], #2639 [resolved], #2640, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27236, #27249 [executing], #27250, #27503, #28332 [proposed], #28434 [proposed], #28498 [executing], #28499 [proposed], #28507, #28545 [proposed], #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #5197, #7142, #7149, #9019
 
 **Last PICKUP PROMPT:**
 
 ```
-EMORY blob. Per rule 91's compression protocol, I append my own 47-char-divider PICKUP PROMPT block below the blob (the blob's internal 63-char dividers don't count), then validate before shipping.
+glm-5.3 cloud, all free-first.
 
-<use_mcp_tool>
-<server_name>clinerules</server_name>
-<tool_name>clinerules_validate_completion</tool_name>
-<arguments>
-{
-  "result_text": "═══════════════════════════════════════════════════════════════\nSESSION MEMORY (auto-compressed 2026-08-28T15:04:25Z, original 169K tokens)\n═══════════════════════════════════════════════════════════════\n\n## Task\nGLM-5.3 LOCAL install + serve end-to-end (PP=6 Hex ring) + support the release-tracker cron, per Ruben steer that local weights are now out.\n\n## Session memory (what's already been done this window)\n- GLM-5.3 CLOUD already live: #26711 [deployed]. ZhipuAI whitelist cleared 8/18, direct probe HTTP 200 + real gen; OpenRouter fallback wired in /etc/litellm/config.yaml, both lanes probed 200.\n- Ruben steer 2026-08-28 07:01 PT: \"Ok glm 5.3 local is now out. install and bring to serving end to end. Support the cron.\"\n- Prior state: zai-org HF weights were 401-gated; Ruben says now out. VERIFY live before acting (rule 317).\n- Full plan prepped: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md.\n- Tracker/cron live: /usr/local/bin/emsu_glm53_release_tracker.sh, cron /etc/cron.d/emsu-glm53-release-tracker (07:05 PT daily), idea #26715 [deployed].\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #26712 — GLM-5.3 LOCAL install + serve end-to-end. Ruben steer 2026-08-28 07:01 PT: \"Ok glm 5.3 local is now out. install and bring to serving end to end. Support the cron.\"\n\nWhere we left off (verified 2026-08-28 07:04 PT):\n- GLM-5.3 CLOUD already live: #26711 [deployed]. ZhipuAI whitelist cleared 8/18, direct probe HTTP 200 + real gen; OpenRouter fallback wired (fallbacks:[{glm-5.3:[glm-5.3-openrouter]}] in /etc/litellm/config.yaml), both lanes probed 200.\n- Ruben now says GLM-5.3 LOCAL weights are OUT. Prior state was zai-org HF 401-gated; that gate has presumably cleared. VERIFY live before acting (rule 317): probe HF zai-org for GLM-5.3 weights — expect 200, not 401.\n- Full plan prepped: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md (vLLM ring launch, LiteLLM config, bake-off, cutover, rollback).\n- Tracker/cron live: /usr/local/bin/emsu_glm53_release_tracker.sh, cron /etc/cron.d/emsu-glm53-release-tracker (07:05 PT daily), idea #26715 [deployed].\n\nOpen threads to drive next (BUILD HERE per rule 267 GATE A0 — execute in-window, do not just file):\n1. #26712 [executing] — LOCAL install end-to-end: (a) verify HF zai-org GLM-5.3 weights now public via live probe; (b) download weights to Hex ring storage; (c) AWQ 4-bit requant; (d) single-box vLLM validate (glm47 tool parser / glm45 reasoning); (e) PP=6 Hex ring relaunch per GLM52 PP=6 recipe (nodes Cato/Aug/Pompey/Marcus/Tib/Cesar, PP=6 ONLY, rule 273, VLLM_ENGINE_READY_TIMEOUT_S=1800 + gpu_memory_utilization=0.82 per rule 277); (f) confirm ring serving via :8210/metrics generation_tokens_total+prompt_tokens_total counter-delta over >=60s + canary pass (rule 322 — engine counters, NOT adapter queue_depth).\n2. #26713 [proposed] — Cutover: bake-off glm-5.3 vs glm-5.2 (rule 121 matched-prompt quality/latency/cost) BEFORE flipping default; then registry tier + router_hook GLM-first target + FRANK_BOX_CAPACITY 8210; retire glm-5.2 after 48h soak.\n3. #26715 [deployed] — SUPPORT THE CRON: now that the gate c
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #26712 [executing] / #26713 [executing] — GLM ring 5.2->5.3 direct cutover (machinery in flight).
+
+Where we left off (checked 2026-08-28 09:18 PT):
+- Download incoai/GLM-5.3-NVFP4 on Cato rank0 at ~110 MB/s, 329/465 GB at 09:18, ETA ~09:40 PT (checked: du via ssh -p 2204).
+- Cato driver ~/glm53_upgrade_driver.sh v2 stop-first armed and running: verify shards -> stop 5.2 -> distribute over 200G RoCE fabric -> launch 5.3 workers-first -> verify gen+tools -> install glm53 watchdogs. Auto-rollback to 5.2. Log ~/logs/glm53_upgrade.log on cato.
+- WOPR orchestrator /usr/local/bin/glm53_upgrade_orchestrator.sh running: on COMPLETE runs /var/www/emtskills/scripts/glm53_wopr_flip.sh (LiteLLM 7-entry flip + safe-restart + adapter restart + watchdog re-enable + PONG + qwen-rung probe). Notifier files high-sev events.
+- WOPR ring watchdog disabled via /tmp/glm52_watchdog.disabled during window (orchestrator removes after).
+- SPILL LADDER FINAL (Ruben directive, live-verified RING_OK/QWEN_OK/CLOUD_OK): frankenstein-llm -> glm-5.2-local -> claudia-qwen38-27b -> deepseek-v4-pro-openrouter -> deepseek-v4-pro -> glm-5.3 (cloud FINAL rung, not a ring replacement). Adapter pool already ring -> qwen38 -> 120Bs. Config backup: config.yaml.bak-qwen-rung-20260828.
+- Hook /etc/litellm/hooks/frankenstein_glm52.py probes patched to glm-5.3-15pct (backup .bak-glm53-20260828). Adapter drop-in 50-glm53.conf + default patched.
+- Ideas: #26711 [deployed], #26712 [executing], #26713 [executing], #26715 [deployed], #28545 [deployed].
+
+Open threads to drive next:
+1. #26712 [executing] — after cutover (~10:45 PT) confirm: cato log shows UPGRADE COMPLETE; curl 127.0.0.1:8210/v1/models shows glm-5.3-15pct; measure health via :8210/metrics counter-delta (60s apart). Then update the idea status to match the verified state.
+2. #26713 [executing] — confirm /var/log/glm53-wopr-flip.log shows WOPR FLIP COMPLETE + END-TO-END PONG + QWEN RUNG OK; run frankenstein_verify_routing(model_id=glm-5.2-local) expecting 8210 backend; confirm watchdog re-enabled. Then update the idea status to match the verified state.
+3. Post-verify bookkeeping (inline, no idea): append serving state + measured tok/s to GLM52_RING_STATE_TRACKER.md 2026-08-28 section; mark runbook gates cleared with timestamps; keep 5.2 weights for rollback.
+4. If ROLLBACK fired: diagnose ~/logs/glm53_upgrade.log + /tmp/glm53_launch_r*.log on cato, fix, re-run driver (idempotent). (human-only decision — no idea: none)
+
+Reference IDs:
+- Ideas filed: #28545 [deployed]
+- Ideas executing: #26712 [executing], #26713 [executing]
+- Ideas closed: #26711 [deployed], #26715 [deployed]
+- Files touched: /etc/litellm/config.yaml (fallback chain + upcoming model-id flip), /var/www/emtskills/scripts/glm53_upgrade_driver.sh, /var/www/emtskills/scripts/glm53_wopr_flip.sh, /usr/local/bin/glm53_upgrade_orchestrator.sh, /usr/local/bin/glm53_upgrade_result_notifier.sh, /etc/litellm/hooks/frankenstein_glm52.py, /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/50-glm53.conf, /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, /home/rubenmajor/glm53_upgrade_driver.sh (cato), /usr/local/bin/emsu_glm53_local_installer.sh
+- Events: 7409969, 7407146, 7401620, 7401621
+
+# Reversal Log
+- 'GLM traffic spills to cloud glm-5.3 during ring-down' -> 'qwen 3
 ```
 
-### `1787876909491` — 8/28/2026, 8:52:58 AM PT — 279 turns
+### `1787931475695` — 8/28/2026, 9:40:01 AM PT — 93 turns
+
+**Original task:**
+
+```
+Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that. Can you investigate and resolve?
+```
+
+**Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #156528, #16213, #28114, #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787876909491` — 8/28/2026, 9:28:25 AM PT — 358 turns
 
 **Original task:**
 
@@ -89,44 +125,41 @@ EMORY blob. Per rule 91's compression protocol, I append my own 47-char-divider 
 Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
 ```
 
-**Ideas referenced:** #10234, #15905, #177918, #23483, #25909, #26663, #28256, #28307, #28331, #333333, #888888
+**Ideas referenced:** #10234, #14748, #15905, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #22086, #23483, #25909, #26663, #28256, #28307, #28331, #28543 [proposed], #28546 [proposed], #333333, #888888
 
 **Last PICKUP PROMPT:**
 
 ```
-──
-════════════════════════════════════════════════════════════════════════
-═══ PICKUP PROMPT ═══
-════════════════════════════════════════════════════════════════════════
-Pick up task #1779186100000 — PostMark Issue.
-(2026‑08‑27 11:23 PT)
+dger row appended per rule 07.
 
-Where we left off (verified 2026‑08‑27 11:23 PT):
-- Updated RedriveEaGeneration.php with valid Postmark SMTP credentials.
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task - Postmark SMTP outage: backlog drained + HTTP fallback + mailer-guard fix
 
-Open threads to drive next (EVERY item MUST have a real #ID):
-- None.
+Where we left off (verified 2026-08-28 08:26 PT):
+- 169 backlog emails resent via Postmark HTTP API with real MessageIDs (verified against communication_log + email_outbound_log)
+- 22 rows remain unsent, all correctly excluded: 12 postmark_suppression, 2 danger (61538 spam "40HQ", 61866 spam "DashCam"), 8 dup-already-delivered
+- HTTP-API auto-fallback live in lib/mailer.php line 1476 with attachment passthrough (#28543 [executing]); php -l clean, php-fpm reloaded; backup mailer.php.bak-httpfallback-20260828
+- ai_ticket_agent mailer-guard short-circuit live in cron_ai_ticket_agent.php line 507 (#28546 [executing]): internal "Outbound email blocked" tickets auto-close with zero student-facing reply
+- nremt.org added to MailerUrlAllowlist_TrustedExternal line 26; stale guard tickets 28253 + 28402 closed; mollyji1818 correct NREMT email delivered (comm 62305, msgid 85a4eaf4), wrong bounce-echo 62307 never sent
+
+Open threads to drive next:
+1. #28546 [executing] - verify mailer-guard short-circuit fires on the next cron pass by checking cron_ai_ticket_agent log for "MAILER-GUARD auto-closed" entries; add a ticket title-prefix block test
+2. #28543 [executing] - formalize http_resend_full.php into a reused lib with a smoke test, and probe the HTTP fallback path (not just the rescue script) so it is exercised before the next real SMTP outage
 
 Reference IDs:
-- Files touched: RedriveEaGeneration.php
-════════════════════════════════════════════════════════════════════════
+- Ticket: guard tickets 28402, 28253 (closed)
+- Ideas filed: #28543 [executing], #28546 [executing]
+- Files touched: /var/www/emtskills/lib/mailer.php, /var/www/emtskills/lib/MailerUrlAllowlist_TrustedExternal.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /home/emsuserver/http_resend_full.php, /Users/rubenmajor/Desktop/cline_task_ledger.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
 
-### `1787931475695` — 8/28/2026, 8:52:57 AM PT — 47 turns
-
-**Original task:**
-
-```
-Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that. Can you investigate and resolve?
-```
-
-**Ideas referenced:** #156528
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787901041894` — 8/28/2026, 8:51:59 AM PT — 355 turns
+### `1787901041894` — 8/28/2026, 9:15:14 AM PT — 480 turns
 
 **Original task:**
 
@@ -143,48 +176,44 @@ $mail->Password   = '';
 To complete the fix, I need the actual Postmark API token (used as the SMTP username) and any required password. Please provide these credentials (or specify where they should be stored) so I can update the file and verify email deli
 ```
 
-**Ideas referenced:** #0000, #12249, #12251, #12266, #12269, #12345 [deployed], #12588, #12589, #12590, #12688, #12689, #13470, #14133, #14142, #14230, #16648, #16715, #17202, #17203, #17205, #17300, #17673, #177918, #18670, #18671, #1876, #19454, #20251, #2277, #22820, #22897, #24995, #25066, #25130, #25155, #25185, #2525, #25888, #2636 [deployed], #2637 [deployed], #26503, #26505, #26774, #26896, #27657, #27658, #28492 [proposed], #28503 [deployed], #28508 [proposed], #28509 [proposed], #28544 [proposed], #99988, #999888
+**Ideas referenced:** #0000, #12249, #12251, #12266, #12269, #12345 [deployed], #12588, #12589, #12590, #12688, #12689, #13470, #14133, #14142, #14230, #16648, #16715, #17202, #17203, #17205, #17300, #17673, #177918, #18670, #18671, #1876, #19454, #20251, #2277, #22820, #22897, #24995, #25066, #25130, #25155, #25185, #2525, #25888, #2636 [deployed], #2637 [deployed], #2639, #26503, #26505, #26774, #26896, #27657, #27658, #28492 [proposed], #28503 [deployed], #28508 [proposed], #28509 [proposed], #28544 [proposed], #99988, #999888
 
 **Last PICKUP PROMPT:**
 
 ```
-ed 'R91_GATE_CANARY HEALTHY').
+if the config smoketests fail.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1779186100000 — frankenstein-llm clinerules disobedience + litellm restart 502.
+Pick up task #1779186100000 — litellm zero-downtime front proxy + rule-91 gate.
 
-Where we left off (verified 2026-08-28 08:45 PT):
-- #28509 [deployed] write_server_file escape-corruption FIXED: base64 transport + byte-count verify + post-write parse gate (rollback+throw on failure) + chmod. Torture fixture round-tripped byte-identical and executed clean; deliberately-broken file was rejected and rolled back. TS build clean, MCP service restarted onto it.
-- #28508 [deployed] warm-then-swap blue/green script at /usr/local/bin/litellm-bluegreen-restart.sh: config+router_hook smoketests before touching production, public-edge verification. HONEST: live test shows it does NOT close the ~28s window (StartedAt 08:36:42, last refusal 08:37:10) because the production container cold-boots. Script header corrected to state this.
-- #28544 [proposed] true zero-downtime = front proxy owning :4000 (litellm on backend port, flip upstream). nginx stream module NOT installed; requires moving litellm off :4000 (serving-contract change, one migration outage) in a controlled window.
-- litellm healthy: 3/3 public /v1/model/info probes 200. r91 gate alive in container (returns list, catches missing block). r91 canary green. No litellm-green container leftover.
+Where we left off (verified 2026-08-28 09:13 PT):
+- #28544 [deployed] TRUE ZERO-DOWNTIME SHIPPED. haproxy 2.8.16 owns 127.0.0.1:4000 (Restart=always, enabled at boot); litellm moved to backend :4100 via the port token in /etc/systemd/system/litellm.service.d/10-frugal.conf (the drop-in holding the EFFECTIVE ExecStart; the base unit copy is overridden/inert); spare color :4101; haproxy stats on :4099.
+- CHOSE HAPROXY OVER NGINX STREAM: nginx is Plesk sw-nginx 1.30.4, distro stream module is 1.24.0 - ABI mismatch would have risked the nginx serving emtskills/moodle/admin-portal/onlyambos.com/vec-api.
+- MEASURED: 300/300 client probes 200 across a full deploy, ZERO failures (was ~28s of hard 502s). A real chat completion through :4000 returned content 'PROXY OK'. Public edge verified 4/4 200 from off-box.
+- RESIDUAL UNDERSTOOD: a plain `systemctl restart litellm` still cuts 2-3 in-flight requests (haproxy SD flag = already-accepted connection died; cannot be retried). Two tuning attempts left the count identical, which is what disproved the timeout theory. Use the deploy script instead.
+- #28509 [deployed] write_server_file base64 + parse gate is live and was used repeatedly this session (it auto-ran 'bash -n: OK' and 'Python ast.parse: OK' on every script shipped).
+- #28503 [deployed] rule-91 enforcement gate alive; canary green (bad fixture flags 4 violations, good fixture clean).
+- #28508 [deployed] the older warm-then-swap script remains for config-safety but is superseded for deploys by litellm-zdt-deploy.sh.
 
 Open threads to drive next:
-1. #28544 [proposed] — schedule a controlled window and build the front proxy: install nginx stream (or haproxy/socat), stand up proxy on :4000 -> :4001, migrate litellm systemd unit to --port 4001, verify every consumer, then blue/green flips become zero-downtime. This is the ONLY way to eliminate the ~28s 502.
-2. #28508 [deployed] — ready_for_review: review the warm-then-swap script; it is safe to use now for config-safety + edge-verify, but know it does not remove the outage window until #28544 [proposed] lands.
+None — all approved work is shipped and verified. Optional follow-up if desired: point any deploy automation/runbooks at /usr/local/bin/litellm-zdt-deploy.sh so nothing calls `systemctl restart litellm` directly.
 
 Reference IDs:
-- Ideas filed: #28508 [deployed], #28509 [deployed], #28544 [proposed]
-- Files touched: /var/www/emtskills/mcp-servers/emsu-operations/src/ssh.ts (+build/ssh.js), /usr/local/bin/litellm-bluegreen-restart.sh, /tmp/fix_bg_header.py
-- Backups: ssh.ts.bak-b64fix-20260828-082616, litellm-bluegreen-restart.sh.bak-hdrfix-20260828-084437
+- Ideas: #28503 [deployed], #28508 [deployed], #28509 [deployed], #28544 [deployed]
+- Bug library incidents (frankenstein_router_incidents, separate id space from ideas): incident 2636 dead r91 gate, incident 2637 restart-window 502, incident 2639 haproxy zero-downtime architecture
+- Files: /etc/haproxy/haproxy.cfg, /usr/local/bin/litellm-zdt-deploy.sh, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/mcp-servers/emsu-operations/src/ssh.ts
+- Backups: 10-frugal.conf.bak-port4100-20260828-085858, haproxy.cfg.bak-fastfail-20260828-090208, haproxy.cfg.bak-sdfix-20260828-090351
 
 # Reversal Log
-- "warm-then-swap reduces the client-visible restart window to ~2-4s" -> corrected: measured ~28s, same as a cold restart, because the production container cold-boots during the swap and GREEN's warm state does not transfer to the production boot. | RCA bucket: wrong premise | causal rule updated: 317 (claim scope must equal probe scope - I wrote timing claims into the script header before measuring). Fixed the artifact: corrected the script header to the measured truth.
+- "the 2-3 residual dropped requests are a haproxy connect-timeout problem" -> corrected: they are SD (server died mid-response on an already-established connection), which haproxy may not retry. Proven by two tunings (timeout connect 10s->1s; error-limit 3->1) that BOTH left the failure count at exactly 3. | RCA bucket: wrong premise | causal rule updated: 317 (claim scope must equal probe scope - I tuned a knob before reading the termination flag that names the cause). Durable fix: the deploy script drains before stopping, and the bug-library entry records 'when two tunings leave a count identical, stop tuning and read the termination flag'.
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
-<command>sudo python3 /usr/local/bin/r91_gate_canary.py</command>
-<task_progress>
-- [x] Fix #28509 write_server_file escape expansion (base64 + parse gate), verified with torture + negative control
-- [x] Build + live-test #28508 blue/green warm-then-swap restart script
-- [x] Measure actual outage window honestly (~28s, same as cold) and correct the script header
-- [x] File #28544 front-proxy true zero-downtime fix (serving-contract change, controlled window)
-- [x] Reconcile all ideas, verify litellm healthy + r91 gate alive + canary green
-- [x] Validate completion against rule-91 gate (ALL PASSED, GATE CLEAR
+<command>curl -s -o /dev/null -w 'litellm public edge: HTTP %{http_code} in %{time_total}s\n' https://litellm.emsuniversity.com/h
 ```
 
 ### `1787874780128` — 8/28/2026, 1:31:03 AM PT — 202 turns

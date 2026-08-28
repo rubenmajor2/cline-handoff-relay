@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 9:53:14 AM PT | window: last 72h | 32 tasks | index total 929 (parsed 3, cached 926)
+Generated: 8/28/2026, 10:53:15 AM PT | window: last 72h | 34 tasks | index total 931 (parsed 3, cached 928)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787783324531` | 8/28/2026, 9:53:04 AM | 1207 | 11004KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787931475695` | 8/28/2026, 9:40:01 AM | 93 | 22353KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
+| `1787937972952` | 8/28/2026, 10:52:24 AM | 41 | 147KB | #GLM 5.3 Local |
+| `1787931475695` | 8/28/2026, 10:45:33 AM | 132 | 22802KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
+| `1787937882474` | 8/28/2026, 10:24:43 AM | 1 | 7KB | #GLM 5.3 |
+| `1787783324531` | 8/28/2026, 10:22:16 AM | 1712 | 11444KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
 | `1787876909491` | 8/28/2026, 9:28:25 AM | 358 | 1744KB | #PostMark Issue  |
 | `1787901041894` | 8/28/2026, 9:15:14 AM | 480 | 1743KB | What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow a |
 | `1787874780128` | 8/28/2026, 1:31:03 AM | 202 | 11050KB | Rebased on the MiniCheck work another window shipped this morning, audited it against live |
@@ -47,7 +49,81 @@ Generated: 8/28/2026, 9:53:14 AM PT | window: last 72h | 32 tasks | index total 
 
 ## Per-window detail
 
-### `1787783324531` — 8/28/2026, 9:53:04 AM PT — 1207 turns
+### `1787937972952` — 8/28/2026, 10:52:24 AM PT — 41 turns
+
+**Original task:**
+
+```
+#GLM 5.3 Local
+
+Can you make sure GLM 5.3 Local is serving and configured properly within and without frankenstein-llm / that it's obeying cline rules, etc... all the stuff that GLM 5.2 local is obeying
+
+When I said to preserve the OG, i meant just drop in replace, not keep the name the same, lmao. It's just a replacement. Don't confuse me or future agents. Should be GLM 5.3 local first -> Qwen 3.8 27B -> 120Bs -> Paid, etc...
+
+GLM 5.3 local ring upgrade is DONE and serving (verified: curl http://127.0.0.1:8210/v1/models returned id=glm-5.3-15pct at 10:21 PT; /etc/litellm/config.yaml has 7 ref
+```
+
+**Ideas referenced:** #11991, #12584, #12825, #13470, #16063, #16265, #16602, #16625, #16680, #17202, #17203, #17205, #17300, #17307, #178787, #18312, #1876, #19338, #19686, #1998, #20264, #20495, #22897, #25468, #25607, #25757, #25759, #25764, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787931475695` — 8/28/2026, 10:45:33 AM PT — 132 turns
+
+**Original task:**
+
+```
+Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that. Can you investigate and resolve?
+```
+
+**Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #156528, #16213, #28114 [superseded], #28572 [proposed], #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
+
+**Last PICKUP PROMPT:**
+
+```
+ld code until reload).
+
+═══════════════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════════════
+Pick up task — Cline TODO 0/0 not showing (FocusChain task_progress suppression).
+
+Where we left off (verified 2026-08-28 10:41 AM PT):
+- Root cause: `patch_cline_extension.sh` Patch 3 (idea #28114) blanked the `Mhe` FocusChain reminder map + `# TODO LIST UPDATE REQUIRED` instruction, so models never emitted `task_progress` checklists and the UI showed the 0/0 TODOs placeholder.
+- Fixed both files, verified on disk: `extension.js` has `Mhe={initial:rX0,...}` and the TODO instruction restored (grep=1/1, node --check OK); patcher has zero blanking payload left (bash -n OK).
+- Follow-up idea #28572 filed [proposed] — reload VS Code window and confirm TODO list renders.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #28572 — [human-only] Reload VS Code (Cmd+Shift+P → Developer: Reload Window), start a Cline task, confirm the TODO focus chain renders 0/N and grows with task_progress checklists. (No tool can perform the window reload from inside this window; the extension host only reloads on the user's action.)
+
+Reference IDs:
+- Task: Cline TODO 0/0 symptom (no numeric task id provided this session)
+- Ideas filed: #28572 [proposed]
+- Ideas referenced: #28114 [superseded] — the suppression patch, now neutralized
+- Files touched: /Users/rubenmajor/.vscode/extensions/saoudrizwan.claude-dev-4.0.7/dist/extension.js, /Users/rubenmajor/Documents/Cline/scripts/patch_cline_extension.sh
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787937882474` — 8/28/2026, 10:24:43 AM PT — 1 turns
+
+**Original task:**
+
+```
+#GLM 5.3
+
+Can you make sure GLM 5.3 Local is serving and configured properly within and without frankenstein-llm / that it's obeying cline rules, etc... all the stuff that GLM 5.2 local is obeying
+
+GLM 5.3 local ring upgrade is DONE and serving (verified: curl http://127.0.0.1:8210/v1/models returned id=glm-5.3-15pct at 10:21 PT; /etc/litellm/config.yaml has 7 references to glm-5.3-15pct; canary healthy=true pass_streak=17). glm-5.3-15pct is live on the 6-node PP=6 GB10 ring (:8210, 131K ctx, NVFP4 weights with native FLASHINFER_CUTLASS kernels — better than the planned Marlin fallback). The d
+```
+
+**Ideas referenced:** #178787, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787783324531` — 8/28/2026, 10:22:16 AM PT — 1712 turns
 
 **Original task:**
 
@@ -64,56 +140,47 @@ Because **Zhipu has not granted your account access yet — it is a server-side 
 - The exa
 ```
 
-**Ideas referenced:** #1130, #1131, #12299, #12364, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16588, #16648, #16778, #16802, #16803, #16839, #16851, #17145, #17202, #17205, #17246, #1744, #1779, #1798, #1828, #18442, #18471, #18695, #1876, #18947, #19205, #19227, #19338, #19458, #19491, #19567, #19615, #19686, #1986, #1993 [deployed], #20042, #20272, #20495, #20536, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2127, #2157, #2159, #2168, #21684, #2174, #2185, #2238, #22856, #22897, #2299, #2307, #2314, #2336, #2337, #2338, #2340, #25185, #25378, #25381, #2546, #2571, #25887, #2603, #26209, #2637 [resolved], #2638 [open], #2639 [resolved], #2640, #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27236, #27249 [executing], #27250, #27503, #28332 [proposed], #28434 [proposed], #28498 [executing], #28499 [proposed], #28507, #28545 [proposed], #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #5197, #7142, #7149, #9019
+**Ideas referenced:** #1130, #1131, #12299, #12364, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16304, #16338, #16448, #16452, #16588, #16648, #16778, #16802, #16803, #16839, #16851, #17145, #17202, #17205, #17246, #1744, #1779, #178787, #1798, #1828, #18442, #18471, #18695, #1876, #18947, #19205, #19227, #19338, #19458, #19491, #19567, #19615, #19686, #1986, #1993 [deployed], #20042, #20272, #20495, #20536, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2127, #2157, #2159, #2168, #21684, #2174, #2185, #2238, #22856, #22897, #2299, #2307, #2314, #2336, #2337, #2338, #2340, #25185, #25378, #25381, #2546, #2571, #25887, #2603, #26209, #2637 [resolved], #2638 [open], #2639 [resolved], #2640 [deployed], #26711 [proposed], #26712 [proposed], #26713 [proposed], #26714, #26715 [deployed], #27236, #27249 [executing], #27250, #27503, #28332 [proposed], #28434 [proposed], #28498 [executing], #28499 [proposed], #28507, #28545 [proposed], #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #5197, #7142, #7149, #9019
 
 **Last PICKUP PROMPT:**
 
 ```
-glm-5.3 cloud, all free-first.
+stalled so it should stay hot.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #26712 [executing] / #26713 [executing] — GLM ring 5.2->5.3 direct cutover (machinery in flight).
+Pick up task #1787879410205 — GLM 5.2 -> 5.3 local ring upgrade + fleet Doctor pass.
 
-Where we left off (checked 2026-08-28 09:18 PT):
-- Download incoai/GLM-5.3-NVFP4 on Cato rank0 at ~110 MB/s, 329/465 GB at 09:18, ETA ~09:40 PT (checked: du via ssh -p 2204).
-- Cato driver ~/glm53_upgrade_driver.sh v2 stop-first armed and running: verify shards -> stop 5.2 -> distribute over 200G RoCE fabric -> launch 5.3 workers-first -> verify gen+tools -> install glm53 watchdogs. Auto-rollback to 5.2. Log ~/logs/glm53_upgrade.log on cato.
-- WOPR orchestrator /usr/local/bin/glm53_upgrade_orchestrator.sh running: on COMPLETE runs /var/www/emtskills/scripts/glm53_wopr_flip.sh (LiteLLM 7-entry flip + safe-restart + adapter restart + watchdog re-enable + PONG + qwen-rung probe). Notifier files high-sev events.
-- WOPR ring watchdog disabled via /tmp/glm52_watchdog.disabled during window (orchestrator removes after).
-- SPILL LADDER FINAL (Ruben directive, live-verified RING_OK/QWEN_OK/CLOUD_OK): frankenstein-llm -> glm-5.2-local -> claudia-qwen38-27b -> deepseek-v4-pro-openrouter -> deepseek-v4-pro -> glm-5.3 (cloud FINAL rung, not a ring replacement). Adapter pool already ring -> qwen38 -> 120Bs. Config backup: config.yaml.bak-qwen-rung-20260828.
-- Hook /etc/litellm/hooks/frankenstein_glm52.py probes patched to glm-5.3-15pct (backup .bak-glm53-20260828). Adapter drop-in 50-glm53.conf + default patched.
-- Ideas: #26711 [deployed], #26712 [executing], #26713 [executing], #26715 [deployed], #28545 [deployed].
+Where we left off (verified 2026-08-28 10:21 PT):
+- glm-5.3-15pct SERVING on :8210 (PP=6, 6 nodes, 131K ctx, NVFP4 + FLASHINFER_CUTLASS) (verified: curl 8210/v1/models -> glm-5.3-15pct; canary healthy=true pass_streak=17). Driver log: UPGRADE COMPLETE 10:13:32 PT (PHASE6 models OK, PHASE7 gen PONG, PHASE8 tool-parse OK).
+- WOPR flip landed 10:14:28 PT: LiteLLM frankenstein-glm52-local + glm52-only -> openai/glm-5.3-15pct; adapter restarted; ring-watchdog re-enabled as fallback; prod 200s via tunnel.
+- OG ladder preserved per Ruben: 5.3 local replaces 5.2 local; ladder = ring -> qwen3.8-27B -> 120B -> deepseek -> glm-5.3-cloud FINAL.
+- Executor main cron restored after 19-day silent death (cron_ruben_autonomous dead /tmp require removed, live-run OK, 12 workers spawned; bug library entry 2640).
+- Ideas stamped + reconciled (verified: reconcile_ideas live read 10:21 PT): #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed].
 
 Open threads to drive next:
-1. #26712 [executing] — after cutover (~10:45 PT) confirm: cato log shows UPGRADE COMPLETE; curl 127.0.0.1:8210/v1/models shows glm-5.3-15pct; measure health via :8210/metrics counter-delta (60s apart). Then update the idea status to match the verified state.
-2. #26713 [executing] — confirm /var/log/glm53-wopr-flip.log shows WOPR FLIP COMPLETE + END-TO-END PONG + QWEN RUNG OK; run frankenstein_verify_routing(model_id=glm-5.2-local) expecting 8210 backend; confirm watchdog re-enabled. Then update the idea status to match the verified state.
-3. Post-verify bookkeeping (inline, no idea): append serving state + measured tok/s to GLM52_RING_STATE_TRACKER.md 2026-08-28 section; mark runbook gates cleared with timestamps; keep 5.2 weights for rollback.
-4. If ROLLBACK fired: diagnose ~/logs/glm53_upgrade.log + /tmp/glm53_launch_r*.log on cato, fix, re-run driver (idempotent). (human-only decision — no idea: none)
+1. #28551 [proposed] — triage fleet_backtest_health A1/A2/A3 critical alerts (stale pipeline signals).
+2. #28552 [proposed] — silent_ghost_three_strike_escalation events firing with NULL/empty subject (not yet investigated).
+3. #28553 [proposed] — executor starvation_demote bounce loop (966 ideas demoted AND re-promoted; repaired cron should drain it — verify after 24h).
+4. (monitoring, no idea) — watch adapter pool rotation until first ring upstream picks appear in /var/log/emsu-adapter-upstream.log; confirm keep_warm holds first-token latency down after ~1h.
 
 Reference IDs:
-- Ideas filed: #28545 [deployed]
-- Ideas executing: #26712 [executing], #26713 [executing]
-- Ideas closed: #26711 [deployed], #26715 [deployed]
-- Files touched: /etc/litellm/config.yaml (fallback chain + upcoming model-id flip), /var/www/emtskills/scripts/glm53_upgrade_driver.sh, /var/www/emtskills/scripts/glm53_wopr_flip.sh, /usr/local/bin/glm53_upgrade_orchestrator.sh, /usr/local/bin/glm53_upgrade_result_notifier.sh, /etc/litellm/hooks/frankenstein_glm52.py, /usr/local/bin/frankenstein_tools_adapter.py, /etc/systemd/system/frankenstein-tools.service.d/50-glm53.conf, /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, /var/www/emtskills/docs/GLM52_RING_STATE_TRACKER.md, /home/rubenmajor/glm53_upgrade_driver.sh (cato), /usr/local/bin/emsu_glm53_local_installer.sh
-- Events: 7409969, 7407146, 7401620, 7401621
+- Ideas filed: #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed]
+- Ideas closed: none this session
+- Files touched: /var/www/emtskills/docs/GLM53_UPGRADE_RUNBOOK.md, ~/glm53_upgrade_driver.sh (cato), /var/www/emtskills/cron/cron_ruben_autonomous.php, /etc/litellm/config.yaml (via flip script)
+- Ring nodes: cato rank0 + 10.220.1.2/.2.2/.4.1/.5.1/.6.1 ranks 1-5
 
 # Reversal Log
-- 'GLM traffic spills to cloud glm-5.3 during ring-down' -> 'qwen 3
+- 'PHASE3 5.2 ring STOPPED (GLM lane spills to cloud glm-5.3)' -> corrected to OG ladder spill wording; Ruben steer: do NOT rollback to 5.2, keep pushing to 5.3; driver re-run executed | RCA bucket: wrong premise | causal rule updated: 301 steering compliance (in-flight re-anchor)
+- 'first cutover rolled back on incomplete distribution' -> corrected: distribution was COMPLETE; driver worker-count off-by-one (ls glob vs API grep counting model.safetensors.index.json); both count sites repaired, re-run succeeded | RCA bucket: insufficient probe | causal rule updated: 317 (claim scope must equal probe scope — count-verification instrument must match the counting method)
+- 'compress flow triggered at 81% of 200K' -> corrected: real window is 1M; denominator Y was a false ceiling; amended rule 119 | RCA bucket: stale assumption | causal rule updated: 119
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
-
-### `1787931475695` — 8/28/2026, 9:40:01 AM PT — 93 turns
-
-**Original task:**
-
-```
-Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that. Can you investigate and resolve?
-```
-
-**Ideas referenced:** #0000, #000000, #0033, #0066, #0099, #11629, #156528, #16213, #28114, #3300, #3333, #333333, #3366, #3399, #6600, #6633, #666666, #9900, #9933
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787876909491` — 8/28/2026, 9:28:25 AM PT — 358 turns
 

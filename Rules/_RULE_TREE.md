@@ -170,6 +170,7 @@
 | `emsu://reference/quickbooks` | Payment rules, 50/50 split, finance fees, QB sync |
 | `emsu://reference/exam-enforcement` | Violation thresholds, SEB proctoring, excluded emails |
 | `emsu://reference/exam-retake-policy` | CANONICAL: Final Exam + retake need SEB + proctored Zoom |
+| `emsu://reference/exam-override` | CANONICAL: make a quiz Attempt button reappear — Quick Override (add_one) grants +1 attempt AND extends close date. Read BEFORE any "override not sticking" / "no attempt button" question |
 | `emsu://reference/nremt-under18-policy` | CANONICAL: under-18 deadline → 18th birthday + 60-day refresher. Read BEFORE any under-18 NREMT reminder |
 | `emsu://reference/telephony` | Twilio + Vapi stack, numbers, NO third-party vendor |
 | `emsu://reference/externship-agent` | Externship scheduling, agency profiles, self-service |

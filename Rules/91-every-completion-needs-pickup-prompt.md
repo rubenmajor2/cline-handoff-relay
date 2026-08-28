@@ -180,3 +180,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Follow-up ledger stamp for task 1787606148778-mailer-rca (same fix as tasks 1787606148778 and 1787606148778-r91-rca): rule 91's copy-paste template lacked the mandatory Reversal Log section required by idea #25888's R317_REVERSAL_LOG gate. Template edited on disk to add the section after Reference IDs; MCP reindexed.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-28 07:50 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: exam5-lockout-rca-20260827
+- RCA bucket: scope error
+- Trigger pattern: completion listed 'Open threads to drive next' as prose action items with zero #NNNN idea numbers and zero [disposition] brackets, because the threads were framed as narrative recommendations rather t
+- Reversal note: 2026-08-27 reversal (Ruben caught it): the Exam 5 root-cause completion shipped an 'Open threads to drive next' section containing three numbered prose items - build a monitor, a policy decision, investigate the auto-void class - with NO filed idea numbers and NO disposition brackets on any of them. Rule 91 requires every open-thread item to carry a real #NNNN [disposition] or the explicit '(human-only decision - no idea)' marker. The failure mode is specific: when open threads are written as RECOMMENDATIONS ('my advice, in priority order') rather than as filed work, the prose framing suppresses the filing step entirely - the agent never asks 'what integer backs this?' because it reads as advice, not as a thread. Amended behavior: before writing ANY open-threads section, each item must first be filed via create_idea and cited with its returned integer plus a bracketed disposition; an item that is genuinely a human policy decision still gets either a filed idea number or the literal '(h
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

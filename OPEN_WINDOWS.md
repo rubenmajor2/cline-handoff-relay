@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 6:48:06 PM PT | window: last 72h | 34 tasks | index total 934 (parsed 6, cached 928)
+Generated: 8/28/2026, 8:30:12 PM PT | window: last 72h | 34 tasks | index total 934 (parsed 0, cached 934)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787960225304` | 8/28/2026, 6:43:58 PM | 125 | 1391KB | #Various |
+| `1787960225304` | 8/28/2026, 7:17:06 PM | 132 | 1457KB | #Various |
 | `1787960052755` | 8/28/2026, 6:35:00 PM | 112 | 3280KB | frankenstein-llm having this issue. Can you resolve?  |
 | `1787937972952` | 8/28/2026, 6:34:50 PM | 690 | 1149KB | #GLM 5.3 Local |
 | `1787876909491` | 8/28/2026, 6:15:59 PM | 495 | 2747KB | #PostMark Issue  |
@@ -49,7 +49,7 @@ Generated: 8/28/2026, 6:48:06 PM PT | window: last 72h | 34 tasks | index total 
 
 ## Per-window detail
 
-### `1787960225304` — 8/28/2026, 6:43:58 PM PT — 125 turns
+### `1787960225304` — 8/28/2026, 7:17:06 PM PT — 132 turns
 
 **Original task:**
 
@@ -59,7 +59,7 @@ Generated: 8/28/2026, 6:48:06 PM PT | window: last 72h | 34 tasks | index total 
 Jon says he has this issue for a while with Argus. Can you resolve?
 ```
 
-**Ideas referenced:** #11570, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23952, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25269, #25313, #25573, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #334155, #4338, #64748
+**Ideas referenced:** #11570, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25142, #25269, #25313, #25571, #25573, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #27860, #28155, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #334155, #4338, #64748
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

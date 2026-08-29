@@ -497,3 +497,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate) via bug library #2666 case: before claiming a router/model substitution, the ROUTER AUDIT LOG (/tmp/emsu_router_audit.log) is the required probative artifact — it records the actual pick with reason. A response whose model field differs from the requested lane is the FALLBACK LADDER speaking, not the router; classify the backend per rule 315 (refused/timeout = down) before naming any substitution. Without the audit-log read, the substitution claim is a 297-class fabrication risk.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 21:29 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787960052755
+- RCA bucket: unread source
+- Trigger pattern: Read config/mail.php (smtp587/Postmark) and claimed that transport, when lib/mailer.php loads config/config.php merged with config.local.php; corrected via live SMTP_SEND_OK probe.
+- Reversal note: Amends clause 2 (acquisition gate): a mailer's transport must be read from the config file the mailer ACTUALLY loads (config/config.php merged via array_replace_recursive with config.local.php), never from a config file that exists but is unused (config/mail.php). A config file's presence is not evidence of use; probe the loaded value or the live send path before claiming any SMTP/Postmark transport.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

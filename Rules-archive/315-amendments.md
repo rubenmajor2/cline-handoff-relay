@@ -87,3 +87,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - "cloudflared restart churn is the cause (bug-library known-repair match)" -> corrected: cloudflared NRestarts=0 and tunnel up since 2026-08-22, so that path was ruled out and the
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 21:13 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 28705
+- RCA bucket: insufficient probe
+- Trigger pattern: lane curl http=000 reported as box DOWN without SSH/MDM cross-check or in-window relaunch attempt
+- Reversal note: Amends the Step-2 classification table usage: when a LANE probe (WOPR tunnel port or WG endpoint) returns http=000 but an independent surface (MDM portal, direct SSH, reverse-tunnel shell) shows the HOST reachable, the ONLY legal verdicts are ENGINE-DOWN or TUNNEL-DOWN, never a bare host DOWN — and per rule 29 the agent MUST attempt the software repair in-window (docker start, relaunch serve script, fix tunnel forward target) before listing the lane as an open thread. 2026-08-29 case: Claudia/Joshua/Julia/Nero/Cicero all reported DOWN from curl http=000; live triage showed every host except Nero/Cicero reachable and all three fixable in-window (Joshua = docker start, Claudia = relaunch + tunnel forward target pointing at Julia's IP 192.168.1.190 instead of 127.0.0.1, Julia = crash-loop from deleted 235B weights).
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

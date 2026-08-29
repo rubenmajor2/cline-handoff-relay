@@ -6,13 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 1:36:53 PM PT | window: last 72h | 47 tasks | index total 954 (parsed 2, cached 952)
+Generated: 8/29/2026, 2:36:53 PM PT | window: last 72h | 48 tasks | index total 956 (parsed 4, cached 952)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788021977080` | 8/29/2026, 1:36:42 PM | 277 | 2739KB | #Various 2 |
-| `1788027890157` | 8/29/2026, 1:30:01 PM | 97 | 434KB | #/emtskills slowness |
-| `1788021866677` | 8/29/2026, 12:08:38 PM | 400 | 1017KB | #ArgusVAPI CFA voice path |
+| `1788021977080` | 8/29/2026, 2:36:34 PM | 405 | 3160KB | #Various 2 |
+| `1788036414021` | 8/29/2026, 2:28:28 PM | 214 | 493KB | #GLM 5.3 Local and Frankenstein LLM |
+| `1788037909518` | 8/29/2026, 2:15:19 PM | 9 | 59KB | #emtskills slowness |
+| `1788021866677` | 8/29/2026, 2:13:30 PM | 500 | 1278KB | #ArgusVAPI CFA voice path |
+| `1788027890157` | 8/29/2026, 1:59:23 PM | 120 | 526KB | #/emtskills slowness |
 | `1788029135575` | 8/29/2026, 12:04:36 PM | 114 | 254KB | #GLM 5.3 Local/Frankenstein-LLM Routing |
 | `1788027731969` | 8/29/2026, 12:04:22 PM | 322 | 596KB | #Overdue Grievances and Rule 317  |
 | `1788022793741` | 8/29/2026, 11:33:04 AM | 158 | 1779KB | #Frankenstein LLM Routing Probe |
@@ -56,13 +58,12 @@ Generated: 8/29/2026, 1:36:53 PM PT | window: last 72h | 47 tasks | index total 
 | `1787728419915` | 8/26/2026, 3:28:52 PM | 244 | 5671KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
 | `1787764966133` | 8/26/2026, 3:27:15 PM | 586 | 1170KB | So this is a 317/297 RCA / 91 failure becasue these are huge mistakes to make in the first |
 | `1787517211429` | 8/26/2026, 3:05:12 PM | 440 | 6493KB | #CFA |
-| `1787705478563` | 8/26/2026, 1:46:51 PM | 217 | 759KB | #Argus |
 
 ---
 
 ## Per-window detail
 
-### `1788021977080` — 8/29/2026, 1:36:42 PM PT — 277 turns
+### `1788021977080` — 8/29/2026, 2:36:34 PM PT — 405 turns
 
 **Original task:**
 
@@ -72,32 +73,89 @@ Generated: 8/29/2026, 1:36:53 PM PT | window: last 72h | 47 tasks | index total 
 RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
 ```
 
-**Ideas referenced:** #15877, #16242, #166534, #1719, #17446, #178796, #18836, #19362, #22060, #25888, #26896, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #4518, #4929, #813528, #9086, #9168, #92400, #9339
+**Ideas referenced:** #155724, #15877, #16242, #1648, #166534, #1719, #17446, #178796, #18836, #18944, #18951, #19362, #22060, #25888, #2654, #26663, #26834, #26896, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28705, #28726 [proposed], #4518, #4929, #62584, #62604, #813528, #9086, #9168, #9191, #92400, #9339
 
 **Last PICKUP PROMPT:**
 
 ```
- Update idea statuses to [deployed]
-- [ ] Re-validate + attempt_completion with PICKUP PROMPT
+d ledger (task 1787960052755).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787960052755 - Grievance code email fix (Postmark) + staff grievance submission page + WOPR DEFCON doc.
+
+Where we left off (verified 2026-08-29 14:28 PT):
+- grievance_request.php code email now via lib/mailer.php sendEmail() -> Postmark SMTP; SMTP_SEND_OK probe; page 200; no raw mail remains; ownership emsumain:psaserv.
+- New staff page /emtskills/grievance_staff_submit.php live: 401 unauthenticated, php -l clean, inserts intake_source='staff_submit' status='pending_review' created_by=<staff>.
+- WOPR DEFCON stale notice documented; idea #28726 [proposed] (recompute/clear stale DEFCON).
+- Vicky's verbatim note quoted + addressed (code email fix + email intake path + staff page).
+
+Open threads to drive next:
+1. #28726 [proposed] - Recompute or clear the stale 'You are in: DEFCON' notice on WOPR.
+2. #28690 [executing] - WOPR_SSH 9820 + DEFCON flapping suppression already in flight; #28726 [proposed] is the distinct stale-notice recompute item.
+
+Reference IDs:
+- Ideas filed: #28726 [proposed], #28643 [deployed], #28690 [executing]
+- Files touched: /var/www/emtskills/grievance_request.php, /var/www/emtskills/grievance_staff_submit.php, docs/HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] staff grievance page live + verified (401 unauth, lint clean, ownership correct)
+- [x] grievance code email fixed + verified (Postmark SMTP_SEND_OK, raw mail removed, page 200)
+- [x] WOPR DEFCON documented + idea #28726 [proposed]
+- [x] Vicky's verbatim note documented + addressed
+- [x] Rule 91/R317 gates: ALL PASSED (validation confirmed)
+- [x] Completion shipped
 </task_progress>
-</execute_command>
+</attempt_completion>
 ```
 
-### `1788027890157` — 8/29/2026, 1:30:01 PM PT — 97 turns
+### `1788036414021` — 8/29/2026, 2:28:28 PM PT — 214 turns
 
 **Original task:**
 
 ```
-#/emtskills slowness
+#GLM 5.3 Local and Frankenstein LLM
 
-See emtskills slowness. /emtskills folder is spinning very slowly and needs to be fixed. I need you to review that file that is on the desktop the EMT skills slowness file on the desktop and then append to it after you resolve the issue.
+Seems like we have some work to do
+
+the other things is to avoid a box from being saturated, if there are other boxes of the same class (i.e. multiple 120Bs, Qwen 3.8 27Bs, etc...) then there should be some even distribution according to capacity, not just take one box down and oversaturate it. Let's be smarter about hos this works. 
+
+yes, let's tune this up now - build and ship here -> Honest speed verdict: the ring is correct and serving but decode IS slow right now (about 4 tok/s aggregate, 2.15 tok/s single-stream vs the 5.2-era 12.65 decode reference) 
 ```
 
-**Ideas referenced:** #15815, #1912, #1998, #20495, #2168, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2640, #2642, #2654, #2659, #2662, #26712, #26713, #26932, #27691, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed]
+**Ideas referenced:** #1130, #1131, #11953, #12247, #12262, #12363, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #12689, #13108, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #1912, #19567, #19653, #1986, #19903, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25185, #25378, #25381, #2546, #25764, #26400, #2647, #2654 [deployed], #2659, #2663, #26908, #26932, #27236, #27249 [executing], #27250, #27503, #28586, #28622, #28704 [executing], #28705 [executing], #28706 [executing], #28723 [proposed], #28725 [proposed], #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788021866677` — 8/29/2026, 12:08:38 PM PT — 400 turns
+### `1788037909518` — 8/29/2026, 2:15:19 PM PT — 9 turns
+
+**Original task:**
+
+```
+#emtskills slowness
+
+also make sure to update the emtskills sloness document on the desktop once finishe
+
+approved
+1. #28722 [proposed] — Upgrade /var/www/emtskills/scripts/llm_pool_isolation_guard.py from alert-only to self-heal: on detection of an unisolated trafficked form, auto-patch the AGENT_POOL alternation in BOTH PLESK_VHOST (/var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf) and LOCAL_VHOST (/etc/nginx/sites-enabled/emtskills), backup first, run nginx -t, reload nginx, re-run the isolation check, and an accepted-conn delta probe; ship --dry-run default → --self-heal flag
+```
+
+**Ideas referenced:** #22298, #22550, #23133, #23945, #23952, #23954, #25042, #25940, #28722 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+e HANDOFF_NOTES.md + idea #28722 status to deployed
+- [ ] Complete with rule-91 PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1788021866677` — 8/29/2026, 2:13:30 PM PT — 500 turns
 
 **Original task:**
 
@@ -115,47 +173,90 @@ Done. The VAPI CFA voice path now runs DeepSeek a
 **Last PICKUP PROMPT:**
 
 ```
-[proposed], #28716 [proposed].
+allback_masquerade_2026_08_29.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1788021866677 — VAPI CFA voice on Qwen 3.8 27B + DeepSeek assessment
+Pick up task #1788021866677 — VAPI CFA Qwen-first voice: quality watch after full cutover
 
-Where we left off (verified 2026-08-29 12:06 PT):
-- qwen38-27b-voice LiteLLM lane LIVE: openrouter/qwen/qwen3.8-27b, reasoning disabled at lane level (verified: /tmp/verify_qwen38_voice.php battery returned T1-T5 all PASS http=200 finish=stop reasoning=0 avg_ms=1686; tool probe returned finish_reason=tool_calls with spoken filler at 1796ms, $0.0006/call).
-- All 8 caller-facing Vapi assistants on custom-llm (verified: vapi_list_assistants run 2026-08-29 12:05 PT listed 12 assistants; 5 lines read Model qwen38-27b-voice, 3 lines read Model deepseek-v4-pro-voice, 0 lines anthropic).
-- qwen3.8-max DISQUALIFIED for voice (verified: LiteLLM call to openrouter/qwen/qwen3.8-max with reasoning.enabled=false returned HTTP 400 body 'Reasoning is mandatory for this endpoint and cannot be disabled').
-- 297 RCA: local Qwen backends all DOWN (verified: the three curl probes quoted in the Reversal Log); fallback-masquerade diagnosis recorded in bug library under problem_key qwen38_lane_fallback_masquerade_2026_08_29.
-- Rule-302 sweep complete (verified: grep -rn for the raw key across /var/www/emtskills --include='*.php' excluding .bak and secrets.php returned wc -l = 0; php -l passed on all 22 patched files; require secrets.php returned constant length 36).
-- #28710 [deployed], #28711 [deployed], #28712 [proposed], #28716 [proposed].
+Where we left off (verified 2026-08-29 14:07 PT):
+- ALL 8 caller-facing Vapi assistants on custom-llm/qwen38-27b-voice; fallback ladder deepseek-v4-pro-voice then frankenstein-llm (verified: vapi_list_assistants run 14:07 PT returned qwen38-27b-voice count = 8, anthropic count = 0).
+- Real-shape A/B on Eric's exact 19.5K prompt + 108 tools: qwen 3/3 PASS avg 4381ms correct tools; deepseek 3/3 PASS avg 2183ms (verified: /tmp/ab_trio.out LANE_SUMMARY lines for both models).
+- Quality watch: 64 of 89 real calls today are SIP-leg-only (endedReason call.in-progress.sip-completed-call, messages=0) — telephony artifact, not model quality; zero organic AI-served calls since cutover, so lane quality rests on synthetic batteries so far (verified: /tmp/check_vapi_calls.php returned endedReason=call.in-progress.sip-completed-call messages=0 for all 3 sampled ids).
+- Work this window landed as ideas #28710 [deployed] and #28711 [deployed] (verified: reconcile_ideas run 14:10 PT returned both with status=deployed, dev_stage=ready_for_review).
 
 Open threads to drive next:
-1. #28712 [proposed] — set disable_spend_logs=false in /etc/litellm/config.yaml, safe-restart, produce 7-day per-model spend breakdown so the DeepSeek cost question is answered with data.
-2. #28716 [proposed] — restore the 3 down local Qwen boxes (claudia :11521, joshua :8001, nero :11525) so free-local lanes can serve again.
-3. (human-only decision — no idea) Whether to also move Eric/Katie/Ronald (the 108-tool main trio) from deepseek-v4-pro-voice to qwen38-27b-voice now that the lane is verified, or A/B them under real call traffic first.
+1. #28712 [executing] — see what the other window reports on spend logging.
+2. #28716 [executing] — see what the other window reports on the local Qwen boxes.
+3. (human-only decision — no idea) Watch the next organic AI-served call window: if Qwen's 4.4s tool-turn latency feels slow on live callers, consider swapping the trio back to deepseek-v4-pro-voice as primary or adding a latency budget alert at 5s on the qwen38-27b-voice lane.
 
 Reference IDs:
-- Ideas: #28710 [deployed], #28711 [deployed], #28712 [proposed], #28716 [proposed]
+- #28710 [deployed]
+- #28711 [deployed]
+- #28712 [executing]
+- #28716 [executing]
 - Bug library: frankenstein_router_incidents problem_key qwen38_lane_fallback_masquerade_2026_08_29, status resolved
-- Files touched: /etc/litellm/config.yaml (backup bak-pre-qwen38-voice-20260829-1159), /var/www/emtskills/config/secrets.php, 21 web files patched for VAPI key, Vapi assistants b2183071/6ee87bdb/cf47f039/f54b2a59/3e55fdaa
+- Files touched: /etc/litellm/config.yaml (qwen38-27b-voice lane + fallbacks), Vapi assistants 494523de/e5a5320e/80f2341e (trio) + b2183071/6ee87bdb/cf47f039/f54b2a59/3e55fdaa (the 5 moved earlier)
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Bug library gate: NOVEL_SYMPTOM, session gate OPENED
-- [x] 297 RCA: router picked claudia correctly; 'router subverts lanes' was WRONG (fallback-by-design). Reversal logged + rule 317 amended on disk.
-- [x] Rule 315: ALL 3 local Qwen 3.8 backends DOWN; artemis-120b fallback ALIVE
-- [x] qwen3.8-27b-cloud + reasoning:OFF → clean speech, $0.0003/call. VOICE-READY.
-- [x] qwen3.8-max: OpenRouter REFUSES reasoning disable. DISQUALIFIED for voice.
-- [x] Tool calling on 27B: tool_calls + spoken filler, 1.8s. VAPI-READY.
-- [x] qwen38-27b-voice lane LIVE: stop, 0 reasoning tokens, 1.98s, $0.0004/call
-- [x] Rule-302 sweep COMPLETE: 22 files, lint clean, 0 raw hits
-- [x] Cutover COMPLETE: 5 assistants anthropic→qwen38-27b-voice (verified)
-- [x] Voice battery: 5/5 PASS, avg 1686ms, 0 reasoning tokens
-- [x] Bug libra
+- [x] Router audit: 12 qwen38-27b-voice rows — ALL my test traffic; zero organic qwen38 callers post-cutover
+- [x] voice_call_log: 89 real calls today, 64 empty transcripts = SIP-completed telephony pattern (predates cutover; NOT model-related)
+- [x] Vapi API ground truth: anomalous calls are call.in-progress.sip-completed-call, 0 messages — telephony leg only
+- [x] Pre-cutover AI calls: Bella on anthropic cut callers off — the anthropic-401 era
+- [x] Post-cutover: zero AI-served organic calls yet — lane quality measured only by synthetic 5/5 PASS
+- [x] Trio real shape fetched (Eric: 19,478-char system prompt + 108 model-level tools)
+- [x] Real-shape A/B: qwen 3/3 (avg 4381ms, correct tools, no reasoning leak) vs deepseek 3/3 (avg 2183ms, correct tools, filler speech)
+- [x] #28712 [executing] / #28716 [executing] reconciled server-side (another windows own them)
+- [x] Trio cutover COMPLETE: all 3 on qwen38-27b-voice with 108/108 tools + prompts preserved (verified via vapi_list_assistants)
+- [x] Final assessment validated + shipped (all gates passed, gate clear)
+</task_progress>
+</attempt_completion>
+```
+
+### `1788027890157` — 8/29/2026, 1:59:23 PM PT — 120 turns
+
+**Original task:**
+
+```
+#/emtskills slowness
+
+See emtskills slowness. /emtskills folder is spinning very slowly and needs to be fixed. I need you to review that file that is on the desktop the EMT skills slowness file on the desktop and then append to it after you resolve the issue.
+```
+
+**Ideas referenced:** #15815, #1912, #1998, #20495, #2168, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2640, #2642, #2654, #2659, #2662, #26712, #26713, #26932, #27691, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28722 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+never needs a support session.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the /emtskills slowness follow-up — make the llm_pool_isolation_guard self-heal (idea #28722).
+
+Where we left off (verified 2026-08-29 13:58 PT):
+- /emtskills slowness fixed + probe-verified: routes/api_fleet_inventory.php added to AGENT_POOL in /etc/nginx/sites-enabled/emtskills (backup emtskills.bak-20260829-fleetinventory). Guard rc=0, accepted-conn delta agents +9 / www +1, 0 www slowlog post-fix.
+- RCA appended to /Users/rubenmajor/Desktop/emtskills-slowness.md (Aug 29 section).
+- Idea #28722 filed [proposed]; bug #17 in frankenstein_bug_library [resolved]; handoff note written to /var/www/emtskills/docs/HANDOFF_NOTES.md.
+
+Open threads to drive next:
+1. #28722 [proposed] — Upgrade /var/www/emtskills/scripts/llm_pool_isolation_guard.py from alert-only to self-heal: on detection of an unisolated trafficked form, auto-patch the AGENT_POOL alternation in BOTH PLESK_VHOST (/var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf) and LOCAL_VHOST (/etc/nginx/sites-enabled/emtskills), backup first, run nginx -t, reload nginx, re-run the isolation check, and an accepted-conn delta probe; ship --dry-run default → --self-heal flag → wire into /etc/cron.d/emsu-llm-pool-isolation-guard. This is the durable close of the 13× recurrence class.
+
+Reference IDs:
+- Ticket: n/a (direct Ruben task)
+- Ideas filed: #28722
+- Bug: #17 (frankenstein_bug_library)
+- Files touched: /etc/nginx/sites-enabled/emtskills (+ .bak-20260829-fleetinventory), /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
 ### `1788029135575` — 8/29/2026, 12:04:36 PM PT — 114 turns
@@ -2106,22 +2207,3 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1787705478563` — 8/26/2026, 1:46:51 PM PT — 217 turns
-
-**Original task:**
-
-```
-#Argus
-
-Does anythign else in Argus need repair or resolution? Evaluate since last check:
-
-approved
-- #28205 [proposed] — add a surface-aware gate to _inject_corpus(), re-measure A/B/C, and track deliberation-heavy rejection counts 48h before/after. Needs a correctness bench, not a blind trim: the corpus is what prevents invented EMSU facts
-
-approved, but why do i need to do this, isn't this a bug and should have been approved iwhtout my authorization? -> #28122 [proposed] — Jayvee: Team Hub add/remove/edit shifts + shift notes throwing errors for ~1 week, screenshot attached. Real production 
-```
-
-**Ideas referenced:** #1399, #1523, #1525, #1526, #1527, #1528, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1536, #1537, #1538, #1540, #1566, #1567, #1568, #1570, #1573, #1583, #1594, #1612, #1615, #1616, #1632, #1633, #1634, #1638, #1641, #1642, #1686, #1687, #1688, #1711 [deployed], #1712, #1715, #1725, #1727, #1730, #1731, #1740, #1741, #1745, #1746, #1758, #1759, #1763, #2167, #23982, #24645, #24723, #25185, #26663, #27100, #27863, #27864, #27865, #27866, #27867, #27868, #27869, #28122 [proposed], #28127, #28132, #28133 [proposed], #28134 [proposed], #28155 [deployed], #28205 [proposed], #28214 [proposed], #28215, #28221 [deployed], #28225 [proposed], #28226 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

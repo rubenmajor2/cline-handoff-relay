@@ -6,14 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 1:41:21 AM PT | window: last 72h | 39 tasks | index total 942 (parsed 5, cached 937)
+Generated: 8/29/2026, 2:41:22 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 5, cached 940)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787984810545` | 8/29/2026, 1:41:04 AM | 725 | 820KB | #GLM 5.3/Qwen 3.8 Julia Claudia |
-| `1787985551437` | 8/29/2026, 1:26:25 AM | 246 | 1619KB | #Argus |
+| `1787985551437` | 8/29/2026, 2:41:18 AM | 481 | 2067KB | #Argus |
+| `1787996122566` | 8/29/2026, 2:41:13 AM | 15 | 56KB | #SMS/Email Notifications Externships/NREMT and End of Class |
+| `1787980519299` | 8/29/2026, 2:41:03 AM | 295 | 10806KB | #Various 2 |
+| `1787995785994` | 8/29/2026, 2:40:09 AM | 27 | 199KB | #GLM 5.3 Local |
+| `1787995039075` | 8/29/2026, 2:24:27 AM | 10 | 641KB | #GLM 5.3 |
+| `1787984810545` | 8/29/2026, 2:01:35 AM | 770 | 939KB | #GLM 5.3/Qwen 3.8 Julia Claudia |
 | `1787963389563` | 8/29/2026, 1:14:55 AM | 576 | 3039KB | #Overdue Grievances and Rule 317  |
-| `1787980519299` | 8/29/2026, 1:11:57 AM | 232 | 7010KB | #Various 2 |
 | `1787876909491` | 8/29/2026, 1:11:39 AM | 1062 | 5416KB | #PostMark Issue  |
 | `1787960225304` | 8/29/2026, 12:41:14 AM | 624 | 6883KB | #Various |
 | `1787983724269` | 8/28/2026, 11:37:37 PM | 301 | 1104KB | #Argus |
@@ -47,14 +50,149 @@ Generated: 8/29/2026, 1:41:21 AM PT | window: last 72h | 39 tasks | index total 
 | `1787705478563` | 8/26/2026, 1:46:51 PM | 217 | 759KB | #Argus |
 | `1787765271795` | 8/26/2026, 11:00:12 AM | 282 | 357KB | I am not going to check every single email. The email ideally is done correctly the first  |
 | `1787764643350` | 8/26/2026, 10:22:49 AM | 9 | 16KB | Tell me about your sloness as the GLM ring |
-| `1787596912975` | 8/26/2026, 1:56:41 AM | 402 | 3444KB | We are gettng these. What's going on? Can you correct that? |
-| `1787730932980` | 8/26/2026, 1:55:08 AM | 133 | 2918KB | frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterati |
 
 ---
 
 ## Per-window detail
 
-### `1787984810545` — 8/29/2026, 1:41:04 AM PT — 725 turns
+### `1787985551437` — 8/29/2026, 2:41:18 AM PT — 481 turns
+
+**Original task:**
+
+```
+#Argus
+
+See Also the Screenshot about overrides / needs a bulk option
+
+Confirmed every issue in the pasted report and both pickup prompts, addressed or explicitly routed to a human. The short version: the Exam 5 monitor the executor claimed was live did not exist, so it was rebuilt from scratch and now runs daily, having flagged 3 students (course 37, close dates inside 7 days) whose names went to staff; the 1,702 auto-void rows were proven to be the healthy integrity investigator's repair audit trail, so that thread is closed by-design; the Employee Certs complaint was a data problem (Ruben h
+```
+
+**Ideas referenced:** #059669, #166534, #1682, #178798, #2088, #2106, #2347, #2355, #2358, #2367, #2369, #2370, #2372, #2375, #2376, #2378, #2509, #25185, #2563, #26253, #26898, #26899, #26900, #26993, #27203, #27251, #27252, #27253, #28042 [deployed], #28112, #28133 [proposed], #28214 [executing], #28234 [deployed], #28304 [deployed], #28310 [rejected], #28465 [deployed], #28497 [deployed], #28504 [deployed], #28505 [proposed], #28506 [deployed], #28636 [deployed], #28637 [proposed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [proposed], #28642 [proposed], #374151, #6067, #6366, #64748, #831843, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+population before quantifying)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787981000000 - Argus review follow-through and the Vapi CFA model decision
+
+Where we left off (checked 2026-08-29 02:34 PDT):
+- Answered the model question: all 3 Vapi CFA assistants run anthropic/claude-sonnet-5, not deepseek-v4-pro, and the Anthropic credential is 401ing on 22.6 percent of calls.
+- Repaired and verified the oldest-open-ticket defect, #28641 [deployed], a proven 33.2 day error.
+- Withdrew the approvals-badge claim, #28642 [rejected].
+- #28636 [deployed] bulk exam override from earlier in the session.
+
+Open threads to drive next:
+1. #28637 [proposed] - Ruben decision. Either renew the Anthropic credential as a stopgap to restore phones today, or move the three assistants to a custom-llm endpoint backed by frankenstein-llm and deepseek-v4-pro, matching the opus-ban and the rest of the fleet. Also move VAPI_PRIVATE_KEY out of the webhook file into secrets.php.
+2. #28638 [proposed] - make enqueue idempotent on (chat_id, message_id).
+3. #28639 [proposed] - add per-iteration checkpointing so a retry resumes; argus_task_retry_log is empty, which is the starting point.
+4. #28640 [proposed] - earned outcome enum, and wire argus_cot_leak_incidents.
+5. #28642 [rejected] - residue only: the five pending approvals all read verdict=review and the three oldest date from 2026-08-14, so the recommender and an age SLA are worth a look even though the badge is fine.
+
+Reference IDs:
+- Ideas: #28636 [deployed], #28637 [proposed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected]
+- Files touched: /var/www/emtskills/lib/argus_action_catalog.php (plus .bak-ops4 backup), cline_task_ledger.md
+
+On completion, append to cline_task_ledger.md (rule 07) and run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787996122566` — 8/29/2026, 2:41:13 AM PT — 15 turns
+
+**Original task:**
+
+```
+#SMS/Email Notifications Externships/NREMT and End of Class
+
+You have actually done it before. I need you to provide me with a page that has a list of notifications. This again may be already sitting on the reports.php page is a card link there, but the idea is that we are looking for the SMS messages and emails that are sent in regards to the students externship deadlines as well as NREMT deadlines near the end of the class. Again I believe you've already sent this before but I wanted to assess those to see which ones you need to turn off as that is creating some anxiety students with the mul
+```
+
+**Ideas referenced:** #15815, #1912, #1998, #20495, #2640, #2642, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28306 [deployed], #28307, #28308, #28310, #28316, #28330 [deployed], #28331 [deployed], #28369, #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787980519299` — 8/29/2026, 2:41:03 AM PT — 295 turns
+
+**Original task:**
+
+```
+#Various 2
+
+See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
+```
+
+**Ideas referenced:** #16473, #166603, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25821, #25822, #25916 [awaiting_review], #25932, #26084 [approved], #26661, #26663, #27082 [approved], #27100, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28110, #28118, #28212, #28213, #28220, #28224, #28233, #28481, #28493, #28550, #28612 [proposed], #28613 [proposed], #28625 [executing], #28626 [executing], #28643 [proposed], #374825, #4929, #6106, #9083, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+#28613's DNC-aware fast-path).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — ymaris casas investigation (Various 2): DNC, Email-AI reply analysis, supervisor-signature CFA policy, delay causation.
+(No numeric Cline task id available in this window; topic named instead.)
+
+Where we left off (verified 2026-08-29 02:31 AM PT):
+- DNC verified: unified_dnc_list row 1, +12109021955, source manual_cline, 2026-08-28 22:20 PT.
+- CFA reply evidence: ticket 28224 (TKT-20260827-5032D13D), one AI email sent 08-28 19:04 PT (comment 189119) that was a canned fallback; responder outage root cause documented in ticket comment 189472 (HTTP 401 classifier since ~8/26, LibreContentSanitizer fatal, 106/day permanent_llm_failure).
+- Supervisor-signature policy DEPLOYED: ExternshipKnowledgePack.php line 83, php -l clean, wired to CFA via EmailAIResponder.php:2948-2950, MCP uses same file.
+- Delay causation: student did NOT fail assignments in time (course starts 09-08, nothing due); blockers were declined card (payment FAIL, rule-33 verify pending) and unsigned EA; she then withdrew and DNC'd herself.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #28643 [proposed] — Code change: in the EXAM-EXT-FLAG cron, look up Students.student_id by ticket.student_email before flagging "missing", suppress repeat flags after N occurrences, and release ticket 28224 from pending_cluster_review so the drop/cancellation can be processed.
+2. #28612 [proposed] — Fix the email-responder outage (HTTP 401 classifier / sanitizer / timing-profile / FirstName column) so future student replies are actually read instead of falling back to ClarifyingQuestion.
+3. #28613 [proposed] — DNC-aware responder: short-circuit "please remove me / no longer interested" to a cancellation or DNC fast-path without a clarifying question.
+
+Reference IDs:
+- Ticket: 28224 (TKT-20260827-5032D13D)
+- Ideas filed: #28643 [proposed], #28612 [proposed], #28613 [proposed]
+- Files touched: /var/www/emtskills/lib/ExternshipKnowledgePack.php (modified), /tmp/ExternshipKnowledgePack.php (staging patch)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787995785994` — 8/29/2026, 2:40:09 AM PT — 27 turns
+
+**Original task:**
+
+```
+#GLM 5.3 Local
+
+Cline just killed my window for no reason at all it's over which is really really annoying about GLM 5.3. It was a subsequent window which you should have some information on in your hand off notes hopefully. The point was we were trying to get GM 5.3 local to be picked more often instead of denying turns in an hour or half an hour or whatever it was which is absolutely ridiculous. Think I had approved second option of the previous and also I wanted you to take a look at the // That I'm below regarding meeting another document in order to reference GLM 5.3 local. I would like f
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #12672, #13121, #15144, #15815, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178798, #1798, #1828, #1912, #19567, #19903, #1998, #20042, #20495, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25378, #25381, #2546, #25764, #2579, #2640, #26400, #2642, #2654, #26712, #26713, #26932, #27236, #27249 [executing], #27250, #27503, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28586 [blocked], #28596 [blocked], #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #38390, #39935, #40116, #42662, #43107, #43529, #44857, #45254, #46727, #46845, #47017, #47808, #47972, #48215, #48250, #48341, #48355, #48414, #48420, #48684, #48798, #48929, #49206, #49315, #49389, #49390, #49436, #49458, #49577, #49644, #49791, #49793, #49797, #49852, #49969, #49990, #50062, #50068, #50289, #50321, #50333, #50355, #50368, #50411, #50484, #50507, #50510, #50580, #50613, #50654, #50716, #50734, #50902, #50912, #50929, #50931, #50958, #50991, #51007, #51045, #51070, #51149, #51178, #51247, #51255, #51265, #51276, #51310, #51311, #51316, #51408, #51413, #51430, #51458, #51461, #51482, #51507, #51538, #51603, #51612, #51653, #51655, #51657, #51668, #51674, #51704, #51725, #51726, #51738, #51739, #51774, #51780, #51812, #51841, #51967, #52079, #52084, #52114, #52171, #52173, #52212, #52369, #52374, #52401, #52425, #52458, #52514, #52816, #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787995039075` — 8/29/2026, 2:24:27 AM PT — 10 turns
+
+**Original task:**
+
+```
+#GLM 5.3
+
+Thsi is not the way it's supposed to work. GLM 5.3 is supposed to be chosen first -> So GLM-5.3's effective share is small because bigmac is healthy and faster right now, which is the router working as designed (free-local-first, speed-sorted).
+
+I think we need to hand ship it right now in this window right now. And who cares about restarting the window tonight again? Since when was that issue? You just work around the clock why do you even use that as an excuse that's ridiculous? -> (2) THE REAL LEVER: idea #28622 [executing] — a newer vLLM image where full cudagraphs are sound on g
+```
+
+**Ideas referenced:** #11159, #1130, #1131, #11929, #1234, #1241, #12425, #1248, #1249, #1252, #1258, #13806, #14420, #14505, #15144, #15453, #15697, #15815, #15979, #16032, #16033, #16036, #16122, #16161, #16162, #16163, #16338, #16448, #16452, #16562, #16778, #16802, #16803, #16839, #16851, #16892, #16934, #17050, #17246, #17434, #1744, #17661, #17682, #17687, #17700, #17724, #17741, #17748, #17754, #17756, #17762, #17763, #17764, #17766, #17768, #17769, #17770, #17774, #17776, #17777, #17778, #17780, #17782, #17783, #17785, #17787, #1779, #17792, #17829, #17834, #17839, #178798, #17892, #17895, #17953, #17971, #17972, #1798, #17987, #18007, #18008, #18027, #18029, #18033, #18034, #18037, #18038, #18044, #18048, #18049, #18051, #18052, #18053, #18054, #18055, #18056, #18057, #18058, #18059, #18061, #18063, #18067, #18068, #18069, #18070, #18071, #18072, #18073, #18074, #18075, #18076, #18077, #18078, #18079, #18080, #18082, #18083, #18089, #18092, #18093, #18094, #18095, #18096, #18097, #18099, #18100, #18102, #18103, #18104, #18105, #18106, #1828, #1912, #19482, #19527, #19567, #1986, #1993, #1998, #20042, #20260, #20415, #20495, #20515, #2063, #2065, #20662, #2073, #2083, #20985, #21038, #2127, #2157, #2159, #2168, #2171, #2174, #21831, #21846, #2185, #22072, #22289, #2299, #23210, #23705, #23737, #24124, #2435, #24431, #24488, #24530, #24681, #24714, #24795, #2482, #24911, #25299, #25304, #25356, #25371, #25378, #25380, #25381, #25413, #25429, #25452, #25455, #2546, #25549, #25593, #25618, #25635, #25664, #25731, #25750, #25764, #25773, #25859, #25881, #25913, #25972, #25973, #26058, #26132, #26184, #26185, #26208, #26264, #26275, #26324, #26340, #26343, #26358, #2640, #26400, #2642, #26436, #26448, #26466, #26501, #26509, #2654, #2656, #26585, #26594, #26609, #26610, #26647, #26674, #26686, #26689, #26712, #26713, #26753, #26883, #26886, #26932, #26934, #26973, #26987, #27000, #27018, #27023, #27062, #27063, #27071, #27075, #27099, #27102, #27109, #27124, #27132, #27133, #27140, #27150, #27198, #27206, #27210, #27216, #27220, #27236, #27249 [executing], #27250, #27306, #27342, #27412, #27466, #27468, #27503, #27506, #27572, #27579, #27586, #27618, #27623, #27692, #27704, #27706, #27717, #27720, #27723, #27725, #27726, #27742, #27752, #27753, #27754, #27755, #27756, #27762, #27768, #27772, #27773, #27774, #27776, #27778, #27781, #27786, #27789, #27794, #27795, #27798, #27804, #27812, #27813, #27816, #27819, #27821, #27825, #27830, #27836, #27837, #27843, #27845, #27847, #27850, #27851, #27856, #27858, #27863, #27865, #27875, #27880, #27881, #27897, #27907, #27920, #27921, #27925, #27944, #28011, #28033, #28042, #28081, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28306 [deployed], #28307, #28308, #28310, #28316, #28330 [deployed], #28331 [deployed], #28369, #28370 [deployed], #28391, #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #28989, #29168, #29342, #29432, #29597, #29602, #29603, #29605, #29606, #29683, #30158, #30399, #30762, #30805, #30915, #31263, #31326, #31600, #31624, #31649, #31915, #32151, #32180, #32222, #32313, #32321, #32331, #32682, #32759, #32785, #32968, #33010, #33030, #33171, #33182, #33221, #33237, #33393, #33778, #33986, #34005, #34186, #34299, #34301, #34389, #34411, #34492, #34510, #34604, #34629, #34645, #34712, #34719, #34722, #34837, #34895, #34899, #34902, #34920, #34927, #34941, #34942, #34943, #34944, #34946, #34947, #34954, #34959, #34966, #34969, #34972, #34974, #34978, #34980, #35011, #35019, #35021, #35091, #35104, #35241, #35307, #35335, #35629, #35766, #35779, #35848, #35865, #36010, #36018, #36094, #36144, #36150, #36164, #36192, #36198, #36267, #36285, #36316, #36329, #36344, #36348, #36390, #36475, #36480, #36501, #36507, #36531, #36534, #36537, #36545, #36548, #36558, #36586, #36596, #36599, #36607, #36608, #36610, #36616, #36626, #36633, #36637, #36680, #36703, #36716, #36741, #36805, #36807, #36820, #36851, #36871, #36880, #36894, #36898, #36917, #36919, #36922, #36928, #36941, #36951, #36954, #36956, #36957, #36958, #36997, #37015, #37028, #37036, #37038, #37041, #37042, #37046, #37050, #37052, #37053, #37054, #37056, #37058, #37060, #37062, #37268, #37995, #38060, #38068, #38175, #38188, #38216, #38284, #38303, #38329, #38357, #38364, #38367, #38375, #38401, #38420, #38431, #38432, #38434, #38438, #38439, #38440, #38442, #38455, #38488, #38511, #38515, #38523, #38538, #38546, #38549, #38572, #38597, #38598, #38599, #38600, #38602, #38603, #38606, #38608, #38610, #38620, #38622, #38623, #38629, #38636, #38643, #38645, #38646, #38647, #38715, #38716, #38721, #38724, #38725, #38726, #38727, #38728, #39010, #39072, #39273, #39573, #40807, #40851, #40860, #40969, #41027, #41286, #41804, #42147, #42261, #42948, #43174, #43224, #43240, #43338, #43564, #43828, #44219, #44280, #45238, #45635, #45709, #46042, #46268, #46861, #47194, #47779, #48289, #48349, #49011, #49210, #49237, #49274, #49529, #49613, #49760, #49855, #50045, #50415, #50477, #50484, #50488, #50654, #50671, #50913, #50969, #51033, #51303, #51311, #51318, #5156, #51743, #51744, #51758, #51798, #5186, #51869, #51884, #51904, #51914, #51921, #52049, #52097, #52109, #52181, #52244, #52247, #52300, #52317, #52339, #52379, #52402, #52410, #52413, #52419, #52434, #52441, #52442, #5245, #52454, #52460, #52461, #52472, #52473, #52474, #52476, #52545, #52599, #52736, #52764, #52803, #52863, #52907, #52921, #52942, #52945, #53076, #53129, #53137, #53217, #53396, #53505, #53507, #53555, #53592, #53599, #53694, #53721, #53835, #53867, #53869, #53877, #53894, #53896, #53898, #53906, #53920, #53929, #53943, #53960, #53963, #53967, #53984, #53987, #53988, #53989, #53990, #54008, #54036, #54062, #5410, #54127, #54131, #54146, #54153, #54176, #54180, #54284, #54293, #54307, #54308, #6825, #6855, #7115, #7142, #7149, #7203, #7371, #7380, #7449, #7485, #7656, #7682, #7704, #7880, #8444, #8483, #8578, #8593, #8620, #8678, #8733, #8754, #8755, #8768, #8770, #8771, #8794, #8821, #8845, #8847, #8852, #8854, #8858, #8873, #8875, #8878, #8886, #8890, #8898, #8911, #8925, #8926, #8931, #8933, #8934, #8935, #8936, #8937, #8939, #8940, #9008, #9033, #9152, #9187, #9201, #9242, #9245, #9247, #9399, #9500, #9518, #9539, #9588, #9671, #9672, #9673, #9680, #9683, #9697, #9727, #9737, #9739, #9746, #9748, #9753, #9757, #9758, #9768, #9770, #9772, #9775, #9777, #9792, #9804, #9805, #9807, #9811, #9815, #9821, #9822, #9829, #9846, #9861, #9867, #9869, #9872, #9874, #9881, #9888, #9891, #9892, #9895, #9897, #9900, #9905, #9908, #9911, #9912, #9913, #9915, #9920, #9923, #9926, #9930, #9931, #9934, #9943, #9945, #9946, #9948
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787984810545` — 8/29/2026, 2:01:35 AM PT — 770 turns
 
 **Original task:**
 
@@ -77,52 +215,41 @@ apprved
 **Last PICKUP PROMPT:**
 
 ```
-sting record' at 01:39 PT).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787984810000 — GLM-5.3 8-lane PIECEWISE fix shipped; speed recovery via newer vLLM image.\n\nWhere we left off (verified 2026-08-29 01:39 PT):\n- GLM-5.3 ring SERVING CORRECT on :8210 with cudagraph_mode=PIECEWISE (root cause: vLLM issue 45425 class — FULL_AND_PIECEWISE default corrupts batched DSA+fp8_ds_mla decode; PIECEWISE = community-verified fix). 3-way reproducer all-Paris (/tmp/uni_def_result.txt). x8 bench: all 8 correct, 12.8 tok/s agg (/tmp/x8lean_result.txt).\n- Lanes: 8/8 restored, 4 Cline + 4 Batch via zzz...-glm53-piecewise-lanes-20260829.conf (8210=8,8211=8, EMSU_GLM_LANES_CLINE=4, EMSU_GLM_LANES_BATCH=4). Concurrency-1 mitigation deleted. Ring 200, adapter 200.\n- cato:~/glm53_launch_cfg_pp6.sh carries the escaped PIECEWISE flag (SYNTAX_OK). Root glm52-watchdog.service daemon (unkillable without pw) invokes the SAME patched relaunch script — future auto-restarts safe. glm53_watchdog_worker_v2.sh 1x on cato.\n- Bug library incident 2654 RESOLVED with full RCA + fix. Ideas: #28605 [deployed], #28615 [deployed], #28606 [deployed], #28621 [deployed].\n\nOpen threads to drive next:\n1. #28622 [executing] — newer vLLM image with sound full-graph glm_moe_dsa: when the executor delivers, redeploy the ring, re-run /tmp/uni_7..9.json + the x8 bench, then swap PIECEWISE back to the default to recover decode speed (12.8 agg -> 5.2-era numbers). If the executor impl_fails again, hand-ship per bug library incident 2654's resolution notes.\n\nReference IDs:\n- Ideas: #28622 [executing] (re-queued; first attempt impl_failed, executor doctor run clean)\n- Bug library incidents (frankenstein_router_incidents, not idea ids): 2654 resolved, 2655 resolved, 2656 resolved\n- Files touched: cato:~/glm53_launch_cfg_pp6.sh (+.bak-pre-piecewise-20260829), WOPR:/etc/systemd/system/frankenstein-tools.service.d/ (zzz...-glm53-piecewise-lanes-20260829.conf added; concurrency-1 mitigation deleted), WOPR:/usr/local/bin/frankenstein_tools_adapter.py (+.bak-pre-28605-20260829), WOPR:/tmp/x8lean.sh + results, WOPR:/usr/local/bin/frank_registry_autosync.py (wipe guard)\n\n# Reversal Log\n- \"PIECEWISE flag patched\" → corrected: sed had stripped the JSON escaping, all 6 ranks crash-looped Exit(2); rewrote via python + scp, verified with bash -n SYNTAX_OK + docker inspect + clean 6-rank boot | RCA bucket: insufficient probe | causal rule updated: 99\n- \"all watchdogs stopped\" → corrected: root-owned glm52-watchdog.service daemon survived pkill and fired its own relaunch mid-boot | RCA bucket: unread source | causal rule updated: 263a (cgroup-identity gate applied: /proc/678/cgroup read before acting)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════", "task_id": "1787984810000"}
-</arguments>
-</use_mcp_tool>
-```
-
-### `1787985551437` — 8/29/2026, 1:26:25 AM PT — 246 turns
-
-**Original task:**
-
-```
-#Argus
-
-See Also the Screenshot about overrides / needs a bulk option
-
-Confirmed every issue in the pasted report and both pickup prompts, addressed or explicitly routed to a human. The short version: the Exam 5 monitor the executor claimed was live did not exist, so it was rebuilt from scratch and now runs daily, having flagged 3 students (course 37, close dates inside 7 days) whose names went to staff; the 1,702 auto-void rows were proven to be the healthy integrity investigator's repair audit trail, so that thread is closed by-design; the Employee Certs complaint was a data problem (Ruben h
-```
-
-**Ideas referenced:** #059669, #166534, #178798, #2563, #26898, #26899, #26900, #27203, #27251, #27252, #27253, #28042 [deployed], #28112, #28133 [proposed], #28214 [executing], #28234 [deployed], #28304 [deployed], #28310 [rejected], #28465 [deployed], #28497 [deployed], #28504 [deployed], #28505 [proposed], #28506 [deployed], #28636 [deployed], #374151, #6067, #6366, #64748, #831843, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-ipeline proven by the harness.
+resolution for the next agent.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1787981000000 — Bulk exam override by section (screenshot "needs a bulk option")
 
-Where we left off (verified 2026-08-29 01:25 PDT):
-- Built and deployed `routes/api/exam_override_bulk.php` (list_sections/list_exams/preview/bulk_override; attempt modes add_one/none/reset_all).
-- Built and deployed `routes/_bulk_override_panel.php` (admin-only UI with preview-then-apply), included in `routes/exam_override_request.php` line 795.
-- Idea #28636 [deployed] filed; ledger + handoff notes appended.
+Pick up task #1787984810000 — GLM-5.3 stable on 8 lanes (PIECEWISE); speed recovery = vLLM image upgrade.
+
+Where we left off (verified 2026-08-29 01:59 PT):
+- GLM-5.3 ring CORRECT on :8210 (PIECEWISE): 5 turns/35m, TTFB p50 4.8s, x8 bench 12.8 tok/s agg all-correct, single 5.8-9.3 tok/s. 8 lanes (4 Cline + 4 batch). Root cause + fix recorded in bug library incident 2654 (resolved).
+- :8211 legacy glm_fanout_proxy REMOVED from routing (zzz...-drop-dead-8211-fanout-20260829.conf sorts after the qwen38 drop-in; live env has zero 8211 refs; e2e FINAL_E2E_OK 01:59 PT). Service still runs unrouted (root-owned; needs Ruben password to stop).
+- Fleet 35m: 627 turns total; bigmac took the bulk (273 upstream hits), GLM-5.3 ring 5 turns + 9 via its direct router lane. CFAs 33/33 healthy earlier this session.
+- Ideas: #28605 [deployed], #28615 [deployed], #28606 [deployed], #28621 [deployed], #28622 [executing].
 
 Open threads to drive next:
-1. #28636 [deployed] — Optional next step: run a real, named-section bulk apply (with the section name supplied by Ruben/Jon) and read back the resulting `quiz_overrides`/`exam_override_requests` rows to close the apply-path live verification. No idea required beyond #28636.
-2. #28636 [deployed] — Optional next step: add a bind mount or route entrance so the panel is reachable from the enforcement dashboard Quick Override tab as well (currently wired into the exam_override_request admin panel; the API is reusable from either).
+1. #28622 [executing] — newer vLLM image with sound full-graph glm_moe_dsa: when delivered, redeploy ring, re-run /tmp/uni_7..9.json + x8lean bench, swap PIECEWISE to default, expect roughly 2x decode. If executor impl_fails again, hand-ship per bug library incident 2654 resolution notes.
+2. (human-only decision — no idea) stopping the root-owned glm-fanout-proxy.service on WOPR needs your sudo password; it is unrouted and harmless until then.
 
 Reference IDs:
-- Ticket: N/A (Argus screenshot steer)
-- Ideas filed: #28636 [deployed]
-- Files touched: routes/api/exam_override_bulk.php, routes/_bulk_override_panel.php, routes/exam_override_request.php, cline_task_ledger.md, docs/HANDOFF_NOTES.md, orchestrator_ideas row 28636
+- Ideas: #28622 [executing]
+- Bug library incidents (frankenstein_router_incidents): 2654 resolved, 2655 resolved, 2656 resolved
+- Files touched this window: WOPR:/etc/systemd/system/frankenstein-tools.service.d/zzz...-drop-dead-8211-fanout-20260829.conf, WOPR:/tmp/final_payload.json + final_e2e.json
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
+# Reversal Log
+- "GLM53 turns last 35m: 0" → corrected: my filter compared UTC cutoff against -0700-stamped log lines; fixed tz-aware parse returned 5 turns | RCA bucket: insufficient probe | causal fix: tz-aware datetime.strptime in the recount (no rule change needed; one-off script defect)
+- "drop-in for 8211 removal" → corrected: first drop-in sorted before the qwen38-lanes-20260822 conf so 8211 reappeared (2 refs); renamed deeper-sorted file, live config now 0 refs | RCA bucket: scope error | causal rule updated: 99
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>- [x] GLM-5.3 35m status: 5 turns, TTFB p50 4.8s, correct, stable
+- [x] Turn counts vs other LLMs (rule 322 resolved): 627 total, bigmac dominant
+- [x] tok/s + lanes + concurrency numbers reported (8 lanes, 12.8 agg)
+- [x] Stability: :8211 legacy fanout flapping removed from routing, e2e FINAL_E2E_OK
+- [x] Speed path documented: #28622 newer vLLM image = safe 2x lever
+- [x] Validated + gate clear + completion shipped</task_progress>
 </attempt_completion>
 ```
 
@@ -178,68 +305,6 @@ if (!$rec['auto_ok']) {
 `old_status === new_status`, fired every 15 minutes forever. PASS 5's overdue handler only does `UPDATE grievances SET stuck_status = 1` — no owner assignment, no notification.
 
 ### `/var/www/emtskills/routes/api/grievance_api.php` — READ (overdue/stage logic
-```
-
-### `1787980519299` — 8/29/2026, 1:11:57 AM PT — 232 turns
-
-**Original task:**
-
-```
-#Various 2
-
-See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
-```
-
-**Ideas referenced:** #16473, #166603, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25916 [awaiting_review], #25932, #26084 [approved], #26661, #26663, #27082 [approved], #27100, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28110, #28212, #28213, #28220, #28224, #28233, #28481, #28493, #28550, #28612 [proposed], #28613 [proposed], #28625 [executing], #28626 [executing], #6106
-
-**Last PICKUP PROMPT:**
-
-```
-IDs and a named owner (Vicky).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787985551437, Kevin externship portal plus Stuart invoice plus CFA knowledge updates.
-
-Where we left off (verified 2026-08-29 01:11 PT):
-- Kevin validator message on disk (api_validate_student.php line 107), email 374823 sent 00:35:08.
-- KnowledgePack clauses verified: PORTAL ACCESS present, AND CA psychomotor present, old OR wording gone.
-- Stuart email draft 24389 pending (tier 2_click, deadline 08-29 11:35), Vicky notified chat 64.
-- Ideas 28625 and 28626 both approved, efficiency_priority=1, dev_stage=idle.
-
-Open threads to drive next:
-1. #28625 [executing]: build the invoice-generator dedup plus amount_paid carryover, and the amount_paid + balance_due reconciliation audit.
-2. #28626 [executing]: build the ack-suppression gate plus repeat-ack circuit breaker for billing/refund disputes.
-3. #28613 [executing]: wire DncGate into EmailAIResponder pre-send (carried, dev_stage=drafting).
-4. (human-only decision, no idea) Vicky: void invoices 177016, 177072, 177193; reissue one invoice for 421.95; click-send draft 24389.
-5. (human-only decision, no idea) Merge duplicate Students rows 8148531 and 8202427, populate the NULL student_id.
-
-Reference IDs:
-- Ideas filed this session: #28625 [executing], #28626 [executing]
-- Carried: #28613 [executing]
-- Draft: 24389 (Stuart email, pending click)
-- Files touched: /var/www/emtskills/externship/api_validate_student.php, /var/www/emtskills/lib/ExternshipKnowledgePack.php
-- Students: Kevin Manrique 26423BC-07 (8200252); Stuart Andrus 8148531 plus 8202427
-- Emails: sent id 374823 (Kevin)
-
-# Reversal Log
-- Claimed regime rendered POST_SEPT1, corrected to before-September-1 | RCA bucket: insufficient probe | re-probed the actual header. Causal rule updated: 317 clause 1 (probe the artifact under test, not a substring the patch itself introduced).
-- First KnowledgePack patch left a PHP parse error at line 79, restored and re-patched clean | RCA bucket: insufficient probe | covered by 317 clause 9 (consumer re-run after patch); cited, not re-appended.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Kevin validator message verified on disk (line 107)
-- [x] Kevin email 374823 verified: status=sent, sent_at 08-29 00:35:08
-- [x] KnowledgePack clauses verified: PORTAL present, AND CA present, OR gone
-- [x] Stuart draft 24389 verified: pending, tier 2_click
-- [x] Ideas 28625/28626 verified: approved, priority 1
-- [x] Completion with honest done vs human-gated split
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1787876909491` — 8/29/2026, 1:11:39 AM PT — 1062 turns
@@ -1725,69 +1790,4 @@ Reference IDs:
 - Files touched: none
 ═══════════════════════════════════════════════════════════════════════════════════════
 </attempt_completion>
-```
-
-### `1787596912975` — 8/26/2026, 1:56:41 AM PT — 402 turns
-
-**Original task:**
-
-```
-We are gettng these. What's going on? Can you correct that?
-```
-
-**Ideas referenced:** #0000, #11629, #16069, #16523, #17483, #177851, #18693, #18944, #18951, #19426, #20251, #24606, #24995, #25066, #2563, #25888 [approved], #26663, #26834, #27100, #27657, #27658, #27819 [proposed], #27942, #28044, #28114 [proposed], #28115 [proposed], #28116 [proposed], #28118, #28153, #28213, #28239 [proposed], #28240 [proposed], #28242 [proposed], #28255 [proposed], #5780, #6106, #61430, #7346, #7882, #9086, #9168, #9339, #9550, #99999
-
-**Last PICKUP PROMPT:**
-
-```
-alidate_completion`'s divider/header logic is NOT broken. The repeated "missing PICKUP PROMPT header" / "missing divider lines" errors I got from raw `attempt_completion` calls are a **different, client-side gate** (Cline extension itself), not this MCP tool — and I never once called this diagnostic tool during my 12+ failed attempts. That is the actual process failure (rule 297: insufficient probe). Now checking what actually served this window, per rule 322/315, before writing the RCA.
-
-```
-
-### `1787730932980` — 8/26/2026, 1:55:08 AM PT — 133 turns
-
-**Original task:**
-
-```
-frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterations, etc... Unsure what's going on, but needs complete analysis and reslution. 
-
-Do not inject anthropic
-```
-
-**Ideas referenced:** #081020, #10108, #10740, #11741, #11781, #11945, #12364, #12459, #12477, #12618, #12689, #128126, #12824, #12872, #12878, #13108, #13202, #13437, #16163, #16265, #16304, #16732, #16844, #16863, #1724, #178693, #178712, #178713, #178716, #18312, #18326, #186576, #1893, #19419, #2050, #21586, #22229, #2230, #2306, #2307, #2311, #23133, #2314, #2321, #2323, #2324, #2328, #2331, #2335 [deployed], #2337, #2338, #2339, #2340, #2341, #2343, #2344, #23455, #23477, #2358, #23945, #23954, #23982, #24895, #25042, #25097, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #25537, #2554, #25551, #25560, #25608, #25623, #25632, #25633, #25635, #25667, #25669, #25688, #25689, #2569, #2570, #2571, #25722, #25723, #25724, #25725, #25726, #25727, #25728, #25729, #2573, #25730, #25731, #25747, #25754, #25755, #25757, #25759, #25764, #25765, #2579, #25796, #25797, #25798, #2580, #25803 [proposed], #25804 [deployed], #25812, #2582, #25822, #25830, #25889 [ready_for_review], #2589, #2590, #25914, #25916, #25931, #25932, #25933, #25938 [deployed], #25940 [executing], #25941 [proposed], #25942 [deployed], #25944 [deployed], #25957 [approved], #25958 [approved], #25962 [deployed], #25963 [deployed], #25964 [deployed], #25965 [deployed], #25966 [deployed], #2597, #25973, #25975, #25985, #25986, #25989, #25990, #26001, #26002, #26003 [deployed], #26007 [executing], #26008 [executing], #26009 [executing], #26015, #26016 [rejected], #26017 [executing], #26019 [executing], #26023 [executing], #26024 [executing], #26027, #26028, #2603, #26035, #26038, #26039, #26040, #26041, #26044, #26045, #26046, #26048, #26049, #2605, #26050, #26054, #26065, #26067, #26068, #26076, #26077, #26080 [completed], #26090, #26196, #26205 [executing], #26207 [executing], #26208 [executing], #26209 [proposed], #26210 [executing], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625 [deployed], #2626, #26322, #26336, #26348, #26368, #26376, #26377, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #26613, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #26663, #26678, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #26743, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26908, #26909, #26914, #26923, #26925 [deployed], #26931, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28238 [deployed], #28244 [proposed], #28245 [proposed], #28246 [proposed], #28250 [rejected], #28252 [proposed], #28253 [proposed], #28254 [proposed], #3261, #3319, #3346, #360135, #360152, #366377, #38984, #450438, #6826, #8157, #8162, #8184, #9222
-
-**Last PICKUP PROMPT:**
-
-```
- fresh window should run them.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #28246 [proposed] - frankenstein-llm slow + terrible rule-91 iterations, full resolution (qwen38 routing regression + julia down + ring saturation; do NOT inject anthropic).
-
-Where we left off (verified 2026-08-26 01:08 PT, live probes not stale reads):
-- verify_routing frankenstein-llm -> adapter http://127.0.0.1:11510/v1, HTTP 200, but 22001ms for a trivial probe, cost $0.
-- Live endpoint probes: julia235 :11513 DOWN rc=7 (connection refused); bigmac 10.100.0.19:8000 UP; artemis 10.100.0.5:8000 UP; glmring :8210 UP; adapter :11510 UP.
-- Adapter upstream log: lane=cline STILL hitting :11521 (Claudia qwen38-27b) at TTFB 7.2/42.0/43.1s despite #28238 [deployed] demotion fix; GLM ring :8210 TTFB 96.78/111.5/132.3s with queue_depth 3.
-- Router audit: ring_admit_rewrite why=ring_batch_ceiling_4_running_5 (ring over ceiling); 3 concurrent emsu-codegen batch calls 89K-119K chars starving interactive cline; distill_chunk_oversized_failopen error=timed out.
-- Registry router_derived_state loaded_at 2026-08-23 22:15 (2 days STALE) so dead julia never evicted. frankenstein-llm pool members = glm-5.2-local, artemis-gpt-oss-120b, julia-235b, bigmac-120b.
-- Prior fix #28238 [deployed] (23:27 AKDT, bug library incident 2625) demoted qwen38 for interactive cline and was verified then (cline-marker probe picked gpt-oss-120B at 0.162s), but live cline traffic at 01:07-01:09 is still landing on :11521 = the fix reverted or does not cover all cline paths.
-- Records written this window: bug library incident 2625 (merged, seen_count 2); HANDOFF_NOTES.md updated with full root-cause stack.
-
-Open threads to drive next:
-1. #28246 [proposed] - THE quality killer. Find why lane=cline still routes to qwen38 :11521 despite #28238 [deployed]. Check for a post-23:27 frankenstein-tools.service restart or systemd drop-in last-wins revert; confirm _qwen38_priority covers ALL interactive cline paths; check EMSU_GLM_FIRST_ALL_LANES. Fix the WINNING drop-in in place, verify via sudo cat /proc/PID/environ, then live-probe the cline lane and assert ZERO :11521/:11525 picks.
-2. #28244 [proposed] - Recover julia-235b :11513 (ssh -p 2205 from WOPR, check /tmp/vllm_serve_unified.log, keep VLLM_STREAM_LOADING=0) OR run /usr/local/bin/litellm-safe-restart.sh to reload the stale registry and evict the dead member from rotation.
-3. #28245 [proposed] - Enforce GLM ring batch ceiling (running 5 vs ceiling 4) and add interactive-cline-priority scheduling so batch (emsu-codegen) stops starving cline, per rule 146 (Cline is PRIORITY).
-
-Reference IDs:
-- Ideas filed: #28244 [proposed], #28245 [proposed], #28246 [proposed]
-- Bug library: incident 2625 in frankenstein_router_incidents (merged, seen_count 2, status investigating)
-- Prior related idea: #28238 [deployed] (the 23:27 qwen38 interactive demotion that is not holding)
-- Files touched: HANDOFF_NOTES.md (updated via MCP); docs referenced GLM52_RING_STATE_TRACKER.md + GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md
-- Key paths: /usr/local/bin/frankenstein_tools_adapter.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/litellm-safe-restart.sh, /var/log/emsu-adapter-upstream.log, /tmp/emsu_router_audit.log
-
-# Reversal Log
-No reversals this window. Diagnosis held from first live probe; the only refinement was discovering the pre-existing 23:27 fix #28238 [deployed] (bug library incident 2625) which the live adapter log pro
 ```

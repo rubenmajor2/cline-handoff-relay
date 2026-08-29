@@ -6,10 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 9:36:52 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 1, cached 944)
+Generated: 8/29/2026, 10:36:52 AM PT | window: last 72h | 45 tasks | index total 951 (parsed 4, cached 947)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1788021587569` | 8/29/2026, 10:36:40 AM | 583 | 778KB | #GLM 5.3 Local |
+| `1788021977080` | 8/29/2026, 10:30:19 AM | 97 | 2176KB | #Various 2 |
+| `1788021866677` | 8/29/2026, 10:30:19 AM | 177 | 498KB | #ArgusVAPI CFA voice path |
+| `1788022793741` | 8/29/2026, 10:23:00 AM | 70 | 270KB | #Frankenstein LLM Routing Probe |
+| `1788021695555` | 8/29/2026, 9:58:19 AM | 144 | 2186KB | #TDSHS OpenRecords |
+| `1788021480367` | 8/29/2026, 9:57:58 AM | 56 | 324KB | #Restart Storm |
 | `1787980519299` | 8/29/2026, 9:27:49 AM | 342 | 12997KB | #Various 2 |
 | `1787996122566` | 8/29/2026, 9:18:10 AM | 88 | 441KB | #SMS/Email Notifications Externships/NREMT and End of Class |
 | `1787995785994` | 8/29/2026, 4:22:16 AM | 544 | 870KB | #GLM 5.3 Local |
@@ -49,11 +55,167 @@ Generated: 8/29/2026, 9:36:52 AM PT | window: last 72h | 40 tasks | index total 
 | `1787517211429` | 8/26/2026, 3:05:12 PM | 440 | 6493KB | #CFA |
 | `1787705478563` | 8/26/2026, 1:46:51 PM | 217 | 759KB | #Argus |
 | `1787765271795` | 8/26/2026, 11:00:12 AM | 282 | 357KB | I am not going to check every single email. The email ideally is done correctly the first  |
-| `1787764643350` | 8/26/2026, 10:22:49 AM | 9 | 16KB | Tell me about your sloness as the GLM ring |
 
 ---
 
 ## Per-window detail
+
+### `1788021587569` — 8/29/2026, 10:36:40 AM PT — 583 turns
+
+**Original task:**
+
+```
+#GLM 5.3 Local
+
+Make sure you add all of this to the bug library and also consult a bug library when you are working on the LLM's. Per cline rules you should be doing this already.
+
+The goal of this window is to get GLM 5.3 local iterating quickly and safely as primary rung, etc... 
+
+Proceed. 
+
+#GLM 5.3 Local
+Please make sure that you are consulting the bug library as well as updating it properly
+Cline just killed my window for no reason at all it's over which is really really annoying about GLM 5.3. It was a subsequent window which you should have some information on in your hand off notes ho
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12672, #12824, #12872, #12878, #13202, #13832, #15815, #16163, #16265, #16304, #16680, #16844, #1754, #1755, #178798, #18312, #18326, #1912, #1986, #1998, #20495, #2050 [investigating], #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25097, #2537, #2569 [resolved], #25764, #2603, #2626 [investigating], #2640, #26400, #2641 [resolved], #2642 [resolved], #2644 [resolved], #2645 [resolved], #2647 [resolved], #2650 [resolved], #2653 [resolved], #2654 [investigating], #2656 [resolved], #2659 [investigating], #2662, #2663, #26712, #26713, #26908, #26923, #26932, #27259, #28034, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28586, #28596, #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #28693 [proposed], #45425
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788021977080` — 8/29/2026, 10:30:19 AM PT — 97 turns
+
+**Original task:**
+
+```
+#Various 2
+
+RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
+```
+
+**Ideas referenced:** #16242, #166534, #17446, #178796, #19362, #22060, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #4518, #4929, #813528, #9086, #9168, #92400, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+lse-stale)
+- [ ] Write consolidated tracking doc
+- [ ] Validate + complete with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1788021866677` — 8/29/2026, 10:30:19 AM PT — 177 turns
+
+**Original task:**
+
+```
+#ArgusVAPI CFA voice path
+
+So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
+
+--
+Done. The VAPI CFA voice path now runs DeepSeek a
+```
+
+**Ideas referenced:** #12584, #15815, #16844, #178798, #19100, #1912, #1965, #1998, #20495, #2168, #2640, #2642, #2654, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #6106
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788022793741` — 8/29/2026, 10:23:00 AM PT — 70 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Routing Probe
+
+Please pro Frankenstein LLM and tell me exactly which underlying LLM's have been used in the last six hours. I need you to dive into them according to cline rules. I do not care about how many turns frankenstein llm or frankenstein tools did. I need you to actually look inside each of those LLMs to see what individual LLMs are being used for iterationg in cline, argus, batch. I need to see them separated in a table. I need them actually probed. Do not give me stale or inaccurate info. Crazy I have to say that, but I need the actual info, not something stale or
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12430, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #19686, #25097, #2537, #26908, #26923, #27259, #28034
+
+**Last PICKUP PROMPT:**
+
+```
+ng; this is a read-only probe.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Frankenstein LLM routing probe: underlying-LLM table for last 6h by surface (DONE this session).
+
+Where we left off (verified 2026-08-29 10:22 PT):
+- Probe complete. BigMac gpt-oss-120b (10.100.0.19:8000) served 99.4% of adapter traffic (4,096 of 4,119 resolved reqs last 6h; evidence: /tmp/frankenstein_tools_adapter.log lane split + live /v1/models probe returning gpt-oss-120b).
+- Cline=2,369, Batch/Executor/Codegen=3,441, Argus=52 on BigMac. GLM-5.3-15pct Hex ring=20 (18 batch, 2 cline). Artemis gpt-oss-120b=3. Cloud spill: deepseek-v4-pro 1,212, glm-5.2 274, kimi-k3 125, claude-sonnet-5-vision 96.
+- Dead tables found (empty in window): llm_router_audit_log, litellm_spend_log, llm_request_log, frankenstein_routing_log, liteLLM_access_log, fleet_llm_probe_log. Live truth = audit log + adapter log + direct HTTP probes.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. None — all requested work completed this session. (Read-only probe; no buildable follow-up deferred.)
+
+Reference IDs:
+- Ticket: none
+- Ideas filed: none this session (read-only probe)
+- Files touched (server, read-only): /tmp/emsu_router_audit.log, /tmp/frankenstein_tools_adapter.log, /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, admin_portal.llm_call_log
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788021695555` — 8/29/2026, 9:58:19 AM PT — 144 turns
+
+**Original task:**
+
+```
+#TDSHS OpenRecords
+
+The only thing left for me to do was to send in the complaint at the Attorney General's office which I believe is on the website link that you gave me at the very bottom. It says something like request assistance. I think it's a web form fill-in so I like for you to see if you can take a look at that and then possibly we might have to have a shorter response because a lot of times they will want you to do that. But it would be good to have both a short response and a long response that's copyable in line here and you can give it to me on the URL that you provided to me prev
+```
+
+**Ideas referenced:** #178778, #28219 [proposed], #28594 [proposed], #394149, #709171
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788021480367` — 8/29/2026, 9:57:58 AM PT — 56 turns
+
+**Original task:**
+
+```
+#Restart Storm
+
+Sometimes when I restart this computer there will be a restart storm and what I mean by that is that processes will pile up which will lock down the computer for 30 minutes or so. This is not something we want to happen. So I like for you to scan for that proactively and make sure it doesn't happen so that I can run cline windows
+```
+
+**Ideas referenced:** #11316, #15815, #1912, #1998, #20495, #2168, #2629, #2631 [investigating], #2640, #2642, #2654, #26712, #26713, #26932, #28042, #28133, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28252, #28254, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28622, #30043, #30515, #31646, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+storm; no 30-minute lock-down.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Restart Storm Guard (local Mac boot pile-up prevention).
+
+Where we left off (verified 2026-08-29 09:56 PT):
+- Deployed and live-verified `~/bin/emsu-restart-storm-guard.sh` (executable, `bash -n` exit 0).
+- Launch agent installed `~/Library/LaunchAgents/com.emsu.restart-storm-guard.plist` (RunAtLoad + StartInterval 60s); running as launchd job `com.emsu.restart-storm-guard`.
+- Live proof: guard detected `procs=778 > 500` and reniced 39/43 storm contributors (mdworker/Spotlight/speech/VS Code Renderers) to nice +15; load fell 13.53 → 4.81.
+- Log: `/tmp/emsu-restart-storm-guard.log`.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. None — all work completed this session.
+
+Reference IDs:
+- Files touched: /Users/rubenmajor/bin/emsu-restart-storm-guard.sh, /Users/rubenmajor/Library/LaunchAgents/com.emsu.restart-storm-guard.plist
+- Log: /tmp/emsu-restart-storm-guard.log
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1787980519299` — 8/29/2026, 9:27:49 AM PT — 342 turns
 
@@ -1841,30 +2003,3 @@ truth_judge_log has 3,393 total judge calls all-time, ramping from near-zero bef
 **Ideas referenced:** #16069, #178760, #2628 [deployed], #26663, #27100, #27942, #28043, #28044, #28213, #28255 [proposed], #28306 [deployed], #28307 [proposed], #28308 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787764643350` — 8/26/2026, 10:22:49 AM PT — 9 turns
-
-**Original task:**
-
-```
-Tell me about your sloness as the GLM ring
-```
-
-**Last PICKUP PROMPT:**
-
-```
-═══════════════════════════════════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════════════════════════════════════════
-Pick up task — GLM ring slowness summary
-Where we left off (verified 2026-08-26 09:20 PT):
-- Completed a concise description of why the GLM ring can become slow and how to mitigate it.
-Open threads to drive next:
-None
-Reference IDs:
-- Ticket: none
-- Ideas filed: none
-- Files touched: none
-═══════════════════════════════════════════════════════════════════════════════════════
-</attempt_completion>
-```

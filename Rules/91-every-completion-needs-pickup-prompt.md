@@ -112,30 +112,19 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - Rule 267 — reconcile ideas before completion
 - _RULE_TREE.md Gate 9 — pre-completion gate
 
-## Compression is a completion. Both halves are gated. (2026-08-11)
+## Compression + degraded-mode escape hatch
 
 A rule-119 compression produces TWO gated artifacts, not one.
 
-**Half 1, the `pickup_prompt` parameter of `cline_compress_session`.** That string is the only state that survives into the next window, so it must be a full, gate-valid block on its own: real divider, real task id, `Where we left off`, `Open threads`, `Reference IDs`, every `#NNNN` bracketed. The tool truncates at 5KB, so put load-bearing state FIRST. A prompt cut mid-`Open threads` loses exactly what the next window needs.
+**Half 1, the `pickup_prompt` parameter** is the only state that survives into the next window, so it must be a full, gate-valid block on its own. It truncates at 5KB: put load-bearing state FIRST.
 
-**Half 2, the `attempt_completion` that ships the SESSION MEMORY blob.** The blob is NOT a pickup prompt. Compression exempts nothing: run `clinerules_validate_completion`, then `clinerules_check_gate`, then append a PICKUP PROMPT block to the `result` string BELOW the blob. Two copies of the block in one window is correct.
+**Half 2, the `attempt_completion` that ships the blob.** The blob is NOT a pickup prompt and compression exempts nothing: validate, check gate, then append your OWN 47-char block BELOW the blob. Two copies of the block in one window is correct. Never paste the tool's echoed blob back verbatim as the whole result (its divider is 63 chars and it truncates the embedded prompt).
 
-**Never paste the tool's echoed blob back verbatim as the whole result.** Its internal divider is 63 chars, not 47, and it truncates the embedded prompt with `…[pickup truncated]…`. Shipping it unedited fails `DIVIDER_WRONG_LENGTH` four times over. Write your own block.
+This is the highest-risk completion in the system: it fires under context pressure and a dropped thread is unrecoverable.
 
-This is the highest-risk completion in the system: it fires under context pressure, at the moment the agent is most inclined to shortcut (rule 120), and it is the only handoff where a dropped thread is unrecoverable, because the conversation it came from is gone.
+A degraded-mode pool-ID escape hatch (IDs 25002-25029) exists ONLY when a valid block was attempted 2+ times AND `create_idea` fails with documented transport errors. LAST RESORT.
 
-## Degraded-mode escape hatch (2026-08-08, idea #24995)
-
-
-**Degraded-mode escape hatch:** if the agent has attempted a valid PICKUP PROMPT 2+ times AND all MCP `create_idea` calls fail with documented transport errors, the agent may use a pre-allocated pool ID (from the reserved pool, IDs 25002-25029) and complete. The pool slot is burned by updating its title to the actual topic. A sync process later reconciles.
-
-Conditions (ALL must be true):
-1. The agent has attempted at least 2 valid PICKUP PROMPT blocks that the transport layer dropped.
-2. `create_idea` calls via `ruben-orchestrator` MCP fail with documented errors (not silent success).
-3. The agent uses the `/var/www/emtskills/scripts/burn_pool_id.sh` helper to consume the next available pool slot.
-4. The agent cites the burned pool ID in the PICKUP PROMPT with `[executing]` tag and the note "(pool #<id> burned for transport-degraded completion)".
-
-This is a LAST RESORT. If `create_idea` works, the agent MUST file ideas normally. Pool IDs are a finite resource (28 slots, 25002-25029).
+Full text of both sections: `Rules-archive/91-case-law.md`.
 
 ## Source
 

@@ -97,3 +97,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends the Step-2 classification table usage: when a LANE probe (WOPR tunnel port or WG endpoint) returns http=000 but an independent surface (MDM portal, direct SSH, reverse-tunnel shell) shows the HOST reachable, the ONLY legal verdicts are ENGINE-DOWN or TUNNEL-DOWN, never a bare host DOWN — and per rule 29 the agent MUST attempt the software repair in-window (docker start, relaunch serve script, fix tunnel forward target) before listing the lane as an open thread. 2026-08-29 case: Claudia/Joshua/Julia/Nero/Cicero all reported DOWN from curl http=000; live triage showed every host except Nero/Cicero reachable and all three fixable in-window (Joshua = docker start, Claudia = relaunch + tunnel forward target pointing at Julia's IP 192.168.1.190 instead of 127.0.0.1, Julia = crash-loop from deleted 235B weights).
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 23:26 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788044433000
+- RCA bucket: insufficient probe
+- Trigger pattern: drafting a "run this on box X" human command without first checking hostname/serial of the local machine against the fleet record
+- Reversal note: Amends Step 1 (search the record first): before declaring a fleet Mac unreachable and drafting a human one-time on-box command, probe whether the box IS the local machine running this window (hostname + serial vs mdm_devices/registry). 2026-08-29: Cicero was reported as needing Ruben's one-time launchctl command across two windows while Cicero WAS the Mac running Cline (hostname Rubens-MacBook-Pro-3, M5 Max, serial K064QD22G9 = mdm_devices row 2). The window revived it directly in 10 minutes with zero human action.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

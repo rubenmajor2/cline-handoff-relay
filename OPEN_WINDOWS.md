@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 3:36:54 PM PT | window: last 72h | 47 tasks | index total 958 (parsed 5, cached 953)
+Generated: 8/29/2026, 4:36:54 PM PT | window: last 72h | 48 tasks | index total 959 (parsed 4, cached 955)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788042719672` | 8/29/2026, 3:36:47 PM | 49 | 143KB | #Grievances |
-| `1788021866677` | 8/29/2026, 3:36:37 PM | 671 | 1563KB | #ArgusVAPI CFA voice path |
-| `1788040396206` | 8/29/2026, 3:36:22 PM | 150 | 403KB | #GLM 5.3 and Frankenatein LLM |
-| `1788021977080` | 8/29/2026, 3:33:54 PM | 430 | 3252KB | #Various 2 |
-| `1788037909518` | 8/29/2026, 3:30:17 PM | 24 | 78KB | #emtskills slowness |
+| `1788021977080` | 8/29/2026, 4:36:45 PM | 517 | 3644KB | #Various 2 |
+| `1788044433915` | 8/29/2026, 4:31:08 PM | 107 | 230KB | #GLM 5.3 and Others |
+| `1788037909518` | 8/29/2026, 4:22:31 PM | 47 | 134KB | #emtskills slowness |
+| `1788021866677` | 8/29/2026, 4:12:28 PM | 990 | 2088KB | #ArgusVAPI CFA voice path |
+| `1788040396206` | 8/29/2026, 3:59:55 PM | 162 | 473KB | #GLM 5.3 and Frankenatein LLM |
+| `1788042719672` | 8/29/2026, 3:58:34 PM | 205 | 709KB | #Grievances |
 | `1788036414021` | 8/29/2026, 2:28:28 PM | 214 | 493KB | #GLM 5.3 Local and Frankenstein LLM |
 | `1788027890157` | 8/29/2026, 1:59:23 PM | 120 | 526KB | #/emtskills slowness |
 | `1788029135575` | 8/29/2026, 12:04:36 PM | 114 | 254KB | #GLM 5.3 Local/Frankenstein-LLM Routing |
@@ -62,113 +63,7 @@ Generated: 8/29/2026, 3:36:54 PM PT | window: last 72h | 47 tasks | index total 
 
 ## Per-window detail
 
-### `1788042719672` — 8/29/2026, 3:36:47 PM PT — 49 turns
-
-**Original task:**
-
-```
-#Grievances
-
-Jon says: Specifically all I’ve seen for the grievance issues have been the file uploads won’t take. That’s what I’ve been getting emails about. 
-
-approved
-- #28631 [proposed] - auto-issue the grievance-form link whenever an email_attachment filing arrives with no intake token, and 
-
-rejected this part of 28631 / what needs to haappen instead is there needs to be a reply back with the working link. -> stop the completeness check failing a filing for missing form fields when no form was ever provided.
-
-approved
-- #28609 [proposed] - grievance clock cron writes a no-op status-histor
-```
-
-**Ideas referenced:** #155724, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #28714 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788021866677` — 8/29/2026, 3:36:37 PM PT — 671 turns
-
-**Original task:**
-
-```
-#ArgusVAPI CFA voice path
-
-So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
-
---
-Done. The VAPI CFA voice path now runs DeepSeek a
-```
-
-**Ideas referenced:** #12584, #15405, #15815, #16844, #178798, #178802, #19100, #1912, #1965, #1998, #20495, #2168, #23945, #25185, #26253, #2640, #2642, #2654, #2666 [deployed], #26712, #26713, #26932, #27100, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #28710 [proposed], #28711 [proposed], #28712 [proposed], #28716 [proposed], #28729 [proposed], #6106
-
-**Last PICKUP PROMPT:**
-
-```
-ing the deeper-analysis method
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1788021866677 — VAPI anthropic purge COMPLETE: all surfaces on Qwen-first
-
-Where we left off (verified 2026-08-29 15:30 PT):
-- Ghost-call knowledge persisted in EMSU_TELEPHONY_REFERENCE.md GHOST-ROW WARNING (verified: grep -c returned 1).
-- ENTIRE Vapi surface on Qwen: 11 of 12 static assistants on custom-llm (only 'PI Test - Delete Me' remains on xai, a deletion candidate); 10 code-level creation files patched incl the 401 source ai_ticket_agent.php (verified: grep anthropic count = 0 across api/voice/ + lib/ai_ticket_agent.php).
-- Full-day analysis: 100 calls, 15 AI-participated, 85 ghosts, 10 anthropic-401s (now-fixed source) (verified: /tmp/full_day_analysis.php output TODAY_CALLS=100 with per-assistant breakdown).
-- All 10 patched files lint-clean, FPM reloaded (verified: php -l x10 pass + write_server_file FPM reload OK).
-
-Open threads to drive next:
-1. #28712 [executing] — see what the other window reports on spend logging.
-2. #28716 [executing] — see what the other window reports on the local Qwen boxes.
-3. (human-only decision — no idea) First organic human call to the main line will be the production confirmation; watch the next business-hours window.
-4. (human-only decision — no idea) Verify the next PI simulator session runs on Qwen (check its next call's model field in the Vapi API) — first student session post-patch is the confirmation.
-
-Reference IDs:
-- #28710 [deployed]
-- #28711 [deployed]
-- #28729 [deployed]
-- #28712 [executing]
-- #28716 [executing]
-- Bug library: frankenstein_router_incidents problem_key qwen38_lane_fallback_masquerade_2026_08_29, status resolved
-- Files touched: /etc/litellm/config.yaml, 10 assistant-creation files (patient_interview x3, ai_ticket_agent, emd x4, ruben_voice x2), Vapi assistants (8 caller-facing + 3 static), docs/EMSU_TELEPHONY_REFERENCE.md, HANDOFF_NOTES.md
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Persisted +19412943388 ghost-call knowledge (EMSU_TELEPHONY_REFERENCE.md GHOST-ROW WARNING + handoff notes)
-- [x] Full-day analysis: 100 calls; 15 AI-participated; 85 ghost; 10 anthropic-401s found
-- [x] PI fleet patched (3 files) to custom-llm/qwen38-27b-voice
-- [x] Ticket Follow-Up 401 source fixed (ai_ticket_agent.php, was claude-opus-4-6)
-- [x] EMD fleet (5 sites) + RUBEN/VADER webhook (3 sites) patched
-- [x] 3 static assistants cut over (Commander Data, Sales Recovery, Riley)
-- [x] FINAL SWEEP: 0 anthropic provider lines in Vapi-creation surface; all 10 files lint-clean; FPM reloaded; live verify 11/12 assistants on custom-llm
-- [x] #28729 deployed; handoff notes updated
-- [x] Final report shipped (all gates passed, gate clear)
-</task_progress>
-</attempt_completion>
-```
-
-### `1788040396206` — 8/29/2026, 3:36:22 PM PT — 150 turns
-
-**Original task:**
-
-```
-#GLM 5.3 and Frankenatein LLM
-
-Why don't all the Agents do this for LLMs? Shouldn't they? There have been numerous catastropic issues caused by Agents in Cline here giving stale or fabricated info -> Plain-English summary: All four directives from this task were addressed this window, each with a live probe behind it.
-
-Curious if 1/2 is what it was at before? What's the best here -> prefill chunk size halved, and the ring relaunch is booting (
-
-Can you tell me how many exact lanes of qwen 3.8 27B local there is?
-
-Julia Claudia are supposed to be TP=2 with Qwen 3.8 27B. Can you conim this? If n
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16417, #16448, #16449, #16452, #16604, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #1798, #1828, #1876, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25112, #25185, #25378, #25381, #2546, #2603, #2626, #2666, #26908, #27236, #27249 [executing], #27250, #27284, #27503, #27972, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28316, #28500, #28704 [deployed], #28705 [executing], #28706 [executing], #28723 [executing], #28725 [executing], #28730 [executing], #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788021977080` — 8/29/2026, 3:33:54 PM PT — 430 turns
+### `1788021977080` — 8/29/2026, 4:36:45 PM PT — 517 turns
 
 **Original task:**
 
@@ -178,7 +73,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
 ```
 
-**Ideas referenced:** #155724, #15877, #16242, #1648, #166534, #1719, #17446, #178796, #18836, #18944, #18951, #19362, #22060, #25888, #2654, #26663, #26834, #26896, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28704 [deployed], #28705 [in_progress], #28706 [in_progress], #28710 [deployed], #28711 [deployed], #28714 [deployed], #28716 [in_progress], #28717, #28719 [proposed], #28720 [proposed], #28721, #28722 [proposed], #28723 [in_progress], #28725 [in_progress], #28726 [proposed], #4518, #4929, #62584, #62604, #813528, #9086, #9168, #9191, #92400, #9339
+**Ideas referenced:** #155724, #15877, #16242, #1648, #166534, #1719, #17446, #178796, #18836, #18944, #18951, #19362, #22060, #22298, #22550, #23133, #23945, #23952, #23954, #25042, #25888, #25940, #2654, #26663, #26834, #26896, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28704 [deployed], #28705 [in_progress], #28706 [in_progress], #28710 [deployed], #28711 [deployed], #28714 [deployed], #28716 [in_progress], #28717, #28719 [proposed], #28720 [proposed], #28721, #28722 [proposed], #28723 [in_progress], #28725 [in_progress], #28726 [proposed], #4518, #4929, #62584, #62604, #813528, #9086, #9168, #9191, #92400, #9339
 
 **Last PICKUP PROMPT:**
 
@@ -225,7 +120,21 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </attempt_completion>
 ```
 
-### `1788037909518` — 8/29/2026, 3:30:17 PM PT — 24 turns
+### `1788044433915` — 8/29/2026, 4:31:08 PM PT — 107 turns
+
+**Original task:**
+
+```
+#GLM 5.3 and Others
+
+I see, i just wnat it to be interactive still and not be bypassed, so remember also that we have Virtual EMSU Corpus and on Box context so what's the point of prefill even? I jus twonder on that. But either way, again, I need interactive to still work, so if you want to bring it down / the prefill chunks. I don't want quality degredation,b ut again if on box context, etc.. why would tha tmatter? Anyway if it doesn't matter than sure bring it down and make the GLM work better for me. If not, lmk as I'm confused here -> - "Curious if 1/2 is what it was at before?" Yes, exact
+```
+
+**Ideas referenced:** #178802, #25185, #28586, #28596, #28612, #28704 [deployed], #28705 [blocked], #28706 [executing], #28723 [rejected], #28725 [executing], #28730 [executing], #28735 [deployed], #28738, #28740 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788037909518` — 8/29/2026, 4:22:31 PM PT — 47 turns
 
 **Original task:**
 
@@ -248,6 +157,105 @@ e HANDOFF_NOTES.md + idea #28722 status to deployed
 </task_progress>
 </use_mcp_tool>
 ```
+
+### `1788021866677` — 8/29/2026, 4:12:28 PM PT — 990 turns
+
+**Original task:**
+
+```
+#ArgusVAPI CFA voice path
+
+So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
+
+--
+Done. The VAPI CFA voice path now runs DeepSeek a
+```
+
+**Ideas referenced:** #12584, #15405, #15815, #16844, #178798, #178802, #19100, #1912, #1965, #1998, #20495, #2168, #23133, #23945, #25185, #26253, #2640, #2642, #2654, #26617, #2666 [deployed], #26712, #26713, #26932, #27100, #27284 [deployed], #27634 [executing], #27635 [executing], #27652, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #28710 [proposed], #28711 [proposed], #28712 [proposed], #28716 [proposed], #28723, #28729 [proposed], #28735 [proposed], #28738 [proposed], #6106, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+ules_amend_rule and reindexed)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788021866677 — Durable voice-lane protection LIVE: canary + mitigations + rule amendment
+
+Where we left off (verified 2026-08-29 16:08 PT):
+- Voice-lane canary LIVE on */5 cron: active Vapi-shape probes + passive call-outcome audit + critical-event alerts (verified: ssh_command canary run returned RESULT=PASS with all 3 probes OK; ssh_command crontab -l shows the entry; mysql insert test returned Rows affected=1).
+- Mitigation implemented: maxTokens=150 on all 8 caller-facing assistants, tools/prompts preserved (verified: ssh_command PATCH script returned http=200 x8 with tools=108).
+- Rule 317 amended on disk: probe-shape equivalence clause (verified: clinerules_lookup rule_id=317 returned the live body, 12296 bytes, with the probe-shape amendment present and the INSUFFICIENT_PROBE counter at +80).
+- No human callers today — first Monday human call is the production confirmation (verified: ssh_command Vapi call-list pull at 16:03 PT showed all own-number traffic).
+- Intermittent providerfault reduced but not provably eliminated; canary detects recurrence within 5 min.
+
+Open threads to drive next:
+1. #28738 [proposed] — router silently substitutes unknown model names; add an unknown-model 404 guard in router_hook (30 min, P1).
+2. #28712 [executing] — see what the other window reports on spend logging.
+3. #28716 [executing] — see what the other window reports on the local Qwen boxes.
+4. (human-only decision — no idea) Monday first human call: if the canary alerts or a caller reports issues, open a Vapi support ticket for the intermittent providerfault.
+
+Reference IDs:
+- #28735 [deployed]
+- #28738 [proposed]
+- #28729 [deployed]
+- #28710 [deployed]
+- #28711 [deployed]
+- #28712 [executing]
+- #28716 [executing]
+- Rule amended: 317 (probe-shape equivalence)
+- Bug library: frankenstein_router_incidents problem_key qwen38_lane_fallback_masquerade_2026_08_29, status resolved
+- Files touched: /var/www/emtskills/cron/cron_vapi_voice_lane_canary.php (NEW), /etc/litellm/router_hook.py, LiteLLM_VerificationToken x2, 8 Vapi assistants, HANDOFF_NOTES.md, Rules/317-reversal-triggers-297-and-rule-update.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788040396206` — 8/29/2026, 3:59:55 PM PT — 162 turns
+
+**Original task:**
+
+```
+#GLM 5.3 and Frankenatein LLM
+
+Why don't all the Agents do this for LLMs? Shouldn't they? There have been numerous catastropic issues caused by Agents in Cline here giving stale or fabricated info -> Plain-English summary: All four directives from this task were addressed this window, each with a live probe behind it.
+
+Curious if 1/2 is what it was at before? What's the best here -> prefill chunk size halved, and the ring relaunch is booting (
+
+Can you tell me how many exact lanes of qwen 3.8 27B local there is?
+
+Julia Claudia are supposed to be TP=2 with Qwen 3.8 27B. Can you conim this? If n
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16417, #16448, #16449, #16452, #16604, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #1798, #1828, #1876, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25112, #25185, #25378, #25381, #2546, #2603, #2626, #2666, #26908, #27236, #27249 [executing], #27250, #27284, #27503, #27972, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28316, #28500, #28704 [deployed], #28705 [executing], #28706 [executing], #28723 [executing], #28725 [executing], #28730 [executing], #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788042719672` — 8/29/2026, 3:58:34 PM PT — 205 turns
+
+**Original task:**
+
+```
+#Grievances
+
+Jon says: Specifically all I’ve seen for the grievance issues have been the file uploads won’t take. That’s what I’ve been getting emails about. 
+
+approved
+- #28631 [proposed] - auto-issue the grievance-form link whenever an email_attachment filing arrives with no intake token, and 
+
+rejected this part of 28631 / what needs to haappen instead is there needs to be a reply back with the working link. -> stop the completeness check failing a filing for missing form fields when no form was ever provided.
+
+approved
+- #28609 [proposed] - grievance clock cron writes a no-op status-histor
+```
+
+**Ideas referenced:** #0000, #155724, #20251, #24995, #25066, #25185, #25888, #26617, #2667 [deployed], #27100, #27634 [executing], #27635 [executing], #27652, #28118, #28307, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #28714 [deployed], #28731 [proposed], #28732 [deployed], #62604, #62699, #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788036414021` — 8/29/2026, 2:28:28 PM PT — 214 turns
 

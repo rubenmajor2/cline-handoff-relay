@@ -507,3 +507,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate): a mailer's transport must be read from the config file the mailer ACTUALLY loads (config/config.php merged via array_replace_recursive with config.local.php), never from a config file that exists but is unused (config/mail.php). A config file's presence is not evidence of use; probe the loaded value or the live send path before claiming any SMTP/Postmark transport.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 23:07 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788021866677
+- RCA bucket: insufficient probe
+- Trigger pattern: Agent runs synthetic curl probes against a lane, all pass, then declares the surface verified without replaying the production client's exact request shape (headers, key, body shape, endpoint).
+- Reversal note: Amends clause 2 (acquisition gate) with the probe-shape equivalence requirement from the 2026-08-29 Vapi incident: two production bugs (LiteLLM key allowlist rejection + router guard 400) were invisible to passing synthetic probes because the probes did not replay the EXACT client request shape (Vapi custom-llm sends messages-less greeting requests with its own key and header set). A verification probe must replicate the real client's request shape, auth identity, and endpoint — not merely hit the same model name.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

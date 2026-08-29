@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 4:53:41 PM PT | window: last 72h | 34 tasks | index total 933 (parsed 5, cached 928)
+Generated: 8/28/2026, 6:48:06 PM PT | window: last 72h | 34 tasks | index total 934 (parsed 6, cached 928)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787960225304` | 8/28/2026, 4:53:36 PM | 39 | 330KB | #Various |
-| `1787937972952` | 8/28/2026, 4:53:29 PM | 587 | 953KB | #GLM 5.3 Local |
-| `1787960052755` | 8/28/2026, 4:53:17 PM | 37 | 999KB | frankenstein-llm having this issue. Can you resolve?  |
-| `1787876909491` | 8/28/2026, 4:52:44 PM | 431 | 2529KB | #PostMark Issue  |
-| `1787707484695` | 8/28/2026, 4:51:33 PM | 321 | 3953KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
+| `1787960225304` | 8/28/2026, 6:43:58 PM | 125 | 1391KB | #Various |
+| `1787960052755` | 8/28/2026, 6:35:00 PM | 112 | 3280KB | frankenstein-llm having this issue. Can you resolve?  |
+| `1787937972952` | 8/28/2026, 6:34:50 PM | 690 | 1149KB | #GLM 5.3 Local |
+| `1787876909491` | 8/28/2026, 6:15:59 PM | 495 | 2747KB | #PostMark Issue  |
+| `1787963389563` | 8/28/2026, 5:59:56 PM | 35 | 275KB | #Overdue Grievances and Rule 317  |
+| `1787707484695` | 8/28/2026, 5:29:57 PM | 406 | 4577KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
 | `1787931475695` | 8/28/2026, 10:45:33 AM | 132 | 22802KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
 | `1787937882474` | 8/28/2026, 10:24:43 AM | 1 | 7KB | #GLM 5.3 |
 | `1787783324531` | 8/28/2026, 10:22:16 AM | 1712 | 11444KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
@@ -43,13 +44,12 @@ Generated: 8/28/2026, 4:53:41 PM PT | window: last 72h | 34 tasks | index total 
 | `1787726772970` | 8/26/2026, 1:05:20 AM | 106 | 1032KB | Why does this say Hi Moodle and was the student's issue resolved? I've asked on this befor |
 | `1787727918566` | 8/26/2026, 12:33:40 AM | 66 | 2450KB | frankenstein-llm experiencing issues iterating here in cline. resolve. |
 | `1787593935930` | 8/25/2026, 9:13:10 PM | 284 | 9503KB | This person needs to stop receiving invoices for 13K -> |
-| `1787697242661` | 8/25/2026, 6:00:11 PM | 106 | 366KB | #Payment Suspensions |
 
 ---
 
 ## Per-window detail
 
-### `1787960225304` — 8/28/2026, 4:53:36 PM PT — 39 turns
+### `1787960225304` — 8/28/2026, 6:43:58 PM PT — 125 turns
 
 **Original task:**
 
@@ -59,11 +59,66 @@ Generated: 8/28/2026, 4:53:41 PM PT | window: last 72h | 34 tasks | index total 
 Jon says he has this issue for a while with Argus. Can you resolve?
 ```
 
-**Ideas referenced:** #1998, #2640, #2642, #26711, #26712, #26713, #28213, #28220, #28307, #28316, #28331, #28370, #28500
+**Ideas referenced:** #11570, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23952, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25269, #25313, #25573, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #334155, #4338, #64748
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1787937972952` — 8/28/2026, 4:53:29 PM PT — 587 turns
+### `1787960052755` — 8/28/2026, 6:35:00 PM PT — 112 turns
+
+**Original task:**
+
+```
+frankenstein-llm having this issue. Can you resolve? 
+
+{"message":"fetch failed","code":"ERR_SSL_WRONG_VERSION_NUMBER","modelId":"frankenstein-llm","providerId":"litellm"}
+```
+
+**Ideas referenced:** #10740, #11953, #12314, #12365, #12584, #12672, #13108, #13832, #16265, #17202, #19338, #19653, #1998, #20495 [deployed], #2168, #2174, #26712
+
+**Last PICKUP PROMPT:**
+
+```
+MLX) and `:11506` (old Cesar).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task — frankenstein-llm SSL/empty-response repair (GLM 5.3 local ring restore), COMPLETED.
+
+Where we left off (verified 2026-08-28 17:30 PT):
+- GLM-5.3 local ring (:8210) was DOWN, stuck mid 5.2->5.3 cutover; canary had quarantined it; GLM had not served interactive Cline since 2026-08-19.
+- glm52-ring-watchdog.service auto-relaunched the PP=6 ring 16:55 (glm53-nvfp4, seq=128); weights loaded (462s/58.8GiB); APIServer up; WOPR tunnel glm52-tunnel-8210.service self-healed once ring bound :8210.
+- Verified: GLM serving INTERACTIVE Cline (adapter upstream log 17:15:18 lane=cline upstream=8210) + batch (17:18:41); real decode OK; end-to-end frankenstein-llm HTTP 200 in 4.9s; canary decode_live=true un-quarantined; no adapter errors.
+
+Open threads to drive next:
+None — frankenstein-llm fully restored and verified this session. GLM 5.3 local is serving interactive Cline as requested.
+
+Reference IDs:
+- Ideas cited: #20495 [deployed] (GLM PP=6 ring auto-relaunch watchdog — did the relaunch)
+- Files/services touched: none edited (diagnostic + verify only). Relevant: glm52-ring-watchdog.service, glm53_relaunch_seq128.sh, glm52-tunnel-8210.service, /var/log/emsu-adapter-upstream.log, /tmp/frankenstein_canary_health.json
+- HANDOFF_NOTES.md updated 2026-08-28 17:30 PT with full RCA.
+
+# Reversal Log
+No reversals this window. (Diagnostic note: the WOPR tunnel was initially suspected stale/needing restart, but was observed to self-heal once the ring re-bound :8210 — investigation clarification, no shipped claim corrected.)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] GLM 5.3 local was QUARANTINED + NOT serving interactive Cline
+- [x] ROOT CAUSE 1: stuck GLM cutover — watchdog relaunched ring, APIServer UP
+- [x] ROOT CAUSE 2: WOPR tunnel self-healed — :8210 HTTP 200
+- [x] GLM 5.3 RESTORED + serving INTERACTIVE Cline (17:15:18 lane=cline)
+- [x] litellm origin healthy, routing correct, ring decodes, no adapter errors
+- [x] GLM warmed up (ttfb 96s→6s); end-to-end frankenstein-llm HTTP 200 in 4.9s
+- [x] Handoff notes updated
+- [x] Final report delivered
+</task_progress>
+</attempt_completion>
+```
+
+### `1787937972952` — 8/28/2026, 6:34:50 PM PT — 690 turns
 
 **Original task:**
 
@@ -77,31 +132,45 @@ When I said to preserve the OG, i meant just drop in replace, not keep the name 
 GLM 5.3 local ring upgrade is DONE and serving (verified: curl http://127.0.0.1:8210/v1/models returned id=glm-5.3-15pct at 10:21 PT; /etc/litellm/config.yaml has 7 ref
 ```
 
-**Ideas referenced:** #10108, #10869, #11991, #12584, #12618, #12672, #12680, #12688, #12689, #12825, #13121, #13453, #13470, #14133, #14142, #16063, #16265, #16602, #16625, #16646, #16648, #16680, #16715, #17145, #17174, #17202, #17203, #17205, #17300, #17307, #1754, #1755, #178787, #178793, #18312, #1876, #18820, #18868, #19338, #19585, #1967, #19686, #1986, #1998, #20264, #20495, #2050 [investigating], #2083, #21045, #2157, #2159, #2168, #2174, #2181 [resolved], #2182 [resolved], #2185, #2186 [resolved], #2232 [resolved], #2243 [resolved], #22583, #22856, #22897, #23206, #25468, #25607, #25757, #25759, #25764, #2640, #2641 [deployed], #2642, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #27100, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #28581 [proposed], #28586 [proposed], #48031, #48140, #9706
+**Ideas referenced:** #10108, #10869, #11991, #12584, #12618, #12672, #12680, #12688, #12689, #12825, #13121, #13453, #13470, #14133, #14142, #16063, #16265, #16602, #16625, #16646, #16648, #16680, #16715, #17145, #17174, #17202, #17203, #17205, #17300, #17307, #1754, #1755, #178787, #178793, #1790 [resolved], #18312, #1876, #18820, #18868, #1912 [resolved], #19338, #19585, #1967, #19686, #1986, #19903, #1998, #20264, #20495, #2050 [investigating], #2083, #21045, #2157, #2159, #2168, #2174, #2181 [resolved], #2182 [resolved], #2185, #2186 [resolved], #2232 [resolved], #2243 [resolved], #22583, #22856, #22897, #23206, #25468, #25471, #25607, #25757, #25759, #25764, #2640, #26400, #2641 [deployed], #2642, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #26932 [deployed], #27100, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #28581 [proposed], #28586 [proposed], #28596 [proposed], #48031, #48140, #9706
 
 **Last PICKUP PROMPT:**
 
 ```
-ox, not a misconfiguration.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787931475695 - GLM 5.3 local rename + ladder verification\n\nWhere we left off (verified 2026-08-28 16:50 PT):\n- Ladder confirmed as designed: frankenstein-llm fallbacks = glm-5.3-local -> claudia-qwen38-27b -> deepseek -> glm-5.3 cloud; actual adapter picks last hour: BigMac 430, Qwen38 146, Artemis 23, ring 19; Qwen 3.8 27B NOT skipped (number 2 rung in practice)\n- BigMac dominance explained: bug-library 2232 batch-prefer-120B patch (live) + fastest box wins the load-ranker (35.8 tok/s canary)\n- Risk/reward answered for the tuning idea: reward = free 744B model serving majority share (currently 3 percent); all spill targets are free so no dollar cost; bug library has 3 incidents (2232, 2050, today's wedges) arguing AGAINST loading the ring harder; recommendation changed this session to measure-first, no raise\n- Ring healthy: 104 GLM 5.3 local turns last hour, canary healthy, 3 wedges today all auto-recovered\n\nOpen threads to drive next:\n1. #28586 [proposed]: measure-first. (c) 5.3 aggregate curve measurement (zero-risk), then decide: raise admission only if curve rising AND wedges cooled; given bug-library history (entries 2232, 2050) the current lean is against raising\n2. #28581 [deployed]: lane rename complete (verified: reconcile_ideas MCP call returned status=deployed dev_stage=n/a for id 28581 at 11:34 PT; live read-backs: 8-lane PONG suite, /v1/model/info registry listing, router audit traffic)\n3. Watch item (monitoring, no idea): wedge root-cause under seq=128; 3 wedges today; if the cause is admission pressure, the fix direction is DOWN not up\n\nReference IDs:\n- Ideas filed: #28581 [deployed], #28586 [proposed]\n- Ideas closed: none\n- Bug library: frankenstein_router_incidents 2641 (lane rename), 2642 (watchdog /tmp-wipe abort); consulted entries 2182, 2186, 2243, 2232, 2181, 2050 for the risk/reward + ladder analysis\n- Files touched this session: /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/hooks/frankenstein_glm52.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/glm52_ring_watchdog.sh, PHP callers (livechat, alltastic, ctx ceiling, ring status, 8 crons), LLM_FLEET_STATE.md, GLM53_UPGRADE_RUNBOOK.md, HANDOFF_NOTES.md, cline_task_ledger.md\n\n# Reversal Log\n- 'raising the ceiling is the obvious next move' -> corrected: bug-library precedent (entry 2182) supports raising, but TODAY's 3 wedges plus entries 2232 and 2050 argue the opposite; amended recommendation to measure-first, no action shipped | RCA bucket: wrong premise | causal rule updated: 297\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════", "task_id": "1787931475695", "task_prompt": "Also, Can you confirm then also the actual spill ladder? Are we using Qwen 3.8 27B as designed or is that getting skipped over? Why going to Big Mac first."}
-</arguments>
-</use_mcp_tool>
+). The 5.2 docs are untouched.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787931475695 - GLM 5.3 local rename + stability root cause + tracker doc
+
+Where we left off (verified 2026-08-28 17:30 PT):
+- Lanes confirmed 4 Cline + 4 Batch = 8 (Ruben's own #26932 [deployed] directive; same as 5.2 current config)
+- ROOT CAUSE of today's 4 ring crashes found + fixed: 5.3 launch script lost --no-async-scheduling (the July crash-loop fix); CFG_NO_ASYNC now defaults 1 + all 6 relauncher call sites set it; takes effect next relaunch (no forced restart)
+- Curve collector running 60 min (/tmp/glm53_curve_collect.py -> /tmp/glm53_curve_measure.csv); analysis due next window
+- Qwen fleet: only Claudia serves adapter traffic (113 picks/hr); Nero in pool never wins; Joshua by-name lane only; ranker prefers fastest Qwen then 120Bs (design, not bug)
+- Corrected ranker explanation: batch lane is GLM-first (4-seat reservation) -> Qwen3.8 tier -> 120Bs; interactive lane is speed-ranked with 30% GLM floor; old 2232 patch no longer in code
+- GLM53_RING_STATE_TRACKER.md created (append-only); HANDOFF_NOTES updated; bug-library incident glm53_async_flag_lost_2026_08_28 recorded
+
+Open threads to drive next:
+1. #28596 [proposed]: verify the next relaunch boots with --no-async-scheduling on the cmdline (ps aux grep on cato), confirm wedges stop, and analyze the 60-min curve CSV for the measure-first decision on #28586 [proposed]
+2. #28586 [proposed]: raise admission ONLY if the curve analysis shows aggregate rising AND the verification in #28596 [proposed] confirms no new wedges/crashes on the no-async build
+3. #28581 [deployed]: lane rename complete (verified: reconcile_ideas MCP call returned status=deployed dev_stage=n/a for id 28581 at 11:34 PT)
+
+Reference IDs:
+- Ideas filed: #28581 [deployed], #28586 [proposed], #28596 [proposed]
+- Ideas closed: none
+- Bug library: frankenstein_router_incidents 2641 (lane rename), 2642 (watchdog /tmp-wipe), glm53_async_flag_lost_2026_08_28 (async flag lost, direct DB insert); consulted the July async crash-loop incident, 2182, 2186, 2243, 2232, 2181, 2050 (ring load history)
+- Files touched this session: /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/hooks/frankenstein_glm52.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/glm52_ring_watchdog.sh, cato ~/glm53_launch_cfg_pp6.sh + ~/bin/glm53_relaunch_seq128.sh, /tmp/glm53_curve_collect.py, PHP callers (livechat, alltastic, ctx ceiling, ring status, 8 crons), LLM_FLEET_STATE.md, GLM53_UPGRADE_RUNBOOK.md, GLM53_RING_STATE_TRACKER.md (new), HANDOFF_NOTES.md, cline_task_ledger.md
+
+# Reversal Log
+- 'the 2232 batch-prefer-120B patch is still live and explains BigMac dominance' -> corrected: grep of the adapter source shows SUBAGENT_PREFER_120B no longer exists; the real mechanism is the lane-aware tier system (batch GLM-first with 4-seat reservation, interactive speed-ranked with 30% GLM floor, Qwen3.8 hard-second on batch) | RCA bucket: stale assumption | causal rule updated: 315
+- 'raising the ceiling is the obvious next move' -> corrected earlier this session: measure-first after bug-library history + 3 wedges | RCA bucket: wrong premise | causal rule updated: 297
+- 'the 16:41 event was another wedge' -> corrected: watchdog log shows proc=0 api=0, a full container DEATH, which led to finding the lost --no-async-scheduling flag (the actual root cause of today's instability) | RCA buck
 ```
 
-### `1787960052755` — 8/28/2026, 4:53:17 PM PT — 37 turns
-
-**Original task:**
-
-```
-frankenstein-llm having this issue. Can you resolve? 
-
-{"message":"fetch failed","code":"ERR_SSL_WRONG_VERSION_NUMBER","modelId":"frankenstein-llm","providerId":"litellm"}
-```
-
-**Ideas referenced:** #10740, #12584, #16265, #19338, #1998, #26712
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787876909491` — 8/28/2026, 4:52:44 PM PT — 431 turns
+### `1787876909491` — 8/28/2026, 6:15:59 PM PT — 495 turns
 
 **Original task:**
 
@@ -111,7 +180,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
 ```
 
-**Ideas referenced:** #10234, #14748, #15905, #16069, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1998, #22086, #23483, #25909, #2640, #2642, #26663, #26712, #26713, #28256, #28307, #28316, #28331, #28543 [proposed], #28546 [proposed], #333333, #5756, #888888
+**Ideas referenced:** #10234, #14748, #15905, #16069, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1998, #22086, #23483, #25909, #2640, #2642, #26663, #26712, #26713, #28256, #28307, #28316, #28331, #28543 [proposed], #28546 [proposed], #28548, #333333, #5756, #888888
 
 **Last PICKUP PROMPT:**
 
@@ -145,7 +214,32 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787707484695` — 8/28/2026, 4:51:33 PM PT — 321 turns
+### `1787963389563` — 8/28/2026, 5:59:56 PM PT — 35 turns
+
+**Original task:**
+
+```
+#Overdue Grievances and Rule 317 
+
+Help me to go through all the overdue grievances. There's several of them. Do an extensive analysis of them and present them briefly and recommendations according to SLS, MCP, policy, etc...
+
+See: https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+
+Also, we need to strengthen rule 317 so that it makes actual durable changes, not just in-the-window cursory changes. The goal is to make LLMs stronger in the long-run, not just for 1 window which is what appears to be happening. I lump these together becasue I anticipate having some difficulty with 
+```
+
+**Ideas referenced:** #047857, #059669, #11111, #11316, #128681, #129302, #181825, #1912, #19419, #1998, #20495, #2050, #2563, #26071, #26089, #2626, #2628, #2629, #2631 [investigating], #2640, #2642, #26434, #26617, #26712, #26713, #26932, #27100, #27531, #27634 [executing], #27635 [executing], #27652, #27657, #27671, #28122, #28133, #28134, #28205 [deployed], #28213 [proposed], #28220, #28225 [deployed], #28226 [deployed], #28238, #28239, #28242, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28497 [deployed], #28500, #30043, #30515, #313244, #31646, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #78350, #9203, #92400, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+ent + verify reindex + verify durable ingestion path
+- [ ] Present results with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787707484695` — 8/28/2026, 5:29:57 PM PT — 406 turns
 
 **Original task:**
 
@@ -157,7 +251,7 @@ as well as latest (cost estimate letter / see latest email using spark, etc... f
 Craft a response for me. We are sending the check today/tomorrow. So obviously need to accept it.
 ```
 
-**Ideas referenced:** #111827, #166534, #16957, #178712, #178778, #19419, #19587, #19595 [executing], #19599, #20734, #2563, #25973, #2603, #2605, #26067, #26663, #27492, #27933, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28219 [proposed], #394149, #450438, #475569, #600179, #623992, #64748, #709171, #92400
+**Ideas referenced:** #000000, #0070, #010000, #0176, #04844, #070707, #07190, #111827, #16325, #166534, #16957, #178712, #178778, #19419, #19587, #19595 [executing], #19599, #20734, #237747, #2563, #25973, #2603, #2605, #26067, #26663, #27100, #27492, #27933, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28219 [proposed], #28594 [proposed], #303030, #363636, #394149, #450438, #475569, #494949, #54688, #54698, #600179, #623992, #64748, #673900, #709171, #797979, #870500, #92400
 
 **Last PICKUP PROMPT:**
 
@@ -169,19 +263,23 @@ No reversals this window.
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787784000000: DSHS ORR A07292026.0450006 cost estimate acceptance + three-document set.
+Pick up task #1787784000000: DSHS ORR A07292026.0450006 + TPIA-010, AG complaint remains.
 
-Where we left off (verified 2026-08-28 2:53 PM AKDT):
-- Copy-paste HTML opened in Chrome at Ruben's request; rev 2026-08-27 file at ~/Desktop/DSHS_openrecords_copy_emails.html
-- Acceptance + payment already sent: Jon Thompson email 2026-08-26 3:30 PM; check #7091718227 for $2,318.40 mailed 2026-08-26 (USPS 9410 8301 0935 5011 0022 15)
-- All 3 emails incorporate Jon's email + anti-waiver/anti-delay clauses; browser-verified 2026-08-27
+Where we left off (verified 2026-08-28 4:27 PM AKDT):
+- Email 1 SENT 2026-08-28 4:03:23 PM PDT, supplement to Jon's acceptance + payment (check #7091718227, $2,318.40, USPS 9410 8301 0935 5011 0022 15)
+- Email 2 SENT 2026-08-28 5:03:54 PM PDT, point-by-point answer to the HHSC 8/24 clarification on TPIA-010 (ORR A08132026.0450013). 552.222 toll ENDS on their receipt; 552.221 clock RESTARTED 2026-08-28
+- Both logged in admin_portal.tpia_request_tracking with full detail
+- AG intake channel established: portal https://www.texasattorneygeneral.gov/open-government/open-records-complaint or mail to Open Records Complaint, PO Box 12548, Austin, TX 78711-2548. NO published email address exists, do not guess one
+- ~/Desktop/DSHS_openrecords_copy_emails.html updated, both emails marked SENT, Doc 3 card carries portal + PO Box + warning
 
 Open threads to drive next:
-1. #28219 [proposed] (verified: direct mysql SELECT of orchestrator_ideas at 2026-08-27 5:03 PM AKDT returned id=28219, status=proposed, dev_stage=idle). Send Email 1 as reply-in-thread to Jon's, send Email 2, file Doc 3 with TX AG, all by 2026-09-09; verify AG intake address first; track check delivery
+1. #28219 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle at 2026-08-28 4:27 PM AKDT). File Doc 3 with the TX AG by 2026-09-09 via the portal or certified mail to PO Box 12548; enclose the 8/25 estimate letter and a copy of Email 1; track check #7091718227 delivery
+2. #28594 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle at 2026-08-28 4:27 PM AKDT). Email 2 is sent, so the remaining work is tracking: compute the new 552.221 deadline from HHSC's receipt date of 2026-08-28 and chase if they go silent again
 
 Reference IDs:
-- Ideas filed: #28219 [proposed]
-- Files touched: ~/Desktop/DSHS_openrecords_copy_emails.html (rev 2026-08-27)
+- Ideas carried: #28219 [proposed], #28594 [proposed]
+- Files touched: ~/Desktop/DSHS_openrecords_copy_emails.html
+- DB touched: admin_portal.tpia_request_tracking rows EMSU-TPIA-2026-010, ORR-A07292026.0450006
 
 # Reversal Log
 No reversals this window.
@@ -189,13 +287,14 @@ No reversals this window.
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
+<command>open -a "Google Chrome" "https://www.texasattorneygeneral.gov/open-government/open-records-complaint"</command>
 <task_progress>
-- [x] Updated HTML with Jon-incorporated emails
-- [x] Verified rendering in browser
-- [x] Completion shipped
-- [x] Opened the HTML in Chrome
-- [x] Follow-up completion validated: ALL PASSED
-- [x] Gate CLEAR, completion shipped
+- [x] Verify both sends from Sent folder
+- [x] Log both in tpia_request_tracking
+- [x] Establish AG intake channel (portal + PO Box, no published email)
+- [x] Update HTML, stray tag removed, reopened in Chrome
+- [x] Reconcile ideas
+- [x] Validate ALL PASSED, gate CLEAR, shipped
 </task_progress>
 </attempt_completion>
 ```
@@ -1480,52 +1579,5 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] clinerules_validate_completion ALL PASSED + check_gate CLEAR
 - [x] Completion shipped with rule-91 pickup prompt
 </task_progress>
-</attempt_completion>
-```
-
-### `1787697242661` — 8/25/2026, 6:00:11 PM PT — 106 turns
-
-**Original task:**
-
-```
-#Payment Suspensions
-
-How is this going now? 
-
-Found and fixed the root cause of the wrongful "financial holds" and the late suspensions Jon flagged. The invoice attribution in qb_invoices is broken two ways, and every payment surface was reading it wrong.
-
-The two defects (verified this session): (1) qb_invoices.student_id is an INT column, so binding a slug like '26913FT-01' coerces to the section prefix 26913 and matches EVERY invoice in the section — that is why Kamdyn Sheets' profile showed 18+ rows of other students' invoices with red balances (verified: mysql SELECT returned 79 rows acr
-```
-
-**Ideas referenced:** #12661, #17580, #25888, #28110 [deployed], #28111 [deployed], #28117 [deployed], #28118 [deployed], #28119 [deployed], #90461, #90462, #90463, #90464, #90465, #90466, #90467, #90468, #90469, #90470, #90471, #90472, #90473, #90474, #90475, #90476, #90477, #90478, #90479, #90480, #90481, #90482, #90483, #90484, #90485, #90486, #90487, #90488, #90489, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #28119 [deployed] — qb_invoices attribution root cause + wrongful suspension cleanup.
-
-Where we left off (verified 2026-08-25 16:57 PT):
-- Root cause fixed and backfilled: qb_invoices.student_db_id mirrors qb_customers (0 mismatches), all 114 orphan open invoices resolved (29 email-relink + 54 customer rows created + 22 stale-cid relink), 8 remaining are placeholder '000000test' rows with no email.
-- Auto-clear run2: cleared=942 still_owed=642 errors=0; active suspensions 1,584 → 663; Molly Ji 26817FT-07 hold lifted (0 active).
-- All payment surfaces read via qb_customers join (deployed 2026-08-24, ideas #28118 [deployed], #28119 [deployed]).
-
-Open threads to drive next:
-None — both original open threads (student_db_id backfill + orphan qb_customers rows) completed this session (verified above). The hourly auto-clear cron remains scheduled in crontab and needs no new idea.
-
-Reference IDs:
-- Ideas filed: #28118 [deployed], #28119 [deployed]
-- Earlier this window (completed prior session): #28110 [deployed], #28111 [deployed], #28117 [deployed]
-- Files touched (2026-08-24 deploy): lib/StudentLifecyclePaymentService.php, cron/cron_payment_reconciliation.php, cron/cron_cfa_payment_auto_clear.php, routes/pd_80_percent_review.php, scripts/check_pd_80_percent.php, routes/report_viewer.php, admin_profile.php
-- DB touched this session: qb_invoices (3,981 student_db_id backfills total), qb_customers (54 rows created)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```

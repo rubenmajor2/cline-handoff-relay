@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-29T15:19:24.617Z",
+ "generated_at": "2026-08-29T16:22:58.517Z",
  "counts": {
-  "parsed": 0,
-  "reused": 945,
+  "parsed": 2,
+  "reused": 943,
   "failed": 0,
   "total": 945
  },
@@ -143601,13 +143601,13 @@
   },
   "1787980519299": {
    "task_id": "1787980519299",
-   "mtime": 1787998554065,
+   "mtime": 1788020555103,
    "created_at": "2026-08-29T05:15:19.299Z",
-   "last_modified": "2026-08-29T10:15:54.065Z",
-   "size_kb": 11146,
-   "turn_count": 315,
+   "last_modified": "2026-08-29T16:22:35.103Z",
+   "size_kb": 12700,
+   "turn_count": 335,
    "title": "#Various 2\n\nSee the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.",
-   "pickup_prompt": "#28613's DNC-aware fast-path).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — ymaris casas investigation (Various 2): DNC, Email-AI reply analysis, supervisor-signature CFA policy, delay causation.\n(No numeric Cline task id available in this window; topic named instead.)\n\nWhere we left off (verified 2026-08-29 02:31 AM PT):\n- DNC verified: unified_dnc_list row 1, +12109021955, source manual_cline, 2026-08-28 22:20 PT.\n- CFA reply evidence: ticket 28224 (TKT-20260827-5032D13D), one AI email sent 08-28 19:04 PT (comment 189119) that was a canned fallback; responder outage root cause documented in ticket comment 189472 (HTTP 401 classifier since ~8/26, LibreContentSanitizer fatal, 106/day permanent_llm_failure).\n- Supervisor-signature policy DEPLOYED: ExternshipKnowledgePack.php line 83, php -l clean, wired to CFA via EmailAIResponder.php:2948-2950, MCP uses same file.\n- Delay causation: student did NOT fail assignments in time (course starts 09-08, nothing due); blockers were declined card (payment FAIL, rule-33 verify pending) and unsigned EA; she then withdrew and DNC'd herself.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #28643 [proposed] — Code change: in the EXAM-EXT-FLAG cron, look up Students.student_id by ticket.student_email before flagging \"missing\", suppress repeat flags after N occurrences, and release ticket 28224 from pending_cluster_review so the drop/cancellation can be processed.\n2. #28612 [proposed] — Fix the email-responder outage (HTTP 401 classifier / sanitizer / timing-profile / FirstName column) so future student replies are actually read instead of falling back to ClarifyingQuestion.\n3. #28613 [proposed] — DNC-aware responder: short-circuit \"please remove me / no longer interested\" to a cancellation or DNC fast-path without a clarifying question.\n\nReference IDs:\n- Ticket: 28224 (TKT-20260827-5032D13D)\n- Ideas filed: #28643 [proposed], #28612 [proposed], #28613 [proposed]\n- Files touched: /var/www/emtskills/lib/ExternshipKnowledgePack.php (modified), /tmp/ExternshipKnowledgePack.php (staging patch)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "r.md (rule 07), run order 66.\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\nPick up task #1787960052755 — Various 2 RCA: Casas multi-class question, per-student delay causation, CFA response quality, exam-ext flag false-fire.\\n\\nWhere we left off (probed 2026-08-29 09:19 AM PT):\\n- #28612 [executing] open work: dead OPENAI_API_KEY (401) at cron_email_responder.php line 3671/3760; rotate or reroute.\\n- #28613 [executing] open work: cancel fast-path exists post-classifier; move pre-classifier.\\n- #28643 [deployed]: handler carve-out + email-first resolution + flag cap, php -l clean, read back.\\n- RCA delivered: two distinct Casas students (ymaris 26424T pre-start cancelled+DNC; Matthew 26914T-29 mid-course exam-blocked) + unrelated Trippy Speakz thread; no double enrollment.\\n- Ticket 28224 loop broken via [EXAM-EXT-RESOLVED] internal comment.\\n\\nOpen threads to drive next:\\n1. #28612 [executing] - rotate OpenAI key or reroute classifier to frankenstein-llm; then watch failure rate fall.\\n2. #28613 [executing] - DNC/cancellation short-circuit before LLM call.\\n3. (human-only decision - no idea) Vicky: remove ymaris card profile in Authorize.net + process drop; she is DNC.\\n4. #28643 [deployed] - watch next two cron cycles for zero new EXAM-EXT-FLAG on 28224.\\n\\nReference IDs:\\n- Ideas filed: #28643 [deployed]\\n- Ideas filed: #28612 [executing]\\n- Ideas filed: #28613 [executing]\\n- Tickets: 28224, 27061\\n- Files touched: lib/ai_ticket_agent_exam_extension_handler.php, lib/ExternshipKnowledgePack.php\\n\\nAfter the next steps, append to cline_task_ledger.md (rule 07), run order 66.\\n═══════════════════════════════════════════════\"}\n</arguments>\n</use_mcp_tool>",
    "ideas": {
     "2036": null,
     "2631": null,
@@ -143662,7 +143662,7 @@
     "28212": null,
     "28213": null,
     "28220": null,
-    "28224": null,
+    "28224": "rejected",
     "28233": null,
     "28481": null,
     "28493": null,
@@ -143673,6 +143673,7 @@
     "28626": "executing",
     "28643": "proposed",
     "166603": null,
+    "178796": null,
     "178798": null,
     "374825": null
    }
@@ -144968,19 +144969,20 @@
   },
   "1787996122566": {
    "task_id": "1787996122566",
-   "mtime": 1787997616373,
+   "mtime": 1788020290662,
    "created_at": "2026-08-29T09:35:22.566Z",
-   "last_modified": "2026-08-29T10:00:16.373Z",
-   "size_kb": 249,
-   "turn_count": 57,
+   "last_modified": "2026-08-29T16:18:10.662Z",
+   "size_kb": 441,
+   "turn_count": 88,
    "title": "#SMS/Email Notifications Externships/NREMT and End of Class\n\nYou have actually done it before. I need you to provide me with a page that has a list of notifications. This again may be already sitting on the reports.php page is a card link there, but the idea is that we are looking for the SMS messages and emails that are sent in regards to the students externship deadlines as well as NREMT deadlines near the end of the class. Again I believe you've already sent this before but I wanted to assess those to see which ones you need to turn off as that is creating some anxiety students with the multiple medication and I think we need to turn some of these notifications off. Please see if you can ",
-   "pickup_prompt": null,
+   "pickup_prompt": "ied evidence. Shipping the completion directly with a complete, properly-formed PICKUP PROMPT block.\n\n<attempt_completion>\n<result>\nFound it. The page already exists, it IS linked from reports.php, and the toggles genuinely stop the sends — I proved that live this window.\n\n**The page (Notification Control Center):**\nhttps://emsuniversity.com/emtskills/notifications/jobs.php\n(requires MasterAdmin / ITAdmin / Admin login; an unauthenticated curl returns 401 because it sits behind the role guard, which is correct).\n\nIt is the \"Notification Control Center\" card on your reports.php page (the card states \"Externship and NREMT reminders are highlighted for review\"), and it links to this exact URL. There is a second card, \"Student Notification Manager\" → /emtskills/notifications/manage.php, but jobs.php is the one that lists every externship / NREMT / end-of-class deadline notification with per-job Pause / Activate / Delete controls plus a dedicated externship / NREMT / completion filter.\n\n**The toggle actually works (verified end-to-end this window):**\nThe Pause button writes status='paused' into notification_job_registry via lib/NotificationGate.php. Every running sender cron calls NotificationGate::checkOrExit(slug) as its first action; when paused it logs the block and exits BEFORE sending. I proved the full chain live:\n- paused cron_under18_refresher_reminder → NotificationGate::isActive() returned false\n- restored it → returned true\n- gate re-stamped last_checked_at = 2026-08-29 09:13:03 PT\n\nSo when a row shows the green \"wired\" pill, pausing it really stops that notification. Rows showing \"not wired\" carry an explicit warning: \"Pausing here would not stop it.\"\n\n**The externship / NREMT / end-of-class notifications actually firing right now (all 6 wired + gated):**\n- cron_externship_sms_reminders — Externship Ride-Along SMS (every 30 min, 8am–8pm)\n- cron_externship_waiver_prestage — Externship Required Docs pre-stage (email, daily 9am)\n- cron_externship_additional_date_detector — Externship Additional Dates (email, hourly :15)\n- cron_externship_missing_sig_hold — Externship Missing Signature Hold (email, daily 12pm)\n- cron_under18_refresher_reminder — Under-18 NREMT Refresher Deadline (email, daily 6:30am)\n- cron_completion_warnings — 60-Day EMT Completion Window 4-message ladder (email+SMS, daily 5pm)\n\nThese are the live deadline notifications in these categories. Pause whichever you want silenced from the Control Center and it stops for real.\n\n**Cleanup I did so the page never offers a toggle for a notification that does not exist:**\nSoft-deleted 4 dead registry rows that had no sender file anywhere and were never running: cron_externship_request_confirmation, cron_externship_pending_nudge, cron_externship_reminder, cron_externship_nremt_window_escalation (soft-delete = recoverable, audit row written for each).\n\n**Filed #28683 [proposed] for the one real follow-up:** 7 dormant-but-real sender files exist (cron_auto_nremt_confirmation, cron_certificate_completion_watchdog, cron_externship_skills_checklist_notify, cron_externship_auto_notify, cron_externship_notification_digest, cron_externship_60day_failer, cron_nremt_weekly_reminder) but they are NOT scheduled in crontab, so they are silent right now and toggling them does nothing. They need the one-line gate guard plus a schedule decision before they become controllable. Nothing live to turn off there today.\n\n**To use it:** open the link, apply the externship / NREMT / completion filter (or the externship_nremt quick filter), and Pause the jobs you want silenced. ",
    "ideas": {
     "1912": null,
     "1998": null,
     "2563": null,
     "2640": null,
     "2642": null,
+    "5615": null,
     "15815": null,
     "20495": null,
     "26712": null,
@@ -145009,7 +145011,9 @@
     "28504": "deployed",
     "28505": null,
     "28506": "deployed",
-    "64748": null
+    "28683": "proposed",
+    "64748": null,
+    "92400": null
    }
   }
  }

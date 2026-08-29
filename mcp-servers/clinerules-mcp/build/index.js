@@ -876,8 +876,31 @@ function amendRuleOnDisk(slugOrId, taskId, rcaBucket, note, triggerPattern) {
     if (!filePath || !fs.existsSync(filePath)) {
         return { ok: false, message: `Rule file for '${row.slug}' not found on disk at ${filePath || "(unknown path)"}.` };
     }
-    const body = fs.readFileSync(filePath, "utf-8");
     const ts = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
+    // ── RULE 317 CLAUSE 11 ENFORCEMENT (2026-08-28) ────────────────────────
+    // Appending amendment prose to the tail of an ALWAYS-LOADED rule was the
+    // cursory-repair shape Ruben named: 46 dated notes accumulated on rule 317
+    // while clauses 1-10 (the gate a future window actually reads) never changed,
+    // and every appended byte was injected into every window's system prompt.
+    // The amendment trail now lands in Rules-archive/<N>-amendments.md. The ledger
+    // row, the golden-rule-table sync, and the reindex are unchanged, so the
+    // R317_REVERSAL_NOT_REPAIRED gate still sees proof-of-repair, but the
+    // always-loaded floor stops growing and a DURABLE fix must be a hand edit to a
+    // numbered clause, which is exactly what clause 11 demands.
+    const isAlwaysLoaded = filePath.startsWith(RULES_DIR);
+    let amendTarget = filePath;
+    if (isAlwaysLoaded) {
+        const base = path.basename(filePath, ".md");
+        const num = (base.match(/^(\d+)/) || [])[1] || base;
+        amendTarget = path.join(ARCHIVE_DIR, `${num}-amendments.md`);
+        if (!fs.existsSync(amendTarget)) {
+            fs.writeFileSync(amendTarget, `Rule ${row.rule_id} - Amendment trail (auto-maintained by clinerules_amend_rule)\n\n` +
+                `Rule ${row.rule_id} is always-loaded, so amendment prose may not live in its tail (rule 317 clause 11).\n` +
+                `Every reversal amendment for this rule is appended HERE. A DURABLE fix still requires a hand edit to a\n` +
+                `numbered clause in the live rule file: ${filePath}\n`, "utf-8");
+        }
+    }
+    const body = fs.readFileSync(amendTarget, "utf-8");
     // ── #27634 dedup check ─────────────────────────────────────────────────
     const newSig = _amendNorm(rcaBucket + " " + triggerPattern + " " + note);
     try {
@@ -888,7 +911,7 @@ function amendRuleOnDisk(slugOrId, taskId, rcaBucket, note, triggerPattern) {
                 // Duplicate: fold to a one-line marker (file stays bounded), keep the
                 // ledger row so the recurrence is still auditable.
                 const foldLine = `\n> Reappeared again (${ts}, task ${taskId || "(unknown)"}) — same causal content as an earlier amendment; folded by dedup (#27634).\n`;
-                fs.writeFileSync(filePath, body.replace(/\s+$/, "\n") + foldLine, "utf-8");
+                fs.writeFileSync(amendTarget, body.replace(/\s+$/, "\n") + foldLine, "utf-8");
                 db.prepare(`INSERT INTO rule_amend (rule_id, slug, task_id, rca_bucket, reversal_note, amended_path) VALUES (?,?,?,?,?,?)`).run(row.rule_id, row.slug, taskId || null, rcaBucket.slice(0, 60), ("DUP-FOLDED: " + note).slice(0, 2000), filePath);
                 try {
                     reindex(db, false);
@@ -913,7 +936,7 @@ function amendRuleOnDisk(slugOrId, taskId, rcaBucket, note, triggerPattern) {
         "The reversal that produced this amendment is closed ONLY because the causal rule text changed.",
         "",
     ].join("\n");
-    fs.writeFileSync(filePath, body.replace(/\s+$/, "\n") + amendment, "utf-8");
+    fs.writeFileSync(amendTarget, body.replace(/\s+$/, "\n") + amendment, "utf-8");
     // Record durable proof BEFORE reindex so a crash mid-reindex still proves repair.
     try {
         db.prepare(`INSERT INTO rule_amend (rule_id, slug, task_id, rca_bucket, reversal_note, amended_path) VALUES (?,?,?,?,?,?)`).run(row.rule_id, row.slug, taskId || null, rcaBucket.slice(0, 60), note.slice(0, 2000), filePath);

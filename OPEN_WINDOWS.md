@@ -6,15 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 10:41:20 PM PT | window: last 72h | 37 tasks | index total 938 (parsed 3, cached 935)
+Generated: 8/28/2026, 11:41:20 PM PT | window: last 72h | 41 tasks | index total 942 (parsed 8, cached 934)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787960052755` | 8/28/2026, 10:41:15 PM | 721 | 5071KB | frankenstein-llm having this issue. Can you resolve?  |
-| `1787980519299` | 8/28/2026, 10:34:44 PM | 62 | 2624KB | #Various 2 |
-| `1787963389563` | 8/28/2026, 10:24:24 PM | 154 | 1760KB | #Overdue Grievances and Rule 317  |
-| `1787960225304` | 8/28/2026, 10:07:56 PM | 330 | 4262KB | #Various |
-| `1787876909491` | 8/28/2026, 9:48:21 PM | 646 | 3041KB | #PostMark Issue  |
+| `1787876909491` | 8/28/2026, 11:41:18 PM | 811 | 4778KB | #PostMark Issue  |
+| `1787984810545` | 8/28/2026, 11:41:17 PM | 85 | 120KB | #GLM 5.3/Qwen 3.8 Julia Claudia |
+| `1787985551437` | 8/28/2026, 11:41:16 PM | 3 | 576KB | #Argus |
+| `1787960225304` | 8/28/2026, 11:41:12 PM | 510 | 6133KB | #Various |
+| `1787980519299` | 8/28/2026, 11:40:21 PM | 113 | 5281KB | #Various 2 |
+| `1787963389563` | 8/28/2026, 11:38:31 PM | 258 | 2603KB | #Overdue Grievances and Rule 317  |
+| `1787983724269` | 8/28/2026, 11:37:37 PM | 301 | 1104KB | #Argus |
+| `1787960052755` | 8/28/2026, 11:21:09 PM | 948 | 5311KB | frankenstein-llm having this issue. Can you resolve?  |
+| `1787983845643` | 8/28/2026, 11:11:05 PM | 3 | 12KB | How is this eepseek working |
 | `1787937972952` | 8/28/2026, 9:46:52 PM | 882 | 1526KB | #GLM 5.3 Local |
 | `1787978044041` | 8/28/2026, 9:38:11 PM | 17 | 33KB | #Argus |
 | `1787977854047` | 8/28/2026, 9:31:14 PM | 3 | 14KB | #Argus |
@@ -52,158 +56,7 @@ Generated: 8/28/2026, 10:41:20 PM PT | window: last 72h | 37 tasks | index total
 
 ## Per-window detail
 
-### `1787960052755` — 8/28/2026, 10:41:15 PM PT — 721 turns
-
-**Original task:**
-
-```
-frankenstein-llm having this issue. Can you resolve? 
-
-{"message":"fetch failed","code":"ERR_SSL_WRONG_VERSION_NUMBER","modelId":"frankenstein-llm","providerId":"litellm"}
-```
-
-**Ideas referenced:** #10740, #11953, #12251, #12314, #12363, #12364, #12365, #1238, #12407, #12584, #12672, #13108, #13121, #13832, #13874, #14848, #16265, #16844, #17202, #1765, #178797, #18868, #19338, #1934, #19653, #1967, #1998, #20495 [deployed], #2050, #2097, #2168, #2174, #2247, #23206, #25604, #25764, #2578 [deployed], #2581, #2603, #2613, #2626, #2629, #2650 [deployed], #2652, #2653, #26712, #26925, #27100, #27673, #27702, #27972, #28238, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28605 [proposed], #28606 [proposed], #30043, #30515, #31646
-
-**Last PICKUP PROMPT:**
-
-```
-ed it as #28605 [proposed].\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787977000000 — GLM-5.3 reasoning-channel empty-response fix.\n\nWhere we left off (verified 2026-08-28 21:27 PT):\n- ROOT CAUSE: glm-5.3-15pct (GLM ring relaunched ~21:20 PT) returns HTTP 200 with message.content=null and the whole answer on the `reasoning` channel. Adapter streaming paths DELETED that channel, so Cline got empty deltas -> \"empty or unparsable response\" x3 -> auto-retry death. (verified: emsu-operations ssh_command curl POST to http://127.0.0.1:8210/v1/chat/completions returned HTTP=200 with \"content\":null and \"reasoning\":\"The user wants me to say \\\"PROBE_OK\\\". This is a simple request\", finish_reason=length, t=14.55s)\n- FIXED: /usr/local/bin/frankenstein_tools_adapter.py patched at 2 sites — _filter_sse_line (promote reasoning->content when delta has no content) and _send_as_sse (fall back to msg reasoning when content empty). Reasoning still stripped when real content/tool_calls exist. (verified: emsu-operations ssh_command `sudo grep -c 'GLM-5.3 FIX'` returned 2 and `sudo grep -c 'SSE_PROMOTED'` returned 1 on the live file; `sudo python3 -m py_compile` printed COMPILE_OK)\n- VERIFIED LIVE: (verified: emsu-operations ssh_command streaming curl POST to http://127.0.0.1:11510/v1/chat/completions saved to /tmp/sse_test.txt measured bytes=14966, content_deltas=60, reasoning_leaks=0, terminating with finish_reason=stop and [DONE], answer PROBE_OK present). Pre-patch the same request gave zero content deltas.\n- SERVICES GREEN: (verified: emsu-operations ssh_command `systemctl show frankenstein-tools` returned ActiveState=active NRestarts=0 MainPID=816434; `systemctl is-active litellm` returned active; `systemctl is-active cloudflared` returned active; probes run 21:26 PT)\n- RULED OUT: bug-library incident 2578 cloudflared restart churn (verified: emsu-operations ssh_command `systemctl show cloudflared` returned NRestarts=0 with ActiveEnterTimestamp=Sat 2026-08-22 11:29:47 PDT, and `journalctl -u cloudflared --since '30 min ago'` counted 0 restarts). The 502/SSL errors were the same failure surfacing at other layers.\n- NO Anthropic introduced anywhere (Ruben directive respected).\n- Backup: /usr/local/bin/frankenstein_tools_adapter.py.bak-pre-glm53-20260828-212323\n\nOpen threads to drive next:\n1. #28605 [proposed] — Canary writes healthy=true alongside decode_live=false (:8211 sat tok_s=0.0, fail_streak=0, never quarantined). Make decode_live=false increment fail_streak and quarantine on the same threshold as HTTP failures.\n2. #28606 [proposed] — GLM ring has no --reasoning-parser flag, so the thinking preamble is concatenated into content. Set the parser on the ring launch (Roman nodes, not WOPR) so vLLM separates reasoning_content from content natively.\n\nReference IDs:\n- Bug library incident: 2650 (glm53_reasoning_channel_stripped_on_sse_empty_response_2026_08_28, resolved) — bug-library row, not an orchestrator idea\n- Ideas filed: #28605 [proposed], #28606 [proposed]\n- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (patched, backup .bak-pre-glm53-20260828-212323), /tmp/patch_glm53_reasoning.py (idempotent patch script)\n\n# Reversal Log\n- \"cloudflared restart churn is the cause (bug-library known-repair match)\" -> corrected: cloudflared NRestarts=0 and tunnel up since 2026-08-22, so that path was ruled out and the real cause was the adapter's reasoning-channel strip aga
-```
-
-### `1787980519299` — 8/28/2026, 10:34:44 PM PT — 62 turns
-
-**Original task:**
-
-```
-#Various 2
-
-See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
-```
-
-**Ideas referenced:** #16473, #178798, #19492, #2036, #24990, #28224, #28612 [proposed], #28613 [proposed], #6106
-
-**Last PICKUP PROMPT:**
-
-```
-ysql UPDATE Rows affected: 2).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787980519299 — ymaris casas DNC add + Email AI nonsense-reply RCA.
-
-Where we left off (verified 2026-08-28 22:32 PT):
-- ymaris casas (210) 902-1955 on unified_dnc_list + sms_opt_out (source manual_cline); dnc_list tool returned on_dnc_list true at 22:23 PT.
-- Ticket 28224 (TKT-20260827-5032D13D) internal note added 22:31 PT: cancellation + card removal request, DNC, no payment chase; human action pending (Vicky: drop + Authorize.net card profile removal).
-- Root cause: classifier HTTP 401 since ~8/26 -> keyword_fallback intent n/a; cron_email_responder fatals (EmailContentSanitizer not loaded, classifyEmailTimingProfiles undefined, FirstName column) -> permanent_llm_failure_ticketed 106/58/66 on 8/26-28 vs baseline 5; canned ClarifyingQuestion replies.
-
-Open threads to drive next:
-1. #28612 [proposed] (verified: reconcile_ideas 22:31 PT returned status=proposed dev_stage=idle) — fix responder outage: require/autoload lib/EmailContentSanitizer.php, define or remove classifyEmailTimingProfiles(), fix FirstName to first_name, fix classifier 401 auth, alert when permanent_llm_failure_ticketed > 20/day.
-2. #28613 [proposed] (verified: reconcile_ideas 22:31 PT returned status=proposed dev_stage=idle) — pre-send DNC/suppression gate in cron_email_responder + cancellation/card-removal keyword fast-path; never auto-close cancellation-keyword threads.
-3. (human-only decision — no idea) Vicky: process ymaris casas drop/cancellation and remove her card profile in Authorize.net; she is DNC, no payment chase.
-
-Reference IDs:
-- Ideas filed: #28612 [proposed], #28613 [proposed]
-- Ideas closed: none
-- Files touched: none local; server DB writes: admin_portal.unified_dnc_list (id 1), admin_portal.sms_opt_out (+12109021955), orchestrator_ideas efficiency_priority=1 for 28612/28613, ticket 28224 internal comment.
-
-# Reversal Log
-No reversals this window.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Check compress signal file (rule 119)
-- [x] Locate student record + ticket for ymaris casas
-- [x] Add person to DNC list (unified_dnc_list + sms_opt_out)
-- [x] Verify DNC via tool
-- [x] Pull full comms timeline incl. AI outbound replies
-- [x] Root-cause the nonsensical Email AI response (logs + code)
-- [x] File fix ideas
-- [x] Ticket internal note
-- [x] Reconcile ideas (GATE B)
-- [x] Validate passed
-- [x] Gate check + complete
-</task_progress>
-</attempt_completion>
-```
-
-### `1787963389563` — 8/28/2026, 10:24:24 PM PT — 154 turns
-
-**Original task:**
-
-```
-#Overdue Grievances and Rule 317 
-
-Help me to go through all the overdue grievances. There's several of them. Do an extensive analysis of them and present them briefly and recommendations according to SLS, MCP, policy, etc...
-
-See: https://emsuniversity.com/emtskills/routes/grievance_manager.php 
-
-Also, we need to strengthen rule 317 so that it makes actual durable changes, not just in-the-window cursory changes. The goal is to make LLMs stronger in the long-run, not just for 1 window which is what appears to be happening. I lump these together becasue I anticipate having some difficulty with 
-```
-
-**Ideas referenced:** #047857, #059669, #11111, #11316, #128681, #129302, #181825, #1912, #19419, #1998, #20495, #2050, #2563, #26071, #26089, #2626, #2628, #2629, #2631 [investigating], #2640, #2642, #26434, #26617, #26712, #26713, #26932, #27100, #27531, #27634 [executing], #27635 [executing], #27652, #27657, #27671, #28122, #28133, #28134, #28205 [deployed], #28213 [proposed], #28220, #28225 [deployed], #28226 [deployed], #28238, #28239, #28242, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28497 [deployed], #28500, #28609 [proposed], #28610 [proposed], #30043, #30515, #313244, #31646, #317202, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #78350, #9203, #92400, #9888
-
-**Last PICKUP PROMPT:**
-
-```
-ent + verify reindex + verify durable ingestion path
-- [ ] Present results with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1787960225304` — 8/28/2026, 10:07:56 PM PT — 330 turns
-
-**Original task:**
-
-```
-#Various
-
-Jon says he has this issue for a while with Argus. Can you resolve?
-```
-
-**Ideas referenced:** #059669, #10060, #11570, #166534, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25142, #25185, #25269, #25313, #25571, #25573, #2563, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #27860, #28112, #28155, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #28607 [executing], #28608 [deployed], #334155, #3730, #374151, #4338, #475569, #6366, #64748, #9191, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- "Call to undefined function" — root cause pattern found.
-   - `.clinerules/91` PICKUP PROMPT mandate, rule 267 (offload/reconcile), rule 301 (steering compliance) — all governing this session's completion format and steering behavior.
-
-3. Files and Code Sections:
-   - **`/var/www/emtskills/routes/api/exam_override.php`** (read in full via `cw26ty0mcp0read_server_file`, ~1850 lines):
-     - Contains `handleAdminDirectOverride(array $user): void` function (starts ~line 1608 per earlier grep results, body spans roughly lines 1608-1760).
-     - **THE BUG (confirmed root cause):** Inside `handleAdminDirectOverride()`, near line 1721 (per live PHP-FPM error log), there is a call:
-       ```php
-       // ── Force student onto PD 80% report ────────────────────────────────
-       setForceOnPdReportForOverride($pdo, $studentId, $moodleUserId, $courseId);
-       ```
-       This function **`setForceOnPdReportForOverride()` is UNDEFINED anywhere in the entire `/var/www/emtskills` codebase** — confirmed via `grep -rln "setForceOnPdReportForOverride"` which only found the ONE call site in `exam_override.php` (no function definition anywhere, including in `lib/report_registry.php`, `cron/cron_force_on_pd_report.php`, or any other pd_80/pd_report-related file that was searched).
-     - **Live confirmed PHP Fatal Error** (from `check_server_logs` grep on php-fpm log):
-       ```
-       [08-Aug-2026 03:27:07 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined function setForceOnPdReportForOverride() in /var/www/emtskills/routes/api/exam_override.php:1721
-       #0 /var/www/emtskills/routes/api/exam_override.php(66): handleAdminDirectOverride()
-         thrown in /var/www/emtskills/routes/api/exam_override.php on line 1721
-       ```
-       This fatal occurred 3 times on 2026-08-08 (03:27:07, 03:27:11, 03:30:27), and is the exact cause of the "Network Error" shown in the screenshot — because the PHP fatal error crashes the script BEFORE `jsonSuccess()` can echo valid JSON, so the frontend's `fetch()` either gets a non-JSON response or an HTTP 500 with no `success` field, which the JS catch block reports as "❌ Network error. Please try again." (see the JS `catch` block in `routes/exam_override_request.php`'s `applyAdminOverride()` function: `text.textContent = '❌ Network error. Please try again.';`).
-     - This function call was added as part of a broader admin-direct-override flow (setting an exam deadline override should also flag the student for the PD 80% report), but the actual function implementation was never written — a classic "reference before definition" dead code bug.
-   - **`/var/www/emtskills/routes/exam_override_request.php`** (read in full, ~2000+ lines):
-     - Frontend HTML/JS for the Exam Override Request page including the "Admin Direct Override" panel (`<div class="override-card admin-override-panel" id="adminOverridePanel">`).
-     - The `applyAdminOverride(quizId, examName)` JS function builds a `FormData` with `action=admin_direct_override`, posts to the API, and on failure sets:
-       ```js
-       banner.className = 'admin-result-banner error';
-       $('adminResultText').textContent = '❌ Network error. Please try again.';
-       ```
-       This is the exact error text shown in the screenshot.
-   - **`/var/www/emtskills/cron/cron_pd80_grievance_override_autopopulate.php`** (read in full): This is the EXISTING, WORKING mechanism that sets `Students.force_on_pd_report = 1` for grievance/override-approved students via a cron job, based on:
-     - Grievances with `status='approved'`
-     - 
-```
-
-### `1787876909491` — 8/28/2026, 9:48:21 PM PT — 646 turns
+### `1787876909491` — 8/28/2026, 11:41:18 PM PT — 811 turns
 
 **Original task:**
 
@@ -246,6 +99,279 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
+
+### `1787984810545` — 8/28/2026, 11:41:17 PM PT — 85 turns
+
+**Original task:**
+
+```
+#GLM 5.3/Qwen 3.8 Julia Claudia
+
+How are CFAs faring - all good now too? 
+
+continue to babysit the GLM 5.3 to serving
+
+Tell me how many lanes for the Julia/Claudia TP=2 for Qwen 3.8, the tok per sec per lane and concurrency in tok/sec. Make sure it's in the lane right after GLM 5.3. confirm.
+
+apprved
+
+#28615 [proposed] — after ring serves (~23:35 PT): run bash /tmp/glm53_auto_verify.sh on WOPR (2 consecutive 200s per rule 322, then reproducer /tmp/uni_7..9.json concurrent + /tmp/longctx.json 15K; results land in /tmp/glm53_verify_result.txt; all probes must answer Paris coherently). If concurr
+```
+
+**Ideas referenced:** #12314, #12365, #12366, #12368, #13108, #13874, #16304, #178797, #25112, #28605 [proposed], #28606 [proposed], #28615 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787985551437` — 8/28/2026, 11:41:16 PM PT — 3 turns
+
+**Original task:**
+
+```
+#Argus
+
+See Also the Screenshot about overrides / needs a bulk option
+
+Confirmed every issue in the pasted report and both pickup prompts, addressed or explicitly routed to a human. The short version: the Exam 5 monitor the executor claimed was live did not exist, so it was rebuilt from scratch and now runs daily, having flagged 3 students (course 37, close dates inside 7 days) whose names went to staff; the 1,702 auto-void rows were proven to be the healthy integrity investigator's repair audit trail, so that thread is closed by-design; the Employee Certs complaint was a data problem (Ruben h
+```
+
+**Ideas referenced:** #178798, #28133 [proposed], #28214 [executing], #28310 [rejected], #28465 [deployed], #28497 [deployed], #28504 [deployed], #28505 [proposed], #28506 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787960225304` — 8/28/2026, 11:41:12 PM PT — 510 turns
+
+**Original task:**
+
+```
+#Various
+
+Jon says he has this issue for a while with Argus. Can you resolve?
+```
+
+**Ideas referenced:** #059669, #10060, #11570, #1281, #1292, #15218, #166534, #16732, #1774, #1775, #1781, #1787, #178797, #1793, #1797, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20050, #20547, #21125, #21126, #2209, #22511, #22583, #2265, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #2449, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25142, #25185, #25269, #25313, #25571, #25573, #2563, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #27860, #2809, #28112, #28155, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #28607 [executing], #28608 [deployed], #28618 [proposed], #334155, #3730, #374151, #4338, #4536, #4699, #475569, #6366, #64748, #7925, #8281, #8321, #8563, #8598, #9191, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+d/backlog decision).
+   - Ship a final `attempt_completion` with a full rule-91 PICKUP PROMPT block, after running `clinerules_validate_completion` + `clinerules_check_gate`, covering: (a) the final disposition of idea #28607 (deployed/blocked/executing with verified evidence), (b) confirmation that idea #28618 was explained to the user, and (c) a Reversal Log section per rule 317.
+
+6. Task Evolution:
+   - **Original Task:** "#Various — Jon says he has this issue for a while with Argus. Can you resolve?" (screenshot of "model pool was saturated" hang for Background Task #709).
+   - **Task Modification 1:** User feedback "do not inject anthropic. See this also" + new screenshot → pivoted to the Exam Override Admin Direct Override "Network Error" bug (fixed, idea #28608 deployed).
+   - **Task Modification 2:** User feedback "Check Chat 55 recently, appears the button went away again?" → pivoted to investigating and fixing the Chris Ngo Exam 5 button issue (fixed live, idea #28618 filed for the systemic batch-tool improvement).
+   - **Task Modification 3 (CURRENT ACTIVE TASK):** After the attempt_completion covering all of the above shipped, user gave this explicit steering feedback:
+     > "Human engineer, lmao. You can fix this with frankenstein doctor of executor then build/ship it -> #28607 [blocked]... Needs a human or engineer to review why the auto-build failed and either retry it or hand-write the fix (retry-before-offload logic, widen dedup guard, remove or implement the dead EMSUSaturationGuard reference)."
+     > "same with this one -> [identical #28607 text] ... Fix the executor"
+     > "explain what this is -> #28618 [proposed], decide whether to approve and build the batch override UI, or leave as a backlog improvement."
+   - **Context for Change:** Ruben is explicitly rejecting the earlier completion's framing that idea #28607 "needs a human or engineer" — his sarcastic "Human engineer, lmao" makes clear that I (the agent) AM the engineer who should use available tooling (Frankenstein Doctor, bug library, executor pipeline) to diagnose and fix this myself, then actually build/ship the resolution rather than leaving it as an open thread for a human. Separately, he wants a plain-language explanation of what idea #28618 actually proposes before deciding its fate.
+
+7. Current Work:
+   Immediately before this summary was triggered, I had:
+   - Confirmed frankenstein-llm is healthy via `frankenstein_verify_routing` (HTTP 200, 18.7s response, backend `127.0.0.1:11510/v1`).
+   - Run `cron_executor_doctor.php --dry-run` (no orphan repairs needed for #28607).
+   - Triggered `idea_action(28607, "implement")` to retry the automated build, given the failure pattern strongly suggested a transient LLM-fleet outage (21:42–22:08 PT) rather than a permanent defect.
+   - Re-checked `get_idea_progress(28607)` — confirmed the retry is queued (dev_stage=idle, ETA ~13 min, clock 23:45 PT).
+   - Then pivoted to investigating the ACTUAL PHP source code in `alltastic_api.php` to find and potentially hand-fix the root cause myself (per rule 267 GATE A0/GATE C and the user's explicit "you can fix this... build/ship it" directive), since simply re-triggering the automated pipeline is not the same as "building/shipping" a fix myself if the underlying code defect (e.g., the dead `EMSUSaturationGuard` reference, or insufficient retry-before-offload logic) still exists.
+   - Read the 814KB `alltastic_api.php` file in FULL twice (via `read_server_file`), which was extremely context-expensive and is the direct cause of this context-compr
+```
+
+### `1787980519299` — 8/28/2026, 11:40:21 PM PT — 113 turns
+
+**Original task:**
+
+```
+#Various 2
+
+See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
+```
+
+**Ideas referenced:** #16473, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25916 [awaiting_review], #26084 [approved], #26663, #27082 [approved], #27100, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28224, #28233, #28481, #28493, #28550, #28612 [proposed], #28613 [proposed], #6106
+
+**Last PICKUP PROMPT:**
+
+```
+verbatim from .clinerules/91)\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — ymaris casas DNC + Email AI RCA + DNC gate enforcement.\n\nWhere we left off (verified 2026-08-28 23:36 PT):\n- Student ymaris casas (casasymaris458@gmail.com, +13462721104) ADDED to unified DNC list, row id 8, verified via dnc_list.\n- RCA done: Email AI sent URGENT CALLBACK card-declined template and ignored her cancellation; root cause = no DNC/intent gate pre-send in EmailAIResponder.\n- #28613 [executing] — Email responder must honor DNC/suppression pre-send + rule-based cancellation/card-removal keyword fast-path (filed this session, status in_progress).\n- lib/chat_widget_dnc_gate.php (DncGate) deployed + lint clean; wiring into send paths pending (#26084 [approved], #27082 [approved]).\n- Patcher applied 13/16 anchors; P1 EmailAIResponder + P9 EmailClassifier sed-fixed; EmailClassifier.php:1186 parse error (missing paren after $this->apiKey) fixed this window; php -l clean on lib/EmailClassifier.php, lib/EmailAIResponder.php, lib/mailer.php, lib/chat_widget_dnc_gate.php; php -r require = CLASSES LOAD OK (fix live; broken file never OPcached).\n\nOpen threads to drive next:\n1. #28613 [executing] — wire DncGate into EmailAIResponder outbound pre-send + cancel/card-removal fast-path; smoke-verify on next inbound email (no fatal).\n2. #26084 [approved] + #27082 [approved] — wire DncGate into chat widget send path.\n3. #669 [deployed] / #667 [deployed] / #18847 [deployed] — audit that SMS/voice DNC enforcement is actually live, not just filed.\n4. (human-only decision — no idea) Vicky: delete ymaris casas card profile in Authorize.net per her request.\n\nReference IDs:\n- Ideas filed this session: #28613 [executing]\n- Related pre-existing: #26084 [approved], #27082 [approved], #18847 [deployed], #669 [deployed], #667 [deployed]\n- Files touched: /var/www/emtskills/lib/EmailClassifier.php, lib/EmailAIResponder.php, lib/mailer.php, lib/chat_widget_dnc_gate.php\n- Student: ymaris casas, casasymaris458@gmail.com, +13462721104, DNC row id 8\n\n# Reversal Log\n- Patcher left parse error at EmailClassifier.php:1186 (missing paren) → fixed same window | RCA bucket: insufficient probe | causal rule 317 clause 9 (consumer re-run: php -l + class-load after every patch).\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — ymaris casas DNC + Email AI RCA + DNC gate enforcement.\n\nWhere we left off (verified 2026-08-28 23:36 PT):\n- Student ymaris casas (casasymaris458@gmail.com, +13462721104) ADDED to unified DNC list, row id 8, verified via dnc_list.\n- RCA done: Email AI sent URGENT CALLBACK card-declined template and ignored her cancellation; root cause = no DNC/intent gate pre-send in EmailAIResponder.\n- #28613 [executing] — Email responder must honor DNC/suppression pre-send + rule-based cancellation/card-removal keyword fast-path (filed this session, status in_progress).\n- lib/chat_widget_dnc_gate.php (DncGate) deployed + lint clean; wiring into send paths pending (#26084 [approved], #27082 [approved]).\n- Patcher applied 13/16 anchors; P1 EmailAIResponder + P9 EmailClassifier sed-fixed; EmailClassifier.php:1186 parse error (missing paren after $this->apiKey) fixed this window; php -l clean on
+```
+
+### `1787963389563` — 8/28/2026, 11:38:31 PM PT — 258 turns
+
+**Original task:**
+
+```
+#Overdue Grievances and Rule 317 
+
+Help me to go through all the overdue grievances. There's several of them. Do an extensive analysis of them and present them briefly and recommendations according to SLS, MCP, policy, etc...
+
+See: https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+
+Also, we need to strengthen rule 317 so that it makes actual durable changes, not just in-the-window cursory changes. The goal is to make LLMs stronger in the long-run, not just for 1 window which is what appears to be happening. I lump these together becasue I anticipate having some difficulty with 
+```
+
+**Ideas referenced:** #0000, #047857, #059669, #11111, #11316, #128681, #129302, #16224, #181825, #1912, #19173, #19175 [executing], #19176 [queued], #19419, #19898, #19899 [proposed], #19904, #1998, #20251, #20495, #2050, #25151, #25185, #2525, #2544 [rejected], #2563, #25888, #25925, #25926, #25935, #26071, #26089, #2626, #2628, #2629, #2631 [investigating], #26349, #2640, #2642, #26434, #26435, #26617, #26696, #26712, #26713, #26774, #26914 [deployed], #26915 [executing], #26916, #26932, #26993, #27100, #27531, #27634 [executing], #27635 [executing], #27640, #27652, #27657, #27671, #28122, #28133, #28134, #28205 [deployed], #28213 [proposed], #28220, #28225 [deployed], #28226 [deployed], #28238, #28239, #28242, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28497 [deployed], #28500, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28621, #30043, #30515, #313244, #31646, #317202, #334155, #3456, #3730, #374151, #4338, #45475, #475569, #5344, #6366, #64748, #65039, #78350, #9203, #92400, #9888
+
+**Last PICKUP PROMPT:**
+
+```
+ `clinerules_validate_completion`.
+- **Rule 91 gate**: 47-char U+2550 dividers, PICKUP PROMPT block in the `result` param, every `#NNNN` bracketed, `# Reversal Log` section mandatory. Use `get_rule91_template` to assemble (do NOT retype dividers — my first attempt failed with 51-char dividers).
+- **Rule 267 GATE B**: `reconcile_ideas` for server-side disposition tags.
+
+## 3. Files and Code Sections
+
+### `/Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md` — **MODIFIED (needs more work)**
+Rewrote the whole file. Kept the GOLDEN RULE, the auto-maintained golden-rule-table block, and clauses 1-10. **Added clause 11** and **deleted the 46 appended "## Amendment (from reversal, ...)" entries** from the tail. Reindex confirmed: `✓ Reindexed: 341 rules, 2580730 bytes, ~640939 tokens, 23 hardfloor.`
+
+Clause 11 as written:
+```
+11. **Amendment discipline — a reversal fix is durable ONLY if it changes a numbered clause (2026-08-28, Ruben directive).** The amendment tail on this file had grown to 46 appended "Reversal note" entries, almost all restating the same INSUFFICIENT_PROBE lesson, while clauses 1-10 — the actual gate a future window reads — went unchanged for weeks. That is cursory window-fixing wearing the uniform of a closed loop: the file changes on disk, the `R317_REVERSAL_NOT_REPAIRED` gate sees a mechanical amendment, and nothing a future window will obey is any different. Therefore, a durable amendment MUST (a) modify one of clauses 1-10 above or add a new numbered clause — it may NOT merely append a free-floating dated note; and (b) a reversal whose root cause already maps to an existing numbered clause is closed by CITING that clause in the Reversal Log, never by appending a duplicate "amended behavior" paragraph. When calling `clinerules_amend_rule`, the `note` must name the numbered clause it changes (e.g. "amends clause 9"), not just describe a past incident. The amendment history lives in `Rules-archive/317-amendments.md`, not in this file's tail. Appending a note without editing a numbered clause is bloat, not repair.
+```
+
+**⚠️ CRITICAL UNRESOLVED DEFECT:** The rule text now references `Rules-archive/317-amendments.md` **but I never created that file**. The 46 trimmed amendments were deleted from the rule file and NOT archived anywhere. This is a rule-321 G5 (premature completion / claimed-but-unverified artifact) and a rule-317 clause-10 violation in my own work. Must either recover the amendment text (it is quoted verbatim in this conversation's earlier `clinerules_lookup(317)` output) and write the archive file, or re-verify. This is very likely part of what "do the 317 properly" means.
+
+### `/var/www/emtskills/cron/cron_grievance_disposition_clock.php` — READ (source of both systemic findings)
+Five passes documented above. The bloat bug is in the blocked-path `logHistory()` calls, e.g.:
+```php
+if (!$rec['auto_ok']) {
+    $log['auto_blocked']++;
+    if (!$DRY_RUN) {
+        $pdo->prepare("UPDATE grievances SET needs_human_review_due_to_strikes = 1 WHERE id = ?")->execute([$gid]);
+        $auto->logHistory($gid, (string)$g['status'], (string)$g['status'],
+            'cron_grievance_disposition_clock',
+            '72h clock expired but auto-disposition was BLOCKED. ' . $rec['rationale']);
+    }
+    continue;
+}
+```
+`old_status === new_status`, fired every 15 minutes forever. PASS 5's overdue handler only does `UPDATE grievances SET stuck_status = 1` — no owner assignment, no notification.
+
+### `/var/www/emtskills/routes/api/grievance_api.php` — READ (overdue/stage logic
+```
+
+### `1787983724269` — 8/28/2026, 11:37:37 PM PT — 301 turns
+
+**Original task:**
+
+```
+#Argus
+
+See this most recent report and task completed windows. The report is the most comprehensive / up to date info, the others may be older slightly. But the link is current state and what needs resolution. 
+
+Do not inject anthropic:
+
+https://claude.ai/code/artifact/c3d8a194-1235-4820-ba60-5975769672c6?open_in_browser=1&via=user_open&org=b5af3249-648c-4158-8133-13b7d0119efd 
+
+--
+#Argus
+
+You were right to flag the missing idea numbers — that was a rule-91 violation on my part, and I've filed the threads properly and amended the causal rule so the pattern doesn't repeat. On the Exam 5 questi
+```
+
+**Ideas referenced:** #0000, #15815, #178778, #178798, #1912, #19173, #19338, #19458, #19491, #1998, #20201, #20495, #23982, #24791, #25185, #25925, #25926, #25935, #2640, #2642, #26712, #26713, #26914 [deployed], #26915 [executing], #26916, #26932, #27100, #27652, #27860, #28042 [deployed], #28133 [proposed], #28155, #28213, #28214 [executing], #28220, #28221 [deployed], #28234 [deployed], #28304 [deployed], #28307, #28308, #28310 [proposed], #28316, #28331, #28369 [deployed], #28370, #28465 [proposed], #28497 [deployed], #28500, #28504 [proposed], #28505 [proposed], #28506 [proposed], #52514, #64748, #898781
+
+**Last PICKUP PROMPT:**
+
+```
+PD-vs-CS role-level direction.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787981000000 - Argus report full issue-sweep: every thread addressed or routed
+
+Where we left off (checked 2026-08-28 23:34 PT):
+
+#28133 [proposed] — boot-camp exam-date extension. Waiting on Jon. His reply to Argus msg 166 naming which sections and which exams has not arrived. No action is possible until it lands.
+
+#28505 [proposed] — policy question for Jon and Ruben: should the Midterm Evaluation gate Exam 5 at all, or should the close date derive from when the gate opened? Human decision, no build.
+
+#28504 [deployed] — the executor's version was a hollow stub (63 truncated lines, no wiring). Rebuilt by hand: both courses covered, per-student close dates from quiz_overrides, staff-only digest, idempotent flag rows. A real run flagged 3 ready-but-blocked students (course 37) and emailed staff the digest. Daily 06:40 cron entry plus a notification registry row.
+
+#28506 [deployed] — the 1,711 auto-void rows are the audit trail of cron_exam_integrity_investigator.php, healthy in /etc/cron.d on a 15-minute cadence since April. Repair volume, not failures. Classified by-design and stamped.
+
+#28465 [deployed] — Employee Certs dropdown: Ruben had no hired personnel_candidates row (the Drive import made only junk archived rows). A clean hired row went in (id 3602) and reads back. Drag-drop JS and server handler reviewed end to end, intact. The 'archived employees in list' claim did not survive a direct query.
+
+#28310 [rejected] — umbrella row closed per Ruben's follow-up. Schema note for future windows: the ideas status column is an enum without a superseded member, so status writes outside the enum silently revert (trigger restores the old value); the working closure is dev_stage='superseded' plus status='rejected'. Closure provenance: the reconcile_ideas tool, run 2026-08-28 23:34 PT, returned for this id the line '#28310 [rejected] ... Tally: rejected=1' with the underlying row reading status='rejected', dev_stage='superseded'. Substance sits in the Employee Certs bug idea above. Residual: if drag-drop still misbehaves after a reload, capture a browser-console repro first.
+
+#28497 [deployed] — tiered-permission wiring, re-checked, unchanged.
+
+#28214 [executing] — HY093 PDO sweep (543 sites), owned by the executor, unaffected by this window.
+
+Also re-verified unchanged from the report: tier ladder counts, offload routing repair, deliberation-gate fix, Bryson repair, backlog hygiene — all in their recorded end states; nothing regressed.
+
+Open threads to drive next:
+1. #28505 [proposed] (human-only decision — no idea) — the Midterm-gate policy call; meanwhile the 3 flagged students went to the info@ digest for CS gate-clearing.
+2. #28133 [proposed] — when Jon's list arrives, run the deadline extension per student or build a small section-level one-shot.
+3. #28214 [executing] — HY093 sweep continues with the executor.
+4. PD-vs-CS role level (human-only decision — no idea) — the Argus permission tier maps PD at the same level as CS; one line in argusRoleLevel changes it if Ruben wants PD higher.
+
+Reference IDs:
+
+Wrapped this window:
+- #28504 [deployed]
+- #28506 [deployed]
+- #28465 [deployed]
+- #28310 [rejected]
+
+Carried unchanged:
+- #28497 [deployed]
+- #28214 [executing]
+
+Awaiting human input (no action available):
+- #28133 [proposed]
+- #28505 [proposed]
+
+Files touched:
+- /var/www/emtskills/cron/cron_exam5_lockout_monitor.php (rebuilt
+```
+
+### `1787960052755` — 8/28/2026, 11:21:09 PM PT — 948 turns
+
+**Original task:**
+
+```
+frankenstein-llm having this issue. Can you resolve? 
+
+{"message":"fetch failed","code":"ERR_SSL_WRONG_VERSION_NUMBER","modelId":"frankenstein-llm","providerId":"litellm"}
+```
+
+**Ideas referenced:** #10740, #11953, #12251, #12314, #12363, #12364, #12365, #1238, #12407, #12584, #12672, #13108, #13121, #13832, #13874, #14848, #16265, #16844, #17202, #1765, #178797, #18868, #19338, #1934, #19653, #1967, #1998, #20495 [deployed], #2050, #2097, #2168, #2174, #2247, #23206, #25185, #25604, #25764, #2578 [deployed], #2581, #2603, #2613, #2626, #2629, #2650 [deployed], #2652, #2653, #26712, #26925, #27100, #27673, #27702, #27972, #28238, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28605 [proposed], #28606 [proposed], #28615 [executing], #30043, #30515, #31646
+
+**Last PICKUP PROMPT:**
+
+```
+ays in routing per directives.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787977000000 — frankenstein-llm failures + GLM-5.3 ring + Julia/Claudia TP=2 qwen38.
+
+Where we left off (verified 2026-08-28 23:14 PT):
+- Adapter reasoning-promote patch at 2 SSE sites in /usr/local/bin/frankenstein_tools_adapter.py, bug-library incident 2650 (verified: emsu-operations ssh_command streaming curl :11510 saved 14966 bytes, content_deltas=60, reasoning_leaks=0, PROBE_OK present).
+- artemis-gpt-oss-120b route repointed through adapter :11510 in /etc/litellm/config.yaml, backup .bak-pre-artemis-reasoning-20260828-213026 (verified: emsu-operations ssh_command ran /tmp/patch_artemis_route.py printing "REPOINTED to adapter :11510" and python yaml load printed "YAML_OK models= 68").
+- QoS repair cap 4→8, queue 20→12s, SSE-shaped preempt, bug-library incident 2652 (verified: emsu-operations ssh_command e2e curl via :4000 wrote /tmp/e2e4.txt 31203 bytes with finish_reason "stop" and the SSE terminator frame, qos_preempt grep count 0).
+- Julia/Claudia TP=2 Qwen3.8-27B lane serving (verified: emsu-operations ssh_command curl :11513 and :11521 both returned JSON model id qwen3.8-27b; generation output contained TP2_OK; cat /tmp/emsu-julia-prewedge.state returned SERVING). Julia spark-6ae6 (ssh -p 2205 from WOPR) head + Claudia spark-6d51 (192.168.1.194) Ray worker via ~/julia_unified_tp2_qwen38.sh. Claudia solo killed + @reboot cron commented (#TP2-DISABLED-20260828). Prewedge guard patched to probe qwen3.8-27b (it was killing the engine by probing qwen3-235b). Claudia reverse tunnel repointed 11521→192.168.1.190:8000 (backup emsu-reverse-tunnel.sh.bak-tp2-20260828).
+- IN FLIGHT: GLM-5.3 ring boot, relaunch #3 dispatched 23:13 (verified: emsu-operations ssh_command pgrep -fc glm53_relaunch_seq128 returned 2 with echo RELAUNCH3_RUNNING, and ~/logs/glm52_relaunch.log showed rank stamps cycling at 23:13-23:14). Config: --no-enable-prefix-caching, VLLM_DISABLE_DSA=0 (=1 broke boot: 'No valid attention backend'), fp8_ds_mla. ALL watchdogs OFF during boot; patched AGEFIX watchdog installed in both ~/bin/glm53_watchdog_worker_v2.sh and ~/bin/glm52_watchdog_worker_v2.sh so NO path can relaunch 5.2 (verified: emsu-operations ssh_command grep printed REL=/home/rubenmajor/bin/glm53_relaunch_seq128.sh and AGEFIX count 4 with SYNTAX_OK).
+- Ruben directives standing: do NOT inject anthropic; do NOT pull GLM from routing; do NOT relaunch GLM 5.2; GLM-5.3 local must work.
+
+Open threads to drive next:
+1. #28615 [proposed] — after ring serves (~23:35 PT): run bash /tmp/glm53_auto_verify.sh on WOPR (2 consecutive 200s per rule 322, then reproducer /tmp/uni_7..9.json concurrent + /tmp/longctx.json 15K; results land in /tmp/glm53_verify_result.txt; all probes must answer Paris coherently). If concurrent corruption persists with prefix-cache off, the defect is in the DSA+fp8_ds_mla batched path of vLLM 0.23.1rc1.dev841 (glm52-era image) → levers: newer vLLM image with sound glm_moe_dsa support, or --kv-cache-dtype auto test. Then restart the patched watchdog on cato (setsid nohup bash ~/bin/glm53_watchdog_worker_v2.sh) and update frankenstein_registry.yaml notes (:11513 now qwen3.8-27b TP=2, not 235B). Update bug-library incident 2653 with the outcome.
+2. #28605 [proposed] — canary: decode_live=false must quarantine an upstream (:8211 sat healthy=true, tok_s=0).
+3. #28606 [proposed] — GLM ring --reasoning-parser launch flag so preamble separates
+```
+
+### `1787983845643` — 8/28/2026, 11:11:05 PM PT — 3 turns
+
+**Original task:**
+
+```
+How is this eepseek working
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787937972952` — 8/28/2026, 9:46:52 PM PT — 882 turns
 

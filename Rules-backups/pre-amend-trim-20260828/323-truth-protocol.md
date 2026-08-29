@@ -85,3 +85,22 @@ acceptable; falsehood is not (Ruben, 2026-08-18).
 this rule consolidates the claim discipline and attaches the mechanical backstops
 (gates + judge + benchmark) so weak models are STRUCTURALLY truthful, not instructed
 to be. Shipped components + filed wiring: `docs/TRUTH_ENFORCEMENT_ARCHITECTURE.md`.
+## Amendment (from reversal, 2026-08-19 08:13 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787121837052
+- RCA bucket: wrong premise
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - Initial: "judge = GLM-5.2 ring primary, single model" → Corrected: judge LADDER with deepseek-v4-pro fallback; GLM ring is primary when healthy, but first live call fell back to 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-28 07:58 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1779186100000
+- RCA bucket: wrong premise
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - "frankenstein-llm's rule 91 text is too shallow" → corrected: the rule TEXT was adequate; the ENFORCEMENT GATE was dead code (_r91_validate returned None, 0-byte violations log, 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

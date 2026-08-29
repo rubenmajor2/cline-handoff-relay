@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 12:36:53 PM PT | window: last 72h | 47 tasks | index total 954 (parsed 3, cached 951)
+Generated: 8/29/2026, 1:36:53 PM PT | window: last 72h | 47 tasks | index total 954 (parsed 2, cached 952)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788027890157` | 8/29/2026, 12:15:19 PM | 83 | 325KB | #/emtskills slowness |
-| `1788021977080` | 8/29/2026, 12:15:06 PM | 243 | 2637KB | #Various 2 |
+| `1788021977080` | 8/29/2026, 1:36:42 PM | 277 | 2739KB | #Various 2 |
+| `1788027890157` | 8/29/2026, 1:30:01 PM | 97 | 434KB | #/emtskills slowness |
 | `1788021866677` | 8/29/2026, 12:08:38 PM | 400 | 1017KB | #ArgusVAPI CFA voice path |
 | `1788029135575` | 8/29/2026, 12:04:36 PM | 114 | 254KB | #GLM 5.3 Local/Frankenstein-LLM Routing |
 | `1788027731969` | 8/29/2026, 12:04:22 PM | 322 | 596KB | #Overdue Grievances and Rule 317  |
@@ -62,7 +62,28 @@ Generated: 8/29/2026, 12:36:53 PM PT | window: last 72h | 47 tasks | index total
 
 ## Per-window detail
 
-### `1788027890157` — 8/29/2026, 12:15:19 PM PT — 83 turns
+### `1788021977080` — 8/29/2026, 1:36:42 PM PT — 277 turns
+
+**Original task:**
+
+```
+#Various 2
+
+RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
+```
+
+**Ideas referenced:** #15877, #16242, #166534, #1719, #17446, #178796, #18836, #19362, #22060, #25888, #26896, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #4518, #4929, #813528, #9086, #9168, #92400, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ Update idea statuses to [deployed]
+- [ ] Re-validate + attempt_completion with PICKUP PROMPT
+</task_progress>
+</execute_command>
+```
+
+### `1788027890157` — 8/29/2026, 1:30:01 PM PT — 97 turns
 
 **Original task:**
 
@@ -75,27 +96,6 @@ See emtskills slowness. /emtskills folder is spinning very slowly and needs to b
 **Ideas referenced:** #15815, #1912, #1998, #20495, #2168, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2640, #2642, #2654, #2659, #2662, #26712, #26713, #26932, #27691, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788021977080` — 8/29/2026, 12:15:06 PM PT — 243 turns
-
-**Original task:**
-
-```
-#Various 2
-
-RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
-```
-
-**Ideas referenced:** #15877, #16242, #166534, #17446, #178796, #18836, #19362, #22060, #25888, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #4518, #4929, #813528, #9086, #9168, #92400, #9339
-
-**Last PICKUP PROMPT:**
-
-```
- Update idea statuses to [deployed]
-- [ ] Re-validate + attempt_completion with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
 
 ### `1788021866677` — 8/29/2026, 12:08:38 PM PT — 400 turns
 

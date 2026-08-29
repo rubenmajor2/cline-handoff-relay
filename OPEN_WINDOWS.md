@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 4:19:22 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 2, cached 943)
+Generated: 8/29/2026, 5:19:23 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 0, cached 945)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787995785994` | 8/29/2026, 4:18:58 AM | 533 | 823KB | #GLM 5.3 Local |
+| `1787995785994` | 8/29/2026, 4:22:16 AM | 544 | 870KB | #GLM 5.3 Local |
 | `1787985551437` | 8/29/2026, 3:52:07 AM | 742 | 2360KB | #Argus |
 | `1787980519299` | 8/29/2026, 3:15:54 AM | 315 | 11146KB | #Various 2 |
 | `1787996122566` | 8/29/2026, 3:00:16 AM | 57 | 249KB | #SMS/Email Notifications Externships/NREMT and End of Class |
@@ -55,7 +55,7 @@ Generated: 8/29/2026, 4:19:22 AM PT | window: last 72h | 40 tasks | index total 
 
 ## Per-window detail
 
-### `1787995785994` — 8/29/2026, 4:18:58 AM PT — 533 turns
+### `1787995785994` — 8/29/2026, 4:22:16 AM PT — 544 turns
 
 **Original task:**
 
@@ -70,7 +70,30 @@ Cline just killed my window for no reason at all it's over which is really reall
 **Last PICKUP PROMPT:**
 
 ```
-ting, prevention in place).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787985551437 — GLM 5.3 local picked more often + vLLM 0.26.1 ring upgrade (idea #28622 [executing], rule 267 GATE C hand-drive; executor failed 5x on spec-gen timeouts).\n\nWhere we left off (verified 2026-08-29 04:14 PT):\n- FLOOR-CANCEL BUG: root cause removed, fix live in production: drop-in /etc/systemd/system/frankenstein-tools.service.d/zzz-glm-yield-thr-20260829.conf sets FRANK_GLM_AFFINITY_YIELD_RUNNING=8 (was defaulting to batch ceiling 4, canceling every floor pin; glm_pct was 0.0/50). Pins now survive (bug-library incident glm_floor_canceled_by_yield_guard_thr_mismatch_2026_08_29, resolved).\n- RING OUTAGE 03:34-04:01: double-relaunch race (both watchdog layers fired the relauncher 55s apart). Mutex flock guard added to cato ~/bin/glm53_relaunch_seq128.sh (bug-library incident glm53_double_relaunch_race_killed_ring_2026_08_29 investigating, prevention in place). Ring restore boot fired 04:01 on OLD image; weights loaded 04:11 (verified: vllm log 'Model loading took 58.81 GiB / 527.5s'); compile phase running, serving ETA ~04:18. WOPR /tmp/glm53_restore_watch.log stamps RING_RESTORED on bind.\n- 0.26.1 UPGRADE IN MOTION (this is idea #28622 [executing]): image eugr/spark-vllm:latest (vLLM 0.26.1rc1, native GlmMoeDsa, FULL cudagraphs) present on 5/6 nodes (probe digest 078a8109a069); Marcus (192.168.1.171) pull3 in flight + retry daemon /home/rubenmajor/marcus_pull_daemon.sh. New cfg at cato:/tmp/glm53_new.cfg (kv fp8, FULL graphs, no-async kept). Driver cato:~/bin/final_driver.sh waits Marcus-ready + ring-200, swaps cfg, runs ~/bin/glm53_026_cutover.sh (mutex'd, preflight, workers-then-rank0).\n- WATCHDOGS PAUSED: WOPR glm52-ring-watchdog stopped (verified: emsu-operations ssh_command systemctl is-active returned 'inactive' at 03:46 PT); cato glm53_watchdog_worker_v2 PID 4171103 SIGSTOPped (verified: emsu-operations ssh_command ps -o stat= returned 'T' at 03:47 PT). RE-ARM via WOPR /tmp/rearm.sh AFTER verify passes.\n\nOpen threads to drive next:\n1. Idea #28622 [executing] — when Marcus image lands + ring serving: run final_driver.sh on cato, wait ~17min boot, then WOPR bash /tmp/glm53_026_verify.sh (models 200, PONG, uni_7/8/9 concurrent correctness vs the known corruption) + /tmp/x8lean.sh (baseline 12.8 tok/s agg; expect ~2x with FULL graphs). On success: bash /tmp/rearm.sh, update the idea record to its terminal state, finish the GLM53_RING_STATE_TRACKER.md doc rewrite Ruben requested (live 5.3 reference: topology Pompeii 50c0 <-> Marcus 63ce <-> Tiberius e9e0 <-> Cesar 3b41 <-> Cato 2aa8 <-> Augustus e3b2 ring, current serving facts, :8210 lane).\n2. Idea #28586 [blocked] (load-ranker disadvantage) + idea #28596 [blocked] (verify no-async boot + wedges stop) — re-evaluate after 0.26.1 lands; executor impl_failed rows; both may close via this hand-drive.\n3. (human-only decision — no idea) FRANK_GLM_MAX_CTX=120000 clamps Cline windows >120K prompt; raising it needs Ruben's call on ring capacity.\n\nReference IDs:\n- Ideas: #28622 [executing], #28586 [blocked], #28596 [blocked], #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed]\n- Bug library (frankenstein_router_incidents, keys not idea ids): glm_floor_canceled_by_yield_guard_thr_mismatch_2026_08_29 (resolved), glm53_double_relaunch_race_killed_ring_2026_08_29 (investigating), glm53_dsa_fp8dsmla_concurrent_corruption_2026_08_28 (fixed
+igating, prevention in place).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787985551437 — GLM 5.3 local picked more often + vLLM 0.26.1 ring upgrade (rule 267 GATE C hand-drive; executor failed 5x on spec-gen timeouts).
+
+Where we left off (verified 2026-08-29 04:14 PT):
+- FLOOR-CANCEL BUG: root cause removed, fix live in production: drop-in /etc/systemd/system/frankenstein-tools.service.d/zzz-glm-yield-thr-20260829.conf sets FRANK_GLM_AFFINITY_YIELD_RUNNING=8 (was defaulting to batch ceiling 4, canceling every floor pin; glm_pct was 0.0/50). Pins now survive (bug-library incident glm_floor_canceled_by_yield_guard_thr_mismatch_2026_08_29, resolved).
+- RING OUTAGE 03:34-04:01: double-relaunch race (both watchdog layers fired the relauncher 55s apart). Mutex flock guard added to cato ~/bin/glm53_relaunch_seq128.sh (bug-library incident glm53_double_relaunch_race_killed_ring_2026_08_29 investigating, prevention in place). Ring restore boot fired 04:01 on OLD image; weights loaded 04:11 (verified: vllm log 'Model loading took 58.81 GiB / 527.5s'); compile phase running, serving ETA ~04:18. WOPR /tmp/glm53_restore_watch.log stamps RING_RESTORED on bind.
+- 0.26.1 UPGRADE IN MOTION as idea #28622 [executing]: image eugr/spark-vllm:latest (vLLM 0.26.1rc1, native GlmMoeDsa, FULL cudagraphs) present on 5/6 nodes (probe digest 078a8109a069); Marcus (192.168.1.171) pull3 in flight + retry daemon /home/rubenmajor/marcus_pull_daemon.sh. New cfg at cato:/tmp/glm53_new.cfg (kv fp8, FULL graphs, no-async kept). Driver cato:~/bin/final_driver.sh waits Marcus-ready + ring-200, swaps cfg, runs ~/bin/glm53_026_cutover.sh (mutex'd, preflight, workers-then-rank0).
+- WATCHDOGS PAUSED: WOPR glm52-ring-watchdog stopped (verified: emsu-operations ssh_command systemctl is-active returned 'inactive' at 03:46 PT); cato glm53_watchdog_worker_v2 PID 4171103 SIGSTOPped (verified: emsu-operations ssh_command ps -o stat= returned 'T' at 03:47 PT). RE-ARM via WOPR /tmp/rearm.sh AFTER the check suite passes.
+
+Open threads to drive next:
+1. Idea #28622 [executing] — when Marcus image lands + ring serving: run final_driver.sh on cato, wait ~17min boot, then WOPR bash /tmp/glm53_026_check.sh (models 200, PONG, uni_7/8/9 concurrent correctness vs the known corruption) + /tmp/x8lean.sh (baseline 12.8 tok/s agg; expect ~2x with FULL graphs). On success: bash /tmp/rearm.sh, update the idea record to its terminal state, finish the GLM53_RING_STATE_TRACKER.md doc rewrite Ruben requested (live 5.3 reference: topology Pompeii 50c0 <-> Marcus 63ce <-> Tiberius e9e0 <-> Cesar 3b41 <-> Cato 2aa8 <-> Augustus e3b2 ring, current serving facts, :8210 lane).
+2. Idea #28586 [blocked] (load-ranker disadvantage) + idea #28596 [blocked] (confirm no-async boot + wedges stop) — re-evaluate after 0.26.1 lands; executor impl_failed rows; both may close via this hand-drive.
+3. (human-only decision — no idea) FRANK_GLM_MAX_CTX=120000 clamps Cline windows >120K prompt; raising it needs Ruben's call on ring capacity.
+
+Reference IDs:
+- In motion: idea #28622 [executing]
+- Obstructed: #28586 [blocked], #28596 [blocked]
+- Closed earlier: #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed]
+- Bug library (frankenstein_router_incidents, keys not idea ids): glm_floor_canceled_by_yield_guard_thr_mismatch_2026_08_29 (resolved), glm53_double_relaunch_race_killed_ring_2026_08_29 (investigating), glm53_dsa_fp8dsmla_concurrent_corruption_2026_08_28 (fixed-b
 ```
 
 ### `1787985551437` — 8/29/2026, 3:52:07 AM PT — 742 turns

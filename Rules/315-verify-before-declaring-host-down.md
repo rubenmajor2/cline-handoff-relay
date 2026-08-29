@@ -130,3 +130,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-28 double reversal (task 1787931475695): (1) explained BigMac's adapter-pick dominance by citing the 2232 batch-prefer-120B patch as 'still live' WITHOUT reading the adapter source; grep showed SUBAGENT_PREFER_120B no longer exists. The live mechanism is the lane-aware tier system (batch: GLM-first under a 4-seat reservation, then Qwen3.8 tier, then 120Bs; interactive: speed-ranked with a 30% GLM floor). (2) Classified the 16:41 event as 'another wedge' from wedge-history pattern alone; the watchdog log actually showed proc=0 api=0, a full container DEATH, which was the clue that led to finding the lost --no-async-scheduling flag (the true root cause of the day's instability). Amended behavior: before citing any patch/flag as 'still live' to explain current behavior, grep the deployed source for it in the same window; and classify each failure event from ITS OWN log signature (wedge = proc alive + decode zero; death = proc 0), never from the pattern of prior events.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 04:27 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787977000000
+- RCA bucket: stale assumption
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - "cloudflared restart churn is the cause (bug-library known-repair match)" -> corrected: cloudflared NRestarts=0 and tunnel up since 2026-08-22, so that path was ruled out and the
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

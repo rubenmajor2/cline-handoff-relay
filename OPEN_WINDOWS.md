@@ -6,15 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 8:30:12 PM PT | window: last 72h | 34 tasks | index total 934 (parsed 0, cached 934)
+Generated: 8/28/2026, 9:41:19 PM PT | window: last 72h | 36 tasks | index total 937 (parsed 8, cached 929)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787960225304` | 8/28/2026, 7:17:06 PM | 132 | 1457KB | #Various |
-| `1787960052755` | 8/28/2026, 6:35:00 PM | 112 | 3280KB | frankenstein-llm having this issue. Can you resolve?  |
-| `1787937972952` | 8/28/2026, 6:34:50 PM | 690 | 1149KB | #GLM 5.3 Local |
-| `1787876909491` | 8/28/2026, 6:15:59 PM | 495 | 2747KB | #PostMark Issue  |
-| `1787963389563` | 8/28/2026, 5:59:56 PM | 35 | 275KB | #Overdue Grievances and Rule 317  |
+| `1787963389563` | 8/28/2026, 9:41:19 PM | 97 | 1140KB | #Overdue Grievances and Rule 317  |
+| `1787960052755` | 8/28/2026, 9:41:16 PM | 351 | 4715KB | frankenstein-llm having this issue. Can you resolve?  |
+| `1787876909491` | 8/28/2026, 9:41:02 PM | 629 | 3026KB | #PostMark Issue  |
+| `1787937972952` | 8/28/2026, 9:40:20 PM | 868 | 1455KB | #GLM 5.3 Local |
+| `1787978044041` | 8/28/2026, 9:38:11 PM | 17 | 33KB | #Argus |
+| `1787960225304` | 8/28/2026, 9:37:27 PM | 260 | 2564KB | #Various |
+| `1787977854047` | 8/28/2026, 9:31:14 PM | 3 | 14KB | #Argus |
+| `1787977832880` | 8/28/2026, 9:31:09 PM | 2 | 12KB | #Argus |
 | `1787707484695` | 8/28/2026, 5:29:57 PM | 406 | 4577KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
 | `1787931475695` | 8/28/2026, 10:45:33 AM | 132 | 22802KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
 | `1787937882474` | 8/28/2026, 10:24:43 AM | 1 | 7KB | #GLM 5.3 |
@@ -43,27 +46,37 @@ Generated: 8/28/2026, 8:30:12 PM PT | window: last 72h | 34 tasks | index total 
 | `1787730932980` | 8/26/2026, 1:55:08 AM | 133 | 2918KB | frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterati |
 | `1787726772970` | 8/26/2026, 1:05:20 AM | 106 | 1032KB | Why does this say Hi Moodle and was the student's issue resolved? I've asked on this befor |
 | `1787727918566` | 8/26/2026, 12:33:40 AM | 66 | 2450KB | frankenstein-llm experiencing issues iterating here in cline. resolve. |
-| `1787593935930` | 8/25/2026, 9:13:10 PM | 284 | 9503KB | This person needs to stop receiving invoices for 13K -> |
 
 ---
 
 ## Per-window detail
 
-### `1787960225304` — 8/28/2026, 7:17:06 PM PT — 132 turns
+### `1787963389563` — 8/28/2026, 9:41:19 PM PT — 97 turns
 
 **Original task:**
 
 ```
-#Various
+#Overdue Grievances and Rule 317 
 
-Jon says he has this issue for a while with Argus. Can you resolve?
+Help me to go through all the overdue grievances. There's several of them. Do an extensive analysis of them and present them briefly and recommendations according to SLS, MCP, policy, etc...
+
+See: https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+
+Also, we need to strengthen rule 317 so that it makes actual durable changes, not just in-the-window cursory changes. The goal is to make LLMs stronger in the long-run, not just for 1 window which is what appears to be happening. I lump these together becasue I anticipate having some difficulty with 
 ```
 
-**Ideas referenced:** #11570, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25142, #25269, #25313, #25571, #25573, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #27860, #28155, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #334155, #4338, #64748
+**Ideas referenced:** #047857, #059669, #11111, #11316, #128681, #129302, #181825, #1912, #19419, #1998, #20495, #2050, #2563, #26071, #26089, #2626, #2628, #2629, #2631 [investigating], #2640, #2642, #26434, #26617, #26712, #26713, #26932, #27100, #27531, #27634 [executing], #27635 [executing], #27652, #27657, #27671, #28122, #28133, #28134, #28205 [deployed], #28213 [proposed], #28220, #28225 [deployed], #28226 [deployed], #28238, #28239, #28242, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28497 [deployed], #28500, #30043, #30515, #313244, #31646, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #78350, #9203, #92400, #9888
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1787960052755` — 8/28/2026, 6:35:00 PM PT — 112 turns
+```
+ent + verify reindex + verify durable ingestion path
+- [ ] Present results with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1787960052755` — 8/28/2026, 9:41:16 PM PT — 351 turns
 
 **Original task:**
 
@@ -73,104 +86,15 @@ frankenstein-llm having this issue. Can you resolve?
 {"message":"fetch failed","code":"ERR_SSL_WRONG_VERSION_NUMBER","modelId":"frankenstein-llm","providerId":"litellm"}
 ```
 
-**Ideas referenced:** #10740, #11953, #12314, #12365, #12584, #12672, #13108, #13832, #16265, #17202, #19338, #19653, #1998, #20495 [deployed], #2168, #2174, #26712
+**Ideas referenced:** #10740, #11953, #12251, #12314, #12363, #12364, #12365, #1238, #12407, #12584, #12672, #13108, #13832, #13874, #14848, #16265, #17202, #178797, #18868, #19338, #1934, #19653, #1967, #1998, #20495 [deployed], #2097, #2168, #2174, #2247, #25764, #2578 [deployed], #2581, #2613, #2629, #2650 [deployed], #2652, #26712, #26925, #27100, #28313, #28314, #28315, #28316, #28605 [proposed], #28606 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-MLX) and `:11506` (old Cesar).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — frankenstein-llm SSL/empty-response repair (GLM 5.3 local ring restore), COMPLETED.
-
-Where we left off (verified 2026-08-28 17:30 PT):
-- GLM-5.3 local ring (:8210) was DOWN, stuck mid 5.2->5.3 cutover; canary had quarantined it; GLM had not served interactive Cline since 2026-08-19.
-- glm52-ring-watchdog.service auto-relaunched the PP=6 ring 16:55 (glm53-nvfp4, seq=128); weights loaded (462s/58.8GiB); APIServer up; WOPR tunnel glm52-tunnel-8210.service self-healed once ring bound :8210.
-- Verified: GLM serving INTERACTIVE Cline (adapter upstream log 17:15:18 lane=cline upstream=8210) + batch (17:18:41); real decode OK; end-to-end frankenstein-llm HTTP 200 in 4.9s; canary decode_live=true un-quarantined; no adapter errors.
-
-Open threads to drive next:
-None — frankenstein-llm fully restored and verified this session. GLM 5.3 local is serving interactive Cline as requested.
-
-Reference IDs:
-- Ideas cited: #20495 [deployed] (GLM PP=6 ring auto-relaunch watchdog — did the relaunch)
-- Files/services touched: none edited (diagnostic + verify only). Relevant: glm52-ring-watchdog.service, glm53_relaunch_seq128.sh, glm52-tunnel-8210.service, /var/log/emsu-adapter-upstream.log, /tmp/frankenstein_canary_health.json
-- HANDOFF_NOTES.md updated 2026-08-28 17:30 PT with full RCA.
-
-# Reversal Log
-No reversals this window. (Diagnostic note: the WOPR tunnel was initially suspected stale/needing restart, but was observed to self-heal once the ring re-bound :8210 — investigation clarification, no shipped claim corrected.)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] GLM 5.3 local was QUARANTINED + NOT serving interactive Cline
-- [x] ROOT CAUSE 1: stuck GLM cutover — watchdog relaunched ring, APIServer UP
-- [x] ROOT CAUSE 2: WOPR tunnel self-healed — :8210 HTTP 200
-- [x] GLM 5.3 RESTORED + serving INTERACTIVE Cline (17:15:18 lane=cline)
-- [x] litellm origin healthy, routing correct, ring decodes, no adapter errors
-- [x] GLM warmed up (ttfb 96s→6s); end-to-end frankenstein-llm HTTP 200 in 4.9s
-- [x] Handoff notes updated
-- [x] Final report delivered
-</task_progress>
-</attempt_completion>
+ed it as #28605 [proposed].\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787977000000 — GLM-5.3 reasoning-channel empty-response fix.\n\nWhere we left off (verified 2026-08-28 21:27 PT):\n- ROOT CAUSE: glm-5.3-15pct (GLM ring relaunched ~21:20 PT) returns HTTP 200 with message.content=null and the whole answer on the `reasoning` channel. Adapter streaming paths DELETED that channel, so Cline got empty deltas -> \"empty or unparsable response\" x3 -> auto-retry death. (verified: emsu-operations ssh_command curl POST to http://127.0.0.1:8210/v1/chat/completions returned HTTP=200 with \"content\":null and \"reasoning\":\"The user wants me to say \\\"PROBE_OK\\\". This is a simple request\", finish_reason=length, t=14.55s)\n- FIXED: /usr/local/bin/frankenstein_tools_adapter.py patched at 2 sites — _filter_sse_line (promote reasoning->content when delta has no content) and _send_as_sse (fall back to msg reasoning when content empty). Reasoning still stripped when real content/tool_calls exist. (verified: emsu-operations ssh_command `sudo grep -c 'GLM-5.3 FIX'` returned 2 and `sudo grep -c 'SSE_PROMOTED'` returned 1 on the live file; `sudo python3 -m py_compile` printed COMPILE_OK)\n- VERIFIED LIVE: (verified: emsu-operations ssh_command streaming curl POST to http://127.0.0.1:11510/v1/chat/completions saved to /tmp/sse_test.txt measured bytes=14966, content_deltas=60, reasoning_leaks=0, terminating with finish_reason=stop and [DONE], answer PROBE_OK present). Pre-patch the same request gave zero content deltas.\n- SERVICES GREEN: (verified: emsu-operations ssh_command `systemctl show frankenstein-tools` returned ActiveState=active NRestarts=0 MainPID=816434; `systemctl is-active litellm` returned active; `systemctl is-active cloudflared` returned active; probes run 21:26 PT)\n- RULED OUT: bug-library incident 2578 cloudflared restart churn (verified: emsu-operations ssh_command `systemctl show cloudflared` returned NRestarts=0 with ActiveEnterTimestamp=Sat 2026-08-22 11:29:47 PDT, and `journalctl -u cloudflared --since '30 min ago'` counted 0 restarts). The 502/SSL errors were the same failure surfacing at other layers.\n- NO Anthropic introduced anywhere (Ruben directive respected).\n- Backup: /usr/local/bin/frankenstein_tools_adapter.py.bak-pre-glm53-20260828-212323\n\nOpen threads to drive next:\n1. #28605 [proposed] — Canary writes healthy=true alongside decode_live=false (:8211 sat tok_s=0.0, fail_streak=0, never quarantined). Make decode_live=false increment fail_streak and quarantine on the same threshold as HTTP failures.\n2. #28606 [proposed] — GLM ring has no --reasoning-parser flag, so the thinking preamble is concatenated into content. Set the parser on the ring launch (Roman nodes, not WOPR) so vLLM separates reasoning_content from content natively.\n\nReference IDs:\n- Bug library incident: 2650 (glm53_reasoning_channel_stripped_on_sse_empty_response_2026_08_28, resolved) — bug-library row, not an orchestrator idea\n- Ideas filed: #28605 [proposed], #28606 [proposed]\n- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (patched, backup .bak-pre-glm53-20260828-212323), /tmp/patch_glm53_reasoning.py (idempotent patch script)\n\n# Reversal Log\n- \"cloudflared restart churn is the cause (bug-library known-repair match)\" -> corrected: cloudflared NRestarts=0 and tunnel up since 2026-08-22, so that path was ruled out and the real cause was the adapter's reasoning-channel strip aga
 ```
 
-### `1787937972952` — 8/28/2026, 6:34:50 PM PT — 690 turns
-
-**Original task:**
-
-```
-#GLM 5.3 Local
-
-Can you make sure GLM 5.3 Local is serving and configured properly within and without frankenstein-llm / that it's obeying cline rules, etc... all the stuff that GLM 5.2 local is obeying
-
-When I said to preserve the OG, i meant just drop in replace, not keep the name the same, lmao. It's just a replacement. Don't confuse me or future agents. Should be GLM 5.3 local first -> Qwen 3.8 27B -> 120Bs -> Paid, etc...
-
-GLM 5.3 local ring upgrade is DONE and serving (verified: curl http://127.0.0.1:8210/v1/models returned id=glm-5.3-15pct at 10:21 PT; /etc/litellm/config.yaml has 7 ref
-```
-
-**Ideas referenced:** #10108, #10869, #11991, #12584, #12618, #12672, #12680, #12688, #12689, #12825, #13121, #13453, #13470, #14133, #14142, #16063, #16265, #16602, #16625, #16646, #16648, #16680, #16715, #17145, #17174, #17202, #17203, #17205, #17300, #17307, #1754, #1755, #178787, #178793, #1790 [resolved], #18312, #1876, #18820, #18868, #1912 [resolved], #19338, #19585, #1967, #19686, #1986, #19903, #1998, #20264, #20495, #2050 [investigating], #2083, #21045, #2157, #2159, #2168, #2174, #2181 [resolved], #2182 [resolved], #2185, #2186 [resolved], #2232 [resolved], #2243 [resolved], #22583, #22856, #22897, #23206, #25468, #25471, #25607, #25757, #25759, #25764, #2640, #26400, #2641 [deployed], #2642, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #26932 [deployed], #27100, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #28581 [proposed], #28586 [proposed], #28596 [proposed], #48031, #48140, #9706
-
-**Last PICKUP PROMPT:**
-
-```
-). The 5.2 docs are untouched.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787931475695 - GLM 5.3 local rename + stability root cause + tracker doc
-
-Where we left off (verified 2026-08-28 17:30 PT):
-- Lanes confirmed 4 Cline + 4 Batch = 8 (Ruben's own #26932 [deployed] directive; same as 5.2 current config)
-- ROOT CAUSE of today's 4 ring crashes found + fixed: 5.3 launch script lost --no-async-scheduling (the July crash-loop fix); CFG_NO_ASYNC now defaults 1 + all 6 relauncher call sites set it; takes effect next relaunch (no forced restart)
-- Curve collector running 60 min (/tmp/glm53_curve_collect.py -> /tmp/glm53_curve_measure.csv); analysis due next window
-- Qwen fleet: only Claudia serves adapter traffic (113 picks/hr); Nero in pool never wins; Joshua by-name lane only; ranker prefers fastest Qwen then 120Bs (design, not bug)
-- Corrected ranker explanation: batch lane is GLM-first (4-seat reservation) -> Qwen3.8 tier -> 120Bs; interactive lane is speed-ranked with 30% GLM floor; old 2232 patch no longer in code
-- GLM53_RING_STATE_TRACKER.md created (append-only); HANDOFF_NOTES updated; bug-library incident glm53_async_flag_lost_2026_08_28 recorded
-
-Open threads to drive next:
-1. #28596 [proposed]: verify the next relaunch boots with --no-async-scheduling on the cmdline (ps aux grep on cato), confirm wedges stop, and analyze the 60-min curve CSV for the measure-first decision on #28586 [proposed]
-2. #28586 [proposed]: raise admission ONLY if the curve analysis shows aggregate rising AND the verification in #28596 [proposed] confirms no new wedges/crashes on the no-async build
-3. #28581 [deployed]: lane rename complete (verified: reconcile_ideas MCP call returned status=deployed dev_stage=n/a for id 28581 at 11:34 PT)
-
-Reference IDs:
-- Ideas filed: #28581 [deployed], #28586 [proposed], #28596 [proposed]
-- Ideas closed: none
-- Bug library: frankenstein_router_incidents 2641 (lane rename), 2642 (watchdog /tmp-wipe), glm53_async_flag_lost_2026_08_28 (async flag lost, direct DB insert); consulted the July async crash-loop incident, 2182, 2186, 2243, 2232, 2181, 2050 (ring load history)
-- Files touched this session: /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/hooks/frankenstein_glm52.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/glm52_ring_watchdog.sh, cato ~/glm53_launch_cfg_pp6.sh + ~/bin/glm53_relaunch_seq128.sh, /tmp/glm53_curve_collect.py, PHP callers (livechat, alltastic, ctx ceiling, ring status, 8 crons), LLM_FLEET_STATE.md, GLM53_UPGRADE_RUNBOOK.md, GLM53_RING_STATE_TRACKER.md (new), HANDOFF_NOTES.md, cline_task_ledger.md
-
-# Reversal Log
-- 'the 2232 batch-prefer-120B patch is still live and explains BigMac dominance' -> corrected: grep of the adapter source shows SUBAGENT_PREFER_120B no longer exists; the real mechanism is the lane-aware tier system (batch GLM-first with 4-seat reservation, interactive speed-ranked with 30% GLM floor, Qwen3.8 hard-second on batch) | RCA bucket: stale assumption | causal rule updated: 315
-- 'raising the ceiling is the obvious next move' -> corrected earlier this session: measure-first after bug-library history + 3 wedges | RCA bucket: wrong premise | causal rule updated: 297
-- 'the 16:41 event was another wedge' -> corrected: watchdog log shows proc=0 api=0, a full container DEATH, which led to finding the lost --no-async-scheduling flag (the actual root cause of today's instability) | RCA buck
-```
-
-### `1787876909491` — 8/28/2026, 6:15:59 PM PT — 495 turns
+### `1787876909491` — 8/28/2026, 9:41:02 PM PT — 629 turns
 
 **Original task:**
 
@@ -180,7 +104,7 @@ Reference IDs:
 Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
 ```
 
-**Ideas referenced:** #10234, #14748, #15905, #16069, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #1998, #22086, #23483, #25909, #2640, #2642, #26663, #26712, #26713, #28256, #28307, #28316, #28331, #28543 [proposed], #28546 [proposed], #28548, #333333, #5756, #888888
+**Ideas referenced:** #10234, #14748, #15905, #16069, #16817, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18944, #18951, #1998, #22086, #23483, #25909, #2640, #2642, #26663, #26712, #26713, #26834, #27942, #28044, #28213, #28256, #28307, #28316, #28331, #28543 [proposed], #28546 [proposed], #28548, #3098, #333333, #5756, #78350, #888888, #92400
 
 **Last PICKUP PROMPT:**
 
@@ -214,30 +138,146 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787963389563` — 8/28/2026, 5:59:56 PM PT — 35 turns
+### `1787937972952` — 8/28/2026, 9:40:20 PM PT — 868 turns
 
 **Original task:**
 
 ```
-#Overdue Grievances and Rule 317 
+#GLM 5.3 Local
 
-Help me to go through all the overdue grievances. There's several of them. Do an extensive analysis of them and present them briefly and recommendations according to SLS, MCP, policy, etc...
+Can you make sure GLM 5.3 Local is serving and configured properly within and without frankenstein-llm / that it's obeying cline rules, etc... all the stuff that GLM 5.2 local is obeying
 
-See: https://emsuniversity.com/emtskills/routes/grievance_manager.php 
+When I said to preserve the OG, i meant just drop in replace, not keep the name the same, lmao. It's just a replacement. Don't confuse me or future agents. Should be GLM 5.3 local first -> Qwen 3.8 27B -> 120Bs -> Paid, etc...
 
-Also, we need to strengthen rule 317 so that it makes actual durable changes, not just in-the-window cursory changes. The goal is to make LLMs stronger in the long-run, not just for 1 window which is what appears to be happening. I lump these together becasue I anticipate having some difficulty with 
+GLM 5.3 local ring upgrade is DONE and serving (verified: curl http://127.0.0.1:8210/v1/models returned id=glm-5.3-15pct at 10:21 PT; /etc/litellm/config.yaml has 7 ref
 ```
 
-**Ideas referenced:** #047857, #059669, #11111, #11316, #128681, #129302, #181825, #1912, #19419, #1998, #20495, #2050, #2563, #26071, #26089, #2626, #2628, #2629, #2631 [investigating], #2640, #2642, #26434, #26617, #26712, #26713, #26932, #27100, #27531, #27634 [executing], #27635 [executing], #27652, #27657, #27671, #28122, #28133, #28134, #28205 [deployed], #28213 [proposed], #28220, #28225 [deployed], #28226 [deployed], #28238, #28239, #28242, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28497 [deployed], #28500, #30043, #30515, #313244, #31646, #334155, #3730, #374151, #4338, #45475, #475569, #6366, #64748, #65039, #78350, #9203, #92400, #9888
+**Ideas referenced:** #10108, #10869, #11942, #11991, #12251, #12335, #12365, #12366, #12368, #12407, #12584, #12618, #12672, #12680, #12688, #12689, #12825, #13121, #13453, #13470, #13874, #14133, #14142, #16063, #16265, #16602, #16625, #16646, #16648, #16680, #16715, #17145, #17174, #17202, #17203, #17205, #17300, #17307, #1754, #1755, #178787, #178793, #1790 [resolved], #18312, #1876, #18820, #18868, #1912 [resolved], #19338, #19585, #1967, #19686, #1986, #19903, #1998, #20264, #20495, #2050 [investigating], #2083, #21045, #2157, #2159, #2168, #2174, #2181 [resolved], #2182 [resolved], #2185, #2186 [resolved], #2232 [resolved], #2243 [resolved], #22583, #22856, #22897, #23206, #25185, #25468, #25471, #25607, #25757, #25759, #25764, #2579, #2640, #26400, #2641 [deployed], #2642, #26711 [deployed], #26712 [deployed], #26713 [deployed], #26715 [deployed], #26917, #26932 [deployed], #27100, #27697, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [proposed], #28581 [proposed], #28586 [proposed], #28596 [proposed], #28606 [proposed], #48031, #48140, #9706
 
 **Last PICKUP PROMPT:**
 
 ```
-ent + verify reindex + verify durable ingestion path
-- [ ] Present results with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
+-picker selections, not spill.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787931475695 - GLM 5.3 local hourly-turns check
+
+Where we left off (verified 2026-08-28 21:39 PT):
+- Ring #1 engine this hour: ~477 turns (docker logs count); router lane frankenstein-glm53-local = 325; ahead of DeepSeek (391) and all 120Bs
+- Floor re-enable visibly working: ring went from 19-29 picks/hr to top engine in ~2 hours
+- Nero tunnel repaired (HTTP 200); Joshua in pool (14 picks first hour); ring speed measured TOTAL=427.97 tok/s (prefill-heavy phase)
+
+Open threads to drive next:
+1. #28596 [executing]: verify next relaunch boots with --no-async-scheduling, wedges stop, analyze curve CSV
+2. #28586 [executing]: raise admission ONLY if curve rising AND no new wedges/crashes on the no-async build
+3. #28606 [proposed]: close as superseded — reasoning-parser already set and verified working (tell the filing window)
+4. Watch item (monitoring, no idea): confirm the ring stays #1 as pins finish migrating; watch wedge rate (no-async fix lands next relaunch)
+
+Reference IDs:
+- Ideas filed: #28581 [deployed], #28586 [executing], #28596 [executing], #28606 [proposed]
+- Ideas closed: none
+- Bug library: frankenstein_router_incidents glm53_async_flag_lost_2026_08_28, glm_floor_off_joshua_missing_pool_2026_08_28, glm_cline_share_pin_affinity_root_cause_2026_08_28, nero_stale_reverse_tunnel_2026_08_28 (all resolved); plus 2641, 2642 earlier
+- Files touched this session: /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/hooks/frankenstein_glm52.py, /etc/litellm/frankenstein_registry.yaml, /usr/local/bin/glm52_ring_watchdog.sh, /usr/local/bin/frankenstein_tools_adapter.py (_is_qwen38 patch), adapter drop-ins (glm-floor-on-20260828, joshua-qwen38-pool-20260828), cato ~/glm53_launch_cfg_pp6.sh + ~/bin/glm53_relaunch_seq128.sh, /tmp/glm53_curve_collect.py + /tmp/glm53_speed60.py + /tmp/glm53_reasoning_test.py, PHP callers, LLM_FLEET_STATE.md, GLM53_UPGRADE_RUNBOOK.md, GLM53_RING_STATE_TRACKER.md, HANDOFF_NOTES.md, cline_task_ledger.md
+
+# Reversal Log
+No reversals this window. (The measurement and comparison were fresh probes; no prior claim in this window was corrected.)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Hourly turns comparison measured: GLM 5.3 ring ~477 turns (#1 engine), vs DeepSeek 391, BigMac 306, Claudia 98, Joshua 14, Artemis 9
+- [x] Router-lane breakdown: frankenstein-glm53-local 325 + direct 8 + ~150 adapter/fanout paths
+- [x] Floor fix confirmed effective (19-29 picks/hr -> #1 engine in ~2 hours)
+- [x] Validate + complete (gates ALL PASSED, GATE CLEAR)</task_progress>
+</attempt_completion>
 ```
+
+### `1787978044041` — 8/28/2026, 9:38:11 PM PT — 17 turns
+
+**Original task:**
+
+```
+#Argus
+
+See this most recent report and task completed windows. The report is the most comprehensive / up to date info, the others may be older slightly. But the link is current state and what needs resolution. 
+
+Do not inject anthropic:
+
+https://claude.ai/code/artifact/c3d8a194-1235-4820-ba60-5975769672c6?open_in_browser=1&via=user_open&org=b5af3249-648c-4158-8133-13b7d0119efd 
+
+--
+#Argus
+
+You were right to flag the missing idea numbers — that was a rule-91 violation on my part, and I've filed the threads properly and amended the causal rule so the pattern doesn't repeat. On the Exam 5 questi
+```
+
+**Ideas referenced:** #178778, #28042 [deployed], #28133 [proposed], #28214 [executing], #28221 [deployed], #28234 [deployed], #28304 [deployed], #28310 [proposed], #28369 [deployed], #28497 [deployed], #28504 [proposed], #28505 [proposed], #28506 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787960225304` — 8/28/2026, 9:37:27 PM PT — 260 turns
+
+**Original task:**
+
+```
+#Various
+
+Jon says he has this issue for a while with Argus. Can you resolve?
+```
+
+**Ideas referenced:** #11570, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20547, #21125, #21126, #22511, #22583, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25142, #25269, #25313, #25571, #25573, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #27860, #28155, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #28607 [executing], #334155, #4338, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787977854047` — 8/28/2026, 9:31:14 PM PT — 3 turns
+
+**Original task:**
+
+```
+#Argus
+
+See this most recent report and task completed windows. The report is the most comprehensive / up to date info, the others may be older slightly. But the link is current state and what needs resolution. 
+
+Do not inject anthropic:
+
+https://claude.ai/code/artifact/c3d8a194-1235-4820-ba60-5975769672c6?open_in_browser=1&via=user_open&org=b5af3249-648c-4158-8133-13b7d0119efd 
+
+--
+#Argus
+
+You were right to flag the missing idea numbers — that was a rule-91 violation on my part, and I've filed the threads properly and amended the causal rule so the pattern doesn't repeat. On the Exam 5 questi
+```
+
+**Ideas referenced:** #178778, #28042 [deployed], #28133 [proposed], #28214 [executing], #28221 [deployed], #28234 [deployed], #28304 [deployed], #28310 [proposed], #28369 [deployed], #28497 [deployed], #28504 [proposed], #28505 [proposed], #28506 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787977832880` — 8/28/2026, 9:31:09 PM PT — 2 turns
+
+**Original task:**
+
+```
+#Argus
+
+See this most recent report and task completed windows. The report is the most comprehensive / up to date info, the others may be older slightly. But the link is current state and what needs resolution. 
+
+Do not inject anthropic:
+
+https://claude.ai/code/artifact/c3d8a194-1235-4820-ba60-5975769672c6?open_in_browser=1&via=user_open&org=b5af3249-648c-4158-8133-13b7d0119efd 
+
+--
+#Argus
+
+You were right to flag the missing idea numbers — that was a rule-91 violation on my part, and I've filed the threads properly and amended the causal rule so the pattern doesn't repeat. On the Exam 5 questi
+```
+
+**Ideas referenced:** #178778, #28042 [deployed], #28133 [proposed], #28214 [executing], #28221 [deployed], #28234 [deployed], #28304 [deployed], #28310 [proposed], #28369 [deployed], #28497 [deployed], #28504 [proposed], #28505 [proposed], #28506 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1787707484695` — 8/28/2026, 5:29:57 PM PT — 406 turns
 
@@ -1518,66 +1558,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] File record idea #28238 + stamp deployed + reconcile
 - [x] Handoff note
 - [x] Validate completion + check gate + attempt_completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1787593935930` — 8/25/2026, 9:13:10 PM PT — 284 turns
-
-**Original task:**
-
-```
-This person needs to stop receiving invoices for 13K ->
-```
-
-**Ideas referenced:** #1456, #16613, #178759, #178768, #178769, #19492, #2036, #25185, #25888, #27144, #28043, #28044, #28089 [deployed], #28090 [proposed], #28115 [executing], #28206 [proposed], #28207 [proposed], #4929, #9086, #9168
-
-**Last PICKUP PROMPT:**
-
-```
-28115 approved, 28089 deployed.
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1787680000000 — stop stale $12,860 dunning emails to Alex Vipersmith 26910FT-15 + SLS-ground balance-email senders.
-
-Where we left off (checked 2026-08-25 20:10 PT):
-- Alex true balance $1,545 of $2,890 (verify_payment_state: two $672.50 settled Authnet, one open QB invoice); $12,860 was stale mis-tied mirror artifact.
-- 8/25 09:02 cron email to Alex quoted correct $1,545 (#28089 [deployed] join coercion correction live since 8/24; evidence: mysql SELECT this turn returned status=deployed).
-- Wrong-balance sender now = cron_ai_ticket_agent (cohort: 372130 Alex + 371702 Bolling $150 paid-in-full; evidence: mysql execute_query returned 2 rows source=ai_ticket_agent).
-- No email hold flag exists (evidence: ssh_command grep lines 293-362 returned SMS-only suppression); suppression build = #28206 [executing]; DB status approved, stamped 21:08:25 PT (evidence: mysql SELECT this turn).
-- Mirror re-tie = #28115 [executing]; DB status approved (evidence: mysql SELECT this turn; tag executing per rule 161 approved=executing).
-
-Open threads to drive next:
-1. #28206 [executing] — executor builds email dunning suppression (hold flag + open-withdrawal-ticket check) in cron_post_due_reminders.php; probe the hold path live after the build lands.
-2. #28207 [executing] — executor builds ai_ticket_agent balance-email audit + SLS grounding (covers Alex + Bolling 371702); confirm no stale-mirror quotes after it lands.
-3. #28115 [executing] — mirror re-tie; once it lands, Vicky closes Alex's open QB invoice ($1,545 stays owed until then).
-
-Reference IDs:
-- Ideas filed this session: #28206 [executing], #28207 [executing]
-- Ideas carried: #28089 [deployed], #28115 [executing]
-- Files touched: none this window (server reads only); targets named in ideas: cron/cron_post_due_reminders.php, cron_ai_ticket_agent.php
-- Student: 26910FT-15 (moodle 53198); emails 371347, 372130; tickets 1952, 1957
-
-# Reversal Log
-- $12,860 is Alex's current balance -> stale mirror artifact; true balance $1,545 | wrong premise | rule 297 amended (SCOPE GATE item 7 corroboration scan)
-- cron_post_due_reminders blamed for 8/25 wrong email -> 8/25 cron email correct ($1,545); wrong sender was ai_ticket_agent | insufficient probe | rule 317 amended (sender attribution requires source field + body quote)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Rule 119 pre-turn signal check (GREEN)
-- [x] Identify the $12,860 email source (email 371347, 8/24, stale mirror)
-- [x] Verify true payment state ($1,545 owed, 2x $672.50 settled Authnet)
-- [x] Confirm 8/25 cron email now quotes correct $1,545 (#28089 [deployed])
-- [x] Identify remaining wrong sender (cron_ai_ticket_agent; cohort incl. 371702 Bolling)
-- [x] Confirm no email hold flag exists (grep lines 293-362)
-- [x] File #28206 (email dunning suppression) + #28207 (ai_ticket_agent audit)
-- [x] Live-read idea statuses (28089 deployed; 28115/28206/28207 approved)
-- [x] Rule 297 + 317 amendments filed via clinerules_amend_rule
-- [x] clinerules_validate_completion ALL PASSED + check_gate CLEAR
-- [x] Completion shipped with rule-91 pickup prompt
 </task_progress>
 </attempt_completion>
 ```

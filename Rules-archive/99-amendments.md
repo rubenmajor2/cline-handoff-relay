@@ -47,3 +47,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-24 phantom-purge build: a patch to proctoring/api/override_student.php introduced `$assignmentId` in an audit string on the assumption the variable was in scope. `php -l` PASSED because the syntax is valid, and the patch was nearly claimed as applied on that basis. A grep of the file showed the variable never exists anywhere (the codebase uses `$data["assignment_id"]`), so the audit line would have silently logged an empty value. Amended behavior: a lint pass proves SYNTAX ONLY, never that referenced variables/functions exist in scope. Before claiming any patch applied, grep every identifier the patch INTRODUCES against the target file to confirm it is defined there; an undefined-variable reference is a live defect that no linter will catch in PHP.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 08:40 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787984810000
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - "PIECEWISE flag patched" → corrected: sed had stripped the JSON escaping, all 6 ranks crash-looped Exit(2); rewrote via python + scp, verified with bash -n SYNTAX_OK + docker ins
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

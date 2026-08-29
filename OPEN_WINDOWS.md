@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 2:41:22 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 5, cached 940)
+Generated: 8/29/2026, 4:19:22 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 2, cached 943)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787985551437` | 8/29/2026, 2:41:18 AM | 481 | 2067KB | #Argus |
-| `1787996122566` | 8/29/2026, 2:41:13 AM | 15 | 56KB | #SMS/Email Notifications Externships/NREMT and End of Class |
-| `1787980519299` | 8/29/2026, 2:41:03 AM | 295 | 10806KB | #Various 2 |
-| `1787995785994` | 8/29/2026, 2:40:09 AM | 27 | 199KB | #GLM 5.3 Local |
+| `1787995785994` | 8/29/2026, 4:18:58 AM | 533 | 823KB | #GLM 5.3 Local |
+| `1787985551437` | 8/29/2026, 3:52:07 AM | 742 | 2360KB | #Argus |
+| `1787980519299` | 8/29/2026, 3:15:54 AM | 315 | 11146KB | #Various 2 |
+| `1787996122566` | 8/29/2026, 3:00:16 AM | 57 | 249KB | #SMS/Email Notifications Externships/NREMT and End of Class |
 | `1787995039075` | 8/29/2026, 2:24:27 AM | 10 | 641KB | #GLM 5.3 |
 | `1787984810545` | 8/29/2026, 2:01:35 AM | 770 | 939KB | #GLM 5.3/Qwen 3.8 Julia Claudia |
 | `1787963389563` | 8/29/2026, 1:14:55 AM | 576 | 3039KB | #Overdue Grievances and Rule 317  |
@@ -55,7 +55,25 @@ Generated: 8/29/2026, 2:41:22 AM PT | window: last 72h | 40 tasks | index total 
 
 ## Per-window detail
 
-### `1787985551437` — 8/29/2026, 2:41:18 AM PT — 481 turns
+### `1787995785994` — 8/29/2026, 4:18:58 AM PT — 533 turns
+
+**Original task:**
+
+```
+#GLM 5.3 Local
+
+Cline just killed my window for no reason at all it's over which is really really annoying about GLM 5.3. It was a subsequent window which you should have some information on in your hand off notes hopefully. The point was we were trying to get GM 5.3 local to be picked more often instead of denying turns in an hour or half an hour or whatever it was which is absolutely ridiculous. Think I had approved second option of the previous and also I wanted you to take a look at the // That I'm below regarding meeting another document in order to reference GLM 5.3 local. I would like f
+```
+
+**Ideas referenced:** #1130, #1131, #11942, #1241, #12425, #1248, #1249, #1252, #1258, #12672, #13121, #15144, #15815, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178798, #1798, #1828, #1912, #19567, #19903, #1998, #20042, #20495, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2159, #2168, #2174, #2299, #25185, #25378, #25381, #2546, #25764, #2579, #2640, #26400, #26403, #2642, #2654 [deployed], #2658 [deployed], #2659 [deployed], #26712, #26713, #26932, #27236, #27249 [executing], #27250, #27503, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28586 [blocked], #28596 [blocked], #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #38390, #39935, #40116, #42662, #43107, #43529, #44857, #45254, #46727, #46845, #47017, #47808, #47972, #48215, #48250, #48341, #48355, #48414, #48420, #48684, #48798, #48929, #49206, #49315, #49389, #49390, #49436, #49458, #49577, #49644, #49791, #49793, #49797, #49852, #49969, #49990, #50062, #50068, #50289, #50321, #50333, #50355, #50368, #50411, #50484, #50507, #50510, #50580, #50613, #50654, #50716, #50734, #50902, #50912, #50929, #50931, #50958, #50991, #51007, #51045, #51070, #51149, #51178, #51247, #51255, #51265, #51276, #51310, #51311, #51316, #51408, #51413, #51430, #51458, #51461, #51482, #51507, #51538, #51603, #51612, #51653, #51655, #51657, #51668, #51674, #51704, #51725, #51726, #51738, #51739, #51774, #51780, #51812, #51841, #51967, #52079, #52084, #52114, #52171, #52173, #52212, #52369, #52374, #52401, #52425, #52458, #52514, #52816, #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ting, prevention in place).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1787985551437 — GLM 5.3 local picked more often + vLLM 0.26.1 ring upgrade (idea #28622 [executing], rule 267 GATE C hand-drive; executor failed 5x on spec-gen timeouts).\n\nWhere we left off (verified 2026-08-29 04:14 PT):\n- FLOOR-CANCEL BUG: root cause removed, fix live in production: drop-in /etc/systemd/system/frankenstein-tools.service.d/zzz-glm-yield-thr-20260829.conf sets FRANK_GLM_AFFINITY_YIELD_RUNNING=8 (was defaulting to batch ceiling 4, canceling every floor pin; glm_pct was 0.0/50). Pins now survive (bug-library incident glm_floor_canceled_by_yield_guard_thr_mismatch_2026_08_29, resolved).\n- RING OUTAGE 03:34-04:01: double-relaunch race (both watchdog layers fired the relauncher 55s apart). Mutex flock guard added to cato ~/bin/glm53_relaunch_seq128.sh (bug-library incident glm53_double_relaunch_race_killed_ring_2026_08_29 investigating, prevention in place). Ring restore boot fired 04:01 on OLD image; weights loaded 04:11 (verified: vllm log 'Model loading took 58.81 GiB / 527.5s'); compile phase running, serving ETA ~04:18. WOPR /tmp/glm53_restore_watch.log stamps RING_RESTORED on bind.\n- 0.26.1 UPGRADE IN MOTION (this is idea #28622 [executing]): image eugr/spark-vllm:latest (vLLM 0.26.1rc1, native GlmMoeDsa, FULL cudagraphs) present on 5/6 nodes (probe digest 078a8109a069); Marcus (192.168.1.171) pull3 in flight + retry daemon /home/rubenmajor/marcus_pull_daemon.sh. New cfg at cato:/tmp/glm53_new.cfg (kv fp8, FULL graphs, no-async kept). Driver cato:~/bin/final_driver.sh waits Marcus-ready + ring-200, swaps cfg, runs ~/bin/glm53_026_cutover.sh (mutex'd, preflight, workers-then-rank0).\n- WATCHDOGS PAUSED: WOPR glm52-ring-watchdog stopped (verified: emsu-operations ssh_command systemctl is-active returned 'inactive' at 03:46 PT); cato glm53_watchdog_worker_v2 PID 4171103 SIGSTOPped (verified: emsu-operations ssh_command ps -o stat= returned 'T' at 03:47 PT). RE-ARM via WOPR /tmp/rearm.sh AFTER verify passes.\n\nOpen threads to drive next:\n1. Idea #28622 [executing] — when Marcus image lands + ring serving: run final_driver.sh on cato, wait ~17min boot, then WOPR bash /tmp/glm53_026_verify.sh (models 200, PONG, uni_7/8/9 concurrent correctness vs the known corruption) + /tmp/x8lean.sh (baseline 12.8 tok/s agg; expect ~2x with FULL graphs). On success: bash /tmp/rearm.sh, update the idea record to its terminal state, finish the GLM53_RING_STATE_TRACKER.md doc rewrite Ruben requested (live 5.3 reference: topology Pompeii 50c0 <-> Marcus 63ce <-> Tiberius e9e0 <-> Cesar 3b41 <-> Cato 2aa8 <-> Augustus e3b2 ring, current serving facts, :8210 lane).\n2. Idea #28586 [blocked] (load-ranker disadvantage) + idea #28596 [blocked] (verify no-async boot + wedges stop) — re-evaluate after 0.26.1 lands; executor impl_failed rows; both may close via this hand-drive.\n3. (human-only decision — no idea) FRANK_GLM_MAX_CTX=120000 clamps Cline windows >120K prompt; raising it needs Ruben's call on ring capacity.\n\nReference IDs:\n- Ideas: #28622 [executing], #28586 [blocked], #28596 [blocked], #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed]\n- Bug library (frankenstein_router_incidents, keys not idea ids): glm_floor_canceled_by_yield_guard_thr_mismatch_2026_08_29 (resolved), glm53_double_relaunch_race_killed_ring_2026_08_29 (investigating), glm53_dsa_fp8dsmla_concurrent_corruption_2026_08_28 (fixed
+```
+
+### `1787985551437` — 8/29/2026, 3:52:07 AM PT — 742 turns
 
 **Original task:**
 
@@ -67,35 +85,36 @@ See Also the Screenshot about overrides / needs a bulk option
 Confirmed every issue in the pasted report and both pickup prompts, addressed or explicitly routed to a human. The short version: the Exam 5 monitor the executor claimed was live did not exist, so it was rebuilt from scratch and now runs daily, having flagged 3 students (course 37, close dates inside 7 days) whose names went to staff; the 1,702 auto-void rows were proven to be the healthy integrity investigator's repair audit trail, so that thread is closed by-design; the Employee Certs complaint was a data problem (Ruben h
 ```
 
-**Ideas referenced:** #059669, #166534, #1682, #178798, #2088, #2106, #2347, #2355, #2358, #2367, #2369, #2370, #2372, #2375, #2376, #2378, #2509, #25185, #2563, #26253, #26898, #26899, #26900, #26993, #27203, #27251, #27252, #27253, #28042 [deployed], #28112, #28133 [proposed], #28214 [executing], #28234 [deployed], #28304 [deployed], #28310 [rejected], #28465 [deployed], #28497 [deployed], #28504 [deployed], #28505 [proposed], #28506 [deployed], #28636 [deployed], #28637 [proposed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [proposed], #28642 [proposed], #374151, #6067, #6366, #64748, #831843, #92400
+**Ideas referenced:** #059669, #12249, #12266, #12285, #12588, #12688, #12689, #13470, #14133, #14142, #166534, #16715, #1682, #178798, #19686, #2088, #2106, #2347, #2355, #2358, #2367, #2369, #2370, #2372, #2375, #2376, #2378, #2509, #25185, #2563, #26253, #26898, #26899, #26900, #26993, #27203, #27251, #27252, #27253, #28042 [deployed], #28112, #28133 [proposed], #28214 [executing], #28234 [deployed], #28304 [deployed], #28310 [rejected], #28465 [deployed], #28497 [deployed], #28504 [deployed], #28505 [proposed], #28506 [deployed], #28636 [deployed], #28637 [proposed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [proposed], #28642 [proposed], #374151, #6067, #6366, #64748, #831843, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-population before quantifying)
+he write did what you assumed)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1787981000000 - Argus review follow-through and the Vapi CFA model decision
+Pick up task #1787981000000 - VAPI CFA voice on deepseek primary with frankenstein backup
 
-Where we left off (checked 2026-08-29 02:34 PDT):
-- Answered the model question: all 3 Vapi CFA assistants run anthropic/claude-sonnet-5, not deepseek-v4-pro, and the Anthropic credential is 401ing on 22.6 percent of calls.
-- Repaired and verified the oldest-open-ticket defect, #28641 [deployed], a proven 33.2 day error.
-- Withdrew the approvals-badge claim, #28642 [rejected].
-- #28636 [deployed] bulk exam override from earlier in the session.
+Where we left off (checked 2026-08-29 03:50 PDT):
+- All three Vapi CFA assistants run custom-llm against deepseek-v4-pro-voice with 108 tools, persona, CFA marker and auth header. No Anthropic anywhere in that path.
+- LiteLLM lane deepseek-v4-pro-voice maps to deepseek/deepseek-chat; router fallback goes to frankenstein-llm.
+- Live tests: 12/12 caller turns PASS, tool call PASS, backup PASS.
+- #28637 [deployed], #28641 [deployed], #28636 [deployed], #28642 [rejected].
 
 Open threads to drive next:
-1. #28637 [proposed] - Ruben decision. Either renew the Anthropic credential as a stopgap to restore phones today, or move the three assistants to a custom-llm endpoint backed by frankenstein-llm and deepseek-v4-pro, matching the opus-ban and the rest of the fleet. Also move VAPI_PRIVATE_KEY out of the webhook file into secrets.php.
-2. #28638 [proposed] - make enqueue idempotent on (chat_id, message_id).
-3. #28639 [proposed] - add per-iteration checkpointing so a retry resumes; argus_task_retry_log is empty, which is the starting point.
-4. #28640 [proposed] - earned outcome enum, and wire argus_cot_leak_incidents.
-5. #28642 [rejected] - residue only: the five pending approvals all read verdict=review and the three oldest date from 2026-08-14, so the recommender and an age SLA are worth a look even though the badge is fine.
+1. #28637 [deployed] - watch the next daytime call window and confirm the 401 count stays at zero under real traffic, since the cutover happened with no live calls in flight.
+2. #28637 [deployed] - the frankenstein-llm backup runs 13 to 68 seconds and once spoke its reasoning aloud; bound it or add a faster middle rung before it is ever needed on a live call.
+3. #28637 [deployed] - move VAPI_PRIVATE_KEY out of api/voice/vapi_server_webhook.php line 163 into the gitignored secrets file per rule 302.
+4. #28638 [proposed] - make Argus enqueue idempotent on (chat_id, message_id).
+5. #28639 [proposed] - add per-iteration checkpointing so an Argus retry resumes; argus_task_retry_log is empty.
+6. #28640 [proposed] - earned outcome enum, and wire argus_cot_leak_incidents.
 
 Reference IDs:
-- Ideas: #28636 [deployed], #28637 [proposed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected]
-- Files touched: /var/www/emtskills/lib/argus_action_catalog.php (plus .bak-ops4 backup), cline_task_ledger.md
+- Ideas: #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected]
+- Files touched: /etc/litellm/config.yaml (3 backups), Vapi assistants 494523de + e5a5320e + 80f2341e, /var/www/emtskills/lib/argus_action_catalog.php, cline_task_ledger.md
 
 On completion, append to cline_task_ledger.md (rule 07) and run order 66.
 ═══════════════════════════════════════════════
@@ -103,21 +122,7 @@ On completion, append to cline_task_ledger.md (rule 07) and run order 66.
 </attempt_completion>
 ```
 
-### `1787996122566` — 8/29/2026, 2:41:13 AM PT — 15 turns
-
-**Original task:**
-
-```
-#SMS/Email Notifications Externships/NREMT and End of Class
-
-You have actually done it before. I need you to provide me with a page that has a list of notifications. This again may be already sitting on the reports.php page is a card link there, but the idea is that we are looking for the SMS messages and emails that are sent in regards to the students externship deadlines as well as NREMT deadlines near the end of the class. Again I believe you've already sent this before but I wanted to assess those to see which ones you need to turn off as that is creating some anxiety students with the mul
-```
-
-**Ideas referenced:** #15815, #1912, #1998, #20495, #2640, #2642, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28306 [deployed], #28307, #28308, #28310, #28316, #28330 [deployed], #28331 [deployed], #28369, #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787980519299` — 8/29/2026, 2:41:03 AM PT — 295 turns
+### `1787980519299` — 8/29/2026, 3:15:54 AM PT — 315 turns
 
 **Original task:**
 
@@ -127,7 +132,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
 ```
 
-**Ideas referenced:** #16473, #166603, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25821, #25822, #25916 [awaiting_review], #25932, #26084 [approved], #26661, #26663, #27082 [approved], #27100, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28110, #28118, #28212, #28213, #28220, #28224, #28233, #28481, #28493, #28550, #28612 [proposed], #28613 [proposed], #28625 [executing], #28626 [executing], #28643 [proposed], #374825, #4929, #6106, #9083, #9086, #9168, #9339
+**Ideas referenced:** #16473, #166603, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25821, #25822, #25916 [awaiting_review], #25932, #26084 [approved], #2631, #26661, #26663, #27082 [approved], #27100, #2728, #2743, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #2783, #27832 [executing], #28023 [proposed], #28110, #28118, #28212, #28213, #28220, #28224, #28233, #2829, #2836, #2843, #28481, #28493, #2850, #28550, #2856, #28612 [proposed], #28613 [proposed], #28625 [executing], #28626 [executing], #2864, #28643 [proposed], #2959, #2965, #374825, #4929, #6067, #6106, #9083, #9086, #9168, #9339
 
 **Last PICKUP PROMPT:**
 
@@ -162,17 +167,17 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1787995785994` — 8/29/2026, 2:40:09 AM PT — 27 turns
+### `1787996122566` — 8/29/2026, 3:00:16 AM PT — 57 turns
 
 **Original task:**
 
 ```
-#GLM 5.3 Local
+#SMS/Email Notifications Externships/NREMT and End of Class
 
-Cline just killed my window for no reason at all it's over which is really really annoying about GLM 5.3. It was a subsequent window which you should have some information on in your hand off notes hopefully. The point was we were trying to get GM 5.3 local to be picked more often instead of denying turns in an hour or half an hour or whatever it was which is absolutely ridiculous. Think I had approved second option of the previous and also I wanted you to take a look at the // That I'm below regarding meeting another document in order to reference GLM 5.3 local. I would like f
+You have actually done it before. I need you to provide me with a page that has a list of notifications. This again may be already sitting on the reports.php page is a card link there, but the idea is that we are looking for the SMS messages and emails that are sent in regards to the students externship deadlines as well as NREMT deadlines near the end of the class. Again I believe you've already sent this before but I wanted to assess those to see which ones you need to turn off as that is creating some anxiety students with the mul
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #12672, #13121, #15144, #15815, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178798, #1798, #1828, #1912, #19567, #19903, #1998, #20042, #20495, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25378, #25381, #2546, #25764, #2579, #2640, #26400, #2642, #2654, #26712, #26713, #26932, #27236, #27249 [executing], #27250, #27503, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28586 [blocked], #28596 [blocked], #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #38390, #39935, #40116, #42662, #43107, #43529, #44857, #45254, #46727, #46845, #47017, #47808, #47972, #48215, #48250, #48341, #48355, #48414, #48420, #48684, #48798, #48929, #49206, #49315, #49389, #49390, #49436, #49458, #49577, #49644, #49791, #49793, #49797, #49852, #49969, #49990, #50062, #50068, #50289, #50321, #50333, #50355, #50368, #50411, #50484, #50507, #50510, #50580, #50613, #50654, #50716, #50734, #50902, #50912, #50929, #50931, #50958, #50991, #51007, #51045, #51070, #51149, #51178, #51247, #51255, #51265, #51276, #51310, #51311, #51316, #51408, #51413, #51430, #51458, #51461, #51482, #51507, #51538, #51603, #51612, #51653, #51655, #51657, #51668, #51674, #51704, #51725, #51726, #51738, #51739, #51774, #51780, #51812, #51841, #51967, #52079, #52084, #52114, #52171, #52173, #52212, #52369, #52374, #52401, #52425, #52458, #52514, #52816, #7142, #7149
+**Ideas referenced:** #15815, #1912, #1998, #20495, #2563, #2640, #2642, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28306 [deployed], #28307, #28308, #28310, #28316, #28330 [deployed], #28331 [deployed], #28369, #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #64748
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

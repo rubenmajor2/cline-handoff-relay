@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 2:36:53 PM PT | window: last 72h | 48 tasks | index total 956 (parsed 4, cached 952)
+Generated: 8/29/2026, 3:36:54 PM PT | window: last 72h | 47 tasks | index total 958 (parsed 5, cached 953)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788021977080` | 8/29/2026, 2:36:34 PM | 405 | 3160KB | #Various 2 |
+| `1788042719672` | 8/29/2026, 3:36:47 PM | 49 | 143KB | #Grievances |
+| `1788021866677` | 8/29/2026, 3:36:37 PM | 671 | 1563KB | #ArgusVAPI CFA voice path |
+| `1788040396206` | 8/29/2026, 3:36:22 PM | 150 | 403KB | #GLM 5.3 and Frankenatein LLM |
+| `1788021977080` | 8/29/2026, 3:33:54 PM | 430 | 3252KB | #Various 2 |
+| `1788037909518` | 8/29/2026, 3:30:17 PM | 24 | 78KB | #emtskills slowness |
 | `1788036414021` | 8/29/2026, 2:28:28 PM | 214 | 493KB | #GLM 5.3 Local and Frankenstein LLM |
-| `1788037909518` | 8/29/2026, 2:15:19 PM | 9 | 59KB | #emtskills slowness |
-| `1788021866677` | 8/29/2026, 2:13:30 PM | 500 | 1278KB | #ArgusVAPI CFA voice path |
 | `1788027890157` | 8/29/2026, 1:59:23 PM | 120 | 526KB | #/emtskills slowness |
 | `1788029135575` | 8/29/2026, 12:04:36 PM | 114 | 254KB | #GLM 5.3 Local/Frankenstein-LLM Routing |
 | `1788027731969` | 8/29/2026, 12:04:22 PM | 322 | 596KB | #Overdue Grievances and Rule 317  |
@@ -55,15 +57,118 @@ Generated: 8/29/2026, 2:36:53 PM PT | window: last 72h | 48 tasks | index total 
 | `1787764336166` | 8/27/2026, 11:59:33 PM | 140 | 2535KB | Asked  this befroe -->  |
 | `1787775322285` | 8/27/2026, 5:09:12 PM | 104 | 1131KB | Person already provided proof of payment, but for some reason that part of the CFA is not  |
 | `1787782722374` | 8/26/2026, 9:54:04 PM | 198 | 322KB | #VERITAS |
-| `1787728419915` | 8/26/2026, 3:28:52 PM | 244 | 5671KB | Student seems to claim MANY others are having issues along withthemselves. Unsure if that' |
-| `1787764966133` | 8/26/2026, 3:27:15 PM | 586 | 1170KB | So this is a 317/297 RCA / 91 failure becasue these are huge mistakes to make in the first |
-| `1787517211429` | 8/26/2026, 3:05:12 PM | 440 | 6493KB | #CFA |
 
 ---
 
 ## Per-window detail
 
-### `1788021977080` — 8/29/2026, 2:36:34 PM PT — 405 turns
+### `1788042719672` — 8/29/2026, 3:36:47 PM PT — 49 turns
+
+**Original task:**
+
+```
+#Grievances
+
+Jon says: Specifically all I’ve seen for the grievance issues have been the file uploads won’t take. That’s what I’ve been getting emails about. 
+
+approved
+- #28631 [proposed] - auto-issue the grievance-form link whenever an email_attachment filing arrives with no intake token, and 
+
+rejected this part of 28631 / what needs to haappen instead is there needs to be a reply back with the working link. -> stop the completeness check failing a filing for missing form fields when no form was ever provided.
+
+approved
+- #28609 [proposed] - grievance clock cron writes a no-op status-histor
+```
+
+**Ideas referenced:** #155724, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #28714 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788021866677` — 8/29/2026, 3:36:37 PM PT — 671 turns
+
+**Original task:**
+
+```
+#ArgusVAPI CFA voice path
+
+So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
+
+--
+Done. The VAPI CFA voice path now runs DeepSeek a
+```
+
+**Ideas referenced:** #12584, #15405, #15815, #16844, #178798, #178802, #19100, #1912, #1965, #1998, #20495, #2168, #23945, #25185, #26253, #2640, #2642, #2654, #2666 [deployed], #26712, #26713, #26932, #27100, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #28710 [proposed], #28711 [proposed], #28712 [proposed], #28716 [proposed], #28729 [proposed], #6106
+
+**Last PICKUP PROMPT:**
+
+```
+ing the deeper-analysis method
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788021866677 — VAPI anthropic purge COMPLETE: all surfaces on Qwen-first
+
+Where we left off (verified 2026-08-29 15:30 PT):
+- Ghost-call knowledge persisted in EMSU_TELEPHONY_REFERENCE.md GHOST-ROW WARNING (verified: grep -c returned 1).
+- ENTIRE Vapi surface on Qwen: 11 of 12 static assistants on custom-llm (only 'PI Test - Delete Me' remains on xai, a deletion candidate); 10 code-level creation files patched incl the 401 source ai_ticket_agent.php (verified: grep anthropic count = 0 across api/voice/ + lib/ai_ticket_agent.php).
+- Full-day analysis: 100 calls, 15 AI-participated, 85 ghosts, 10 anthropic-401s (now-fixed source) (verified: /tmp/full_day_analysis.php output TODAY_CALLS=100 with per-assistant breakdown).
+- All 10 patched files lint-clean, FPM reloaded (verified: php -l x10 pass + write_server_file FPM reload OK).
+
+Open threads to drive next:
+1. #28712 [executing] — see what the other window reports on spend logging.
+2. #28716 [executing] — see what the other window reports on the local Qwen boxes.
+3. (human-only decision — no idea) First organic human call to the main line will be the production confirmation; watch the next business-hours window.
+4. (human-only decision — no idea) Verify the next PI simulator session runs on Qwen (check its next call's model field in the Vapi API) — first student session post-patch is the confirmation.
+
+Reference IDs:
+- #28710 [deployed]
+- #28711 [deployed]
+- #28729 [deployed]
+- #28712 [executing]
+- #28716 [executing]
+- Bug library: frankenstein_router_incidents problem_key qwen38_lane_fallback_masquerade_2026_08_29, status resolved
+- Files touched: /etc/litellm/config.yaml, 10 assistant-creation files (patient_interview x3, ai_ticket_agent, emd x4, ruben_voice x2), Vapi assistants (8 caller-facing + 3 static), docs/EMSU_TELEPHONY_REFERENCE.md, HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Persisted +19412943388 ghost-call knowledge (EMSU_TELEPHONY_REFERENCE.md GHOST-ROW WARNING + handoff notes)
+- [x] Full-day analysis: 100 calls; 15 AI-participated; 85 ghost; 10 anthropic-401s found
+- [x] PI fleet patched (3 files) to custom-llm/qwen38-27b-voice
+- [x] Ticket Follow-Up 401 source fixed (ai_ticket_agent.php, was claude-opus-4-6)
+- [x] EMD fleet (5 sites) + RUBEN/VADER webhook (3 sites) patched
+- [x] 3 static assistants cut over (Commander Data, Sales Recovery, Riley)
+- [x] FINAL SWEEP: 0 anthropic provider lines in Vapi-creation surface; all 10 files lint-clean; FPM reloaded; live verify 11/12 assistants on custom-llm
+- [x] #28729 deployed; handoff notes updated
+- [x] Final report shipped (all gates passed, gate clear)
+</task_progress>
+</attempt_completion>
+```
+
+### `1788040396206` — 8/29/2026, 3:36:22 PM PT — 150 turns
+
+**Original task:**
+
+```
+#GLM 5.3 and Frankenatein LLM
+
+Why don't all the Agents do this for LLMs? Shouldn't they? There have been numerous catastropic issues caused by Agents in Cline here giving stale or fabricated info -> Plain-English summary: All four directives from this task were addressed this window, each with a live probe behind it.
+
+Curious if 1/2 is what it was at before? What's the best here -> prefill chunk size halved, and the ring relaunch is booting (
+
+Can you tell me how many exact lanes of qwen 3.8 27B local there is?
+
+Julia Claudia are supposed to be TP=2 with Qwen 3.8 27B. Can you conim this? If n
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16417, #16448, #16449, #16452, #16604, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #1798, #1828, #1876, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25112, #25185, #25378, #25381, #2546, #2603, #2626, #2666, #26908, #27236, #27249 [executing], #27250, #27284, #27503, #27972, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28316, #28500, #28704 [deployed], #28705 [executing], #28706 [executing], #28723 [executing], #28725 [executing], #28730 [executing], #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788021977080` — 8/29/2026, 3:33:54 PM PT — 430 turns
 
 **Original task:**
 
@@ -73,65 +178,54 @@ Generated: 8/29/2026, 2:36:53 PM PT | window: last 72h | 48 tasks | index total 
 RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
 ```
 
-**Ideas referenced:** #155724, #15877, #16242, #1648, #166534, #1719, #17446, #178796, #18836, #18944, #18951, #19362, #22060, #25888, #2654, #26663, #26834, #26896, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28705, #28726 [proposed], #4518, #4929, #62584, #62604, #813528, #9086, #9168, #9191, #92400, #9339
+**Ideas referenced:** #155724, #15877, #16242, #1648, #166534, #1719, #17446, #178796, #18836, #18944, #18951, #19362, #22060, #25888, #2654, #26663, #26834, #26896, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28704 [deployed], #28705 [in_progress], #28706 [in_progress], #28710 [deployed], #28711 [deployed], #28714 [deployed], #28716 [in_progress], #28717, #28719 [proposed], #28720 [proposed], #28721, #28722 [proposed], #28723 [in_progress], #28725 [in_progress], #28726 [proposed], #4518, #4929, #62584, #62604, #813528, #9086, #9168, #9191, #92400, #9339
 
 **Last PICKUP PROMPT:**
 
 ```
-d ledger (task 1787960052755).
+k from greenfield to gap-fill.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1787960052755 - Grievance code email fix (Postmark) + staff grievance submission page + WOPR DEFCON doc.
+Pick up task #1787960052755 - Build the four executing ideas + fill the #28719 PAS audio logging gap.
 
-Where we left off (verified 2026-08-29 14:28 PT):
-- grievance_request.php code email now via lib/mailer.php sendEmail() -> Postmark SMTP; SMTP_SEND_OK probe; page 200; no raw mail remains; ownership emsumain:psaserv.
-- New staff page /emtskills/grievance_staff_submit.php live: 401 unauthenticated, php -l clean, inserts intake_source='staff_submit' status='pending_review' created_by=<staff>.
-- WOPR DEFCON stale notice documented; idea #28726 [proposed] (recompute/clear stale DEFCON).
-- Vicky's verbatim note quoted + addressed (code email fix + email intake path + staff page).
+Where we left off (verified 2026-08-29 15:33 PT):
+- #28726 [executing] - not built yet. Locate stale DEFCON notice source on WOPR, recompute or clear.
+- #28701 [executing] - not built yet. 3-attempt-cap troubleshooting-class email → live chat + screen share.
+- #28683 [executing] - not built yet. Wire NotificationGate into 7 externship/NREMT sender files.
+- #28722 [executing] - not built yet. Isolation guard self-heal: auto-patch AGENT_POOL + reload + re-verify.
+- #28719 [executing] - PAS audio diagnostic. Investigation done: existing audio stack is substantial (zero-audio fix Aug 11, monitor, watchdog, route monitor, ~70 audio tables). Real gap: 5 blocked students' rows not flowing into diagnostic tables (schema mismatch on student_id/created_at), and ops-slack alert only wired in patient_assessment_audio_monitor.php. Next: repair the diagnostic table schema/insert path for the 5 students AND add ops-slack alert on audio-init failure across the audio pipeline.
+- #28720 [proposed] - supersede as duplicate of #28719.
 
 Open threads to drive next:
-1. #28726 [proposed] - Recompute or clear the stale 'You are in: DEFCON' notice on WOPR.
-2. #28690 [executing] - WOPR_SSH 9820 + DEFCON flapping suppression already in flight; #28726 [proposed] is the distinct stale-notice recompute item.
+1. #28719 [executing] - Fix the diagnostic insert/schema path so the 5 blocked students' audio rows land in the diagnostic tables, then add the ops-slack alert on audio-init failure.
+2. #28726 [executing] - Locate + clear/recompute stale DEFCON notice on WOPR.
+3. #28701 [executing] - Implement 3-attempt-cap troubleshooting-class email routing.
+4. #28683 [executing] - Wire NotificationGate into 7 dormant sender files.
+5. #28722 [executing] - Build isolation guard self-heal (AGENT_POOL auto-patch + reload + re-verify).
+6. #28720 [proposed] - Supersede as duplicate of #28719.
 
 Reference IDs:
-- Ideas filed: #28726 [proposed], #28643 [deployed], #28690 [executing]
-- Files touched: /var/www/emtskills/grievance_request.php, /var/www/emtskills/grievance_staff_submit.php, docs/HANDOFF_NOTES.md
+- Ideas: #28726 [executing], #28701 [executing], #28683 [executing], #28722 [executing], #28719 [executing], #28720 [proposed]
+- Files touched this window: /var/www/emtskills/grievance_request.php, /var/www/emtskills/grievance_staff_submit.php, docs/HANDOFF_NOTES.md
+- Amendments: rule 317 clause 2 (rule_amend ledger task 1787960052755)
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] staff grievance page live + verified (401 unauth, lint clean, ownership correct)
-- [x] grievance code email fixed + verified (Postmark SMTP_SEND_OK, raw mail removed, page 200)
-- [x] WOPR DEFCON documented + idea #28726 [proposed]
-- [x] Vicky's verbatim note documented + addressed
-- [x] Rule 91/R317 gates: ALL PASSED (validation confirmed)
-- [x] Completion shipped
+- [x] Full-window rollup presented
+- [x] #28726, #28701, #28683, #28722 approved → executing
+- [x] #28719 approved → executing; investigated full audio stack (already substantial)
+- [x] Identified real #28719 gap: diagnostic table schema mismatch + ops-slack alert scope
+- [x] Honest completion: approvals are direction, not shipped code
+- [x] Completion shipped with pickup prompt
 </task_progress>
 </attempt_completion>
 ```
 
-### `1788036414021` — 8/29/2026, 2:28:28 PM PT — 214 turns
-
-**Original task:**
-
-```
-#GLM 5.3 Local and Frankenstein LLM
-
-Seems like we have some work to do
-
-the other things is to avoid a box from being saturated, if there are other boxes of the same class (i.e. multiple 120Bs, Qwen 3.8 27Bs, etc...) then there should be some even distribution according to capacity, not just take one box down and oversaturate it. Let's be smarter about hos this works. 
-
-yes, let's tune this up now - build and ship here -> Honest speed verdict: the ring is correct and serving but decode IS slow right now (about 4 tok/s aggregate, 2.15 tok/s single-stream vs the 5.2-era 12.65 decode reference) 
-```
-
-**Ideas referenced:** #1130, #1131, #11953, #12247, #12262, #12363, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #12689, #13108, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #1912, #19567, #19653, #1986, #19903, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25185, #25378, #25381, #2546, #25764, #26400, #2647, #2654 [deployed], #2659, #2663, #26908, #26932, #27236, #27249 [executing], #27250, #27503, #28586, #28622, #28704 [executing], #28705 [executing], #28706 [executing], #28723 [proposed], #28725 [proposed], #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788037909518` — 8/29/2026, 2:15:19 PM PT — 9 turns
+### `1788037909518` — 8/29/2026, 3:30:17 PM PT — 24 turns
 
 **Original task:**
 
@@ -155,68 +249,23 @@ e HANDOFF_NOTES.md + idea #28722 status to deployed
 </use_mcp_tool>
 ```
 
-### `1788021866677` — 8/29/2026, 2:13:30 PM PT — 500 turns
+### `1788036414021` — 8/29/2026, 2:28:28 PM PT — 214 turns
 
 **Original task:**
 
 ```
-#ArgusVAPI CFA voice path
+#GLM 5.3 Local and Frankenstein LLM
 
-So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
+Seems like we have some work to do
 
---
-Done. The VAPI CFA voice path now runs DeepSeek a
+the other things is to avoid a box from being saturated, if there are other boxes of the same class (i.e. multiple 120Bs, Qwen 3.8 27Bs, etc...) then there should be some even distribution according to capacity, not just take one box down and oversaturate it. Let's be smarter about hos this works. 
+
+yes, let's tune this up now - build and ship here -> Honest speed verdict: the ring is correct and serving but decode IS slow right now (about 4 tok/s aggregate, 2.15 tok/s single-stream vs the 5.2-era 12.65 decode reference) 
 ```
 
-**Ideas referenced:** #12584, #15815, #16844, #178798, #178802, #19100, #1912, #1965, #1998, #20495, #2168, #23945, #25185, #2640, #2642, #2654, #2666 [deployed], #26712, #26713, #26932, #27100, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #28710 [proposed], #28711 [proposed], #28712 [proposed], #28716 [proposed], #6106
+**Ideas referenced:** #1130, #1131, #11953, #12247, #12262, #12363, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #12689, #13108, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #1912, #19567, #19653, #1986, #19903, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25185, #25378, #25381, #2546, #25764, #26400, #2647, #2654 [deployed], #2659, #2663, #26908, #26932, #27236, #27249 [executing], #27250, #27503, #28586, #28622, #28704 [executing], #28705 [executing], #28706 [executing], #28723 [proposed], #28725 [proposed], #7142, #7149
 
-**Last PICKUP PROMPT:**
-
-```
-allback_masquerade_2026_08_29.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1788021866677 — VAPI CFA Qwen-first voice: quality watch after full cutover
-
-Where we left off (verified 2026-08-29 14:07 PT):
-- ALL 8 caller-facing Vapi assistants on custom-llm/qwen38-27b-voice; fallback ladder deepseek-v4-pro-voice then frankenstein-llm (verified: vapi_list_assistants run 14:07 PT returned qwen38-27b-voice count = 8, anthropic count = 0).
-- Real-shape A/B on Eric's exact 19.5K prompt + 108 tools: qwen 3/3 PASS avg 4381ms correct tools; deepseek 3/3 PASS avg 2183ms (verified: /tmp/ab_trio.out LANE_SUMMARY lines for both models).
-- Quality watch: 64 of 89 real calls today are SIP-leg-only (endedReason call.in-progress.sip-completed-call, messages=0) — telephony artifact, not model quality; zero organic AI-served calls since cutover, so lane quality rests on synthetic batteries so far (verified: /tmp/check_vapi_calls.php returned endedReason=call.in-progress.sip-completed-call messages=0 for all 3 sampled ids).
-- Work this window landed as ideas #28710 [deployed] and #28711 [deployed] (verified: reconcile_ideas run 14:10 PT returned both with status=deployed, dev_stage=ready_for_review).
-
-Open threads to drive next:
-1. #28712 [executing] — see what the other window reports on spend logging.
-2. #28716 [executing] — see what the other window reports on the local Qwen boxes.
-3. (human-only decision — no idea) Watch the next organic AI-served call window: if Qwen's 4.4s tool-turn latency feels slow on live callers, consider swapping the trio back to deepseek-v4-pro-voice as primary or adding a latency budget alert at 5s on the qwen38-27b-voice lane.
-
-Reference IDs:
-- #28710 [deployed]
-- #28711 [deployed]
-- #28712 [executing]
-- #28716 [executing]
-- Bug library: frankenstein_router_incidents problem_key qwen38_lane_fallback_masquerade_2026_08_29, status resolved
-- Files touched: /etc/litellm/config.yaml (qwen38-27b-voice lane + fallbacks), Vapi assistants 494523de/e5a5320e/80f2341e (trio) + b2183071/6ee87bdb/cf47f039/f54b2a59/3e55fdaa (the 5 moved earlier)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Router audit: 12 qwen38-27b-voice rows — ALL my test traffic; zero organic qwen38 callers post-cutover
-- [x] voice_call_log: 89 real calls today, 64 empty transcripts = SIP-completed telephony pattern (predates cutover; NOT model-related)
-- [x] Vapi API ground truth: anomalous calls are call.in-progress.sip-completed-call, 0 messages — telephony leg only
-- [x] Pre-cutover AI calls: Bella on anthropic cut callers off — the anthropic-401 era
-- [x] Post-cutover: zero AI-served organic calls yet — lane quality measured only by synthetic 5/5 PASS
-- [x] Trio real shape fetched (Eric: 19,478-char system prompt + 108 model-level tools)
-- [x] Real-shape A/B: qwen 3/3 (avg 4381ms, correct tools, no reasoning leak) vs deepseek 3/3 (avg 2183ms, correct tools, filler speech)
-- [x] #28712 [executing] / #28716 [executing] reconciled server-side (another windows own them)
-- [x] Trio cutover COMPLETE: all 3 on qwen38-27b-voice with 108/108 tools + prompts preserved (verified via vapi_list_assistants)
-- [x] Final assessment validated + shipped (all gates passed, gate clear)
-</task_progress>
-</attempt_completion>
-```
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788027890157` — 8/29/2026, 1:59:23 PM PT — 120 turns
 
@@ -2041,169 +2090,3 @@ Why the post-hoc judge was needed at all: the email responder's pre-generation g
 **Ideas referenced:** #174558, #178712, #18853, #26663, #26851, #27942 [deployed], #28028 [deployed], #28043, #28044, #28088, #28213 [proposed], #28218 [deployed], #28220 [proposed], #28233 [deployed], #28256 [proposed], #28306 [deployed], #28307 [proposed], #28308 [proposed], #28330 [deployed], #28331 [deployed], #28370 [deployed], #3354, #3559 [rejected], #4958, #9132, #9222
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787728419915` — 8/26/2026, 3:28:52 PM PT — 244 turns
-
-**Original task:**
-
-```
-Student seems to claim MANY others are having issues along withthemselves. Unsure if that's true. But can you help track down resolve this particular issue in moodle durably. Tell me why Kaison did not detect and repair this? That should have already been done in advance.
-```
-
-**Ideas referenced:** #1049, #1051, #1053, #1054, #1057, #1059, #1061, #1063, #1065, #1068, #14847, #16613, #178772, #178773, #1987, #20346, #23477, #2472 [deployed], #25185, #25914, #25990, #27100, #28303 [proposed], #28319 [proposed], #5387, #5466, #5470, #5475, #5477, #5478, #5479, #5484, #5485, #5486, #5487, #5491, #5494, #5498, #5499, #5500, #5501, #5508, #5512, #5513, #5514, #5515, #5516, #5517, #5518, #5524, #5525, #5526, #6824 [approved], #9086, #9831
-
-**Last PICKUP PROMPT:**
-
-```
-hich are human-only decisions.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787730786893 — Mahathi Rajkumar Moodle stale-cmid fix + Kaison RCA.
-
-Where we left off (verified 2026-08-26 14:23 PT):
-- Student repair DONE: course_modules 3089 (deleted) relinked to visible 4173 in c25 page, cache purged, live-probed clean.
-- Root cause: stale page link to deleted cm 3089. Kaison detected the class 2026-06-16 (OPS-1781658397-1477) and repaired some sections, but the c25 link survived its section guard; no recurring detector existed until this window.
-- Durable fix DEPLOYED: cron_moodle_stale_cmid_detector.php on WOPR, hourly cron :17 as emsuserver (verified: ssh_command crontab -l returned '17 * * * * php /var/www/emtskills/cron/cron_moodle_stale_cmid_detector.php'), log /var/log/moodle_stale_cmid_detector.log, audit table moodle_stale_cmid_audit. 3 c37 report-only rows remain (no visible same-name sibling; need human review).
-- DB secrets moved to gitignored config/secrets.php per rule 302.
-- Corroboration scan: mass-impact claim TRUE (9+ students since 6/1); ticket 27930 (Sebastian Peterlin 26622FT-11) opened TODAY on same class.
-- Ideas: #28303 [deployed] detector cron; #28319 [deployed] corroboration pack.
-
-Open threads to drive next:
-1. #28303 [deployed] — review 3 c37 report-only rows (Moodle page id 2472 targets cm 2009/2469, page id 6824 target cm 6825); pick relink targets or leave hidden.
-2. #28319 [deployed] — run detector --apply for ticket 27930 (Sebastian Peterlin) and repair his stale cm if a repl is found.
-3. Mahathi attendance 8/19 + 8/21 mark present (human-only decision — no idea; instructor/staff action).
-4. Mahathi due-date/midterm extension question (human-only decision — no idea; Jon policy call).
-
-Reference IDs:
-- Ideas filed: #28303 [deployed], #28319 [deployed]
-- Ideas closed: none
-- Files touched: /var/www/emtskills/cron/cron_moodle_stale_cmid_detector.php, /var/www/emtskills/config/secrets.php, emsuserver crontab
-
-# Reversal Log
-- "Kaison never detected" → "Kaison detected 6/16, self-heal section guard skipped c25, no recurring scan after" | RCA: insufficient probe | causal fix: #28303 [deployed] hourly detector.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Student repair: cm 3089 relinked to 4173, purged, live-probed clean
-- [x] Secrets: DB constants added to gitignored config/secrets.php
-- [x] Build + deploy stale-cmid detector cron in-window
-- [x] Run detector dry-run + verify output
-- [x] Run --apply + register cron entry as emsuserver + verify
-- [x] Approve #28319 + run corroboration pack
-- [x] Stamp #28303 record per live state + reconcile both ideas
-- [x] Validate + gate passed
-- [x] attempt_completion shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787764966133` — 8/26/2026, 3:27:15 PM PT — 586 turns
-
-**Original task:**
-
-```
-So this is a 317/297 RCA / 91 failure becasue these are huge mistakes to make in the first place becaseu to take action on LLMs should require more than just a cursory check to see if the LLM is up and working on a stale endpoint somewhere that has old, outdated information. So this needs a durable situation beyond what we've looked at thus far to avoid catastropically destroying LLMs, iterations, etc... I don't believe the current arrantement of changing the ruleset is sufficient enough. Research the community and see what needs to be done here and come up with a more effecrive game plan to m
-```
-
-**Ideas referenced:** #10600, #11316 [deployed], #11847, #11945, #11990, #12404, #13121, #13155, #13157, #13490, #139144, #139145, #14000, #16120, #16718, #178712, #178769, #18670, #18786, #18868, #18918, #19098, #19419, #1948, #2050, #2061, #2073, #2097 [resolved], #2207 [investigating], #2247 [resolved], #22601, #22820, #22930, #2307, #2314, #24498, #24635, #25212, #25477, #2549 [resolved], #25515, #25605, #2573 [resolved], #25765, #2578 [resolved], #2581 [resolved], #2582 [resolved], #25973, #26067, #26209, #2625, #2626, #2629 [deployed], #2631 [investigating], #26436, #26663, #27259, #27492, #27617, #27942, #28028, #28039 [deployed], #28040 [deployed], #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28205 [deployed], #28213 [proposed], #28226 [deployed], #28238 [deployed], #28244 [proposed], #28245 [rejected], #28246 [rejected], #28250 [rejected], #28252 [proposed], #28253 [proposed], #28254 [proposed], #28306 [deployed], #28313 [proposed], #28314 [proposed], #28315 [proposed], #28316 [proposed], #28317 [proposed], #28562, #28568, #28576, #28580, #28684, #28987, #29594, #29764, #29765, #29807, #30014, #30043, #30515, #30557, #31582, #31646, #32188, #32201, #32914, #32963, #33034, #33035, #33086, #33961, #34395, #34396, #34411, #34692, #34797, #35214, #35663, #36528, #36540, #36552, #36731, #6826
-
-**Last PICKUP PROMPT:**
-
-```
-ackups for every file touched.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787697242661 - LiteLLM tool-name mangling FIXED; fleet-truth ideas need executor follow-through
-
-Where we left off (verified 2026-08-26 14:24 PT):
-- FIXED AND LIVE-VERIFIED #28314 [deployed]: LiteLLM 1.91.1 translate_anthropic_tools_to_openai (adapters/transformation.py:753) mangled OpenAI-shaped tools into litellm_unnamed_tool_N with a corrupted parameters schema, which is what Cline reported as Invalid API Response. Two-part patch (name unwrap from the function wrapper, parameters unwrap without spilling wrapper keys) mounted read-only via the WINNING drop-in /etc/systemd/system/litellm.service.d/10-frugal.conf line 29
-- PROOF: live probe 14:21 PT returned HTTP 200 TOOL_NAMES ['list_files']; probes at 12:27, 12:45 and 13:11 PT all returned litellm_unnamed_tool_0. In-container tests: OpenAI-shape gives list_files with correct parameters, Anthropic-shape gives read_file unchanged (no regression). Mount confirmed by docker inspect Mounts and docker exec grep -c _emsu_fn returning 3
-- ALSO DEPLOYED: LITELLM_USE_CHAT_COMPLETIONS_URL_FOR_ANTHROPIC_MESSAGES=1 in the same drop-in; the Responses-API path was separately proven to drop function_call entirely (content null)
-- TRAP DOCUMENTED: the base systemd unit edit was SHADOWED by the 10-frugal.conf drop-in ExecStart override. Always patch the winning drop-in and verify with docker inspect Mounts plus docker exec grep, same class as #28252 [approved]
-- GATE B reconcile at 14:24 PT returned: #28313 [blocked] (status=approved dev_stage=impl_failed), #28314 [deployed], #28315 [executing] (drafting), #28316 [proposed] (idle), #28317 [executing] (drafting)
-- Records: bug library 2631 [resolved] with full reproduction; HANDOFF_NOTES 14:21 AKDT; backups 10-frugal.conf.bak-chatpath-20260826, litellm.service.bak-chatpath-20260826, config.yaml.bak-responses-optout-20260826, _router_core.py.bak-unnamed-tool-20260826
-
-Open threads to drive next:
-1. #28313 [blocked] - executor impl_failed on fleet-truth v2 (live-probe endpoint + freshness-stamped state file). Unblocker: retry the executor or hand-ship it per rule 267 GATE C
-2. #28315 [executing] - mechanical fleet-claim validator gate; confirm the executor lands it, hand-ship if it fails again
-3. #28317 [executing] - lane backtest harness; same follow-through
-4. #28316 [proposed] - canary decode-liveness quarantine + :8211 rung fix + retire :11506/:11507 (implements approved #28254 [approved] and #28252 [approved])
-5. #28314 [deployed] - optional follow-up: file the upstream LiteLLM issue with the in-container reproduction so the patch can eventually be dropped
-
-Reference IDs:
-- Ideas: #28313 [blocked], #28314 [deployed], #28315 [executing], #28316 [proposed], #28317 [executing]
-- Bug library: incident 2629 (round-1 RCA, resolved), incident 2631 (tool-name mangling, resolved)
-- Files touched: /etc/litellm/anthropic_adapters_transformation_patched.py (the fix), /etc/systemd/system/litellm.service.d/10-frugal.conf (mount + env), /etc/systemd/system/litellm.service, /etc/litellm/config.yaml, /etc/litellm/_router_core.py, /var/www/emtskills/HANDOFF_NOTES.md
-- Probes kept for reuse: /tmp/verify_glm52.py, /tmp/verify_full.py, /tmp/echo_upstream4.py
-
-# Reversal Log
-- "the tool-name mangling is a response-direction bug in the adapter" -> corrected: it is a REQUEST-direction bug in translate_anthropic_tools_to_openai, triggered only when tools arrive pre
-```
-
-### `1787517211429` — 8/26/2026, 3:05:12 PM PT — 440 turns
-
-**Original task:**
-
-```
-#CFA
-
-Pick up task #28031 [proposed] — CFA failure-log watchdog repair.
-
-Where we left off (verified 2026-08-23 11:25 PT):
-- Reversal findings: prior completion's 2 claims re-probed live and found fabricated:
-  (a) '72 of 88 tools missing type' — false. All 88 tools have legal type fields (0 missing/illegal/dupes).
-  (b) 'normalizeParamsSchema() fix' — false. grep -rn normalizeParamsSchema = zero hits. Never written to disk.
-- Confirmed-true claims: tickets.student_id is a slug; emails flowing (1,151 in 48h); voice heartbeat working; crons split emsuserver+cron.d.
-- Systemic correction landed:
-```
-
-**Ideas referenced:** #13120, #13437, #23477, #25185, #25888, #25914, #25973 [deployed], #25990, #26067 [deployed], #26071 [deployed], #27100, #27395, #27447, #27492 [deployed], #27690, #27698, #28031 [proposed], #28032 [proposed], #28048 [proposed], #28243 [proposed], #28305 [proposed], #4932, #5431, #7174, #9019, #9086, #9831
-
-**Last PICKUP PROMPT:**
-
-```
-deployed] + #28032 [deployed].
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #28031 [deployed] — CFA failure-log watchdog repair (done).
-
-Where we left off (verified 2026-08-26 2:02 PM AKDT):
-- #28031 [deployed] — event_time to created_at fix + zero-rung alarm fix + cron.d scheduling, verified live (13 log rows, both watchdogs scheduled Aug 23).
-- #28032 [deployed] — fictional-column INSERTs rewritten to real columns (failure_time, failure_class, model_attempts, error_message, source_script, raw_log_line), verified live.
-- Human-only decision resolved: cron_cfa_failure_watchdog.php IS scheduled and running.
-
-Open threads to drive next:
-None — both watchdog ideas are deployed and scheduled, and the human-only decision (schedule the failure watchdog) is resolved. A separate not-yet-approved idea for the CFA lockout stream sits in orchestrator_ideas awaiting Ruben approval; it is not a thread of this task.
-
-Reference IDs:
-- Ideas filed: #28031 [deployed], #28032 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_cfa_sms_watchdog.php, /var/www/emtskills/cron/cron_cfa_failure_watchdog.php, /var/www/emtskills/lib/cfa_health_hardening.php, /etc/cron.d/emsu-cfa-sms-watchdog, /etc/cron.d/emsu-cfa-failure-watchdog
-- Key tables: admin_portal.cfa_model_failure_log (13 rows, was 0), admin_portal.orchestrator_event_log
-
-# Reversal Log
-No reversals this window.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] #28048 deployed (gate map repair + end-to-end verify) — approved by Ruben
-- [x] #28305: widen detectLockoutIntent keyword list (21 keywords) + verify 9/9 hit, 0 false positive — DEPLOYED
-- [x] RECONCILE: #28031 + #28032 — verified deployed (13 log rows, records stamped deployed 2026-08-23)
-- [x] Independent read-back: event_time is only a docblock comment, created_at correct, both watchdogs cron.d scheduled
-- [x] Task #28031 COMPLETE — validation ALL PASSED, gate CLEAR, shipped
-- [ ] #28243: enrich lockout remediation with real lifecycle state — [proposed], separate stream, awaiting Ruben approval
-</task_progress>
-</attempt_completion>
-```

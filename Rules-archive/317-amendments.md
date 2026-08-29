@@ -447,3 +447,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - Claimed regime rendered POST_SEPT1 → corrected to before-September-1 | RCA bucket: insufficient probe | my grep matched my own newly-inserted clause text containing the same phra
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 18:12 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: frankenstein-routing-probe-20260829
+- RCA bucket: insufficient probe
+- Trigger pattern: Aggregating ok/traffic lines from a serving log while ignoring health/failure lines in the same file; presenting a survivor box's traffic dominance as design without classifying why the other configur
+- Reversal note: Amends rule 317 by ADDING numbered clause 12 (aggregation integrity for serving/routing tables). 2026-08-29 reversal: window shipped a 'BigMac dominant, routing as designed' table while its OWN same-window probes contained the contradiction: 5 of 8 pool upstreams dead (connection reset/timeout), GLM ring HTTP-200 but decode-dead (0 tokens in 20s; floor window 0/50 vs 30% floor), Julia crash-looping a different model than the registry claimed, adapter-log health lines (usable=1-3/4, DECODE_STALL x98, QUARANTINE x3) present in the same file that was aggregated for traffic counts but never surfaced. Clause 12 requires: (a) health evidence in an aggregated log is reported with the traffic counts, (b) rows whose endpoints failed a live probe this window are marked DOWN/DEGRADED in the same table, (c) zero-traffic pool members are a symptom to classify per rule 297 never silent omission, (d) registry annotations are stale by definition and the completion must reconcile against human-stated f
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 18:27 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787960052755
+- RCA bucket: insufficient probe
+- Trigger pattern: restored from a misleadingly-named backup after a removal, verified only with php -l + head, without re-running the deliverable-shaped grep
+- Reversal note: amends clause 3: after restoring a file from any snapshot, the restore is UNVERIFIED until a deliverable-shaped probe (the same grep that defines the deliverable, e.g. URL-targeted content check) is re-run on the restored file — php -l and head-reads are syntax/header evidence only and do not prove the restored substance. Backup filenames must reflect actual content (PRE-removal vs clean), never the intent of the operation that created them. Source: 2026-08-29 cancer-block re-entry from a backup named .bak-cancer-removed that actually held the pre-removal content.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

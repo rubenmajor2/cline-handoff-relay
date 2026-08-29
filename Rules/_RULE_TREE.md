@@ -99,7 +99,7 @@
 ## 🔬 Project Frankenstein & LLM Routing
 → Trigger: LLM routing question, model serving, spill ladder, frankenstein-llm, adapter, RunPod, context windows, cost
 → Fetch all: `clinerules_list_by_topic("frankenstein")`
-- **Architecture & fleet** — R: 40,44,45,51,74-76,84,86-89,121,122,138-142,146,148-155,161,189,190,196,200,204,212,215,217,219-221,223,227-232,236,237,250
+- **Architecture & fleet** — R: 40,44,45,51,74-76,84,86-89,121,122,138-142,146,148-155,161,189,190,196,200,204,212,215,217,219-221,223,227-232,236,237,250,324 (324=model capability claims must cite the official card; Qwen3.8-27B = 262K native / 1M extensible, never under-rate)
 - **Bug library (diagnose FIRST)** — R: 156, 278, 262 (2-strike tripwire), 305 (multi-angle sweep + induction + keyword-rich recording) + `bug_library_check_before_fix()`
 - **Federation/Doorman runbook** — R: 276 (consult runbook + bug library BEFORE diagnosing routing)
 - **Frankenstein Doctor (stuck window)** — R: 158,160,239 (Step 0b: Federation BEFORE bug_library)

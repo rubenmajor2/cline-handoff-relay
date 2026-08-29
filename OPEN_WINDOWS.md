@@ -6,14 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 10:36:52 AM PT | window: last 72h | 45 tasks | index total 951 (parsed 4, cached 947)
+Generated: 8/29/2026, 11:36:52 AM PT | window: last 72h | 46 tasks | index total 953 (parsed 5, cached 948)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788021587569` | 8/29/2026, 10:36:40 AM | 583 | 778KB | #GLM 5.3 Local |
-| `1788021977080` | 8/29/2026, 10:30:19 AM | 97 | 2176KB | #Various 2 |
-| `1788021866677` | 8/29/2026, 10:30:19 AM | 177 | 498KB | #ArgusVAPI CFA voice path |
-| `1788022793741` | 8/29/2026, 10:23:00 AM | 70 | 270KB | #Frankenstein LLM Routing Probe |
+| `1788027731969` | 8/29/2026, 11:36:40 AM | 129 | 351KB | #Overdue Grievances and Rule 317  |
+| `1788021866677` | 8/29/2026, 11:34:45 AM | 249 | 694KB | #ArgusVAPI CFA voice path |
+| `1788027890157` | 8/29/2026, 11:34:42 AM | 27 | 142KB | #/emtskills slowness |
+| `1788021977080` | 8/29/2026, 11:34:05 AM | 168 | 2439KB | #Various 2 |
+| `1788022793741` | 8/29/2026, 11:33:04 AM | 158 | 1779KB | #Frankenstein LLM Routing Probe |
+| `1788021587569` | 8/29/2026, 10:46:18 AM | 602 | 858KB | #GLM 5.3 Local |
 | `1788021695555` | 8/29/2026, 9:58:19 AM | 144 | 2186KB | #TDSHS OpenRecords |
 | `1788021480367` | 8/29/2026, 9:57:58 AM | 56 | 324KB | #Restart Storm |
 | `1787980519299` | 8/29/2026, 9:27:49 AM | 342 | 12997KB | #Various 2 |
@@ -54,13 +56,162 @@ Generated: 8/29/2026, 10:36:52 AM PT | window: last 72h | 45 tasks | index total
 | `1787764966133` | 8/26/2026, 3:27:15 PM | 586 | 1170KB | So this is a 317/297 RCA / 91 failure becasue these are huge mistakes to make in the first |
 | `1787517211429` | 8/26/2026, 3:05:12 PM | 440 | 6493KB | #CFA |
 | `1787705478563` | 8/26/2026, 1:46:51 PM | 217 | 759KB | #Argus |
-| `1787765271795` | 8/26/2026, 11:00:12 AM | 282 | 357KB | I am not going to check every single email. The email ideally is done correctly the first  |
 
 ---
 
 ## Per-window detail
 
-### `1788021587569` — 8/29/2026, 10:36:40 AM PT — 583 turns
+### `1788027731969` — 8/29/2026, 11:36:40 AM PT — 129 turns
+
+**Original task:**
+
+```
+#Overdue Grievances and Rule 317 
+
+OK for Oliver, he needs to actually fill out the form for the grievance, but can you first tell me whether or not he actually has finished the class or what's going on with him exactly?
+
+Also I need to know what you were talking about regarding the vision doorman. The vision doorman needs to be Qwen 3.8 27B (preferably) or Qwen 3.8 max. I asked you to check and see how we could get these working. They are supposed to be superior to Kimi K3 and Sonnet 5. Check with the community and see how you can make sure that these are working properly. They work just fine
+```
+
+**Ideas referenced:** #1807, #18329, #20549, #2544, #26908, #28034, #28118, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788021866677` — 8/29/2026, 11:34:45 AM PT — 249 turns
+
+**Original task:**
+
+```
+#ArgusVAPI CFA voice path
+
+So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
+
+--
+Done. The VAPI CFA voice path now runs DeepSeek a
+```
+
+**Ideas referenced:** #12584, #15815, #16844, #178798, #19100, #1912, #1965, #1998, #20495, #2168, #2640, #2642, #2654, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #6106
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788027890157` — 8/29/2026, 11:34:42 AM PT — 27 turns
+
+**Original task:**
+
+```
+#/emtskills slowness
+
+See emtskills slowness. /emtskills folder is spinning very slowly and needs to be fixed. I need you to review that file that is on the desktop the EMT skills slowness file on the desktop and then append to it after you resolve the issue.
+```
+
+**Ideas referenced:** #15815, #1912, #1998, #20495, #2168, #23133, #2342, #23945, #23952, #23954, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2640, #2642, #2654, #2659, #2662, #26712, #26713, #26932, #27691, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788021977080` — 8/29/2026, 11:34:05 AM PT — 168 turns
+
+**Original task:**
+
+```
+#Various 2
+
+RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
+```
+
+**Ideas referenced:** #16242, #166534, #17446, #178796, #18836, #19362, #22060, #25888, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #4518, #4929, #813528, #9086, #9168, #92400, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ rule updated: 317 (clause 3).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787960052755 — Cancer research info removed from admin_profile.php + stale 941 SMS suppression + consolidated tracking doc.
+
+Where we left off (verified 2026-08-29 11:30 PT):
+- Cancer research cards removed from admin_profile.php (URL-grep 0, php -l clean, </main>-></body>); test mirror also clean + web-reachable 200.
+- DO-NOT-RE-ADD guard header + deploy-guard idea #28703 [proposed] in place.
+- Truthful backups: clean-after-cancer-removed (0 URLs) + PREREMOVAL-cancer-was-present (5 URLs).
+- Stale SMS: executor stale checks suppressed, VR cron disabled, infra_alert dedup normalized. All with backups.
+- Tracking doc docs/ruben-open-issues-2026-08-29.md (5008 bytes, all 9 issues).
+
+Open threads to drive next:
+1. #28690 [executing] — Monitor executor-health + sms_delivery_log 24h: confirm zero stale alerts.
+2. #28700 [proposed] — Fix exam_override_rules.php gate1_payment_block join (int/varchar prefix collision -> Matthew Casas Exam 5 auto-deny), then re-evaluate override 1730.
+3. #28701 [proposed] — Wire troubleshooting-class email to chat + screen-share routing (3-attempt cap).
+4. #28703 [proposed] — Land the deploy guard that fails any write re-introducing cancer links into admin_profile.php.
+5. (human-only decision - no idea) Vicky: Matthew Exam 5 extension; ymaris card drop.
+
+Reference IDs:
+- Ideas: #28690 [executing], #28691 [executing], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28683 [proposed], #28612 [in_progress], #28613 [approved]
+- Tickets: 27852 (Seohoo) 27061 (Matthew) 28224 (ymaris)
+- Files touched: admin_profile.php, cron_executor_health_alert.php, lib/infra_alert.php, /etc/cron.d/cron_vr_progress_sms, docs/ruben-open-issues-2026-08-29.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788022793741` — 8/29/2026, 11:33:04 AM PT — 158 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Routing Probe
+
+Please pro Frankenstein LLM and tell me exactly which underlying LLM's have been used in the last six hours. I need you to dive into them according to cline rules. I do not care about how many turns frankenstein llm or frankenstein tools did. I need you to actually look inside each of those LLMs to see what individual LLMs are being used for iterationg in cline, argus, batch. I need to see them separated in a table. I need them actually probed. Do not give me stale or inaccurate info. Crazy I have to say that, but I need the actual info, not something stale or
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12314, #12365, #12430, #12477, #12618, #12689, #12708, #12824, #12872, #12878, #13108, #13202, #13703, #16163, #16265, #16304, #16718, #16844, #18312, #18326, #18868, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19338, #1965, #1968, #19686, #1969, #1970, #1972, #1973, #1998, #2050, #25097, #25150, #25185, #2537, #25764, #2579, #25991 [approved], #26617, #2664, #26908, #26923, #27100, #27259, #27634 [executing], #27635 [executing], #27652, #27933 [deployed], #28034, #28238, #28704 [proposed], #28705 [proposed], #28706 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ Qwen3.8 slander cannot recur.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #28705 [proposed] — Frankenstein routing RCA + repair drive (GLM floor, dead lanes, doorman swap, 317 strengthening).
+
+Where we left off (verified 2026-08-29 11:23 PT):
+- GLM 30% floor live but at 0/50: ring :8210 HTTP-200 yet decode-dead (verified: ssh_command curl chat/completions 0 bytes in 20.0s; floor window file glm_pct=0.0 vs floor_pct=30.0)
+- Pool collapsed to BigMac: 5/8 upstreams dead (verified: ssh_command adapter CANARY lines 11:05 PDT reset/timeout as quoted); Artemis 3x empty-200 quarantines; BigMac 4,096/4,119 by elimination
+- Julia = Qwen3.8-27B-FP8 now (NOT 235B), crash-looping (verified: ssh_command on-box ls ~/models + crash logs 10:32/11:00); registry julia-235b entry stale
+- Vision doorman swap only half-wired: config has qwen3.8-max but _router_core.py:5928-5973 hardcodes kimi/sonnet 50/50 (verified: ssh_command grep lines 5929/5961); 125+96 stale picks in 6h
+- Registry served_ctx raise 131072→262144 on all three Qwen3.8-27B lanes applied this window (verified: ssh_command grep post-patch; HF card via fetch: 262K native / 1M extensible); bug library entry 2664; clinerule 324 indexed
+- Rule 317 clause 12 added + amendment ledger recorded (aggregation integrity)
+
+Open threads to drive next:
+1. #28704 [proposed] — wire qwen3.8-max into doorman selection code + safe-restart + audit readback; NEEDS RUBEN DECISION: solo vs 50/50 with minicpm-v
+2. #28705 [proposed] — Frankenstein Doctor on GLM ring wedge + revive Claudia/Nero/Joshua tunnels + repair Julia crash-loop + raise --max-model-len to 262144 in serve scripts + consider removing stale Cesar/Cato pool members
+3. #28706 [proposed] — retire 8 zombie frankenstein-405b cron callers, remove registry row, verify 0 picks for 24h
+
+Reference IDs:
+- Ideas filed: #28704 [proposed], #28705 [proposed], #28706 [proposed] (all efficiency_priority=1; ids returned by create_idea this session, tags derived server-side by reconcile_ideas)
+- Ideas closed: none
+- Files touched: /etc/litellm/frankenstein_registry.yaml (+ .bak-2664-20260829), ~/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, ~/Documents/Cline/Rules-archive/324-model-capability-claims-cite-the-card.md, ~/Documents/Cline/Rules/_RULE_TREE.md
+
+# Reversal Log
+- 'fleet healthy, BigMac dominant by design' → corrected: pool collapsed 5/8 dead, BigMac last survivor | insufficient probe | rule 317 clause 12 added (317-reversal-triggers-297-and-rule-update.md, amendment ledger recorded)
+- 'julia-235b + frankenstein-405b rows in served table' → corrected: Julia runs Qwen3.8-27B-FP8 crash-looping; 405B nonexistent since 2026-07-19 | stale assumption | rule 317 clause 12(d) (same amendment)
+- 'GLM barely used (20 reqs)' without mechanism → corrected: 30% floor armed but ring decode-dead, window 0/50 | insufficient probe | rule 317 clause 12 (same amendment)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] RCA complete: GLM floor 0/50 (ring decode-dead), pool collapse 5/8 dead, Julia crash-looping Qwen3.8-27B-FP8, doorman half-wired, Artemis quarantines, 405b zombies
+- [x] Rule 317 strengthened: amendment ledger + numbered clause 12 + reindexed
+- [x] Qwen3.8-27B capability: HF card 262K native / 1M extensible confirmed; bug library 2664; registry caps raised; clinerule 324 indexed
+- [x] Filed #28704/#28705/#2870
+```
+
+### `1788021587569` — 8/29/2026, 10:46:18 AM PT — 602 turns
 
 **Original task:**
 
@@ -78,88 +229,40 @@ Please make sure that you are consulting the bug library as well as updating it 
 Cline just killed my window for no reason at all it's over which is really really annoying about GLM 5.3. It was a subsequent window which you should have some information on in your hand off notes ho
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12672, #12824, #12872, #12878, #13202, #13832, #15815, #16163, #16265, #16304, #16680, #16844, #1754, #1755, #178798, #18312, #18326, #1912, #1986, #1998, #20495, #2050 [investigating], #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25097, #2537, #2569 [resolved], #25764, #2603, #2626 [investigating], #2640, #26400, #2641 [resolved], #2642 [resolved], #2644 [resolved], #2645 [resolved], #2647 [resolved], #2650 [resolved], #2653 [resolved], #2654 [investigating], #2656 [resolved], #2659 [investigating], #2662, #2663, #26712, #26713, #26908, #26923, #26932, #27259, #28034, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28586, #28596, #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #28693 [proposed], #45425
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788021977080` — 8/29/2026, 10:30:19 AM PT — 97 turns
-
-**Original task:**
-
-```
-#Various 2
-
-RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
-```
-
-**Ideas referenced:** #16242, #166534, #17446, #178796, #19362, #22060, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #4518, #4929, #813528, #9086, #9168, #92400, #9339
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12672, #12824, #12872, #12878, #13202, #13832, #15815, #16163, #16265, #16304, #16680, #16844, #1754, #1755, #178798, #18312, #18326, #1912, #1986, #1998, #20495, #2050 [investigating], #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25097, #25185, #2537, #2569 [resolved], #25764, #2603, #2626 [investigating], #2640, #26400, #2641 [resolved], #2642 [resolved], #2644 [resolved], #2645 [resolved], #2647 [resolved], #2650 [resolved], #2653 [resolved], #2654 [investigating], #2656 [resolved], #2659 [investigating], #2662 [deployed], #2663 [deployed], #26712, #26713, #26908, #26923, #26932, #27100, #27259, #28034, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28586, #28596, #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #28693 [proposed], #28696 [proposed], #45425
 
 **Last PICKUP PROMPT:**
 
 ```
-lse-stale)
-- [ ] Write consolidated tracking doc
-- [ ] Validate + complete with PICKUP PROMPT
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1788021866677` — 8/29/2026, 10:30:19 AM PT — 177 turns
-
-**Original task:**
-
-```
-#ArgusVAPI CFA voice path
-
-So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
-
---
-Done. The VAPI CFA voice path now runs DeepSeek a
-```
-
-**Ideas referenced:** #12584, #15815, #16844, #178798, #19100, #1912, #1965, #1998, #20495, #2168, #2640, #2642, #2654, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #6106
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788022793741` — 8/29/2026, 10:23:00 AM PT — 70 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Routing Probe
-
-Please pro Frankenstein LLM and tell me exactly which underlying LLM's have been used in the last six hours. I need you to dive into them according to cline rules. I do not care about how many turns frankenstein llm or frankenstein tools did. I need you to actually look inside each of those LLMs to see what individual LLMs are being used for iterationg in cline, argus, batch. I need to see them separated in a table. I need them actually probed. Do not give me stale or inaccurate info. Crazy I have to say that, but I need the actual info, not something stale or
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12430, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #18312, #18326, #19686, #25097, #2537, #26908, #26923, #27259, #28034
-
-**Last PICKUP PROMPT:**
-
-```
-ng; this is a read-only probe.
+oor to engage within the hour.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Frankenstein LLM routing probe: underlying-LLM table for last 6h by surface (DONE this session).
 
-Where we left off (verified 2026-08-29 10:22 PT):
-- Probe complete. BigMac gpt-oss-120b (10.100.0.19:8000) served 99.4% of adapter traffic (4,096 of 4,119 resolved reqs last 6h; evidence: /tmp/frankenstein_tools_adapter.log lane split + live /v1/models probe returning gpt-oss-120b).
-- Cline=2,369, Batch/Executor/Codegen=3,441, Argus=52 on BigMac. GLM-5.3-15pct Hex ring=20 (18 batch, 2 cline). Artemis gpt-oss-120b=3. Cloud spill: deepseek-v4-pro 1,212, glm-5.2 274, kimi-k3 125, claude-sonnet-5-vision 96.
-- Dead tables found (empty in window): llm_router_audit_log, litellm_spend_log, llm_request_log, frankenstein_routing_log, liteLLM_access_log, fleet_llm_probe_log. Live truth = audit log + adapter log + direct HTTP probes.
+Pick up task #1787984810000 — GLM-5.3 local primary rung: 0.26.1 cutover complete, speed re-bench + pick-rate watch next.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. None — all requested work completed this session. (Read-only probe; no buildable follow-up deferred.)
+Where we left off (verified 2026-08-29 10:36 PT):
+- Ring SERVING on vLLM 0.26.1rc1.dev1231 (eugr/spark-vllm:latest, container fb021bafaf64, up since 10:18 PT): FULL cudagraphs, kv fp8, KV cache 2.18M tokens, 8/8 lanes. Cutover idea #28622 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=idle for the GLM-5.3 durable-fix cutover idea at 10:36 PT this session).
+- Concurrent corruption GONE: uni_7/8/9 all 'Paris' finish=stop (bug library incident 2663, resolved).
+- Ring was dark 5.7h due to orphaned watchdog pause (bug library incident 2662, resolved); watchdog v2 re-armed single-owner PID 256252, @reboot cron restored, WOPR watchdog stays STOPPED per bug library incident 2659 prevention guidance.
+- First x8 bench 5.0 tok/s agg was CONTAMINATED by live load — no speed verdict yet.
+
+Open threads to drive next:
+1. #28693 [proposed] — run the clean warm-idle x8 re-bench (/tmp/x8c.sh on cato; first check running=0 in the engine stats) + 60-min sustained counter-delta (/tmp/cd2.sh); compare vs 12.8 tok/s PIECEWISE baseline; record the measured result in the tracker doc.
+2. #28696 [proposed] — move the uni/x8/cd2 verification payload set out of /tmp to a durable path on cato + README (filler is by design; use the _200 variants).
+3. #28693 [proposed] — check /tmp/emsu_glm_floor_window.json glm_pct each hour; if it stalls near 2% while the ring is healthy, read the adapter log for YIELD_FLOOR/OVERLOAD pairs (the prior window's threshold change FRANK_GLM_AFFINITY_YIELD_RUNNING=8 is expected to prevent cancels — watch that it holds under load).
+4. (human-only decision — no idea) glm-fanout-proxy.service on WOPR is still running unrouted (root-owned; stopping it needs Ruben's sudo password; harmless until then).
 
 Reference IDs:
-- Ticket: none
-- Ideas filed: none this session (read-only probe)
-- Files touched (server, read-only): /tmp/emsu_router_audit.log, /tmp/frankenstein_tools_adapter.log, /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, admin_portal.llm_call_log
+- Ideas filed: #28693 [proposed], #28696 [proposed]
+- Ideas closed: #28622 [deployed], #28605 [deployed], #28615 [deployed], #28606 [deployed], #28621 [deployed] (all verified via reconcile_ideas this session: status=deployed dev_stage=idle)
+- Bug library incidents (frankenstein_router_incidents, NOT orchestrator ideas): 2662 resolved, 2663 resolved (this window); 2654, 2656, 2659 context (prior windows)
+- Files touched: WOPR /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (appended), HANDOFF_NOTES.md (2 entries), cato ~/glm53_launch_cfg_pp6.sh (+backup .bak-pre026-r2-20260829), ~/bin/glm53_relaunch_seq128.sh (flock-line repair), ~/bin/glm53_026_cutover.sh (executed), watchdog @reboot crontab restored, /etc/systemd/system/frankenstein-tools.service.d/zzz...-glm-yield-thr-20260829.conf (live from prior window, env var read back via systemctl show)
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+# Reversal Log
+- "uni_8/uni_9 concurrent corruption still present on 0.26.1" → corrected: the 'marsh router' text was the payload's OWN intentional filler (the corruption detector), and the empty content was max_tokens=60 truncation; the _200 re-run returned 'Paris' for all three | RCA bucket: insufficient probe | follow-up tracked: idea #28696 [proposed] (durable payload home + filler documentation so the misread cannot recur)
+- "x8 bench 5.0 tok/s = slower than PIECEWISE" → corrected: the bench ran while 5-13 live requests shared the ring, so it is not comparable to the 12.8 idle baseline; no speed verdict is possible from it | RCA bucket:
 ```
 
 ### `1788021695555` — 8/29/2026, 9:58:19 AM PT — 144 turns
@@ -1983,23 +2086,5 @@ approved, but why do i need to do this, isn't this a bug and should have been ap
 ```
 
 **Ideas referenced:** #1399, #1523, #1525, #1526, #1527, #1528, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1536, #1537, #1538, #1540, #1566, #1567, #1568, #1570, #1573, #1583, #1594, #1612, #1615, #1616, #1632, #1633, #1634, #1638, #1641, #1642, #1686, #1687, #1688, #1711 [deployed], #1712, #1715, #1725, #1727, #1730, #1731, #1740, #1741, #1745, #1746, #1758, #1759, #1763, #2167, #23982, #24645, #24723, #25185, #26663, #27100, #27863, #27864, #27865, #27866, #27867, #27868, #27869, #28122 [proposed], #28127, #28132, #28133 [proposed], #28134 [proposed], #28155 [deployed], #28205 [proposed], #28214 [proposed], #28215, #28221 [deployed], #28225 [proposed], #28226 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787765271795` — 8/26/2026, 11:00:12 AM PT — 282 turns
-
-**Original task:**
-
-```
-I am not going to check every single email. The email ideally is done correctly the first time AND the system is not slowed down unnecessarily. I DON'T quite like the proposed solution either. It addresses my point, but then does not completely solve the underlying issue either. Consult the community instead
-
-Direct answer: no, the current Judge system is not the best solution, and I pulled the live data to prove it rather than just asserting it.
-
-## What the actual production log shows
-
-truth_judge_log has 3,393 total judge calls all-time, ramping from near-zero before 08-19 to 1,000-1,200 ca
-```
-
-**Ideas referenced:** #16069, #178760, #2628 [deployed], #26663, #27100, #27942, #28043, #28044, #28213, #28255 [proposed], #28306 [deployed], #28307 [proposed], #28308 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

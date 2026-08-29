@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 9:22:58 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 2, cached 943)
+Generated: 8/29/2026, 9:36:52 AM PT | window: last 72h | 40 tasks | index total 945 (parsed 1, cached 944)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787980519299` | 8/29/2026, 9:22:35 AM | 335 | 12700KB | #Various 2 |
+| `1787980519299` | 8/29/2026, 9:27:49 AM | 342 | 12997KB | #Various 2 |
 | `1787996122566` | 8/29/2026, 9:18:10 AM | 88 | 441KB | #SMS/Email Notifications Externships/NREMT and End of Class |
 | `1787995785994` | 8/29/2026, 4:22:16 AM | 544 | 870KB | #GLM 5.3 Local |
 | `1787985551437` | 8/29/2026, 3:52:07 AM | 742 | 2360KB | #Argus |
@@ -55,7 +55,7 @@ Generated: 8/29/2026, 9:22:58 AM PT | window: last 72h | 40 tasks | index total 
 
 ## Per-window detail
 
-### `1787980519299` — 8/29/2026, 9:22:35 AM PT — 335 turns
+### `1787980519299` — 8/29/2026, 9:27:49 AM PT — 342 turns
 
 **Original task:**
 
@@ -70,9 +70,44 @@ See the following screenshot and put this person on the DNC list Also, investiga
 **Last PICKUP PROMPT:**
 
 ```
-r.md (rule 07), run order 66.\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1787960052755 — Various 2 RCA: Casas multi-class question, per-student delay causation, CFA response quality, exam-ext flag false-fire.\n\nWhere we left off (probed 2026-08-29 09:19 AM PT):\n- #28612 [executing] open work: dead OPENAI_API_KEY (401) at cron_email_responder.php line 3671/3760; rotate or reroute.\n- #28613 [executing] open work: cancel fast-path exists post-classifier; move pre-classifier.\n- #28643 [deployed]: handler carve-out + email-first resolution + flag cap, php -l clean, read back.\n- RCA delivered: two distinct Casas students (ymaris 26424T pre-start cancelled+DNC; Matthew 26914T-29 mid-course exam-blocked) + unrelated Trippy Speakz thread; no double enrollment.\n- Ticket 28224 loop broken via [EXAM-EXT-RESOLVED] internal comment.\n\nOpen threads to drive next:\n1. #28612 [executing] - rotate OpenAI key or reroute classifier to frankenstein-llm; then watch failure rate fall.\n2. #28613 [executing] - DNC/cancellation short-circuit before LLM call.\n3. (human-only decision - no idea) Vicky: remove ymaris card profile in Authorize.net + process drop; she is DNC.\n4. #28643 [deployed] - watch next two cron cycles for zero new EXAM-EXT-FLAG on 28224.\n\nReference IDs:\n- Ideas filed: #28643 [deployed]\n- Ideas filed: #28612 [executing]\n- Ideas filed: #28613 [executing]\n- Tickets: 28224, 27061\n- Files touched: lib/ai_ticket_agent_exam_extension_handler.php, lib/ExternshipKnowledgePack.php\n\nAfter the next steps, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════"}
-</arguments>
-</use_mcp_tool>
+nded, per rule 317 clause 11).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787960052755 — Various 2 RCA: Casas multi-class question, per-student delay causation, CFA response quality, exam-ext flag false-fire.
+
+Where we left off (probed 2026-08-29 09:25 AM PT):
+- #28612 [executing] open work: dead OPENAI_API_KEY (401) at cron_email_responder.php line 3671/3760; rotate or reroute.
+- #28613 [executing] open work: cancel fast-path exists post-classifier; move pre-classifier.
+- RCA delivered: two distinct Casas students (ymaris 26424T pre-start cancelled+DNC; Matthew 26914T-29 mid-course exam-blocked) + unrelated Trippy Speakz thread; no double enrollment.
+- Ticket 28224 loop broken via [EXAM-EXT-RESOLVED] internal comment.
+- Handler change live in lib/ai_ticket_agent_exam_extension_handler.php (payment carve-out + email-first resolution + flag cap), php -l clean, read back; idea 28643 tag in Reference IDs.
+
+Open threads to drive next:
+1. #28612 [executing] - rotate OpenAI key or reroute classifier to frankenstein-llm; then watch failure rate fall.
+2. #28613 [executing] - DNC/cancellation short-circuit before LLM call.
+3. (human-only decision - no idea) Vicky: remove ymaris card profile in Authorize.net + process drop; she is DNC.
+
+Reference IDs:
+- Ideas: #28612 [executing]
+- Ideas: #28613 [executing]
+- Tickets: 28224, 27061
+- Files touched: lib/ai_ticket_agent_exam_extension_handler.php, lib/ExternshipKnowledgePack.php
+- After the next steps, append to cline_task_ledger.md (rule 07), run order 66.
+- Ideas: #28643 [deployed]
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] RCA evidence complete (three threads separated, per-student assignment maps)
+- [x] #28643 deployed + stamped
+- [x] #28612 root cause (dead OpenAI key)
+- [x] Loop broken on 28224
+- [x] Reconcile tags verbatim
+- [x] Validate: ALL PASSED
+- [x] Gate clear + attempt_completion shipped
+</task_progress>
+</attempt_completion>
 ```
 
 ### `1787996122566` — 8/29/2026, 9:18:10 AM PT — 88 turns

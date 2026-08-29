@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 11:36:52 AM PT | window: last 72h | 46 tasks | index total 953 (parsed 5, cached 948)
+Generated: 8/29/2026, 12:36:53 PM PT | window: last 72h | 47 tasks | index total 954 (parsed 3, cached 951)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788027731969` | 8/29/2026, 11:36:40 AM | 129 | 351KB | #Overdue Grievances and Rule 317  |
-| `1788021866677` | 8/29/2026, 11:34:45 AM | 249 | 694KB | #ArgusVAPI CFA voice path |
-| `1788027890157` | 8/29/2026, 11:34:42 AM | 27 | 142KB | #/emtskills slowness |
-| `1788021977080` | 8/29/2026, 11:34:05 AM | 168 | 2439KB | #Various 2 |
+| `1788027890157` | 8/29/2026, 12:15:19 PM | 83 | 325KB | #/emtskills slowness |
+| `1788021977080` | 8/29/2026, 12:15:06 PM | 243 | 2637KB | #Various 2 |
+| `1788021866677` | 8/29/2026, 12:08:38 PM | 400 | 1017KB | #ArgusVAPI CFA voice path |
+| `1788029135575` | 8/29/2026, 12:04:36 PM | 114 | 254KB | #GLM 5.3 Local/Frankenstein-LLM Routing |
+| `1788027731969` | 8/29/2026, 12:04:22 PM | 322 | 596KB | #Overdue Grievances and Rule 317  |
 | `1788022793741` | 8/29/2026, 11:33:04 AM | 158 | 1779KB | #Frankenstein LLM Routing Probe |
 | `1788021587569` | 8/29/2026, 10:46:18 AM | 602 | 858KB | #GLM 5.3 Local |
 | `1788021695555` | 8/29/2026, 9:58:19 AM | 144 | 2186KB | #TDSHS OpenRecords |
@@ -61,23 +62,42 @@ Generated: 8/29/2026, 11:36:52 AM PT | window: last 72h | 46 tasks | index total
 
 ## Per-window detail
 
-### `1788027731969` — 8/29/2026, 11:36:40 AM PT — 129 turns
+### `1788027890157` — 8/29/2026, 12:15:19 PM PT — 83 turns
 
 **Original task:**
 
 ```
-#Overdue Grievances and Rule 317 
+#/emtskills slowness
 
-OK for Oliver, he needs to actually fill out the form for the grievance, but can you first tell me whether or not he actually has finished the class or what's going on with him exactly?
-
-Also I need to know what you were talking about regarding the vision doorman. The vision doorman needs to be Qwen 3.8 27B (preferably) or Qwen 3.8 max. I asked you to check and see how we could get these working. They are supposed to be superior to Kimi K3 and Sonnet 5. Check with the community and see how you can make sure that these are working properly. They work just fine
+See emtskills slowness. /emtskills folder is spinning very slowly and needs to be fixed. I need you to review that file that is on the desktop the EMT skills slowness file on the desktop and then append to it after you resolve the issue.
 ```
 
-**Ideas referenced:** #1807, #18329, #20549, #2544, #26908, #28034, #28118, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #9086, #9168, #9339
+**Ideas referenced:** #15815, #1912, #1998, #20495, #2168, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2640, #2642, #2654, #2659, #2662, #26712, #26713, #26932, #27691, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788021866677` — 8/29/2026, 11:34:45 AM PT — 249 turns
+### `1788021977080` — 8/29/2026, 12:15:06 PM PT — 243 turns
+
+**Original task:**
+
+```
+#Various 2
+
+RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
+```
+
+**Ideas referenced:** #15877, #16242, #166534, #17446, #178796, #18836, #19362, #22060, #25888, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #4518, #4929, #813528, #9086, #9168, #92400, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ Update idea statuses to [deployed]
+- [ ] Re-validate + attempt_completion with PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
+```
+
+### `1788021866677` — 8/29/2026, 12:08:38 PM PT — 400 turns
 
 **Original task:**
 
@@ -90,70 +110,87 @@ So the previous window kind of died on us. So what I will need is for you to ess
 Done. The VAPI CFA voice path now runs DeepSeek a
 ```
 
-**Ideas referenced:** #12584, #15815, #16844, #178798, #19100, #1912, #1965, #1998, #20495, #2168, #2640, #2642, #2654, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #6106
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788027890157` — 8/29/2026, 11:34:42 AM PT — 27 turns
-
-**Original task:**
-
-```
-#/emtskills slowness
-
-See emtskills slowness. /emtskills folder is spinning very slowly and needs to be fixed. I need you to review that file that is on the desktop the EMT skills slowness file on the desktop and then append to it after you resolve the issue.
-```
-
-**Ideas referenced:** #15815, #1912, #1998, #20495, #2168, #23133, #2342, #23945, #23952, #23954, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2640, #2642, #2654, #2659, #2662, #26712, #26713, #26932, #27691, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788021977080` — 8/29/2026, 11:34:05 AM PT — 168 turns
-
-**Original task:**
-
-```
-#Various 2
-
-RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
-```
-
-**Ideas referenced:** #16242, #166534, #17446, #178796, #18836, #19362, #22060, #25888, #27100, #28118, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #4518, #4929, #813528, #9086, #9168, #92400, #9339
+**Ideas referenced:** #12584, #15815, #16844, #178798, #178802, #19100, #1912, #1965, #1998, #20495, #2168, #23945, #25185, #2640, #2642, #2654, #2666 [deployed], #26712, #26713, #26932, #27100, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #28710 [proposed], #28711 [proposed], #28712 [proposed], #28716 [proposed], #6106
 
 **Last PICKUP PROMPT:**
 
 ```
- rule updated: 317 (clause 3).
+[proposed], #28716 [proposed].
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1787960052755 — Cancer research info removed from admin_profile.php + stale 941 SMS suppression + consolidated tracking doc.
 
-Where we left off (verified 2026-08-29 11:30 PT):
-- Cancer research cards removed from admin_profile.php (URL-grep 0, php -l clean, </main>-></body>); test mirror also clean + web-reachable 200.
-- DO-NOT-RE-ADD guard header + deploy-guard idea #28703 [proposed] in place.
-- Truthful backups: clean-after-cancer-removed (0 URLs) + PREREMOVAL-cancer-was-present (5 URLs).
-- Stale SMS: executor stale checks suppressed, VR cron disabled, infra_alert dedup normalized. All with backups.
-- Tracking doc docs/ruben-open-issues-2026-08-29.md (5008 bytes, all 9 issues).
+Pick up task #1788021866677 — VAPI CFA voice on Qwen 3.8 27B + DeepSeek assessment
+
+Where we left off (verified 2026-08-29 12:06 PT):
+- qwen38-27b-voice LiteLLM lane LIVE: openrouter/qwen/qwen3.8-27b, reasoning disabled at lane level (verified: /tmp/verify_qwen38_voice.php battery returned T1-T5 all PASS http=200 finish=stop reasoning=0 avg_ms=1686; tool probe returned finish_reason=tool_calls with spoken filler at 1796ms, $0.0006/call).
+- All 8 caller-facing Vapi assistants on custom-llm (verified: vapi_list_assistants run 2026-08-29 12:05 PT listed 12 assistants; 5 lines read Model qwen38-27b-voice, 3 lines read Model deepseek-v4-pro-voice, 0 lines anthropic).
+- qwen3.8-max DISQUALIFIED for voice (verified: LiteLLM call to openrouter/qwen/qwen3.8-max with reasoning.enabled=false returned HTTP 400 body 'Reasoning is mandatory for this endpoint and cannot be disabled').
+- 297 RCA: local Qwen backends all DOWN (verified: the three curl probes quoted in the Reversal Log); fallback-masquerade diagnosis recorded in bug library under problem_key qwen38_lane_fallback_masquerade_2026_08_29.
+- Rule-302 sweep complete (verified: grep -rn for the raw key across /var/www/emtskills --include='*.php' excluding .bak and secrets.php returned wc -l = 0; php -l passed on all 22 patched files; require secrets.php returned constant length 36).
+- #28710 [deployed], #28711 [deployed], #28712 [proposed], #28716 [proposed].
 
 Open threads to drive next:
-1. #28690 [executing] — Monitor executor-health + sms_delivery_log 24h: confirm zero stale alerts.
-2. #28700 [proposed] — Fix exam_override_rules.php gate1_payment_block join (int/varchar prefix collision -> Matthew Casas Exam 5 auto-deny), then re-evaluate override 1730.
-3. #28701 [proposed] — Wire troubleshooting-class email to chat + screen-share routing (3-attempt cap).
-4. #28703 [proposed] — Land the deploy guard that fails any write re-introducing cancer links into admin_profile.php.
-5. (human-only decision - no idea) Vicky: Matthew Exam 5 extension; ymaris card drop.
+1. #28712 [proposed] — set disable_spend_logs=false in /etc/litellm/config.yaml, safe-restart, produce 7-day per-model spend breakdown so the DeepSeek cost question is answered with data.
+2. #28716 [proposed] — restore the 3 down local Qwen boxes (claudia :11521, joshua :8001, nero :11525) so free-local lanes can serve again.
+3. (human-only decision — no idea) Whether to also move Eric/Katie/Ronald (the 108-tool main trio) from deepseek-v4-pro-voice to qwen38-27b-voice now that the lane is verified, or A/B them under real call traffic first.
 
 Reference IDs:
-- Ideas: #28690 [executing], #28691 [executing], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28683 [proposed], #28612 [in_progress], #28613 [approved]
-- Tickets: 27852 (Seohoo) 27061 (Matthew) 28224 (ymaris)
-- Files touched: admin_profile.php, cron_executor_health_alert.php, lib/infra_alert.php, /etc/cron.d/cron_vr_progress_sms, docs/ruben-open-issues-2026-08-29.md
+- Ideas: #28710 [deployed], #28711 [deployed], #28712 [proposed], #28716 [proposed]
+- Bug library: frankenstein_router_incidents problem_key qwen38_lane_fallback_masquerade_2026_08_29, status resolved
+- Files touched: /etc/litellm/config.yaml (backup bak-pre-qwen38-voice-20260829-1159), /var/www/emtskills/config/secrets.php, 21 web files patched for VAPI key, Vapi assistants b2183071/6ee87bdb/cf47f039/f54b2a59/3e55fdaa
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
+<task_progress>
+- [x] Bug library gate: NOVEL_SYMPTOM, session gate OPENED
+- [x] 297 RCA: router picked claudia correctly; 'router subverts lanes' was WRONG (fallback-by-design). Reversal logged + rule 317 amended on disk.
+- [x] Rule 315: ALL 3 local Qwen 3.8 backends DOWN; artemis-120b fallback ALIVE
+- [x] qwen3.8-27b-cloud + reasoning:OFF → clean speech, $0.0003/call. VOICE-READY.
+- [x] qwen3.8-max: OpenRouter REFUSES reasoning disable. DISQUALIFIED for voice.
+- [x] Tool calling on 27B: tool_calls + spoken filler, 1.8s. VAPI-READY.
+- [x] qwen38-27b-voice lane LIVE: stop, 0 reasoning tokens, 1.98s, $0.0004/call
+- [x] Rule-302 sweep COMPLETE: 22 files, lint clean, 0 raw hits
+- [x] Cutover COMPLETE: 5 assistants anthropic→qwen38-27b-voice (verified)
+- [x] Voice battery: 5/5 PASS, avg 1686ms, 0 reasoning tokens
+- [x] Bug libra
 ```
+
+### `1788029135575` — 8/29/2026, 12:04:36 PM PT — 114 turns
+
+**Original task:**
+
+```
+#GLM 5.3 Local/Frankenstein-LLM Routing
+
+Combine all below analysis top part is probably more correct than bottom part, but all need addressing and possibly reprobing. You may need also to create a tracking document for your reference. 
+
+Go ahead and judge the speed. 
+
+OK we have a problem with this 30% thing it's just being used as an excuse to not use the GLM ring. The idea behind 30% was to it ensure that the GLM 5.3 was actually picked. And now what I'm seeing is that only the 120 B is being picked. Which is kind of crazy I'm not exactly what we were intending at all in the first place so 
+```
+
+**Ideas referenced:** #11316, #12584, #13831, #13874, #1807, #1912, #19903, #2050, #2168, #2174, #25185, #25764, #2582, #26400, #2647, #2653, #2654, #2659, #2662, #2663, #2665 [deployed], #26932, #27243, #28586, #28596, #28622, #28704 [proposed], #28705 [proposed], #28706 [proposed], #45425
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788027731969` — 8/29/2026, 12:04:22 PM PT — 322 turns
+
+**Original task:**
+
+```
+#Overdue Grievances and Rule 317 
+
+OK for Oliver, he needs to actually fill out the form for the grievance, but can you first tell me whether or not he actually has finished the class or what's going on with him exactly?
+
+Also I need to know what you were talking about regarding the vision doorman. The vision doorman needs to be Qwen 3.8 27B (preferably) or Qwen 3.8 max. I asked you to check and see how we could get these working. They are supposed to be superior to Kimi K3 and Sonnet 5. Check with the community and see how you can make sure that these are working properly. They work just fine
+```
+
+**Ideas referenced:** #1807, #18329, #20549, #2544, #26908, #28034, #28118, #28307, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #28714 [deployed], #9086, #9168, #9339
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788022793741` — 8/29/2026, 11:33:04 AM PT — 158 turns
 

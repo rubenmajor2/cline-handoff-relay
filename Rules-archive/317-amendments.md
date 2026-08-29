@@ -467,3 +467,33 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: amends clause 3: after restoring a file from any snapshot, the restore is UNVERIFIED until a deliverable-shaped probe (the same grep that defines the deliverable, e.g. URL-targeted content check) is re-run on the restored file — php -l and head-reads are syntax/header evidence only and do not prove the restored substance. Backup filenames must reflect actual content (PRE-removal vs clean), never the intent of the operation that created them. Source: 2026-08-29 cancer-block re-entry from a backup named .bak-cancer-removed that actually held the pre-removal content.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 18:56 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: glm53-routing-rca-20260829
+- RCA bucket: stale assumption
+- Trigger pattern: agent repeats "ring wedged / decode-dead / floor can never be satisfied" from a state file or prior-window claim without a this-window decode probe, after intervening repairs shipped
+- Reversal note: Amends clause 12 (aggregation integrity): adds the STALE-WEDGE-CLAIM INHERITANCE failure — a "wedged/decode-dead" verdict recorded in a state file, floor window, or prior-window completion is a TIMESTAMPED HYPOTHESIS that expires the moment any repair ships (e.g. the 2026-08-29 00:33 PIECEWISE fix and 10:18 vLLM 0.26.1 cutover). Multiple agents inherited "GLM ring wedged, floor can never be satisfied" from /tmp/emsu_glm_floor_window.json glm_pct=0.0 and a prior window's probe, and repeated it AFTER the ring was live-verified serving (11:47 PT: chat completion 6.4s, CANARY DECODE_LIVE 7.17 tok/s). A wedge claim now requires a decode probe run THIS window AND a check of the repair timeline (bug library + tracker doc) — a floor-percentage file is bookkeeping, never wedge evidence.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 18:59 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788021977080
+- RCA bucket: insufficient probe
+- Trigger pattern: Recording per-model benchmark results by request name only, without capturing which backend actually served each call, on a gateway that performs silent model substitution.
+- Reversal note: Amends clause 1 (never recite LLM/fleet/routing state; probe the live source). Clause 1 said probe the live SOURCE but did not say that the model NAME in a request is not evidence of which model SERVED it. A vision bench on 2026-08-29 recorded per-lane character counts (claudia-qwen38-27b 303 chars, qwen3.8-max 2668) as if the named lane produced them; header probing showed the router's 50/50 doorman had rewritten every one of those calls to a different model, so every number in that bench measured the same two substitutes. Clause 1 now requires: for ANY per-model measurement or serving claim, capture the x-litellm-model-api-base response header (or equivalent backend attribution) in the SAME call, and repeat the call at least twice - a single sample cannot distinguish a stable route from a coin flip. A bench without backend attribution is not a bench of the models named in it.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 19:06 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788021866677
+- RCA bucket: insufficient probe
+- Trigger pattern: Response model field differs from requested LiteLLM lane name; agent concludes 'silent substitution' without reading /tmp/emsu_router_audit.log first
+- Reversal note: Amends clause 2 (acquisition gate) via bug library #2666 case: before claiming a router/model substitution, the ROUTER AUDIT LOG (/tmp/emsu_router_audit.log) is the required probative artifact — it records the actual pick with reason. A response whose model field differs from the requested lane is the FALLBACK LADDER speaking, not the router; classify the backend per rule 315 (refused/timeout = down) before naming any substitution. Without the audit-log read, the substitution claim is a 297-class fabrication risk.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

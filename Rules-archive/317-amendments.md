@@ -437,3 +437,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: amends clause 9: code changes applied by batch patchers/sed must get the same consumer re-run as permission changes (php -l plus class-load of every patched file) before any live claim. The 2026-08-28 EmailClassifier.php:1186 parse error went out because lint was not re-run after the final sed edit.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 07:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787985551437
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - Claimed regime rendered POST_SEPT1 → corrected to before-September-1 | RCA bucket: insufficient probe | my grep matched my own newly-inserted clause text containing the same phra
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

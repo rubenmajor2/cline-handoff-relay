@@ -6,16 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/28/2026, 11:41:20 PM PT | window: last 72h | 41 tasks | index total 942 (parsed 8, cached 934)
+Generated: 8/29/2026, 12:41:21 AM PT | window: last 72h | 40 tasks | index total 942 (parsed 6, cached 936)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1787876909491` | 8/28/2026, 11:41:18 PM | 811 | 4778KB | #PostMark Issue  |
-| `1787984810545` | 8/28/2026, 11:41:17 PM | 85 | 120KB | #GLM 5.3/Qwen 3.8 Julia Claudia |
-| `1787985551437` | 8/28/2026, 11:41:16 PM | 3 | 576KB | #Argus |
-| `1787960225304` | 8/28/2026, 11:41:12 PM | 510 | 6133KB | #Various |
-| `1787980519299` | 8/28/2026, 11:40:21 PM | 113 | 5281KB | #Various 2 |
-| `1787963389563` | 8/28/2026, 11:38:31 PM | 258 | 2603KB | #Overdue Grievances and Rule 317  |
+| `1787963389563` | 8/29/2026, 12:41:19 AM | 259 | 2604KB | #Overdue Grievances and Rule 317  |
+| `1787876909491` | 8/29/2026, 12:41:18 AM | 903 | 4953KB | #PostMark Issue  |
+| `1787984810545` | 8/29/2026, 12:41:14 AM | 299 | 497KB | #GLM 5.3/Qwen 3.8 Julia Claudia |
+| `1787960225304` | 8/29/2026, 12:41:14 AM | 624 | 6883KB | #Various |
+| `1787985551437` | 8/29/2026, 12:40:56 AM | 115 | 1123KB | #Argus |
+| `1787980519299` | 8/29/2026, 12:40:42 AM | 214 | 6978KB | #Various 2 |
 | `1787983724269` | 8/28/2026, 11:37:37 PM | 301 | 1104KB | #Argus |
 | `1787960052755` | 8/28/2026, 11:21:09 PM | 948 | 5311KB | frankenstein-llm having this issue. Can you resolve?  |
 | `1787983845643` | 8/28/2026, 11:11:05 PM | 3 | 12KB | How is this eepseek working |
@@ -50,151 +50,12 @@ Generated: 8/28/2026, 11:41:20 PM PT | window: last 72h | 41 tasks | index total
 | `1787596912975` | 8/26/2026, 1:56:41 AM | 402 | 3444KB | We are gettng these. What's going on? Can you correct that? |
 | `1787730932980` | 8/26/2026, 1:55:08 AM | 133 | 2918KB | frankenstein-llm is giving extremely terrible iterations (rule 91) as well as slow iterati |
 | `1787726772970` | 8/26/2026, 1:05:20 AM | 106 | 1032KB | Why does this say Hi Moodle and was the student's issue resolved? I've asked on this befor |
-| `1787727918566` | 8/26/2026, 12:33:40 AM | 66 | 2450KB | frankenstein-llm experiencing issues iterating here in cline. resolve. |
 
 ---
 
 ## Per-window detail
 
-### `1787876909491` — 8/28/2026, 11:41:18 PM PT — 811 turns
-
-**Original task:**
-
-```
-#PostMark Issue 
-
-Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
-```
-
-**Ideas referenced:** #10234, #14748, #15905, #16069, #16817, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18944, #18951, #1998, #22086, #23483, #25909, #2640, #2642, #26663, #26712, #26713, #26834, #27942, #28044, #28213, #28256, #28307, #28316, #28331, #28543 [proposed], #28546 [proposed], #28548, #3098, #333333, #5756, #78350, #888888, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-dger row appended per rule 07.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task - Postmark SMTP outage: backlog drained + HTTP fallback + mailer-guard fix
-
-Where we left off (verified 2026-08-28 08:26 PT):
-- 169 backlog emails resent via Postmark HTTP API with real MessageIDs (verified against communication_log + email_outbound_log)
-- 22 rows remain unsent, all correctly excluded: 12 postmark_suppression, 2 danger (61538 spam "40HQ", 61866 spam "DashCam"), 8 dup-already-delivered
-- HTTP-API auto-fallback live in lib/mailer.php line 1476 with attachment passthrough (#28543 [executing]); php -l clean, php-fpm reloaded; backup mailer.php.bak-httpfallback-20260828
-- ai_ticket_agent mailer-guard short-circuit live in cron_ai_ticket_agent.php line 507 (#28546 [executing]): internal "Outbound email blocked" tickets auto-close with zero student-facing reply
-- nremt.org added to MailerUrlAllowlist_TrustedExternal line 26; stale guard tickets 28253 + 28402 closed; mollyji1818 correct NREMT email delivered (comm 62305, msgid 85a4eaf4), wrong bounce-echo 62307 never sent
-
-Open threads to drive next:
-1. #28546 [executing] - verify mailer-guard short-circuit fires on the next cron pass by checking cron_ai_ticket_agent log for "MAILER-GUARD auto-closed" entries; add a ticket title-prefix block test
-2. #28543 [executing] - formalize http_resend_full.php into a reused lib with a smoke test, and probe the HTTP fallback path (not just the rescue script) so it is exercised before the next real SMTP outage
-
-Reference IDs:
-- Ticket: guard tickets 28402, 28253 (closed)
-- Ideas filed: #28543 [executing], #28546 [executing]
-- Files touched: /var/www/emtskills/lib/mailer.php, /var/www/emtskills/lib/MailerUrlAllowlist_TrustedExternal.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /home/emsuserver/http_resend_full.php, /Users/rubenmajor/Desktop/cline_task_ledger.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1787984810545` — 8/28/2026, 11:41:17 PM PT — 85 turns
-
-**Original task:**
-
-```
-#GLM 5.3/Qwen 3.8 Julia Claudia
-
-How are CFAs faring - all good now too? 
-
-continue to babysit the GLM 5.3 to serving
-
-Tell me how many lanes for the Julia/Claudia TP=2 for Qwen 3.8, the tok per sec per lane and concurrency in tok/sec. Make sure it's in the lane right after GLM 5.3. confirm.
-
-apprved
-
-#28615 [proposed] — after ring serves (~23:35 PT): run bash /tmp/glm53_auto_verify.sh on WOPR (2 consecutive 200s per rule 322, then reproducer /tmp/uni_7..9.json concurrent + /tmp/longctx.json 15K; results land in /tmp/glm53_verify_result.txt; all probes must answer Paris coherently). If concurr
-```
-
-**Ideas referenced:** #12314, #12365, #12366, #12368, #13108, #13874, #16304, #178797, #25112, #28605 [proposed], #28606 [proposed], #28615 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787985551437` — 8/28/2026, 11:41:16 PM PT — 3 turns
-
-**Original task:**
-
-```
-#Argus
-
-See Also the Screenshot about overrides / needs a bulk option
-
-Confirmed every issue in the pasted report and both pickup prompts, addressed or explicitly routed to a human. The short version: the Exam 5 monitor the executor claimed was live did not exist, so it was rebuilt from scratch and now runs daily, having flagged 3 students (course 37, close dates inside 7 days) whose names went to staff; the 1,702 auto-void rows were proven to be the healthy integrity investigator's repair audit trail, so that thread is closed by-design; the Employee Certs complaint was a data problem (Ruben h
-```
-
-**Ideas referenced:** #178798, #28133 [proposed], #28214 [executing], #28310 [rejected], #28465 [deployed], #28497 [deployed], #28504 [deployed], #28505 [proposed], #28506 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787960225304` — 8/28/2026, 11:41:12 PM PT — 510 turns
-
-**Original task:**
-
-```
-#Various
-
-Jon says he has this issue for a while with Argus. Can you resolve?
-```
-
-**Ideas referenced:** #059669, #10060, #11570, #1281, #1292, #15218, #166534, #16732, #1774, #1775, #1781, #1787, #178797, #1793, #1797, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20050, #20547, #21125, #21126, #2209, #22511, #22583, #2265, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #2449, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25142, #25185, #25269, #25313, #25571, #25573, #2563, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #27860, #2809, #28112, #28155, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #28607 [executing], #28608 [deployed], #28618 [proposed], #334155, #3730, #374151, #4338, #4536, #4699, #475569, #6366, #64748, #7925, #8281, #8321, #8563, #8598, #9191, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-d/backlog decision).
-   - Ship a final `attempt_completion` with a full rule-91 PICKUP PROMPT block, after running `clinerules_validate_completion` + `clinerules_check_gate`, covering: (a) the final disposition of idea #28607 (deployed/blocked/executing with verified evidence), (b) confirmation that idea #28618 was explained to the user, and (c) a Reversal Log section per rule 317.
-
-6. Task Evolution:
-   - **Original Task:** "#Various — Jon says he has this issue for a while with Argus. Can you resolve?" (screenshot of "model pool was saturated" hang for Background Task #709).
-   - **Task Modification 1:** User feedback "do not inject anthropic. See this also" + new screenshot → pivoted to the Exam Override Admin Direct Override "Network Error" bug (fixed, idea #28608 deployed).
-   - **Task Modification 2:** User feedback "Check Chat 55 recently, appears the button went away again?" → pivoted to investigating and fixing the Chris Ngo Exam 5 button issue (fixed live, idea #28618 filed for the systemic batch-tool improvement).
-   - **Task Modification 3 (CURRENT ACTIVE TASK):** After the attempt_completion covering all of the above shipped, user gave this explicit steering feedback:
-     > "Human engineer, lmao. You can fix this with frankenstein doctor of executor then build/ship it -> #28607 [blocked]... Needs a human or engineer to review why the auto-build failed and either retry it or hand-write the fix (retry-before-offload logic, widen dedup guard, remove or implement the dead EMSUSaturationGuard reference)."
-     > "same with this one -> [identical #28607 text] ... Fix the executor"
-     > "explain what this is -> #28618 [proposed], decide whether to approve and build the batch override UI, or leave as a backlog improvement."
-   - **Context for Change:** Ruben is explicitly rejecting the earlier completion's framing that idea #28607 "needs a human or engineer" — his sarcastic "Human engineer, lmao" makes clear that I (the agent) AM the engineer who should use available tooling (Frankenstein Doctor, bug library, executor pipeline) to diagnose and fix this myself, then actually build/ship the resolution rather than leaving it as an open thread for a human. Separately, he wants a plain-language explanation of what idea #28618 actually proposes before deciding its fate.
-
-7. Current Work:
-   Immediately before this summary was triggered, I had:
-   - Confirmed frankenstein-llm is healthy via `frankenstein_verify_routing` (HTTP 200, 18.7s response, backend `127.0.0.1:11510/v1`).
-   - Run `cron_executor_doctor.php --dry-run` (no orphan repairs needed for #28607).
-   - Triggered `idea_action(28607, "implement")` to retry the automated build, given the failure pattern strongly suggested a transient LLM-fleet outage (21:42–22:08 PT) rather than a permanent defect.
-   - Re-checked `get_idea_progress(28607)` — confirmed the retry is queued (dev_stage=idle, ETA ~13 min, clock 23:45 PT).
-   - Then pivoted to investigating the ACTUAL PHP source code in `alltastic_api.php` to find and potentially hand-fix the root cause myself (per rule 267 GATE A0/GATE C and the user's explicit "you can fix this... build/ship it" directive), since simply re-triggering the automated pipeline is not the same as "building/shipping" a fix myself if the underlying code defect (e.g., the dead `EMSUSaturationGuard` reference, or insufficient retry-before-offload logic) still exists.
-   - Read the 814KB `alltastic_api.php` file in FULL twice (via `read_server_file`), which was extremely context-expensive and is the direct cause of this context-compr
-```
-
-### `1787980519299` — 8/28/2026, 11:40:21 PM PT — 113 turns
-
-**Original task:**
-
-```
-#Various 2
-
-See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
-```
-
-**Ideas referenced:** #16473, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25916 [awaiting_review], #26084 [approved], #26663, #27082 [approved], #27100, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28224, #28233, #28481, #28493, #28550, #28612 [proposed], #28613 [proposed], #6106
-
-**Last PICKUP PROMPT:**
-
-```
-verbatim from .clinerules/91)\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — ymaris casas DNC + Email AI RCA + DNC gate enforcement.\n\nWhere we left off (verified 2026-08-28 23:36 PT):\n- Student ymaris casas (casasymaris458@gmail.com, +13462721104) ADDED to unified DNC list, row id 8, verified via dnc_list.\n- RCA done: Email AI sent URGENT CALLBACK card-declined template and ignored her cancellation; root cause = no DNC/intent gate pre-send in EmailAIResponder.\n- #28613 [executing] — Email responder must honor DNC/suppression pre-send + rule-based cancellation/card-removal keyword fast-path (filed this session, status in_progress).\n- lib/chat_widget_dnc_gate.php (DncGate) deployed + lint clean; wiring into send paths pending (#26084 [approved], #27082 [approved]).\n- Patcher applied 13/16 anchors; P1 EmailAIResponder + P9 EmailClassifier sed-fixed; EmailClassifier.php:1186 parse error (missing paren after $this->apiKey) fixed this window; php -l clean on lib/EmailClassifier.php, lib/EmailAIResponder.php, lib/mailer.php, lib/chat_widget_dnc_gate.php; php -r require = CLASSES LOAD OK (fix live; broken file never OPcached).\n\nOpen threads to drive next:\n1. #28613 [executing] — wire DncGate into EmailAIResponder outbound pre-send + cancel/card-removal fast-path; smoke-verify on next inbound email (no fatal).\n2. #26084 [approved] + #27082 [approved] — wire DncGate into chat widget send path.\n3. #669 [deployed] / #667 [deployed] / #18847 [deployed] — audit that SMS/voice DNC enforcement is actually live, not just filed.\n4. (human-only decision — no idea) Vicky: delete ymaris casas card profile in Authorize.net per her request.\n\nReference IDs:\n- Ideas filed this session: #28613 [executing]\n- Related pre-existing: #26084 [approved], #27082 [approved], #18847 [deployed], #669 [deployed], #667 [deployed]\n- Files touched: /var/www/emtskills/lib/EmailClassifier.php, lib/EmailAIResponder.php, lib/mailer.php, lib/chat_widget_dnc_gate.php\n- Student: ymaris casas, casasymaris458@gmail.com, +13462721104, DNC row id 8\n\n# Reversal Log\n- Patcher left parse error at EmailClassifier.php:1186 (missing paren) → fixed same window | RCA bucket: insufficient probe | causal rule 317 clause 9 (consumer re-run: php -l + class-load after every patch).\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task — ymaris casas DNC + Email AI RCA + DNC gate enforcement.\n\nWhere we left off (verified 2026-08-28 23:36 PT):\n- Student ymaris casas (casasymaris458@gmail.com, +13462721104) ADDED to unified DNC list, row id 8, verified via dnc_list.\n- RCA done: Email AI sent URGENT CALLBACK card-declined template and ignored her cancellation; root cause = no DNC/intent gate pre-send in EmailAIResponder.\n- #28613 [executing] — Email responder must honor DNC/suppression pre-send + rule-based cancellation/card-removal keyword fast-path (filed this session, status in_progress).\n- lib/chat_widget_dnc_gate.php (DncGate) deployed + lint clean; wiring into send paths pending (#26084 [approved], #27082 [approved]).\n- Patcher applied 13/16 anchors; P1 EmailAIResponder + P9 EmailClassifier sed-fixed; EmailClassifier.php:1186 parse error (missing paren after $this->apiKey) fixed this window; php -l clean on
-```
-
-### `1787963389563` — 8/28/2026, 11:38:31 PM PT — 258 turns
+### `1787963389563` — 8/29/2026, 12:41:19 AM PT — 259 turns
 
 **Original task:**
 
@@ -246,6 +107,214 @@ if (!$rec['auto_ok']) {
 `old_status === new_status`, fired every 15 minutes forever. PASS 5's overdue handler only does `UPDATE grievances SET stuck_status = 1` — no owner assignment, no notification.
 
 ### `/var/www/emtskills/routes/api/grievance_api.php` — READ (overdue/stage logic
+```
+
+### `1787876909491` — 8/29/2026, 12:41:18 AM PT — 903 turns
+
+**Original task:**
+
+```
+#PostMark Issue 
+
+Can you fix this? I've been getting this for a few hours today, so you may have a bit of a backlog to resend out.
+```
+
+**Ideas referenced:** #10234, #14748, #15905, #16069, #16817, #177918, #178424, #1802, #1803, #1806, #1811, #18133 [approved], #18159, #18163, #18165, #18175, #18178, #18179 [ready_for_review], #18180, #18189, #18194, #18195, #18196, #1820, #18212, #18213, #18214 [deployed], #18271, #18272, #18273, #18944, #18951, #1998, #22086, #23483, #25909, #2640, #2642, #26663, #26712, #26713, #26834, #27942, #28044, #28213, #28256, #28307, #28316, #28331, #28543 [proposed], #28546 [proposed], #28548, #3098, #333333, #5756, #78350, #888888, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+dger row appended per rule 07.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task - Postmark SMTP outage: backlog drained + HTTP fallback + mailer-guard fix
+
+Where we left off (verified 2026-08-28 08:26 PT):
+- 169 backlog emails resent via Postmark HTTP API with real MessageIDs (verified against communication_log + email_outbound_log)
+- 22 rows remain unsent, all correctly excluded: 12 postmark_suppression, 2 danger (61538 spam "40HQ", 61866 spam "DashCam"), 8 dup-already-delivered
+- HTTP-API auto-fallback live in lib/mailer.php line 1476 with attachment passthrough (#28543 [executing]); php -l clean, php-fpm reloaded; backup mailer.php.bak-httpfallback-20260828
+- ai_ticket_agent mailer-guard short-circuit live in cron_ai_ticket_agent.php line 507 (#28546 [executing]): internal "Outbound email blocked" tickets auto-close with zero student-facing reply
+- nremt.org added to MailerUrlAllowlist_TrustedExternal line 26; stale guard tickets 28253 + 28402 closed; mollyji1818 correct NREMT email delivered (comm 62305, msgid 85a4eaf4), wrong bounce-echo 62307 never sent
+
+Open threads to drive next:
+1. #28546 [executing] - verify mailer-guard short-circuit fires on the next cron pass by checking cron_ai_ticket_agent log for "MAILER-GUARD auto-closed" entries; add a ticket title-prefix block test
+2. #28543 [executing] - formalize http_resend_full.php into a reused lib with a smoke test, and probe the HTTP fallback path (not just the rescue script) so it is exercised before the next real SMTP outage
+
+Reference IDs:
+- Ticket: guard tickets 28402, 28253 (closed)
+- Ideas filed: #28543 [executing], #28546 [executing]
+- Files touched: /var/www/emtskills/lib/mailer.php, /var/www/emtskills/lib/MailerUrlAllowlist_TrustedExternal.php, /var/www/emtskills/cron/cron_ai_ticket_agent.php, /home/emsuserver/http_resend_full.php, /Users/rubenmajor/Desktop/cline_task_ledger.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787984810545` — 8/29/2026, 12:41:14 AM PT — 299 turns
+
+**Original task:**
+
+```
+#GLM 5.3/Qwen 3.8 Julia Claudia
+
+How are CFAs faring - all good now too? 
+
+continue to babysit the GLM 5.3 to serving
+
+Tell me how many lanes for the Julia/Claudia TP=2 for Qwen 3.8, the tok per sec per lane and concurrency in tok/sec. Make sure it's in the lane right after GLM 5.3. confirm.
+
+apprved
+
+#28615 [proposed] — after ring serves (~23:35 PT): run bash /tmp/glm53_auto_verify.sh on WOPR (2 consecutive 200s per rule 322, then reproducer /tmp/uni_7..9.json concurrent + /tmp/longctx.json 15K; results land in /tmp/glm53_verify_result.txt; all probes must answer Paris coherently). If concurr
+```
+
+**Ideas referenced:** #12314, #12365, #12366, #12368, #12672, #13108, #13121, #13832, #13874, #13964, #14000, #16120, #16304, #178797, #18786, #18954, #1986, #2168, #2174, #25112, #2654 [investigating], #2655 [deployed], #2656 [deployed], #26925, #28605 [proposed], #28606 [proposed], #28615 [proposed], #28621 [proposed], #28622 [executing], #3261, #39635, #40018, #40860, #40923, #40969, #45425, #45426, #47266, #47493, #47528, #47783, #50720, #50773, #51252, #51821, #52058
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1787960225304` — 8/29/2026, 12:41:14 AM PT — 624 turns
+
+**Original task:**
+
+```
+#Various
+
+Jon says he has this issue for a while with Argus. Can you resolve?
+```
+
+**Ideas referenced:** #059669, #10060, #11570, #1281, #1292, #15218, #166534, #16732, #1774, #1775, #1781, #1787, #178797, #1793, #1797, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #19348, #1998, #20050, #20547, #21125, #21126, #21134, #2209, #22511, #22583, #2265, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23852, #23920, #23941, #23952, #23982, #2449, #24897, #24900, #24926, #24941, #24990, #25047, #25058, #25142, #25185, #25269, #25313, #25571, #25573, #2563, #25642, #25768, #26067, #26325, #2640, #2642, #26711, #26712, #26713, #26895, #27243, #27244, #27860, #2809, #28112, #28155, #28213, #28220, #28307, #28316, #28331, #28370, #28388, #28453, #28500, #28607 [executing], #28608 [deployed], #28618 [proposed], #334155, #3730, #374151, #4338, #4536, #4699, #475569, #6366, #64748, #7925, #8281, #8321, #8563, #8598, #9191, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+d/backlog decision).
+   - Ship a final `attempt_completion` with a full rule-91 PICKUP PROMPT block, after running `clinerules_validate_completion` + `clinerules_check_gate`, covering: (a) the final disposition of idea #28607 (deployed/blocked/executing with verified evidence), (b) confirmation that idea #28618 was explained to the user, and (c) a Reversal Log section per rule 317.
+
+6. Task Evolution:
+   - **Original Task:** "#Various — Jon says he has this issue for a while with Argus. Can you resolve?" (screenshot of "model pool was saturated" hang for Background Task #709).
+   - **Task Modification 1:** User feedback "do not inject anthropic. See this also" + new screenshot → pivoted to the Exam Override Admin Direct Override "Network Error" bug (fixed, idea #28608 deployed).
+   - **Task Modification 2:** User feedback "Check Chat 55 recently, appears the button went away again?" → pivoted to investigating and fixing the Chris Ngo Exam 5 button issue (fixed live, idea #28618 filed for the systemic batch-tool improvement).
+   - **Task Modification 3 (CURRENT ACTIVE TASK):** After the attempt_completion covering all of the above shipped, user gave this explicit steering feedback:
+     > "Human engineer, lmao. You can fix this with frankenstein doctor of executor then build/ship it -> #28607 [blocked]... Needs a human or engineer to review why the auto-build failed and either retry it or hand-write the fix (retry-before-offload logic, widen dedup guard, remove or implement the dead EMSUSaturationGuard reference)."
+     > "same with this one -> [identical #28607 text] ... Fix the executor"
+     > "explain what this is -> #28618 [proposed], decide whether to approve and build the batch override UI, or leave as a backlog improvement."
+   - **Context for Change:** Ruben is explicitly rejecting the earlier completion's framing that idea #28607 "needs a human or engineer" — his sarcastic "Human engineer, lmao" makes clear that I (the agent) AM the engineer who should use available tooling (Frankenstein Doctor, bug library, executor pipeline) to diagnose and fix this myself, then actually build/ship the resolution rather than leaving it as an open thread for a human. Separately, he wants a plain-language explanation of what idea #28618 actually proposes before deciding its fate.
+
+7. Current Work:
+   Immediately before this summary was triggered, I had:
+   - Confirmed frankenstein-llm is healthy via `frankenstein_verify_routing` (HTTP 200, 18.7s response, backend `127.0.0.1:11510/v1`).
+   - Run `cron_executor_doctor.php --dry-run` (no orphan repairs needed for #28607).
+   - Triggered `idea_action(28607, "implement")` to retry the automated build, given the failure pattern strongly suggested a transient LLM-fleet outage (21:42–22:08 PT) rather than a permanent defect.
+   - Re-checked `get_idea_progress(28607)` — confirmed the retry is queued (dev_stage=idle, ETA ~13 min, clock 23:45 PT).
+   - Then pivoted to investigating the ACTUAL PHP source code in `alltastic_api.php` to find and potentially hand-fix the root cause myself (per rule 267 GATE A0/GATE C and the user's explicit "you can fix this... build/ship it" directive), since simply re-triggering the automated pipeline is not the same as "building/shipping" a fix myself if the underlying code defect (e.g., the dead `EMSUSaturationGuard` reference, or insufficient retry-before-offload logic) still exists.
+   - Read the 814KB `alltastic_api.php` file in FULL twice (via `read_server_file`), which was extremely context-expensive and is the direct cause of this context-compr
+```
+
+### `1787985551437` — 8/29/2026, 12:40:56 AM PT — 115 turns
+
+**Original task:**
+
+```
+#Argus
+
+See Also the Screenshot about overrides / needs a bulk option
+
+Confirmed every issue in the pasted report and both pickup prompts, addressed or explicitly routed to a human. The short version: the Exam 5 monitor the executor claimed was live did not exist, so it was rebuilt from scratch and now runs daily, having flagged 3 students (course 37, close dates inside 7 days) whose names went to staff; the 1,702 auto-void rows were proven to be the healthy integrity investigator's repair audit trail, so that thread is closed by-design; the Employee Certs complaint was a data problem (Ruben h
+```
+
+**Ideas referenced:** #059669, #166534, #178798, #2563, #28112, #28133 [proposed], #28214 [executing], #28310 [rejected], #28465 [deployed], #28497 [deployed], #28504 [deployed], #28505 [proposed], #28506 [deployed], #374151, #6067, #6366, #64748, #831843, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+ [proposed], #28505 [proposed]
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787981000000 — Argus report full issue‑sweep: every thread addressed or routed
+
+Where we left off (verified 2026-08-28 23:34 PT):
+- #28504 [deployed] — Exam 5 monitor rebuilt and verified.
+- #28506 [deployed] — Auto‑void audit rows confirmed healthy.
+- #28465 [deployed] — Employee Certs dropdown fixed.
+- #28310 [rejected] — Umbrella row closure corrected.
+- #28497 [deployed] — Tiered‑permission wiring unchanged.
+- #28214 [executing] — HY093 PDO sweep ongoing.
+
+Open threads to drive next:
+1. #28505 [proposed] — Midterm‑gate policy (human‑only decision).
+2. #28133 [proposed] — Boot‑camp exam‑date extension (human‑only decision).
+3. PD‑vs‑CS role level — policy direction (human‑only decision — no idea).
+
+Reference IDs:
+- Ticket: N/A
+- Ideas filed: #28504, #28506, #28465, #28310, #28497, #28214, #28133, #28505
+- Files touched: /var/www/emtskills/cron/cron_exam5_lockout_monitor.php, /var/www/emtskills/HANDOFF_NOTES.md, admin_portal.notification_job_registry, admin_portal.exam5_lockout_flags, admin_portal.personnel_candidates, crontab
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1787980519299` — 8/29/2026, 12:40:42 AM PT — 214 turns
+
+**Original task:**
+
+```
+#Various 2
+
+See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
+```
+
+**Ideas referenced:** #16473, #166603, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25916 [awaiting_review], #25932, #26084 [approved], #26661, #26663, #27082 [approved], #27100, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28110, #28212, #28213, #28220, #28224, #28233, #28481, #28493, #28550, #28612 [proposed], #28613 [proposed], #28625 [executing], #28626 [executing], #6106
+
+**Last PICKUP PROMPT:**
+
+```
+ AND_CA=PRESENT, OLD_OR=GONE).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1787985551437, Kevin externship portal plus Stuart invoice plus CFA knowledge updates.
+
+Where we left off (verified 2026-08-29 00:37 PT):
+- Kevin Manrique 26423BC-07: live probe of externship/api_validate_student.php returned success for the exact ID, and Student ID not found for his name and for the no-dash variant. Root cause is an ID-format only field, not an eligibility hold. Error message rewritten with the required format; php -l clean. Email SENT (email_outbound_log id 374823).
+- Kevin state: 0 externship requests, no placement, 0/7 forms, didactic completion 2026-08-30, Moodle EMS 202TX active.
+- ExternshipKnowledgePack::expectationsBlock() patched and live-verified (LEN=3626): PORTAL ACCESS clause PRESENT, AND CA psychomotor PRESENT, old or-wording GONE, regime header correctly renders the before-September-1 variant on today's date.
+- Stuart Andrus: invoice 165516 amount_paid 673.05 on 1095.00 total, so 421.95 true balance (his 421.97 was right). Three duplicate unpaid 1095.00 invoices created 2026-08-25: 177016, 177072, 177193, across duplicate Students rows 8148531 (archived 26414T-15) and 8202427 (NULL student_id, 26424T). Invoice 165516 also has amount_paid plus balance_due equal to 1345.00 against a 1095.00 total, so the row does not self-reconcile.
+- Stuart email written as a tier-2 draft (money claim, human click required), deadline 2026-08-29 11:35. Vicky messaged in chat 64 with the void-and-reissue request.
+
+Open threads to drive next:
+1. #28625 [executing]: invoice generator must dedup across split records and carry over amount_paid; add audit for rows where amount_paid plus balance_due does not equal total_amount.
+2. #28626 [executing]: ack-suppression gate plus repeat-ack circuit breaker so billing/refund disputes never get a content-free acknowledgment.
+3. #28613 [executing]: wire DncGate into EmailAIResponder pre-send (carried from prior session, dev_stage=drafting).
+4. (human-only decision, no idea) Vicky: void invoices 177016, 177072, 177193, reissue one invoice for 421.95, and click-send the Stuart draft.
+5. (human-only decision, no idea) Merge duplicate Students rows 8148531 and 8202427 and populate the NULL student_id.
+
+Reference IDs:
+- Ideas filed this session: #28625 [executing], #28626 [executing]
+- Carried: #28613 [executing]
+- Files touched: /var/www/emtskills/externship/api_validate_student.php, /var/www/emtskills/lib/ExternshipKnowledgePack.php
+- Students: Kevin Manrique 26423BC-07 (8200252); Stuart Andrus 8148531 plus 8202427
+- Emails: sent id 374823 (Kevin); Stuart tier-2 draft pending click
+
+# Reversal Log
+- Claimed regime rendered POST_SEPT1, corrected to before-September-1 | RCA bucket: insufficient probe | my grep matched my own newly-inserted clause text containing the same phrase; re-probed the actual header. Causal rule updated: 317 (clause 1, probe must target the artifact under test, not a substring the patch itself introduced).
+- First KnowledgePack patch attempt left a PHP parse error at line 79, restored from backup and re-patched quote-free, php -l clean | RCA bucket: insufficient probe | causal rule 317 clause 9 (consumer re-run after patch) already covers this; cited, not re-appended.
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] ymaris DNC (shipped prior)
+- [x] Kevin RCA liv
 ```
 
 ### `1787983724269` — 8/28/2026, 11:37:37 PM PT — 301 turns
@@ -1725,55 +1794,3 @@ Why does this say Hi Moodle and was the student's issue resolved? I've asked on 
 ```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787727918566` — 8/26/2026, 12:33:40 AM PT — 66 turns
-
-**Original task:**
-
-```
-frankenstein-llm experiencing issues iterating here in cline. resolve.
-```
-
-**Ideas referenced:** #10740, #11944, #11953, #12247, #12262, #12314, #12335, #12364, #12365, #12366, #12368, #12657, #13108, #13874, #178772, #19903, #2050, #25630, #25764, #2625, #26400, #28238 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
- 2625 + idea #28238 [deployed]
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787729040000 — frankenstein-llm Cline iteration fix.
-
-Where we left off (verified 2026-08-25 23:28 AKDT):
-- Adapter patched + restarted: 27B last-resort on interactive cline lane (verified: ssh_command curl probe returned model=gpt-oss-120b, adapter log lane=cline upstream=http://10.100.0.19:8000 ttfb_s=0.162 at 2026-08-26T00:23:49Z)
-- #28238 [deployed] record idea (verified: reconcile_ideas returned deployed; mysql SELECT returned status=deployed updated_at=2026-08-26 00:26:29)
-- Bug library incident 2625 recorded resolved (verified: bug_library_record tool returned 'Incident recorded + VERIFIED: frankenstein_router_incidents 2625' at 2026-08-25 23:25 AKDT)
-
-Open threads to drive next:
-1. (human-only decision — no idea) EMSU_GLM_FIRST_ALL_LANES=1 + EMSU_GLM_FLOOR_OFF=1 remain set on frankenstein-tools.service: interactive GLM 30pct floor is disabled and GLM-first is forced on all lanes. Leave as-is unless Ruben wants speed-first interactive; the 27B demotion is orthogonal and works under either setting.
-
-Reference IDs:
-- Ideas filed: #28238 [deployed]
-- Ideas closed: none
-- Files touched: /usr/local/bin/frankenstein_tools_adapter.py (+ .bak-20260825-qwen38), HANDOFF_NOTES.md, bug library incident 2625
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Pre-turn compress signal check (rule 119)
-- [x] Bug library gate check before diagnosing (rule 156)
-- [x] Live-verify frankenstein-llm routing/backend (rule 140/315)
-- [x] Router audit + adapter upstream log analysis (root cause found)
-- [x] Patch v2 (lane_interactive gate) + compile + restart
-- [x] Re-probe cline lane ordering live (0.162s on 120B, no 27B)
-- [x] Record bug library incident #2625
-- [x] File record idea #28238 + stamp deployed + reconcile
-- [x] Handoff note
-- [x] Validate completion + check gate + attempt_completion
-</task_progress>
-</attempt_completion>
-```

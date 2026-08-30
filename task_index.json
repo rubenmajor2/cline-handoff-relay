@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-30T05:37:22.063Z",
+ "generated_at": "2026-08-30T06:37:22.409Z",
  "counts": {
-  "parsed": 9,
-  "reused": 972,
+  "parsed": 2,
+  "reused": 980,
   "failed": 0,
-  "total": 981
+  "total": 982
  },
  "tasks": {
   "1784522296714": {
@@ -146484,11 +146484,11 @@
   },
   "1788065678939": {
    "task_id": "1788065678939",
-   "mtime": 1788068240657,
+   "mtime": 1788068831241,
    "created_at": "2026-08-30T04:54:38.939Z",
-   "last_modified": "2026-08-30T05:37:20.657Z",
-   "size_kb": 807,
-   "turn_count": 109,
+   "last_modified": "2026-08-30T05:47:11.241Z",
+   "size_kb": 977,
+   "turn_count": 144,
    "title": "#Claude Browser Extension MCP — MID-FLIGHT\n\n**Original ask:** \"Is there some kind of Claude Browser Extension that can be used with our API like I'm using Claude in Chrome here in Cline?\"\n\n**Status:** Nearly done. Built `~/emsu-browser-mcp/` (stdio MCP: CDP active-tab bridge → LiteLLM), Chrome debug launcher on :9222, launchd plists (`com.emsu.mcp-browser` :7864, `com.emsu.chrome-debug`). Live-probed `get_active_tab` + `ask_llm` both working. Registered `emsu-browser` in `cline_mcp_settings.json`. Idea #28744 deployed, #28775 filed. Last action was re-bootstrapping `com.emsu.chrome-debug` after fixing its keepalive loop.\n\n```\nPick up task #1788050518371 — Claude Browser Extension (emsu-brows",
    "pickup_prompt": "for Ruben, not buildable work.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1788050518371 — Claude Browser Extension (emsu-browser MCP), delivery complete.\n\nWhere we left off (verified 2026-08-29 22:06 PT):\n- emsu-browser MCP fully verified: get_active_tab and ask_llm live-probed working through the CDP → LiteLLM chain.\n- com.emsu.chrome-debug re-bootstrapped (PID 43824), Chrome debug live on :9222, plist corruption fixed.\n- com.emsu.mcp-browser alive (PID 68368). Registered in cline_mcp_settings.json.\n- #28744 [deployed]; #28775 parked for Ruben's security decision.\n\nOpen threads to drive next:\n1. #28775 [blocked] — decide the travel vault autofill security posture (lookup_credential / save_booking in travel_chat.php). Human-policy decision, not buildable without Ruben.\n\nReference IDs:\n- Ideas: #28744 [deployed], #28775 [blocked]\n- Files touched: ~/Library/LaunchAgents/com.emsu.chrome-debug.plist (rewrote corrupted <string> tags, verified on disk)\n- Services live: com.emsu.mcp-browser (:7864), com.emsu.chrome-debug (Chrome :9222)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -146569,17 +146569,19 @@
   },
   "1788065744387": {
    "task_id": "1788065744387",
-   "mtime": 1788068190969,
+   "mtime": 1788069382926,
    "created_at": "2026-08-30T04:55:44.387Z",
-   "last_modified": "2026-08-30T05:36:30.969Z",
-   "size_kb": 800,
-   "turn_count": 125,
+   "last_modified": "2026-08-30T05:56:22.926Z",
+   "size_kb": 1046,
+   "turn_count": 184,
    "title": "## — Chat Widget disclaimer + misrouting — COMPLETED\n\n**Original ask:** Add an \"automated agent may make mistakes\" disclaimer to the chat widget (and check the Email Agent has the same).\n\n**Status:** Completed + shipped. Build fixes live-verified; disclaimer gap (#18541 was recorded deployed but never actually applied) closed. Open thread is the 18-question browser-AI test pass.\n\n```\nPick up task #28758 — Chat widget misrouting + 23-finding audit remediation (verification pass remaining).\n\nWhere we left off (verified 2026-08-29 20:59 PT):\n- Build fixes shipped and live-verified (disclaimer applied, misrouting fixed).\n- #28759 [executing] holds the 18-question browser-AI test checklist.\n\nOpen",
-   "pickup_prompt": null,
+   "pickup_prompt": "ndoff.php.bak-28759-20260829`.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #28758 — Chat widget 18-question pass: resolve the remaining brain-latency defect.\n\nWhere we left off (verified 2026-08-29 22:55 PT):\n- 15/18 questions verified PASS; T8 misroute fixed + deployed (#28788).\n- #28787 [executing] holds the live blocker: widget model `claude-sonnet-4-6` resolves to a local vLLM alias (33s/5 tokens), blowing the brain's 35s budget so `runEmsuAiBrain` returns empty on basic questions across all 42 sites.\n- Evidence files: `/etc/litellm/config.yaml`, `lib/emsu_ai_brain.php` (budget_s=35), `livechat_webhook.log` (\"callOpenAI returned null\").\n\nOpen threads to drive next (EVERY item has a real filed idea #):\n1. #28787 [executing] — Decide + deploy the correct `claude-sonnet-4-6` litellm route (production Anthropic vs. a healthy local lane), then re-run a basic question probe and confirm `runEmsuAiBrain` returns a real answer under 35s. This unblocks Q13/Q14 live verification.\n2. #28759 [deployed] — After #28787 is resolved, re-run the two blocked screenshare probes (Q13 word-boundary \"my password is...\" must NOT fire; Q14 \"I cannot log into moodle\" must fire) and append results to the `test_results` JSON.\n\nReference IDs:\n- Ticket/task: #28758\n- Ideas: #28758 [deployed], #28759 [deployed], #28787 [executing], #28788 [deployed], #18541 [deployed]\n- Files touched: `lib/widget_force_handoff.php` (+bak-28759-20260829), `lib/chat_queue_confidence.php` (verified), `api/chat_widget_api.php` (verified), `api/chat_widget_embed.js` (verified), `lib/disclaimer_helper.php` (verified)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
+    "1119": null,
     "1242": null,
     "1567": null,
     "1912": null,
+    "1998": null,
     "2168": null,
     "2642": null,
     "2654": null,
@@ -146589,15 +146591,23 @@
     "2850": null,
     "2916": null,
     "3577": null,
+    "3988": null,
+    "5918": null,
+    "6104": null,
     "6366": null,
+    "9112": null,
     "9131": null,
     "9152": null,
+    "9222": null,
+    "12584": null,
+    "13442": null,
     "13965": null,
     "15815": null,
     "16474": null,
     "16732": null,
     "18541": "deployed",
     "18758": null,
+    "19338": null,
     "20495": null,
     "23989": null,
     "25962": null,
@@ -146605,6 +146615,7 @@
     "25965": null,
     "26229": null,
     "26816": null,
+    "26834": null,
     "26932": null,
     "27284": null,
     "28042": null,
@@ -146647,6 +146658,8 @@
     "28753": null,
     "28758": "deployed",
     "28759": "executing",
+    "28787": "executing",
+    "28788": "deployed",
     "33689": null,
     "177796": null,
     "059669": null
@@ -146690,18 +146703,21 @@
   },
   "1788065826964": {
    "task_id": "1788065826964",
-   "mtime": 1788068209200,
+   "mtime": 1788068593118,
    "created_at": "2026-08-30T04:57:06.964Z",
-   "last_modified": "2026-08-30T05:36:49.200Z",
-   "size_kb": 276,
-   "turn_count": 63,
+   "last_modified": "2026-08-30T05:43:13.118Z",
+   "size_kb": 359,
+   "turn_count": 76,
    "title": "## — Kaizon Learner — MID-FLIGHT\n\n**Original ask:** Does Kaizon have a self-learning mechanism? If not, build one; search/research the community; use the bug library as part of the learning process.\n\n**Status:** In progress. Built `cron_kaizen_learner.php`. Last action was a `sed` fixing the kill-switch read (it read `config_value` but kill switches live inside `orchestrator_config.config_json`). Needs inline verify, re-run, wire cron, ship.\n\n```\nPick up task #1788063169755 — Kaizon self-learning cron: finish the kill-switch fix, verify, wire, ship.\n\nWhere we left off (verified 2026-08-29 21:30 PT):\n- cron_kaizen_learner.php written + php -l clean. KAIZEN infra already has 294 recipes; the g",
-   "pickup_prompt": "ntab entry + verified DB rows.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1788063169755 — Kaizon self-learning cron: finished, verify the first cron tick drains the 1132-fire backlog.\n\nWhere we left off (verified 2026-08-29 22:10 PT):\n- /var/www/emtskills/cron_kaizen_learner.php deployed; kill-switch now reads orchestrator_config.config_json via the canonical fetch_row()[0] → json_decode → `kaizen_learner_enabled ?? true` pattern. php -l clean.\n- Manual run: analyzed=100, exit 0. kaizen_recipe_tuning_log=160, kaizen_learner_state=160, heartbeat kaizen_learner|ok|100.\n- Cron installed: */15 * * * * /usr/bin/php /var/www/emtskills/cron_kaizen_learner.php >> /var/www/emtskills/logs/kaizen_learner.log 2>&1 (backup /tmp/crontab.bak.kaizen_learner.2028868).\n- action=none for email_reply_storm is correct (recipe #254 already escalate_blocked/max_attempts=0; all tuning gates no-op by design).\n\nOpen threads to drive next:\n1. At the next 15-min tick, confirm /var/www/emtskills/logs/kaizen_learner.log exists and shows a fresh run, and that kaizen_recipe_tuning_log / kaizen_learner_state counts climb past 160 as the 1132-fire backlog drains. (No idea # — routine post-deploy verification, not blocked work.)\n2. If the new-fire harvest rate stays at the 100/run LIMIT after a few days and backlog still grows, reconsider the LIMIT 100 cap or add failure_category diversity so one noisy category (email_reply_storm) stops monopolizing the batch. (Recommend filing as a fresh idea # at that point; measured, not speculative.)\n\nReference IDs:\n- Ticket: #1788063169755\n- Ideas filed: none this session (shipped work, no deferral)\n- Files touched: /var/www/emtskills/cron_kaizen_learner.php, crontab (+ /tmp/crontab.bak.kaizen_learner.2028868), /var/www/emtskills/docs/HANDOFF_NOTES.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "d but never writing until now.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1788063169755 — Kaizon self-learning loop: shipped and live, with three filed follow-ups.\n\nWhere we left off (verified 2026-08-29 22:41 PT):\n- cron_kaizen_learner.php live (improved 22:27:32 PT): per-category harvest, success-rate guard, INSERT IGNORE. Kill switch reads orchestrator_config.config_json. Cron wired at */15 min.\n- Consumer verified: lib/KaizenAdaptiveRecipe.php reads failure_repair_recipes.max_attempts at execution time, so tuning changes real retry behavior.\n- Row accounting reconciled exactly: 366 tuning_log rows = 366 state rows = 60+100+100+100+3+3 across 6 runs (22:04→22:30). Heartbeat ok/3/22:30:08.\n- Three ideas filed this session: #28784 scorecard, #28785 heartbeat alert, #28786 community research.\n\nOpen threads to drive next (all with real idea ids):\n1. #28784 [proposed] — 7-day coverage scorecard: at the 7-day mark, verify per-category coverage in kaizen_recipe_tuning_log, heartbeat continuity, and that non-\"none\" actions appear on genuinely sick categories. Report to Ruben before any backfill decision.\n2. #28785 [proposed] — Kaizen learner heartbeat gap alerting: watchdog on kaizen_cron_heartbeat.last_run_at older than 35 min → Discord/ops alert naming the cron and last good run.\n3. #28786 [proposed] — Community research on retry-policy self-tuning (the original directive's research element): confirm whether the fixed thresholds (recur>=3/success<15%, recur>=5/success<50%) match upstream SRE/adaptive-retry practice; deliverable is a short note in the file header, no code without Ruben approval.\n\nReference IDs:\n- Ticket: #1788063169755\n- Ideas filed: #28784 [proposed], #28785 [proposed], #28786 [proposed]\n- Files touched: /var/www/emtskills/cron_kaizen_learner.php (deployed 22:03, improved 22:27), crontab (+ /tmp/crontab.bak.kaizen_learner.2028868), /var/www/emtskills/docs/HANDOFF_NOTES.md, /var/www/emtskills/logs/kaizen_learner.log\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "16523": null,
     "28551": null,
     "28552": null,
     "28745": null,
+    "28784": "proposed",
+    "28785": "proposed",
+    "28786": "proposed",
     "178806": null
    }
   },
@@ -146840,14 +146856,15 @@
   },
   "1788065980737": {
    "task_id": "1788065980737",
-   "mtime": 1788068190454,
+   "mtime": 1788071757173,
    "created_at": "2026-08-30T04:59:40.737Z",
-   "last_modified": "2026-08-30T05:36:30.454Z",
-   "size_kb": 445,
-   "turn_count": 98,
+   "last_modified": "2026-08-30T06:35:57.173Z",
+   "size_kb": 499,
+   "turn_count": 113,
    "title": "## Kaizon Learner (fork of window #5) — BLANK\n\nSame \"#Kaizon Learner\" task as 1788063169755. Empty last assistant turn — a forked/re-opened window. **Resume from window #5's pickup prompt (section 5 above).**\n\n---\n\n##",
-   "pickup_prompt": "+ filed idea #28782 [deployed]\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1788063169755 - Kaizen Learner: harvest-starvation fix + verify + cron wiring (window #5 fork)\n\nWhere we left off (verified 2026-08-29 22:33 PT):\n- cron_kaizen_learner.php deployed at /var/www/emtskills/cron_kaizen_learner.php. Per-category harvest fix verified live: 22:30:08 cron run harvested 3 recurred fires per-category, analyzed safe_write_php_lint/worker_silent_death/email_reply_storm in 974ms\n- kill-switch verified reading orchestrator_config config_json (kaizen_learner_enabled)\n- cron */15 under emsuserver writing /var/www/emtskills/logs/kaizen_learner.log (writable, 22:30:08 cron fire OK)\n- kaizen_recipe_tuning_log + kaizen_learner_state + kaizen_cron_heartbeat all live (heartbeat: ok, rows_processed=3)\n- RCA idea #28782 [deployed] filed for the starvation defect\n- #28745 [deployed] verified: worker_silent_death protected from escalation (95.3% success guard added)\n\nOpen threads to drive next:\nNone - all work completed this session. Learner now analyzes every failure_category each run and the success guard prevents noise proposals for healthy recipes.\n\nReference IDs:\n- Ideas filed: #28782 [deployed], #28745 [deployed] (verified in place, no change needed)\n- Files touched: /var/www/emtskills/cron_kaizen_learner.php\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "e recipes\n- [ ] Design + execute concrete acceleration\n- [ ] Verify + ship with PICKUP PROMPT block\n</task_progress>\n</use_mcp_tool>",
    "ideas": {
+    "1141": null,
     "1242": null,
     "1912": null,
     "1998": null,
@@ -147076,6 +147093,23 @@
     "178712": null,
     "178805": null,
     "081020": null
+   }
+  },
+  "1788071557390": {
+   "task_id": "1788071557390",
+   "mtime": 1788071821569,
+   "created_at": "2026-08-30T06:32:37.390Z",
+   "last_modified": "2026-08-30T06:37:01.569Z",
+   "size_kb": 48,
+   "turn_count": 28,
+   "title": "## — GLM/LLMs (fork of window #4) — BLANK - 2\n\nExplain this, I don't understand it -> - #28783 [proposed] — the 3 C3 no-local-rung fallback chains flagged by frank_fallback_lint (glm-5.3, frankenstein-llm, artemis-gpt-oss-120b reach cloud with zero local rungs first; invariant per bug library row 2582). Untouched this window; needs config.yaml chain edits + lint to 0 + ZDT restart\n\nhow is this going -> - #28783 [proposed] — the 3 C3 no-local-rung fallback chains flagged by frank_fallback_lint (glm-5.3, frankenstein-llm, artemis-gpt-oss-120b reach cloud with zero local rungs first; invariant per bug library row 2582). Untouched this window; needs config.yaml chain edits + lint to 0 + ZDT rest",
+   "pickup_prompt": null,
+   "ideas": {
+    "2582": null,
+    "19686": null,
+    "28778": "deployed",
+    "28783": "proposed",
+    "178806": null
    }
   }
  }

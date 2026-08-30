@@ -97,3 +97,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - initial: reconcile_ideas returned a done tag for the Exam 5 monitor idea -> corrected: artifact read-back showed a 63-line truncated stub with no crontab entry, no registry entry
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 05:10 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788051831962
+- RCA bucket: scope error
+- Trigger pattern: Agent adopts a count/window/population from a prior artifact's prose instead of re-measuring it, then scopes the repair to the inherited number.
+- Reversal note: Amends the SCOPE GATE: a count INHERITED from a prior artifact (idea text, handoff note, ticket) is a hypothesis with an unstated window, not a measurement — re-run the count with an explicit window and population BEFORE acting on it, and report the corrected scope inline. Source: idea #28552 stated "25 unprocessed critical events in 24h"; live COUNT over the full population was 32,971 null-subject rows since 2026-06-26 (1,319x), plus 8,731 more under the legacy system_health event_type that the inherited framing excluded entirely. Acting on the inherited 25 would have "fixed" 0.08% of the defect and left the emitter bug unpatched.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

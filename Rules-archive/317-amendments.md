@@ -537,3 +537,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate) with an explicit third-party-schema case: when the deliverable is a PAYLOAD sent to an external API, a local lint pass, a 200 from our own endpoint, and a code read all verify NOTHING about whether the third party will ACCEPT it. The only probative artifact is submitting the exact payload to the real endpoint and reading its status code. On 2026-08-29 a Vapi model override passed php -l, returned 200 from our webhook, and looked correct on read, yet Vapi 400'd it twice for two independent reasons (missing model.url, then echoed model.tools) — each found only by a live POST. Clause 2 now requires: any completion claiming an external-API payload is fixed must cite a live submission to that API and its returned status.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 05:15 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788063424250
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: Amends clause 1/2 (LLM/fleet/state + acquisition gate): a previous window's 'shipped rule X, 353/23 hardfloor' claim was accepted as true from the completion prose without a live probe. Live check showed the rule file absent from ~/Documents/Cline/Rules/ and the clinerules index. Durable fix: any claim that a rule was shipped/reindexed must be backed by clinerules_lookup or read_file of the actual rule file; a stats count (353 rules) alone is not evidence that the specific rule exists.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

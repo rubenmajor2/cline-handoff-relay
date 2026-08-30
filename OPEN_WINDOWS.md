@@ -6,10 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 9:37:21 PM PT | window: last 72h | 60 tasks | index total 971 (parsed 9, cached 962)
+Generated: 8/29/2026, 10:37:22 PM PT | window: last 72h | 69 tasks | index total 981 (parsed 9, cached 972)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1788065678939` | 8/29/2026, 10:37:20 PM | 109 | 807KB | #Claude Browser Extension MCP — MID-FLIGHT |
+| `1788065826964` | 8/29/2026, 10:36:49 PM | 63 | 276KB | ## — Kaizon Learner — MID-FLIGHT |
+| `1788065744387` | 8/29/2026, 10:36:30 PM | 125 | 800KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
+| `1788065980737` | 8/29/2026, 10:36:30 PM | 98 | 445KB | ## Kaizon Learner (fork of window #5) — BLANK |
+| `1788065887266` | 8/29/2026, 10:34:13 PM | 138 | 726KB | ## — GLM/LLMs (fork of window #4) — BLANK |
+| `1788065859789` | 8/29/2026, 10:29:25 PM | 82 | 292KB | ## — Cline Learner / cluster surfacing — COMPLETED |
+| `1788065716274` | 8/29/2026, 10:27:15 PM | 106 | 376KB | ## Argus Console Audit — MID-FLIGHT |
+| `1788065789865` | 8/29/2026, 10:26:49 PM | 144 | 431KB | ##  GLM/LLMs: adapter deadlock → LiteLLM restart storm — MID-FLIGHT |
+| `1788066032421` | 8/29/2026, 10:13:02 PM | 82 | 163KB | ## Maximus/Joshua/GLM fleet + adapter deadlock — MID-FLIGHT (new question) |
+| `1788064817596` | 8/29/2026, 9:53:06 PM | 34 | 293KB | #Lost Cline Windows |
 | `1788049703999` | 8/29/2026, 9:36:20 PM | 255 | 1045KB | #Chat Widget |
 | `1788050474905` | 8/29/2026, 9:36:19 PM | 277 | 1870KB | #Argus |
 | `1788050518371` | 8/29/2026, 9:36:09 PM | 175 | 723KB | #Claude Browser Externsion |
@@ -69,11 +79,348 @@ Generated: 8/29/2026, 9:37:21 PM PT | window: last 72h | 60 tasks | index total 
 | `1787875233227` | 8/28/2026, 12:06:32 AM | 142 | 1460KB | #VERITAS |
 | `1787764336166` | 8/27/2026, 11:59:33 PM | 140 | 2535KB | Asked  this befroe -->  |
 | `1787775322285` | 8/27/2026, 5:09:12 PM | 104 | 1131KB | Person already provided proof of payment, but for some reason that part of the CFA is not  |
-| `1787782722374` | 8/26/2026, 9:54:04 PM | 198 | 322KB | #VERITAS |
 
 ---
 
 ## Per-window detail
+
+### `1788065678939` — 8/29/2026, 10:37:20 PM PT — 109 turns
+
+**Original task:**
+
+```
+#Claude Browser Extension MCP — MID-FLIGHT
+
+**Original ask:** "Is there some kind of Claude Browser Extension that can be used with our API like I'm using Claude in Chrome here in Cline?"
+
+**Status:** Nearly done. Built `~/emsu-browser-mcp/` (stdio MCP: CDP active-tab bridge → LiteLLM), Chrome debug launcher on :9222, launchd plists (`com.emsu.mcp-browser` :7864, `com.emsu.chrome-debug`). Live-probed `get_active_tab` + `ask_llm` both working. Registered `emsu-browser` in `cline_mcp_settings.json`. Idea #28744 deployed, #28775 filed. Last action was re-bootstrapping `com.emsu.chrome-debug` afte
+```
+
+**Ideas referenced:** #178805, #18868, #19163, #19370, #19542, #23945, #24026, #28744 [deployed], #28775 [blocked], #6785
+
+**Last PICKUP PROMPT:**
+
+```
+for Ruben, not buildable work.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788050518371 — Claude Browser Extension (emsu-browser MCP), delivery complete.
+
+Where we left off (verified 2026-08-29 22:06 PT):
+- emsu-browser MCP fully verified: get_active_tab and ask_llm live-probed working through the CDP → LiteLLM chain.
+- com.emsu.chrome-debug re-bootstrapped (PID 43824), Chrome debug live on :9222, plist corruption fixed.
+- com.emsu.mcp-browser alive (PID 68368). Registered in cline_mcp_settings.json.
+- #28744 [deployed]; #28775 parked for Ruben's security decision.
+
+Open threads to drive next:
+1. #28775 [blocked] — decide the travel vault autofill security posture (lookup_credential / save_booking in travel_chat.php). Human-policy decision, not buildable without Ruben.
+
+Reference IDs:
+- Ideas: #28744 [deployed], #28775 [blocked]
+- Files touched: ~/Library/LaunchAgents/com.emsu.chrome-debug.plist (rewrote corrupted <string> tags, verified on disk)
+- Services live: com.emsu.mcp-browser (:7864), com.emsu.chrome-debug (Chrome :9222)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788065826964` — 8/29/2026, 10:36:49 PM PT — 63 turns
+
+**Original task:**
+
+```
+## — Kaizon Learner — MID-FLIGHT
+
+**Original ask:** Does Kaizon have a self-learning mechanism? If not, build one; search/research the community; use the bug library as part of the learning process.
+
+**Status:** In progress. Built `cron_kaizen_learner.php`. Last action was a `sed` fixing the kill-switch read (it read `config_value` but kill switches live inside `orchestrator_config.config_json`). Needs inline verify, re-run, wire cron, ship.
+
+```
+Pick up task #1788063169755 — Kaizon self-learning cron: finish the kill-switch fix, verify, wire, ship.
+
+Where we left off (verified 2026-08-29 21:3
+```
+
+**Ideas referenced:** #16523, #178806, #28551, #28552, #28745
+
+**Last PICKUP PROMPT:**
+
+```
+ntab entry + verified DB rows.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788063169755 — Kaizon self-learning cron: finished, verify the first cron tick drains the 1132-fire backlog.
+
+Where we left off (verified 2026-08-29 22:10 PT):
+- /var/www/emtskills/cron_kaizen_learner.php deployed; kill-switch now reads orchestrator_config.config_json via the canonical fetch_row()[0] → json_decode → `kaizen_learner_enabled ?? true` pattern. php -l clean.
+- Manual run: analyzed=100, exit 0. kaizen_recipe_tuning_log=160, kaizen_learner_state=160, heartbeat kaizen_learner|ok|100.
+- Cron installed: */15 * * * * /usr/bin/php /var/www/emtskills/cron_kaizen_learner.php >> /var/www/emtskills/logs/kaizen_learner.log 2>&1 (backup /tmp/crontab.bak.kaizen_learner.2028868).
+- action=none for email_reply_storm is correct (recipe #254 already escalate_blocked/max_attempts=0; all tuning gates no-op by design).
+
+Open threads to drive next:
+1. At the next 15-min tick, confirm /var/www/emtskills/logs/kaizen_learner.log exists and shows a fresh run, and that kaizen_recipe_tuning_log / kaizen_learner_state counts climb past 160 as the 1132-fire backlog drains. (No idea # — routine post-deploy verification, not blocked work.)
+2. If the new-fire harvest rate stays at the 100/run LIMIT after a few days and backlog still grows, reconsider the LIMIT 100 cap or add failure_category diversity so one noisy category (email_reply_storm) stops monopolizing the batch. (Recommend filing as a fresh idea # at that point; measured, not speculative.)
+
+Reference IDs:
+- Ticket: #1788063169755
+- Ideas filed: none this session (shipped work, no deferral)
+- Files touched: /var/www/emtskills/cron_kaizen_learner.php, crontab (+ /tmp/crontab.bak.kaizen_learner.2028868), /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788065744387` — 8/29/2026, 10:36:30 PM PT — 125 turns
+
+**Original task:**
+
+```
+## — Chat Widget disclaimer + misrouting — COMPLETED
+
+**Original ask:** Add an "automated agent may make mistakes" disclaimer to the chat widget (and check the Email Agent has the same).
+
+**Status:** Completed + shipped. Build fixes live-verified; disclaimer gap (#18541 was recorded deployed but never actually applied) closed. Open thread is the 18-question browser-AI test pass.
+
+```
+Pick up task #28758 — Chat widget misrouting + 23-finding audit remediation (verification pass remaining).
+
+Where we left off (verified 2026-08-29 20:59 PT):
+- Build fixes shipped and live-verified (disclaimer app
+```
+
+**Ideas referenced:** #059669, #1242, #13965, #1567, #15815, #16474, #16732, #177796, #18541 [deployed], #18758, #1912, #20495, #2168, #23989, #25962, #25964, #25965, #26229, #2642, #2654, #2659, #2662, #2666, #26816, #26932, #27284, #28042, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #2850, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758 [deployed], #28759 [executing], #2916, #33689, #3577, #6366, #9131, #9152
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788065980737` — 8/29/2026, 10:36:30 PM PT — 98 turns
+
+**Original task:**
+
+```
+## Kaizon Learner (fork of window #5) — BLANK
+
+Same "#Kaizon Learner" task as 1788063169755. Empty last assistant turn — a forked/re-opened window. **Resume from window #5's pickup prompt (section 5 above).**
+
+---
+
+##
+```
+
+**Ideas referenced:** #10740, #11565, #11991, #11997, #12002, #12046, #12059, #12061, #12249, #12265, #1242, #12584, #12646, #12676, #12701, #12724, #12900, #13418, #13419, #13440, #13441, #13490, #15815, #16078, #16079, #16083, #16152, #16524, #178806, #18796, #1912, #1998, #20058, #20495, #20922, #20927, #21021, #21023, #21070, #2168, #23054, #23207, #23208, #23225, #23309, #23316, #23466, #23493, #24339 [deployed], #24340 [deployed], #24341, #24500, #25081, #25238, #25240, #25241, #25242, #25269, #25313, #25314, #25315, #25316 [deployed], #25364 [executing], #25888, #2640, #2642, #26525 [deployed], #2654, #26586 [deployed], #2659, #26597 [deployed], #2662, #2666, #26712, #26713, #26867 [deployed], #26877 [approved], #26879 [deployed], #26898, #26899, #26900, #26932, #27203, #27251, #27252, #27253, #27284, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28306 [deployed], #28307, #28308, #28310, #28316, #28330 [deployed], #28331, #28369, #28370, #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28636 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28745 [deployed], #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28782 [proposed], #4955, #8151, #8179, #8181, #8182, #8183, #9791
+
+**Last PICKUP PROMPT:**
+
+```
++ filed idea #28782 [deployed]
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788063169755 - Kaizen Learner: harvest-starvation fix + verify + cron wiring (window #5 fork)
+
+Where we left off (verified 2026-08-29 22:33 PT):
+- cron_kaizen_learner.php deployed at /var/www/emtskills/cron_kaizen_learner.php. Per-category harvest fix verified live: 22:30:08 cron run harvested 3 recurred fires per-category, analyzed safe_write_php_lint/worker_silent_death/email_reply_storm in 974ms
+- kill-switch verified reading orchestrator_config config_json (kaizen_learner_enabled)
+- cron */15 under emsuserver writing /var/www/emtskills/logs/kaizen_learner.log (writable, 22:30:08 cron fire OK)
+- kaizen_recipe_tuning_log + kaizen_learner_state + kaizen_cron_heartbeat all live (heartbeat: ok, rows_processed=3)
+- RCA idea #28782 [deployed] filed for the starvation defect
+- #28745 [deployed] verified: worker_silent_death protected from escalation (95.3% success guard added)
+
+Open threads to drive next:
+None - all work completed this session. Learner now analyzes every failure_category each run and the success guard prevents noise proposals for healthy recipes.
+
+Reference IDs:
+- Ideas filed: #28782 [deployed], #28745 [deployed] (verified in place, no change needed)
+- Files touched: /var/www/emtskills/cron_kaizen_learner.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788065887266` — 8/29/2026, 10:34:13 PM PT — 138 turns
+
+**Original task:**
+
+```
+## — GLM/LLMs (fork of window #4) — BLANK
+
+Same "#GLM / LLMs" task as 1788064238609 (adapter deadlock). This directory has an empty last assistant turn — it is a forked/re-opened window on the same task that had not yet produced new content. **Resume from window #4's pickup prompt (section 4 above).**
+
+---
+
+##
+```
+
+**Ideas referenced:** #081020, #13202, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #1876, #1965, #1966, #1967, #21038 [executing], #22584, #25185, #25468, #25471, #25515 [proposed], #2573, #25796, #25797, #25798, #2582, #25916 [awaiting_review], #2655, #26663, #2670 [deployed], #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28544, #28550, #28607, #28621, #28740 [proposed], #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28769 [executing], #28778 [deployed], #28779 [proposed], #28783 [proposed], #8861
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788065859789` — 8/29/2026, 10:29:25 PM PT — 82 turns
+
+**Original task:**
+
+```
+## — Cline Learner / cluster surfacing — COMPLETED
+
+**Original ask:** "How is this going? Is this being used?" (Cline Learner check-in).
+
+**Status:** Completed + shipped. Diagnosed the missing piece (clusters were never surfaced to Cline), shipped new hardfloor rule `cluster-surfacing-close-the-improvement-loop.md`. No open threads.
+
+```
+Pick up task — Cline Learner + cluster surfacing: verified healthy, shipped the missing improvement loop.
+
+Where we left off (verified 2026-08-29 21:28 PT):
+- Cline Learner (com.emsu.cline-yolo-learner) healthy: 30-min scans, 0 new YOLO trips 7d / 6 in 30d, ru
+```
+
+**Ideas referenced:** #10676, #178806, #25185, #2680, #27284, #28201, #28453, #28597, #28616, #28619, #28689, #28698, #28708, #28709, #28711, #28713, #28725, #28730 [blocked], #28744, #28745, #28751 [executing], #28758 [deployed], #28759 [executing], #28774 [proposed], #28776 [proposed], #62604, #62699, #62725, #752467
+
+**Last PICKUP PROMPT:**
+
+```
+ded and reindexed this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788062963405 - Consolidated Learner Context (Cline Learner + CFA Learner): verified state + corrections
+
+Where we left off (verified 2026-08-29 22:29 PT):
+- Cline Learner healthy: 208 YOLO trips total, 0 last 7d / 6 last 30d, heartbeat mtime Aug 29 22:07.
+- CFA learner surfaces probed: Email AI active (868 rows @ 22:00); chat 720,250 rows stale since 5/31; voice 43 rows stale since 5/4; queue 924 rows stale since 4/21.
+- Cluster-surfacing hardfloor rule now present on disk + in corpus (prior window's assertion it existed was not substantiated): /Users/rubenmajor/Documents/Cline/Rules/cluster-surfacing-close-the-improvement-loop.md, corpus 354 rules / 23 hardfloor.
+- #28774 [proposed] - description note appended with measured counts for reference; the unify + rewire work has not started.
+
+Open threads to drive next:
+1. #28774 [proposed] - unify + rewire CFA learning loops (chat/SMS/voice re-ingestion) once approved.
+2. #28776 [proposed] - umbrella consolidation reference; approve to drive the learner-loop cluster forward.
+3. #28730 [blocked] - fleet-wide probe-backed claim format (impl_failed, needs unblock).
+
+Reference IDs:
+- Ideas filed: #28776 [proposed], #28774 [proposed] (description note appended), #28730 [blocked], #28751 [executing], #28758 [deployed], #28759 [executing]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/cluster-surfacing-close-the-improvement-loop.md (new), /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md (amended + reindexed), HANDOFF_NOTES.md (server, consolidated context), orchestrator_ideas #28774 [proposed] (description note appended)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788065716274` — 8/29/2026, 10:27:15 PM PT — 106 turns
+
+**Original task:**
+
+```
+## Argus Console Audit — MID-FLIGHT
+
+**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.
+
+**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.
+
+```
+Pick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.
+
+Where we left off (verified 2026-08-29 21:36 PT):
+- 
+```
+
+**Ideas referenced:** #10014, #17759, #178805, #20674, #21125, #21126, #22511, #23036, #23037, #23038, #23428, #23941, #23982, #24897, #25047, #25573, #2626, #26325, #2680, #26895, #27646, #28125, #28127, #28133, #28155, #28189, #28199, #28201, #28249, #28252, #28254, #28309, #28310, #28337, #28385, #28453, #28457, #28459, #28607, #28730, #28760 [proposed], #28761 [proposed], #28762 [blocked], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767, #28768, #28780 [proposed], #30363
+
+**Last PICKUP PROMPT:**
+
+```
+rst; #28766 Tasks native panel
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788050474905 — Argus Console Audit: finish remaining proposed roadmap items + run browser-AI test plan.
+
+Where we left off (verified 2026-08-29 22:26 PT):
+- Audit reconciled: P0 dedupe/twin/backoff, P1 leak/catalog/persona/evidence, P2 promise_unbuilt all LIVE. GLM-5.2→5.3 fix deployed this window (alltastic_api.php, php -l clean, reloaded).
+- Browser-AI test plan written: docs/specs/argus_console_audit_browser_ai_test_plan.md (12 cases T1-T12).
+- Followup idea #28780 [proposed] filed to run the plan. HANDOFF_NOTES updated.
+
+Open threads to drive next:
+1. #28780 [proposed] — Run browser-AI test plan T1-T12 against argus_terminal.php + chrome sidebar; fold findings into open ideas.
+2. #28760 [proposed] — Implement inline-lane rules-based dispatcher (hard short-circuit) for single-action read-only queries.
+3. #28761 [proposed] — Add durable `argus_task_messages` from_argus row in worker done-path so full-answer post-back survives session restart.
+4. #28763 [proposed] — Session context slot (current student + last N turns) across chats.
+5. #28764 [proposed] — Tool contract: sort/limit/count_only on list tools; log validation errors as invalid_args, not gate-fail.
+6. #28765 [proposed] — Activity writes-only default + facet filters + date range + burst grouping.
+7. #28766 [proposed] — Tasks native list + side panel replacing argus_task_status.php embed.
+8. #28762 [blocked] — Chat-to-task off-by-one link; needs human decision on session_key scoping (4 session_keys for one text).
+
+Reference IDs:
+- Ticket: N/A (audit task, not a support ticket)
+- Ideas filed: #28780 [proposed]; evidence added to #28761
+- Files touched: routes/alltastic_api.php (GLM-5.3 label fix), docs/specs/argus_console_audit_browser_ai_test_plan.md (new), HANDOFF_NOTES.md (updated), orchestrator_ideas rows #28761, #28780
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788065789865` — 8/29/2026, 10:26:49 PM PT — 144 turns
+
+**Original task:**
+
+```
+##  GLM/LLMs: adapter deadlock → LiteLLM restart storm — MID-FLIGHT
+
+**Original ask:** Gaslighting/LLM stability — make local LLMs durably stable. Resolved the frankenstein-tools adapter deadlock (patched + shipped). Then Ruben's follow-up landed and this is now the active thread: **who is restarting LiteLLM every few minutes, and how do we protect frankenstein-llm from continual restarts while still reaping routing changes?** (research with the community).
+
+**Status:** In progress. Adapter deadlock work is shipped (pickup prompt at task #1788135215000). The NEW investigation just found the re
+```
+
+**Ideas referenced:** #1128, #1145 [approved], #13202, #13490, #178806, #178813, #18312, #1876, #1965 [deployed], #1966 [deployed], #1967 [rejected], #21582, #22584 [deployed], #24645, #25630, #2582, #28544, #28725 [blocked], #28730 [executing], #28740 [proposed], #28752 [executing], #28769 [executing], #28777 [deployed], #28781 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788066032421` — 8/29/2026, 10:13:02 PM PT — 82 turns
+
+**Original task:**
+
+```
+## Maximus/Joshua/GLM fleet + adapter deadlock — MID-FLIGHT (new question)
+
+**Original ask:** "This is the kind of stupid garbage ruining our LLMs..." → Maximus SSH mystery (Joshua stole WOPR :2224), Cicero/Nero identity, GLM ring 4096, Maximus Qwen3.8 standup. Fleet work shipped (two full pickup prompts embedded). Then a NEW mid-flight thread: the identity echo caught a fabricated citation.
+
+**Status:** In progress. Last tail: "The identity echo caught a fabricated citation — I referenced #28758 without filing it. File the real idea now:"
+
+```
+Pick up task #1788051831962 — Maximus/Joshua/GLM 
+```
+
+**Ideas referenced:** #081020, #10676 [approved], #12960, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #178805, #21038 [executing], #25468, #25471, #25515 [proposed], #2573, #25738, #25796, #25797, #25798, #25916 [awaiting_review], #26663, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [deployed], #28705, #28706 [executing], #28725 [blocked], #28730, #28740 [proposed], #28758, #7630, #9019, #9025, #9269
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788064817596` — 8/29/2026, 9:53:06 PM PT — 34 turns
+
+**Original task:**
+
+```
+#Lost Cline Windows
+
+I lost every single cline window just now on a random restart. All the windows restarted, but restarted blank. There were 8-11 of them. Can you give pickup prompts for all of them in a document. ONLY from Cline. Not from Argus and not from Executor. From Cline only.
+```
+
+**Ideas referenced:** #178796, #178805, #178806, #178813, #18541 [deployed], #2420, #2645, #2647, #2648, #2649, #2677, #2679, #2680, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28705 [deployed], #28706 [executing], #28712 [approved], #28713, #28716 [in_progress], #28722 [proposed], #28725 [blocked], #28730 [executing], #28740 [proposed], #28744 [deployed], #28745 [deployed], #28752 [executing], #28753 [rejected], #28758 [deployed], #28759 [executing], #28769 [executing], #28770 [proposed], #28774 [proposed], #28775
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788049703999` — 8/29/2026, 9:36:20 PM PT — 255 turns
 
@@ -2442,21 +2789,3 @@ Reference IDs:
 - Ideas filed: (none)
 - Files touched: (none)
 ```
-
-### `1787782722374` — 8/26/2026, 9:54:04 PM PT — 198 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase as we may have made changes on this in another window / do an assessment and consult the community/give your optinoin on best plan
-
-Yes - correcting before the LLM writes is strictly better, and it is possible. I built and deployed it.
-
-Why the post-hoc judge was needed at all: the email responder's pre-generation grounding (lib/EmsuUniversalGrounding.php) injects the general EMSU policy corpus plus the instruction "do not invent", but it injects zero facts about the specific student. A model asked "has my refund been processed?" with no refund fact in its context has only two
-```
-
-**Ideas referenced:** #174558, #178712, #18853, #26663, #26851, #27942 [deployed], #28028 [deployed], #28043, #28044, #28088, #28213 [proposed], #28218 [deployed], #28220 [proposed], #28233 [deployed], #28256 [proposed], #28306 [deployed], #28307 [proposed], #28308 [proposed], #28330 [deployed], #28331 [deployed], #28370 [deployed], #3354, #3559 [rejected], #4958, #9132, #9222
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

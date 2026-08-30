@@ -6,11 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/30/2026, 11:10:42 AM PT | window: last 72h | 71 tasks | index total 983 (parsed 0, cached 983)
+Generated: 8/30/2026, 12:10:42 PM PT | window: last 72h | 72 tasks | index total 984 (parsed 2, cached 982)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788104490855` | 8/30/2026, 9:19:35 AM | 85 | 732KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
+| `1788116945411` | 8/30/2026, 12:10:37 PM | 11 | 43KB | #$12K bill suspension |
+| `1788104490855` | 8/30/2026, 12:10:25 PM | 101 | 839KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
 | `1788065826964` | 8/30/2026, 4:31:04 AM | 150 | 589KB | ## — Kaizon Learner — MID-FLIGHT |
 | `1788065716274` | 8/30/2026, 12:24:39 AM | 154 | 551KB | ## Argus Console Audit — MID-FLIGHT |
 | `1788071557390` | 8/29/2026, 11:55:51 PM | 98 | 181KB | ## — GLM/LLMs (fork of window #4) — BLANK - 2 |
@@ -86,7 +87,21 @@ Generated: 8/30/2026, 11:10:42 AM PT | window: last 72h | 71 tasks | index total
 
 ## Per-window detail
 
-### `1788104490855` — 8/30/2026, 9:19:35 AM PT — 85 turns
+### `1788116945411` — 8/30/2026, 12:10:37 PM PT — 11 turns
+
+**Original task:**
+
+```
+#$12K bill suspension
+
+See this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here?
+```
+
+**Ideas referenced:** #1242, #178806, #2670, #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788104490855` — 8/30/2026, 12:10:25 PM PT — 101 turns
 
 **Original task:**
 

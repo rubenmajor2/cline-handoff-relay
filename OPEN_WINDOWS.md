@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 7:36:55 PM PT | window: last 72h | 54 tasks | index total 965 (parsed 0, cached 965)
+Generated: 8/29/2026, 8:36:55 PM PT | window: last 72h | 54 tasks | index total 965 (parsed 4, cached 961)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788051831962` | 8/29/2026, 6:28:32 PM | 134 | 255KB | This is the kind of stupid garbage ruining our LLMs and all of our operations. Needs durab |
-| `1788037909518` | 8/29/2026, 6:17:40 PM | 65 | 192KB | #emtskills slowness |
-| `1788050474905` | 8/29/2026, 6:17:32 PM | 111 | 1269KB | #Argus |
-| `1788049703999` | 8/29/2026, 6:17:21 PM | 141 | 718KB | #Chat Widget |
+| `1788051831962` | 8/29/2026, 8:36:48 PM | 260 | 464KB | This is the kind of stupid garbage ruining our LLMs and all of our operations. Needs durab |
+| `1788037909518` | 8/29/2026, 8:30:02 PM | 103 | 433KB | #emtskills slowness |
+| `1788050474905` | 8/29/2026, 8:29:24 PM | 208 | 1649KB | #Argus |
+| `1788049703999` | 8/29/2026, 8:26:28 PM | 238 | 959KB | #Chat Widget |
 | `1788051007231` | 8/29/2026, 6:17:13 PM | 265 | 518KB | #VAPI CFA |
 | `1788021977080` | 8/29/2026, 5:53:53 PM | 602 | 4690KB | #Various 2 |
 | `1788050518371` | 8/29/2026, 5:53:24 PM | 22 | 124KB | #Claude Browser Externsion |
@@ -69,7 +69,7 @@ Generated: 8/29/2026, 7:36:55 PM PT | window: last 72h | 54 tasks | index total 
 
 ## Per-window detail
 
-### `1788051831962` — 8/29/2026, 6:28:32 PM PT — 134 turns
+### `1788051831962` — 8/29/2026, 8:36:48 PM PT — 260 turns
 
 **Original task:**
 
@@ -81,11 +81,11 @@ My quesiton then regarding Cicero - I wonder if something "stole" it as well? Ho
 How is GLM doing now then? Should we move down to 2K or so or keep at 4K? How fast tok/sec 
 ```
 
-**Ideas referenced:** #13202, #178813, #25185, #28705 [blocked], #28706 [executing], #28725 [blocked], #28730 [blocked], #28740 [proposed], #28752 [proposed], #28753 [proposed]
+**Ideas referenced:** #12247, #12262, #13108, #13202, #13874, #15668, #178813, #1876, #18868, #1965, #1966, #1967, #1969, #2238, #22584, #25185, #25471, #2654, #26925, #28544, #28605, #28705 [blocked], #28706 [executing], #28725 [blocked], #28730 [blocked], #28740 [proposed], #28752 [proposed], #28753 [proposed], #45425
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788037909518` — 8/29/2026, 6:17:40 PM PT — 65 turns
+### `1788037909518` — 8/29/2026, 8:30:02 PM PT — 103 turns
 
 **Original task:**
 
@@ -98,18 +98,19 @@ approved
 1. #28722 [proposed] — Upgrade /var/www/emtskills/scripts/llm_pool_isolation_guard.py from alert-only to self-heal: on detection of an unisolated trafficked form, auto-patch the AGENT_POOL alternation in BOTH PLESK_VHOST (/var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf) and LOCAL_VHOST (/etc/nginx/sites-enabled/emtskills), backup first, run nginx -t, reload nginx, re-run the isolation check, and an accepted-conn delta probe; ship --dry-run default → --self-heal flag
 ```
 
-**Ideas referenced:** #22298, #22550, #23133, #23945, #23952, #23954, #25042, #25940, #28722 [proposed]
+**Ideas referenced:** #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691, #28722 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-e HANDOFF_NOTES.md + idea #28722 status to deployed
+)
+- [ ] Append HANDOFF_NOTES.md entry — in progress
 - [ ] Complete with rule-91 PICKUP PROMPT
 </task_progress>
 </use_mcp_tool>
 ```
 
-### `1788050474905` — 8/29/2026, 6:17:32 PM PT — 111 turns
+### `1788050474905` — 8/29/2026, 8:29:24 PM PT — 208 turns
 
 **Original task:**
 
@@ -131,11 +132,43 @@ of terminal queries hit "model pool saturated" (135 / 847)
 recent task
 ```
 
-**Ideas referenced:** #15815, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1912, #19348, #1998, #2006, #20495, #21125, #21126, #21262, #2168, #22511, #22583, #22688, #23036, #23039, #23428, #23468, #23489, #23506, #23675, #23920, #23941, #23952, #2420, #24766, #24897, #24902, #24905, #24906, #24909, #24910, #24912, #24913, #24926, #24941, #24990, #25047, #25058, #25269, #25313, #25573, #25768, #26000, #26067, #26325, #26327, #2640, #2642, #2645, #2647, #2648, #2649, #2654, #2659, #2662, #2666, #26712, #26713, #2677, #2679, #2680, #26895, #26932, #27243, #27244, #27284, #27860, #28042, #28133, #28155, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28713, #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #30363, #334155, #4338, #64748
+**Ideas referenced:** #10866, #15815, #1779, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1912, #19348, #1998, #2006, #20495, #21125, #21126, #21262, #2168, #22511, #22583, #22688, #23036, #23039, #23428, #23429, #23468, #23489, #23506, #23675, #23920, #23941, #23952, #23982, #2420, #24766, #24897, #24902, #24905, #24906, #24909, #24910, #24912, #24913, #24926, #24941, #24990, #25047, #25058, #25269, #25313, #25571, #25573, #25768, #26000, #26067, #26325, #26327, #2640, #2642, #2645, #2647, #2648, #2649, #2654, #2659, #2662, #2666, #26712, #26713, #2677, #2679, #2680, #26895, #26932, #27126, #27243, #27244, #27284, #27860, #28042, #28133, #28155, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28713, #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28760 [proposed], #28761 [proposed], #28762 [proposed], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767 [proposed], #28768 [proposed], #30363, #334155, #4338, #64748
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
 
-### `1788049703999` — 8/29/2026, 6:17:21 PM PT — 141 turns
+```
+Actual | Pass/Fail | Evidence.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Console Audit implementation (artifact 0432eb26-08a9-4b76-a68f-d7ad08ac4b57).
+
+Where we left off (verified 2026-08-29 20:27 PT):
+- SHIPPED: lib/argus_audit_fixes_p0.php (8 helpers) · routes/alltastic_api.php (require, Argus persona, NUMERIC EVIDENCE RULE, dedupWindowMin=20, finished-twin replay) · routes/cron_argus_task_worker.php (next_retry_at claim gate + 30s/2m/10m backoff) · DB argus_task_queue.next_retry_at DATETIME · routes/argus_download.php (GLM-5.3 labels ×3). All php -l clean; survival-verified after the drift guard.
+- Ideas filed: #28760-#28768 [proposed] cover inline lane, chat postback (needs Ruben confirm), off-by-one link (needs go), session context, tool contracts, Activity UX, Tasks native, Escalate button, Actions UX.
+- Temporary helper files lib/argus_audit_test.php + lib/file_audit_ideas.php deleted.
+- Handoff note appended to docs/HANDOFF_NOTES_ARCHIVE_2026.md (deploy technique: stage→php -l→cp atomic, or the parse-error restorer rolls back edits).
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #28760 [proposed] — Confirm inline-lane approach (rule table vs classifier), then build dispatcher for read-only single-action queries.
+2. #28761 [proposed] — On Ruben go, post FULL finished-task answers into originating chat (override prior peek+link design) and bind task ID to creating message (#28762).
+3. #28763 [proposed] — Session context slot: current student + last N turns across chats.
+4. #28764 [proposed] — Add sort/limit/count_only to list tools; validation errors → invalid_args, not gate fail.
+5. #28765/#28766/#28767/#28768 [proposed] — Activity/Tasks/Escalate/Actions UI builds from the audit roadmap (all P2).
+
+Reference IDs:
+- Ideas filed: #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28767, #28768
+- Files touched: lib/argus_audit_fixes_p0.php, routes/alltastic_api.php, routes/cron_argus_task_worker.php, routes/argus_download.php, docs/HANDOFF_NOTES_ARCHIVE_2026.md
+- DB: argus_task_queue.next_retry_at (added 2026-08-29 20:20 PT)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788049703999` — 8/29/2026, 8:26:28 PM PT — 238 turns
 
 **Original task:**
 
@@ -145,40 +178,38 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Please place a disclaimer on the chat window in small print at the bottom below "Start chatting!" that says: "This response may be from an automated agent which can sometimes make mistakes" or something like that. It's the same thing that SHOULD be on Email Agent generated replies whcih I think may also need fixing.
 ```
 
-**Ideas referenced:** #059669, #12364, #13965, #1567, #16474, #16732, #177796, #18335, #18541 [deployed], #18758, #23989, #25550, #25888, #25962, #25964, #25965, #26229, #26376, #26377, #26816, #26834, #2850, #2916, #33689, #3577, #6366, #9084, #9112, #9131, #9132, #9152, #9222
+**Ideas referenced:** #059669, #12364, #13965, #1567, #16474, #16732, #177796, #18335, #18541 [deployed], #18758, #23989, #25185, #25550, #25888, #25962, #25964, #25965, #26229, #26376, #26377, #26816, #26834, #2850, #28758 [proposed], #28759 [executing], #2916, #33689, #3577, #6366, #9084, #9112, #9131, #9132, #9152, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-ap is now closed this session.
+ule file needed (data record).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task: Chat widget disclaimer + email agent disclaimer fix (idea #18541 [deployed])
+Pick up task #28758 [deployed] - Chat widget misrouting + 23-finding audit remediation
 
-Where we left off (verified 2026-08-29 17:38 PT):
-- Chat widget: added small-print disclaimer below 'Start chatting!' in api/chat_widget_embed.js (line 328) - 'This response may be from an automated agent which can sometimes make mistakes.' Live-verified via HTTPS: present and node --check passed.
-- Email agent: updated lib/disclaimer_helper.php stub (loaded by cron_ai_ticket_agent.php line 1730) to include 'This is an automated response from an AI agent which can sometimes make mistakes. A member of our team may follow up if needed...' PHP lint OK, live render verified.
-- Idea #18541 [deployed] tracked the disclaimer gap spec; chat widget portion was not actually applied before this session - now done.
+Where we left off (verified 2026-08-29 20:16 PT):
+- Misrouting fixed: cwc_queue_signal returns empty queue for closed conversations and when no agent is online (lib/chat_queue_confidence.php); widget_force_handoff T1 fires only on the latest visitor message; AI no longer mutes on agent_takeover until a human actually speaks (api/chat_widget_api.php $aiSuppressed=false).
+- Client fixes: F-01 closed banner module scope, F-02 bootstrap before buildWidget, F-03 keep polling while closed + F-15 background-tab guard, F-04 load beacon, F-06 AI sender label, F-07 rating persists, F-09 mobile CSS, F-10 dialog/aria/label, F-11 off-hours status line, F-12 greeting precedence, F-13 dated timestamps, F-14 delegated listeners (CSP-safe), F-16 id-based detection, F-17 upload nudge, F-19 word-boundary keywords, F-20 hashchange resume, F-21 textarea auto-grow, F-22 cache-bust version.
+- Server F-08 DTO: widget_bootstrap/widget_send/widget_poll trim messages to 5 columns and filter conversation DTO (no visitor_ip/admin_notes).
+- Live verified: widget JS 200 (65,516 bytes) + node --check pass; widget_config site_key=5 200 ok; all PHP files lint clean.
 
 Open threads to drive next:
-None — all work completed this session.
+1. #28759 [executing] — Run the browser-AI test pass against a live site (arizonaemt.com) covering disclaimer visibility, basic-question AI answer, single-fire handoff, AI-unmute after handoff, closed-conversation non-resurrection, DTO leak check, and closed-window unread badge/chime.
 
 Reference IDs:
-- Ideas filed: #18541 [deployed]
-- Files touched: /var/www/emtskills/api/chat_widget_embed.js, /var/www/emtskills/lib/disclaimer_helper.php
+- Ideas filed: #28758 [deployed], #18541 [deployed], #28759 [executing]
+- Files touched: /var/www/emtskills/api/chat_widget_embed.js, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/lib/chat_queue_confidence.php, /var/www/emtskills/lib/widget_force_handoff.php, /var/www/emtskills/lib/disclaimer_helper.php
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Restore chat_widget_embed.js after bad write
-- [x] Add small-print disclaimer below "Start chatting!" in chat widget
-- [x] Fix email agent disclaimer helper (disclaimer_helper.php)
-- [x] Verify PHP lint on disclaimer_helper.php
-- [x] Probe live: chat widget JS loads with disclaimer
-- [x] Verify email footer live render
-- [x] Validate completion (all rule 91 gates passed)
+- [x] Reconcile #28759 (executing)
+- [x] Final live probe (HTTP 200 + node --check)
+- [x] Stamp #28758 deployed with implemented_files
+- [x] Validate completion (all gates passed)
 </task_progress>
 </attempt_completion>
 ```

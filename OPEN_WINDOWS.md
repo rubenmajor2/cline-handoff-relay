@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/30/2026, 12:10:42 PM PT | window: last 72h | 72 tasks | index total 984 (parsed 2, cached 982)
+Generated: 8/30/2026, 3:30:24 PM PT | window: last 72h | 72 tasks | index total 984 (parsed 0, cached 984)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788116945411` | 8/30/2026, 12:10:37 PM | 11 | 43KB | #$12K bill suspension |
-| `1788104490855` | 8/30/2026, 12:10:25 PM | 101 | 839KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
+| `1788104490855` | 8/30/2026, 12:19:31 PM | 126 | 926KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
+| `1788116945411` | 8/30/2026, 12:18:12 PM | 48 | 136KB | #$12K bill suspension |
 | `1788065826964` | 8/30/2026, 4:31:04 AM | 150 | 589KB | ## — Kaizon Learner — MID-FLIGHT |
 | `1788065716274` | 8/30/2026, 12:24:39 AM | 154 | 551KB | ## Argus Console Audit — MID-FLIGHT |
 | `1788071557390` | 8/29/2026, 11:55:51 PM | 98 | 181KB | ## — GLM/LLMs (fork of window #4) — BLANK - 2 |
@@ -87,7 +87,46 @@ Generated: 8/30/2026, 12:10:42 PM PT | window: last 72h | 72 tasks | index total
 
 ## Per-window detail
 
-### `1788116945411` — 8/30/2026, 12:10:37 PM PT — 11 turns
+### `1788104490855` — 8/30/2026, 12:19:31 PM PT — 126 turns
+
+**Original task:**
+
+```
+The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call it. Please resolve this so I can use Reuben computer
+```
+
+**Ideas referenced:** #12688, #12689, #1391, #1394, #14133, #14142, #1548, #16154, #16648, #16715, #17202, #177821, #23071, #24645, #25969, #27284, #28729, #28860 [proposed], #30792 [executing], #30793 [executing], #30794 [blocked], #3536, #3537, #3539, #3540, #40873, #4677, #6520, #9222, #9501, #9746, #9979, #9982, #9984, #9985, #9986
+
+**Last PICKUP PROMPT:**
+
+```
+, which is the actual surface.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — RUBEN computer (760 280 7886) auto-hangup is resolved; verify remaining sweep-key cleanup.
+
+Where we left off (verified 2026-08-30 12:18 PT):
+- Root cause fixed: LiteLLM voice-lane greeting probe (no `messages`) was crashing Router.acompletion() → 500 → Vapi providerfault → hangup. router_hook.py now synthesizes English `messages`; litellm restarted healthy.
+- Second fix: removed fatal `\VapiCodecFix\validateAndRepairCodec()` call in vapi_server_webhook.php; lint clean + watchdog-safe.
+- Verified live: no-messages probe returns ENGLISH 200; 0 providerfault hangups since 09:19 PT; last calls end sip-completed (clean).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #28860 [proposed] — Locate and rotate/remove the stale health-sweeper litellm key (hash 8eb4d04c) still producing 5-min 401 "Key not found in db" noise on voice egress; keep monitoring so it never masks a real auth failure.
+
+Reference IDs:
+- Ideas filed: #28860
+- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/api/voice/vapi_server_webhook.php
+- Backups: /etc/litellm/router_hook.py.bak-20260830-0917
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788116945411` — 8/30/2026, 12:18:12 PM PT — 48 turns
 
 **Original task:**
 
@@ -97,49 +136,36 @@ Generated: 8/30/2026, 12:10:42 PM PT | window: last 72h | 72 tasks | index total
 See this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here?
 ```
 
-**Ideas referenced:** #1242, #178806, #2670, #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788104490855` — 8/30/2026, 12:10:25 PM PT — 101 turns
-
-**Original task:**
-
-```
-The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call it. Please resolve this so I can use Reuben computer
-```
-
-**Ideas referenced:** #12688, #12689, #1391, #1394, #14133, #14142, #1548, #16154, #16648, #16715, #17202, #177821, #23071, #24645, #25969, #27284, #28729, #30792 [executing], #30793 [executing], #30794 [blocked], #3536, #3537, #3539, #3540, #40873, #4677, #6520, #9222, #9501, #9746, #9979, #9982, #9984, #9985, #9986
+**Ideas referenced:** #1242, #1456, #16613, #178806, #2670, #27144, #28089 [deployed], #28115 [blocked], #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28859 [proposed], #4929
 
 **Last PICKUP PROMPT:**
 
 ```
-ticket to the VAPI admin team to audit the assistant’s settings.  
-
----  
-
-#### PICKUP PROMPT BLOCK  
+s getting a false debt letter.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #<real_task_id> — resolve automatic hang‑up on Ruben TNG personal‑assistant (+17602807886).
+Pick up task — $12,860 phantom bill investigation for Alex Smith Jr (26814T-15).
 
-Where we left off (verified 2026‑08‑30 08:45 PT):
-- VAPI health OK, recent call logged with duration 0 seconds (auto‑hang‑up).
-- Assistant configuration lives off‑box; local tables do not contain the entry.
+Where we left off (verified 2026-08-30 12:17 PT):
+- Root cause confirmed: $12,860 suspension email was the whole-section 26814T balance dumped onto one student (bug class, not real debt). Real balance = $1,545 (inv 164951). Balance-scoping fix already deployed 8/24 (idea #28089 [deployed]).
+- Alex confirmed on 8/22 he is not attending and wants to withdraw. Withdrawal NOT yet processed; $1,545 not voided; he STILL receives $12,860 emails (last one 8/30 11:30 PT).
+- Filed idea #28859 [proposed] to process the withdrawal + void/credit $1,545 + suppress further dunning.
 
-Open threads to drive next:
-1. #30792 [executing] — Query VAPI for assistant ID bound to +17602807886 and snapshot config.
-2. #30793 [executing] — Patch assistant to clear auto‑hang‑up flag; verify with canary call.
-3. #30794 [blocked] — If VAPI API key missing or permission error, file a ticket for VAPI admin.
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #28859 [proposed] — Process Alex Smith Jr's confirmed withdrawal: void/credit invoice 164951's $1,545 balance, mark student withdrawn (moodle_suspended=1 already set), and suppress all further suspension/dunning emails to alex.vipersmith@gmail.com. Owned by CS; escalate if not done.
+2. #28115 [blocked on CS] — Bulk re-tie of remaining mis-tied QB invoice-mirror rows (Alex's 164951 mirror was mis-pointed at Keyes' customer; fix landed for him, cohort-wide sweep still in flight).
 
 Reference IDs:
-- Ideas filed: [#30792, #30793, #30794]
-- Files touched: [/var/www/emtskills/backups/vapi_assistant_tng_prefix_<timestamp>.json]
+- Ticket: TKT-20260822-2FF7E9CE (#27144, resolved 8/25 but follow-ups still firing)
+- Ideas filed: #28859 [proposed], #28089 [deployed], #28115 [blocked]
+- Files touched: none this window (DB + MCP probes only)
 
-When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1788065826964` — 8/30/2026, 4:31:04 AM PT — 150 turns

@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-30T19:10:42.570Z",
+ "generated_at": "2026-08-30T22:30:20.693Z",
  "counts": {
-  "parsed": 2,
-  "reused": 982,
+  "parsed": 0,
+  "reused": 984,
   "failed": 0,
   "total": 984
  },
@@ -147128,13 +147128,13 @@
   },
   "1788104490855": {
    "task_id": "1788104490855",
-   "mtime": 1788117025746,
+   "mtime": 1788117571001,
    "created_at": "2026-08-30T15:41:30.855Z",
-   "last_modified": "2026-08-30T19:10:25.746Z",
-   "size_kb": 839,
-   "turn_count": 101,
+   "last_modified": "2026-08-30T19:19:31.001Z",
+   "size_kb": 926,
+   "turn_count": 126,
    "title": "The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call it. Please resolve this so I can use Reuben computer",
-   "pickup_prompt": "ticket to the VAPI admin team to audit the assistant’s settings.  \n\n---  \n\n#### PICKUP PROMPT BLOCK  \n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #<real_task_id> — resolve automatic hang‑up on Ruben TNG personal‑assistant (+17602807886).\n\nWhere we left off (verified 2026‑08‑30 08:45 PT):\n- VAPI health OK, recent call logged with duration 0 seconds (auto‑hang‑up).\n- Assistant configuration lives off‑box; local tables do not contain the entry.\n\nOpen threads to drive next:\n1. #30792 [executing] — Query VAPI for assistant ID bound to +17602807886 and snapshot config.\n2. #30793 [executing] — Patch assistant to clear auto‑hang‑up flag; verify with canary call.\n3. #30794 [blocked] — If VAPI API key missing or permission error, file a ticket for VAPI admin.\n\nReference IDs:\n- Ideas filed: [#30792, #30793, #30794]\n- Files touched: [/var/www/emtskills/backups/vapi_assistant_tng_prefix_<timestamp>.json]\n\nWhen done, append a row to `cline_task_ledger.md` per rule 07 and run order 66.\n═══════════════════════════════════════════════",
+   "pickup_prompt": ", which is the actual surface.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — RUBEN computer (760 280 7886) auto-hangup is resolved; verify remaining sweep-key cleanup.\n\nWhere we left off (verified 2026-08-30 12:18 PT):\n- Root cause fixed: LiteLLM voice-lane greeting probe (no `messages`) was crashing Router.acompletion() → 500 → Vapi providerfault → hangup. router_hook.py now synthesizes English `messages`; litellm restarted healthy.\n- Second fix: removed fatal `\\VapiCodecFix\\validateAndRepairCodec()` call in vapi_server_webhook.php; lint clean + watchdog-safe.\n- Verified live: no-messages probe returns ENGLISH 200; 0 providerfault hangups since 09:19 PT; last calls end sip-completed (clean).\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #28860 [proposed] — Locate and rotate/remove the stale health-sweeper litellm key (hash 8eb4d04c) still producing 5-min 401 \"Key not found in db\" noise on voice egress; keep monitoring so it never masks a real auth failure.\n\nReference IDs:\n- Ideas filed: #28860\n- Files touched: /etc/litellm/router_hook.py, /var/www/emtskills/api/voice/vapi_server_webhook.php\n- Backups: /etc/litellm/router_hook.py.bak-20260830-0917\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1391": null,
     "1394": null,
@@ -147166,6 +147166,7 @@
     "25969": null,
     "27284": null,
     "28729": null,
+    "28860": "proposed",
     "30792": "executing",
     "30793": "executing",
     "30794": "blocked",
@@ -147175,16 +147176,22 @@
   },
   "1788116945411": {
    "task_id": "1788116945411",
-   "mtime": 1788117037244,
+   "mtime": 1788117492058,
    "created_at": "2026-08-30T19:09:05.411Z",
-   "last_modified": "2026-08-30T19:10:37.244Z",
-   "size_kb": 43,
-   "turn_count": 11,
+   "last_modified": "2026-08-30T19:18:12.058Z",
+   "size_kb": 136,
+   "turn_count": 48,
    "title": "#$12K bill suspension\n\nSee this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here?",
-   "pickup_prompt": null,
+   "pickup_prompt": "s getting a false debt letter.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — $12,860 phantom bill investigation for Alex Smith Jr (26814T-15).\n\nWhere we left off (verified 2026-08-30 12:17 PT):\n- Root cause confirmed: $12,860 suspension email was the whole-section 26814T balance dumped onto one student (bug class, not real debt). Real balance = $1,545 (inv 164951). Balance-scoping fix already deployed 8/24 (idea #28089 [deployed]).\n- Alex confirmed on 8/22 he is not attending and wants to withdraw. Withdrawal NOT yet processed; $1,545 not voided; he STILL receives $12,860 emails (last one 8/30 11:30 PT).\n- Filed idea #28859 [proposed] to process the withdrawal + void/credit $1,545 + suppress further dunning.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #28859 [proposed] — Process Alex Smith Jr's confirmed withdrawal: void/credit invoice 164951's $1,545 balance, mark student withdrawn (moodle_suspended=1 already set), and suppress all further suspension/dunning emails to alex.vipersmith@gmail.com. Owned by CS; escalate if not done.\n2. #28115 [blocked on CS] — Bulk re-tie of remaining mis-tied QB invoice-mirror rows (Alex's 164951 mirror was mis-pointed at Keyes' customer; fix landed for him, cohort-wide sweep still in flight).\n\nReference IDs:\n- Ticket: TKT-20260822-2FF7E9CE (#27144, resolved 8/25 but follow-ups still firing)\n- Ideas filed: #28859 [proposed], #28089 [deployed], #28115 [blocked]\n- Files touched: none this window (DB + MCP probes only)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1242": null,
+    "1456": null,
     "2670": null,
+    "4929": null,
+    "16613": null,
+    "27144": null,
+    "28089": "deployed",
+    "28115": "blocked",
     "28551": null,
     "28552": null,
     "28607": null,
@@ -147207,6 +147214,7 @@
     "28778": null,
     "28780": null,
     "28783": null,
+    "28859": "proposed",
     "178806": null
    }
   }

@@ -107,3 +107,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends Step 1 (search the record first): before declaring a fleet Mac unreachable and drafting a human one-time on-box command, probe whether the box IS the local machine running this window (hostname + serial vs mdm_devices/registry). 2026-08-29: Cicero was reported as needing Ruben's one-time launchctl command across two windows while Cicero WAS the Mac running Cline (hostname Rubens-MacBook-Pro-3, M5 Max, serial K064QD22G9 = mdm_devices row 2). The window revived it directly in 10 minutes with zero human action.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-29 23:49 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788044433000
+- RCA bucket: insufficient probe
+- Trigger pattern: identifying a fleet box by hostname match while ignoring a visible serial-number mismatch against the fleet record
+- Reversal note: CORRECTS the earlier same-day amendment, which itself caused a worse error. Box identity MUST be matched by SERIAL NUMBER, never by hostname: Ruben's fleet contains two M5 MacBooks that BOTH report hostname "Rubens-MacBook-Pro-3" — the Powerhouse Mac (serial K064QD22G9, .178, runs Cline, NO LLMs allowed) and Cicero (serial FYH2J1GFW9, .252, fleet LLM box). A window matched on hostname, declared "Cicero IS this Mac," and installed an LLM stack on the Powerhouse Mac; the local serial K064QD22G9 did NOT match mdm_devices row 2's FYH2J1GFW9 and that mismatch was visible in the same probe output but ignored. New requirement: an identity claim about a fleet box requires the SERIAL to match the fleet record; a hostname match with a serial mismatch is a NEGATIVE identification.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 00:32 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788135215000
+- RCA bucket: stale assumption
+- Trigger pattern: Declaring a box blocked-on-credentials from repeated auth failures against a RECORDED tunnel port, without verifying the port still maps to that box. Reverse-tunnel listener ports on a jump host are c
+- Reversal note: Amends the Step-1 record-search ladder: a recorded reverse-tunnel PORT is a stale hypothesis, not an identity. Before declaring a box unreachable/blocked-on-key at tunnel port N, identify WHO actually holds port N (ss -ltnp for the sshd pid, then ss -tnp for the client IP, or hostname probe). 2026-08-29 incident: Maximus was declared blocked on Ruben's authorized_keys command for multiple windows, but WOPR :2224 had been stolen by Joshua's wopr-reverse-tunnel.service (-R 2224:Joshua:2222) since 08-22; the real Maximus was on :2226 the whole time with the key already working.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -517,3 +517,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate) with the probe-shape equivalence requirement from the 2026-08-29 Vapi incident: two production bugs (LiteLLM key allowlist rejection + router guard 400) were invisible to passing synthetic probes because the probes did not replay the EXACT client request shape (Vapi custom-llm sends messages-less greeting requests with its own key and header set). A verification probe must replicate the real client's request shape, auth identity, and endpoint — not merely hit the same model name.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 00:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: insufficient probe
+- Trigger pattern: emitting a placeholder write call to satisfy turn-shape instead of the real artifact
+- Reversal note: Amends clause 2: a write/deploy tool call must carry the REAL full artifact content, never placeholder text framed as 'diff applied via ssh'. This session a write_server_file call carried placeholder content and had to be restored from backup; the causal fix is clause 2 (claims/actions must be backed by real tool call content).
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 01:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788050474905
+- RCA bucket: insufficient probe
+- Trigger pattern: Treating a local lint pass plus a 200 from our own endpoint as proof that a third-party API will accept the payload we built.
+- Reversal note: Amends clause 2 (acquisition gate) with an explicit third-party-schema case: when the deliverable is a PAYLOAD sent to an external API, a local lint pass, a 200 from our own endpoint, and a code read all verify NOTHING about whether the third party will ACCEPT it. The only probative artifact is submitting the exact payload to the real endpoint and reading its status code. On 2026-08-29 a Vapi model override passed php -l, returned 200 from our webhook, and looked correct on read, yet Vapi 400'd it twice for two independent reasons (missing model.url, then echoed model.tools) — each found only by a live POST. Clause 2 now requires: any completion claiming an external-API payload is fixed must cite a live submission to that API and its returned status.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

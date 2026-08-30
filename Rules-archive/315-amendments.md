@@ -127,3 +127,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends the Step-1 record-search ladder: a recorded reverse-tunnel PORT is a stale hypothesis, not an identity. Before declaring a box unreachable/blocked-on-key at tunnel port N, identify WHO actually holds port N (ss -ltnp for the sshd pid, then ss -tnp for the client IP, or hostname probe). 2026-08-29 incident: Maximus was declared blocked on Ruben's authorized_keys command for multiple windows, but WOPR :2224 had been stolen by Joshua's wopr-reverse-tunnel.service (-R 2224:Joshua:2222) since 08-22; the real Maximus was on :2226 the whole time with the key already working.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 01:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788050474905
+- RCA bucket: wrong premise
+- Trigger pattern: Reading call-log durations or call counts as proof that the voice AI layer is serving, without probing whether an assistant ever attached.
+- Reversal note: Amends the Step-2 four-state classification table: a CALL RECORD carrying a long duration is NOT evidence that the AI/assistant layer ever ran. On 2026-08-29 the Vapi SIP parent legs logged 610s durations while every assistant-request response was 400'd and the call died at 0s, so a dead front door read as a busy one for 11 hours and a prior window reported "lines healthy, no action needed". The clause now requires, for any voice-lane health claim, a probe of the ASSISTANT-ATTACH layer (an accepted assistant-request shape or a call with a non-empty artifact.transcript), never a duration or call-count reading from the telephony log.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 01:19 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788135215000
+- RCA bucket: insufficient probe
+- Trigger pattern: SSH publickey denial on a reverse-tunnel port interpreted as key/auth failure when the port actually reached a different box (port stolen by another host's -R forward)
+- Reversal note: Adds the mechanical countermeasure for the port-theft class: cron_tunnel_identity_watchdog.php (WOPR, */15) now probes every reverse-tunnel port and verifies HOSTNAME + hardware SERIAL of the answering box against an identity map. Rule text now requires: any SSH auth failure on a tunnel port MUST first check the identity watchdog log (/var/log/tunnel-identity-watchdog.log) before concluding key problems — a listener that answers as the WRONG box is an IDENTITY_MISMATCH, not an auth failure. Joshua's rogue -R :2224 was renumbered to :2227; :2224 is reserved-Maximus and alarmed.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

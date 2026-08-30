@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-30T12:18:07.209Z",
+ "generated_at": "2026-08-30T16:10:41.411Z",
  "counts": {
-  "parsed": 2,
-  "reused": 980,
+  "parsed": 1,
+  "reused": 982,
   "failed": 0,
-  "total": 982
+  "total": 983
  },
  "tasks": {
   "1784522296714": {
@@ -147124,6 +147124,52 @@
     "28793": "proposed",
     "45425": null,
     "178806": null
+   }
+  },
+  "1788104490855": {
+   "task_id": "1788104490855",
+   "mtime": 1788106218525,
+   "created_at": "2026-08-30T15:41:30.855Z",
+   "last_modified": "2026-08-30T16:10:18.525Z",
+   "size_kb": 610,
+   "turn_count": 63,
+   "title": "The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call it. Please resolve this so I can use Reuben computer",
+   "pickup_prompt": "ticket to the VAPI admin team to audit the assistant’s settings.  \n\n---  \n\n#### PICKUP PROMPT BLOCK  \n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #<real_task_id> — resolve automatic hang‑up on Ruben TNG personal‑assistant (+17602807886).\n\nWhere we left off (verified 2026‑08‑30 08:45 PT):\n- VAPI health OK, recent call logged with duration 0 seconds (auto‑hang‑up).\n- Assistant configuration lives off‑box; local tables do not contain the entry.\n\nOpen threads to drive next:\n1. #30792 [executing] — Query VAPI for assistant ID bound to +17602807886 and snapshot config.\n2. #30793 [executing] — Patch assistant to clear auto‑hang‑up flag; verify with canary call.\n3. #30794 [blocked] — If VAPI API key missing or permission error, file a ticket for VAPI admin.\n\nReference IDs:\n- Ideas filed: [#30792, #30793, #30794]\n- Files touched: [/var/www/emtskills/backups/vapi_assistant_tng_prefix_<timestamp>.json]\n\nWhen done, append a row to `cline_task_ledger.md` per rule 07 and run order 66.\n═══════════════════════════════════════════════",
+   "ideas": {
+    "1391": null,
+    "1394": null,
+    "1548": null,
+    "3536": null,
+    "3537": null,
+    "3539": null,
+    "3540": null,
+    "4677": null,
+    "6520": null,
+    "9222": null,
+    "9501": null,
+    "9746": null,
+    "9979": null,
+    "9982": null,
+    "9984": null,
+    "9985": null,
+    "9986": null,
+    "12688": null,
+    "12689": null,
+    "14133": null,
+    "14142": null,
+    "16154": null,
+    "16648": null,
+    "16715": null,
+    "17202": null,
+    "24645": null,
+    "25969": null,
+    "27284": null,
+    "28729": null,
+    "30792": "executing",
+    "30793": "executing",
+    "30794": "blocked",
+    "40873": null,
+    "177821": null
    }
   }
  }

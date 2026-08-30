@@ -6,10 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/30/2026, 5:18:07 AM PT | window: last 72h | 70 tasks | index total 982 (parsed 2, cached 980)
+Generated: 8/30/2026, 9:10:41 AM PT | window: last 72h | 71 tasks | index total 983 (parsed 1, cached 982)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1788104490855` | 8/30/2026, 9:10:18 AM | 63 | 610KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
 | `1788065826964` | 8/30/2026, 4:31:04 AM | 150 | 589KB | ## — Kaizon Learner — MID-FLIGHT |
 | `1788065716274` | 8/30/2026, 12:24:39 AM | 154 | 551KB | ## Argus Console Audit — MID-FLIGHT |
 | `1788071557390` | 8/29/2026, 11:55:51 PM | 98 | 181KB | ## — GLM/LLMs (fork of window #4) — BLANK - 2 |
@@ -84,6 +85,47 @@ Generated: 8/30/2026, 5:18:07 AM PT | window: last 72h | 70 tasks | index total 
 ---
 
 ## Per-window detail
+
+### `1788104490855` — 8/30/2026, 9:10:18 AM PT — 63 turns
+
+**Original task:**
+
+```
+The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call it. Please resolve this so I can use Reuben computer
+```
+
+**Ideas referenced:** #12688, #12689, #1391, #1394, #14133, #14142, #1548, #16154, #16648, #16715, #17202, #177821, #24645, #25969, #27284, #28729, #30792 [executing], #30793 [executing], #30794 [blocked], #3536, #3537, #3539, #3540, #40873, #4677, #6520, #9222, #9501, #9746, #9979, #9982, #9984, #9985, #9986
+
+**Last PICKUP PROMPT:**
+
+```
+ticket to the VAPI admin team to audit the assistant’s settings.  
+
+---  
+
+#### PICKUP PROMPT BLOCK  
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #<real_task_id> — resolve automatic hang‑up on Ruben TNG personal‑assistant (+17602807886).
+
+Where we left off (verified 2026‑08‑30 08:45 PT):
+- VAPI health OK, recent call logged with duration 0 seconds (auto‑hang‑up).
+- Assistant configuration lives off‑box; local tables do not contain the entry.
+
+Open threads to drive next:
+1. #30792 [executing] — Query VAPI for assistant ID bound to +17602807886 and snapshot config.
+2. #30793 [executing] — Patch assistant to clear auto‑hang‑up flag; verify with canary call.
+3. #30794 [blocked] — If VAPI API key missing or permission error, file a ticket for VAPI admin.
+
+Reference IDs:
+- Ideas filed: [#30792, #30793, #30794]
+- Files touched: [/var/www/emtskills/backups/vapi_assistant_tng_prefix_<timestamp>.json]
+
+When done, append a row to `cline_task_ledger.md` per rule 07 and run order 66.
+═══════════════════════════════════════════════
+```
 
 ### `1788065826964` — 8/30/2026, 4:31:04 AM PT — 150 turns
 

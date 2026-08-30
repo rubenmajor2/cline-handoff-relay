@@ -6,17 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/29/2026, 8:36:55 PM PT | window: last 72h | 54 tasks | index total 965 (parsed 4, cached 961)
+Generated: 8/29/2026, 9:37:21 PM PT | window: last 72h | 60 tasks | index total 971 (parsed 9, cached 962)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788051831962` | 8/29/2026, 8:36:48 PM | 260 | 464KB | This is the kind of stupid garbage ruining our LLMs and all of our operations. Needs durab |
-| `1788037909518` | 8/29/2026, 8:30:02 PM | 103 | 433KB | #emtskills slowness |
-| `1788050474905` | 8/29/2026, 8:29:24 PM | 208 | 1649KB | #Argus |
-| `1788049703999` | 8/29/2026, 8:26:28 PM | 238 | 959KB | #Chat Widget |
+| `1788049703999` | 8/29/2026, 9:36:20 PM | 255 | 1045KB | #Chat Widget |
+| `1788050474905` | 8/29/2026, 9:36:19 PM | 277 | 1870KB | #Argus |
+| `1788050518371` | 8/29/2026, 9:36:09 PM | 175 | 723KB | #Claude Browser Externsion |
+| `1788064238609` | 8/29/2026, 9:36:08 PM | 37 | 234KB | #GLM / LLMs |
+| `1788063169755` | 8/29/2026, 9:30:15 PM | 51 | 350KB | #Kaizon Learner |
+| `1788062842894` | 8/29/2026, 9:28:41 PM | 48 | 199KB | #Cline Learner |
+| `1788064028524` | 8/29/2026, 9:27:08 PM | 1 | 22KB | #GLM / LLMs |
+| `1788062963405` | 8/29/2026, 9:19:03 PM | 36 | 90KB | #CFA Learner |
+| `1788063083878` | 8/29/2026, 9:11:24 PM | 1 | 2KB | #Kaizon Learner |
+| `1788051831962` | 8/29/2026, 8:55:54 PM | 330 | 635KB | This is the kind of stupid garbage ruining our LLMs and all of our operations. Needs durab |
+| `1788021977080` | 8/29/2026, 8:53:29 PM | 618 | 4756KB | #Various 2 |
+| `1788037909518` | 8/29/2026, 8:39:53 PM | 104 | 442KB | #emtskills slowness |
 | `1788051007231` | 8/29/2026, 6:17:13 PM | 265 | 518KB | #VAPI CFA |
-| `1788021977080` | 8/29/2026, 5:53:53 PM | 602 | 4690KB | #Various 2 |
-| `1788050518371` | 8/29/2026, 5:53:24 PM | 22 | 124KB | #Claude Browser Externsion |
 | `1788048815773` | 8/29/2026, 5:39:11 PM | 130 | 285KB | #GLM Local and others |
 | `1788021866677` | 8/29/2026, 5:27:46 PM | 1084 | 2262KB | #ArgusVAPI CFA voice path |
 | `1788044433915` | 8/29/2026, 4:55:17 PM | 139 | 330KB | #GLM 5.3 and Others |
@@ -69,48 +75,51 @@ Generated: 8/29/2026, 8:36:55 PM PT | window: last 72h | 54 tasks | index total 
 
 ## Per-window detail
 
-### `1788051831962` — 8/29/2026, 8:36:48 PM PT — 260 turns
+### `1788049703999` — 8/29/2026, 9:36:20 PM PT — 255 turns
 
 **Original task:**
 
 ```
-This is the kind of stupid garbage ruining our LLMs and all of our operations. Needs durable resolution so these types of errors can never occura gagin for any agent. So dumb -> oshua's reverse-tunnel service stole WOPR port :2224 a week ago, so every SSH attempt "to Maximus" was actually hitting Joshua and bouncing.
+#Chat Widget
 
-My quesiton then regarding Cicero - I wonder if something "stole" it as well? How can you be sure? Reason I ask is because I've authorized keys on Cicero numerous times. Same for Nero FYI
-
-How is GLM doing now then? Should we move down to 2K or so or keep at 4K? How fast tok/sec 
+Please place a disclaimer on the chat window in small print at the bottom below "Start chatting!" that says: "This response may be from an automated agent which can sometimes make mistakes" or something like that. It's the same thing that SHOULD be on Email Agent generated replies whcih I think may also need fixing.
 ```
 
-**Ideas referenced:** #12247, #12262, #13108, #13202, #13874, #15668, #178813, #1876, #18868, #1965, #1966, #1967, #1969, #2238, #22584, #25185, #25471, #2654, #26925, #28544, #28605, #28705 [blocked], #28706 [executing], #28725 [blocked], #28730 [blocked], #28740 [proposed], #28752 [proposed], #28753 [proposed], #45425
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788037909518` — 8/29/2026, 8:30:02 PM PT — 103 turns
-
-**Original task:**
-
-```
-#emtskills slowness
-
-also make sure to update the emtskills sloness document on the desktop once finishe
-
-approved
-1. #28722 [proposed] — Upgrade /var/www/emtskills/scripts/llm_pool_isolation_guard.py from alert-only to self-heal: on detection of an unisolated trafficked form, auto-patch the AGENT_POOL alternation in BOTH PLESK_VHOST (/var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf) and LOCAL_VHOST (/etc/nginx/sites-enabled/emtskills), backup first, run nginx -t, reload nginx, re-run the isolation check, and an accepted-conn delta probe; ship --dry-run default → --self-heal flag
-```
-
-**Ideas referenced:** #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691, #28722 [proposed]
+**Ideas referenced:** #059669, #12364, #13965, #1567, #16474, #16732, #177796, #18335, #18541 [deployed], #18758, #23989, #25185, #25550, #25888, #25962, #25964, #25965, #26229, #26376, #26377, #26816, #26834, #2850, #28758 [proposed], #28759 [executing], #2916, #33689, #3577, #6366, #9084, #9112, #9131, #9132, #9152, #9222
 
 **Last PICKUP PROMPT:**
 
 ```
-)
-- [ ] Append HANDOFF_NOTES.md entry — in progress
-- [ ] Complete with rule-91 PICKUP PROMPT
+317 (record must match claim).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #28758 - Chat widget misrouting + 23-finding audit remediation
+
+Where we left off (verified 2026-08-29 20:59 PT):
+- Build fixes shipped and live-verified (see reversal log + file list)
+- #28759 [executing] holds the 18-question browser-AI test checklist for the remaining verification pass
+
+Open threads:
+1. #28759 [executing] - Run the 18-question browser-AI test pass against a live widget site (arizonaemt.com); checklist is in the idea description
+2. None other - all buildable work completed this window
+
+Reference IDs:
+- Ideas filed: #28758 [deployed], #28759 [executing], #18541 [deployed]
+- Files touched: /var/www/emtskills/api/chat_widget_embed.js, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/lib/chat_queue_confidence.php, /var/www/emtskills/lib/widget_force_handoff.php, /var/www/emtskills/lib/disclaimer_helper.php
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Attach 18-question list to #28759 (durable)
+- [x] Validate completion with list embedded
+- [x] Ship completion with followup questions for AI Browser agent
 </task_progress>
-</use_mcp_tool>
+</attempt_completion>
 ```
 
-### `1788050474905` — 8/29/2026, 8:29:24 PM PT — 208 turns
+### `1788050474905` — 8/29/2026, 9:36:19 PM PT — 277 turns
 
 **Original task:**
 
@@ -132,35 +141,36 @@ of terminal queries hit "model pool saturated" (135 / 847)
 recent task
 ```
 
-**Ideas referenced:** #10866, #15815, #1779, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1912, #19348, #1998, #2006, #20495, #21125, #21126, #21262, #2168, #22511, #22583, #22688, #23036, #23039, #23428, #23429, #23468, #23489, #23506, #23675, #23920, #23941, #23952, #23982, #2420, #24766, #24897, #24902, #24905, #24906, #24909, #24910, #24912, #24913, #24926, #24941, #24990, #25047, #25058, #25269, #25313, #25571, #25573, #25768, #26000, #26067, #26325, #26327, #2640, #2642, #2645, #2647, #2648, #2649, #2654, #2659, #2662, #2666, #26712, #26713, #2677, #2679, #2680, #26895, #26932, #27126, #27243, #27244, #27284, #27860, #28042, #28133, #28155, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28713, #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28760 [proposed], #28761 [proposed], #28762 [proposed], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767 [proposed], #28768 [proposed], #30363, #334155, #4338, #64748
+**Ideas referenced:** #0432, #10005, #10866, #127908, #128193, #128203, #128206, #128263, #128275, #15815, #1779, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1912, #19348, #1998, #2006, #20495, #21125, #21126, #21262, #2168, #22310, #22511, #22583, #22688, #23036, #23039, #23428, #23429, #23468, #23489, #23506, #23675, #23920, #23941, #23952, #23982, #2420, #24766, #24897, #24902, #24905, #24906, #24909, #24910, #24912, #24913, #24926, #24941, #24990, #25047, #25058, #25269, #25313, #25571, #25573, #25768, #26000, #26067, #26325, #26327, #2640, #2642, #2645, #2647, #2648, #2649, #2654, #2659, #2662, #2666, #26712, #26713, #2677, #2679, #2680, #26895, #26932, #2698, #27126, #27243, #27244, #27284, #27860, #28042, #28133, #28155, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28607, #28614, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28713, #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28760 [proposed], #28761 [proposed], #28762 [proposed], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767 [proposed], #28768 [proposed], #30363, #334155, #4338, #64748, #69707, #8645, #8942, #9650, #9660, #9733, #9889
 
 **Last PICKUP PROMPT:**
 
 ```
-Actual | Pass/Fail | Evidence.
+ source of the four-way split.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Argus Console Audit implementation (artifact 0432eb26-08a9-4b76-a68f-d7ad08ac4b57).
+Pick up task #N/A — Argus Console Audit follow-through (Ruben's Q1-Q3 above, plus remaining filed roadmap items).
 
-Where we left off (verified 2026-08-29 20:27 PT):
-- SHIPPED: lib/argus_audit_fixes_p0.php (8 helpers) · routes/alltastic_api.php (require, Argus persona, NUMERIC EVIDENCE RULE, dedupWindowMin=20, finished-twin replay) · routes/cron_argus_task_worker.php (next_retry_at claim gate + 30s/2m/10m backoff) · DB argus_task_queue.next_retry_at DATETIME · routes/argus_download.php (GLM-5.3 labels ×3). All php -l clean; survival-verified after the drift guard.
-- Ideas filed: #28760-#28768 [proposed] cover inline lane, chat postback (needs Ruben confirm), off-by-one link (needs go), session context, tool contracts, Activity UX, Tasks native, Escalate button, Actions UX.
-- Temporary helper files lib/argus_audit_test.php + lib/file_audit_ideas.php deleted.
-- Handoff note appended to docs/HANDOFF_NOTES_ARCHIVE_2026.md (deploy technique: stage→php -l→cp atomic, or the parse-error restorer rolls back edits).
+Where we left off (verified 2026-08-29 20:12 PT):
+- 7 code artifacts deployed and php -l clean: routes/alltastic_api.php, routes/cron_argus_task_worker.php, routes/argus_download.php, routes/argus_task_status.php, lib/argus_audit_fixes_p0.php; DB column argus_task_queue.next_retry_at added.
+- Ideas #28767 and #28768 marked deployed; #28762 marked blocked on the Q3 decision; #28760/#28761 await Q1/Q2.
+- Awaiting Ruben's answers to Q1 (inline lane approach), Q2 (full-answer vs compact postback), Q3 (announcement scoping by user+text vs session_key).
 
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #28760 [proposed] — Confirm inline-lane approach (rule table vs classifier), then build dispatcher for read-only single-action queries.
-2. #28761 [proposed] — On Ruben go, post FULL finished-task answers into originating chat (override prior peek+link design) and bind task ID to creating message (#28762).
-3. #28763 [proposed] — Session context slot: current student + last N turns across chats.
-4. #28764 [proposed] — Add sort/limit/count_only to list tools; validation errors → invalid_args, not gate fail.
-5. #28765/#28766/#28767/#28768 [proposed] — Activity/Tasks/Escalate/Actions UI builds from the audit roadmap (all P2).
+Open threads to drive next (each has a real filed idea #):
+1. #28760 [blocked] — Argus inline lane for single-action read-only queries (awaiting Q1: rule table vs LLM classifier).
+2. #28761 [blocked] — Post finished-task FULL answer into originating chat (awaiting Q2: full vs compact notice).
+3. #28762 [blocked] — Off-by-one task link / announcement scoping (awaiting Q3; root cause: same text under 4 session_keys).
+4. #28763 [proposed] — Session context slot (current student + last N turns across chats).
+5. #28764 [proposed] — Tool contract: sort/limit/count_only; validation errors logged as invalid_args not gate fail.
+6. #28765 [proposed] — Activity tab: writes-only default, facet filters, promise_unbuilt column, burst grouping.
+7. #28766 [proposed] — Tasks tab: native list + side panel, truthful progress, single answer render, grouped dup.
 
 Reference IDs:
-- Ideas filed: #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28767, #28768
-- Files touched: lib/argus_audit_fixes_p0.php, routes/alltastic_api.php, routes/cron_argus_task_worker.php, routes/argus_download.php, docs/HANDOFF_NOTES_ARCHIVE_2026.md
-- DB: argus_task_queue.next_retry_at (added 2026-08-29 20:20 PT)
+- Ideas filed: #28760–#28768 (closed/deployed: #28767, #28768; blocked: #28760-#28762; rest proposed)
+- Files touched: routes/alltastic_api.php, routes/cron_argus_task_worker.php, routes/argus_download.php, routes/argus_task_status.php, lib/argus_audit_fixes_p0.php, docs/HANDOFF_NOTES_ARCHIVE_2026.md
+- No ticket number; this was the Claude artifact audit #0432eb26-08a9-4b76-a68f-d7ad08ac4b57.
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -168,123 +178,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1788049703999` — 8/29/2026, 8:26:28 PM PT — 238 turns
-
-**Original task:**
-
-```
-#Chat Widget
-
-Please place a disclaimer on the chat window in small print at the bottom below "Start chatting!" that says: "This response may be from an automated agent which can sometimes make mistakes" or something like that. It's the same thing that SHOULD be on Email Agent generated replies whcih I think may also need fixing.
-```
-
-**Ideas referenced:** #059669, #12364, #13965, #1567, #16474, #16732, #177796, #18335, #18541 [deployed], #18758, #23989, #25185, #25550, #25888, #25962, #25964, #25965, #26229, #26376, #26377, #26816, #26834, #2850, #28758 [proposed], #28759 [executing], #2916, #33689, #3577, #6366, #9084, #9112, #9131, #9132, #9152, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-ule file needed (data record).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #28758 [deployed] - Chat widget misrouting + 23-finding audit remediation
-
-Where we left off (verified 2026-08-29 20:16 PT):
-- Misrouting fixed: cwc_queue_signal returns empty queue for closed conversations and when no agent is online (lib/chat_queue_confidence.php); widget_force_handoff T1 fires only on the latest visitor message; AI no longer mutes on agent_takeover until a human actually speaks (api/chat_widget_api.php $aiSuppressed=false).
-- Client fixes: F-01 closed banner module scope, F-02 bootstrap before buildWidget, F-03 keep polling while closed + F-15 background-tab guard, F-04 load beacon, F-06 AI sender label, F-07 rating persists, F-09 mobile CSS, F-10 dialog/aria/label, F-11 off-hours status line, F-12 greeting precedence, F-13 dated timestamps, F-14 delegated listeners (CSP-safe), F-16 id-based detection, F-17 upload nudge, F-19 word-boundary keywords, F-20 hashchange resume, F-21 textarea auto-grow, F-22 cache-bust version.
-- Server F-08 DTO: widget_bootstrap/widget_send/widget_poll trim messages to 5 columns and filter conversation DTO (no visitor_ip/admin_notes).
-- Live verified: widget JS 200 (65,516 bytes) + node --check pass; widget_config site_key=5 200 ok; all PHP files lint clean.
-
-Open threads to drive next:
-1. #28759 [executing] — Run the browser-AI test pass against a live site (arizonaemt.com) covering disclaimer visibility, basic-question AI answer, single-fire handoff, AI-unmute after handoff, closed-conversation non-resurrection, DTO leak check, and closed-window unread badge/chime.
-
-Reference IDs:
-- Ideas filed: #28758 [deployed], #18541 [deployed], #28759 [executing]
-- Files touched: /var/www/emtskills/api/chat_widget_embed.js, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/lib/chat_queue_confidence.php, /var/www/emtskills/lib/widget_force_handoff.php, /var/www/emtskills/lib/disclaimer_helper.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Reconcile #28759 (executing)
-- [x] Final live probe (HTTP 200 + node --check)
-- [x] Stamp #28758 deployed with implemented_files
-- [x] Validate completion (all gates passed)
-</task_progress>
-</attempt_completion>
-```
-
-### `1788051007231` — 8/29/2026, 6:17:13 PM PT — 265 turns
-
-**Original task:**
-
-```
-#VAPI CFA
-
-Odd, why am i not seeing any transcripts here? -> https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent&page=2&per_page=25#history 
-
-I think that might be why you think ther'es no AIs answering. However, i see calls of numerous minutes that need evaluation. I believe the transcript system then needs repair and then for you to do an analysis and fix the telephony system and install a self-heal. Needs more stability here. 
-
-I see the logs from the telephony hub link and many were answered by EMSU Service Agent, so something is messing up your ping / you thinking 
-```
-
-**Ideas referenced:** #059669, #16154, #16826, #16928, #16931, #178802, #23989, #24645, #25701, #2669 [rejected], #27100, #28710 [deployed], #28711 [deployed], #28712 [executing], #28716 [blocked], #28729 [deployed], #28735 [deployed], #28738 [executing], #28746 [executing], #28747 [executing], #28748 [executing], #28749 [executing], #28750 [executing], #28751 [executing], #475569, #6366, #64748, #9222, #9501
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788021977080` — 8/29/2026, 5:53:53 PM PT — 602 turns
-
-**Original task:**
-
-```
-#Various 2
-
-RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
-```
-
-**Ideas referenced:** #12060, #12778, #155724, #15815, #15877, #16242, #1648, #166534, #1719, #17446, #178796, #18836, #18944, #18951, #1912, #19362, #2168, #22060, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #25888, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2654, #2659, #2662, #2666, #26663, #26834, #26896, #26932, #27100, #27284, #27691, #28042, #28118, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28612 [executing], #28613 [executing], #28615, #28621 [deployed], #28622 [deployed], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28704 [deployed], #28705 [in_progress], #28706 [in_progress], #28710 [deployed], #28711 [deployed], #28712 [approved], #28714 [deployed], #28716 [in_progress], #28717, #28719 [proposed], #28720 [proposed], #28721, #28722 [proposed], #28723 [in_progress], #28725 [in_progress], #28726 [proposed], #28727, #28729, #28735 [deployed], #28738, #28745 [deployed], #3054, #4518, #4929, #62584, #62604, #813528, #9086, #9168, #9191, #92400, #9339
-
-**Last PICKUP PROMPT:**
-
-```
- 20 runs with zero executions.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1787960052755 — DELIVERY ALERT storm: worker_silent_death exclusion in ExecutorDeliveryWatchdog (LLM hang-reap class left to the fleet window per Ruben steer).
-
-Where we left off (verified 2026-08-29 17:50 PT):
-- DELIVERY ALERT root cause: 352/24h execution rows aborted/worker_silent_death = LLM calls hung >5min reaped (bug #754 class, cron_model_ban_sync line 8). 283 critical backlog = CFA_SMS_MODEL_FAILURE. LLM side left alone per steer.
-- Fix shipped: lib/ExecutorDeliveryWatchdog.php checkChainExecution excludes failure_category='worker_silent_death'; exact query now runs=4 (was 372) so alert computes OK. php -l clean.
-- Idea #28745 [deployed] filed with full RCA; ledger appended.
-
-Open threads to drive next:
-1. #28745 [deployed] — Watch: if DELIVERY ALERT fires again with runs >= 20 and the failure_category mix shows anything other than worker_silent_death/gate-hold, that is a REAL non-LLM delivery failure; investigate immediately.
-2. (human-only decision - no idea) Coordinate with the fleet/LLM window once their hang-reap work stabilizes: confirm whether the worker_silent_death exclusion should stay permanent or be re-armed when the fleet is healthy.
-3. (human-only decision - no idea) The original feedback screenshot was not in my context; if it showed a different issue than the alert storm, reopen this pickup with the screenshot contents.
-
-Reference IDs:
-- Idea: #28745 [deployed]
-- Context (other window): #28712 [approved], #28716 [in_progress]
-- Files touched: lib/ExecutorDeliveryWatchdog.php, /var/www/emtskills/cline_task_ledger.md
-- Queries/probes: orchestrator_execution_log outcome/failure_category 24h, ExecutorDeliveryWatchdog exact alert query, portal_health_guard.json
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Probe live surfaces (screenshot unavailable in trimmed context; slowness doc already RESOLVED 12:08)
-- [x] Classify the live alert storm: DELIVERY ALERT = 352 worker_silent_death rows (LLM hang-reaps, bug #754 class)
-- [x] Leave LLM side alone per steer; fix the non-LLM alerting layer instead
-- [x] Patch ExecutorDeliveryWatchdog to exclude worker_silent_death; verified runs 372 → 4 (alert computes OK)
-- [x] File idea #28745 [deployed] + append ledger row
-- [x] Complete with pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
-### `1788050518371` — 8/29/2026, 5:53:24 PM PT — 22 turns
+### `1788050518371` — 8/29/2026, 9:36:09 PM PT — 175 turns
 
 **Original task:**
 
@@ -294,7 +188,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 Is there some kind of Claude Browser Extension that can be used with our API like I'm using Claude in Chrome here in Cline?
 ```
 
-**Ideas referenced:** #28744 [proposed]
+**Ideas referenced:** #15158, #1894, #19653 [queued], #19671 [rejected], #19686 [queued], #19689 [queued], #27503 [proposed], #28744 [proposed], #28775, #7380, #9731
 
 **Last PICKUP PROMPT:**
 
@@ -323,6 +217,275 @@ Reference IDs:
 </result>
 </attempt_completion>
 ```
+
+### `1788064238609` — 8/29/2026, 9:36:08 PM PT — 37 turns
+
+**Original task:**
+
+```
+#GLM / LLMs
+
+Problemmatic since these hidden errors and issues seem to be able to continually plague our LLMs and create false gates/ gas lighting that evertyhign is fine. I remain very converned on this and wonder how we can avoid gaslighting durably when it comes to anything, but most especially LLMs and their routing as getting it wrong is EXTREMELY distructive. It is incredibel taht you were not able to see this before. Can you consult the community perhaps and see if you can figure a better way of making sure the LLMs are more stable? What can be done here? We need to think really hard an
+```
+
+**Ideas referenced:** #15668, #178813, #1876, #1965, #1966, #1967, #22584, #28544, #28705 [deployed], #28725 [blocked], #28730 [executing], #28740 [proposed], #28752 [executing], #28753 [rejected], #28769 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788063169755` — 8/29/2026, 9:30:15 PM PT — 51 turns
+
+**Original task:**
+
+```
+#Kaizon Learner
+
+Do we have a learner for Kaison? We need to make Kaizon make itself smarter. If not, I would like you to make one. I would like you to search/research how this can be done with the community. I want you to be looking at the bug library as a part of this learning process. I think this is key somehow. There are so many aspects to Kaizon that I think could be vastly improved with a self-learning mechanism. It could significantly improve our systems and it could also heal itself better and quicker. It could resolve executor issues that recurr over and over again like impl failed a
+```
+
+**Ideas referenced:** #12184, #1242, #12584, #16881, #1912, #21667, #2168, #21712, #25426, #2654, #2659, #2662, #2666, #26932, #27284, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #4906, #4907, #4955
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788062842894` — 8/29/2026, 9:28:41 PM PT — 48 turns
+
+**Original task:**
+
+```
+#Cline Learner
+
+How is this going? Is this being used? I have not checked in on cline learner in probably weeks or months. I know some of the ideas are very stale,  but wondering here what we do?
+```
+
+**Ideas referenced:** #1242, #18806
+
+**Last PICKUP PROMPT:**
+
+```
+nt mechanism that was missing.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Cline Learner + cluster surfacing: verified healthy, shipped the missing improvement loop.
+
+Where we left off (verified 2026-08-29 21:28 PT):
+- Cline Learner launchd (com.emsu.cline-yolo-learner) healthy: scans every 30 min, 0 new trips 7d / 6 in 30d, rule 99 regenerating each scan, MCP violations synced (4,608 rows)
+- Cluster pipeline runs daily 04:15 server-side; 10 clusters / ~1,650 ideas were never surfaced to Cline — root cause: no instruction to call list_clusters existed
+- NEW HARDFLOOR RULE SHIPPED + REINDEXED: cluster-surfacing-close-the-improvement-loop.md (353 rules / 23 hardfloor) — every new task must list_clusters at start and surface+act on matching cluster (rules 29/161)
+- Cluster#29 probed live via the new rule (silent-ghost meta-fixes, 6 ideas all processed), HANDOFF_NOTES.md updated — both verified
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+- None — all work completed this session. (Rule 29: any future Cline window that opens a task matching a cluster now surfaces it automatically via the new hardfloor rule.)
+
+Reference IDs:
+- Ideas filed: none this session
+- Files touched: ~/Documents/Cline/Rules/cluster-surfacing-close-the-improvement-loop.md (new), HANDOFF_NOTES.md (server), ~/Documents/Cline/yolo_learner/{patterns.json,yolo_trips.sqlite} (read-only), Rules/99-yolo-prevention-learned.md (read-only)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788064028524` — 8/29/2026, 9:27:08 PM PT — 1 turns
+
+**Original task:**
+
+```
+#GLM / LLMs
+
+Problemmatic since these hidden errors and issues seem to be able to continually plague our LLMs and create false gates/ gas lighting that evertyhign is fine. I remain very converned on this and wonder how we can avoid gaslighting durably when it comes to anything, but most especially LLMs and their routing as getting it wrong is EXTREMELY distructive. It is incredibel taht you were not able to see this before. Can you consult the community perhaps and see if you can figure a better way of making sure the LLMs are more stable? What can be done here? We need to think really hard an
+```
+
+**Ideas referenced:** #178813, #28705 [deployed], #28725 [blocked], #28730 [executing], #28740 [proposed], #28752 [executing], #28753 [rejected], #28769 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788062963405` — 8/29/2026, 9:19:03 PM PT — 36 turns
+
+**Original task:**
+
+```
+#CFA Learner
+
+Is there not a CFA learner? If there is, it seems we are VASTLY underutilizing it. The reason I think this is because a lot of times responses seem stale or older or less advanced. You'd think they would get better over time. But I don't know that I'm really seeing that all that much. It seems more that we are seeing it plateau and then regress, then we end up having to work to get it back to baseline. We seem to be 2 stetps forward and 1.9 steps back. Very slow progress.
+```
+
+**Ideas referenced:** #28774 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+e unified learner) is tracked.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — CFA learner is fragmented and 3 of 4 surfaces are dead (diagnosis done, fix pending).
+
+Where we left off (verified 2026-08-29 21:18 PT):
+- Diagnosed that no unified CFA learner exists; learning is per-surface and only Email AI is active.
+- Email AI: 6,987 corrections, fresh Aug 29. Voice: 43 corrections, stale since May 1. Chat: 0. SMS: 0. ai_learning_queue stale since Apr 21.
+- KAIZEN ai_ticket_agent coverage only 37.7% (58/154) last 7 days; livechat_ai logs 0 failures.
+- Filed idea #28774 [proposed] to unify and rewire the loops.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #28774 [proposed] — Wire livechat_ai / sms_ai / voice_call failures into KAIZEN targets and verify rows actually land (grep the chat/voice webhook + cron entry points, confirm log table writes).
+2. #28774 [proposed] — Reactivate voice_ai_learned_corrections ingestion (find the cron/api that stopped feeding it after 2026-05-01) and confirm new rows appear.
+3. #28774 [proposed] — Build the unified CFA learner so all surfaces feed one source of truth, then probe ai_ticket_agent coverage rises above 37.7% as proof the loop closed.
+
+Reference IDs:
+- Ticket: none (proactive diagnosis)
+- Ideas filed: #28774 [proposed]
+- Files touched: none (read-only diagnosis + idea filing)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788063083878` — 8/29/2026, 9:11:24 PM PT — 1 turns
+
+**Original task:**
+
+```
+#Kaizon Learner
+
+Do we have a learner for Kaison? We need to make Kaizon make itself smarter. If not, I would like you to make one. I would like you to search/research how this can be done with the community. I want you to be looking at the bug library as a part of this learning process. I think this is key somehow. There are so many aspects to Kaizon that I think could be vastly improved with a self-learning mechanism. It could significantly improve our systems and it could also heal itself better and quicker.
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788051831962` — 8/29/2026, 8:55:54 PM PT — 330 turns
+
+**Original task:**
+
+```
+This is the kind of stupid garbage ruining our LLMs and all of our operations. Needs durable resolution so these types of errors can never occura gagin for any agent. So dumb -> oshua's reverse-tunnel service stole WOPR port :2224 a week ago, so every SSH attempt "to Maximus" was actually hitting Joshua and bouncing.
+
+My quesiton then regarding Cicero - I wonder if something "stole" it as well? How can you be sure? Reason I ask is because I've authorized keys on Cicero numerous times. Same for Nero FYI
+
+How is GLM doing now then? Should we move down to 2K or so or keep at 4K? How fast tok/sec 
+```
+
+**Ideas referenced:** #12247, #12262, #12363, #12368, #1242 [deployed], #13108, #13202, #13874, #15668, #178813, #1876, #18868, #1965, #1966, #1967, #1969, #2238, #22584, #25185, #25471, #2654, #26925, #28544, #28605, #28705 [blocked], #28706 [executing], #28725 [blocked], #28730 [blocked], #28740 [proposed], #28752 [proposed], #28753 [proposed], #28758 [executing], #28769 [executing], #45425
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788021977080` — 8/29/2026, 8:53:29 PM PT — 618 turns
+
+**Original task:**
+
+```
+#Various 2
+
+RCA complete. Short version: no student holds multiple classes. There are two DIFFERENT students named Casas (ymaris, section 26424T Houston, pre-start walk-in who cancelled and is now DNC; Matthew 26914T-29 Dallas Fort Worth, mid-course with a real exam block) plus one unrelated third student's escalation email (Trippy Speakz) that carries the 'cannot sit for my final' narrative Ruben read. ymaris never started her course (starts 9/8, Moodle last access never, EA unsigned, card declined 3x), so 'incomplete assignments block her final' does not apply to her; that story is Matthew's
+```
+
+**Ideas referenced:** #12060, #12778, #155724, #15815, #15877, #16242, #1648, #166534, #1719, #17446, #178796, #18836, #18944, #18951, #1912, #19362, #2168, #22060, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #25888, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2654, #2659, #2662, #2666, #26663, #26834, #26896, #26932, #27100, #27284, #27691, #28042, #28118, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28612 [executing], #28613 [executing], #28615, #28621 [deployed], #28622 [deployed], #28643 [deployed], #28683 [proposed], #28690 [executing], #28691 [executing], #28692 [proposed], #28693 [proposed], #28700 [proposed], #28701 [proposed], #28703 [proposed], #28704 [deployed], #28705 [in_progress], #28706 [in_progress], #28710 [deployed], #28711 [deployed], #28712 [approved], #28714 [deployed], #28716 [in_progress], #28717, #28719 [proposed], #28720 [proposed], #28721, #28722 [proposed], #28723 [in_progress], #28725 [in_progress], #28726 [proposed], #28727, #28729, #28735 [deployed], #28738, #28745 [deployed], #28770 [proposed], #3054, #4518, #4929, #62584, #62604, #813528, #9086, #9168, #9191, #92400, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+lure; investigate immediately.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1787960052755 — DELIVERY ALERT storm follow-up: first component fixed (#28745), two remaining components handed off (#28770).
+
+Where we left off (verified 2026-08-29 20:53 PT):
+- #28745 [deployed]: chains-executed-ZERO half quiet (watchdog query runs=1 < 20; excluded worker_silent_death from runs-owed, like gate holds).
+- Still firing: "288 unprocessed CRITICAL events; 997 auto-demoted" — root = LLM hang-reap storm (worker_silent_death), LEFT ALONE per Ruben steer (fleet window owns it).
+- #28770 [proposed] filed as the handoff tracking idea (do NOT patch ghost alert to count aborted rows; that would mask the LLM failure).
+
+Open threads to drive next:
+1. #28770 [proposed] — After the fleet/LLM window stabilizes hang-reaps: re-probe unprocessed criticals (expect <5) and AUTO-DEMOTED count (expect <10); confirm DELIVERY ALERT computes OK end-to-end.
+2. #28745 [deployed] — Watch for the genuine non-LLM failure signature (runs>=20, failure_category NOT worker_silent_death/gate-hold) and investigate immediately if seen.
+3. (human-only decision - no idea) Confirm with fleet window whether the worker_silent_death exclusion should be permanent or re-armed when healthy.
+
+Reference IDs:
+- Ideas: #28745 [deployed], #28770 [proposed]
+- Context (other window): #28712 [approved], #28716 [in_progress]
+- Files touched: lib/ExecutorDeliveryWatchdog.php, /var/www/emtskills/cline_task_ledger.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] #28745 first fix shipped + verified (chains-executed-ZERO probe: runs=1 < 20)
+- [x] Probed the still-firing DELIVERY ALERT: 288 unprocessed criticals + 997 auto-demotions
+- [x] Confirmed both remaining components are LLM hang-reap downstream (left alone per steer)
+- [x] Filed handoff idea #28770 [proposed]
+- [x] Answered "how is this going" honestly with live-verified facts
+</task_progress>
+</attempt_completion>
+```
+
+### `1788037909518` — 8/29/2026, 8:39:53 PM PT — 104 turns
+
+**Original task:**
+
+```
+#emtskills slowness
+
+also make sure to update the emtskills sloness document on the desktop once finishe
+
+approved
+1. #28722 [proposed] — Upgrade /var/www/emtskills/scripts/llm_pool_isolation_guard.py from alert-only to self-heal: on detection of an unisolated trafficked form, auto-patch the AGENT_POOL alternation in BOTH PLESK_VHOST (/var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf) and LOCAL_VHOST (/etc/nginx/sites-enabled/emtskills), backup first, run nginx -t, reload nginx, re-run the isolation check, and an accepted-conn delta probe; ship --dry-run default → --self-heal flag
+```
+
+**Ideas referenced:** #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691, #28722 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+nt required per R317 clause 6.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up the /emtskills slowness follow-up — llm_pool_isolation_guard self-heal (idea #28722, shipped this session).
+
+Where we left off (verified 2026-08-29 20:30 PT):
+- llm_pool_isolation_guard.py is self-healing: --self-heal patches AGENT_POOL alternation in BOTH PLESK_VHOST and LOCAL_VHOST (backup first), nginx -t fail-closed, reload, re-scan. Default alert-only preserved.
+- /etc/cron.d/emsu-llm-pool-isolation-guard runs --self-test --self-heal hourly; non-zero still alerts DEFCON 2 via infra_alert.php.
+- End-to-end verified: recreated 13th-recurrence leak, dry-run rc=1, self-heal rc=0, accepted-conn delta agents +7 / www +1, final guard rc=0. Backups: emtskills.bak-selftest-20260829-201507 + auto emtskills.bak-selfheal-<ts>.
+- Idea #28722 [deployed] (live DB verified). Desktop doc /Users/rubenmajor/Desktop/emtskills-slowness.md updated (Aug 29 section). HANDOFF_NOTES.md entry appended.
+
+Open threads to drive next:
+- None — all approved work completed and probe-verified this session. (No deferred buildable work.)
+
+Reference IDs:
+- Ticket: n/a (direct Ruben task)
+- Ideas filed: #28722 [deployed]
+- Bug: #17 (frankenstein_bug_library)
+- Files touched: /var/www/emtskills/scripts/llm_pool_isolation_guard.py, /etc/cron.d/emsu-llm-pool-isolation-guard, /etc/nginx/sites-enabled/emtskills (+ .bak-selftest-20260829-201507, + .bak-selfheal-<ts>), /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788051007231` — 8/29/2026, 6:17:13 PM PT — 265 turns
+
+**Original task:**
+
+```
+#VAPI CFA
+
+Odd, why am i not seeing any transcripts here? -> https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent&page=2&per_page=25#history 
+
+I think that might be why you think ther'es no AIs answering. However, i see calls of numerous minutes that need evaluation. I believe the transcript system then needs repair and then for you to do an analysis and fix the telephony system and install a self-heal. Needs more stability here. 
+
+I see the logs from the telephony hub link and many were answered by EMSU Service Agent, so something is messing up your ping / you thinking 
+```
+
+**Ideas referenced:** #059669, #16154, #16826, #16928, #16931, #178802, #23989, #24645, #25701, #2669 [rejected], #27100, #28710 [deployed], #28711 [deployed], #28712 [executing], #28716 [blocked], #28729 [deployed], #28735 [deployed], #28738 [executing], #28746 [executing], #28747 [executing], #28748 [executing], #28749 [executing], #28750 [executing], #28751 [executing], #475569, #6366, #64748, #9222, #9501
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788048815773` — 8/29/2026, 5:39:11 PM PT — 130 turns
 

@@ -47,3 +47,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-26 double reversal on a frankenstein-llm slowness diagnosis. (1) Declared the GLM PP=6 ring 'SATURATED' from ADAPTER-SIDE evidence only (queue_depth 3-19, adapter TTFB 96-132s, a ring_admit_rewrite log line). The CANONICAL instrument (two :8210/metrics counters 60s apart, per GLM52_MEASUREMENT_METHOD_AND_RESTORE_RISK.md) returned decode=10.13 prefill=445.85 TOTAL=455.98 tok/s with running=5, waiting=0, preemptions=0 and canary pass_streak=203: the ring was HEALTHY the whole time. Amended behavior: ring/engine health is decided ONLY by the engine's own counters (generation_tokens_total + prompt_tokens_total delta over >=60s, plus running/waiting/preemptions). Adapter queue_depth and adapter TTFB describe the ADAPTER's queueing view and are NEVER evidence of engine saturation; an admission-gate log line (ring_admit_rewrite / ceiling_N_running_M) is the gate WORKING, not a fault. (2) Separately, do not infer per-stream interactive speed from an aggregate tok/s figure: on a PP=6 ri
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 03:46 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788135215000
+- RCA bucket: unread source
+- Trigger pattern: rule-322 table named physical LLMs from llm_call_log model strings and upstream-log percentages without resolving aliases, tracing callers, or checking log staleness
+- Reversal note: Amends the resolution rules: (1) an llm_call_log model string is a LABEL, not a physical model — litellm model_names can be ALIASES backed by a different provider (verified 2026-08-29: config.yaml lines 244-253 back claude-haiku/claude-haiku-4-5 with deepseek/deepseek-v4-pro), so a "what was serving" table MUST resolve each model_name through config.yaml litellm_params.model before naming the physical LLM or attributing cost; (2) never attach a purpose label like "vision-doorman" to a row without tracing the actual caller (the 2026-08-29 haiku rows came from PHP HAIKU_FALLBACK_V1 crons, not vision); (3) an "X absorbed N% of requests" claim from the adapter upstream log MUST check the log's LAST TIMESTAMP first — a wedged adapter leaves a stale log that misattributes the window.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

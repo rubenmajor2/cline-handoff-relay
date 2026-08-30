@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-30T16:10:41.411Z",
+ "generated_at": "2026-08-30T17:10:41.718Z",
  "counts": {
-  "parsed": 1,
-  "reused": 982,
+  "parsed": 0,
+  "reused": 983,
   "failed": 0,
   "total": 983
  },
@@ -147128,11 +147128,11 @@
   },
   "1788104490855": {
    "task_id": "1788104490855",
-   "mtime": 1788106218525,
+   "mtime": 1788106775627,
    "created_at": "2026-08-30T15:41:30.855Z",
-   "last_modified": "2026-08-30T16:10:18.525Z",
-   "size_kb": 610,
-   "turn_count": 63,
+   "last_modified": "2026-08-30T16:19:35.627Z",
+   "size_kb": 732,
+   "turn_count": 85,
    "title": "The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call it. Please resolve this so I can use Reuben computer",
    "pickup_prompt": "ticket to the VAPI admin team to audit the assistant’s settings.  \n\n---  \n\n#### PICKUP PROMPT BLOCK  \n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #<real_task_id> — resolve automatic hang‑up on Ruben TNG personal‑assistant (+17602807886).\n\nWhere we left off (verified 2026‑08‑30 08:45 PT):\n- VAPI health OK, recent call logged with duration 0 seconds (auto‑hang‑up).\n- Assistant configuration lives off‑box; local tables do not contain the entry.\n\nOpen threads to drive next:\n1. #30792 [executing] — Query VAPI for assistant ID bound to +17602807886 and snapshot config.\n2. #30793 [executing] — Patch assistant to clear auto‑hang‑up flag; verify with canary call.\n3. #30794 [blocked] — If VAPI API key missing or permission error, file a ticket for VAPI admin.\n\nReference IDs:\n- Ideas filed: [#30792, #30793, #30794]\n- Files touched: [/var/www/emtskills/backups/vapi_assistant_tng_prefix_<timestamp>.json]\n\nWhen done, append a row to `cline_task_ledger.md` per rule 07 and run order 66.\n═══════════════════════════════════════════════",
    "ideas": {
@@ -147161,6 +147161,7 @@
     "16648": null,
     "16715": null,
     "17202": null,
+    "23071": null,
     "24645": null,
     "25969": null,
     "27284": null,

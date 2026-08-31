@@ -491,6 +491,22 @@ function classifyRuleId(violationType) {
     const vt = violationType.trim().toUpperCase();
     if (/^R317/.test(vt))
         return "317";
+    if (/^R315/.test(vt))
+        return "315";
+    if (/^R302_/.test(vt))
+        return "302";
+    if (/^R297_/.test(vt))
+        return "297";
+    if (/^R144_/.test(vt))
+        return "144";
+    if (/^R259_/.test(vt))
+        return "259";
+    if (/^R300_/.test(vt))
+        return "300";
+    if (/^R323/.test(vt))
+        return "323";
+    if (/^R322/.test(vt))
+        return "322";
     if (/^R321/.test(vt))
         return "321";
     if (/^R29_/.test(vt))
@@ -1206,7 +1222,7 @@ function claimProvenanceScan(result_text) {
     const dividerIdx = lines.findIndex((l) => /^[\u2550]{20,}$/.test(l.trim()));
     const bodyLines = dividerIdx >= 0 ? lines.slice(0, dividerIdx) : lines;
     const claimVerb = /\b(?:built|created|added|implemented|fixed|patched|deployed|shipped|stamped|wired|hooked|registered|verified|confirmed|repaired|amended|rebuilt|reconciled|released|tested)\b/i;
-    const evidence = /\(\s*(?:verified|probed|measured|confirmed)\s*:|\bHTTP\s*\d{3}\b|\b(?:SELECT|INSERT|UPDATE|DELETE|CREATE TABLE|ALTER TABLE)\b|\b(?:build|src|routes|lib|mcp-servers)\/|\b\.(?:ts|js|php|sql|sh|md|json)\b|\b#\d{3,}\s*\[|\b(?:npm run build|tsc --?|node build|curl)\b|\b\d+\s*(?:row|rows|line|lines|char|bytes|tokens|ms)\b/i;
+    const evidence = /\(\s*(?:verified|probed|measured|confirmed)\s*:|\bHTTP\s*\d{3}\b|\b(?:SELECT|INSERT|UPDATE|DELETE|CREATE TABLE|ALTER TABLE)\b|\b(?:build|src|routes|lib|mcp-servers)\/|\b\.(?:ts|js|php|sql|sh|md|json)\b|#\d{3,}\s*\[|\b(?:npm run build|tsc --?|node build|curl)\b|\b\d+\s*(?:row|rows|line|lines|char|bytes|tokens|ms)\b/i;
     const inferenceLabel = /\((?:inference|stale)\s*:|\bunverified\b|\b(?:I|we)\s+do\s+not\s+know\b|\bcannot\s+verify\b|\bUNKNOWN\b/i;
     for (let i = 0; i < bodyLines.length; i++) {
         const line = bodyLines[i];
@@ -1693,7 +1709,7 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
         }
         const markerRe = /\((?:verified|probed|measured|confirmed)\s*:\s*([^)]{0,200})\)/gi;
         const artifactShape = /\b(?:HTTP\s*\d{3}|\/v1\/|curl|grep|ssh|mysql|SELECT|DESCRIBE|php\s+-l|git\s|sha256)\b|\b\d[\d,]*\s*(?:tok\/s|ms|%|GB|GiB|MB|KB|bytes|rows?|tokens|days?|hours?|minutes?)\b|\d{4}-\d{2}-\d{2}|\d{1,2}:\d{2}\s*(?:PT|UTC|AM|PM)|\b[A-Za-z_]+\.[A-Za-z_]+\b|\bid\s*=?\s*\d+|#\d{3,}|["`]/i;
-        const knownTool = /\b(?:verify_payment_state|get_student_lifecycle_state|lookup_paperwork_state|get_student_360|check_exam_enforcement|check_proctoring_status|check_student|check_ticket|run_moodle_query|execute_query|fetch_data|ssh_command|read_server_file|check_server_logs|frankenstein_verify_routing|frankenstein_registry|frankenstein_host_probe|frankenstein_what_served|check_affirm_status|find_authnet_by_email|verify_routing|truth_judge|list_files|read_file|search_files|describe_table)\b/i;
+        const knownTool = /\b(?:verify_payment_state|get_student_lifecycle_state|lookup_paperwork_state|get_student_360|check_exam_enforcement|check_proctoring_status|check_student|check_ticket|run_moodle_query|execute_query|fetch_data|ssh_command|read_server_file|check_server_logs|frankenstein_verify_routing|frankenstein_registry|frankenstein_host_probe|frankenstein_what_served|check_affirm_status|find_authnet_by_email|verify_routing|truth_judge|list_files|read_file|search_files|describe_table|reconcile_ideas|get_idea_progress|clinerules_log_probe|launchctl|npm\s+run\s+build|py_compile)\b/i;
         const fake = [];
         let m;
         while ((m = markerRe.exec(result_text)) !== null) {
@@ -1747,6 +1763,211 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 `To declare the SERVICE down or the MODEL capability-limited, probe ON THE BOX (ssh + systemctl/ps/nvidia-smi or a decode probe) and cite that, ` +
                 `or reword the claim to the tunnel scope ("tunnel to X unreachable from WOPR"). Probe scope must equal claim scope (rule 317 golden rule).`);
         }
+    }
+    // ── R315_STATUS_CONFLATION: status is not serving (2026-08-31, VERITAS) ──
+    // Rule 315 was prose-only. Its #2 banned failure mode: citing systemd-active /
+    // docker-Up / process-exists as evidence that an ENGINE is SERVING. Only a
+    // /v1/models 200 or a decode probe proves serving. Fires ONLY on the textual
+    // contradiction (serving claim + status-only evidence + no serving evidence
+    // nearby); silent otherwise (fail open per anti-choke principle).
+    {
+        const servingClaim = /\b(?:is|are|was|were|remains?|now|still)\s+(?:\w+\s+){0,2}?(?:serving|healthy|operational|live|fully\s+up)\b/i;
+        const hostSubject315 = /\b(?:julia|claudia|cesar|cato|artemis|wopr|maximus|bigmac|joshua|host|service|engine|vllm|model|box|container|pod)\b/i;
+        const statusOnlyEvidence = /\bsystemctl\s+(?:is-active|status)\b|\bis-active\b|\bdocker\s+ps\b|\bUp\s+\d+\s+(?:hours?|days?|minutes?)\b|\bprocess\s+(?:exists|is\s+alive|is\s+running)\b|\bunit\s+(?:is\s+)?(?:reported\s+)?active\b/i;
+        const servingEvidence = /\/v1\/models|\bHTTP\s*2\d\d\b|\bdecode\s+probe\b|\btok\/s\b|\bgenerated?\s+\d+\s+tokens?\b|\bstartup\s+complete\b/i;
+        const conflated = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            if (!hostSubject315.test(line) || !servingClaim.test(line))
+                continue;
+            const ctx = (lines[i - 1] || "") + "\n" + line + "\n" + (lines[i + 1] || "");
+            if (statusOnlyEvidence.test(ctx) && !servingEvidence.test(ctx)) {
+                const clipped = line.trim().slice(0, 96);
+                if (!conflated.includes(clipped))
+                    conflated.push(clipped);
+            }
+        }
+        if (conflated.length > 0) {
+            failures.push(`R315_STATUS_CONFLATION: ${conflated.length} line(s) claim a host/engine is SERVING while the only nearby evidence is process/unit status (systemctl active, docker Up, ps): ` +
+                conflated.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 315: systemd-active and docker-Up mean the PROCESS exists, never that the engine bound its port or served a request (2026-08-09 bigmac wedge: Up 10 hours, zero requests served). ` +
+                `Prove serving with curl /v1/models HTTP 200 or a decode probe that yielded tokens, and cite THAT.`);
+        }
+    }
+    // ── R302_CREDENTIAL_IN_TRACKED: plaintext secret into tracked config (2026-08-31, VERITAS) ──
+    // Rule 302 was prose-only. Fires when the completion itself narrates writing a
+    // literal credential value into a config/tracked file with no safe-handling
+    // evidence (gitignore/getenv/secrets file/placeholder) nearby.
+    {
+        const secretAssign = /define\s*\(\s*['"][A-Z0-9_]*(?:KEY|TOKEN|SECRET|PASSWORD|PASS|AUTH)[A-Z0-9_]*['"]\s*,\s*['"][A-Za-z0-9+\/=_.\-]{12,}['"]|\b(?:api[_-]?key|token|secret|password)\b\s*['"]?\s*(?:=>?|:)\s*['"][A-Za-z0-9+\/=_.\-]{12,}['"]/i;
+        const trackedWriteCtx = /\b(?:committed|commit(?:ted|s)?|pushed|wrote|added|hardcod\w*|stored|placed|saved)\b[^\n]{0,90}\b(?:config|\.php|\.js|\.ts|\.json|\.ya?ml|tracked\s+file|repo(?:sitory)?)\b/i;
+        const safeHandling = /\bgitignor\w*\b|\bgetenv\b|\benv(?:ironment)?\s+var|\bsecrets\.php\b|\bplaceholder\b|__RUBEN_PASTE|\bvault\b|\bgit\s+rm\s+--cached\b/i;
+        const leaked = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            if (!secretAssign.test(line))
+                continue;
+            const ctx = (lines[i - 1] || "") + "\n" + line + "\n" + (lines[i + 1] || "");
+            if (trackedWriteCtx.test(ctx) && !safeHandling.test(ctx)) {
+                const clipped = line.trim().slice(0, 96);
+                if (!leaked.includes(clipped))
+                    leaked.push(clipped);
+            }
+        }
+        if (leaked.length > 0) {
+            failures.push(`R302_CREDENTIAL_IN_TRACKED: ${leaked.length} line(s) narrate writing a literal credential value into a config/tracked file: ` +
+                leaked.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 302 (Postmark 119.5K-spam incident): credentials NEVER live as plaintext in git-tracked files. ` +
+                `Move the value to a gitignored secrets file or getenv(), replace the tracked reference with the constant name, and if it was ever committed, rotate the credential.`);
+        }
+    }
+    // ── R297_UNSCOPED_COUNT: failure count with no window/population scope (2026-08-31, VERITAS) ──
+    // Rule 297 SCOPE GATE was prose-only. Source incident: "found 6" reported when
+    // reality (correct scope) was 85. A count of failures/errors/anomalies MUST
+    // carry its window + population inline. Body-only scan (pickup block exempt).
+    {
+        const firstDividerIdx = lines.findIndex((l) => /^\u2550{20,}$/.test(l.trim()));
+        const bodyLines297 = firstDividerIdx >= 0 ? lines.slice(0, firstDividerIdx) : lines;
+        const countClaim = /\b(?:found|counted|there\s+(?:are|were)|measured|returned|shows?|logged)\s+(?:only\s+|just\s+)?\d{1,6}\s+(?:failed|failures?|errors?|anomal(?:y|ies)|violations?|impossible\s+rows?|no-answer\s+tasks?|affected\s+(?:students?|users?)|students?\s+affected)\b/i;
+        const scopeEvidence = /\b\d+\s*(?:h|hrs?|hours?|d|days?|weeks?|months?)\b|\blast\s+\d+|\bsince\b|\bwindow\b|\ball[- ]time\b|\ball\s+users\b|\bper\s+day\b|\bfrom\s+\d{4}-\d{2}-\d{2}|\btoday\b|\bthis\s+(?:week|month|session)\b/i;
+        const unscoped = [];
+        for (let i = 0; i < bodyLines297.length; i++) {
+            const line = bodyLines297[i];
+            if (!countClaim.test(line))
+                continue;
+            const ctx = (bodyLines297[i - 1] || "") + "\n" + line + "\n" + (bodyLines297[i + 1] || "");
+            if (!scopeEvidence.test(ctx)) {
+                const clipped = line.trim().slice(0, 96);
+                if (!unscoped.includes(clipped))
+                    unscoped.push(clipped);
+            }
+        }
+        if (unscoped.length > 0) {
+            failures.push(`R297_UNSCOPED_COUNT: ${unscoped.length} failure/anomaly count(s) reported with no time window or population scope inline: ` +
+                unscoped.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 297 SCOPE GATE: never a bare number. Report the count WITH its scope: "85 no-answer tasks (failed + canceled + offloaded), 7 days, all users". ` +
+                `A technically-correct count of a too-narrow population is the trap (source incident: reported 6, reality 85).`);
+        }
+    }
+    // ── R144_SERVER_PATH_WRITE: local file tool claimed against a server path (2026-08-31, VERITAS) ──
+    // Rule 144 was prose-only in the validator. Fires when the completion narrates
+    // using write_to_file/replace_in_file on an /etc /var /usr /opt /root /srv path
+    // with no server-tool evidence nearby.
+    {
+        const claimShape144 = /\b(?:write_to_file|replace_in_file)\b[^\n]{0,100}\/(?:etc|var|usr|opt|root|srv)\/|\/(?:etc|var|usr|opt|root|srv)\/[^\n]{0,100}\b(?:write_to_file|replace_in_file)\b/i;
+        const serverToolEvidence = /\bssh_command\b|\bsudo\s+tee\b|\bwrite_server_file\b|\bsafe_deploy\w*\b|\bscp\b|\bavoided\b|\bnever\b|\bforbidden\b|\binstead\b|\brule\s*144\b/i;
+        const badWrites = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            if (!claimShape144.test(line))
+                continue;
+            const ctx = (lines[i - 1] || "") + "\n" + line + "\n" + (lines[i + 1] || "");
+            if (!serverToolEvidence.test(ctx)) {
+                const clipped = line.trim().slice(0, 96);
+                if (!badWrites.includes(clipped))
+                    badWrites.push(clipped);
+            }
+        }
+        if (badWrites.length > 0) {
+            failures.push(`R144_SERVER_PATH_WRITE: ${badWrites.length} line(s) narrate a local file-tool write against a server path prefix (/etc /var /usr /opt /root /srv): ` +
+                badWrites.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 144: those tools operate on the LOCAL Mac only; a server path needs emsu-operations ssh_command (sudo tee heredoc) or write_server_file. ` +
+                `If the write actually happened locally it created a phantom file or EACCES-looped — re-do it server-side and verify.`);
+        }
+    }
+    // ── R259_CHAT55_SPILLOVER: Cline-technical content sent to the group chat (2026-08-31, VERITAS) ──
+    // Rule 259 was prose-only. Fires when the completion states it SENT technical
+    // Cline-work content to chat 55 / the ops group with no Ruben-asked evidence.
+    // Negation-guarded so "nothing was sent to chat 55" passes.
+    {
+        const negatedSend = /\b(?:nothing|not|no|never|didn'?t|wasn'?t|avoid\w*|without|instead\s+of)\b[^\n]{0,50}\b(?:sent|posted|messaged|fired)\b|\b(?:sent|posted)\b[^\n]{0,12}\bnothing\b/i;
+        const sentToGroup = /\b(?:sent|posted|messaged|fired|pushed)\b[^\n]{0,60}\b(?:to\s+)?(?:chat\s*55|the\s+ops\s+group(?:\s+chat)?)\b/i;
+        const techSubject = /\b(?:deploy(?:ed|ment)?|code|MCP|rout(?:ing|er)|gate|validator|SQL|bug|investigation|patch(?:ed)?|clinerules|infrastructure|LLM|refactor|migration|schema)\b/i;
+        const rubenAskedEvidence = /\bruben\s+(?:asked|said|directed|requested|told\s+me|approved)\b|\bper\s+ruben(?:'s)?\s+(?:ask|request|directive)\b|\bruben:\s*["\u201c]/i;
+        const spillovers = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            // Meta-guard (2026-08-31 live FP): text DESCRIBING this gate/rule
+            // ("...sent to chat 55 blocks unless...") is not a send report.
+            if (/\bR259\b|\brule\s*259\b|\bgate\b|\bdetector\b|\bblocks?\s+unless\b/i.test(line))
+                continue;
+            if (!sentToGroup.test(line) || negatedSend.test(line))
+                continue;
+            const ctx = (lines[i - 1] || "") + "\n" + line + "\n" + (lines[i + 1] || "");
+            if (techSubject.test(ctx) && !rubenAskedEvidence.test(ctx)) {
+                const clipped = line.trim().slice(0, 96);
+                if (!spillovers.includes(clipped))
+                    spillovers.push(clipped);
+            }
+        }
+        if (spillovers.length > 0) {
+            failures.push(`R259_CHAT55_SPILLOVER: ${spillovers.length} line(s) state technical Cline-work content was sent to chat 55 / the ops group: ` +
+                spillovers.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 259: Cline technical work (deploys, code, MCP, routing, investigations) is Ruben-only and belongs in attempt_completion, not the group chat. ` +
+                `Only send to chat 55 when the content passes all three rule-259 tests AND Ruben asked — quote the ask.`);
+        }
+    }
+    // ── R300_DIAGNOSIS_ONLY: root cause found, artifact deferred (2026-08-31, VERITAS) ──
+    // Rule 300 violation shape 1/3: window identifies root cause, then defers the
+    // buildable fix to a future window/idea with NO artifact produced. Body-only
+    // (pickup block stripped) so compliant open-threads wording cannot false-fire.
+    {
+        const _r300Body = result_text.replace(/\u2550{5,}[\s\S]*?PICKUP PROMPT[\s\S]*$/i, "");
+        const rootCauseFound = /\broot\s+cause\b[^\n]{0,60}\b(?:is|was|found|identified|confirmed)\b|\b(?:identified|found|confirmed)\s+the\s+root\s+cause\b/i;
+        const deferFix = /\bnext\s+window\s+(?:should|will|can)\b|\bfiled\s+(?:as\s+)?an?\s+idea\s+(?:for|to)\s+(?:a\s+)?(?:future|next|later)?\s*(?:window|session|build|fix)\b|\b(?:the\s+)?fix\s+(?:is\s+)?deferred\b|\bwill\s+be\s+built\s+in\s+a\s+(?:future|later|next)\s+(?:window|session)\b/i;
+        const artifactEvidence = /\b(?:deployed|patched|shipped|wrote|edited|built|restarted|created|amended)\b[^\n]{0,100}\.(?:php|ts|js|py|sh|sql|md|json|ya?ml)\b|\bphp\s+-l\b|\bnpm\s+run\s+build\b|\bsystemctl\s+(?:restart|kickstart)\b|\bwrite_server_file\b|\bsafe_deploy\w*\b|\blaunchctl\b/i;
+        if (rootCauseFound.test(_r300Body) && deferFix.test(_r300Body) && !artifactEvidence.test(_r300Body)) {
+            failures.push(`R300_DIAGNOSIS_ONLY: the completion identifies a root cause AND defers the fix to a future window/idea, with NO concrete artifact evidence in the body (no file edited/deployed, no build/lint/restart cited). ` +
+                `Rule 300: once root cause is identified, every turn must advance the deliverable; a filed idea is not a deliverable. ` +
+                `If tools exist to build the fix in THIS window, build it now and cite the artifact. Deferral is legal only when the task genuinely cannot be completed here — name that blocker explicitly.`);
+        }
+    }
+    // ── BYPASS-B: R323_STUFFED_EVIDENCE — repeated-marker laundering (2026-08-31, VERITAS) ──
+    // Bypass vector (b): the neighbour-line context window lets an agent pad one
+    // artifact-shaped marker and reuse it beside many claims. A single normalized
+    // '(verified: ...)' inner text attached 3+ times is evidence-stuffing: real
+    // probes yield distinct artifacts per claim. Threshold 3 keeps honest reuse
+    // (2x quoting the same probe) unblocked.
+    {
+        const mkStuffRe = /\((?:verified|probed|measured|confirmed)\s*:\s*([^)]{0,200})\)/gi;
+        const markerCounts = new Map();
+        let sm;
+        while ((sm = mkStuffRe.exec(result_text)) !== null) {
+            const norm = sm[1].toLowerCase().replace(/\s+/g, " ").trim();
+            if (norm.length < 8)
+                continue;
+            markerCounts.set(norm, (markerCounts.get(norm) || 0) + 1);
+        }
+        const stuffed = [...markerCounts.entries()].filter(([, n]) => n >= 3).map(([k, n]) => `"${k.slice(0, 60)}" x${n}`);
+        if (stuffed.length > 0) {
+            failures.push(`R323_STUFFED_EVIDENCE: ${stuffed.length} identical '(verified: ...)' marker(s) repeated 3+ times across distinct claims: ` +
+                stuffed.join("; ") + `. ` +
+                `Rule 323: one probe verifies one claim scope. Identical markers pasted beside many claims is evidence-stuffing — ` +
+                `each material claim needs its own probe artifact (or an explicit '(inference: from <that probe>)' label for derived claims).`);
+        }
+    }
+    // ── BYPASS-D: R91_TASKID_SPOOF — wrong task_id disarms the probe gates (2026-08-31, VERITAS) ──
+    // Bypass vector (d): pass a fabricated or stale task_id and the auto-probe
+    // freshness set never arms, the gate file lands under the wrong name, and
+    // R317_REVERSAL_NOT_REPAIRED reads the wrong ledger. Cline task ids are
+    // 13-digit epoch-ms and always have a task directory. Fail-open: non-13-digit
+    // ids (executor/idea surfaces) and any fs error skip the check entirely.
+    if (task_id && /^\d{13}$/.test(task_id.trim())) {
+        try {
+            const _tdir = path.join(HOME, "Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/tasks", task_id.trim());
+            if (!fs.existsSync(_tdir)) {
+                failures.push(`R91_TASKID_SPOOF: task_id ${task_id.trim()} is 13-digit Cline-task-shaped but NO task directory exists for it on this machine. ` +
+                    `A wrong task_id disarms the freshness/reversal ledgers (bypass vector d). Pass the REAL current task id — it is the tasks/ directory name of this conversation.`);
+            }
+            else {
+                const _ageH = (Date.now() - fs.statSync(_tdir).mtimeMs) / 3600000;
+                if (_ageH > 12) {
+                    failures.push(`R91_TASKID_SPOOF: task directory for ${task_id.trim()} was last modified ${_ageH.toFixed(1)}h ago — that is not the active task (active windows update their dir continuously). ` +
+                        `Validating under a stale task_id disarms the probe-freshness and reversal-ledger gates (bypass vector d). Use the current window's task id.`);
+                }
+            }
+        }
+        catch { /* spoof check must fail open, never crash the validator */ }
     }
     // ── #28958: CLAIM-PROVENANCE GATE (deterministic, replaces LLM truth judge) ──
     // Deterministic zero-latency successor to clinerules_truth_judge for the
@@ -2524,6 +2745,15 @@ server.tool("clinerules_gate_scoreboard", "R317/#26696 gate observability scoreb
         else {
             lines.push("  (none)");
         }
+        // #29066 lever 1 (2026-08-31): surface the validator-omission count in the
+        // scoreboard — 64% of completions were shipping with ZERO validator calls
+        // and nothing Ruben reads showed it. Table is written by the correction
+        // watchdog (scan_validator_omission). Fail-open if the table is absent.
+        try {
+            const om = db.prepare(`SELECT COUNT(*) AS n FROM validator_omissions WHERE detected_at >= datetime('now', ?)`).get(`-${days} day`);
+            lines.push(`Validator OMISSIONS last ${days}d (completions shipped with zero validate calls): ${om.n}`);
+        }
+        catch { /* table not created yet - watchdog has not run */ }
         lines.push("By violation type:");
         if (byType.length) {
             for (const t of byType)

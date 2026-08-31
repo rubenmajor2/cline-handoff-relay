@@ -747,3 +747,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Further amends clause 3, second reversal in the same session on the same question. The first amendment (alias/brand-family search) was still insufficient: the "AMR genuinely absent from Drive" claim was based on a name search of the DEFAULT Drive corpus, which is dominated by Zoom recordings. The human then supplied a legacy archive folder link where three executed AMR instruments sat. Rule: before declaring a document absent from Drive, (a) ask the human whether a legacy/archive folder exists, (b) use quoted-phrase searches ("American Medical Response" agreement) with file-type filters, and (c) note that older Drive files behind auth walls need the OAuth token refresh flow (google_token_drive.json), not the uc?export=download endpoint.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 22:18 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788195482100
+- RCA bucket: insufficient probe
+- Trigger pattern: claiming a cache-cap fix eliminated the wedge after verifying /v1/models 200 + process relaunched with flags + cache size, without a full decode probe; cold-start OOM fired right after kickstart
+- Reversal note: Amends clause 13 (MLX decode-wedge). The wedge is TWO axes, not one: (1) prompt-cache growth under concurrent decode — fixed by --prompt-cache-size/bytes + decode/prompt-concurrency caps, verified by a live Prompt Cache read under load; and (2) cold-start-load OOM (large prompt arriving while the 27B model is still loading + Ollama VRAM on the same unified GPU). A fix for axis 1 is NOT proof the wedge is eliminated: a process relaunched with caps can still OOM on axis 2 ~2min after kickstart. Required: before claiming an MLX OOM fix 'prevents' the wedge, probe a COMPLETE decode POST to 200 under load from that exact process (not /v1/models, not process-cmdline, not cache size alone); a cache-stays-small read or /v1/models 200 is insufficient.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

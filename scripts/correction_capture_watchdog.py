@@ -186,6 +186,66 @@ def capture_auto_probes(task_dir: Path, con: sqlite3.Connection) -> int:
         con.commit()
     return inserted
 
+def scan_validator_omission(task_dir: Path, con: sqlite3.Connection) -> int:
+    """
+    Bypass vector (c), VERITAS 2026-08-31: a model that never calls
+    clinerules_validate_completion never gets blocked — the completion gates are
+    opt-in at the call site. This makes omission OBSERVABLE: if a task's
+    ui_messages contains a completion_result but the violations table has zero
+    VALIDATION_PASS/VALIDATION_FAIL rows for that task_id, record one row in
+    validator_omissions. Queryable, deduped, non-blocking (a watchdog cannot
+    retroactively block a shipped completion — it makes the bypass visible so
+    the meter and Ruben can see it).
+    """
+    con.execute(
+        """CREATE TABLE IF NOT EXISTS validator_omissions (
+             id INTEGER PRIMARY KEY AUTOINCREMENT,
+             task_id TEXT UNIQUE,
+             completion_preview TEXT,
+             detected_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+           )"""
+    )
+    ui = task_dir / "ui_messages.json"
+    if not ui.exists():
+        return 0
+    try:
+        msgs = json.loads(ui.read_text(errors="replace"))
+    except Exception:
+        return 0
+    if not isinstance(msgs, list):
+        return 0
+    task_id = task_dir.name
+    completion = ""
+    for m in msgs:
+        if isinstance(m, dict) and m.get("type") == "say" and m.get("say") == "completion_result":
+            completion = extract_text(m) or completion
+    if not completion:
+        return 0
+    # Grace window: an ACTIVE task may not have validated yet. Only flag tasks
+    # whose last activity is >15 min old (completion shipped, window moved on).
+    if time.time() - task_dir.stat().st_mtime < 900:
+        return 0
+    validated = con.execute(
+        "SELECT 1 FROM violations WHERE task_id = ? AND (evidence LIKE 'VALIDATION_PASS%' OR evidence LIKE 'VALIDATION_FAIL%') LIMIT 1",
+        (task_id,),
+    ).fetchone()
+    if validated:
+        # Task validated at least once — clear any stale omission row.
+        con.execute("DELETE FROM validator_omissions WHERE task_id = ?", (task_id,))
+        con.commit()
+        return 0
+    already = con.execute(
+        "SELECT 1 FROM validator_omissions WHERE task_id = ? LIMIT 1", (task_id,)
+    ).fetchone()
+    if already:
+        return 0
+    con.execute(
+        "INSERT OR IGNORE INTO validator_omissions (task_id, completion_preview) VALUES (?,?)",
+        (task_id, completion.strip()[:400]),
+    )
+    con.commit()
+    return 1
+
 def main() -> int:
     if not DB_PATH.exists():
         log(f"DB missing at {DB_PATH}; clinerules MCP not initialized yet")
@@ -198,6 +258,7 @@ def main() -> int:
     now = time.time()
     total = 0
     probes = 0
+    omissions = 0
     scanned = 0
     for task_dir in TASKS_DIR.iterdir():
         if not task_dir.is_dir():
@@ -211,10 +272,11 @@ def main() -> int:
         try:
             total += scan_task(task_dir, con)
             probes += capture_auto_probes(task_dir, con)
+            omissions += scan_validator_omission(task_dir, con)
         except sqlite3.OperationalError as e:
             log(f"sqlite busy on {task_dir.name}: {e}")
     con.close()
-    log(f"scan complete: {scanned} recent task(s), {total} new correction(s), {probes} auto probe(s) captured")
+    log(f"scan complete: {scanned} recent task(s), {total} new correction(s), {probes} auto probe(s), {omissions} validator-omission(s) flagged")
     return 0
 
 if __name__ == "__main__":

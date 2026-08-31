@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 4:18:29 AM PT | window: last 72h | 75 tasks | index total 999 (parsed 6, cached 993)
+Generated: 8/31/2026, 8:40:03 AM PT | window: last 72h | 75 tasks | index total 999 (parsed 3, cached 996)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788161107343` | 8/31/2026, 4:18:18 AM | 53 | 770KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
-| `1788160972127` | 8/31/2026, 4:07:35 AM | 59 | 634KB | #Julia/Claudia Qwen 3.8 27B |
-| `1788161048426` | 8/31/2026, 3:17:03 AM | 35 | 607KB | #Joshua Qwen 3.8 27B |
+| `1788161107343` | 8/31/2026, 8:34:21 AM | 110 | 1136KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
+| `1788160972127` | 8/31/2026, 8:21:15 AM | 77 | 699KB | #Julia/Claudia Qwen 3.8 27B |
+| `1788161048426` | 8/31/2026, 6:55:28 AM | 42 | 677KB | #Joshua Qwen 3.8 27B |
 | `1788161032616` | 8/31/2026, 12:48:02 AM | 63 | 280KB | #Nero Qwen 3.8 27B |
 | `1788161302475` | 8/31/2026, 12:47:59 AM | 61 | 250KB | #Grievances |
 | `1788154719401` | 8/31/2026, 12:45:38 AM | 361 | 882KB | #Argus Improvmeents |
@@ -90,7 +90,7 @@ Generated: 8/31/2026, 4:18:29 AM PT | window: last 72h | 75 tasks | index total 
 
 ## Per-window detail
 
-### `1788161107343` — 8/31/2026, 4:18:18 AM PT — 53 turns
+### `1788161107343` — 8/31/2026, 8:34:21 AM PT — 110 turns
 
 **Original task:**
 
@@ -103,63 +103,39 @@ Where left off (verified 08-30 23:34 PT):
   - #28958 [proposed] - "Determ
 ```
 
-**Ideas referenced:** #0000, #16224, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27634, #27652, #28958 [proposed], #28961 [proposed], #5344
+**Ideas referenced:** #0000, #16224, #178815, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27634, #27652, #28958 [proposed], #28961 [proposed], #5344
 
 **Last PICKUP PROMPT:**
 
 ```
-224): Validates that a pending attempt_completion result complies with rule 91 (PICKUP PROMPT block required). Call BEFORE attempt_completion. Returns pass/fail with specific violations — if pass=false, fix the listed failures before shipping.",
-=======
-// ─── #28958: DETERMINISTIC CLAIM-PROVENANCE GATE (replaces the LLM truth judge) ─
-// Ruben 2026-08-30: "how many times have you told me today that some claim you
-// made was false." The removed LLM truth judge (clinerules_truth_judge) POSTed
-// to api_fleet_inventory.php action=truth_judge and classified claims via a
-// stronger model — expensive, slow, and itself a second source of false
-// verdicts. Provenance does not need a model: a material deliverable claim in a
-// completion must cite WHERE it came from (a file path, a tool call, a probe
-// artifact, an idea #, or a build/test command) within one line. This scan is
-// deterministic, zero latency, and has no single point of failure. It is the
-// structural successor to the LLM judge for the deliverable-claim class.
-function claimProvenanceScan(result_text: string): string[] {
-  const findings: string[] = [];
-  const lines = result_text.split("\n");
-  // Strip the pickup block + rule-91 boilerplate: it contains REQUIRED
-  // instruction-shaped text ("Pick up task...", "When done...") that is not a
-  // factual claim and must never false-fire this gate.
-  const dividerIdx = lines.findIndex((l) => /^[\u2550]{20,}$/.test(l.trim()));
-  const bodyLines = dividerIdx >= 0 ? lines.slice(0, dividerIdx) : lines;
-  const claimVerb = /\b(?:built|created|added|implemented|fixed|patched|deployed|shipped|stamped|wired|hooked|registered|verified|confirmed|repaired|amended|rebuilt|reconciled|released|tested)\b/i;
-  const evidence = /\(\s*(?:verified|probed|measured|confirmed)\s*:|\bHTTP\s*\d{3}\b|\b(?:SELECT|INSERT|UPDATE|DELETE|CREATE TABLE|ALTER TABLE)\b|\b(?:build|src|routes|lib|mcp-servers)\/|\b\.(?:ts|js|php|sql|sh|md|json)\b|\b#\d{3,}\s*\[|\b(?:npm run build|tsc --?|node build|curl)\b|\b\d+\s*(?:row|rows|line|lines|char|bytes|tokens|ms)\b/i;
-  const inferenceLabel = /\((?:inference|stale)\s*:|\bunverified\b|\b(?:I|we)\s+do\s+not\s+know\b|\bcannot\s+verify\b|\bUNKNOWN\b/i;
-  for (let i = 0; i < bodyLines.length; i++) {
-    const line = bodyLines[i];
-    const t = line.trim();
-    if (!t) continue;
-    if (!claimVerb.test(t)) continue;
-    if (/^(?:pick up|when done|open threads|reference ids|where we left off|next:|todo:)/i.test(t)) continue;
-    const ctx = (bodyLines[i - 1] || "") + "\n" + line + "\n" + (bodyLines[i + 1] || "");
-    if (evidence.test(ctx) || inferenceLabel.test(ctx)) continue;
-    const clipped = t.slice(0, 96);
-    if (!findings.includes(clipped)) findings.push(clipped);
-  }
-  return findings;
-}
+/clinerules-mcp/build/index.js
 
-// ─── #28961: HUMAN-CORRECTION METER ─────────────────────────────────────────
-// Ruben 2026-08-30: "how many times have you told me today that some claim you
-// made was false." Every Ruben correction of an agent claim is logged into a
-// queryable ledger so the false-claim rate is a NUMBER, not an anecdote. Written
-// to local SQLite (works even when WOPR is down) and exposed via two tools:
-// record (write) + meter (read/rollup).
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
 
-server.tool(
-  "clinerules_record_human_correction",
-  "HUMAN-CORRECTION METER WRITE (idea #28961). Log one Ruben correction of an agent claim into the queryable human_corrections ledger. Call this EVERY time Ruben says a claim you made was false, wrong, or unsupported. Persisted locally so the false-claim rate is measurable, never anecdotal.",
-  {
-    task_id: z.string().option
+Pick up task 1788156466825 — VERITAS claim-falsity investigation (both ideas deployed).
+
+Where we left off (verified 08-31 06:12 PT):
+- #28958 [deployed] deterministic claim-provenance gate built and wired into clinerules_validate_completion as R28958_UNSUPPORTED_CLAIM, probe-verified.
+- #28961 [deployed] human-correction meter built (human_corrections table plus record and meter MCP tools), probe-verified live.
+- npm run build exit 0; launchd service com.emsu.mcp-clinerules restarted; tools/list serves all three tools.
+- orchestrator_ideas status deployed for both; reconcile_ideas returned deployed for both.
+
+Open threads to drive next:
+None. All work completed this session. The two gates that blocked the prior window ship are now deployed, probed, and stamped.
+
+Reference IDs:
+- Ticket: 1788156466825 (VERITAS claim-falsity investigation)
+- Ideas filed: #28958 [deployed], #28961 [deployed]
+- Files touched: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts and /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
 ```
 
-### `1788160972127` — 8/31/2026, 4:07:35 AM PT — 59 turns
+### `1788160972127` — 8/31/2026, 8:21:15 AM PT — 77 turns
 
 **Original task:**
 
@@ -173,7 +149,7 @@ Bring back up Julia/Claudia Qwen 3.8 27B to serving
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788161048426` — 8/31/2026, 3:17:03 AM PT — 35 turns
+### `1788161048426` — 8/31/2026, 6:55:28 AM PT — 42 turns
 
 **Original task:**
 

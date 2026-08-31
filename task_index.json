@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-31T11:18:29.493Z",
+ "generated_at": "2026-08-31T15:40:03.085Z",
  "counts": {
-  "parsed": 6,
-  "reused": 993,
+  "parsed": 3,
+  "reused": 996,
   "failed": 0,
   "total": 999
  },
@@ -148036,11 +148036,11 @@
   },
   "1788160972127": {
    "task_id": "1788160972127",
-   "mtime": 1788174455990,
+   "mtime": 1788189675235,
    "created_at": "2026-08-31T07:22:52.127Z",
-   "last_modified": "2026-08-31T11:07:35.990Z",
-   "size_kb": 634,
-   "turn_count": 59,
+   "last_modified": "2026-08-31T15:21:15.235Z",
+   "size_kb": 699,
+   "turn_count": 77,
    "title": "#Julia/Claudia Qwen 3.8 27B\n\nBring back up Julia/Claudia Qwen 3.8 27B to serving",
    "pickup_prompt": null,
    "ideas": {
@@ -148505,11 +148505,11 @@
   },
   "1788161048426": {
    "task_id": "1788161048426",
-   "mtime": 1788171423741,
+   "mtime": 1788184528547,
    "created_at": "2026-08-31T07:24:08.426Z",
-   "last_modified": "2026-08-31T10:17:03.741Z",
-   "size_kb": 607,
-   "turn_count": 35,
+   "last_modified": "2026-08-31T13:55:28.547Z",
+   "size_kb": 677,
+   "turn_count": 42,
    "title": "#Joshua Qwen 3.8 27B\n\nBring back up Joshua Qwen 3.8 27B to serving",
    "pickup_prompt": null,
    "ideas": {
@@ -148888,13 +148888,13 @@
   },
   "1788161107343": {
    "task_id": "1788161107343",
-   "mtime": 1788175098916,
+   "mtime": 1788190461769,
    "created_at": "2026-08-31T07:25:07.343Z",
-   "last_modified": "2026-08-31T11:18:18.916Z",
-   "size_kb": 770,
-   "turn_count": 53,
+   "last_modified": "2026-08-31T15:34:21.769Z",
+   "size_kb": 1136,
+   "turn_count": 110,
    "title": "Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 23:50 crash).\n\nWhere left off (verified 08-30 23:34 PT):\n- Original ask: \"Think about how many times you've told me today that some claim you made was false. How concerning is that? There's something serious...\" - the claim-provenance / truth-judge hardening thread.\n- Window was in its final rule-91 gate loop. A prior completion BLOCKED with SELF_CONTRADICTING_DISPOSITION on #28958 [proposed] and #28961 [proposed], then a re-run returned \"ALL PASSED\" with this IDENTITY ECHO:\n  - #28958 [proposed] - \"Deterministic claim-provenance gate replaces removed LLM truth judge\"\n  - #28961 [proposed] - \"Human-corre",
-   "pickup_prompt": "224): Validates that a pending attempt_completion result complies with rule 91 (PICKUP PROMPT block required). Call BEFORE attempt_completion. Returns pass/fail with specific violations — if pass=false, fix the listed failures before shipping.\",\n=======\n// ─── #28958: DETERMINISTIC CLAIM-PROVENANCE GATE (replaces the LLM truth judge) ─\n// Ruben 2026-08-30: \"how many times have you told me today that some claim you\n// made was false.\" The removed LLM truth judge (clinerules_truth_judge) POSTed\n// to api_fleet_inventory.php action=truth_judge and classified claims via a\n// stronger model — expensive, slow, and itself a second source of false\n// verdicts. Provenance does not need a model: a material deliverable claim in a\n// completion must cite WHERE it came from (a file path, a tool call, a probe\n// artifact, an idea #, or a build/test command) within one line. This scan is\n// deterministic, zero latency, and has no single point of failure. It is the\n// structural successor to the LLM judge for the deliverable-claim class.\nfunction claimProvenanceScan(result_text: string): string[] {\n  const findings: string[] = [];\n  const lines = result_text.split(\"\\n\");\n  // Strip the pickup block + rule-91 boilerplate: it contains REQUIRED\n  // instruction-shaped text (\"Pick up task...\", \"When done...\") that is not a\n  // factual claim and must never false-fire this gate.\n  const dividerIdx = lines.findIndex((l) => /^[\\u2550]{20,}$/.test(l.trim()));\n  const bodyLines = dividerIdx >= 0 ? lines.slice(0, dividerIdx) : lines;\n  const claimVerb = /\\b(?:built|created|added|implemented|fixed|patched|deployed|shipped|stamped|wired|hooked|registered|verified|confirmed|repaired|amended|rebuilt|reconciled|released|tested)\\b/i;\n  const evidence = /\\(\\s*(?:verified|probed|measured|confirmed)\\s*:|\\bHTTP\\s*\\d{3}\\b|\\b(?:SELECT|INSERT|UPDATE|DELETE|CREATE TABLE|ALTER TABLE)\\b|\\b(?:build|src|routes|lib|mcp-servers)\\/|\\b\\.(?:ts|js|php|sql|sh|md|json)\\b|\\b#\\d{3,}\\s*\\[|\\b(?:npm run build|tsc --?|node build|curl)\\b|\\b\\d+\\s*(?:row|rows|line|lines|char|bytes|tokens|ms)\\b/i;\n  const inferenceLabel = /\\((?:inference|stale)\\s*:|\\bunverified\\b|\\b(?:I|we)\\s+do\\s+not\\s+know\\b|\\bcannot\\s+verify\\b|\\bUNKNOWN\\b/i;\n  for (let i = 0; i < bodyLines.length; i++) {\n    const line = bodyLines[i];\n    const t = line.trim();\n    if (!t) continue;\n    if (!claimVerb.test(t)) continue;\n    if (/^(?:pick up|when done|open threads|reference ids|where we left off|next:|todo:)/i.test(t)) continue;\n    const ctx = (bodyLines[i - 1] || \"\") + \"\\n\" + line + \"\\n\" + (bodyLines[i + 1] || \"\");\n    if (evidence.test(ctx) || inferenceLabel.test(ctx)) continue;\n    const clipped = t.slice(0, 96);\n    if (!findings.includes(clipped)) findings.push(clipped);\n  }\n  return findings;\n}\n\n// ─── #28961: HUMAN-CORRECTION METER ─────────────────────────────────────────\n// Ruben 2026-08-30: \"how many times have you told me today that some claim you\n// made was false.\" Every Ruben correction of an agent claim is logged into a\n// queryable ledger so the false-claim rate is a NUMBER, not an anecdote. Written\n// to local SQLite (works even when WOPR is down) and exposed via two tools:\n// record (write) + meter (read/rollup).\n\nserver.tool(\n  \"clinerules_record_human_correction\",\n  \"HUMAN-CORRECTION METER WRITE (idea #28961). Log one Ruben correction of an agent claim into the queryable human_corrections ledger. Call this EVERY time Ruben says a claim you made was false, wrong, or unsupported. Persisted locally so the false-claim rate is measurable, never anecdotal.\",\n  {\n    task_id: z.string().option",
+   "pickup_prompt": "/clinerules-mcp/build/index.js\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task 1788156466825 — VERITAS claim-falsity investigation (both ideas deployed).\n\nWhere we left off (verified 08-31 06:12 PT):\n- #28958 [deployed] deterministic claim-provenance gate built and wired into clinerules_validate_completion as R28958_UNSUPPORTED_CLAIM, probe-verified.\n- #28961 [deployed] human-correction meter built (human_corrections table plus record and meter MCP tools), probe-verified live.\n- npm run build exit 0; launchd service com.emsu.mcp-clinerules restarted; tools/list serves all three tools.\n- orchestrator_ideas status deployed for both; reconcile_ideas returned deployed for both.\n\nOpen threads to drive next:\nNone. All work completed this session. The two gates that blocked the prior window ship are now deployed, probed, and stamped.\n\nReference IDs:\n- Ticket: 1788156466825 (VERITAS claim-falsity investigation)\n- Ideas filed: #28958 [deployed], #28961 [deployed]\n- Files touched: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts and /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "1993": "deployed",
     "2109": "deployed",
@@ -148927,6 +148927,7 @@
     "27652": null,
     "28958": "proposed",
     "28961": "proposed",
+    "178815": null,
     "0000": null
    }
   },

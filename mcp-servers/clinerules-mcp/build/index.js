@@ -278,6 +278,25 @@ function initSchema(db) {
       latest_lesson TEXT,
       updated_at TEXT
     );
+
+    -- #28961 (2026-08-30): HUMAN-CORRECTION METER. Ruben's original thread:
+    -- "how many times have you told me today that some claim you made was false."
+    -- Every correction Ruben makes of an agent claim is logged here so the false-
+    -- claim rate is a queryable number, not an anecdote. One row per correction.
+    -- Persisted locally in this MCP's SQLite so it works even when WOPR is down.
+    CREATE TABLE IF NOT EXISTS human_corrections (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      task_id TEXT,
+      rule_id TEXT,
+      surface TEXT DEFAULT 'cline',
+      claim_text TEXT,
+      correction_text TEXT,
+      corrected_by TEXT DEFAULT 'ruben',
+      created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+    );
+    CREATE INDEX IF NOT EXISTS idx_human_corrections_task ON human_corrections(task_id);
+    CREATE INDEX IF NOT EXISTS idx_human_corrections_rule ON human_corrections(rule_id);
+    CREATE INDEX IF NOT EXISTS idx_human_corrections_time ON human_corrections(created_at);
   `);
 }
 function reindex(db, verbose = false) {
@@ -1150,6 +1169,111 @@ server.tool("get_rule91_template", "FIX 2 of #19173. Returns the EXACT rule-91 P
             }],
     };
 });
+// ─── #28958: DETERMINISTIC CLAIM-PROVENANCE GATE (replaces the LLM truth judge) ─
+// Ruben 2026-08-30: "how many times have you told me today that some claim you
+// made was false." The removed LLM truth judge (clinerules_truth_judge) POSTed
+// to api_fleet_inventory.php action=truth_judge and classified claims via a
+// stronger model — expensive, slow, and itself a second source of false
+// verdicts. Provenance does not need a model: a material deliverable claim in a
+// completion must cite WHERE it came from (a file path, a tool call, a probe
+// artifact, an idea #, or a build/test command) within one line. This scan is
+// deterministic, zero latency, and has no single point of failure. It is the
+// structural successor to the LLM judge for the deliverable-claim class.
+function claimProvenanceScan(result_text) {
+    const findings = [];
+    const lines = result_text.split("\n");
+    // Strip the pickup block + rule-91 boilerplate: it contains REQUIRED
+    // instruction-shaped text ("Pick up task...", "When done...") that is not a
+    // factual claim and must never false-fire this gate.
+    const dividerIdx = lines.findIndex((l) => /^[\u2550]{20,}$/.test(l.trim()));
+    const bodyLines = dividerIdx >= 0 ? lines.slice(0, dividerIdx) : lines;
+    const claimVerb = /\b(?:built|created|added|implemented|fixed|patched|deployed|shipped|stamped|wired|hooked|registered|verified|confirmed|repaired|amended|rebuilt|reconciled|released|tested)\b/i;
+    const evidence = /\(\s*(?:verified|probed|measured|confirmed)\s*:|\bHTTP\s*\d{3}\b|\b(?:SELECT|INSERT|UPDATE|DELETE|CREATE TABLE|ALTER TABLE)\b|\b(?:build|src|routes|lib|mcp-servers)\/|\b\.(?:ts|js|php|sql|sh|md|json)\b|\b#\d{3,}\s*\[|\b(?:npm run build|tsc --?|node build|curl)\b|\b\d+\s*(?:row|rows|line|lines|char|bytes|tokens|ms)\b/i;
+    const inferenceLabel = /\((?:inference|stale)\s*:|\bunverified\b|\b(?:I|we)\s+do\s+not\s+know\b|\bcannot\s+verify\b|\bUNKNOWN\b/i;
+    for (let i = 0; i < bodyLines.length; i++) {
+        const line = bodyLines[i];
+        const t = line.trim();
+        if (!t)
+            continue;
+        if (!claimVerb.test(t))
+            continue;
+        if (/^(?:pick up|when done|open threads|reference ids|where we left off|next:|todo:)/i.test(t))
+            continue;
+        const ctx = (bodyLines[i - 1] || "") + "\n" + line + "\n" + (bodyLines[i + 1] || "");
+        if (evidence.test(ctx) || inferenceLabel.test(ctx))
+            continue;
+        const clipped = t.slice(0, 96);
+        if (!findings.includes(clipped))
+            findings.push(clipped);
+    }
+    return findings;
+}
+// ─── #28961: HUMAN-CORRECTION METER ─────────────────────────────────────────
+// Ruben 2026-08-30: "how many times have you told me today that some claim you
+// made was false." Every Ruben correction of an agent claim is logged into a
+// queryable ledger so the false-claim rate is a NUMBER, not an anecdote. Written
+// to local SQLite (works even when WOPR is down) and exposed via two tools:
+// record (write) + meter (read/rollup).
+server.tool("clinerules_record_human_correction", "HUMAN-CORRECTION METER WRITE (idea #28961). Log one Ruben correction of an agent claim into the queryable human_corrections ledger. Call this EVERY time Ruben says a claim you made was false, wrong, or unsupported. Persisted locally so the false-claim rate is measurable, never anecdotal.", {
+    task_id: zod_1.z.string().optional().describe("Cline task id where the false claim was made."),
+    claim_text: zod_1.z.string().describe("The (false) claim the agent made, verbatim or closely paraphrased."),
+    correction_text: zod_1.z.string().describe("What Ruben said to correct it, verbatim or closely paraphrased."),
+    rule_id: zod_1.z.string().optional().describe("The causal rule violated, if identifiable (e.g. '317', '321', '323')."),
+    surface: zod_1.z.string().optional().describe("Calling surface (cline, cfa_email, cfa_chat, executor...). Default cline."),
+}, async ({ task_id, claim_text, correction_text, rule_id, surface }) => {
+    const row = db.prepare(`INSERT INTO human_corrections (task_id, rule_id, surface, claim_text, correction_text) VALUES (?,?,?,?,?)`).run(task_id || null, rule_id || null, surface || "cline", claim_text.slice(0, 4000), correction_text.slice(0, 4000));
+    const id = Number(row.lastInsertRowid);
+    return {
+        content: [{
+                type: "text",
+                text: `✓ Logged human correction #${id} (idea #28961).\n` +
+                    `  claim: ${String(claim_text).slice(0, 200)}\n` +
+                    `  correction: ${String(correction_text).slice(0, 200)}\n` +
+                    `Run clinerules_correction_meter to see the running false-claim rate.`,
+            }],
+    };
+});
+server.tool("clinerules_correction_meter", "HUMAN-CORRECTION METER READ (idea #28961). Returns the queryable false-claim rollup: total corrections in the window, today's count, per-rule and per-surface breakdowns, and the most recent corrections. This is the number that answers 'how many times today did an agent claim turn out false?'", {
+    days: zod_1.z.number().int().min(1).max(90).default(7).describe("Rollup window in days (default 7)."),
+}, async ({ days }) => {
+    try {
+        const windowTotal = db.prepare(`SELECT COUNT(*) AS n FROM human_corrections WHERE created_at >= datetime('now', ?)`).get(`-${days} day`);
+        const today = db.prepare(`SELECT COUNT(*) AS n FROM human_corrections WHERE created_at >= datetime('now', 'start of day')`).get();
+        const byRule = db.prepare(`
+        SELECT COALESCE(rule_id, '(none)') AS k, COUNT(*) AS n
+        FROM human_corrections WHERE created_at >= datetime('now', ?)
+        GROUP BY k ORDER BY n DESC
+      `).all(`-${days} day`);
+        const bySurface = db.prepare(`
+        SELECT COALESCE(surface, '(none)') AS k, COUNT(*) AS n
+        FROM human_corrections WHERE created_at >= datetime('now', ?)
+        GROUP BY k ORDER BY n DESC
+      `).all(`-${days} day`);
+        const recent = db.prepare(`
+        SELECT id, task_id, claim_text, correction_text, created_at
+        FROM human_corrections ORDER BY id DESC LIMIT 8
+      `).all();
+        const lines = [
+            `HUMAN-CORRECTION METER (idea #28961) — trailing ${days}d`,
+            `Corrections today: ${today.n} · in window: ${windowTotal.n}`,
+            `By rule: ${byRule.length ? byRule.map((r) => `${r.k}(${r.n})`).join(", ") : "(none)"}`,
+            `By surface: ${bySurface.length ? bySurface.map((s) => `${s.k}(${s.n})`).join(", ") : "(none)"}`,
+            `Most recent:`,
+        ];
+        if (recent.length) {
+            for (const r of recent) {
+                lines.push(`  #${r.id} ${r.created_at} task=${r.task_id || "?"} claim="${String(r.claim_text).slice(0, 80)}" → "${String(r.correction_text).slice(0, 80)}"`);
+            }
+        }
+        else {
+            lines.push("  (no corrections logged yet)");
+        }
+        return { content: [{ type: "text", text: lines.join("\n") }] };
+    }
+    catch (e) {
+        return { content: [{ type: "text", text: `CORRECTION METER ERROR: ${e.message}` }] };
+    }
+});
 server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224): Validates that a pending attempt_completion result complies with rule 91 (PICKUP PROMPT block required). Call BEFORE attempt_completion. Returns pass/fail with specific violations — if pass=false, fix the listed failures before shipping.", {
     result_text: zod_1.z.string().describe("The result text you plan to pass to attempt_completion."),
     task_id: zod_1.z.string().optional().describe("Optional Cline task ID for audit telemetry."),
@@ -1500,6 +1624,24 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
             failures.push(`R323_FAKE_EVIDENCE: ${fake.length} '(verified: ...)' marker(s) contain no real artifact (no tool name, HTTP code, number+unit, timestamp, table, or quoted output): ` +
                 fake.map((s) => `"${s}"`).join("; ") + `. ` +
                 `Rule 323 obligation 4: verification must be REAL. Name the tool you ran THIS session and what it returned. If you did not run a probe, you do not have a verification — run it now or downgrade the claim to INFERENCE/UNKNOWN.`);
+        }
+    }
+    // ── #28958: CLAIM-PROVENANCE GATE (deterministic, replaces LLM truth judge) ──
+    // Deterministic zero-latency successor to clinerules_truth_judge for the
+    // deliverable-claim class (idea #28958). Fires when a body line makes a
+    // deliverable claim (built/fixed/deployed/verified/...) with no provenance
+    // evidence on the line or its immediate neighbours. No model, no network,
+    // no single point of failure — it only checks "did you cite WHERE this came
+    // from," which is the claim-provenance invariant Ruben's falsity thread
+    // actually needs.
+    {
+        const unsupported = claimProvenanceScan(result_text);
+        if (unsupported.length > 0) {
+            failures.push(`R28958_UNSUPPORTED_CLAIM: ${unsupported.length} deliverable claim(s) carry no provenance evidence (no file path, tool name, probe artifact, idea #, or build/test command): ` +
+                unsupported.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 323 truth protocol (idea #28958): a material deliverable claim must cite WHERE it came from on the same line — ` +
+                `a file path, a tool you ran, a '(verified: ...)' probe marker, an idea #NNNN [disposition], or a build/test command. ` +
+                `If it is an inference, label it '(inference: ...)'. If you cannot support it, write UNKNOWN or drop the claim.`);
         }
     }
     // ── RULE 317 / idea #25888: REVERSAL LOG (completion-time, zero per-turn overhead) ──

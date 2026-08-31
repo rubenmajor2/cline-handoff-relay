@@ -577,3 +577,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Adds clause 13: before declaring a data-signal table dead or empty, verify (a) the CONSUMER's input contract — its function signature and where each argument comes from — and (b) the PRODUCER's WRITE-SIDE target table plus row-id source. This window declared orchestrator_action_log.failure_category dead (19 stale rows, May only) and marked the action learner blocked, without reading that orchestratorActionRecipeConsume() receives failure_category as a PARAMETER the executor computes live at call time, not from that column. The real defect was the executor writing failure_category to orchestrator_execution_log using the action_log insert id (cross-table id reuse), leaving the consumer's real signal table empty. A php -l pass and a 'harvested 0' run are not proof a loop is dead — probe the contract and the write target first.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 01:48 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: insufficient probe
+- Trigger pattern: Declaring a public-endpoint fix verified from the server's own allowlisted IP/LAN DNS view instead of the consumer's public egress path
+- Reversal note: Amends clause 2 (acquisition gate) + golden rule: claim scope must equal probe scope — a curl resolved through split-horizon/LAN DNS (or run from the allowlisted server IP) is NOT evidence that a public cloud consumer (Vapi) can reach the endpoint. When the claim is 'Vapi can reach X', the probe MUST force the PUBLIC egress view (e.g. curl --resolve to the public A record or an external resolver), because orange-cloud CF-fronted subdomains return 403 to non-allowlisted consumers while the origin curls fine. First fix of task claimed FIXED after server-side curls, call still failed with providerfault-custom-llm-llm-failed; corrected by probing via public A record 172.116.115.101 (200 + stream chunk).
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 01:57 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788062963405
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: Amends clause 2 (acquisition gate): I reported '17 Vapi concurrency-limit errors causing silent callback failures' after reading only the failure_category label I had just created. Reading the action_details JSON showed 14 of the 17 were vapi_status=201 with concurrencyBlocked:false and remainingConcurrentCalls:9 — SUCCESSFUL calls — and the 3 real failures were vapi_status=400 'Numbers Bought On Vapi Have A Daily Outbound Call Limit', a different cause entirely. Durable rule: an HTTP 2xx in a stored provider response means the call SUCCEEDED regardless of what other fields (subscriptionLimits, quotas, warnings) appear alongside it; a provider envelope that merely MENTIONS a limit is not a limit error. Before reporting any provider-failure count, group by the actual status code, never by a category label you just assigned.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -67,3 +67,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: MISLEADING LEGACY ALIAS NAMES ARE BANNED for routing (Ruben directive 2026-08-30). A litellm model_name that names a RETIRED model (e.g. 'minicpm-v' secretly serving qwen3.8-27b, 'julia-235b' serving deepseek) poisons every future agent's diagnosis — this was a root cause of the 2026-08-30 session's repeated misdiagnoses. Callers MUST route through the TRUE model-name lane (e.g. julia-qwen38-27b), and when a model is retired its alias blocks are REMOVED, not silently repointed. If a transitional alias is unavoidable it must carry the true model in its name within one window. Applied: 7 PHP callers repointed minicpm-v -> julia-qwen38-27b; minicpm-v alias blocks slated for removal after 7d zero picks.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 19:37 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788156466825
+- RCA bucket: insufficient probe
+- Trigger pattern: agent declares service/model down or capability-limited from a reverse-tunnel port probe, conflating probe scope with claim scope
+- Reversal note: Julia/Claudia false-down + text-only claim from a WOPR-side tunnel-port curl (human_corrections #3). The TUNNEL vs MODEL discipline in rule 322 is now MECHANICALLY enforced: R322_TUNNEL_VERDICT gate in clinerules_validate_completion blocks any DOWN/dead/text-only/no-vision verdict about a host/model/service whose only nearby evidence is a localhost/tunnel-port probe (127.0.0.1:PORT). Legal outs: cite an on-box artifact (ssh/systemctl/ps/nvidia-smi/decode probe) or scope the claim to the tunnel (TUNNEL-UNREACHABLE). Positive control (the exact Julia/Claudia claim) BLOCKS; negative control (tunnel-scoped verdict + on-box evidence) PASSES.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

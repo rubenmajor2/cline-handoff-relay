@@ -1710,6 +1710,44 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                 `Rule 323 obligation 4: verification must be REAL. Name the tool you ran THIS session and what it returned. If you did not run a probe, you do not have a verification — run it now or downgrade the claim to INFERENCE/UNKNOWN.`);
         }
     }
+    // ── R322_TUNNEL_VERDICT: probe-scope conflation gate (2026-08-31) ────────
+    // Source incident (Ruben, human_corrections row #3): a window declared
+    // "Julia/Claudia tunnels down; local lanes text-only, will fail over to
+    // OpenRouter" based on a WOPR-side curl of 127.0.0.1:11513 returning empty.
+    // That probe tested the reverse TUNNEL; the only legal verdict from it is
+    // TUNNEL-UNREACHABLE (rule 322 / GLM53_RING_STATE_TRACKER law). The service
+    // was fine and had live-proven native vision. The claim was structurally
+    // wrong: probe scope (tunnel port) did not equal claim scope (service/model
+    // capability). This gate makes the conflation mechanical: a DOWN/dead/
+    // text-only/no-vision verdict about a host/model/service whose nearby cited
+    // evidence is ONLY a localhost/tunnel-port probe (127.0.0.1:PORT / localhost:
+    // PORT) BLOCKS, unless the line also carries an on-box artifact (ssh to the
+    // host, systemctl/ps on the box, or an explicit TUNNEL-scoped verdict word).
+    {
+        const downVerdict = /\b(?:is|are|was|were|remains?)\s+(?:\w+\s+){0,2}?(?:down|dead|offline|unreachable|text-?only|not\s+serving|cannot\s+see\s+images?|no\s+vision)\b|\b(?:tunnels?|lanes?)\s+(?:are\s+|is\s+)?down\b/i;
+        const serviceSubject = /\b(?:julia|claudia|cesar|cato|artemis|wopr|maximus|bigmac|joshua|host|service|model|lane|box|vllm|engine|qwen|glm|1[27]0b|235b)\b/i;
+        const tunnelOnlyEvidence = /\b(?:127\.0\.0\.1|localhost):\d{4,5}\b/i;
+        const onBoxEvidence = /\bssh\s+\S*(?:julia|claudia|cesar|cato|artemis|maximus|bigmac|joshua|@)\b|\bsystemctl\b|\bps\s+aux\b|\bnvidia-smi\b|\bon-box\b|\bfrom\s+the\s+(?:box|host)\b|\btunnel[- ]?(?:unreachable|verdict|flapping|scoped)\b|\bTUNNEL\b/i;
+        const tunnelVerdicts = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            if (!serviceSubject.test(line) || !downVerdict.test(line))
+                continue;
+            const ctx = (lines[i - 1] || "") + "\n" + line + "\n" + (lines[i + 1] || "");
+            if (tunnelOnlyEvidence.test(ctx) && !onBoxEvidence.test(ctx)) {
+                const clipped = line.trim().slice(0, 96);
+                if (!tunnelVerdicts.includes(clipped))
+                    tunnelVerdicts.push(clipped);
+            }
+        }
+        if (tunnelVerdicts.length > 0) {
+            failures.push(`R322_TUNNEL_VERDICT: ${tunnelVerdicts.length} line(s) declare a host/model/service DOWN or capability-limited while the only nearby evidence is a localhost/tunnel-port probe: ` +
+                tunnelVerdicts.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Rule 322: a WOPR-side probe of a reverse-tunnel port tests the TUNNEL; the only legal verdict from it is TUNNEL-UNREACHABLE. ` +
+                `To declare the SERVICE down or the MODEL capability-limited, probe ON THE BOX (ssh + systemctl/ps/nvidia-smi or a decode probe) and cite that, ` +
+                `or reword the claim to the tunnel scope ("tunnel to X unreachable from WOPR"). Probe scope must equal claim scope (rule 317 golden rule).`);
+        }
+    }
     // ── #28958: CLAIM-PROVENANCE GATE (deterministic, replaces LLM truth judge) ──
     // Deterministic zero-latency successor to clinerules_truth_judge for the
     // deliverable-claim class (idea #28958). Fires when a body line makes a

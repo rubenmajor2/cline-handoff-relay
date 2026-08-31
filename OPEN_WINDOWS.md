@@ -6,19 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 12:19:41 PM PT | window: last 72h | 80 tasks | index total 1008 (parsed 8, cached 1000)
+Generated: 8/31/2026, 1:19:42 PM PT | window: last 72h | 81 tasks | index total 1009 (parsed 5, cached 1004)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788203722814` | 8/31/2026, 12:19:31 PM | 45 | 63KB | #CAPCE / Catalog emsuniversity.com homepage |
-| `1788161048426` | 8/31/2026, 12:18:52 PM | 185 | 1312KB | #Joshua Qwen 3.8 27B |
-| `1788201341551` | 8/31/2026, 12:15:28 PM | 74 | 329KB | #MDM/Nero/Maximu |
-| `1788200522716` | 8/31/2026, 12:15:27 PM | 287 | 679KB | #TDSHS |
-| `1788196060306` | 8/31/2026, 12:12:37 PM | 84 | 320KB | #Argus Improvmeents |
+| `1788161048426` | 8/31/2026, 1:19:39 PM | 240 | 1508KB | #Joshua Qwen 3.8 27B |
+| `1788205619819` | 8/31/2026, 1:19:35 PM | 99 | 381KB | #Postmark Issue |
+| `1788196060306` | 8/31/2026, 1:19:25 PM | 147 | 550KB | #Argus Improvmeents |
+| `1788201341551` | 8/31/2026, 1:19:21 PM | 80 | 363KB | #MDM/Nero/Maximu |
+| `1788200522716` | 8/31/2026, 12:54:52 PM | 339 | 8916KB | #TDSHS |
+| `1788161107343` | 8/31/2026, 12:46:19 PM | 373 | 2744KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
+| `1788203722814` | 8/31/2026, 12:22:00 PM | 56 | 76KB | #CAPCE / Catalog emsuniversity.com homepage |
 | `1788161302475` | 8/31/2026, 12:11:43 PM | 364 | 1396KB | #Grievances |
 | `1788195482100` | 8/31/2026, 12:00:27 PM | 259 | 1271KB | #Nero Qwen 3.8 27B |
 | `1788195724924` | 8/31/2026, 11:56:10 AM | 154 | 671KB | #EMT Skills Slowness |
-| `1788161107343` | 8/31/2026, 11:30:56 AM | 349 | 2463KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
 | `1788195954623` | 8/31/2026, 11:28:37 AM | 190 | 934KB | On the MDM Access page, I noticed that my SSH access is not root. They all need to be root |
 | `1788197224029` | 8/31/2026, 11:21:01 AM | 277 | 758KB | #TDSHS |
 | `1788195017985` | 8/31/2026, 10:23:03 AM | 267 | 549KB | #TDSHS |
@@ -95,23 +96,7 @@ Generated: 8/31/2026, 12:19:41 PM PT | window: last 72h | 80 tasks | index total
 
 ## Per-window detail
 
-### `1788203722814` — 8/31/2026, 12:19:31 PM PT — 45 turns
-
-**Original task:**
-
-```
-#CAPCE / Catalog emsuniversity.com homepage
-
-at the emsuniversity.com homepage I am seeing references still to CAPCE under old catalogs that need immediate removal/replacement. 
-
-i think this is just for AZ. The one going to this link: https://emsuniversity.com/arizonacatalog.pdf 
-
-Updated one is here on downloads folder: EMS Universal Education Catalog CA (Current)
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788161048426` — 8/31/2026, 12:18:52 PM PT — 185 turns
+### `1788161048426` — 8/31/2026, 1:19:39 PM PT — 240 turns
 
 **Original task:**
 
@@ -121,11 +106,107 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Bring back up Joshua Qwen 3.8 27B to serving
 ```
 
-**Ideas referenced:** #11316, #12364, #1242, #12477, #12618, #12824, #12872, #12878, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+**Ideas referenced:** #10756, #11316, #11847, #12364, #1242, #12477, #12612, #12618, #12680, #12689, #12824, #12872, #12878, #13437, #13490, #13842, #13874, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788201341551` — 8/31/2026, 12:15:28 PM PT — 74 turns
+### `1788205619819` — 8/31/2026, 1:19:35 PM PT — 99 turns
+
+**Original task:**
+
+```
+#Postmark Issue
+
+We recently had an issue where postmarked disabled sending a web hooks and you resolved it. This issue seems to have recurred again. We need a durable solution. Check the recent emails received on this. Also make sure you were looking at the handoff document which references the actual fixes so that you save time: 
+
+https://emsuniversity.com/emtskills/externship/campaign_tracking_webhook.php and https://emsuniversity.com/emtskills/reviews/webhooks/postmark_outreach_webhook.php
+```
+
+**Ideas referenced:** #1242, #178806, #21582, #2670, #2672, #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29060 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+ts the silent-kill regression.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Postmark webhook auto-disable recurrence fix (idea #29060).
+
+Where we left off (verified 2026-08-31 13:19 PT):
+- Autoheal cron was silently dead since 2026-08-29 01:07: log owned emsuserver, www-data `>>` redirect Permission denied → bash aborted before PHP ran. Fixed: chown log to www-data:www-data, root cron `@hourly chown ... || true # postmark_webhook_autoheal_chown` enforcer added.
+- Detection was blind to Postmark Status-strip: rewrote `/var/www/emtskills/cron/cron_postmark_webhook_autoheal.php` with persistent baseline `/var/www/emtskills/storage/postmark_webhook_baseline.json` (drift vs baseline, Status restored on re-enable). php -l clean, FPM reloaded, backup retained.
+- Live test passed: simulated Status-stripped disable on webhook 23448846 → autoheal re-enabled Delivery with Status restored. Both named endpoints HTTP 200, all 8 webhooks healthy, `check_postmark_webhook_health` verdict HEALTHY.
+- Idea #29060 [deployed] filed. HANDOFF_NOTES.md updated with full RCA + fixes.
+
+Open threads to drive next:
+None — all work completed this session.
+
+Reference IDs:
+- Ideas filed: #29060 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_postmark_webhook_autoheal.php, /var/www/emtskills/storage/postmark_webhook_baseline.json, /var/log/emtskills/cron_postmark_webhook_autoheal.log, HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+```
+
+### `1788196060306` — 8/31/2026, 1:19:25 PM PT — 147 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #12611, #12612, #14532, #166534, #23428, #23468, #23941, #23982, #24941, #24990, #25313, #25466, #25768, #28155, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648
+
+**Last PICKUP PROMPT:**
+
+```
+int, deploy, and verify live).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Improvements (P10 tickets approved; #29055 design consult answered).
+
+Where we left off (verified 2026-08-31 12:52 PT):
+- #29015 [deployed] — dispatcher 45-min fresh-first ORDER BY deployed + verified earlier this session.
+- #29014 [deployed] — P10 browser-QA stamped complete; FAILs filed as tickets.
+- #29049 [proposed] — double-logging dedup CONFIRMED via live probe: argus_audit_log rows 12588/12589 + 12611/12612 same-second task_worker_run + terminal_query pairs; fix = suppress the worker-internal terminal audit write (cron_argus_task_worker.php:688 / alltastic_api.php:1145) so one task = one row.
+- #29050 [proposed] — Activity facets + writes-only default + burst grouping; BLOCKED on #29049 landing first (bursts would double-count).
+- #29051 [proposed], #29052 [proposed], #29053 [proposed] — Payments merge; console polish batch; queue FIFO/relabel. Not started.
+- #29055 [proposed] — Complaint Response Hub design consult answered + recorded in implementation_notes: NO blocking ask-type question; optional intake field (reuse regulator_response.php pattern) + post-draft re-skin picker (same verified facts re-rendered as Regulator/BBB/Chargeback/Student tone locally, zero extra queue turns).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29049 [proposed] — EXECUTE the dedup patch (worker-internal terminal audit suppression) — ready to lint/deploy/verify live; this is approved.
+2. #29053 [proposed] — queue FIFO claim or position-relabel; small standalone; approved.
+3. #29051 [proposed] — Payments group-by-normalized-category render fix; approved; independent of #29049.
+4. #29052 [proposed] — console polish batch (Search button wiring, Loading matrix leak, stale-filter clear, iframe height/polling, horizontal scroll); approved.
+5. #29050 [proposed] — facets/writes-only/burst build AFTER #29049 lands.
+6. #29055 [proposed] — awaiting Ruben GO on Phase 1 (Argus-side RegulatorResponseEngine entry, ExecAdmin+); design recommendation recorded — no blocking ask, intake field + post-draft re-skin picker.
+
+Reference IDs:
+- Ticket: Argus QA regression run 2026-08-30 (prompts 1-12) + P10 browser session 2026-08-31
+- Ideas filed: #29049, #29050, #29051, #29052, #29053, #29055 [proposed]; #29014, #29015 [deployed]
+- Files touched: /var/www/emtskills/routes/ruben_executor_live.php (deployed earlier); probe refs: cron_argus_task_worker.php:688, alltastic_api.php:1145, argus_audit_log rows 12588-12612
+- Backups: /tmp/ruben_executor_live.php.bak-20260831-p8
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788201341551` — 8/31/2026, 1:19:21 PM PT — 80 turns
 
 **Original task:**
 
@@ -157,12 +238,12 @@ PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 Pick up task #1788201341551 — MDM/Nero/Maximus root SSH rollout.
 
-Where we left off (verified 2026-08-31 12:08 PT):
+Where we left off (verified 2026-08-31 13:18 PT):
 - Maximus DONE: root key installed, proxy user=root, service restarted, uid=0(root) verified via paramiko 127.0.0.1:2226.
-- Nero BLOCKED: Mac admin password unknown; remote osascript admin prompt returned -60007.
+- Nero: correct sudo one-liner delivered to Ruben to paste into ssh smsmac session; my non-interactive shell lacks TTY for sudo password (verified: "sudo: a terminal is required to read the password").
 
 Open threads to drive next:
-1. #29048 [proposed] - Nero: run the sudo one-liner with Nero admin password, then flip proxy nero user=root, restart, verify uid=0 via 127.0.0.1:2223.
+1. #29048 [proposed] - After Ruben runs the sudo one-liner on Nero, flip proxy nero user=rubenmajor to root, restart emsu-web-terminal.service, verify uid=0 via 127.0.0.1:2223.
 
 Reference IDs:
 - Ideas filed: #29048 [proposed]
@@ -173,7 +254,7 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </attempt_completion>
 ```
 
-### `1788200522716` — 8/31/2026, 12:15:27 PM PT — 287 turns
+### `1788200522716` — 8/31/2026, 12:54:52 PM PT — 339 turns
 
 **Original task:**
 
@@ -189,56 +270,76 @@ can you resolve this -> One thing worth knowing before anyone else reads that re
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788196060306` — 8/31/2026, 12:12:37 PM PT — 84 turns
+### `1788161107343` — 8/31/2026, 12:46:19 PM PT — 373 turns
 
 **Original task:**
 
 ```
-#Argus Improvmeents
+Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 23:50 crash).
 
-approved
-- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
-
-- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
-
-
+Where left off (verified 08-30 23:34 PT):
+- Original ask: "Think about how many times you've told me today that some claim you made was false. How concerning is that? There's something serious..." - the claim-provenance / truth-judge hardening thread.
+- Window was in its final rule-91 gate loop. A prior completion BLOCKED with SELF_CONTRADICTING_DISPOSITION on #28958 [proposed] and #28961 [proposed], then a re-run returned "ALL PASSED" with this IDENTITY ECHO:
+  - #28958 [proposed] - "Determ
 ```
 
-**Ideas referenced:** #14532, #166534, #25466, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648
+**Ideas referenced:** #0000, #13437, #13440, #16224, #178815, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27488, #27634, #27652, #28239, #28256, #28306 [deployed], #28958 [proposed], #28961 [proposed], #29011 [proposed], #29012 [proposed], #29013 [proposed], #29014 [deployed], #29024 [deployed], #29039 [deployed], #5344, #9109, #9132
 
 **Last PICKUP PROMPT:**
 
 ```
-th everything needed to start.
+ow (post-compression segment).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Argus Improvements (P10 QA results classified + Complaint Response Hub filed).
 
-Where we left off (verified 2026-08-31 12:12 PT):
-- #29014 [deployed] — P10 browser-QA run completed by Ruben/Jon as MasterAdmin; 5 PASS / 3 FAIL; completion_note written; FAILs + extras filed as separate tickets.
-- #29015 [deployed] — dispatcher idea-queue ORDER BY (45-min fresh-first CASE) deployed + verified earlier this session.
-- #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed] — the 5 verified P10 defect tickets with evidence + fix plans (double-logging dedup; facets/writes-only/burst; Payments merge; console polish batch; queue FIFO).
-- #29055 [proposed] — Argus Complaint Response Hub (Ruben steer): role-gated response drafting for AG/regulator (ExecAdmin+), BBB (Admin+), chargeback (Admin+), rude-student emails (staff), wired to existing RegulatorResponseEngine / bbb_complaints.php / ChargebackDecisionAgent / ChargebackResponseForm + MCP evidence tools; never auto-sends; attorney-review-pending; 4-phase plan.
+Pick up task #1788156466825 — VERITAS: rule-enforcement audit + bypass red-team (Ruben's 2 directives).
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29055 [proposed] — Ruben decision pending: approve + build Phase 1 (Argus-side entry that calls RegulatorResponseEngine and returns the draft in-chat for ExecAdmin+) either now or next window.
-2. #29050 [proposed] — Activity facets/writes-only/burst feature build; DO NOT start until #29049 double-logging dedup lands, or bursts will double-count.
-3. #29049 [proposed] — double-logging dedup in cron_argus_task_worker.php + ticket-action logger; unlocks clean burst grouping and halves the 11,598-row log.
-4. #29051 [proposed], #29052 [proposed], #29053 [proposed] — independent P10 fixes available for parallel execution (Payments merge; polish batch; FIFO position).
+Where we left off (verified 08-31 12:45 PT):
+- Enforcement census done (verified: grep R gates in validator src): detectors exist for rules 01/02/29/91/120/161/301/317/321/322/323. Prose-only gaps: 315 (general host-down), 302 (credentials), 297 (count scope), 144 (server-path), 259 (chat55), 300 (end-to-end).
+- Bypass vectors enumerated: (b) evidence stuffing near claims, (c) validator omission (no gate-file = no block), (d) task_id spoofing vs auto-probe set — these three need code. (a) paraphrase covered by MiniCheck on CFA; (e)/(f) acceptable-by-design but meter-tracked.
+- R322_TUNNEL_VERDICT proven this session (positive: Julia/Claudia claim BLOCKED; negative: scoped verdict PASSED). Rule 322 amended, correction #3 in human_corrections.
+- All session ideas deployed: #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed], #29039 [deployed].
+- CAUTION: replace_in_file corrupted the MCP src twice; use python heredoc edits + npm run build + grep REPLACE after.
+
+Open threads to drive next:
+1. Build detectors for prose-only rules 315/302/297/144/259/300 with pos+neg controls each (human-only decision — no idea; file per gate as built).
+2. Implement bypass mitigations for vectors b/c/d (human-only decision — no idea; file per fix as built).
 
 Reference IDs:
-- Ticket: Argus QA regression run 2026-08-30 (prompts 1-12) + P10 browser session 2026-08-31 (rmajor@)
-- Ideas filed: #29049, #29050, #29051, #29052, #29053, #29055 (all [proposed]); #29014, #29015 (both [deployed])
-- Files touched: /var/www/emtskills/routes/ruben_executor_live.php (this session); grounded refs: personnel/regulator_response.php, personnel/lib/RegulatorResponseEngine.php, routes/bbb_complaints.php, lib/ChargebackDecisionAgent.php, lib/ChargebackResponseForm.php, lib/auth.php:293, personnel/institutional_compliance.php (banner links regulator_response.php), routes/regulator_noi_response_builder.php
-- Backups: /tmp/ruben_executor_live.php.bak-20260831-p8, /tmp/ruben_executor_live.php.new-p8
+- Ticket: 1788156466825 (VERITAS claim-falsity investigation)
+- Ideas closed: #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed], #29039 [deployed]
+- Files touched: ~/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts, ~/Documents/Cline/scripts/correction_capture_watchdog.py, /var/www/emtskills/lib/{SMSAIResponder,EmailAIResponder,AgentReplyPipeline}.php, ~/Documents/Cline/Rules/322-what-was-serving-single-table.md
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] R322 gate shipped + pos/neg controls proven + rule amended
+- [x] Enforcement census: detector list vs prose-only gaps identified
+- [x] Bypass vectors enumerated (6, ranked, 3 need code)
+- [x] Rule-119 compress at 957K/1M with full directive-carrying pickup
+- [ ] Fresh window: build gap detectors + bypass mitigations
+</task_progress>
 </attempt_completion>
 ```
+
+### `1788203722814` — 8/31/2026, 12:22:00 PM PT — 56 turns
+
+**Original task:**
+
+```
+#CAPCE / Catalog emsuniversity.com homepage
+
+at the emsuniversity.com homepage I am seeing references still to CAPCE under old catalogs that need immediate removal/replacement. 
+
+i think this is just for AZ. The one going to this link: https://emsuniversity.com/arizonacatalog.pdf 
+
+Updated one is here on downloads folder: EMS Universal Education Catalog CA (Current)
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788161302475` — 8/31/2026, 12:11:43 PM PT — 364 turns
 
@@ -375,60 +476,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788161107343` — 8/31/2026, 11:30:56 AM PT — 349 turns
-
-**Original task:**
-
-```
-Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 23:50 crash).
-
-Where left off (verified 08-30 23:34 PT):
-- Original ask: "Think about how many times you've told me today that some claim you made was false. How concerning is that? There's something serious..." - the claim-provenance / truth-judge hardening thread.
-- Window was in its final rule-91 gate loop. A prior completion BLOCKED with SELF_CONTRADICTING_DISPOSITION on #28958 [proposed] and #28961 [proposed], then a re-run returned "ALL PASSED" with this IDENTITY ECHO:
-  - #28958 [proposed] - "Determ
-```
-
-**Ideas referenced:** #0000, #13437, #13440, #16224, #178815, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27488, #27634, #27652, #28239, #28256, #28306 [deployed], #28958 [proposed], #28961 [proposed], #29011 [proposed], #29012 [proposed], #29013 [proposed], #29014 [deployed], #29024 [deployed], #29039 [deployed], #5344, #9109, #9132
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task 1788156466825 — VERITAS truth-hardening: server-side machine probe ledger deployed, asymmetry closed.
-
-Where we left off (verified 08-31 11:30 PT):
-- #29039 [deployed] agent_probe_ledger table + executor writes in SMSAIResponder and EmailAIResponder + MiniCheck evidence feed; php -l clean both files; FPM reloaded.
-- Ledger empty until real SMS/email tool traffic flows (write is inside executeToolCall, non-fatal).
-- Full session stack: #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed], #29039 [deployed].
-
-Open threads to drive next:
-None. The Cline anti-laundering design now has full server-side parity for the surfaces that run tools.
-
-Reference IDs:
-- Ticket: 1788156466825 (VERITAS claim-falsity investigation)
-- Ideas filed: #29039 [deployed]
-- Ideas closed earlier: #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed]
-- Files touched: /var/www/emtskills/lib/SMSAIResponder.php (backup .bak-probeledger-20260831), /var/www/emtskills/lib/EmailAIResponder.php (backup .bak-probeledger-20260831)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Recon: WOPR tool tables lacked artifacts; created agent_probe_ledger
-- [x] SMS executor writes ledger + MiniCheck reads machine artifacts
-- [x] Email executor writes ledger (php -l clean, FPM reloaded)
-- [x] Idea #29039 filed + stamped deployed (MCP timeout worked around via direct insert, verified id)
-- [x] Ship completion
-</task_progress>
 </attempt_completion>
 ```
 

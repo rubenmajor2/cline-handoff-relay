@@ -5,14 +5,14 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **193**
-- Last generated: 2026-08-30 20:41
+- Reversals tracked: **195**
+- Last generated: 2026-08-30 21:41
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 89 | 46% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 91 | 47% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 35 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 27 | 14% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 23 | 12% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
@@ -20,7 +20,7 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 ## Causal rules most often amended
 
-- Rule 317: 70 amendment(s)
+- Rule 317: 72 amendment(s)
 - Rule 297: 44 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-08-31** — Amends clause 1/INSUFFICIENT_PROBE: a capability rejection from ONE serving stack is NEVER a model-capability verdict. This window probed an MLX 4-bit lane (Maximus :11530), got 'Only text content type is supported', and declared Qwen3.8-27B text-only — but th
+- **2026-08-31** — Amends clause 3 (escalation probe before declaring any wall) + reinforces rule 322 tunnel-vs-model: a WOPR-side tunnel probe returning 000/reset is evidence about the TUNNEL, never the far-end service. This window declared 'Nero dead, no remote path' from tunn
 - **2026-08-31** — Amends clause 1/INSUFFICIENT_PROBE: systemd unit config claims must resolve LAST-WINS drop-in semantics — a grep of `systemctl cat` output shows EVERY historical Environment= line and the FIRST occurrence is usually stale. The only ground truth for a running s
 - **2026-08-31** — Amends clause 3 again: an ABSENCE returned by a per-entity lookup is not proof the thing does not exist. verify_payment_state and get_student_360 for Lindsey Rose both returned "invoice_count 0, balance $0" because those tools join on Students.id, and her invo
 - **2026-08-31** — AMENDS CLAUSE 1: claimed widget AI model claude-sonnet-4-6 'resolves to a slow local vLLM alias' from memory of a prior session. Live probe showed 42/42 chat_portal_sites rows = frankenstein-llm; claude-sonnet-4-6 existed ONLY as PHP fallback defaults (api/cha
-- **2026-08-31** — Amends clause 2 (acquisition gate): I reported '17 Vapi concurrency-limit errors causing silent callback failures' after reading only the failure_category label I had just created. Reading the action_details JSON showed 14 of the 17 were vapi_status=201 with c
-- **2026-08-31** — Amends clause 2 (acquisition gate) + golden rule: claim scope must equal probe scope — a curl resolved through split-horizon/LAN DNS (or run from the allowlisted server IP) is NOT evidence that a public cloud consumer (Vapi) can reach the endpoint. When the cl
 
 ### wrong premise
 

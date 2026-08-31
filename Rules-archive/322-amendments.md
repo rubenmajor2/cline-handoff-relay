@@ -57,3 +57,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends the resolution rules: (1) an llm_call_log model string is a LABEL, not a physical model — litellm model_names can be ALIASES backed by a different provider (verified 2026-08-29: config.yaml lines 244-253 back claude-haiku/claude-haiku-4-5 with deepseek/deepseek-v4-pro), so a "what was serving" table MUST resolve each model_name through config.yaml litellm_params.model before naming the physical LLM or attributing cost; (2) never attach a purpose label like "vision-doorman" to a row without tracing the actual caller (the 2026-08-29 haiku rows came from PHP HAIKU_FALLBACK_V1 crons, not vision); (3) an "X absorbed N% of requests" claim from the adapter upstream log MUST check the log's LAST TIMESTAMP first — a wedged adapter leaves a stale log that misattributes the window.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 04:48 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788050474905
+- RCA bucket: stale assumption
+- Trigger pattern: routing a live model through a retired model's alias name, or repointing an alias to a different model without renaming it
+- Reversal note: MISLEADING LEGACY ALIAS NAMES ARE BANNED for routing (Ruben directive 2026-08-30). A litellm model_name that names a RETIRED model (e.g. 'minicpm-v' secretly serving qwen3.8-27b, 'julia-235b' serving deepseek) poisons every future agent's diagnosis — this was a root cause of the 2026-08-30 session's repeated misdiagnoses. Callers MUST route through the TRUE model-name lane (e.g. julia-qwen38-27b), and when a model is retired its alias blocks are REMOVED, not silently repointed. If a transitional alias is unavoidable it must carry the true model in its name within one window. Applied: 7 PHP callers repointed minicpm-v -> julia-qwen38-27b; minicpm-v alias blocks slated for removal after 7d zero picks.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

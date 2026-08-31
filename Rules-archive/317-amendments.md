@@ -627,3 +627,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 1/INSUFFICIENT_PROBE: systemd unit config claims must resolve LAST-WINS drop-in semantics — a grep of `systemctl cat` output shows EVERY historical Environment= line and the FIRST occurrence is usually stale. The only ground truth for a running service's config is `sudo cat /proc/<MainPID>/environ`. This window claimed 'GLM never in executor tool pool by design' from a first-occurrence read; the running process env showed GLM 8210+8211 in pool with EMSU_GLM_LANES_CLINE=4/BATCH=4 exactly per Ruben's design.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 04:17 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788050474905
+- RCA bucket: insufficient probe
+- Trigger pattern: declaring a tunnel-fronted service dead from WOPR-side tunnel probes alone, without alternate-path probe or record check
+- Reversal note: Amends clause 3 (escalation probe before declaring any wall) + reinforces rule 322 tunnel-vs-model: a WOPR-side tunnel probe returning 000/reset is evidence about the TUNNEL, never the far-end service. This window declared 'Nero dead, no remote path' from tunnel-port probes while the MLX service on the SMS Mac was running all along (Ruben's local curl returned the model list before AND after an identical kickstart — the service state never changed). Before declaring any tunnel-fronted service down: (a) check whether the far end can be probed via ANY alternate path, (b) check the record for the box's own revival/kickstart recipe, (c) if only the tunnel is unprobeable, the verdict is TUNNEL-UNREACHABLE, never SERVICE-DOWN.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 04:29 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788050474905
+- RCA bucket: insufficient probe
+- Trigger pattern: declaring a model capability absent from a single lane's rejection without checking the official card or a second serving stack
+- Reversal note: Amends clause 1/INSUFFICIENT_PROBE: a capability rejection from ONE serving stack is NEVER a model-capability verdict. This window probed an MLX 4-bit lane (Maximus :11530), got 'Only text content type is supported', and declared Qwen3.8-27B text-only — but the official HF card says native vision-language model, and the vLLM deployment of the SAME model (Julia :11513) answered a red-pixel image correctly seconds later. Serving-stack limits (MLX harness, missing flags) must be attributed to THE LANE, never the model. Before any capability claim: check the official model card (rule 324) AND probe a second deployment of the same weights.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

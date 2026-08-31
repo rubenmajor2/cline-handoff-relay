@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 1:19:42 PM PT | window: last 72h | 81 tasks | index total 1009 (parsed 5, cached 1004)
+Generated: 8/31/2026, 2:19:42 PM PT | window: last 72h | 81 tasks | index total 1009 (parsed 2, cached 1007)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788161048426` | 8/31/2026, 1:19:39 PM | 240 | 1508KB | #Joshua Qwen 3.8 27B |
-| `1788205619819` | 8/31/2026, 1:19:35 PM | 99 | 381KB | #Postmark Issue |
-| `1788196060306` | 8/31/2026, 1:19:25 PM | 147 | 550KB | #Argus Improvmeents |
+| `1788161048426` | 8/31/2026, 2:16:12 PM | 313 | 1787KB | #Joshua Qwen 3.8 27B |
+| `1788196060306` | 8/31/2026, 1:57:46 PM | 260 | 911KB | #Argus Improvmeents |
+| `1788205619819` | 8/31/2026, 1:20:07 PM | 100 | 386KB | #Postmark Issue |
 | `1788201341551` | 8/31/2026, 1:19:21 PM | 80 | 363KB | #MDM/Nero/Maximu |
 | `1788200522716` | 8/31/2026, 12:54:52 PM | 339 | 8916KB | #TDSHS |
 | `1788161107343` | 8/31/2026, 12:46:19 PM | 373 | 2744KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
@@ -96,7 +96,7 @@ Generated: 8/31/2026, 1:19:42 PM PT | window: last 72h | 81 tasks | index total 
 
 ## Per-window detail
 
-### `1788161048426` — 8/31/2026, 1:19:39 PM PT — 240 turns
+### `1788161048426` — 8/31/2026, 2:16:12 PM PT — 313 turns
 
 **Original task:**
 
@@ -106,11 +106,65 @@ Generated: 8/31/2026, 1:19:42 PM PT | window: last 72h | 81 tasks | index total 
 Bring back up Joshua Qwen 3.8 27B to serving
 ```
 
-**Ideas referenced:** #10756, #11316, #11847, #12364, #1242, #12477, #12612, #12618, #12680, #12689, #12824, #12872, #12878, #13437, #13490, #13842, #13874, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+**Ideas referenced:** #10756, #11316, #11847, #12364, #1242, #12477, #12612, #12618, #12680, #12689, #12824, #12872, #12878, #13437, #13490, #13842, #13874, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29017 [deployed], #29026 [deployed], #29034 [deployed], #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788205619819` — 8/31/2026, 1:19:35 PM PT — 99 turns
+### `1788196060306` — 8/31/2026, 1:57:46 PM PT — 260 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #166534, #18745, #18770, #23428, #23429, #23468, #23506, #23941, #23982, #24941, #24990, #25313, #25466, #25768, #28155, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #30363, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648, #9650, #9660, #9670
+
+**Last PICKUP PROMPT:**
+
+```
+se the remaining open threads.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Improvements: build batch + browser-QA followup.
+
+Where we left off (verified 2026-08-31 13:56 PT):
+- #29049 [deployed]: answer-dedup fixed (alltastic_api.php:6727 gate), live-verified via task #759 → exactly one audit row (id=12621, task_worker_run, success=1).
+- #29053 [deployed]: queue position relabeled "in queue (estimate)" at argus_task_status.php (3 render sites). FIFO claim confirmed; out-of-order completion = parallel workers, relabel correct.
+- #29051 [deployed]: Payments header merge — root cause sync_student_qb group='Payment' singular (argus_action_catalog.php:181); fixed catalog + JS collapse (argus_download.php:740).
+- #29052 [deployed]: 5/5 polish — type="button" Search (lines 353/378), stale-filter clear on tab switch, hidden-tab polling gate (line 1755), act-wrap overflow-x, iframe cap 6000→4200 (lines 1948/1952).
+- #29050 [executing]: writes-only default ON + toggle (line 360) + burst grouping (lines ~1211-1224) applied and lint clean; facet chips NOT yet built.
+- #29055 [proposed]: Complaint Hub Phase 1 not started.
+- All files lint clean; PHP-FPM reloaded; changes confirmed on disk via grep.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29050 [executing] — Build facet chips (Who/Action/Outcome/Gate) and wire to the activity_log API. Backend already returns user_email/action_key/outcome/gate per row; add client-side chips reusing actWritesOnly pattern.
+2. #29055 [proposed] — Complaint Hub Phase 1: Argus action → RegulatorResponseEngine bridge. Placeholder not built; needs scope confirmation (filing a complaint, checking complaint status by student).
+3. #29014 [proposed] — Await Ruben's browser answers (9-question checklist above). P10 verification + any visual regressions from this batch.
+4. #29015 [proposed] — Dispatcher/fleet queued-ideas 45-min fresh-first ORDER BY — render still not located; needs a fresh look at ruben_executor_live.php.
+
+Reference IDs:
+- Ticket: Argus Improvements QA batch (2026-08-31 PT, rubric questions 1-12)
+- Ideas filed: #29049 [deployed], #29053 [deployed], #29051 [deployed], #29052 [deployed], #29050 [executing], #29055 [proposed], #29014 [proposed], #29015 [proposed]
+- Files touched: /var/www/emtskills/routes/alltastic_api.php, routes/argus_download.php, routes/argus_task_status.php, lib/argus_action_catalog.php
+- Backups: /tmp/argus_download.php.bak-20260831-paymerge, /tmp/argus_action_catalog.php.bak-20260831-paymerge, /tmp/argus_download.php.new-toggle, /tmp/argus_download.php.new-burst
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788205619819` — 8/31/2026, 1:20:07 PM PT — 100 turns
 
 **Original task:**
 
@@ -127,7 +181,7 @@ https://emsuniversity.com/emtskills/externship/campaign_tracking_webhook.php and
 **Last PICKUP PROMPT:**
 
 ```
-ts the silent-kill regression.
+ filed for the durable record.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
@@ -135,70 +189,17 @@ PICKUP PROMPT (paste into a fresh Cline window)
 Pick up task — Postmark webhook auto-disable recurrence fix (idea #29060).
 
 Where we left off (verified 2026-08-31 13:19 PT):
-- Autoheal cron was silently dead since 2026-08-29 01:07: log owned emsuserver, www-data `>>` redirect Permission denied → bash aborted before PHP ran. Fixed: chown log to www-data:www-data, root cron `@hourly chown ... || true # postmark_webhook_autoheal_chown` enforcer added.
-- Detection was blind to Postmark Status-strip: rewrote `/var/www/emtskills/cron/cron_postmark_webhook_autoheal.php` with persistent baseline `/var/www/emtskills/storage/postmark_webhook_baseline.json` (drift vs baseline, Status restored on re-enable). php -l clean, FPM reloaded, backup retained.
-- Live test passed: simulated Status-stripped disable on webhook 23448846 → autoheal re-enabled Delivery with Status restored. Both named endpoints HTTP 200, all 8 webhooks healthy, `check_postmark_webhook_health` verdict HEALTHY.
-- Idea #29060 [deployed] filed. HANDOFF_NOTES.md updated with full RCA + fixes.
+- Autoheal cron was silently dead since 2026-08-29 01:07 (log owned emsuserver, www-data >> redirect Permission denied → bash aborted before PHP ran). Fixed: chown log to www-data:www-data + root @hourly chown enforcer.
+- Detector was blind to Postmark Status-strip: rewrote /var/www/emtskills/cron/cron_postmark_webhook_autoheal.php with persistent baseline /var/www/emtskills/storage/postmark_webhook_baseline.json. php -l clean, FPM reloaded, backup retained.
+- Live test passed: simulated Status-stripped disable on 23448846 → autoheal re-enabled Delivery + restored Status. Both named endpoints HTTP 200, all 8 webhooks healthy, health tool verifies HEALTHY.
+- Idea #29060 [deployed] filed. HANDOFF_NOTES.md updated.
 
 Open threads to drive next:
 None — all work completed this session.
 
 Reference IDs:
 - Ideas filed: #29060 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_postmark_webhook_autoheal.php, /var/www/emtskills/storage/postmark_webhook_baseline.json, /var/log/emtskills/cron_postmark_webhook_autoheal.log, HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-```
-
-### `1788196060306` — 8/31/2026, 1:19:25 PM PT — 147 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-approved
-- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
-
-- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
-
-
-```
-
-**Ideas referenced:** #12611, #12612, #14532, #166534, #23428, #23468, #23941, #23982, #24941, #24990, #25313, #25466, #25768, #28155, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648
-
-**Last PICKUP PROMPT:**
-
-```
-int, deploy, and verify live).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus Improvements (P10 tickets approved; #29055 design consult answered).
-
-Where we left off (verified 2026-08-31 12:52 PT):
-- #29015 [deployed] — dispatcher 45-min fresh-first ORDER BY deployed + verified earlier this session.
-- #29014 [deployed] — P10 browser-QA stamped complete; FAILs filed as tickets.
-- #29049 [proposed] — double-logging dedup CONFIRMED via live probe: argus_audit_log rows 12588/12589 + 12611/12612 same-second task_worker_run + terminal_query pairs; fix = suppress the worker-internal terminal audit write (cron_argus_task_worker.php:688 / alltastic_api.php:1145) so one task = one row.
-- #29050 [proposed] — Activity facets + writes-only default + burst grouping; BLOCKED on #29049 landing first (bursts would double-count).
-- #29051 [proposed], #29052 [proposed], #29053 [proposed] — Payments merge; console polish batch; queue FIFO/relabel. Not started.
-- #29055 [proposed] — Complaint Response Hub design consult answered + recorded in implementation_notes: NO blocking ask-type question; optional intake field (reuse regulator_response.php pattern) + post-draft re-skin picker (same verified facts re-rendered as Regulator/BBB/Chargeback/Student tone locally, zero extra queue turns).
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29049 [proposed] — EXECUTE the dedup patch (worker-internal terminal audit suppression) — ready to lint/deploy/verify live; this is approved.
-2. #29053 [proposed] — queue FIFO claim or position-relabel; small standalone; approved.
-3. #29051 [proposed] — Payments group-by-normalized-category render fix; approved; independent of #29049.
-4. #29052 [proposed] — console polish batch (Search button wiring, Loading matrix leak, stale-filter clear, iframe height/polling, horizontal scroll); approved.
-5. #29050 [proposed] — facets/writes-only/burst build AFTER #29049 lands.
-6. #29055 [proposed] — awaiting Ruben GO on Phase 1 (Argus-side RegulatorResponseEngine entry, ExecAdmin+); design recommendation recorded — no blocking ask, intake field + post-draft re-skin picker.
-
-Reference IDs:
-- Ticket: Argus QA regression run 2026-08-30 (prompts 1-12) + P10 browser session 2026-08-31
-- Ideas filed: #29049, #29050, #29051, #29052, #29053, #29055 [proposed]; #29014, #29015 [deployed]
-- Files touched: /var/www/emtskills/routes/ruben_executor_live.php (deployed earlier); probe refs: cron_argus_task_worker.php:688, alltastic_api.php:1145, argus_audit_log rows 12588-12612
-- Backups: /tmp/ruben_executor_live.php.bak-20260831-p8
+- Files touched: /var/www/emtskills/cron/cron_postmark_webhook_autoheal.php, /var/www/emtskills/storage/postmark_webhook_baseline.json, /var/log/emtskills/cron_postmark_webhook_autoheal.log, HANDOFF_NOTES.md, /var/spool/cron/crontabs/root
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════

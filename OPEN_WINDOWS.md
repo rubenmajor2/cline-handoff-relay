@@ -6,19 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 11:19:40 AM PT | window: last 72h | 77 tasks | index total 1005 (parsed 7, cached 998)
+Generated: 8/31/2026, 12:19:41 PM PT | window: last 72h | 80 tasks | index total 1008 (parsed 8, cached 1000)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788161302475` | 8/31/2026, 11:19:36 AM | 277 | 881KB | #Grievances |
-| `1788161107343` | 8/31/2026, 11:19:35 AM | 312 | 2354KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
-| `1788195954623` | 8/31/2026, 11:19:02 AM | 173 | 838KB | On the MDM Access page, I noticed that my SSH access is not root. They all need to be root |
-| `1788161048426` | 8/31/2026, 11:19:01 AM | 149 | 1145KB | #Joshua Qwen 3.8 27B |
-| `1788197224029` | 8/31/2026, 11:17:48 AM | 276 | 757KB | #TDSHS |
-| `1788195482100` | 8/31/2026, 11:17:39 AM | 201 | 1046KB | #Nero Qwen 3.8 27B |
-| `1788195724924` | 8/31/2026, 11:04:20 AM | 102 | 464KB | #EMT Skills Slowness |
+| `1788203722814` | 8/31/2026, 12:19:31 PM | 45 | 63KB | #CAPCE / Catalog emsuniversity.com homepage |
+| `1788161048426` | 8/31/2026, 12:18:52 PM | 185 | 1312KB | #Joshua Qwen 3.8 27B |
+| `1788201341551` | 8/31/2026, 12:15:28 PM | 74 | 329KB | #MDM/Nero/Maximu |
+| `1788200522716` | 8/31/2026, 12:15:27 PM | 287 | 679KB | #TDSHS |
+| `1788196060306` | 8/31/2026, 12:12:37 PM | 84 | 320KB | #Argus Improvmeents |
+| `1788161302475` | 8/31/2026, 12:11:43 PM | 364 | 1396KB | #Grievances |
+| `1788195482100` | 8/31/2026, 12:00:27 PM | 259 | 1271KB | #Nero Qwen 3.8 27B |
+| `1788195724924` | 8/31/2026, 11:56:10 AM | 154 | 671KB | #EMT Skills Slowness |
+| `1788161107343` | 8/31/2026, 11:30:56 AM | 349 | 2463KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
+| `1788195954623` | 8/31/2026, 11:28:37 AM | 190 | 934KB | On the MDM Access page, I noticed that my SSH access is not root. They all need to be root |
+| `1788197224029` | 8/31/2026, 11:21:01 AM | 277 | 758KB | #TDSHS |
 | `1788195017985` | 8/31/2026, 10:23:03 AM | 267 | 549KB | #TDSHS |
-| `1788196060306` | 8/31/2026, 10:20:22 AM | 46 | 150KB | #Argus Improvmeents |
 | `1788154719401` | 8/31/2026, 10:06:18 AM | 397 | 972KB | #Argus Improvmeents |
 | `1788161032616` | 8/31/2026, 9:55:27 AM | 124 | 459KB | #Nero Qwen 3.8 27B |
 | `1788160972127` | 8/31/2026, 9:35:22 AM | 80 | 701KB | #Julia/Claudia Qwen 3.8 27B |
@@ -92,7 +95,152 @@ Generated: 8/31/2026, 11:19:40 AM PT | window: last 72h | 77 tasks | index total
 
 ## Per-window detail
 
-### `1788161302475` — 8/31/2026, 11:19:36 AM PT — 277 turns
+### `1788203722814` — 8/31/2026, 12:19:31 PM PT — 45 turns
+
+**Original task:**
+
+```
+#CAPCE / Catalog emsuniversity.com homepage
+
+at the emsuniversity.com homepage I am seeing references still to CAPCE under old catalogs that need immediate removal/replacement. 
+
+i think this is just for AZ. The one going to this link: https://emsuniversity.com/arizonacatalog.pdf 
+
+Updated one is here on downloads folder: EMS Universal Education Catalog CA (Current)
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788161048426` — 8/31/2026, 12:18:52 PM PT — 185 turns
+
+**Original task:**
+
+```
+#Joshua Qwen 3.8 27B
+
+Bring back up Joshua Qwen 3.8 27B to serving
+```
+
+**Ideas referenced:** #11316, #12364, #1242, #12477, #12618, #12824, #12872, #12878, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788201341551` — 8/31/2026, 12:15:28 PM PT — 74 turns
+
+**Original task:**
+
+```
+#MDM/Nero/Maximu
+
+Maximus is done, but Nero gets somwehat of an error: 
+
+rubenmajor@EMSU-SMS-Mac ~  % ssh smsmac "sudo sh -c 'mkdir -p /var/root/.ssh && chmod 700 /var/root/.ssh && echo \"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZxZvwAxtk/Z2cWnTsXUyGEAB+uG9rLdF/va6fDudfh emsuserver@wopr\" >> /var/root/.ssh/authorized_keys && chmod 600 /var/root/.ssh/authorized_keys'"
+
+ssh: Could not resolve hostname smsmac: nodename nor servname provided, or not known
+rubenmajor@EMSU-SMS-Mac ~  % 
+
+You're right that I had keys — here's exactly what I found and what I need from you.
+
+## What I verified this window
+```
+
+**Ideas referenced:** #178820, #25888, #28958, #29011 [deployed], #29032 [blocked], #29033 [blocked], #29048 [blocked]
+
+**Last PICKUP PROMPT:**
+
+```
+og
+- No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788201341551 — MDM/Nero/Maximus root SSH rollout.
+
+Where we left off (verified 2026-08-31 12:08 PT):
+- Maximus DONE: root key installed, proxy user=root, service restarted, uid=0(root) verified via paramiko 127.0.0.1:2226.
+- Nero BLOCKED: Mac admin password unknown; remote osascript admin prompt returned -60007.
+
+Open threads to drive next:
+1. #29048 [proposed] - Nero: run the sudo one-liner with Nero admin password, then flip proxy nero user=root, restart, verify uid=0 via 127.0.0.1:2223.
+
+Reference IDs:
+- Ideas filed: #29048 [proposed]
+- Files touched: /var/www/emtskills/scripts/ws_ssh_proxy.py (+backup .bak-maxroot-20260831-1200), /var/root/.ssh/authorized_keys (Maximus), ~/.ssh/known_hosts (Maximus)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788200522716` — 8/31/2026, 12:15:27 PM PT — 287 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+AMR is also GMR / American Medial Response Global Medical Response, etc... The docuemnts are all in there somewhere, keep hunting. You can check Vicky and Jon emails if you need to do that. 
+
+can you resolve this -> One thing worth knowing before anyone else reads that registry: the pending_review and unknown values in the agreement_status column are internal AI-extraction review flags, not statements about whether an agreement exists or is signed. Several documents flagged pending_review are fully executed by both parties (verified: execute_query returned the flag alongside instrument
+```
+
+**Ideas referenced:** #178816, #25185, #27100, #28958, #29018 [deployed], #29019 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788196060306` — 8/31/2026, 12:12:37 PM PT — 84 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #14532, #166534, #25466, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648
+
+**Last PICKUP PROMPT:**
+
+```
+th everything needed to start.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Improvements (P10 QA results classified + Complaint Response Hub filed).
+
+Where we left off (verified 2026-08-31 12:12 PT):
+- #29014 [deployed] — P10 browser-QA run completed by Ruben/Jon as MasterAdmin; 5 PASS / 3 FAIL; completion_note written; FAILs + extras filed as separate tickets.
+- #29015 [deployed] — dispatcher idea-queue ORDER BY (45-min fresh-first CASE) deployed + verified earlier this session.
+- #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed] — the 5 verified P10 defect tickets with evidence + fix plans (double-logging dedup; facets/writes-only/burst; Payments merge; console polish batch; queue FIFO).
+- #29055 [proposed] — Argus Complaint Response Hub (Ruben steer): role-gated response drafting for AG/regulator (ExecAdmin+), BBB (Admin+), chargeback (Admin+), rude-student emails (staff), wired to existing RegulatorResponseEngine / bbb_complaints.php / ChargebackDecisionAgent / ChargebackResponseForm + MCP evidence tools; never auto-sends; attorney-review-pending; 4-phase plan.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29055 [proposed] — Ruben decision pending: approve + build Phase 1 (Argus-side entry that calls RegulatorResponseEngine and returns the draft in-chat for ExecAdmin+) either now or next window.
+2. #29050 [proposed] — Activity facets/writes-only/burst feature build; DO NOT start until #29049 double-logging dedup lands, or bursts will double-count.
+3. #29049 [proposed] — double-logging dedup in cron_argus_task_worker.php + ticket-action logger; unlocks clean burst grouping and halves the 11,598-row log.
+4. #29051 [proposed], #29052 [proposed], #29053 [proposed] — independent P10 fixes available for parallel execution (Payments merge; polish batch; FIFO position).
+
+Reference IDs:
+- Ticket: Argus QA regression run 2026-08-30 (prompts 1-12) + P10 browser session 2026-08-31 (rmajor@)
+- Ideas filed: #29049, #29050, #29051, #29052, #29053, #29055 (all [proposed]); #29014, #29015 (both [deployed])
+- Files touched: /var/www/emtskills/routes/ruben_executor_live.php (this session); grounded refs: personnel/regulator_response.php, personnel/lib/RegulatorResponseEngine.php, routes/bbb_complaints.php, lib/ChargebackDecisionAgent.php, lib/ChargebackResponseForm.php, lib/auth.php:293, personnel/institutional_compliance.php (banner links regulator_response.php), routes/regulator_noi_response_builder.php
+- Backups: /tmp/ruben_executor_live.php.bak-20260831-p8, /tmp/ruben_executor_live.php.new-p8
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788161302475` — 8/31/2026, 12:11:43 PM PT — 364 turns
 
 **Original task:**
 
@@ -104,39 +252,133 @@ Self-completed: root cause was 3 live code/schema mismatches in routes/api/griev
 Jon says: Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
 ```
 
-**Ideas referenced:** #1242, #12770, #178806, #178816, #18480 [deployed], #18481 [blocked], #18491 [rejected], #19426, #202608, #20292, #20295, #25185, #25888, #2670, #2672, #28551, #28552, #28564, #28607, #28705, #28730, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28949 [proposed], #28958, #28992, #29027 [proposed], #29028 [proposed], #35944, #6106, #6852
+**Ideas referenced:** #1242, #12770, #14743, #14748, #16844, #17712, #177949, #178805, #178806, #178816, #18135, #18480 [deployed], #18481 [blocked], #18491 [rejected], #18853, #1912, #19426, #19802, #1998, #202608, #20292, #20295, #2168, #2174, #22250, #25185, #25764, #25888, #25913, #26400, #2647, #2654, #2659, #2662, #2663, #2670, #2672, #2675, #2677, #2679, #26932, #2782, #28546, #28551, #28552, #28564, #28586, #28596, #28607, #28622, #28704, #28705, #28706, #28723, #28730, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #28949 [proposed], #28958, #28992, #29017 [deployed], #29026 [deployed], #29027 [proposed], #29028 [proposed], #29034 [deployed], #29054 [proposed], #35944, #3957, #4930, #4931, #5095, #5770, #5795, #6039, #6064, #6106, #6230, #6789, #6852, #7164, #7359, #7381, #9019
 
 **Last PICKUP PROMPT:**
 
 ```
-o other reversals this window.
+rom that retired lane is gone.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1788161302475 — Grievance OCR vision-lane alignment plus human-gated grievance escalation.
+Pick up task #1788161302475 — Grievance vision doorman local-first, local Qwen vision truth, and #29027 explanation.
 
-Where we left off (verified 2026-08-31 10:43 PT):
-- 4 stuck grievances re-OCRed via qwen3.8-27b-cloud (verified: mysql SELECT, ocr_status=ok stuck_status=0): id 66 Aramani 2693, 68 Waldrop 2025, 83 Houston 15166, 86 Lindsey 4829
-- Ticket 28564 (TKT-20260828-BB9A8D57, jtgruiz@msn.com) RE-OPENED (verified: mysql SELECT status=open, resolved_at=NULL, assigned_owner=2)
-- GrievanceVisionDoorman::lanes() live probe returned ["qwen3.8-27b-cloud","openrouter/qwen/qwen3.8-max","kimi-k3"]
+Where we left off (verified 2026-08-31 12:10 PT):
+- GrievanceVisionDoorman.php DEFAULT_LANES = julia-qwen38-27b (primary, local vLLM :11513), claudia-qwen38-27b (peer), openrouter/qwen/qwen3.8-max (outage-only). VISION_BACKENDS now whitelists 127.0.0.1:11513. DB vision_ocr_lanes matches. php -l clean.
+- #29028 [deployed]: minicpm-v model blocks + router-fallback entry removed from /etc/litellm/config.yaml; litellm active; minicpm-v gone from /v1/models.
+- LOCAL VISION TRUTH (from GLM53_RING_STATE_TRACKER.md, read this window): Julia+Claudia :11513 serve qwen3.8-27b FP8 TP=2 with NATIVE vision (red-pixel probe → "red", 8/30 21:28 PT). My earlier "tunnels down / text-only" claim was a WOPR-side tunnel verdict, corrected — never a service verdict.
+- OPEN ROUTING OBSERVATION: gateway image call to julia-qwen38-27b served by 127.0.0.1:11510 (gpt-oss-120b text-only refusal) while config targets :11513 — filed #29054.
 
 Open threads to drive next:
-1. #28949 [executing] - HUMAN DECISION STILL PENDING: Vicky Yu must reply to jtgruiz@msn.com grievance (ticket 28564).
-2. #29027 [proposed] - Add auto-resolver gate: refuse self-resolve of human-gated grievance tickets (evidence: ticket 28564 comments 193336/193337).
-3. #29028 [proposed] - Remove retired minicpm-v model group from /etc/litellm/config.yaml to fix 127.0.0.1:11510 collision.
+1. #29054 [proposed] — Find why LiteLLM serves julia-qwen38-27b image calls via the 11510 adapter instead of the :11513 vLLM; pin image-bearing calls to :11513 so the local-first doorman actually serves at zero cost.
+2. #29027 [proposed] — awaiting Ruben approval: one-line gate in cron/cron_ai_ticket_agent.php (~line 1633) to escalate grievance/human-gated tickets instead of auto-resolving on dead_end with email-sent (evidence: ticket 28564). Ruben said "Explain" this turn; NOT implemented.
+3. #28949 [executing] — HUMAN DECISION STILL PENDING: Vicky Yu reply to jtgruiz@msn.com grievance (ticket 28564).
 
 Reference IDs:
 - Ticket: 28564 (TKT-20260828-BB9A8D57)
-- Ideas filed: #29027 [proposed], #29028 [proposed], #28949 [executing]
-- Files touched: /var/www/emtskills/lib/GrievanceVisionDoorman.php, /var/www/emtskills/routes/api/grievance_api.php
+- Ideas: #29028 [deployed], #29054 [proposed], #29027 [proposed], #28949 [executing]
+- Files touched: /var/www/emtskills/lib/GrievanceVisionDoorman.php, /etc/litellm/config.yaml, admin_portal.grievance_automation_config, admin_portal.orchestrator_ideas
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1788161107343` — 8/31/2026, 11:19:35 AM PT — 312 turns
+### `1788195482100` — 8/31/2026, 12:00:27 PM PT — 259 turns
+
+**Original task:**
+
+```
+#Nero Qwen 3.8 27B
+
+Approved, but if wedged, which likely is not, then fix it. Honestly i doubt maximus is even down. Not sure why this is even a proposed idea. 
+
+1. #29017 [proposed] — Probe Maximus :11530 MLX decode (on-box via SSH :2223, then lane). If serving, re-add `http://127.0.0.1:11530` to `drop-decode-dead-mlx-20260830.conf` FRANK_TOOLS_UPSTREAMS/FRANK_CHAT_UPSTREAMS and restart `frankenstein-tools` (same revert path used for Nero). If decode-wedged, leave dropped and report.
+
+How do we then durably ensure that Nero is not lost by Agents or if it goes down, it can go back up quickly 
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178805, #178819, #1798, #1828, #18720, #1912, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #23277, #23285, #24248, #25378, #25381, #2546, #25764, #25888, #25916 [awaiting_review], #26083, #26400, #2647, #2654, #2659, #2662, #2663, #26663, #2675, #2677, #2679, #26932, #27236, #27249 [executing], #27250, #27492, #27503, #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28550, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #28956, #28958, #29017 [proposed], #29026 [deployed], #29034 [deployed], #29037, #29044 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+-box decode watchdog (launchd)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788195482100 — Nero + Maximus MLX decode watchdog anti-loss + Maximus restore
+
+Where we left off (verified 2026-08-31 11:41 PT):
+- Nero Qwen3.8-27B MLX :11525 serving. On-box log POST /v1/chat/completions HTTP/1.1 200 at 11:00:20 PT; watchdog log 'OK http=200' at 10:58:47 PT. Idea #29026 [deployed].
+- Maximus Qwen3.8-27B MLX :11530 serving. On-box curl HTTP=200 t=9.32s with 5 tokens at 10:56:56 PT after kickstart (new PID 29642). Idea #29034 [deployed].
+- :11530 re-added to drop-decode-dead-mlx-20260830.conf in both upstreams. FRANK_BOX_CAPACITY 11530=2. frankenstein-tools restarted and active, merged env shows 11530 and 11525.
+- Ideas: #29017 [deployed], #29026 [deployed], #29034 [deployed]. Rule 317 clause 13 amended twice.
+- GLM53_RING_STATE_TRACKER.md appended with the 2026-08-31 MLX section (208 lines).
+
+Open threads to drive next:
+1. None. All work completed and verified this session. (human-only decision, no idea)
+
+Reference IDs:
+- Ideas filed: #29017 [deployed], #29026 [deployed], #29034 [deployed]
+- Files touched: WOPR drop-decode-dead-mlx-20260830.conf; Nero Mac (SSH :2223) watchdog plist + script; Maximus Mac (SSH :2202) watchdog plist + script; local /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md (clause 13 amended twice); WOPR /var/www/emtskills/docs/HANDOFF_NOTES.md; WOPR /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md
+
+When done, append a row to cline_task_ledger per rule 07 and run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788195724924` — 8/31/2026, 11:56:10 AM PT — 154 turns
+
+**Original task:**
+
+```
+#EMT Skills Slowness
+
+We have YET Another slowness detected for /emtskills. Please durably solve/resolve and write to the document
+
+--
+Pick up task 1788147338340 - read + append emtskills slowness .md, resolve emsuniversity.com/emtskills slowness again.
+Left off: "all four approved ideas are [deployed], risk question on #28939 has an honest correction, GLM53..." - verify the .md append landed and the deploy stuck.
+```
+
+**Ideas referenced:** #178806, #178814, #19338, #19458, #19491, #19837 [deployed], #19838, #23133, #2342, #23945, #23952, #23954, #25548 [executing], #25679 [executing], #25888, #2590, #25940 [executing], #26009, #26068, #26218, #26219 [deployed], #26234, #26258, #26336, #26348, #27691, #28722 [proposed], #28762, #28774, #28776, #28795, #28891, #28893, #28894, #28895, #28897, #28939, #28958, #29023 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+Log
+No reversals this window.
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788147338340 — durable /emtskills slowness resolution (swap + session-lock).
+
+Where we left off (verified 2026-08-31 11:55 PT):
+- Cause 1 (swap storm): guardian fail-open gate shipped, FAIL-OPEN every min, no swapoff.
+- Cause 2 (session lock): api_keepalive.php now session_write_close()s; 20 rapid same-session polls all ~13ms HTTP 200; slow log clean.
+- #29023 [deployed]: guardian flush_swap() returns 0/1/2; callers log honest FAIL-OPEN/HELD.
+- Doc updated: EMTSKILLS_SLOWNESS_RCA_2026-08-11.md (152 lines).
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+None — all work completed this session.
+
+Reference IDs:
+- Ticket: n/a (task 1788147338340)
+- Ideas filed: #29023 [deployed]
+- Files touched: /var/www/emtskills/scripts/emsu-memory-guardian.sh, /var/www/emtskills/skillstastic/api_keepalive.php, /var/www/emtskills/docs/EMTSKILLS_SLOWNESS_RCA_2026-08-11.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788161107343` — 8/31/2026, 11:30:56 AM PT — 349 turns
 
 **Original task:**
 
@@ -149,7 +391,7 @@ Where left off (verified 08-30 23:34 PT):
   - #28958 [proposed] - "Determ
 ```
 
-**Ideas referenced:** #0000, #13437, #13440, #16224, #178815, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27488, #27634, #27652, #28239, #28256, #28306 [deployed], #28958 [proposed], #28961 [proposed], #29011 [proposed], #29012 [proposed], #29013 [proposed], #29014 [deployed], #29024 [deployed], #5344, #9109, #9132
+**Ideas referenced:** #0000, #13437, #13440, #16224, #178815, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27488, #27634, #27652, #28239, #28256, #28306 [deployed], #28958 [proposed], #28961 [proposed], #29011 [proposed], #29012 [proposed], #29013 [proposed], #29014 [deployed], #29024 [deployed], #29039 [deployed], #5344, #9109, #9132
 
 **Last PICKUP PROMPT:**
 
@@ -161,38 +403,36 @@ No reversals this window.
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task 1788156466825 — VERITAS truth-hardening: zero-evidence naked-claim gate shipped, full coverage verified.
+Pick up task 1788156466825 — VERITAS truth-hardening: server-side machine probe ledger deployed, asymmetry closed.
 
-Where we left off (verified 08-31 10:32 PT):
-- #29024 [deployed] naked high-stakes-claim gate (zero-evidence path) live in AgentReplyPipeline gate 6b + SMSAIResponder; php -l clean; FPM reloaded.
-- Email MiniCheck proven in production: 19 verdicts/24h in emsu_email_responder.log, 0 FAIL blocks, ~7s per check.
-- Argus port verified in live file (MiniCheckVerifier::verify line 179 of argus_proxy.php); no traffic through it yet.
-- New chat/voice/SMS gates code-live, zero traffic since deploy; watch logGuardBlock rates via the unified meter (#29012 [deployed]).
-- Earlier this window: #29011 [deployed], #29013 [deployed], #29014 [deployed], #28958 [deployed], #28961 [deployed].
+Where we left off (verified 08-31 11:30 PT):
+- #29039 [deployed] agent_probe_ledger table + executor writes in SMSAIResponder and EmailAIResponder + MiniCheck evidence feed; php -l clean both files; FPM reloaded.
+- Ledger empty until real SMS/email tool traffic flows (write is inside executeToolCall, non-fatal).
+- Full session stack: #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed], #29039 [deployed].
 
 Open threads to drive next:
-None. All buildable work completed this session; latency optimization is an observation, not a defect (human-only decision — no idea).
+None. The Cline anti-laundering design now has full server-side parity for the surfaces that run tools.
 
 Reference IDs:
 - Ticket: 1788156466825 (VERITAS claim-falsity investigation)
-- Ideas filed: #29024 [deployed]
-- Ideas closed earlier: #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #28958 [deployed], #28961 [deployed]
-- Files touched: /var/www/emtskills/lib/AgentReplyPipeline.php (backup .bak-nakedclaim-20260831), /var/www/emtskills/lib/SMSAIResponder.php
+- Ideas filed: #29039 [deployed]
+- Ideas closed earlier: #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed]
+- Files touched: /var/www/emtskills/lib/SMSAIResponder.php (backup .bak-probeledger-20260831), /var/www/emtskills/lib/EmailAIResponder.php (backup .bak-probeledger-20260831)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Zero-evidence amelioration shipped: naked-claim gate in AgentReplyPipeline 6b + SMSAIResponder (#29024 deployed)
-- [x] Live-practice evidence: email MiniCheck 19 verdicts/24h in production; new gates code-live, no traffic yet (honestly labeled)
-- [x] Argus coverage confirmed via live-file grep (line 179)
-- [x] Latency observation flagged (7s/check vs 320ms bench)
-- [x] Idea stamped deployed + ship completion
+- [x] Recon: WOPR tool tables lacked artifacts; created agent_probe_ledger
+- [x] SMS executor writes ledger + MiniCheck reads machine artifacts
+- [x] Email executor writes ledger (php -l clean, FPM reloaded)
+- [x] Idea #29039 filed + stamped deployed (MCP timeout worked around via direct insert, verified id)
+- [x] Ship completion
 </task_progress>
 </attempt_completion>
 ```
 
-### `1788195954623` — 8/31/2026, 11:19:02 AM PT — 173 turns
+### `1788195954623` — 8/31/2026, 11:28:37 AM PT — 190 turns
 
 **Original task:**
 
@@ -209,26 +449,27 @@ This is the entire point. I should not be getting Permission Denied there
 **Last PICKUP PROMPT:**
 
 ```
- shell — no Permission Denied.
+nd verified** — WOPR included.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — MDM portal SSH root access (WOPR + Linux fleet).
+Pick up task — MDM portal SSH root access (WOPR + fleet + Macs).
 
-Where we left off (verified 2026-08-31 11:02 PT):
-- ws_ssh_proxy.py SERVERS: 12 Linux hosts patched to user=root; backup .bak-rootssh-20260831-105213
-- Root key installed on WOPR/JOSHUA/ARTEMIS/BIGMAC/CESAR/CATO/JULIA/CLAUDIA/POMPEY/MARCUS/TIBERIUS/AUGUSTUS
-- JOSHUA + ARTEMIS PermitRootLogin → prohibit-password (key-only)
-- emsu-web-terminal.service active; 12/12 live uid=0 ROOT verified via proxy code path
+Where we left off (verified 2026-08-31 11:27 PT):
+- ws_ssh_proxy.py: 12 Linux hosts patched to user=root (backup .bak-rootssh-20260831-105213); emsu-web-terminal.service active
+- 12/12 Linux hosts verified uid=0 ROOT live through proxy code path (wopr/joshua/artemis/bigmac/cesar/cato/julia/claudia/pompey/marcus/tiberius/augustus)
+- JOSHUA+ARTEMIS PermitRootLogin→prohibit-password; WOPR key installed in /root/.ssh/authorized_keys on all 12
+- MAXIMUS = the Mac this Cline window runs on (K064QD22G9); NERO = smsmac/WOPR:2223
+- Both Macs: rubenmajor SSH works, root denied, sudo needs admin pw (not stored anywhere found)
 
 Open threads to drive next (EVERY item has a real filed idea #):
-1. #29032 [blocked] — NERO/MAXIMUS root: needs Ruben's Mac sudo password or local one-liner to authorize WOPR key for root (or NOPASSWD sudo for rubenmajor)
-2. #29033 [blocked] — GEMINI unreachable from WOPR (10.100.0.3:22 timeout); fix route/IP then install root key + patch proxy user=root
+1. #29032 [blocked — awaiting Ruben to run the two sudo one-liners on NERO + MAXIMUS] — then flip proxy nero/maximus to user=root, restart service, verify uid=0. Exact commands are in the idea description and the completion above.
+2. #29033 [blocked] — GEMINI (10.100.0.3:22) unreachable from WOPR; fix route/IP, install root key, patch proxy user=root
 
 Reference IDs:
 - Ideas filed: #29032 [blocked], #29033 [blocked]
-- Files touched: /var/www/emtskills/scripts/ws_ssh_proxy.py (+backup), /etc/ssh/sshd_config.d/joshua.conf (JOSHUA), /etc/ssh/sshd_config.d/99-emsu-hardening.conf (ARTEMIS), /root/.ssh/authorized_keys on 12 hosts
+- Files touched: /var/www/emtskills/scripts/ws_ssh_proxy.py (+backup), /etc/ssh/sshd_config.d/joshua.conf, /etc/ssh/sshd_config.d/99-emsu-hardening.conf, /root/.ssh/authorized_keys ×12
 - Service: emsu-web-terminal.service (restarted 10:56 PT)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
@@ -236,21 +477,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1788161048426` — 8/31/2026, 11:19:01 AM PT — 149 turns
-
-**Original task:**
-
-```
-#Joshua Qwen 3.8 27B
-
-Bring back up Joshua Qwen 3.8 27B to serving
-```
-
-**Ideas referenced:** #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788197224029` — 8/31/2026, 11:17:48 AM PT — 276 turns
+### `1788197224029` — 8/31/2026, 11:21:01 AM PT — 277 turns
 
 **Original task:**
 
@@ -270,87 +497,6 @@ approved:
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788195482100` — 8/31/2026, 11:17:39 AM PT — 201 turns
-
-**Original task:**
-
-```
-#Nero Qwen 3.8 27B
-
-Approved, but if wedged, which likely is not, then fix it. Honestly i doubt maximus is even down. Not sure why this is even a proposed idea. 
-
-1. #29017 [proposed] — Probe Maximus :11530 MLX decode (on-box via SSH :2223, then lane). If serving, re-add `http://127.0.0.1:11530` to `drop-decode-dead-mlx-20260830.conf` FRANK_TOOLS_UPSTREAMS/FRANK_CHAT_UPSTREAMS and restart `frankenstein-tools` (same revert path used for Nero). If decode-wedged, leave dropped and report.
-
-How do we then durably ensure that Nero is not lost by Agents or if it goes down, it can go back up quickly 
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18720, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #25888, #27236, #27249 [executing], #27250, #27503, #28956, #28958, #29017 [proposed], #29026 [deployed], #29034 [deployed], #29037, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-man-only decision, no idea)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Nero + Maximus MLX decode watchdog anti-loss + Maximus restore\n\nWhere we left off (verified 2026-08-31 11:13 PT):\n- Nero Qwen3.8-27B MLX :11525 serving. On-box log POST /v1/chat/completions HTTP/1.1 200 at 11:00:20 PT. Watchdog com.emsu.nero-decode-watchdog armed, log OK http=200 at 10:58:47 PT. Idea #29026 [deployed].\n- Maximus Qwen3.8-27B MLX :11530 serving. On-box curl HTTP=200 t=9.32s with 5 tokens at 10:56:56 PT after kickstart (new PID 29642). Watchdog com.emsu.maximus-decode-watchdog armed, plutil OK. Idea #29034 [deployed].\n- :11530 re-added to drop-decode-dead-mlx-20260830.conf in both upstreams. FRANK_BOX_CAPACITY 11530=2. sudo -n systemctl restart frankenstein-tools, unit active, merged env shows 11530 and 11525.\n- Ideas: #29017 [deployed] (verify + restore executed), #29026 [deployed], #29034 [deployed]. Rule 317 clause 13 amended twice (errored tool call = zero evidence; enum coercion requires live SELECT).\n\nOpen threads to drive next:\n1. None, all work completed and verified this session. (human-only decision, no idea)\n\nReference IDs:\n- Ideas filed: #29017 [deployed], #29026 [deployed], #29034 [deployed]\n- Files touched: /etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-drop-decode-dead-mlx-20260830.conf; Mac Nero /Users/rubenmajor/bin/nero_decode_watchdog.sh + ~/Library/LaunchAgents/com.emsu.nero-decode-watchdog.plist; Mac Maximus /Users/rubenmajor/bin/maximus_decode_watchdog.sh + ~/Library/LaunchAgents/com.emsu.maximus-decode-watchdog.plist; /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md (clause 13 amended twice)\n\nWhen done, append to cline_task_ledger.md per rule 07 and run order 66.\n═══════════════════════════════════════════════",
-  "task_prompt": "#Nero Qwen 3.8 27B\n\nApproved, but if wedged, which likely is not, then fix it. Honestly i doubt maximus is even down. Not sure why this is even a proposed idea. \n\n1. #29017 [proposed] — Probe Maximus :11530 MLX decode (on-box via SSH :2223, then lane). If serving, re-add `http://127.0.0.1:11530` to `drop-decode-dead-mlx-20260830.conf` FRANK_TOOLS_UPSTREAMS/FRANK_CHAT_UPSTREAMS and restart `frankenstein-tools` (same revert path used for Nero). If decode-wedged, leave dropped and report.\n\nHow do we then durably ensure that Nero is not lost by Agents or if it goes down, it can go back up quickly automatically?"
-}
-</arguments>
-<task_progress>
-- [x] Nero watchdog deployed + serving verified (idea #29026)
-- [x] Maximus: kickstarted, decode verified, re-added, watchdog deployed (idea #29034)
-- [x] Rule 317 amendments (clause 13 x2) filed
-- [x] #29017 -> [deployed] live-verified; drop-in + handoff corrected
-- [x] Result rebuilt: top status line, concrete plutil marker, all # bracketed, no trigger phrases
-- [ ] Final gate pass + attempt_completion
-</task_progress>
-</use_mcp_tool>
-```
-
-### `1788195724924` — 8/31/2026, 11:04:20 AM PT — 102 turns
-
-**Original task:**
-
-```
-#EMT Skills Slowness
-
-We have YET Another slowness detected for /emtskills. Please durably solve/resolve and write to the document
-
---
-Pick up task 1788147338340 - read + append emtskills slowness .md, resolve emsuniversity.com/emtskills slowness again.
-Left off: "all four approved ideas are [deployed], risk question on #28939 has an honest correction, GLM53..." - verify the .md append landed and the deploy stuck.
-```
-
-**Ideas referenced:** #178806, #178814, #19338, #19458, #19491, #23133, #2342, #23945, #23952, #23954, #25548 [executing], #25679 [executing], #25888, #2590, #25940 [executing], #26009, #26068, #26218, #26219 [deployed], #26234, #26258, #26336, #26348, #27691, #28722 [proposed], #28762, #28774, #28776, #28795, #28891, #28893, #28894, #28895, #28897, #28939, #28958, #29023 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-Log
-No reversals this window.
-
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1788147338340 — durable /emtskills slowness resolution.
-
-Where we left off (verified 2026-08-31 10:34 PT):
-- Root cause #15: guardian RAM-ample fail-open documented but never coded; flush_swap() called unconditionally → 6-8GB swapoff every 900s = disk hammer.
-- Fixed: fail-open gate in flush_swap() (keep stale swap when MemAvailable >= 32GB). Backup .bak-20260831-failopen, bash -n clean.
-- Verified live: cron ticks 10:27/10:28 log FAIL-OPEN, swap holds ~8071MB, no swapoff.
-- Doc: appended to /var/www/emtskills/docs/EMTSKILLS_SLOWNESS_RCA_2026-08-11.md.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29023 [proposed] — fix cosmetic log wart: FAIL-OPEN path still logs misleading REMEDIATED line. Make flush_swap() return distinct code 2 and callers log FAIL-OPEN instead.
-
-Reference IDs:
-- Ticket: n/a (task 1788147338340)
-- Ideas filed: #29023 [proposed]
-- Files touched: /var/www/emtskills/scripts/emsu-memory-guardian.sh, /var/www/emtskills/docs/EMTSKILLS_SLOWNESS_RCA_2026-08-11.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
 ### `1788195017985` — 8/31/2026, 10:23:03 AM PT — 267 turns
 
 **Original task:**
@@ -364,54 +510,6 @@ See the latest emails since August 28 from DSHS and log to the system/ prepare r
 **Ideas referenced:** #19587, #19595 [executing], #20734, #2797 [deployed], #28110, #28958, #29018 [proposed], #29019 [proposed], #29020 [proposed], #29021 [proposed], #450438, #92400
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788196060306` — 8/31/2026, 10:20:22 AM PT — 46 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-approved
-- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
-
-- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
-
-
-```
-
-**Ideas referenced:** #25466, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #4434, #4575, #5608, #5892, #6181, #6300, #6366, #6424, #6628, #7063, #7141, #9261, #9648
-
-**Last PICKUP PROMPT:**
-
-```
-is really on disk and serving.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus Improvements (P8 dispatcher ordering shipped; P10 browser-QA handed to Ruben).
-
-Where we left off (verified 2026-08-31 10:19 PT):
-- #29015 [deployed] — PROMPT 8 render located at routes/ruben_executor_live.php 💡 Ideas panel (lines 3700-3703); ORDER BY now `priority DESC, CASE WHEN created_at >= NOW() - INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC`. Deployed via sudo, lint clean, FPM reloaded, HTTP 401 (expected auth wall), SQL semantics probe green vs live admin_portal.
-- #29014 [proposed] — P10 browser-QA (Activity facets/burst, Tasks native list, Actions Escape/filter/Payments-merge) handed to Ruben as in-line questions; awaiting his manual admin session results.
-- Backup: /tmp/ruben_executor_live.php.bak-20260831-p8; staged new file /tmp/ruben_executor_live.php.new-p8.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29014 [proposed] — Wait for Ruben to paste in the P10 results; convert any FAIL to a bug ticket with the exact step/screenshot, then stamp this idea deployed (or rejected if Ruben chooses to close without running it).
-2. (human-only decision, no idea) — Confirm whether #29015's freshness-as-tiebreaker (fresh sorts higher WITHIN equal priority) matches the intended global-fresh-first reading of PROMPT 8; if Ruben wants fresh ideas to outrank even higher-priority older ones, re-key the ORDER BY to `CASE WHEN created_at >= NOW() - INTERVAL 45 MINUTE THEN 0 ELSE 1 END, priority DESC, created_at DESC`.
-
-Reference IDs:
-- Ticket: Argus QA regression run (2026-08-30 PT), prompts 1–12
-- Ideas filed: #29015 [deployed], #29014 [proposed]
-- Files touched: /var/www/emtskills/routes/ruben_executor_live.php
-- Backups: /tmp/ruben_executor_live.php.bak-20260831-p8, /tmp/ruben_executor_live.php.new-p8
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1788154719401` — 8/31/2026, 10:06:18 AM PT — 397 turns
 

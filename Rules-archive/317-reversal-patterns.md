@@ -5,22 +5,22 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **202**
-- Last generated: 2026-08-31 10:50
+- Reversals tracked: **206**
+- Last generated: 2026-08-31 11:50
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 93 | 46% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 96 | 47% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 37 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
-| unread source | 27 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
+| unread source | 28 | 14% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 24 | 12% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
 | stale assumption | 21 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 77 amendment(s)
+- Rule 317: 81 amendment(s)
 - Rule 297: 45 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-08-31** — Amends clause 3 (escalation probe before declaring any wall): before declaring an ORGANIZATION or counterparty absent from the record, exhaust its ALIAS/BRAND-FAMILY names (parent company, dba, rebrand — e.g. AMR = Global Medical Response = GMR) across ALL dat
+- **2026-08-31** — Further amends clause 3, second reversal in the same session on the same question. The first amendment said to exhaust the CONTENT path (OCR scanned files) before declaring a document absent. That was still insufficient, because it stayed inside the filesystem
+- **2026-08-31** — Amends clauses 1 and 3 and adds clause 13: a tool call that returns an ERROR (invalid JSON, MCP child-timeout, non-zero) produced ZERO evidence and must never be treated as if it returned a probe verdict. This window wrote a Maximus 'no MLX backend / orphaned 
 - **2026-08-31** — Amends clause 3 (escalation probe before declaring any wall) to cover DOCUMENT-ABSENCE claims: a filename or name search returning nothing is NOT evidence a document does not exist. Scanned PDFs carry no text layer, so grep and name queries are blind to them, 
 - **2026-08-31** — amends clause 3: before batch-rendering PDF pages for OCR, probe page dimensions and swap headroom first. This window the batch render of a full-res 3024x4032pt 4-page phone-photo PDF exhausted swap (30MB free) and killed the process silently; the corrected ap
-- **2026-08-31** — Amends clause 1/INSUFFICIENT_PROBE: a capability rejection from ONE serving stack is NEVER a model-capability verdict. This window probed an MLX 4-bit lane (Maximus :11530), got 'Only text content type is supported', and declared Qwen3.8-27B text-only — but th
-- **2026-08-31** — Amends clause 3 (escalation probe before declaring any wall) + reinforces rule 322 tunnel-vs-model: a WOPR-side tunnel probe returning 000/reset is evidence about the TUNNEL, never the far-end service. This window declared 'Nero dead, no remote path' from tunn
-- **2026-08-31** — Amends clause 1/INSUFFICIENT_PROBE: systemd unit config claims must resolve LAST-WINS drop-in semantics — a grep of `systemctl cat` output shows EVERY historical Environment= line and the FIRST occurrence is usually stale. The only ground truth for a running s
 
 ### wrong premise
 
@@ -55,11 +55,11 @@ _The reasoning was sound but rested on a false starting fact. State the premise 
 
 _The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing._
 
+- **2026-08-31** — Amends clauses 1 and 13: before writing a disposition to orchestrator_ideas.status, probe information_schema.COLUMNS; MySQL non-strict silently coerces enum values not in the column type (an UPDATE to 'superseded' became 'rejected' with rows affected=1). A liv
 - **2026-08-30** — Amends the resolution rules: (1) an llm_call_log model string is a LABEL, not a physical model — litellm model_names can be ALIASES backed by a different provider (verified 2026-08-29: config.yaml lines 244-253 back claude-haiku/claude-haiku-4-5 with deepseek/
 - **2026-08-29** — Amends clause 2 (acquisition gate): a mailer's transport must be read from the config file the mailer ACTUALLY loads (config/config.php merged via array_replace_recursive with config.local.php), never from a config file that exists but is unused (config/mail.p
 - **2026-08-29** — amends the cgroup-identity gate: never claim 'all watchdogs stopped' from pkill alone — a root-owned systemd unit (observed: glm52-watchdog.service PID 678) survives user pkill and can fire relaunches mid-boot. Always enumerate /proc/<PID>/cgroup owners for ev
 - **2026-08-29** — 2026-08-28 reversal: Email 2 in the DSHS copy-paste set was written as a generic 'where are my records' follow-up for TPIA-010 (ORR A08132026.0450013) while HHSC had already sent a clarification/narrowing demand on 2026-08-24 22:03 UTC that the draft never ans
-- **2026-08-26** — Follow-up ledger stamp for task 1787606148778-mailer-rca (same fix as tasks 1787606148778 and 1787606148778-r91-rca): rule 91's copy-paste template lacked the mandatory Reversal Log section required by idea #25888's R317_REVERSAL_LOG gate. Template edited on d
 
 ### scope error
 

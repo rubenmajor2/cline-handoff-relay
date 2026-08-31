@@ -727,3 +727,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Further amends clause 3, second reversal in the same session on the same question. The first amendment said to exhaust the CONTENT path (OCR scanned files) before declaring a document absent. That was still insufficient, because it stayed inside the filesystem. The durable rule: for any "do we have a record of X" question, query the APPLICATION'S OWN REGISTRY first, before the filesystem and before cloud storage. Filesystem and Drive hold bytes; the registry holds the mapping from bytes to meaning. Source: 2026-08-31, after OCR corrected the first false absence, the dossier still reported Colorado County EMS as not located. It was registered the whole time in ExternshipSite.compliance_doc_id -> compliance_documents as doc 11 with original_filename "Colorado County Affiliation.pdf", stored on disk under the meaningless name clinical-site-agreement_school_3a81ee00.pdf, executed by both parties. Three of the located instruments had stored filenames that named neither party, so no filesyst
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 18:35 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788162122
+- RCA bucket: insufficient probe
+- Trigger pattern: Declared "AMR genuinely absent, zero hits anywhere" after searching only the literal string AMR/American Medical across document registries; the organization was actively corresponding under its paren
+- Reversal note: Amends clause 3 (escalation probe before declaring any wall): before declaring an ORGANIZATION or counterparty absent from the record, exhaust its ALIAS/BRAND-FAMILY names (parent company, dba, rebrand — e.g. AMR = Global Medical Response = GMR) across ALL data surfaces including email logs (email_inbound_log, email_outbound_log, jon_email_triage), not just document registries and filesystems. A zero-hit search on one brand name of a multi-brand organization is an insufficient probe.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 18:55 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788162122
+- RCA bucket: insufficient probe
+- Trigger pattern: Declared documents absent from Drive after bare-keyword name search of a recordings-dominated corpus, without quoted-phrase + filetype search or asking for legacy archive locations.
+- Reversal note: Further amends clause 3, second reversal in the same session on the same question. The first amendment (alias/brand-family search) was still insufficient: the "AMR genuinely absent from Drive" claim was based on a name search of the DEFAULT Drive corpus, which is dominated by Zoom recordings. The human then supplied a legacy archive folder link where three executed AMR instruments sat. Rule: before declaring a document absent from Drive, (a) ask the human whether a legacy/archive folder exists, (b) use quoted-phrase searches ("American Medical Response" agreement) with file-type filters, and (c) note that older Drive files behind auth walls need the OAuth token refresh flow (google_token_drive.json), not the uc?export=download endpoint.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

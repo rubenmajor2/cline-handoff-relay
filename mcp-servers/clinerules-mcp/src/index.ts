@@ -293,7 +293,8 @@ function initSchema(db: Database.Database): void {
       task_id TEXT NOT NULL,
       tool TEXT NOT NULL,
       artifact TEXT,
-      created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+      created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
+      source TEXT DEFAULT 'self'
     );
     CREATE INDEX IF NOT EXISTS idx_session_probes_task ON session_probes(task_id);
     CREATE INDEX IF NOT EXISTS idx_session_probes_time ON session_probes(created_at);
@@ -1862,9 +1863,25 @@ server.tool(
     // artifact. Adoption-safe: zero-probe tasks skip entirely.
     if (task_id && task_id.trim().length > 0) {
       try {
-        const probes = db.prepare(
-          `SELECT tool, artifact FROM session_probes WHERE task_id = ? ORDER BY id DESC LIMIT 200`
-        ).all(task_id) as Array<{ tool: string; artifact: string | null }>;
+        // ── 2026-08-31 anti-laundering upgrade (Ruben: "could a small probe be
+        // used to falsely claim something has been verified?"). YES it could:
+        // probes were SELF-reported, so an agent could log one trivial probe
+        // whose artifact text shares tokens with a fabricated marker and launder
+        // it through. Fix: probes now carry a source ('self' = agent-logged via
+        // clinerules_log_probe; 'auto' = machine-captured from the task's actual
+        // tool-call history by the correction watchdog). When AUTO probes exist
+        // for the task, markers are cross-checked against the AUTO set ONLY —
+        // an agent cannot launder evidence through a ledger it does not write.
+        // Self-only tasks still get the self-set check (better than nothing,
+        // and honest agents are unaffected). Balance per Ruben: no new blocking
+        // when neither set exists — zero-probe tasks still skip entirely, so
+        // the LLM is never choked by the gate.
+        const allProbes = db.prepare(
+          `SELECT tool, artifact, source FROM session_probes WHERE task_id = ? ORDER BY id DESC LIMIT 400`
+        ).all(task_id) as Array<{ tool: string; artifact: string | null; source: string | null }>;
+        const autoProbes = allProbes.filter((p) => (p.source || "self") === "auto");
+        const probes = autoProbes.length > 0 ? autoProbes : allProbes;
+        const probeSetLabel = autoProbes.length > 0 ? "machine-captured (auto)" : "self-logged";
         if (probes.length > 0) {
           const probeText = probes.map((p) => (p.tool + " " + (p.artifact || "")).toLowerCase()).join("\n");
           const staleMarkers: string[] = [];

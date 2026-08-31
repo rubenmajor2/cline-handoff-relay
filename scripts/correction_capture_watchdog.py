@@ -117,6 +117,75 @@ def scan_task(task_dir: Path, con: sqlite3.Connection) -> int:
         con.commit()
     return inserted
 
+def capture_auto_probes(task_dir: Path, con: sqlite3.Connection) -> int:
+    """
+    Anti-laundering half of idea #29011 (Ruben 2026-08-31: 'could a small probe
+    be used to falsely claim something has been verified?'). Self-logged probes
+    can launder fake (verified:) markers via token overlap, because the agent
+    writes both the marker and the probe. This function machine-captures the
+    task's ACTUAL tool calls from api_conversation_history.json into
+    session_probes with source='auto'. The validator's freshness gate prefers
+    the auto set when it exists, so an agent cannot launder evidence through
+    a ledger it does not control.
+    """
+    hist = task_dir / "api_conversation_history.json"
+    if not hist.exists():
+        return 0
+    try:
+        msgs = json.loads(hist.read_text(errors="replace"))
+    except Exception:
+        return 0
+    if not isinstance(msgs, list):
+        return 0
+    task_id = task_dir.name
+    # Dedup: track how many auto probes already stored, only append new ones.
+    existing = con.execute(
+        "SELECT COUNT(*) FROM session_probes WHERE task_id = ? AND source = 'auto'",
+        (task_id,),
+    ).fetchone()[0]
+    tool_events = []
+    for m in msgs:
+        if not isinstance(m, dict):
+            continue
+        content = m.get("content")
+        if not isinstance(content, list):
+            continue
+        for block in content:
+            if not isinstance(block, dict):
+                continue
+            if block.get("type") == "tool_use":
+                name = str(block.get("name") or "")[:200]
+                args = json.dumps(block.get("input") or {})[:400]
+                tool_events.append((name, args))
+            elif block.get("type") == "tool_result":
+                # Capture a snippet of what the tool RETURNED — the strongest artifact.
+                c = block.get("content")
+                snippet = ""
+                if isinstance(c, str):
+                    snippet = c[:400]
+                elif isinstance(c, list):
+                    for part in c:
+                        if isinstance(part, dict) and part.get("type") == "text":
+                            snippet = str(part.get("text") or "")[:400]
+                            break
+                if snippet and tool_events:
+                    name, args = tool_events[-1]
+                    tool_events[-1] = (name, (args + " => " + snippet)[:900])
+    if len(tool_events) <= existing:
+        return 0
+    inserted = 0
+    for name, artifact in tool_events[existing:]:
+        if not name:
+            continue
+        con.execute(
+            "INSERT INTO session_probes (task_id, tool, artifact, source) VALUES (?,?,?, 'auto')",
+            (task_id, name, artifact),
+        )
+        inserted += 1
+    if inserted:
+        con.commit()
+    return inserted
+
 def main() -> int:
     if not DB_PATH.exists():
         log(f"DB missing at {DB_PATH}; clinerules MCP not initialized yet")
@@ -128,6 +197,7 @@ def main() -> int:
     con.execute("PRAGMA busy_timeout = 5000")
     now = time.time()
     total = 0
+    probes = 0
     scanned = 0
     for task_dir in TASKS_DIR.iterdir():
         if not task_dir.is_dir():
@@ -140,10 +210,11 @@ def main() -> int:
         scanned += 1
         try:
             total += scan_task(task_dir, con)
+            probes += capture_auto_probes(task_dir, con)
         except sqlite3.OperationalError as e:
             log(f"sqlite busy on {task_dir.name}: {e}")
     con.close()
-    log(f"scan complete: {scanned} recent task(s), {total} new correction(s) captured")
+    log(f"scan complete: {scanned} recent task(s), {total} new correction(s), {probes} auto probe(s) captured")
     return 0
 
 if __name__ == "__main__":

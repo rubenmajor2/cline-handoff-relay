@@ -677,3 +677,53 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 12 (aggregation integrity): a traffic-share explanation scoped to ONE pool (the free-local adapter pool) must not be phrased as a statement about the WHOLE routing ladder. 2026-08-30: a completion said 'there was nothing else left to route to' after the local Qwen lanes died - false, because the LiteLLM ladder always retains DeepSeek-v4-pro and paid cloud rungs above the adapter pool. The correct claim shape: 'the local Qwen rung was absent, so traffic that the ladder would have kept local fell to the 120Bs and, at saturation, onward to cloud' - naming which rung was missing, never implying the chain terminated. Completion claims about routing must enumerate the full ladder including rungs ABOVE the probed pool.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 17:45 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: grievances-20260831
+- RCA bucket: insufficient probe
+- Trigger pattern: Wrote a batch loop that renders all PDF pages at full resolution before OCR, without checking page dimensions or swap headroom; process died mid-run.
+- Reversal note: amends clause 3: before batch-rendering PDF pages for OCR, probe page dimensions and swap headroom first. This window the batch render of a full-res 3024x4032pt 4-page phone-photo PDF exhausted swap (30MB free) and killed the process silently; the corrected approach rendered one page at a time at 150 DPI then downscaled to 1568px, which succeeded. A render loop is a probe surface too: check swap and per-page pixel count before holding multiple pages in memory.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 17:49 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788161048426
+- RCA bucket: insufficient probe
+- Trigger pattern: Agent runs a filename/name search, gets zero hits, and records "not located" as a finding rather than as the result of one narrow probe. Especially dangerous with scanned documents, which are invisibl
+- Reversal note: Amends clause 3 (escalation probe before declaring any wall) to cover DOCUMENT-ABSENCE claims: a filename or name search returning nothing is NOT evidence a document does not exist. Scanned PDFs carry no text layer, so grep and name queries are blind to them, and a file whose name omits the counterparty is invisible to both. Before declaring any instrument, contract, or record "not located," the agent must exhaust the content path: test each candidate for a text layer, rasterize and OCR the ones without, and read the party and execution blocks. Source: 2026-08-31 TDSHS 1080262054 reversal. A prior window wrote "only Karnes County EMS and Bexar-Bulverde have been found" and instructed that no filing claim all agreements were located. A content+OCR sweep of the same store located executed instruments for six of the nine organizations DSHS named plus three more, including one filed under a business-license filename and one under a null_ prefix. The false-absence claim was about to go into
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 18:02 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: insufficient probe
+- Trigger pattern: Treating an errored/failed tool call as a successful probe result and propagating its would-be verdict into files, DB rows, and dispositions.
+- Reversal note: Amends clauses 1 and 3 and adds clause 13: a tool call that returns an ERROR (invalid JSON, MCP child-timeout, non-zero) produced ZERO evidence and must never be treated as if it returned a probe verdict. This window wrote a Maximus 'no MLX backend / orphaned sshd' finding into the drop-in and stamped an idea [rejected] after its first probe call failed with 'Invalid JSON argument', i.e. a fabricated probe result with no probe at all.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 18:12 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: unread source
+- Trigger pattern: Writing a status/disposition from an assumed enum vocabulary without reading the actual column definition, then trusting rows affected as proof the value persisted.
+- Reversal note: Amends clauses 1 and 13: before writing a disposition to orchestrator_ideas.status, probe information_schema.COLUMNS; MySQL non-strict silently coerces enum values not in the column type (an UPDATE to 'superseded' became 'rejected' with rows affected=1). A live SELECT after every UPDATE or write is the proof the write is actually true.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 18:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788161048426
+- RCA bucket: insufficient probe
+- Trigger pattern: Agent searches the filesystem and cloud storage for a document, gets zero hits, and reports absence without ever querying the database table the application itself uses to track those documents. Compo
+- Reversal note: Further amends clause 3, second reversal in the same session on the same question. The first amendment said to exhaust the CONTENT path (OCR scanned files) before declaring a document absent. That was still insufficient, because it stayed inside the filesystem. The durable rule: for any "do we have a record of X" question, query the APPLICATION'S OWN REGISTRY first, before the filesystem and before cloud storage. Filesystem and Drive hold bytes; the registry holds the mapping from bytes to meaning. Source: 2026-08-31, after OCR corrected the first false absence, the dossier still reported Colorado County EMS as not located. It was registered the whole time in ExternshipSite.compliance_doc_id -> compliance_documents as doc 11 with original_filename "Colorado County Affiliation.pdf", stored on disk under the meaningless name clinical-site-agreement_school_3a81ee00.pdf, executed by both parties. Three of the located instruments had stored filenames that named neither party, so no filesyst
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

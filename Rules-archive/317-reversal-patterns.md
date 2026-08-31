@@ -5,22 +5,22 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **200**
-- Last generated: 2026-08-31 09:50
+- Reversals tracked: **202**
+- Last generated: 2026-08-31 10:50
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 91 | 46% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 93 | 46% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 37 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
-| unread source | 27 | 14% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
+| unread source | 27 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 24 | 12% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
 | stale assumption | 21 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 75 amendment(s)
+- Rule 317: 77 amendment(s)
 - Rule 297: 45 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-08-31** — Amends clause 3 (escalation probe before declaring any wall) to cover DOCUMENT-ABSENCE claims: a filename or name search returning nothing is NOT evidence a document does not exist. Scanned PDFs carry no text layer, so grep and name queries are blind to them, 
+- **2026-08-31** — amends clause 3: before batch-rendering PDF pages for OCR, probe page dimensions and swap headroom first. This window the batch render of a full-res 3024x4032pt 4-page phone-photo PDF exhausted swap (30MB free) and killed the process silently; the corrected ap
 - **2026-08-31** — Amends clause 1/INSUFFICIENT_PROBE: a capability rejection from ONE serving stack is NEVER a model-capability verdict. This window probed an MLX 4-bit lane (Maximus :11530), got 'Only text content type is supported', and declared Qwen3.8-27B text-only — but th
 - **2026-08-31** — Amends clause 3 (escalation probe before declaring any wall) + reinforces rule 322 tunnel-vs-model: a WOPR-side tunnel probe returning 000/reset is evidence about the TUNNEL, never the far-end service. This window declared 'Nero dead, no remote path' from tunn
 - **2026-08-31** — Amends clause 1/INSUFFICIENT_PROBE: systemd unit config claims must resolve LAST-WINS drop-in semantics — a grep of `systemctl cat` output shows EVERY historical Environment= line and the FIRST occurrence is usually stale. The only ground truth for a running s
-- **2026-08-31** — Amends clause 3 again: an ABSENCE returned by a per-entity lookup is not proof the thing does not exist. verify_payment_state and get_student_360 for Lindsey Rose both returned "invoice_count 0, balance $0" because those tools join on Students.id, and her invo
-- **2026-08-31** — AMENDS CLAUSE 1: claimed widget AI model claude-sonnet-4-6 'resolves to a slow local vLLM alias' from memory of a prior session. Live probe showed 42/42 chat_portal_sites rows = frankenstein-llm; claude-sonnet-4-6 existed ONLY as PHP fallback defaults (api/cha
 
 ### wrong premise
 

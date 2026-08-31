@@ -6,14 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/30/2026, 11:09:58 PM PT | window: last 72h | 79 tasks | index total 992 (parsed 7, cached 985)
+Generated: 8/30/2026, 11:39:58 PM PT | window: last 72h | 79 tasks | index total 992 (parsed 4, cached 988)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788156466825` | 8/30/2026, 11:09:49 PM | 7 | 31KB | #VERITAS |
-| `1788154719401` | 8/30/2026, 11:09:26 PM | 87 | 298KB | #Argus Improvmeents |
-| `1788065744387` | 8/30/2026, 11:09:10 PM | 721 | 3113KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
-| `1788154492433` | 8/30/2026, 11:08:53 PM | 220 | 358KB | #Frankenstein-LLM Routing |
+| `1788065744387` | 8/30/2026, 11:39:54 PM | 777 | 3300KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
+| `1788154719401` | 8/30/2026, 11:37:44 PM | 165 | 418KB | #Argus Improvmeents |
+| `1788154492433` | 8/30/2026, 11:35:36 PM | 305 | 615KB | #Frankenstein-LLM Routing |
+| `1788156466825` | 8/30/2026, 11:34:35 PM | 54 | 207KB | #VERITAS |
 | `1788147338340` | 8/30/2026, 11:07:42 PM | 254 | 1328KB | #EMTSkills Slowness |
 | `1788156197612` | 8/30/2026, 11:03:17 PM | 1 | 2KB | #VERITAS |
 | `1788116945411` | 8/30/2026, 10:48:43 PM | 336 | 696KB | #$12K bill suspension |
@@ -94,47 +94,7 @@ Generated: 8/30/2026, 11:09:58 PM PT | window: last 72h | 79 tasks | index total
 
 ## Per-window detail
 
-### `1788156466825` — 8/30/2026, 11:09:49 PM PT — 7 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Think about how many times that you've told me today that some claim that you made was false. How concerning is that? There's something seriously wrong. 
-
-Your treat gates are not working at all whatsoever. I would say that about just anecdotally if I had to guess 60 to 70% of windows here in cline contain false information. Pretty devastating if you ask me
-
-Maybe you could create a veritas agent? Maybe you could attach it to a learner and work in tandem with Kai zone on it to ensure the truth. I'm just throwing ideas out there I don't know if this is the best way or not but we are h
-```
-
-**Ideas referenced:** #26696
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788154719401` — 8/30/2026, 11:09:26 PM PT — 87 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-please see the follwoing for Argus imprrovements/errors to resolve and take rule 29 action
-
---
-EMSU Argus · QA regression run · prompts 1–12
-Argus Browser-AI Test Run
-Executed live against production, Sun Aug 30, 2026, 21:19–22:20 PT, as rmajor@emsuniversity.com (MasterAdmin), full-fidelity wait windows, live submissions approved. Test chat: #2715. Background tasks created during the run: #747–#751. Ideas filed as side effects: #28936, #28945.
-Verdict board
-#	Test	Verdict	One-line result
-P1	Executor throughput + inline lane	FAIL	Read-only question never answered inline; of
-```
-
-**Ideas referenced:** #178806, #19455, #22687, #2670, #2672, #2698, #2715, #28465, #28551, #28552, #28607, #28730, #28751, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28899, #28901, #28905, #28912, #28933, #28936, #28945, #347734, #4357, #475569, #5391, #5449, #5451, #5920, #5932, #6064, #6067, #6109, #6218, #6226, #6366, #64748
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788065744387` — 8/30/2026, 11:09:10 PM PT — 721 turns
+### `1788065744387` — 8/30/2026, 11:39:54 PM PT — 777 turns
 
 **Original task:**
 
@@ -152,38 +112,40 @@ Where we left off (verified 2026-08-29 20:59 PT):
 - Build fixes shipped and live-verified (disclaimer app
 ```
 
-**Ideas referenced:** #059669, #081020, #0891, #111827, #1119, #121218, #12364, #1242, #12584, #13033, #13035, #13037, #13442, #13965, #1567, #15815, #16474, #166534, #16732, #177796, #178593, #178629, #178634, #178640, #178656, #178671, #178805, #178806, #178813, #18335, #18541 [deployed], #18758, #1912, #19338, #1998, #20495, #2168, #2242, #22583, #22897 [executing], #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #23989, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #2516, #2521, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #252532, #25366 [deployed], #25385 [deployed], #25421, #25422, #25423, #25424, #25425, #25426, #25427, #25442, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #25550, #25796, #25797, #25798, #25962, #25964, #25965, #26229, #26376, #26377, #2642, #2654, #2659, #2662, #2666, #26696, #26710, #26725 [proposed], #26816, #26834, #26932, #27284, #28042, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #2850, #28504 [deployed], #28505, #28506 [deployed], #28543, #28546, #28605, #28606, #28612, #28613, #28615, #28621 [deployed], #28622 [deployed], #28643, #28683, #28705, #28706 [executing], #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28722 [deployed], #28723, #28725 [blocked], #28726, #28729, #28730 [executing], #28735 [deployed], #28738, #28740 [proposed], #28744 [deployed], #28745 [deployed], #28746, #28747, #28748, #28749, #28750, #28751, #28752 [executing], #28753, #28758 [deployed], #28759 [executing], #28769 [executing], #28770 [proposed], #28774 [proposed], #28775, #28787 [executing], #28788 [deployed], #28789, #28892 [executing], #28893, #28904 [executing], #28934 [proposed], #2916, #334155, #33689, #3577, #3988, #475569, #5918, #6104, #6111, #6366, #8966, #9084, #9112, #9131, #9132, #9152, #9222, #9263, #9510
+**Ideas referenced:** #059669, #081020, #0891, #111827, #1119, #121218, #12364, #1242, #12584, #127891, #128274, #13033, #13035, #13037, #13442, #13965, #1567, #15815, #16474, #166534, #16732, #177796, #178593, #178629, #178634, #178640, #178656, #178671, #178805, #178806, #178813, #18335, #18541 [deployed], #18758, #1912, #19338, #19837, #1998, #20495, #2168, #2242, #22583, #22897 [executing], #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #23989, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #2516, #2521, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #252532, #25366 [deployed], #25385 [deployed], #25421, #25422, #25423, #25424, #25425, #25426, #25427, #25442, #25466, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #25550, #25796, #25797, #25798, #25962, #25964, #25965, #26229, #26376, #26377, #2642, #2654, #2659, #2662, #2666, #26696, #26710, #26725 [proposed], #26816, #26834, #26932, #27284, #28042, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #2850, #28504 [deployed], #28505, #28506 [deployed], #28543, #28546, #28605, #28606, #28612, #28613, #28615, #28621 [deployed], #28622 [deployed], #28643, #28683, #28705, #28706 [executing], #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28722 [deployed], #28723, #28725 [blocked], #28726, #28729, #28730 [executing], #28735 [deployed], #28738, #28740 [proposed], #28744 [deployed], #28745 [deployed], #28746, #28747, #28748, #28749, #28750, #28751, #28752 [executing], #28753, #28758 [deployed], #28759 [executing], #28769 [executing], #28770 [proposed], #28774 [proposed], #28775, #28787 [executing], #28788 [deployed], #28789, #28892 [executing], #28893, #28904 [executing], #28933, #28934 [proposed], #2916, #334155, #33689, #3577, #3988, #475569, #5918, #6104, #6111, #6366, #8966, #9084, #9112, #9131, #9132, #9152, #9222, #9263, #9510
 
 **Last PICKUP PROMPT:**
 
 ```
-ollow-up for a full remap.
-
----
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Admin chat console audit + improvements (2026-08-30).
-
-Where we left off (verified 22:03 PT):
-- 12-tab console mapped: routes/chat_portal.php (3812 lines).
-- Claude-nuke completed in admin surface: api/chat_portal_api.php:1937 create-site default, routes/chat_portal.php:56 schema + :290-291 seeds → frankenstein-llm. php -l clean, 0 residual.
-- #28904 updated with admin-console extension; #28787 corrected with live diagnosis; #28934 filed (frankenstein-llm stall).
-
-Open threads to drive next:
-1. #28934 [proposed] — frankenstein-llm stall: reasoning-token tax + load queueing. Add reasoning_effort=low / non-reasoning lane for widget; probe load again.
-2. #28787 [executing] — widget brain latency: apply the #28934 recommendation (reasoning disabled for widget turns) and re-measure the public endpoint.
-
-Reference IDs:
-- Ticket: n/a
-- Ideas: #28787, #28892, #28904, #28934
-- Files touched: api/chat_portal_api.php, routes/chat_portal.php, api/chat_widget_api.php, lib/emsu_ai_brain.php, lib/widget_force_handoff.php, lib/AIReasoningLeakScanner.php, api/chat_widget_embed.js
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+mprehensive remediation idea with full scan preserved
+- [ ] Completion report + PICKUP PROMPT
+</task_progress>
+</use_mcp_tool>
 ```
 
-### `1788154492433` — 8/30/2026, 11:08:53 PM PT — 220 turns
+### `1788154719401` — 8/30/2026, 11:37:44 PM PT — 165 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+please see the follwoing for Argus imprrovements/errors to resolve and take rule 29 action
+
+--
+EMSU Argus · QA regression run · prompts 1–12
+Argus Browser-AI Test Run
+Executed live against production, Sun Aug 30, 2026, 21:19–22:20 PT, as rmajor@emsuniversity.com (MasterAdmin), full-fidelity wait windows, live submissions approved. Test chat: #2715. Background tasks created during the run: #747–#751. Ideas filed as side effects: #28936, #28945.
+Verdict board
+#	Test	Verdict	One-line result
+P1	Executor throughput + inline lane	FAIL	Read-only question never answered inline; of
+```
+
+**Ideas referenced:** #178806, #19455, #22687, #2670, #2672, #2698, #2715, #28465, #28544, #28551, #28552, #28607, #28730, #28751, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28899, #28901, #28905, #28912, #28933, #28936, #28945, #347734, #4357, #475569, #5391, #5449, #5451, #5920, #5932, #6064, #6067, #6109, #6218, #6226, #6366, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788154492433` — 8/30/2026, 11:35:36 PM PT — 305 turns
 
 **Original task:**
 
@@ -197,9 +159,95 @@ The franekstein-llm routing needs to be obeyed GLM 5.3 local -> Qwen 3.8 27B -> 
 confused as to how this makes things dumber. Obviously it's dumber if it's using the dumbest model of 120B which is two generations older -> __Dumber / rule-91 off = 27B spill.__ At saturation, interactive 
 ```
 
-**Ideas referenced:** #10740, #13108, #13874, #14000, #16120, #178805, #2050, #20722, #23574, #25178, #25185, #25764, #26400, #2675, #2676, #2677, #2679 [deployed], #26925, #27673, #28605, #28705 [deployed], #28723, #28762 [executing], #28766 [executing], #28780 [deployed], #28894 [deployed], #28895 [executing], #28897 [executing], #28905 [deployed], #28912 [deployed], #28925 [executing], #28926 [executing], #28930 [executing], #28943, #28944, #28948 [proposed], #28950 [proposed], #28956 [executing]
+**Ideas referenced:** #10740, #13108, #13874, #14000, #16120, #178805, #178806, #178814, #18166 [proposed], #2050, #20722, #23574, #25178, #25185, #25764, #25925, #25926, #25935, #26400, #2670, #2672, #2675, #2676, #2677, #2679 [deployed], #2680 [deployed], #2681 [deployed], #2682 [deployed], #2683 [deployed], #26916, #26925, #27100, #27673, #28605, #28607, #28705 [deployed], #28723, #28760, #28761, #28762 [executing], #28763, #28764, #28765, #28766 [executing], #28774, #28776, #28778, #28780 [deployed], #28783, #28795, #28891, #28893, #28894 [deployed], #28895 [executing], #28897 [executing], #28905 [deployed], #28912 [deployed], #28925 [executing], #28926 [executing], #28930 [executing], #28943, #28944, #28948 [proposed], #28950 [proposed], #28956 [executing]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+er row recorded for this task)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788143692000 — Qwen 27B lane starvation RCA + fleet-truth durable gate (corrected after Ruben steer).
+
+Where we left off (verified 2026-08-30 23:29 PT):
+- Routing code CORRECT; lanes were physically dead/wedged. My "nothing else to route to" claim RETRACTED — DeepSeek/cloud spill always existed; 317 clause 12 amended (ledger row written).
+- Live state (fleet_truth_report run 23:29:57 PT): Artemis+BigMac 120Bs serving (392 turns/30m), Julia 11513 BACK (200, 12 picks), GLM 8210 serving, GLM 8211 flapping (37 quarantines), Joshua 8001 wedged at Ray init, Nero+Maximus MLX decode-dead and out of pool.
+- Watchdog calm 23:01->23:29 (STALE_S 240 correction held).
+- Bug library rows recorded with durable corrections (each bug_library_record returned "Row existence confirmed on WOPR").
+- Durable tool in place: fleet_truth_report.py; community research folded in via LiteLLM docs (cooldown>interval, ignore-transients, per-deployment fails policy, all-unhealthy bypass floor).
+- Remaining-work idea scope expanded in DB (UPDATE returned rows affected 1) with all five durable workstreams.
+
+Open threads to drive next:
+1. #28956 [executing] — Joshua Ray-wedge deep work; Nero/Maximus MLX engine repair then re-add to pool; Maximus SSH line into registry; preprobe live-floor (never remove below N) per LiteLLM pattern; Julia guard false-alive repair.
+2. #28956 [executing] — watch GLM 8211 canary flapping (37 quarantines in 30m) — if it persists after the pool settles, it needs its own canary hygiene pass.
+
+Reference IDs:
+- Ticket: none (routing health RCA, Ruben-directed)
+- Ideas closed this session: #28948 [deployed], #28950 [deployed] (tags verbatim from the reconcile_ideas bulk call this session)
+- Ideas filed this session: #28956 [executing] (scope expanded via SQL rows affected 1; tag verbatim from the same reconcile call)
+- Bug library incidents (frankenstein_router_incidents rows, not orchestrator ideas): qwen38_lane_collapse (resolved), watchdog_false_stale_restart_storm (resolved), julia_prewedge_single_flight_ray_false_alive (investigating), maximus_shared_model_name_invalid (resolved), guard_interaction_livelock (resolved)
+- Rule amendments: 317 clause 12 (clinerules_amend_rule, ledger row for this task)
+- Files touched (WOPR unless noted): /var/www/emtskills/tools/fleet_truth_report.py (new), /etc/systemd/system/frankenstein-tools.service.d/zzz...-mlx-model-name-20260830.conf (new), zzz...-drop-decode-dead-mlx-20260830.conf (new), /usr/local/bin/emsu-frankenstein-tools-watchdog.sh (STALE_S 60->240, backup kept), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (RCA appended), Julia box lock files cleared (via ssh to Julia)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>- [x] Signal check + bug library gate
+- [x] Ground truth read (adapter env sudo, drop-ins, priority code, registry, tracker)
+- [x] Root cause: routing code CORRECT; lanes physically dead/wedged
+- [x] Julia :11513 revived — serving + taking picks
+- [x] Maximus model-name correction shipped (drop-in, /proc env verified)
+- [x] Watchdog restart storm corrected (STALE_S 240, calm 28+ min)
+- [x] Remaining work filed + scope-expanded #28956 [executing]
+- [x] Durable fleet-truth tool in place (#28948)
+- [x] Steer feedback addressed: claim retracted + 317 amended, all 5 bugs in library,
+```
+
+### `1788156466825` — 8/30/2026, 11:34:35 PM PT — 54 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Think about how many times that you've told me today that some claim that you made was false. How concerning is that? There's something seriously wrong. 
+
+Your treat gates are not working at all whatsoever. I would say that about just anecdotally if I had to guess 60 to 70% of windows here in cline contain false information. Pretty devastating if you ask me
+
+Maybe you could create a veritas agent? Maybe you could attach it to a learner and work in tandem with Kai zone on it to ensure the truth. I'm just throwing ideas out there I don't know if this is the best way or not but we are h
+```
+
+**Ideas referenced:** #25185, #25888, #26696, #28958 [proposed], #28961 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+e causal fix #28958 [proposed]
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #28958 [proposed] — VERITAS truth-gate diagnosis and deterministic claim-provenance replacement.
+
+Where we left off (verified 2026-08-30 23:26 PT):
+- Root cause measured: 2,073 completion blocks in 14d are almost all FORMAT checks; zero compare a claim to the actual tool return
+- truth_judge_log dead since 2026-08-27, was 74% FAIL (2,902/3,898) with no downstream gate acting on FAILs — LLM judge confirmed ineffectual, not being restored
+- agent_correction_log today = 414, all ruben_executor/yolo_prevention (not human corrections)
+- Idea #28958 [proposed] filed: deterministic claim-provenance gate (re-run session tool, diff claim vs return, no LLM in loop)
+
+Open threads to drive next:
+1. #28958 [proposed] — Implement R323_UNVERIFIABLE_CLAIM: material claims must bind to a session tool return; completion gate re-runs the tool and diffs claim vs actual return, blocks on mismatch
+
+Reference IDs:
+- Ideas filed: #28958 [proposed]
+- Tables read: truth_judge_log, cline_self_correction_log, agent_correction_log, clinerules_gate_blocks
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1788147338340` — 8/30/2026, 11:07:42 PM PT — 254 turns
 

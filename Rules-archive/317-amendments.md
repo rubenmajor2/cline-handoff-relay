@@ -667,3 +667,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 12 (aggregation integrity for serving/routing tables): a routing report that names a backend by its litellm ALIAS is a misrepresentation. frankenstein-tools, frankenstein-llm, and emsu-codegen are ALL the same gateway (api_base 127.0.0.1:11510), so grouping them as three distinct 'backends that served' overstates the fleet. A truthful routing table MUST resolve aliases to underlying adapter upstreams and cite /var/log/emsu-adapter-upstream.log per-lane counts for the window, AND must reconcile against GLM53_RING_STATE_TRACKER.md (append-only fleet identity) which redundantly warns 'READ THIS TRACKER FIRST before any fleet verdict'. A DOWN/WEDGE/QUARANTINE verdict for any endpoint (cicero-235b, decoded-wedged, fail-streak quarantine) requires a live probe THIS window returning proof: this session reported 'claude-3-7-sonnet 35 turns', '70B 6 turns', and 3 decode-wedged + 2 quarantined adapters, all DISPROVEN by config grep (alias absent), registry (70B retired:true 8/22), 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 06:27 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788143692000
+- RCA bucket: scope error
+- Trigger pattern: Explaining a traffic distribution change by reference to a collapsed pool without enumerating the spill rungs that remained available (cloud/DeepSeek), producing an over-broad 'nothing left' claim.
+- Reversal note: Amends clause 12 (aggregation integrity): a traffic-share explanation scoped to ONE pool (the free-local adapter pool) must not be phrased as a statement about the WHOLE routing ladder. 2026-08-30: a completion said 'there was nothing else left to route to' after the local Qwen lanes died - false, because the LiteLLM ladder always retains DeepSeek-v4-pro and paid cloud rungs above the adapter pool. The correct claim shape: 'the local Qwen rung was absent, so traffic that the ladder would have kept local fell to the 120Bs and, at saturation, onward to cloud' - naming which rung was missing, never implying the chain terminated. Completion claims about routing must enumerate the full ladder including rungs ABOVE the probed pool.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

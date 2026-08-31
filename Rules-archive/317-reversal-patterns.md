@@ -5,23 +5,23 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **198**
-- Last generated: 2026-08-30 22:41
+- Reversals tracked: **200**
+- Last generated: 2026-08-30 23:41
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
 | insufficient probe | 91 | 46% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
-| wrong premise | 36 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
+| wrong premise | 37 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 27 | 14% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
-| scope error | 23 | 12% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
-| stale assumption | 21 | 11% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
+| scope error | 24 | 12% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
+| stale assumption | 21 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 74 amendment(s)
-- Rule 297: 44 amendment(s)
+- Rule 317: 75 amendment(s)
+- Rule 297: 45 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
 - Rule 322: 8 amendment(s)
@@ -45,11 +45,11 @@ _You had SOME evidence and stopped early. One auth error is not a dead credentia
 
 _The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it._
 
+- **2026-08-31** — Amends the CLASSIFY step: an arithmetic identity that fails across two tables is a HYPOTHESIS about missing terms, never evidence of corruption. I reported "14 arithmetically impossible invoices" from balance_due > total_amount - amount_paid, and escalated it 
 - **2026-08-31** — Amends clause 3: a guard expressed as a HARDCODED ABSOLUTE THRESHOLD (dollar ceiling, row-count limit, byte size, latency bound) is not a durable fix - it is a deferred outage that fires the day the business legitimately crosses it. Shipping DUNNING_MAX_PLAUSI
 - **2026-08-30** — Amends the Step-2 four-state classification table: a CALL RECORD carrying a long duration is NOT evidence that the AI/assistant layer ever ran. On 2026-08-29 the Vapi SIP parent legs logged 610s durations while every assistant-request response was 400'd and th
 - **2026-08-29** — 2026-08-28 reversal (task 1787931475695): claimed GLM 5.3 served ~477 turns as the #1 engine, derived from (a) REQUESTED lane-name counts in the router audit log and (b) an engine-log POST count. Both are the wrong instruments: requested != served (requests ge
 - **2026-08-28** — 2026-08-28 reversal: recommended raising the GLM ring admission ceiling as the 'obvious' next improvement BEFORE probing the wedge-rate population; the ring had wedged 3x in 3 hours under seq=128 load (each a 14-min hard failure), which the recommendation neve
-- **2026-08-28** — - "frankenstein-llm's rule 91 text is too shallow" → corrected: the rule TEXT was adequate; the ENFORCEMENT GATE was dead code (_r91_validate returned None, 0-byte violations log,
 
 ### unread source
 
@@ -65,11 +65,11 @@ _The answer was already written down and nobody read it. Search the record (regi
 
 _The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything._
 
+- **2026-08-31** — Amends clause 12 (aggregation integrity): a traffic-share explanation scoped to ONE pool (the free-local adapter pool) must not be phrased as a statement about the WHOLE routing ladder. 2026-08-30: a completion said 'there was nothing else left to route to' af
 - **2026-08-30** — Amends the SCOPE GATE: when the human's question names ONE instance of a bad output ("this student got a $12,860 bill"), the investigation population is every recipient of that same output surface in the relevant window, NOT the one named instance. Scoping the
 - **2026-08-30** — Amends the SCOPE GATE: a count INHERITED from a prior artifact (idea text, handoff note, ticket) is a hypothesis with an unstated window, not a measurement — re-run the count with an explicit window and population BEFORE acting on it, and report the corrected 
 - **2026-08-29** — Amends the deliverable-counting clause to cover EMBEDDED REPORTS.
 - **2026-08-29** — Amends clause 11 (amendment discipline) with its mechanical half. Clause 11 forbade free-floating appended notes but nothing enforced it: amendRuleOnDisk still appended every amendment to the tail of the always-loaded rule file. Patched amendRuleOnDisk so any 
-- **2026-08-28** — 2026-08-27 reversal (Ruben caught it): the Exam 5 root-cause completion shipped an 'Open threads to drive next' section containing three numbered prose items - build a monitor, a policy decision, investigate the auto-void class - with NO filed idea numbers and
 
 ### stale assumption
 

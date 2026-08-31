@@ -547,3 +547,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 1/2 (LLM/fleet/state + acquisition gate): a previous window's 'shipped rule X, 353/23 hardfloor' claim was accepted as true from the completion prose without a live probe. Live check showed the rule file absent from ~/Documents/Cline/Rules/ and the clinerules index. Durable fix: any claim that a rule was shipped/reindexed must be backed by clinerules_lookup or read_file of the actual rule file; a stats count (353 rules) alone is not evidence that the specific rule exists.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 23:30 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 12860-suspension
+- RCA bucket: insufficient probe
+- Trigger pattern: Filtering/joining an integer column with a slug or string identifier, getting silently coerced matches, and reporting the resulting aggregate as fact without verifying the join key's schema type.
+- Reversal note: Amends clause 3 (escalation/insufficient-probe gate): a JOIN or WHERE key is a schema fact, not a naming convention. Filtering an INT column with a slug string (WHERE student_id = '26814T-15' against int(10) unsigned) silently coerces to 26814 and returns a populated, plausible, WRONG result set with no error - which was then shipped as "8 duplicate invoices totaling $11,315" when the student had exactly one $1,545 invoice. Before any per-entity aggregate is claimed, the filter column's TYPE must be read (SHOW COLUMNS / INFORMATION_SCHEMA) and the correct key used. A query that returns rows is not a query that returned the right rows.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-30 23:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788062963405
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: Amends clause 2 (acquisition gate): I declared 47 ai_ticket_agent_actions rows 'successes mislabeled as failures' and flipped them to success=1, using only the ai_reasoning TEXT ('Warning email sent', 'Called student about ticket') as evidence. Reading action_details JSON showed the opposite: vapi_error subscriptionLimits/concurrency and sent_email:false, i.e. genuine failures. Durable rule: a human-readable narration column describes the ATTEMPTED action, never the OUTCOME. Before reclassifying any row's success/failure state, read the structured outcome fields (action_details JSON + the success column), never the prose column. Data-destructive reclassification requires the probative artifact, not a plausible-sounding string.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

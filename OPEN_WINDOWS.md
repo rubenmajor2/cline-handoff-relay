@@ -6,19 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/30/2026, 8:09:55 PM PT | window: last 72h | 73 tasks | index total 986 (parsed 1, cached 985)
+Generated: 8/30/2026, 9:09:56 PM PT | window: last 72h | 74 tasks | index total 987 (parsed 3, cached 984)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788143372563` | 8/30/2026, 8:06:51 PM | 41 | 25060KB | #Grievances |
-| `1788065744387` | 8/30/2026, 7:33:35 PM | 484 | 2188KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
-| `1788065716274` | 8/30/2026, 7:29:02 PM | 496 | 1738KB | ## Argus Console Audit — MID-FLIGHT |
+| `1788065716274` | 8/30/2026, 9:09:06 PM | 640 | 2052KB | ## Argus Console Audit — MID-FLIGHT |
+| `1788147338340` | 8/30/2026, 9:08:52 PM | 69 | 540KB | #EMTSkills Slowness |
+| `1788143372563` | 8/30/2026, 9:05:41 PM | 89 | 25262KB | #Grievances |
+| `1788116945411` | 8/30/2026, 8:19:33 PM | 204 | 419KB | #$12K bill suspension |
+| `1788065744387` | 8/30/2026, 8:19:26 PM | 485 | 2189KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
 | `1788065826964` | 8/30/2026, 7:08:59 PM | 290 | 1217KB | ## — Kaizon Learner — MID-FLIGHT |
 | `1788104490855` | 8/30/2026, 7:08:49 PM | 364 | 2215KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
 | `1788065980737` | 8/30/2026, 7:05:15 PM | 190 | 775KB | ## Kaizon Learner (fork of window #5) — BLANK |
 | `1788065859789` | 8/30/2026, 6:59:56 PM | 302 | 650KB | ## — Cline Learner / cluster surfacing — COMPLETED |
 | `1788133241066` | 8/30/2026, 5:17:51 PM | 122 | 546KB | #Stuck windows |
-| `1788116945411` | 8/30/2026, 4:34:07 PM | 138 | 310KB | #$12K bill suspension |
 | `1788071557390` | 8/29/2026, 11:55:51 PM | 98 | 181KB | ## — GLM/LLMs (fork of window #4) — BLANK - 2 |
 | `1788065678939` | 8/29/2026, 10:47:11 PM | 144 | 977KB | #Claude Browser Extension MCP — MID-FLIGHT |
 | `1788065887266` | 8/29/2026, 10:34:13 PM | 138 | 726KB | ## — GLM/LLMs (fork of window #4) — BLANK |
@@ -88,7 +89,80 @@ Generated: 8/30/2026, 8:09:55 PM PT | window: last 72h | 73 tasks | index total 
 
 ## Per-window detail
 
-### `1788143372563` — 8/30/2026, 8:06:51 PM PT — 41 turns
+### `1788065716274` — 8/30/2026, 9:09:06 PM PT — 640 turns
+
+**Original task:**
+
+```
+## Argus Console Audit — MID-FLIGHT
+
+**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.
+
+**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.
+
+```
+Pick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.
+
+Where we left off (verified 2026-08-29 21:36 PT):
+- 
+```
+
+**Ideas referenced:** #10014, #11506, #12459, #12584, #12601, #127891, #128274, #13108, #13984, #14944, #16589, #16844, #17759, #178805, #178806, #1820, #18493, #18567, #1875, #1877, #1889, #1912, #19338, #19713, #1998, #20674, #20903, #21125, #21126, #2113, #2168, #2174, #2247, #22511, #23036, #23037, #23038, #23281, #23428, #23941, #23982, #24897, #24963, #25047, #25125, #25471, #25573, #25647, #25764, #2626, #26325, #26400, #2647, #26470, #2654, #2659, #2662, #2663, #26731, #2675, #2676, #2680, #26895, #26932, #27284, #27646, #27860, #28034, #28125, #28127, #28133, #28155, #28189, #28199, #28201, #28249, #28252, #28254, #28309, #28310, #28337, #28385, #28453, #28457, #28459, #28586, #28596, #28607, #28622, #28704, #28705 [deployed], #28706, #28708, #28730, #28745, #28760 [proposed], #28761 [proposed], #28762 [blocked], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767, #28768, #28780 [proposed], #28783, #28786, #28821, #28842, #28843, #28874, #28877, #28878, #28879, #28884, #28885 [proposed], #28891, #28894 [proposed], #28895 [proposed], #28896, #28897 [proposed], #28898, #28905 [proposed], #28912 [proposed], #28925 [executing], #28926 [executing], #28930 [executing], #30363, #347593, #347594, #347596, #347597, #347599, #347600, #347601, #347602, #347603, #347604, #347605, #347606, #347607, #347608, #347609, #347610, #347613, #347614, #347615, #347617, #347618, #347619, #347621, #347622, #347623, #347624, #347625, #347626, #347627, #347628, #347629, #347630, #347632, #347633, #347634, #347638, #347639, #347640, #347641, #347642, #347643, #347644, #347645, #347646, #347647, #347649, #347650, #347651, #347653, #347654, #37030, #37031, #5008, #5020, #5057, #5091, #5203, #5227, #5298, #5309, #7325, #7557, #7569, #7579, #7581, #8505, #9321, #9596, #9614
+
+**Last PICKUP PROMPT:**
+
+```
+the full flood RCA + revivals.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788050474905 — verify Joshua :8001 warm + canary re-admit; raise executor floor on the wider pool.
+
+Where we left off (verified 2026-08-30 21:08 PT):
+- Julia+Claudia TP=2 serving qwen3.8-27b (:11513, repooled cap 8, E2E-verified). joshua-qwen38 restarted + restart policy unless-stopped (was no); engine warming — verify http://10.100.0.4:8001/v1/models 200 then canary admission. Nero blocked (SMS Mac tunnel 2223 resets).
+- Joshua 70B RETIRED per Ruben: registry entries marked retired:true (backup .bak-joshua70b-retire-20260830); 70B model was already deleted 8/22.
+- Tracker updated: dated 2026-08-30 21:07 section (flood RCA, revivals, retirement, misdiagnosis lessons).
+- Bug library #2675 (no-restart-ownership class) + #2676 (stale-label misdiagnosis class) recorded + verified.
+- fleet_admission.py: executor floor 8, Cline reserve 8, saturation guard live.
+
+Open threads to drive next:
+1. #28925 [executing] — Confirm Joshua :8001 200 + canary re-admit; add watchdog ownership for Julia relaunch; Nero revival when tunnel restored.
+2. #28930 [executing] — Build the 3 prevention crons: nightly label-drift auditor, weekly restart-ownership audit, fleet-change tracker gate.
+3. #28926 [executing] — With pool at ~36 slots (Julia 8 + Joshua 8 back), raise executor floor 8→12-15 + percentage-balance within class.
+4. #28780 [deployed] — 12-prompt browser battery.
+5. Retire Joshua's :11434 utility zoo entirely? has live callers (7b-lora policy lookups, embeddings) (human-only decision — no idea).
+
+Reference IDs:
+- Ideas: #28925, #28926, #28930, #28895, #28897, #28762, #28766 [executing]; #28894, #28905, #28912, #28780, #28705 [deployed]
+- Bug library: #2675, #2676 (both resolved, verified)
+- Files touched: frankenstein_registry.yaml (70B retired, backup taken), GLM53_RING_STATE_TRACKER.md (appended), live-pool-20260829.conf (11513), fleet_admission.py, joshua-qwen38 container policy, Rules/317
+
+# Reversal Log
+- "Joshua's serving = ollama :11434" → corrected: :8001 docker joshua-qwen38 IS the Qwen lane; :11434 = utility zoo | RCA bucket: unread source | causal rule updated: 317 (amended this window) + bug library #2676 carries the port map.
+- "GLM never in executor pool" → reversed via /proc/PID/environ (4x4 lanes live) | RCA bucket: insufficient probe | causal rule updated: 317 (clinerules_amend_rule, ledger-recorded).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788147338340` — 8/30/2026, 9:08:52 PM PT — 69 turns
+
+**Original task:**
+
+```
+#EMTSkills Slowness
+
+Read emtskills slowness .md document on desktop and help resovle emsuniversity.com/emtskills slowness again. Append to it and resolve. Give recipies to Kaizon and learner for Kaizon for autoresolve going forward. Docuemnt in the document.
+```
+
+**Ideas referenced:** #16613, #178806, #23133, #2342, #23945, #23952, #23954, #24635, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #26470, #2670, #2672, #27691, #28118, #28200, #28607, #28722 [proposed], #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #4357, #8639
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788143372563` — 8/30/2026, 9:05:41 PM PT — 89 turns
 
 **Original task:**
 
@@ -97,6 +171,8 @@ Generated: 8/30/2026, 8:09:55 PM PT | window: last 72h | 73 tasks | index total 
 
 Jon is having problems with this in grievance manager. Please resolve
 ```
+
+**Ideas referenced:** #20333, #20410, #20555, #20565, #20569 [deployed], #20627, #20628, #20629, #20630, #2177, #22334, #23133, #23954, #25940 [executing], #26207, #27284, #28564, #28631, #6106
 
 **Last PICKUP PROMPT:**
 
@@ -115,7 +191,56 @@ Open threads to drive next:
 ───────────────────────────────────────────────────────────────────────
 ```
 
-### `1788065744387` — 8/30/2026, 7:33:35 PM PT — 484 turns
+### `1788116945411` — 8/30/2026, 8:19:33 PM PT — 204 turns
+
+**Original task:**
+
+```
+#$12K bill suspension
+
+See this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here?
+```
+
+**Ideas referenced:** #1242, #1456, #16613, #178806, #25185, #26501, #2670, #27100, #27144 [deployed], #28089 [deployed], #28115 [blocked], #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28859 [proposed], #28881 [proposed], #28924 [proposed], #4308, #4929
+
+**Last PICKUP PROMPT:**
+
+```
+on-email recipients since 8/1.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #28881 — phantom suspension-balance emails (Alex Smith Jr $12,860 / Lindsey Rose $5,835).
+
+Where we left off (verified 2026-08-30 16:29 PT):
+- FIXED THIS WINDOW: lib/EmailConversationTracker.php::resolveStaleConversations() gated only on updated_at, which every follow-up send bumped, so the 72h auto-resolve could never fire = infinite dunning replay. Added `OR created_at < DATE_SUB(NOW(), INTERVAL 7 DAY)` hard stop. #28881 [proposed] (verified: php -l clean + read-back from disk; backup .bak-followuploop-20260830)
+- 6 stuck conversations resolved (ids 4234/4237/4242/4244/4304/4308), verified by re-query: all status=resolved.
+- 8/24 balance-scoping fix #28089 [deployed] PROVEN WORKING: all 6 post-fix sends match real balances exactly; Alex's collection_reminder_log shows $1,545 in every row, never $12,860.
+- REVERSAL: earlier "8 duplicate invoices / $11,315" claim was FALSE — qb_invoices.student_id is INT, so the slug coerced to 26814 and matched other students. Alex has exactly 1 invoice (164951, $1,545 due).
+- 2nd victim found: Lindsey Rose 26824T-10 emailed $5,835 on 8/15+8/16 with ZERO invoices and a course that starts 9/8.
+
+Open threads to drive next:
+1. #28859 [proposed] — Process Alex Smith Jr's (26814T-15) confirmed withdrawal: set drop_date (this is also the permanent dunning mute, cron guards on `s.drop_date IS NULL`), void/credit the real $1,545 on invoice 164951.
+2. #28881 [proposed] — Send Lindsey Rose (26824T-10) a correction confirming she owes nothing; she has zero invoices and was dunned pre-fix.
+3. #28115 [executing] — Bulk re-tie of remaining mis-tied qb_invoices mirror rows (Alex's 164951 was mis-pointed at Kevin Keyes' qb_customer; cohort-wide sweep still running).
+
+Reference IDs:
+- Ticket: TKT-20260822-2FF7E9CE (#27144)
+- Ideas filed: #28859 [proposed], #28881 [proposed]
+- Ideas referenced: #28089 [deployed], #28115 [executing]
+- Files touched: /var/www/emtskills/lib/EmailConversationTracker.php (backup .bak-followuploop-20260830)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result_text>
+<task_id>12860-suspension</task_id>
+<task_prompt>#$12K bill suspension — See this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here? Follow-up: so then fix it. Why are you not taking action? Despite the 8/24 fix, Alex is still receiving the phantom $12,860 emails. right there's likely others, but verify first on all and advise.</task_prompt>
+</c9UIA90mcp0clinerules_validate_completion>
+```
+
+### `1788065744387` — 8/30/2026, 8:19:26 PM PT — 485 turns
 
 **Original task:**
 
@@ -158,57 +283,6 @@ Open threads to drive next (EVERY item has a real filed idea #):
 Reference IDs:
 - Ideas: #28758 [deployed], #28759 [deployed], #28787 [executing], #28904 [executing], #28892 [deployed]
 - Files touched: api/chat_widget_api.php, lib/emsu_ai_brain.php, Rules/317-reversal-triggers-297-and-rule-update.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788065716274` — 8/30/2026, 7:29:02 PM PT — 496 turns
-
-**Original task:**
-
-```
-## Argus Console Audit — MID-FLIGHT
-
-**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.
-
-**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.
-
-```
-Pick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.
-
-Where we left off (verified 2026-08-29 21:36 PT):
-- 
-```
-
-**Ideas referenced:** #10014, #11506, #12584, #12601, #127891, #128274, #13984, #14944, #16589, #16844, #17759, #178805, #178806, #19338, #19713, #1998, #20674, #20903, #21125, #21126, #2113, #2247, #22511, #23036, #23037, #23038, #23281, #23428, #23941, #23982, #24897, #24963, #25047, #25125, #25573, #25647, #2626, #26325, #26470, #26731, #2680, #26895, #27284, #27646, #27860, #28125, #28127, #28133, #28155, #28189, #28199, #28201, #28249, #28252, #28254, #28309, #28310, #28337, #28385, #28453, #28457, #28459, #28607, #28708, #28730, #28745, #28760 [proposed], #28761 [proposed], #28762 [blocked], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767, #28768, #28780 [proposed], #28783, #28786, #28821, #28842, #28843, #28874, #28877, #28878, #28879, #28884, #28885 [proposed], #28891, #28894 [proposed], #28895 [proposed], #28896, #28897 [proposed], #28898, #28905 [proposed], #28912 [proposed], #30363, #347593, #347594, #347596, #347597, #347599, #347600, #347601, #347602, #347603, #347604, #347605, #347606, #347607, #347608, #347609, #347610, #347613, #347614, #347615, #347617, #347618, #347619, #347621, #347622, #347623, #347624, #347625, #347626, #347627, #347628, #347629, #347630, #347632, #347633, #347634, #347638, #347639, #347640, #347641, #347642, #347643, #347644, #347645, #347646, #347647, #347649, #347650, #347651, #347653, #347654, #37030, #37031, #5008, #5020, #5057, #5091, #5203, #5227, #5298, #5309, #7325, #7557, #7569, #7579, #7581, #8505, #9321, #9596, #9614
-
-**Last PICKUP PROMPT:**
-
-```
-e test harness that proves it.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1788050474905 — Argus Console Audit: run the 12-prompt browser-AI battery against the console and file RCAs for every FAIL.
-
-Where we left off (verified 2026-08-30 19:28 PT):
-- Prompt pack written + verified: docs/specs/argus_console_browser_ai_test_prompts.md (12 standalone paste-ready prompts).
-- All approved work built: #28894 [deployed] executor 5→15; #28905 [deployed] aliases scrubbed; #28912 [deployed] witness loop live (36 events→3 fires→learner analyzed); #28780 [deployed] T1-T12 plan; #28895/#28897/#28766/#28760/#28763/#28765 [executing] partials.
-- Sweeper cron (*/15 cap 12) + witness cron (*/15) both verified on disk; 45-min newest-first buffer patched (2 ORDER BY blocks).
-
-Open threads to drive next (real idea #s, standard statuses):
-1. #28780 [deployed] — Hand the 12-prompt pack to a browser AI (file already on disk); file one rule-297 RCA per FAIL with screenshot + exact error text.
-2. #28895 [executing] — Build disposition-feed frontend: queue-countdown, stage comments UI, express-rush, build-and-wait ETA.
-3. #28897 [executing] — 72h same-text echo at enqueue + 30s auto-refresh on open submissions.
-4. #28766 [executing] — Tasks native list + side panel (replace status-page link-out).
-
-Reference IDs:
-- Ideas: #28894, #28905, #28912, #28780 [deployed]; #28895, #28897, #28760, #28762, #28763, #28765, #28766 [executing]
-- Files touched: /var/www/emtskills/docs/specs/argus_console_browser_ai_test_prompts.md (new), /var/www/emtskills/docs/specs/argus_console_browser_ai_test_plan_t1_t12.md (new), /var/www/emtskills/cron/cron_argus_witness_ingestor.php (new), /etc/litellm/config.yaml (scrubbed), cron_ruben_implement.php (buffer), emsu-cline-canary.py (labels), crontab
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -457,55 +531,6 @@ No reversals this window.
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1788116945411` — 8/30/2026, 4:34:07 PM PT — 138 turns
-
-**Original task:**
-
-```
-#$12K bill suspension
-
-See this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here?
-```
-
-**Ideas referenced:** #1242, #1456, #16613, #178806, #25185, #26501, #2670, #27100, #27144 [deployed], #28089 [deployed], #28115 [blocked], #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28859 [proposed], #28881 [proposed], #4308, #4929
-
-**Last PICKUP PROMPT:**
-
-```
-on-email recipients since 8/1.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #28881 — phantom suspension-balance emails (Alex Smith Jr $12,860 / Lindsey Rose $5,835).
-
-Where we left off (verified 2026-08-30 16:29 PT):
-- FIXED THIS WINDOW: lib/EmailConversationTracker.php::resolveStaleConversations() gated only on updated_at, which every follow-up send bumped, so the 72h auto-resolve could never fire = infinite dunning replay. Added `OR created_at < DATE_SUB(NOW(), INTERVAL 7 DAY)` hard stop. #28881 [proposed] (verified: php -l clean + read-back from disk; backup .bak-followuploop-20260830)
-- 6 stuck conversations resolved (ids 4234/4237/4242/4244/4304/4308), verified by re-query: all status=resolved.
-- 8/24 balance-scoping fix #28089 [deployed] PROVEN WORKING: all 6 post-fix sends match real balances exactly; Alex's collection_reminder_log shows $1,545 in every row, never $12,860.
-- REVERSAL: earlier "8 duplicate invoices / $11,315" claim was FALSE — qb_invoices.student_id is INT, so the slug coerced to 26814 and matched other students. Alex has exactly 1 invoice (164951, $1,545 due).
-- 2nd victim found: Lindsey Rose 26824T-10 emailed $5,835 on 8/15+8/16 with ZERO invoices and a course that starts 9/8.
-
-Open threads to drive next:
-1. #28859 [proposed] — Process Alex Smith Jr's (26814T-15) confirmed withdrawal: set drop_date (this is also the permanent dunning mute, cron guards on `s.drop_date IS NULL`), void/credit the real $1,545 on invoice 164951.
-2. #28881 [proposed] — Send Lindsey Rose (26824T-10) a correction confirming she owes nothing; she has zero invoices and was dunned pre-fix.
-3. #28115 [executing] — Bulk re-tie of remaining mis-tied qb_invoices mirror rows (Alex's 164951 was mis-pointed at Kevin Keyes' qb_customer; cohort-wide sweep still running).
-
-Reference IDs:
-- Ticket: TKT-20260822-2FF7E9CE (#27144)
-- Ideas filed: #28859 [proposed], #28881 [proposed]
-- Ideas referenced: #28089 [deployed], #28115 [executing]
-- Files touched: /var/www/emtskills/lib/EmailConversationTracker.php (backup .bak-followuploop-20260830)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result_text>
-<task_id>12860-suspension</task_id>
-<task_prompt>#$12K bill suspension — See this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here? Follow-up: so then fix it. Why are you not taking action? Despite the 8/24 fix, Alex is still receiving the phantom $12,860 emails. right there's likely others, but verify first on all and advise.</task_prompt>
-</c9UIA90mcp0clinerules_validate_completion>
 ```
 
 ### `1788071557390` — 8/29/2026, 11:55:51 PM PT — 98 turns

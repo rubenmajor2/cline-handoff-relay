@@ -607,3 +607,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: AMENDS CLAUSE 1: claimed widget AI model claude-sonnet-4-6 'resolves to a slow local vLLM alias' from memory of a prior session. Live probe showed 42/42 chat_portal_sites rows = frankenstein-llm; claude-sonnet-4-6 existed ONLY as PHP fallback defaults (api/chat_widget_api.php:1459, lib/emsu_ai_brain.php:226) plus litellm aliases routing to deepseek/gpt, NOT a live widget model. Rule now requires: a serving-model claim about the widget MUST quote this-window evidence from chat_portal_sites.ai_model and the litellm route for THAT model string before attributing latency to it — never a prior session's recollection of an alias.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 03:17 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 12860-suspension
+- RCA bucket: insufficient probe
+- Trigger pattern: Declaring an entity has zero records (no invoices, no payments, owes nothing) on the basis of one convenience tool's empty section, without re-querying the underlying table by the entity's own externa
+- Reversal note: Amends clause 3 again: an ABSENCE returned by a per-entity lookup is not proof the thing does not exist. verify_payment_state and get_student_360 for Lindsey Rose both returned "invoice_count 0, balance $0" because those tools join on Students.id, and her invoices were mirror-tied to a DIFFERENT student's id. Reporting "she owes nothing" from that empty result was a false negative that nearly sent a wrong letter to a student with $5,835 of real invoices. Before claiming any entity has NO records, query the record table by the entity's OWN foreign identifiers (qb_customer_id, email, external customer id) and not solely by the internal join key the convenience tool uses. A join-key-scoped empty result proves only that the join key found nothing.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 03:41 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788050474905
+- RCA bucket: insufficient probe
+- Trigger pattern: quoting systemd Environment= values from systemctl cat / unit file grep without resolving drop-in last-wins order or reading /proc/PID/environ
+- Reversal note: Amends clause 1/INSUFFICIENT_PROBE: systemd unit config claims must resolve LAST-WINS drop-in semantics — a grep of `systemctl cat` output shows EVERY historical Environment= line and the FIRST occurrence is usually stale. The only ground truth for a running service's config is `sudo cat /proc/<MainPID>/environ`. This window claimed 'GLM never in executor tool pool by design' from a first-occurrence read; the running process env showed GLM 8210+8211 in pool with EMSU_GLM_LANES_CLINE=4/BATCH=4 exactly per Ruben's design.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

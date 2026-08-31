@@ -567,3 +567,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate): I declared 47 ai_ticket_agent_actions rows 'successes mislabeled as failures' and flipped them to success=1, using only the ai_reasoning TEXT ('Warning email sent', 'Called student about ticket') as evidence. Reading action_details JSON showed the opposite: vapi_error subscriptionLimits/concurrency and sent_email:false, i.e. genuine failures. Durable rule: a human-readable narration column describes the ATTEMPTED action, never the OUTCOME. Before reclassifying any row's success/failure state, read the structured outcome fields (action_details JSON + the success column), never the prose column. Data-destructive reclassification requires the probative artifact, not a plausible-sounding string.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 00:37 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788063169755
+- RCA bucket: insufficient probe
+- Trigger pattern: declaring a signal/source dead from an empty column or zero-row harvest without reading the consumer function signature and producer write target
+- Reversal note: Adds clause 13: before declaring a data-signal table dead or empty, verify (a) the CONSUMER's input contract — its function signature and where each argument comes from — and (b) the PRODUCER's WRITE-SIDE target table plus row-id source. This window declared orchestrator_action_log.failure_category dead (19 stale rows, May only) and marked the action learner blocked, without reading that orchestratorActionRecipeConsume() receives failure_category as a PARAMETER the executor computes live at call time, not from that column. The real defect was the executor writing failure_category to orchestrator_execution_log using the action_log insert id (cross-table id reuse), leaving the consumer's real signal table empty. A php -l pass and a 'harvested 0' run are not proof a loop is dead — probe the contract and the write target first.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

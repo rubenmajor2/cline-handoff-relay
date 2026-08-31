@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-08-31T02:09:55.256Z",
+ "generated_at": "2026-08-31T03:09:55.684Z",
  "counts": {
-  "parsed": 6,
-  "reused": 979,
+  "parsed": 1,
+  "reused": 985,
   "failed": 0,
-  "total": 985
+  "total": 986
  },
  "tasks": {
   "1784522296714": {
@@ -146506,13 +146506,13 @@
   },
   "1788065716274": {
    "task_id": "1788065716274",
-   "mtime": 1788141716781,
+   "mtime": 1788143342005,
    "created_at": "2026-08-30T04:55:16.274Z",
-   "last_modified": "2026-08-31T02:01:56.781Z",
-   "size_kb": 1698,
-   "turn_count": 488,
+   "last_modified": "2026-08-31T02:29:02.005Z",
+   "size_kb": 1738,
+   "turn_count": 496,
    "title": "## Argus Console Audit — MID-FLIGHT\n\n**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.\n\n**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.\n\n```\nPick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.\n\nWhere we left off (verified 2026-08-29 21:36 PT):\n- Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). Audit roadmap captured in fo",
-   "pickup_prompt": "g so no one assumes it serves.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1788050474905 — Argus Console Audit: run T1-T12 via browser AI; finish #28895/#28897 frontend; optional #28905-adjacent distill scrub.\n\nWhere we left off (verified 2026-08-30 19:01 PT):\n- #28894 [deployed]: executor concurrency 5→15, missing tables created, 42S02 gone.\n- #28895 [executing]: queue-position context shipped; frontend countdown/stage comments/express-rush remain.\n- #28897 [executing]: newest-wins dedup shipped; 72h same-text echo + 30s auto-refresh remain.\n- #28912 [deployed]: cron_argus_witness_ingestor.php built + crontab'd; live run 36 events → 3 fires → learner harvested + logged (kapacity/safe_write/transport visible in tuning_log 623-625).\n- #28905 [deployed]: julia-120b/235b/gpt-oss-120b + dangling fallback keys removed; YAML 70 models; litellm live serving 200s. Residual note text only.\n- #28780 [deployed]: T1-T12 plan at docs/specs/argus_console_browser_ai_test_plan_t1_t12.md.\n- Sweeper cron added (*/15 cap 12); newest-first 45-min burst patched (2 ORDER BY blocks).\n\nOpen threads to drive next (real idea #s, standard statuses):\n1. #28780 [deployed] — Execute the T1-T12 plan with a browser AI against https://emsuniversity.com/emtskills/routes; log each PASS/FAIL + screenshots; file rule-297 RCAs for failures.\n2. #28895 [executing] — Build disposition-feed frontend: queue-position countdown, stage comments, express-rush, build-and-wait ETA.\n3. #28897 [executing] — Enqueue-level 72h same-text echo + 30s auto-refresh.\n4. #28766 [executing] — Tasks native list + side panel.\n5. (proposed follow-up) — Decide emsu_distill: repoint off dark :11513 or mark deprecated; same for artemis placeholder-warming URL.\n\nReference IDs:\n- Ideas filed/deployed: #28894, #28905, #28912, #28780 [deployed]; #28895, #28897, #28766, #28760, #28762, #28763, #28765 [executing]; #28761, #28764, #28885 [deployed]\n- Files touched: /var/www/emtskills/cron/cron_argus_witness_ingestor.php (new), /etc/litellm/config.yaml (aliases scrubbed), /var/www/emtskills/cron/cron_ruben_implement.php (45-min buffer), /usr/local/bin/emsu-cline-canary.py (labels), crontab (2 entries), /var/www/emtskills/docs/specs/argus_console_browser_ai_test_plan_t1_t12.md (new), /usr/local/bin/fleet_admission.py\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "e test harness that proves it.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #1788050474905 — Argus Console Audit: run the 12-prompt browser-AI battery against the console and file RCAs for every FAIL.\n\nWhere we left off (verified 2026-08-30 19:28 PT):\n- Prompt pack written + verified: docs/specs/argus_console_browser_ai_test_prompts.md (12 standalone paste-ready prompts).\n- All approved work built: #28894 [deployed] executor 5→15; #28905 [deployed] aliases scrubbed; #28912 [deployed] witness loop live (36 events→3 fires→learner analyzed); #28780 [deployed] T1-T12 plan; #28895/#28897/#28766/#28760/#28763/#28765 [executing] partials.\n- Sweeper cron (*/15 cap 12) + witness cron (*/15) both verified on disk; 45-min newest-first buffer patched (2 ORDER BY blocks).\n\nOpen threads to drive next (real idea #s, standard statuses):\n1. #28780 [deployed] — Hand the 12-prompt pack to a browser AI (file already on disk); file one rule-297 RCA per FAIL with screenshot + exact error text.\n2. #28895 [executing] — Build disposition-feed frontend: queue-countdown, stage comments UI, express-rush, build-and-wait ETA.\n3. #28897 [executing] — 72h same-text echo at enqueue + 30s auto-refresh on open submissions.\n4. #28766 [executing] — Tasks native list + side panel (replace status-page link-out).\n\nReference IDs:\n- Ideas: #28894, #28905, #28912, #28780 [deployed]; #28895, #28897, #28760, #28762, #28763, #28765, #28766 [executing]\n- Files touched: /var/www/emtskills/docs/specs/argus_console_browser_ai_test_prompts.md (new), /var/www/emtskills/docs/specs/argus_console_browser_ai_test_plan_t1_t12.md (new), /var/www/emtskills/cron/cron_argus_witness_ingestor.php (new), /etc/litellm/config.yaml (scrubbed), cron_ruben_implement.php (buffer), emsu-cline-canary.py (labels), crontab\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1998": null,
     "2113": null,
@@ -146683,13 +146683,13 @@
   },
   "1788065744387": {
    "task_id": "1788065744387",
-   "mtime": 1788142159201,
+   "mtime": 1788143615239,
    "created_at": "2026-08-30T04:55:44.387Z",
-   "last_modified": "2026-08-31T02:09:19.201Z",
-   "size_kb": 2077,
-   "turn_count": 439,
+   "last_modified": "2026-08-31T02:33:35.239Z",
+   "size_kb": 2188,
+   "turn_count": 484,
    "title": "## — Chat Widget disclaimer + misrouting — COMPLETED\n\n**Original ask:** Add an \"automated agent may make mistakes\" disclaimer to the chat widget (and check the Email Agent has the same).\n\n**Status:** Completed + shipped. Build fixes live-verified; disclaimer gap (#18541 was recorded deployed but never actually applied) closed. Open thread is the 18-question browser-AI test pass.\n\n```\nPick up task #28758 — Chat widget misrouting + 23-finding audit remediation (verification pass remaining).\n\nWhere we left off (verified 2026-08-29 20:59 PT):\n- Build fixes shipped and live-verified (disclaimer applied, misrouting fixed).\n- #28759 [executing] holds the 18-question browser-AI test checklist.\n\nOpen",
-   "pickup_prompt": "#11 and my live-probe timeout.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #28758 — Resolve the brain-latency defect (#28787) so the no-escalation widget actually answers; re-verify checks 02/11/18 live.\n\nWhere we left off (verified 2026-08-30 18:08 PT):\n- Escalation fully removed per Ruben directive (all 5 hot triggers NO-ESCALATE, verified behaviorally + on-disk).\n- QA fixes shipped: timestamp TZ, screenshare keyword trim, chatEnded/rating rehydrate, 100dvh, phantom share-screen text removed.\n- #28904 [executing] holds the change-set RCA.\n\nOpen threads to drive next (EVERY item has a real filed idea #):\n1. #28787 [executing] — Repoint/fix the widget AI model route (claude-sonnet-4-6 → production Anthropic or a healthy local lane); then re-probe a basic question and confirm runEmsuAiBrain returns a real answer under 35s (unblocks checks 02, 11, 18).\n2. #28904 [executing] — Optionally append a live HTTP probe result once #28787 is resolved (the function-level NO-ESCALATE proof is already recorded).\n\nReference IDs:\n- Ideas: #28758 [deployed], #28759 [deployed], #28787 [executing], #28788 [deployed], #28892 [deployed], #28904 [executing], #18541 [deployed]\n- Files touched: lib/widget_force_handoff.php, api/chat_widget_api.php, lib/AIReasoningLeakScanner.php, api/chat_widget_embed.js (+ .bak-28893-20260830 on force_handoff)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "oyed] holds the QA disposition\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #28758 — Optionally re-time `frankenstein-llm` on a real visitor-budget turn (brain `overall_budget_s=35`) now that model attribution is corrected to 9.0s; confirm no claude name remains reachable from the widget.\n\nWhere we left off (verified 2026-08-30 19:32 PT):\n- Claude fully nuked from widget path: DB 42/42 sites = `frankenstein-llm`; PHP fallbacks (`api:1459`, `brain:226`) rewritten; litellm claude-named aliases proven to be deepseek/minicpm-v, not Anthropic.\n- Callback offer now ONCE ONLY (rule 6b in widgetGuardrailPrompt) + AI keeps helping.\n- 15-min human-present guard verified intact; AI-resume log added for seamless pickup.\n- Rule 317 clause 1 amended + reindexed; #28787 re-scoped + corrected.\n\nOpen threads to drive next (EVERY item has a real filed idea #):\n1. #28787 [executing] — Take the corrected 9.0s `frankenstein-llm` measurement and decide whether a real multi-tool chat turn (which adds tool-call round-trips on top) still fits `overall_budget_s=35`; if it blows, task is to route the widget brain to a faster healthy lane (probe first, never recite).\n2. #28904 [executing] — Optional: after the lane decision, append one live end-to-end widget_send probe result to close the loop.\n\nReference IDs:\n- Ideas: #28758 [deployed], #28759 [deployed], #28787 [executing], #28904 [executing], #28892 [deployed]\n- Files touched: api/chat_widget_api.php, lib/emsu_ai_brain.php, Rules/317-reversal-triggers-297-and-rule-update.md\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1119": null,
     "1242": null,
@@ -147488,6 +147488,17 @@
     "0000": null,
     "081020": null
    }
+  },
+  "1788143372563": {
+   "task_id": "1788143372563",
+   "mtime": 1788145611657,
+   "created_at": "2026-08-31T02:29:32.563Z",
+   "last_modified": "2026-08-31T03:06:51.657Z",
+   "size_kb": 25060,
+   "turn_count": 41,
+   "title": "#Grievances\n\nJon is having problems with this in grievance manager. Please resolve",
+   "pickup_prompt": "further actionable steps can be taken without additional information or files.\n\nPICKUP PROMPT (paste into a fresh Cline window)\n───────────────────────────────────────────────────────────────────────\nPick up task # (unknown) — Resolve grievance manager issue for Jon.\nWhere we left off (verified 2026-08-30 19:48 PT):\n- Desktop directory empty.\n- /var/www/emtskills empty.\n- /var/www empty; grievance manager files not found.\nOpen threads to drive next:\n1. # (blocked) — Locate the grievance manager source code directory or repository path.\n───────────────────────────────────────────────────────────────────────",
+   "ideas": {}
   }
  }
 }

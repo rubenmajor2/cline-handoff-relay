@@ -6,15 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/30/2026, 7:09:55 PM PT | window: last 72h | 72 tasks | index total 985 (parsed 6, cached 979)
+Generated: 8/30/2026, 8:09:55 PM PT | window: last 72h | 73 tasks | index total 986 (parsed 1, cached 985)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788065744387` | 8/30/2026, 7:09:19 PM | 439 | 2077KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
+| `1788143372563` | 8/30/2026, 8:06:51 PM | 41 | 25060KB | #Grievances |
+| `1788065744387` | 8/30/2026, 7:33:35 PM | 484 | 2188KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
+| `1788065716274` | 8/30/2026, 7:29:02 PM | 496 | 1738KB | ## Argus Console Audit — MID-FLIGHT |
 | `1788065826964` | 8/30/2026, 7:08:59 PM | 290 | 1217KB | ## — Kaizon Learner — MID-FLIGHT |
 | `1788104490855` | 8/30/2026, 7:08:49 PM | 364 | 2215KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
 | `1788065980737` | 8/30/2026, 7:05:15 PM | 190 | 775KB | ## Kaizon Learner (fork of window #5) — BLANK |
-| `1788065716274` | 8/30/2026, 7:01:56 PM | 488 | 1698KB | ## Argus Console Audit — MID-FLIGHT |
 | `1788065859789` | 8/30/2026, 6:59:56 PM | 302 | 650KB | ## — Cline Learner / cluster surfacing — COMPLETED |
 | `1788133241066` | 8/30/2026, 5:17:51 PM | 122 | 546KB | #Stuck windows |
 | `1788116945411` | 8/30/2026, 4:34:07 PM | 138 | 310KB | #$12K bill suspension |
@@ -87,7 +88,34 @@ Generated: 8/30/2026, 7:09:55 PM PT | window: last 72h | 72 tasks | index total 
 
 ## Per-window detail
 
-### `1788065744387` — 8/30/2026, 7:09:19 PM PT — 439 turns
+### `1788143372563` — 8/30/2026, 8:06:51 PM PT — 41 turns
+
+**Original task:**
+
+```
+#Grievances
+
+Jon is having problems with this in grievance manager. Please resolve
+```
+
+**Last PICKUP PROMPT:**
+
+```
+further actionable steps can be taken without additional information or files.
+
+PICKUP PROMPT (paste into a fresh Cline window)
+───────────────────────────────────────────────────────────────────────
+Pick up task # (unknown) — Resolve grievance manager issue for Jon.
+Where we left off (verified 2026-08-30 19:48 PT):
+- Desktop directory empty.
+- /var/www/emtskills empty.
+- /var/www empty; grievance manager files not found.
+Open threads to drive next:
+1. # (blocked) — Locate the grievance manager source code directory or repository path.
+───────────────────────────────────────────────────────────────────────
+```
+
+### `1788065744387` — 8/30/2026, 7:33:35 PM PT — 484 turns
 
 **Original task:**
 
@@ -110,25 +138,77 @@ Where we left off (verified 2026-08-29 20:59 PT):
 **Last PICKUP PROMPT:**
 
 ```
-#11 and my live-probe timeout.
+oyed] holds the QA disposition
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #28758 — Resolve the brain-latency defect (#28787) so the no-escalation widget actually answers; re-verify checks 02/11/18 live.
+Pick up task #28758 — Optionally re-time `frankenstein-llm` on a real visitor-budget turn (brain `overall_budget_s=35`) now that model attribution is corrected to 9.0s; confirm no claude name remains reachable from the widget.
 
-Where we left off (verified 2026-08-30 18:08 PT):
-- Escalation fully removed per Ruben directive (all 5 hot triggers NO-ESCALATE, verified behaviorally + on-disk).
-- QA fixes shipped: timestamp TZ, screenshare keyword trim, chatEnded/rating rehydrate, 100dvh, phantom share-screen text removed.
-- #28904 [executing] holds the change-set RCA.
+Where we left off (verified 2026-08-30 19:32 PT):
+- Claude fully nuked from widget path: DB 42/42 sites = `frankenstein-llm`; PHP fallbacks (`api:1459`, `brain:226`) rewritten; litellm claude-named aliases proven to be deepseek/minicpm-v, not Anthropic.
+- Callback offer now ONCE ONLY (rule 6b in widgetGuardrailPrompt) + AI keeps helping.
+- 15-min human-present guard verified intact; AI-resume log added for seamless pickup.
+- Rule 317 clause 1 amended + reindexed; #28787 re-scoped + corrected.
 
 Open threads to drive next (EVERY item has a real filed idea #):
-1. #28787 [executing] — Repoint/fix the widget AI model route (claude-sonnet-4-6 → production Anthropic or a healthy local lane); then re-probe a basic question and confirm runEmsuAiBrain returns a real answer under 35s (unblocks checks 02, 11, 18).
-2. #28904 [executing] — Optionally append a live HTTP probe result once #28787 is resolved (the function-level NO-ESCALATE proof is already recorded).
+1. #28787 [executing] — Take the corrected 9.0s `frankenstein-llm` measurement and decide whether a real multi-tool chat turn (which adds tool-call round-trips on top) still fits `overall_budget_s=35`; if it blows, task is to route the widget brain to a faster healthy lane (probe first, never recite).
+2. #28904 [executing] — Optional: after the lane decision, append one live end-to-end widget_send probe result to close the loop.
 
 Reference IDs:
-- Ideas: #28758 [deployed], #28759 [deployed], #28787 [executing], #28788 [deployed], #28892 [deployed], #28904 [executing], #18541 [deployed]
-- Files touched: lib/widget_force_handoff.php, api/chat_widget_api.php, lib/AIReasoningLeakScanner.php, api/chat_widget_embed.js (+ .bak-28893-20260830 on force_handoff)
+- Ideas: #28758 [deployed], #28759 [deployed], #28787 [executing], #28904 [executing], #28892 [deployed]
+- Files touched: api/chat_widget_api.php, lib/emsu_ai_brain.php, Rules/317-reversal-triggers-297-and-rule-update.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788065716274` — 8/30/2026, 7:29:02 PM PT — 496 turns
+
+**Original task:**
+
+```
+## Argus Console Audit — MID-FLIGHT
+
+**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.
+
+**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.
+
+```
+Pick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.
+
+Where we left off (verified 2026-08-29 21:36 PT):
+- 
+```
+
+**Ideas referenced:** #10014, #11506, #12584, #12601, #127891, #128274, #13984, #14944, #16589, #16844, #17759, #178805, #178806, #19338, #19713, #1998, #20674, #20903, #21125, #21126, #2113, #2247, #22511, #23036, #23037, #23038, #23281, #23428, #23941, #23982, #24897, #24963, #25047, #25125, #25573, #25647, #2626, #26325, #26470, #26731, #2680, #26895, #27284, #27646, #27860, #28125, #28127, #28133, #28155, #28189, #28199, #28201, #28249, #28252, #28254, #28309, #28310, #28337, #28385, #28453, #28457, #28459, #28607, #28708, #28730, #28745, #28760 [proposed], #28761 [proposed], #28762 [blocked], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767, #28768, #28780 [proposed], #28783, #28786, #28821, #28842, #28843, #28874, #28877, #28878, #28879, #28884, #28885 [proposed], #28891, #28894 [proposed], #28895 [proposed], #28896, #28897 [proposed], #28898, #28905 [proposed], #28912 [proposed], #30363, #347593, #347594, #347596, #347597, #347599, #347600, #347601, #347602, #347603, #347604, #347605, #347606, #347607, #347608, #347609, #347610, #347613, #347614, #347615, #347617, #347618, #347619, #347621, #347622, #347623, #347624, #347625, #347626, #347627, #347628, #347629, #347630, #347632, #347633, #347634, #347638, #347639, #347640, #347641, #347642, #347643, #347644, #347645, #347646, #347647, #347649, #347650, #347651, #347653, #347654, #37030, #37031, #5008, #5020, #5057, #5091, #5203, #5227, #5298, #5309, #7325, #7557, #7569, #7579, #7581, #8505, #9321, #9596, #9614
+
+**Last PICKUP PROMPT:**
+
+```
+e test harness that proves it.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788050474905 — Argus Console Audit: run the 12-prompt browser-AI battery against the console and file RCAs for every FAIL.
+
+Where we left off (verified 2026-08-30 19:28 PT):
+- Prompt pack written + verified: docs/specs/argus_console_browser_ai_test_prompts.md (12 standalone paste-ready prompts).
+- All approved work built: #28894 [deployed] executor 5→15; #28905 [deployed] aliases scrubbed; #28912 [deployed] witness loop live (36 events→3 fires→learner analyzed); #28780 [deployed] T1-T12 plan; #28895/#28897/#28766/#28760/#28763/#28765 [executing] partials.
+- Sweeper cron (*/15 cap 12) + witness cron (*/15) both verified on disk; 45-min newest-first buffer patched (2 ORDER BY blocks).
+
+Open threads to drive next (real idea #s, standard statuses):
+1. #28780 [deployed] — Hand the 12-prompt pack to a browser AI (file already on disk); file one rule-297 RCA per FAIL with screenshot + exact error text.
+2. #28895 [executing] — Build disposition-feed frontend: queue-countdown, stage comments UI, express-rush, build-and-wait ETA.
+3. #28897 [executing] — 72h same-text echo at enqueue + 30s auto-refresh on open submissions.
+4. #28766 [executing] — Tasks native list + side panel (replace status-page link-out).
+
+Reference IDs:
+- Ideas: #28894, #28905, #28912, #28780 [deployed]; #28895, #28897, #28760, #28762, #28763, #28765, #28766 [executing]
+- Files touched: /var/www/emtskills/docs/specs/argus_console_browser_ai_test_prompts.md (new), /var/www/emtskills/docs/specs/argus_console_browser_ai_test_plan_t1_t12.md (new), /var/www/emtskills/cron/cron_argus_witness_ingestor.php (new), /etc/litellm/config.yaml (scrubbed), cron_ruben_implement.php (buffer), emsu-cline-canary.py (labels), crontab
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -271,62 +351,6 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788065716274` — 8/30/2026, 7:01:56 PM PT — 488 turns
-
-**Original task:**
-
-```
-## Argus Console Audit — MID-FLIGHT
-
-**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.
-
-**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.
-
-```
-Pick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.
-
-Where we left off (verified 2026-08-29 21:36 PT):
-- 
-```
-
-**Ideas referenced:** #10014, #11506, #12584, #12601, #127891, #128274, #13984, #14944, #16589, #16844, #17759, #178805, #178806, #19338, #19713, #1998, #20674, #20903, #21125, #21126, #2113, #2247, #22511, #23036, #23037, #23038, #23281, #23428, #23941, #23982, #24897, #24963, #25047, #25125, #25573, #25647, #2626, #26325, #26470, #26731, #2680, #26895, #27284, #27646, #27860, #28125, #28127, #28133, #28155, #28189, #28199, #28201, #28249, #28252, #28254, #28309, #28310, #28337, #28385, #28453, #28457, #28459, #28607, #28708, #28730, #28745, #28760 [proposed], #28761 [proposed], #28762 [blocked], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767, #28768, #28780 [proposed], #28783, #28786, #28821, #28842, #28843, #28874, #28877, #28878, #28879, #28884, #28885 [proposed], #28891, #28894 [proposed], #28895 [proposed], #28896, #28897 [proposed], #28898, #28905 [proposed], #28912 [proposed], #30363, #347593, #347594, #347596, #347597, #347599, #347600, #347601, #347602, #347603, #347604, #347605, #347606, #347607, #347608, #347609, #347610, #347613, #347614, #347615, #347617, #347618, #347619, #347621, #347622, #347623, #347624, #347625, #347626, #347627, #347628, #347629, #347630, #347632, #347633, #347634, #347638, #347639, #347640, #347641, #347642, #347643, #347644, #347645, #347646, #347647, #347649, #347650, #347651, #347653, #347654, #37030, #37031, #5008, #5020, #5057, #5091, #5203, #5227, #5298, #5309, #7325, #7557, #7569, #7579, #7581, #8505, #9321, #9596, #9614
-
-**Last PICKUP PROMPT:**
-
-```
-g so no one assumes it serves.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1788050474905 — Argus Console Audit: run T1-T12 via browser AI; finish #28895/#28897 frontend; optional #28905-adjacent distill scrub.
-
-Where we left off (verified 2026-08-30 19:01 PT):
-- #28894 [deployed]: executor concurrency 5→15, missing tables created, 42S02 gone.
-- #28895 [executing]: queue-position context shipped; frontend countdown/stage comments/express-rush remain.
-- #28897 [executing]: newest-wins dedup shipped; 72h same-text echo + 30s auto-refresh remain.
-- #28912 [deployed]: cron_argus_witness_ingestor.php built + crontab'd; live run 36 events → 3 fires → learner harvested + logged (kapacity/safe_write/transport visible in tuning_log 623-625).
-- #28905 [deployed]: julia-120b/235b/gpt-oss-120b + dangling fallback keys removed; YAML 70 models; litellm live serving 200s. Residual note text only.
-- #28780 [deployed]: T1-T12 plan at docs/specs/argus_console_browser_ai_test_plan_t1_t12.md.
-- Sweeper cron added (*/15 cap 12); newest-first 45-min burst patched (2 ORDER BY blocks).
-
-Open threads to drive next (real idea #s, standard statuses):
-1. #28780 [deployed] — Execute the T1-T12 plan with a browser AI against https://emsuniversity.com/emtskills/routes; log each PASS/FAIL + screenshots; file rule-297 RCAs for failures.
-2. #28895 [executing] — Build disposition-feed frontend: queue-position countdown, stage comments, express-rush, build-and-wait ETA.
-3. #28897 [executing] — Enqueue-level 72h same-text echo + 30s auto-refresh.
-4. #28766 [executing] — Tasks native list + side panel.
-5. (proposed follow-up) — Decide emsu_distill: repoint off dark :11513 or mark deprecated; same for artemis placeholder-warming URL.
-
-Reference IDs:
-- Ideas filed/deployed: #28894, #28905, #28912, #28780 [deployed]; #28895, #28897, #28766, #28760, #28762, #28763, #28765 [executing]; #28761, #28764, #28885 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_argus_witness_ingestor.php (new), /etc/litellm/config.yaml (aliases scrubbed), /var/www/emtskills/cron/cron_ruben_implement.php (45-min buffer), /usr/local/bin/emsu-cline-canary.py (labels), crontab (2 entries), /var/www/emtskills/docs/specs/argus_console_browser_ai_test_plan_t1_t12.md (new), /usr/local/bin/fleet_admission.py
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 

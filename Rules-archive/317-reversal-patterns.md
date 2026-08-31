@@ -5,14 +5,14 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **190**
-- Last generated: 2026-08-30 18:57
+- Reversals tracked: **191**
+- Last generated: 2026-08-30 19:41
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 86 | 45% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 87 | 46% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 35 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 27 | 14% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 23 | 12% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
@@ -20,7 +20,7 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 ## Causal rules most often amended
 
-- Rule 317: 67 amendment(s)
+- Rule 317: 68 amendment(s)
 - Rule 297: 44 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-08-31** — AMENDS CLAUSE 1: claimed widget AI model claude-sonnet-4-6 'resolves to a slow local vLLM alias' from memory of a prior session. Live probe showed 42/42 chat_portal_sites rows = frankenstein-llm; claude-sonnet-4-6 existed ONLY as PHP fallback defaults (api/cha
 - **2026-08-31** — Amends clause 2 (acquisition gate): I reported '17 Vapi concurrency-limit errors causing silent callback failures' after reading only the failure_category label I had just created. Reading the action_details JSON showed 14 of the 17 were vapi_status=201 with c
 - **2026-08-31** — Amends clause 2 (acquisition gate) + golden rule: claim scope must equal probe scope — a curl resolved through split-horizon/LAN DNS (or run from the allowlisted server IP) is NOT evidence that a public cloud consumer (Vapi) can reach the endpoint. When the cl
 - **2026-08-31** — Adds clause 13: before declaring a data-signal table dead or empty, verify (a) the CONSUMER's input contract — its function signature and where each argument comes from — and (b) the PRODUCER's WRITE-SIDE target table plus row-id source. This window declared o
 - **2026-08-30** — Amends clause 2 (acquisition gate): I declared 47 ai_ticket_agent_actions rows 'successes mislabeled as failures' and flipped them to success=1, using only the ai_reasoning TEXT ('Warning email sent', 'Called student about ticket') as evidence. Reading action_
-- **2026-08-30** — Amends clause 3 (escalation/insufficient-probe gate): a JOIN or WHERE key is a schema fact, not a naming convention. Filtering an INT column with a slug string (WHERE student_id = '26814T-15' against int(10) unsigned) silently coerces to 26814 and returns a po
 
 ### wrong premise
 

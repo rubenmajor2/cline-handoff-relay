@@ -597,3 +597,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate): I reported '17 Vapi concurrency-limit errors causing silent callback failures' after reading only the failure_category label I had just created. Reading the action_details JSON showed 14 of the 17 were vapi_status=201 with concurrencyBlocked:false and remainingConcurrentCalls:9 — SUCCESSFUL calls — and the 3 real failures were vapi_status=400 'Numbers Bought On Vapi Have A Daily Outbound Call Limit', a different cause entirely. Durable rule: an HTTP 2xx in a stored provider response means the call SUCCEEDED regardless of what other fields (subscriptionLimits, quotas, warnings) appear alongside it; a provider envelope that merely MENTIONS a limit is not a limit error. Before reporting any provider-failure count, group by the actual status code, never by a category label you just assigned.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 02:20 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 28758
+- RCA bucket: insufficient probe
+- Trigger pattern: reciting a model-route/alias claim from memory of a previous window instead of probing the live DB + litellm config this window
+- Reversal note: AMENDS CLAUSE 1: claimed widget AI model claude-sonnet-4-6 'resolves to a slow local vLLM alias' from memory of a prior session. Live probe showed 42/42 chat_portal_sites rows = frankenstein-llm; claude-sonnet-4-6 existed ONLY as PHP fallback defaults (api/chat_widget_api.php:1459, lib/emsu_ai_brain.php:226) plus litellm aliases routing to deepseek/gpt, NOT a live widget model. Rule now requires: a serving-model claim about the widget MUST quote this-window evidence from chat_portal_sites.ai_model and the litellm route for THAT model string before attributing latency to it — never a prior session's recollection of an alias.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

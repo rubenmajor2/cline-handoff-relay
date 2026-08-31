@@ -757,3 +757,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 13 (MLX decode-wedge). The wedge is TWO axes, not one: (1) prompt-cache growth under concurrent decode — fixed by --prompt-cache-size/bytes + decode/prompt-concurrency caps, verified by a live Prompt Cache read under load; and (2) cold-start-load OOM (large prompt arriving while the 27B model is still loading + Ollama VRAM on the same unified GPU). A fix for axis 1 is NOT proof the wedge is eliminated: a process relaunched with caps can still OOM on axis 2 ~2min after kickstart. Required: before claiming an MLX OOM fix 'prevents' the wedge, probe a COMPLETE decode POST to 200 under load from that exact process (not /v1/models, not process-cmdline, not cache size alone); a cache-stays-small read or /v1/models 200 is insufficient.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 22:55 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: insufficient probe
+- Trigger pattern: SET status to a value not in the ENUM, then trusting ROW_COUNT/affected-rows instead of a read-back SELECT
+- Reversal note: Amends clause 1. A write's ROW_COUNT/affected-rows is NOT a disposition probe. When any INSERT/UPDATE targets a status column, SELECT the row back and quote the returned value as the disposition proof. Specifically: an invalid ENUM value silently coerces to '' under non-strict sql_mode, and a BEFORE UPDATE trigger (orchestrator_ideas_status_audit) can re-derive the value from dev_stage, so ROW_COUNT=1 can coexist with the wrong status landed (observed: status=awaiting_review was set, coerced to '', trigger re-derived approved).
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

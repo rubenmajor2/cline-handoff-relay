@@ -6,19 +6,19 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 3:19:43 PM PT | window: last 72h | 84 tasks | index total 1012 (parsed 10, cached 1002)
+Generated: 8/31/2026, 4:19:43 PM PT | window: last 72h | 84 tasks | index total 1012 (parsed 3, cached 1009)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788195724924` | 8/31/2026, 3:19:35 PM | 161 | 715KB | #EMT Skills Slowness |
-| `1788212361951` | 8/31/2026, 3:19:24 PM | 123 | 386KB | #Nero Qwen 3.8 27B |
-| `1788161302475` | 8/31/2026, 3:19:11 PM | 439 | 1760KB | #Grievances |
-| `1788161048426` | 8/31/2026, 3:19:07 PM | 367 | 1977KB | #Joshua Qwen 3.8 27B |
-| `1788212457240` | 8/31/2026, 3:18:42 PM | 125 | 341KB | # VERITAS claim-falsity investigation (the window live at the 23:50 crash). |
-| `1788196060306` | 8/31/2026, 3:18:31 PM | 277 | 971KB | #Argus Improvmeents |
+| `1788161048426` | 8/31/2026, 4:19:41 PM | 422 | 2365KB | #Joshua Qwen 3.8 27B |
+| `1788196060306` | 8/31/2026, 4:18:03 PM | 480 | 1537KB | #Argus Improvmeents |
+| `1788161302475` | 8/31/2026, 4:03:34 PM | 540 | 2194KB | #Grievances |
+| `1788212361951` | 8/31/2026, 3:36:22 PM | 166 | 547KB | #Nero Qwen 3.8 27B |
+| `1788195724924` | 8/31/2026, 3:32:55 PM | 186 | 821KB | #EMT Skills Slowness |
+| `1788200522716` | 8/31/2026, 3:26:15 PM | 413 | 9089KB | #TDSHS |
+| `1788205619819` | 8/31/2026, 3:20:51 PM | 110 | 878KB | #Postmark Issue |
+| `1788212457240` | 8/31/2026, 3:20:22 PM | 130 | 357KB | # VERITAS claim-falsity investigation (the window live at the 23:50 crash). |
 | `1788212075952` | 8/31/2026, 3:17:05 PM | 68 | 76KB | Continue |
-| `1788205619819` | 8/31/2026, 3:16:35 PM | 105 | 862KB | #Postmark Issue |
-| `1788200522716` | 8/31/2026, 3:14:10 PM | 395 | 9044KB | #TDSHS |
 | `1788201341551` | 8/31/2026, 3:12:35 PM | 122 | 515KB | #MDM/Nero/Maximu |
 | `1788161107343` | 8/31/2026, 12:46:19 PM | 373 | 2744KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
 | `1788203722814` | 8/31/2026, 12:22:00 PM | 56 | 76KB | #CAPCE / Catalog emsuniversity.com homepage |
@@ -99,54 +99,118 @@ Generated: 8/31/2026, 3:19:43 PM PT | window: last 72h | 84 tasks | index total 
 
 ## Per-window detail
 
-### `1788195724924` — 8/31/2026, 3:19:35 PM PT — 161 turns
+### `1788161048426` — 8/31/2026, 4:19:41 PM PT — 422 turns
 
 **Original task:**
 
 ```
-#EMT Skills Slowness
+#Joshua Qwen 3.8 27B
 
-We have YET Another slowness detected for /emtskills. Please durably solve/resolve and write to the document
-
---
-Pick up task 1788147338340 - read + append emtskills slowness .md, resolve emsuniversity.com/emtskills slowness again.
-Left off: "all four approved ideas are [deployed], risk question on #28939 has an honest correction, GLM53..." - verify the .md append landed and the deploy stuck.
+Bring back up Joshua Qwen 3.8 27B to serving
 ```
 
-**Ideas referenced:** #178806, #178814, #19338, #19458, #19491, #19837 [deployed], #19838, #23133, #2342, #23945, #23952, #23954, #25548 [executing], #25679 [executing], #25888, #2590, #25940 [executing], #26009, #26068, #26218, #26219 [deployed], #26234, #26258, #26336, #26348, #27691, #28722 [proposed], #28762, #28774, #28776, #28795, #28891, #28893, #28894, #28895, #28897, #28939, #28958, #29023 [proposed]
+**Ideas referenced:** #10756, #11316, #11847, #12364, #1242, #12477, #12612, #12618, #12680, #12689, #12824, #12872, #12878, #13202, #13437, #13490, #13842, #13874, #15815, #16163, #16304, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788196060306` — 8/31/2026, 4:18:03 PM PT — 480 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #166534, #18745, #18770, #23428, #23429, #23468, #23506, #23941, #23982, #24941, #24990, #25058, #25269, #25313, #25466, #25768, #26325, #28155, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #30363, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648, #9650, #9660, #9670
 
 **Last PICKUP PROMPT:**
 
 ```
-Log
-No reversals this window.
-
+proposed], not a build defect.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1788147338340 — durable /emtskills slowness resolution (swap + session-lock).
+Pick up task #29052 — Argus console polish + P10 browser-QA + Complaint Hub Phase 1.
 
-Where we left off (verified 2026-08-31 11:55 PT):
-- Cause 1 (swap storm): guardian fail-open gate shipped, FAIL-OPEN every min, no swapoff.
-- Cause 2 (session lock): api_keepalive.php now session_write_close()s; 20 rapid same-session polls all ~13ms HTTP 200; slow log clean.
-- #29023 [deployed]: guardian flush_swap() returns 0/1/2; callers log honest FAIL-OPEN/HELD.
-- Doc updated: EMTSKILLS_SLOWNESS_RCA_2026-08-11.md (152 lines).
+Where we left off (verified 4:17 PM PT):
+- Server-side work shipped and lint-clean (php -l passed on both routes/argus_download.php, routes/alltastic_api.php, lib/argus_action_catalog.php):
+  - Burst grouping V2 (sliding 60s window, no singleton banners, correct count via __burstBuf.length, drain before empty-state) — argus_download.php
+  - Activity facet chips (backend action/who params + facet counts in alltastic_api.php; client Who/Action/Outcome/Gate chips) — argus_download.php
+  - Actions panel inline form + WRITE confirm (replaces blocking prompt()) — argus_download.php
+  - Tab strip wrap + switchTab tab-btn class restoration (multi-active fix) — argus_download.php
+  - Payments group re-merged to ONE header — argus_action_catalog.php
+  - #29055 Phase 1: complaint_draft_regulator action (ExecAdmin, loads personnel/lib/RegulatorResponseEngine.php, never auto-sends) — argus_action_catalog.php
+- #29015 verified: dispatcher 45-min CASE ordering already live in ruben_executor_live.php line 3698; stale "not applied this window" note corrected.
+- FPM: reloaded (last reload 4:09 PM PT via init.d); cooldown skip at 4:17.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-None — all work completed this session.
+Open threads to drive next:
+1. #29014 [awaiting_review] — Run the six browser-QA questions above against live Argus; confirm facet chips render/clicks work and burst banner shows for clustered writes. Any failure = new finding.
+2. #29079 [proposed] — regulator_response_requests table is empty; upload one test regulator matter via personnel/regulator_response.php, then exercise the complaint_draft_regulator action end-to-end.
+3. #29078 [proposed] — tab-btn regression causal record (careless line-deletion during class-edit); already fixed and restored, kept as RCA record.
+4. #29055 [executing] — Phases 2-4 (BBB #, chargeback, rude-student email drafting) not built; each requires a fresh steer.
 
 Reference IDs:
-- Ticket: n/a (task 1788147338340)
-- Ideas filed: #29023 [deployed]
-- Files touched: /var/www/emtskills/scripts/emsu-memory-guardian.sh, /var/www/emtskills/skillstastic/api_keepalive.php, /var/www/emtskills/docs/EMTSKILLS_SLOWNESS_RCA_2026-08-11.md
+- Ideas filed: #29078, #29079
+- Ideas stamped: #29050 [deployed], #29055 [executing], #29015 [deployed]
+- Files touched: routes/argus_download.php, routes/alltastic_api.php, lib/argus_action_catalog.php
+- Backup: /tmp/argus_action_catalog.php.bak-20260831-paymerge
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1788212361951` — 8/31/2026, 3:19:24 PM PT — 123 turns
+### `1788161302475` — 8/31/2026, 4:03:34 PM PT — 540 turns
+
+**Original task:**
+
+```
+#Grievances
+
+Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
+
+Jon says: Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
+```
+
+**Ideas referenced:** #1242, #12770, #14743, #14748, #16844, #17712, #177949, #178805, #178806, #178816, #18135, #18480 [deployed], #18481 [blocked], #18491 [rejected], #18853, #1912, #19426, #19802, #1998, #202608, #20292, #20295, #2168, #2174, #22250, #24184, #25185, #25466, #25764, #25888, #25913, #26400, #2647, #2654, #2659, #2662, #2663, #2670, #2672, #2675, #2677, #2679, #26932, #2782, #28546, #28551, #28552, #28564, #28586, #28596, #28607, #28622, #28704, #28705, #28706, #28723, #28730, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #28949 [proposed], #28958, #28992, #29017 [deployed], #29026 [deployed], #29027 [proposed], #29028 [proposed], #29034 [deployed], #29054 [proposed], #35944, #3957, #4930, #4931, #5095, #5249, #5770, #5795, #6039, #6064, #6106, #6230, #6789, #6852, #7164, #7359, #7381, #8672, #9019
+
+**Last PICKUP PROMPT:**
+
+```
+/final_julia_vision.py output)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: Grievances open item #28949 [blocked] (jtgruiz reply, human-gated).
+
+Where we left off (verified 2026-08-31 15:55 PT):
+- #28949 [blocked] : jtgruiz@msn.com = Toni Ruiz, repeat parent complainant; ticket 28564 now assigned to Vicky Yu (id 2) with evidence + draft logged as internal comment; ticket 28992 (withdrawal) already with Vicky.
+- Rule 317 clause 1 amended (ROW_COUNT is not a read-back probe): mechanical reversal repair done.
+- julia-qwen38-27b vision passthrough fix is live in /etc/litellm/_router_core.py; litellm restarted 15:31:26; image probe returns CONTENT='SOLID RED'.
+
+Open threads to drive next (EVERY item has a real idea #):
+1. #28949 [blocked] : Vicky Yu human decision: call Toni Ruiz (jtgruiz@msn.com), identify the son via call-center/CT logs (no Students match), decide the withdrawal/refund, and send the drafted reply on ticket 28564. Auto-close deadline 2026-09-01 23:23 (comment 193432): do not let it auto-close while human-gated.
+
+Reference IDs:
+- Ticket: 28564 (complaint, now assigned Vicky id 2), 28992 (withdrawal, Vicky id 2)
+- Ideas: #28949 [blocked]
+- Files touched: /etc/litellm/_router_core.py (+ .bak-passthrough-20260831); admin_portal tickets, ticket_comments, orchestrator_ideas, idea_comments
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788212361951` — 8/31/2026, 3:36:22 PM PT — 166 turns
 
 **Original task:**
 
@@ -161,70 +225,146 @@ TASK #1788195482100 — Nero + Maximus MLX decode watchdog anti-loss + Maximus r
 ANSWER TO "ANYTHING ELSE TO DO HERE?": Yes, one real open thread. Everything else that can be done with available tools this window is done and verified. T
 ```
 
-**Ideas referenced:** #1000, #1001, #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178819, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #27236, #27249 [executing], #27250, #27503, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044 [proposed], #29067 [proposed], #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788161302475` — 8/31/2026, 3:19:11 PM PT — 439 turns
-
-**Original task:**
-
-```
-#Grievances
-
-Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
-
-Jon says: Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
-```
-
-**Ideas referenced:** #1242, #12770, #14743, #14748, #16844, #17712, #177949, #178805, #178806, #178816, #18135, #18480 [deployed], #18481 [blocked], #18491 [rejected], #18853, #1912, #19426, #19802, #1998, #202608, #20292, #20295, #2168, #2174, #22250, #25185, #25764, #25888, #25913, #26400, #2647, #2654, #2659, #2662, #2663, #2670, #2672, #2675, #2677, #2679, #26932, #2782, #28546, #28551, #28552, #28564, #28586, #28596, #28607, #28622, #28704, #28705, #28706, #28723, #28730, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #28949 [proposed], #28958, #28992, #29017 [deployed], #29026 [deployed], #29027 [proposed], #29028 [proposed], #29034 [deployed], #29054 [proposed], #35944, #3957, #4930, #4931, #5095, #5770, #5795, #6039, #6064, #6106, #6230, #6789, #6852, #7164, #7359, #7381, #9019
+**Ideas referenced:** #1000, #1001, #1002, #1003, #1004, #1006, #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178819, #1798, #1828, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25185, #25378, #25381, #2546, #27236, #27249 [executing], #27250, #27503, #28958, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044 [proposed], #29067 [proposed], #29070 [proposed], #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-rom that retired lane is gone.
+/cline_task_ledger.md (row 14)
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1788161302475 — Grievance vision doorman local-first, local Qwen vision truth, and #29027 explanation.
 
-Where we left off (verified 2026-08-31 12:10 PT):
-- GrievanceVisionDoorman.php DEFAULT_LANES = julia-qwen38-27b (primary, local vLLM :11513), claudia-qwen38-27b (peer), openrouter/qwen/qwen3.8-max (outage-only). VISION_BACKENDS now whitelists 127.0.0.1:11513. DB vision_ocr_lanes matches. php -l clean.
-- #29028 [deployed]: minicpm-v model blocks + router-fallback entry removed from /etc/litellm/config.yaml; litellm active; minicpm-v gone from /v1/models.
-- LOCAL VISION TRUTH (from GLM53_RING_STATE_TRACKER.md, read this window): Julia+Claudia :11513 serve qwen3.8-27b FP8 TP=2 with NATIVE vision (red-pixel probe → "red", 8/30 21:28 PT). My earlier "tunnels down / text-only" claim was a WOPR-side tunnel verdict, corrected — never a service verdict.
-- OPEN ROUTING OBSERVATION: gateway image call to julia-qwen38-27b served by 127.0.0.1:11510 (gpt-oss-120b text-only refusal) while config targets :11513 — filed #29054.
+Pick up task #1788195482100 - MLX Metal-OOM root cause + cache-cap fix
+
+Where we left off (verified 2026-08-31 15:29 PT):
+- #29044 [deployed] - ROOT CAUSE CONFIRMED: mlx_lm.server crashes with [METAL] Command buffer execution failed: Insufficient Memory under concurrent decode (evidence: Nero ~/Library/Logs/qwen38-mlx.err.log traceback). Fix deployed: both serve scripts now pass --prompt-cache-size 8 --prompt-cache-bytes 3221225472 --decode-concurrency 4 --prompt-concurrency 4; launchagents kickstarted; processes relaunched with flags verified (Nero PID 24867, Maximus PID 51106/51113).
+- Nero verified serving under live load (verified 15:11 PT): Prompt Cache: 3 sequences, 0.47 GB while processing a 21,403-token production prompt (6144/21403), caps holding.
+- Maximus: caps deployed and processes verified before its SSH reverse tunnel :2202 DROPPED (verified 15:29 PT: ss -tln shows no :2202, only 2222/2223). The MLX lane itself stays covered by decode-watchdog #29034 [deployed] on-box.
+- Residual cold-start-load OOM (large prompt while 27B still loading + Ollama bespoke-minicheck 5.39GB VRAM on same GPU) filed as #29067 [proposed]. Watchdogs #29026 [deployed] / #29034 [deployed] remain the safety net.
+- Rule 317 clause 13 amended (two-axis OOM + require full-decode probe before claiming the wedge is eliminated); rule_amend proof recorded for task 1788195482100. Ledger row 14 + HANDOFF_NOTES.md written.
 
 Open threads to drive next:
-1. #29054 [proposed] — Find why LiteLLM serves julia-qwen38-27b image calls via the 11510 adapter instead of the :11513 vLLM; pin image-bearing calls to :11513 so the local-first doorman actually serves at zero cost.
-2. #29027 [proposed] — awaiting Ruben approval: one-line gate in cron/cron_ai_ticket_agent.php (~line 1633) to escalate grievance/human-gated tickets instead of auto-resolving on dead_end with email-sent (evidence: ticket 28564). Ruben said "Explain" this turn; NOT implemented.
-3. #28949 [executing] — HUMAN DECISION STILL PENDING: Vicky Yu reply to jtgruiz@msn.com grievance (ticket 28564).
+1. #29067 [proposed] - MLX cold-start-load OOM: add a readiness gate in the serve scripts (warmup decode before accepting traffic) and/or sequence Ollama VRAM (minicheck 5.39GB, fed by lib/MiniCheckVerifier.php, do not unload without a verifier plan). Next step: on-box work during a cold-start window on Nero/Maximus.
+2. #29070 [proposed] - Maximus :2202 reverse tunnel dropped: recover from the Mac side (re-run ssh -R 2202 reverse tunnel) or via an alternate access path; the decode-watchdog auto-recovers the MLX lane meanwhile.
 
 Reference IDs:
-- Ticket: 28564 (TKT-20260828-BB9A8D57)
-- Ideas: #29028 [deployed], #29054 [proposed], #29027 [proposed], #28949 [executing]
-- Files touched: /var/www/emtskills/lib/GrievanceVisionDoorman.php, /etc/litellm/config.yaml, admin_portal.grievance_automation_config, admin_portal.orchestrator_ideas
+- Ideas filed: #29044 [deployed], #29067 [proposed], #29070 [proposed], #29026 [deployed], #29034 [deployed], #29017 [deployed]
+- Files touched: REMOTE Nero :2223 ~/bin/qwen38_serve.sh; REMOTE Maximus :2202 ~/bin/emsu-maximus-mlx-qwen38.sh; WOPR /var/www/emtskills/docs/HANDOFF_NOTES.md; LOCAL rule 317 file (clause 13); LOCAL cline_task_ledger.md (row 14)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788195724924` — 8/31/2026, 3:32:55 PM PT — 186 turns
+
+**Original task:**
+
+```
+#EMT Skills Slowness
+
+We have YET Another slowness detected for /emtskills. Please durably solve/resolve and write to the document
+
+--
+Pick up task 1788147338340 - read + append emtskills slowness .md, resolve emsuniversity.com/emtskills slowness again.
+Left off: "all four approved ideas are [deployed], risk question on #28939 has an honest correction, GLM53..." - verify the .md append landed and the deploy stuck.
+```
+
+**Ideas referenced:** #178806, #178814, #19338, #19458, #19491, #19837 [deployed], #19838, #23133, #2342, #23945, #23952, #23954, #25185, #25548 [executing], #25679 [executing], #25888, #2590, #25940 [executing], #26009, #26068, #26218, #26219 [deployed], #26234, #26258, #26336, #26348, #27691, #28722 [proposed], #28762, #28774, #28776, #28795, #28891, #28893, #28894, #28895, #28897, #28939, #28958, #29023 [proposed], #29068 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+Log
+No reversals this window.
+
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788147338340 — /emtskills slowness: post-change status check answered (durable swap + keepalive lock addressed, residual bell-poller tracked).
+
+Where we left off (verified 2026-08-31 15:24 PT):
+- /emtskills: 13ms TTFB, HTTP 302, fast (5 curl runs).
+- Swap storm: FAIL-OPEN every min 11:49→15:17, ZERO swapoff, honest FAIL-OPEN/HELD log lines (50 pre-11:49 REMEDIATED lines).
+- Keepalive lock: zero slow-log entries since 11:45.
+- Residual OPEN: 3 portal_bell_poll stalls 15:16:15 during du/rsync/imap I/O burst; tracked as #29068 [proposed].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29068 [proposed] — residual portal_bell session_start stalls during I/O bursts: audit main-page session-lock hold time + consider retiring legacy poll (commented out, old tabs only).
+
+Reference IDs:
+- Ticket: n/a (original pickup task 1788147338340)
+- Ideas filed: #29068 [proposed]
+- Files touched: /var/www/emtskills/scripts/emsu-memory-guardian.sh, /var/www/emtskills/skillstastic/api_keepalive.php, /var/www/emtskills/docs/EMTSKILLS_SLOWNESS_RCA_2026-08-11.md
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
-### `1788161048426` — 8/31/2026, 3:19:07 PM PT — 367 turns
+### `1788200522716` — 8/31/2026, 3:26:15 PM PT — 413 turns
 
 **Original task:**
 
 ```
-#Joshua Qwen 3.8 27B
+#TDSHS
 
-Bring back up Joshua Qwen 3.8 27B to serving
+AMR is also GMR / American Medial Response Global Medical Response, etc... The docuemnts are all in there somewhere, keep hunting. You can check Vicky and Jon emails if you need to do that. 
+
+can you resolve this -> One thing worth knowing before anyone else reads that registry: the pending_review and unknown values in the agreement_status column are internal AI-extraction review flags, not statements about whether an agreement exists or is signed. Several documents flagged pending_review are fully executed by both parties (verified: execute_query returned the flag alongside instrument
 ```
 
-**Ideas referenced:** #10756, #11316, #11847, #12364, #1242, #12477, #12612, #12618, #12680, #12689, #12824, #12872, #12878, #13437, #13490, #13842, #13874, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29017 [deployed], #29026 [deployed], #29034 [deployed], #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+**Ideas referenced:** #1005, #16957, #178816, #25185, #27100, #28958, #29018 [deployed], #29019 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29069 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788212457240` — 8/31/2026, 3:18:42 PM PT — 125 turns
+### `1788205619819` — 8/31/2026, 3:20:51 PM PT — 110 turns
+
+**Original task:**
+
+```
+#Postmark Issue
+
+We recently had an issue where postmarked disabled sending a web hooks and you resolved it. This issue seems to have recurred again. We need a durable solution. Check the recent emails received on this. Also make sure you were looking at the handoff document which references the actual fixes so that you save time: 
+
+https://emsuniversity.com/emtskills/externship/campaign_tracking_webhook.php and https://emsuniversity.com/emtskills/reviews/webhooks/postmark_outreach_webhook.php
+```
+
+**Ideas referenced:** #1242, #178806, #21582, #2670, #2672, #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29060 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+ost there instead of log-only.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Postmark webhook auto-disable recurrence fix (idea #29060).
+
+Where we left off (verified 2026-08-31 15:20 PT):
+- All layers re-verified live: autoheal log shows unbroken 15-min runs 13:30-15:15, all healthy; both cron entries present (www-data */15 + root @hourly chown enforcer, syslog confirms firing).
+- Baseline file intact owned www-data (mtime 15:15); log owned www-data (silent-kill cause eliminated).
+- All 8 webhooks disabled=[] live; both named endpoints HTTP 200; Status-strip disable signature caught and restored in earlier end-to-end test on 23448846.
+- Idea #29060 [deployed] filed; HANDOFF_NOTES.md updated with RCA.
+
+Open threads to drive next:
+1. (human-only decision, no idea) — Optional: provide POSTMARK_AUTOHEAL_DISCORD_WEBHOOK URL for proactive Discord flap alerts (5+/24h); currently flap escalation is log-only. Requires a credential only Ruben can supply.
+
+Reference IDs:
+- Ideas filed: #29060 [deployed]
+- Files touched: /var/www/emtskills/cron/cron_postmark_webhook_autoheal.php, /var/www/emtskills/storage/postmark_webhook_baseline.json, /var/log/emtskills/cron_postmark_webhook_autoheal.log, HANDOFF_NOTES.md, /var/spool/cron/crontabs/root
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788212457240` — 8/31/2026, 3:20:22 PM PT — 130 turns
 
 **Original task:**
 
@@ -246,60 +386,6 @@ Your two directives are
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788196060306` — 8/31/2026, 3:18:31 PM PT — 277 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-approved
-- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
-
-- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
-
-
-```
-
-**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #166534, #18745, #18770, #23428, #23429, #23468, #23506, #23941, #23982, #24941, #24990, #25313, #25466, #25768, #28155, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #30363, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648, #9650, #9660, #9670
-
-**Last PICKUP PROMPT:**
-
-```
-se the remaining open threads.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus Improvements: build batch + browser-QA followup.
-
-Where we left off (verified 2026-08-31 13:56 PT):
-- #29049 [deployed]: answer-dedup fixed (alltastic_api.php:6727 gate), live-verified via task #759 → exactly one audit row (id=12621, task_worker_run, success=1).
-- #29053 [deployed]: queue position relabeled "in queue (estimate)" at argus_task_status.php (3 render sites). FIFO claim confirmed; out-of-order completion = parallel workers, relabel correct.
-- #29051 [deployed]: Payments header merge — root cause sync_student_qb group='Payment' singular (argus_action_catalog.php:181); fixed catalog + JS collapse (argus_download.php:740).
-- #29052 [deployed]: 5/5 polish — type="button" Search (lines 353/378), stale-filter clear on tab switch, hidden-tab polling gate (line 1755), act-wrap overflow-x, iframe cap 6000→4200 (lines 1948/1952).
-- #29050 [executing]: writes-only default ON + toggle (line 360) + burst grouping (lines ~1211-1224) applied and lint clean; facet chips NOT yet built.
-- #29055 [proposed]: Complaint Hub Phase 1 not started.
-- All files lint clean; PHP-FPM reloaded; changes confirmed on disk via grep.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29050 [executing] — Build facet chips (Who/Action/Outcome/Gate) and wire to the activity_log API. Backend already returns user_email/action_key/outcome/gate per row; add client-side chips reusing actWritesOnly pattern.
-2. #29055 [proposed] — Complaint Hub Phase 1: Argus action → RegulatorResponseEngine bridge. Placeholder not built; needs scope confirmation (filing a complaint, checking complaint status by student).
-3. #29014 [proposed] — Await Ruben's browser answers (9-question checklist above). P10 verification + any visual regressions from this batch.
-4. #29015 [proposed] — Dispatcher/fleet queued-ideas 45-min fresh-first ORDER BY — render still not located; needs a fresh look at ruben_executor_live.php.
-
-Reference IDs:
-- Ticket: Argus Improvements QA batch (2026-08-31 PT, rubric questions 1-12)
-- Ideas filed: #29049 [deployed], #29053 [deployed], #29051 [deployed], #29052 [deployed], #29050 [executing], #29055 [proposed], #29014 [proposed], #29015 [proposed]
-- Files touched: /var/www/emtskills/routes/alltastic_api.php, routes/argus_download.php, routes/argus_task_status.php, lib/argus_action_catalog.php
-- Backups: /tmp/argus_download.php.bak-20260831-paymerge, /tmp/argus_action_catalog.php.bak-20260831-paymerge, /tmp/argus_download.php.new-toggle, /tmp/argus_download.php.new-burst
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1788212075952` — 8/31/2026, 3:17:05 PM PT — 68 turns
 
 **Original task:**
@@ -317,65 +403,6 @@ Updated one is here on downloads folder: EMS Universal Education Catalog CA (Cur
 ```
 
 **Ideas referenced:** #26019, #26241, #26245, #26249, #27284, #28735 [proposed], #29062 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788205619819` — 8/31/2026, 3:16:35 PM PT — 105 turns
-
-**Original task:**
-
-```
-#Postmark Issue
-
-We recently had an issue where postmarked disabled sending a web hooks and you resolved it. This issue seems to have recurred again. We need a durable solution. Check the recent emails received on this. Also make sure you were looking at the handoff document which references the actual fixes so that you save time: 
-
-https://emsuniversity.com/emtskills/externship/campaign_tracking_webhook.php and https://emsuniversity.com/emtskills/reviews/webhooks/postmark_outreach_webhook.php
-```
-
-**Ideas referenced:** #1242, #178806, #21582, #2670, #2672, #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29060 [deployed]
-
-**Last PICKUP PROMPT:**
-
-```
-l not discoverable on the box.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Postmark webhook auto-disable recurrence fix (idea #29060).
-
-Where we left off (verified 2026-08-31 14:37 PT):
-- Autoheal cron confirmed running every 15 min continuously since 13:16 (log entries 13:30 through 14:30, all healthy).
-- Root causes fixed: (1) log ownership emsuserver->www-data + root @hourly chown enforcer; (2) rewritten autoheal script with persistent baseline drift detection that catches Postmark's Status-strip disable signature.
-- Live end-to-end test passed on webhook 23448846; all 8 webhooks healthy; both named endpoints HTTP 200.
-- Idea #29060 [deployed] filed; HANDOFF_NOTES.md updated.
-
-Open threads to drive next:
-1. (human-only decision, no idea) — Wire proactive Discord flap alerts by providing a POSTMARK_AUTOHEAL_DISCORD_WEBHOOK URL; currently flap escalation is log-only. Requires a credential Ruben must supply.
-
-Reference IDs:
-- Ideas filed: #29060 [deployed]
-- Files touched: /var/www/emtskills/cron/cron_postmark_webhook_autoheal.php, /var/www/emtskills/storage/postmark_webhook_baseline.json, /var/log/emtskills/cron_postmark_webhook_autoheal.log, HANDOFF_NOTES.md, /var/spool/cron/crontabs/root
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788200522716` — 8/31/2026, 3:14:10 PM PT — 395 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-AMR is also GMR / American Medial Response Global Medical Response, etc... The docuemnts are all in there somewhere, keep hunting. You can check Vicky and Jon emails if you need to do that. 
-
-can you resolve this -> One thing worth knowing before anyone else reads that registry: the pending_review and unknown values in the agreement_status column are internal AI-extraction review flags, not statements about whether an agreement exists or is signed. Several documents flagged pending_review are fully executed by both parties (verified: execute_query returned the flag alongside instrument
-```
-
-**Ideas referenced:** #16957, #178816, #25185, #27100, #28958, #29018 [deployed], #29019 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

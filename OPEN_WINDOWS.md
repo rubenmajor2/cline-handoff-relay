@@ -6,16 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 8:40:03 AM PT | window: last 72h | 75 tasks | index total 999 (parsed 3, cached 996)
+Generated: 8/31/2026, 10:19:40 AM PT | window: last 72h | 79 tasks | index total 1004 (parsed 10, cached 994)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788161107343` | 8/31/2026, 8:34:21 AM | 110 | 1136KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
-| `1788160972127` | 8/31/2026, 8:21:15 AM | 77 | 699KB | #Julia/Claudia Qwen 3.8 27B |
-| `1788161048426` | 8/31/2026, 6:55:28 AM | 42 | 677KB | #Joshua Qwen 3.8 27B |
-| `1788161032616` | 8/31/2026, 12:48:02 AM | 63 | 280KB | #Nero Qwen 3.8 27B |
-| `1788161302475` | 8/31/2026, 12:47:59 AM | 61 | 250KB | #Grievances |
-| `1788154719401` | 8/31/2026, 12:45:38 AM | 361 | 882KB | #Argus Improvmeents |
+| `1788161302475` | 8/31/2026, 10:19:35 AM | 169 | 575KB | #Grievances |
+| `1788195724924` | 8/31/2026, 10:19:29 AM | 53 | 280KB | #EMT Skills Slowness |
+| `1788196060306` | 8/31/2026, 10:19:26 AM | 43 | 138KB | #Argus Improvmeents |
+| `1788195482100` | 8/31/2026, 10:19:20 AM | 55 | 388KB | #Nero Qwen 3.8 27B |
+| `1788195954623` | 8/31/2026, 10:18:01 AM | 47 | 161KB | On the MDM Access page, I noticed that my SSH access is not root. They all need to be root |
+| `1788161107343` | 8/31/2026, 10:17:55 AM | 263 | 1898KB | Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 2 |
+| `1788161048426` | 8/31/2026, 10:17:47 AM | 81 | 846KB | #Joshua Qwen 3.8 27B |
+| `1788195017985` | 8/31/2026, 10:15:59 AM | 266 | 546KB | #TDSHS |
+| `1788154719401` | 8/31/2026, 10:06:18 AM | 397 | 972KB | #Argus Improvmeents |
+| `1788161032616` | 8/31/2026, 9:55:27 AM | 124 | 459KB | #Nero Qwen 3.8 27B |
+| `1788160972127` | 8/31/2026, 9:35:22 AM | 80 | 701KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788161285542` | 8/31/2026, 12:28:05 AM | 1 | 2KB | Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.p |
 | `1788160287444` | 8/31/2026, 12:24:37 AM | 28 | 138KB | #Lost Cline Windows |
 | `1788065744387` | 8/30/2026, 11:41:39 PM | 782 | 3316KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
@@ -84,100 +89,12 @@ Generated: 8/31/2026, 8:40:03 AM PT | window: last 72h | 75 tasks | index total 
 | `1787931475695` | 8/28/2026, 10:45:33 AM | 132 | 22802KB | Mony models not showing TODOs here in cline - just showing 0/0. Somehting is off with that |
 | `1787937882474` | 8/28/2026, 10:24:43 AM | 1 | 7KB | #GLM 5.3 |
 | `1787783324531` | 8/28/2026, 10:22:16 AM | 1712 | 11444KB | # GLM 5.3: reminder set + your "why can't we use it" question answered |
-| `1787901041894` | 8/28/2026, 9:15:14 AM | 480 | 1743KB | What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow a |
 
 ---
 
 ## Per-window detail
 
-### `1788161107343` — 8/31/2026, 8:34:21 AM PT — 110 turns
-
-**Original task:**
-
-```
-Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 23:50 crash).
-
-Where left off (verified 08-30 23:34 PT):
-- Original ask: "Think about how many times you've told me today that some claim you made was false. How concerning is that? There's something serious..." - the claim-provenance / truth-judge hardening thread.
-- Window was in its final rule-91 gate loop. A prior completion BLOCKED with SELF_CONTRADICTING_DISPOSITION on #28958 [proposed] and #28961 [proposed], then a re-run returned "ALL PASSED" with this IDENTITY ECHO:
-  - #28958 [proposed] - "Determ
-```
-
-**Ideas referenced:** #0000, #16224, #178815, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27634, #27652, #28958 [proposed], #28961 [proposed], #5344
-
-**Last PICKUP PROMPT:**
-
-```
-/clinerules-mcp/build/index.js
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task 1788156466825 — VERITAS claim-falsity investigation (both ideas deployed).
-
-Where we left off (verified 08-31 06:12 PT):
-- #28958 [deployed] deterministic claim-provenance gate built and wired into clinerules_validate_completion as R28958_UNSUPPORTED_CLAIM, probe-verified.
-- #28961 [deployed] human-correction meter built (human_corrections table plus record and meter MCP tools), probe-verified live.
-- npm run build exit 0; launchd service com.emsu.mcp-clinerules restarted; tools/list serves all three tools.
-- orchestrator_ideas status deployed for both; reconcile_ideas returned deployed for both.
-
-Open threads to drive next:
-None. All work completed this session. The two gates that blocked the prior window ship are now deployed, probed, and stamped.
-
-Reference IDs:
-- Ticket: 1788156466825 (VERITAS claim-falsity investigation)
-- Ideas filed: #28958 [deployed], #28961 [deployed]
-- Files touched: /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/src/index.ts and /Users/rubenmajor/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788160972127` — 8/31/2026, 8:21:15 AM PT — 77 turns
-
-**Original task:**
-
-```
-#Julia/Claudia Qwen 3.8 27B
-
-Bring back up Julia/Claudia Qwen 3.8 27B to serving
-```
-
-**Ideas referenced:** #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788161048426` — 8/31/2026, 6:55:28 AM PT — 42 turns
-
-**Original task:**
-
-```
-#Joshua Qwen 3.8 27B
-
-Bring back up Joshua Qwen 3.8 27B to serving
-```
-
-**Ideas referenced:** #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788161032616` — 8/31/2026, 12:48:02 AM PT — 63 turns
-
-**Original task:**
-
-```
-#Nero Qwen 3.8 27B
-
-Bring back up Nero Qwen 3.8 27B to serving
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178805, #1798, #1828, #1912, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #24144, #25378, #25381, #2546, #25606, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #27236, #27249 [executing], #27250, #27503, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #28956, #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788161302475` — 8/31/2026, 12:47:59 AM PT — 61 turns
+### `1788161302475` — 8/31/2026, 10:19:35 AM PT — 169 turns
 
 **Original task:**
 
@@ -193,7 +110,161 @@ Jon says: Self-completed: root cause was 3 live code/schema mismatches in routes
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788154719401` — 8/31/2026, 12:45:38 AM PT — 361 turns
+### `1788195724924` — 8/31/2026, 10:19:29 AM PT — 53 turns
+
+**Original task:**
+
+```
+#EMT Skills Slowness
+
+We have YET Another slowness detected for /emtskills. Please durably solve/resolve and write to the document
+
+--
+Pick up task 1788147338340 - read + append emtskills slowness .md, resolve emsuniversity.com/emtskills slowness again.
+Left off: "all four approved ideas are [deployed], risk question on #28939 has an honest correction, GLM53..." - verify the .md append landed and the deploy stuck.
+```
+
+**Ideas referenced:** #23133, #2342, #23945, #23952, #23954, #25548 [executing], #25679 [executing], #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691, #28722 [proposed], #28939
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788196060306` — 8/31/2026, 10:19:26 AM PT — 43 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #25466, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #4434, #4575, #5608, #5892, #6181, #6300, #6366, #6424, #6628, #7063, #7141, #9261, #9648
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788195482100` — 8/31/2026, 10:19:20 AM PT — 55 turns
+
+**Original task:**
+
+```
+#Nero Qwen 3.8 27B
+
+Approved, but if wedged, which likely is not, then fix it. Honestly i doubt maximus is even down. Not sure why this is even a proposed idea. 
+
+1. #29017 [proposed] — Probe Maximus :11530 MLX decode (on-box via SSH :2223, then lane). If serving, re-add `http://127.0.0.1:11530` to `drop-decode-dead-mlx-20260830.conf` FRANK_TOOLS_UPSTREAMS/FRANK_CHAT_UPSTREAMS and restart `frankenstein-tools` (same revert path used for Nero). If decode-wedged, leave dropped and report.
+
+How do we then durably ensure that Nero is not lost by Agents or if it goes down, it can go back up quickly 
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18720, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25378, #25381, #2546, #27236, #27249 [executing], #27250, #27503, #28956, #29017 [proposed], #7142, #7149
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788195954623` — 8/31/2026, 10:18:01 AM PT — 47 turns
+
+**Original task:**
+
+```
+On the MDM Access page, I noticed that my SSH access is not root. They all need to be root access from here, especially WOPR:
+
+https://www.emsuniversity.com/emtskills/routes/mdm_portal.php 
+
+This is the entire point. I should not be getting Permission Denied there
+```
+
+**Ideas referenced:** #178806, #2672, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #334155, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788161107343` — 8/31/2026, 10:17:55 AM PT — 263 turns
+
+**Original task:**
+
+```
+Pick up task 1788156466825 - VERITAS claim-falsity investigation (the window live at the 23:50 crash).
+
+Where left off (verified 08-30 23:34 PT):
+- Original ask: "Think about how many times you've told me today that some claim you made was false. How concerning is that? There's something serious..." - the claim-provenance / truth-judge hardening thread.
+- Window was in its final rule-91 gate loop. A prior completion BLOCKED with SELF_CONTRADICTING_DISPOSITION on #28958 [proposed] and #28961 [proposed], then a re-run returned "ALL PASSED" with this IDENTITY ECHO:
+  - #28958 [proposed] - "Determ
+```
+
+**Ideas referenced:** #0000, #13437, #13440, #16224, #178815, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #1993 [deployed], #20251 [proposed], #2109 [deployed], #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27488, #27634, #27652, #28239, #28256, #28306 [deployed], #28958 [proposed], #28961 [proposed], #29011 [proposed], #29012 [proposed], #29013 [proposed], #29014 [deployed], #5344, #9109, #9132
+
+**Last PICKUP PROMPT:**
+
+```
+SMS MiniCheck gate now shipped
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task 1788156466825 — VERITAS truth-hardening: SMS entailment gap closed, full fleet coverage complete.
+
+Where we left off (verified 08-31 10:17 PT):
+- SMS AI (lib/SMSAIResponder.php) now MiniCheck-gated after AIACG scan; php -l clean; FPM reloaded via USR2, active.
+- Coverage complete: email (mailer), Argus (proxy), chat/voice (AgentReplyPipeline gate 6), SMS (SMSAIResponder). MarlieAgent excluded by design.
+- Earlier this window: #29011 [deployed], #29012 [deployed], #29013 [deployed], #28958 [deployed], #28961 [deployed].
+- Reversal logged: prior SMS-coverage claim corrected after live probe; causal fix is #29014 [deployed].
+
+Open threads to drive next:
+None. All coverage gaps found and closed this session.
+
+Reference IDs:
+- Ticket: 1788156466825 (VERITAS claim-falsity investigation)
+- Ideas filed: #29014 [deployed]
+- Ideas closed earlier: #29011 [deployed], #29012 [deployed], #29013 [deployed], #28958 [deployed], #28961 [deployed]
+- Files touched: /var/www/emtskills/lib/SMSAIResponder.php (backup .bak-minicheck-20260831)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Re-probed SMS coverage claim: found real path (twilio_sms_inbound → SMSAIResponder) bypassed the chokepoint
+- [x] MiniCheck wired into SMSAIResponder (php -l clean, backup taken, 4 refs in live file)
+- [x] FPM gracefully reloaded via USR2 (active)
+- [x] Full coverage sweep: email/Argus/chat/voice/SMS all gated; MarlieAgent excluded by design
+- [x] Reversal logged with causal idea
+- [x] Ship updated completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1788161048426` — 8/31/2026, 10:17:47 AM PT — 81 turns
+
+**Original task:**
+
+```
+#Joshua Qwen 3.8 27B
+
+Bring back up Joshua Qwen 3.8 27B to serving
+```
+
+**Ideas referenced:** #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788195017985` — 8/31/2026, 10:15:59 AM PT — 266 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+See the latest emails since August 28 from DSHS and log to the system/ prepare responses. Also note that there was a recall message on one of the complaints which makes the intention look even worse.  I think this was the one for exterships sites supposedly where Sabrina accuses us of falsifying documentation, however, when you go thorugh our system, you should be able to find all these contracts. So it looks more like retaliation and harrassment. I am not going to be careful with this. This one crosses a line and this is hurting the organization directly without legal justification. A
+```
+
+**Ideas referenced:** #19587, #19595 [executing], #20734, #2797 [deployed], #28110, #28958, #29018 [proposed], #29019 [proposed], #29020 [proposed], #29021 [proposed], #450438, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788154719401` — 8/31/2026, 10:06:18 AM PT — 397 turns
 
 **Original task:**
 
@@ -211,7 +282,94 @@ Verdict board
 P1	Executor throughput + inline lane	FAIL	Read-only question never answered inline; of
 ```
 
-**Ideas referenced:** #178806, #18947, #18948, #18973, #19348, #19455, #21582, #22687, #23428, #23468, #23506, #23920, #23941, #23982, #24941, #24990, #25142, #25768, #2670, #2672, #26881, #26895, #2698, #2715, #27860, #28203, #28215, #28465, #28544, #28551, #28552, #28607, #28730, #28751, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28899, #28901, #28905, #28912, #28933, #28936, #28945, #347734, #4357, #475569, #5391, #5449, #5451, #5920, #5932, #6064, #6067, #6109, #6218, #6226, #6366, #64748, #8211
+**Ideas referenced:** #12065, #178806, #18947, #18948, #18973, #19348, #19455, #21582, #22687, #23428, #23468, #23506, #23920, #23941, #23982, #24941, #24990, #25142, #25768, #2670, #2672, #26881, #26895, #2698, #2715, #27860, #28203, #28215, #28465, #28544, #28551, #28552, #28607, #28730, #28751, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28899, #28901, #28905, #28912, #28933, #28936, #28945, #29014 [proposed], #29015 [proposed], #347734, #4357, #475569, #5391, #5449, #5451, #5920, #5932, #6064, #6067, #6109, #6218, #6226, #6366, #64748, #8211
+
+**Last PICKUP PROMPT:**
+
+```
+e the render query is located.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus Improvements (QA regression run fixes).
+
+Where we left off (verified 2026-08-31 09:46 PT):
+- SEV-1 answer-delivery: HY093 fixed at cron_argus_task_worker.php line 647 (WHERE id=? added); task #751 verified DONE + from_argus row; queue drained (696 done, 0 queued/running); 9 stuck tasks requeued.
+- SEV-2 alias scrub: cato-120b deleted from config.yaml + LiteLLM_ProxyModelTable DB row; deepseek-v4-banned-alias block + static option removed; GLM-5.3 label live; /v1/models clean on both blue:4100 and green:4101.
+- SEV-2 Kaizen: lib/argus_kaizen_learner.php has real getRecentRecipes + corrected audit_log trend query; route render keys fixed; stats 1146 learnings live.
+- SEV-2 offload msg: argusQueuedReply reports live queue position/total, no fixed ETA.
+- SEV-1 sort validation: ArgusIdeaEta.php whitelist (created_at_desc, created_at_asc, priority); invalid sort returns clean error, no idea filed.
+- P12 docs 200 on both hosts; T1-T12 spec at docs/specs/argus_console_browser_ai_test_plan_t1_t12.md.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+2. #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+Reference IDs:
+- Ticket: QA regression run prompts 1–12 (2026-08-30 PT)
+- Ideas filed: #29014, #29015 (both [proposed])
+- Files touched: /var/www/emtskills/routes/cron_argus_task_worker.php, lib/argus_kaizen_learner.php, routes/argus_kaizen_learn.php, lib/ArgusIdeaEta.php, routes/alltastic_api.php, routes/llm_router_live.php, routes/llm_test_chat.php, /etc/litellm/config.yaml, LiteLLM_ProxyModelTable (DB)
+- Backups: /tmp/cron_argus_task_worker.php.bak-20260831-hy093, /tmp/argus_kaizen_learner.php.bak-20260830-real-schema, /tmp/alltastic_api.php.bak-20260831-queuectx, /tmp/config.yaml.bak-20260830-alias-scrub
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788161032616` — 8/31/2026, 9:55:27 AM PT — 124 turns
+
+**Original task:**
+
+```
+#Nero Qwen 3.8 27B
+
+Bring back up Nero Qwen 3.8 27B to serving
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178805, #1798, #1828, #1912, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #24144, #25378, #25381, #2546, #25606, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #27236, #27249 [executing], #27250, #27503, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #28956, #29017 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+0s before judging decode dead.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Nero Qwen3.8-27B restore follow-up: Maximus :11530 verification.
+
+Where we left off (verified 2026-08-31 09:54 PT):
+- Nero (SMS Mac) Qwen3.8-27B MLX restored to serving on lane :11525. Pool config fixed in `drop-decode-dead-mlx-20260830.conf` (re-added :11525 only). Adapter restarted; merged env includes :11525. Truth report 09:49:27 shows `127.0.0.1:11525 in pool Y 200 SERVING`.
+- MLX engine cleared via `launchctl kickstart -k gui/501/com.ruben.qwen38-mlx` (new PID 3189). On-box POST 200 at 09:46:09.
+- Handoff notes updated via MCP.
+- Maximus :11530 (second MLX lane) remains DROPPED from the same drop-in — decode NOT verified this window.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29017 [proposed] — Probe Maximus :11530 MLX decode (on-box via SSH :2223, then lane). If serving, re-add `http://127.0.0.1:11530` to `drop-decode-dead-mlx-20260830.conf` FRANK_TOOLS_UPSTREAMS/FRANK_CHAT_UPSTREAMS and restart `frankenstein-tools` (same revert path used for Nero). If decode-wedged, leave dropped and report.
+
+Reference IDs:
+- Ideas filed: #29017 [proposed] (Maximus follow-up)
+- Files touched: `/etc/systemd/system/frankenstein-tools.service.d/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-drop-decode-dead-mlx-20260830.conf` (patched to re-add :11525)
+- DB: admin_portal (orchestrator_ideas insert #29017)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788160972127` — 8/31/2026, 9:35:22 AM PT — 80 turns
+
+**Original task:**
+
+```
+#Julia/Claudia Qwen 3.8 27B
+
+Bring back up Julia/Claudia Qwen 3.8 27B to serving
+```
+
+**Ideas referenced:** #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -2703,61 +2861,4 @@ Reference IDs:
 When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1787901041894` — 8/28/2026, 9:15:14 AM PT — 480 turns
-
-**Original task:**
-
-```
-What is wrong with frankenstein-llm's rule 91? That needs to be fixed. It's very shallow and not helpful. I'm getting terrible iterations here that need immediate resoltuion. See this: 
-
-I’ve identified that the Postmark SMTP credentials in RedriveEaGeneration.php are placeholders:
-
-```php
-$mail->Username   = 'YOUR_POSTMARK_API_TOKEN';
-$mail->Password   = '';
-```
-
-To complete the fix, I need the actual Postmark API token (used as the SMTP username) and any required password. Please provide these credentials (or specify where they should be stored) so I can update the file and verify email deli
-```
-
-**Ideas referenced:** #0000, #12249, #12251, #12266, #12269, #12345 [deployed], #12588, #12589, #12590, #12688, #12689, #13470, #14133, #14142, #14230, #16648, #16715, #17202, #17203, #17205, #17300, #17673, #177918, #18670, #18671, #1876, #19454, #20251, #2277, #22820, #22897, #24995, #25066, #25130, #25155, #25185, #2525, #25888, #2636 [deployed], #2637 [deployed], #2639, #26503, #26505, #26774, #26896, #27657, #27658, #28492 [proposed], #28503 [deployed], #28508 [proposed], #28509 [proposed], #28544 [proposed], #99988, #999888
-
-**Last PICKUP PROMPT:**
-
-```
-if the config smoketests fail.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1779186100000 — litellm zero-downtime front proxy + rule-91 gate.
-
-Where we left off (verified 2026-08-28 09:13 PT):
-- #28544 [deployed] TRUE ZERO-DOWNTIME SHIPPED. haproxy 2.8.16 owns 127.0.0.1:4000 (Restart=always, enabled at boot); litellm moved to backend :4100 via the port token in /etc/systemd/system/litellm.service.d/10-frugal.conf (the drop-in holding the EFFECTIVE ExecStart; the base unit copy is overridden/inert); spare color :4101; haproxy stats on :4099.
-- CHOSE HAPROXY OVER NGINX STREAM: nginx is Plesk sw-nginx 1.30.4, distro stream module is 1.24.0 - ABI mismatch would have risked the nginx serving emtskills/moodle/admin-portal/onlyambos.com/vec-api.
-- MEASURED: 300/300 client probes 200 across a full deploy, ZERO failures (was ~28s of hard 502s). A real chat completion through :4000 returned content 'PROXY OK'. Public edge verified 4/4 200 from off-box.
-- RESIDUAL UNDERSTOOD: a plain `systemctl restart litellm` still cuts 2-3 in-flight requests (haproxy SD flag = already-accepted connection died; cannot be retried). Two tuning attempts left the count identical, which is what disproved the timeout theory. Use the deploy script instead.
-- #28509 [deployed] write_server_file base64 + parse gate is live and was used repeatedly this session (it auto-ran 'bash -n: OK' and 'Python ast.parse: OK' on every script shipped).
-- #28503 [deployed] rule-91 enforcement gate alive; canary green (bad fixture flags 4 violations, good fixture clean).
-- #28508 [deployed] the older warm-then-swap script remains for config-safety but is superseded for deploys by litellm-zdt-deploy.sh.
-
-Open threads to drive next:
-None — all approved work is shipped and verified. Optional follow-up if desired: point any deploy automation/runbooks at /usr/local/bin/litellm-zdt-deploy.sh so nothing calls `systemctl restart litellm` directly.
-
-Reference IDs:
-- Ideas: #28503 [deployed], #28508 [deployed], #28509 [deployed], #28544 [deployed]
-- Bug library incidents (frankenstein_router_incidents, separate id space from ideas): incident 2636 dead r91 gate, incident 2637 restart-window 502, incident 2639 haproxy zero-downtime architecture
-- Files: /etc/haproxy/haproxy.cfg, /usr/local/bin/litellm-zdt-deploy.sh, /etc/systemd/system/litellm.service.d/10-frugal.conf, /var/www/emtskills/mcp-servers/emsu-operations/src/ssh.ts
-- Backups: 10-frugal.conf.bak-port4100-20260828-085858, haproxy.cfg.bak-fastfail-20260828-090208, haproxy.cfg.bak-sdfix-20260828-090351
-
-# Reversal Log
-- "the 2-3 residual dropped requests are a haproxy connect-timeout problem" -> corrected: they are SD (server died mid-response on an already-established connection), which haproxy may not retry. Proven by two tunings (timeout connect 10s->1s; error-limit 3->1) that BOTH left the failure count at exactly 3. | RCA bucket: wrong premise | causal rule updated: 317 (claim scope must equal probe scope - I tuned a knob before reading the termination flag that names the cause). Durable fix: the deploy script drains before stopping, and the bug-library entry records 'when two tunings leave a count identical, stop tuning and read the termination flag'.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<command>curl -s -o /dev/null -w 'litellm public edge: HTTP %{http_code} in %{time_total}s\n' https://litellm.emsuniversity.com/h
 ```

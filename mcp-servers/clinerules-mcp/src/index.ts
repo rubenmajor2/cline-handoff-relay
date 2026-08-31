@@ -280,6 +280,23 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_human_corrections_task ON human_corrections(task_id);
     CREATE INDEX IF NOT EXISTS idx_human_corrections_rule ON human_corrections(rule_id);
     CREATE INDEX IF NOT EXISTS idx_human_corrections_time ON human_corrections(created_at);
+
+    -- #29011 (2026-08-31): SESSION PROBE LEDGER for the freshness cross-check.
+    -- The R28958 provenance gate checks marker FORM, not FRESHNESS: a window
+    -- could paste a real-looking '(verified: ...)' marker from a PRIOR session
+    -- and pass. Windows log real probes here via clinerules_log_probe; the
+    -- validator then cross-checks each verified marker against probes logged
+    -- under the SAME task_id. ADOPTION-SAFE: the STALE_EVIDENCE gate only
+    -- fires for tasks that logged at least one probe (zero-probe tasks skip).
+    CREATE TABLE IF NOT EXISTS session_probes (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      task_id TEXT NOT NULL,
+      tool TEXT NOT NULL,
+      artifact TEXT,
+      created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+    );
+    CREATE INDEX IF NOT EXISTS idx_session_probes_task ON session_probes(task_id);
+    CREATE INDEX IF NOT EXISTS idx_session_probes_time ON session_probes(created_at);
   `);
 }
 
@@ -1308,6 +1325,90 @@ server.tool(
   }
 );
 
+// ─── #29011: SESSION-PROBE LEDGER + FRESHNESS CROSS-CHECK ───────────────────
+// The R28958 provenance gate checks marker FORM, not FRESHNESS. Windows log
+// real probes here; the validator cross-checks each '(verified: ...)' marker
+// against probes logged under the SAME task_id. Adoption-safe: the gate only
+// arms for tasks with >=1 logged probe.
+server.tool(
+  "clinerules_log_probe",
+  "SESSION-PROBE LEDGER WRITE (idea #29011). Log a real tool probe you ran THIS session (tool name + a short artifact snippet of what it returned). The validator's freshness gate cross-checks each '(verified: ...)' marker in your completion against probes logged under the same task_id — markers with no matching probe fail as R29011_STALE_EVIDENCE. Log probes as you work; a task with zero logged probes skips the freshness gate entirely (form-only checking still applies).",
+  {
+    task_id: z.string().describe("The Cline task id this probe belongs to."),
+    tool: z.string().describe("Tool you ran (e.g. ssh_command, execute_query, npm run build, curl, reconcile_ideas)."),
+    artifact: z.string().optional().describe("Short snippet of what the tool returned (a number, HTTP code, row, hash, filename)."),
+  },
+  async ({ task_id, tool, artifact }) => {
+    const row = db.prepare(
+      `INSERT INTO session_probes (task_id, tool, artifact) VALUES (?,?,?)`
+    ).run(task_id, tool.slice(0, 200), (artifact || "").slice(0, 1000));
+    const n = db.prepare(`SELECT COUNT(*) AS n FROM session_probes WHERE task_id = ?`).get(task_id) as any;
+    return {
+      content: [{
+        type: "text",
+        text: `✓ Probe #${Number(row.lastInsertRowid)} logged for task ${task_id} (${n.n} probe(s) this task). The freshness gate is now ARMED for this task: every '(verified: ...)' marker in your completion must correspond to a logged probe.`,
+      }],
+    };
+  }
+);
+
+// ─── #29012: UNIFIED FALSE-CLAIM METER ──────────────────────────────────────
+// One rollup answering "how many false claims today" with SOURCE LABELS so
+// machine-detected streams never pollute the human ledger (G7 protection).
+// Local streams read directly; WOPR streams fetched via the rollup endpoint
+// (best-effort, labeled unavailable on network failure — never silently zero).
+server.tool(
+  "clinerules_false_claim_meter",
+  "UNIFIED FALSE-CLAIM METER (idea #29012). One rollup over ALL false-claim streams with per-source labels: human-corrections (Ruben said it was false), gate-blocked (caught before ship, local gate_blocks), machine-detected (WOPR executor/kaizen corrections). The success metric is the ratio: gate blocks rising while human corrections fall means lies are being caught before they reach Ruben.",
+  {
+    days: z.number().int().min(1).max(90).default(1).describe("Rollup window in days (default 1 = today-ish)."),
+  },
+  async ({ days }) => {
+    const lines: string[] = [`UNIFIED FALSE-CLAIM METER (idea #29012) — trailing ${days}d`];
+    try {
+      const human = db.prepare(
+        `SELECT COUNT(*) AS n FROM human_corrections WHERE created_at >= datetime('now', ?)`
+      ).get(`-${days} day`) as any;
+      const gate = db.prepare(
+        `SELECT COUNT(*) AS n FROM gate_blocks WHERE blocked_at >= datetime('now', ?)`
+      ).get(`-${days} day`) as any;
+      const gateTop = db.prepare(`
+        SELECT violation_type, COUNT(*) AS n FROM gate_blocks
+        WHERE blocked_at >= datetime('now', ?)
+        GROUP BY violation_type ORDER BY n DESC LIMIT 5
+      `).all(`-${days} day`) as any[];
+      lines.push(`HUMAN-CORRECTED (Ruben said it was false): ${human.n}`);
+      lines.push(`GATE-BLOCKED (caught before ship, local validator): ${gate.n}`);
+      if (gateTop.length) {
+        lines.push(`  top gate types: ${gateTop.map((t) => `${t.violation_type}(${t.n})`).join(", ")}`);
+      }
+    } catch (e: any) {
+      lines.push(`LOCAL STREAMS ERROR: ${e.message}`);
+    }
+    // WOPR machine-detected streams (best-effort, 6s bounded, labeled on failure)
+    try {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 6000);
+      const resp = await fetch(
+        `https://www.emsuniversity.com/emtskills/api/false_claim_rollup.php?days=${days}`,
+        { signal: ctrl.signal }
+      );
+      clearTimeout(t);
+      const data: any = await resp.json();
+      if (data && data.ok) {
+        lines.push(`MACHINE-DETECTED (WOPR): executor_yolo=${data.agent_correction_log ?? "?"} validator_corpus=${data.ai_learned_corrections ?? "?"} truth_judge=${data.truth_judge_log ?? "?"}`);
+        lines.push(`TOTAL (all streams): ${Number(data.total_machine ?? 0) + Number((db.prepare(`SELECT COUNT(*) AS n FROM human_corrections WHERE created_at >= datetime('now', ?)`).get(`-${days} day`) as any).n) + Number((db.prepare(`SELECT COUNT(*) AS n FROM gate_blocks WHERE blocked_at >= datetime('now', ?)`).get(`-${days} day`) as any).n)}`);
+      } else {
+        lines.push(`MACHINE-DETECTED (WOPR): endpoint returned no data — stream UNAVAILABLE, not zero.`);
+      }
+    } catch (e: any) {
+      lines.push(`MACHINE-DETECTED (WOPR): unreachable (${String(e?.message || e).slice(0, 80)}) — stream UNAVAILABLE, not zero.`);
+    }
+    lines.push(`Success metric: gate-blocked should RISE while human-corrected FALLS.`);
+    return { content: [{ type: "text", text: lines.join("\n") }] };
+  }
+);
+
 server.tool(
   "clinerules_correction_meter",
   "HUMAN-CORRECTION METER READ (idea #28961). Returns the queryable false-claim rollup: total corrections in the window, today's count, per-rule and per-surface breakdowns, and the most recent corrections. This is the number that answers 'how many times today did an agent claim turn out false?'",
@@ -1751,6 +1852,47 @@ server.tool(
           `If it is an inference, label it '(inference: ...)'. If you cannot support it, write UNKNOWN or drop the claim.`
         );
       }
+    }
+
+    // ── #29011: FRESHNESS CROSS-CHECK (session-probe ledger) ────────────────
+    // The gates above check marker FORM; this checks FRESHNESS. If this task
+    // logged >=1 probe via clinerules_log_probe, then each '(verified: ...)'
+    // marker must be plausibly backed by a probe from THIS task: either the
+    // marker names a probed tool, or shares a distinctive token with a probe
+    // artifact. Adoption-safe: zero-probe tasks skip entirely.
+    if (task_id && task_id.trim().length > 0) {
+      try {
+        const probes = db.prepare(
+          `SELECT tool, artifact FROM session_probes WHERE task_id = ? ORDER BY id DESC LIMIT 200`
+        ).all(task_id) as Array<{ tool: string; artifact: string | null }>;
+        if (probes.length > 0) {
+          const probeText = probes.map((p) => (p.tool + " " + (p.artifact || "")).toLowerCase()).join("\n");
+          const staleMarkers: string[] = [];
+          const mkRe = /\((?:verified|probed|measured|confirmed)\s*:\s*([^)]{0,200})\)/gi;
+          let mk: RegExpExecArray | null;
+          while ((mk = mkRe.exec(result_text)) !== null) {
+            const inner = mk[1].toLowerCase();
+            // Tokenize the marker; a marker is FRESH if any distinctive token
+            // (>=4 chars, not a stopword) appears in the probe ledger text.
+            const tokens = (inner.match(/[a-z0-9_./:-]{4,}/g) || []).filter(
+              (t) => !/^(?:verified|probed|measured|confirmed|returned|status|https?|with|from|this|that|then|call|tool)$/.test(t)
+            );
+            const fresh = tokens.some((t) => probeText.includes(t));
+            if (!fresh && tokens.length > 0) {
+              const clipped = mk[0].slice(0, 80);
+              if (!staleMarkers.includes(clipped)) staleMarkers.push(clipped);
+            }
+          }
+          if (staleMarkers.length > 0) {
+            failures.push(
+              `R29011_STALE_EVIDENCE: ${staleMarkers.length} '(verified: ...)' marker(s) do not correspond to ANY probe logged for task ${task_id} via clinerules_log_probe: ` +
+              staleMarkers.map((s: string) => `"${s}"`).join("; ") + `. ` +
+              `Idea #29011 [deployed]: this task ARMED the freshness gate by logging ${probes.length} probe(s); every verified marker must be backed by a this-session probe. ` +
+              `Either log the probe you actually ran (clinerules_log_probe), or the marker is stale/pasted evidence — remove it or downgrade the claim to INFERENCE/UNKNOWN.`
+            );
+          }
+        }
+      } catch { /* freshness gate must never crash the validator */ }
     }
 
     // ── RULE 317 / idea #25888: REVERSAL LOG (completion-time, zero per-turn overhead) ──

@@ -117,3 +117,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends the SCOPE GATE: when the human's question names ONE instance of a bad output ("this student got a $12,860 bill"), the investigation population is every recipient of that same output surface in the relevant window, NOT the one named instance. Scoping the first pass to the named student produced "only Alex was affected"; enumerating all 24 suspension-email recipients since 8/1 found a second victim (Lindsey Rose, $5,835, zero invoices, course not yet started). A single named instance is a SAMPLE, not the population - enumerate the send surface before reporting who was affected.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 05:45 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 12860-suspension
+- RCA bucket: wrong premise
+- Trigger pattern: Declaring data corrupt or impossible because a locally-computed arithmetic identity fails, without first enumerating and joining every table that holds a legitimate component of the formula (fees, adj
+- Reversal note: Amends the CLASSIFY step: an arithmetic identity that fails across two tables is a HYPOTHESIS about missing terms, never evidence of corruption. I reported "14 arithmetically impossible invoices" from balance_due > total_amount - amount_paid, and escalated it as data corruption to a human. The formula was simply incomplete: EMSU adds a $250 finance fee stored in payment_plan_agreements, not in qb_invoices.total_amount, so plan students legitimately carry a balance exceeding the invoice total. Joining that table explained 6 of 14 to the penny, including the one I had escalated. Before labeling any data "corrupt", "impossible", or "invalid", enumerate every legitimate component of the quantity (fees, adjustments, credits, discounts, multi-row plans) by finding the tables that hold them; a term you have not located is the most likely explanation, far more likely than the business's books being broken. The word "corrupt" is an alarm that costs human trust: earn it by exhausting the benign 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -6,19 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/30/2026, 10:09:57 PM PT | window: last 72h | 75 tasks | index total 988 (parsed 9, cached 979)
+Generated: 8/30/2026, 11:09:58 PM PT | window: last 72h | 79 tasks | index total 992 (parsed 7, cached 985)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788116945411` | 8/30/2026, 10:09:45 PM | 251 | 518KB | #$12K bill suspension |
-| `1788143372563` | 8/30/2026, 10:08:53 PM | 117 | 25377KB | #Grievances |
-| `1788152243395` | 8/30/2026, 10:08:02 PM | 25 | 185KB | Tell me how routting has gone for LLMs accoring to cllne rules in the last hour. |
-| `1788147338340` | 8/30/2026, 10:06:51 PM | 148 | 859KB | #EMTSkills Slowness |
+| `1788156466825` | 8/30/2026, 11:09:49 PM | 7 | 31KB | #VERITAS |
+| `1788154719401` | 8/30/2026, 11:09:26 PM | 87 | 298KB | #Argus Improvmeents |
+| `1788065744387` | 8/30/2026, 11:09:10 PM | 721 | 3113KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
+| `1788154492433` | 8/30/2026, 11:08:53 PM | 220 | 358KB | #Frankenstein-LLM Routing |
+| `1788147338340` | 8/30/2026, 11:07:42 PM | 254 | 1328KB | #EMTSkills Slowness |
+| `1788156197612` | 8/30/2026, 11:03:17 PM | 1 | 2KB | #VERITAS |
+| `1788116945411` | 8/30/2026, 10:48:43 PM | 336 | 696KB | #$12K bill suspension |
+| `1788143372563` | 8/30/2026, 10:22:21 PM | 130 | 25437KB | #Grievances |
+| `1788152243395` | 8/30/2026, 10:22:19 PM | 60 | 317KB | Tell me how routting has gone for LLMs accoring to cllne rules in the last hour. |
+| `1788065716274` | 8/30/2026, 10:18:26 PM | 742 | 2218KB | ## Argus Console Audit — MID-FLIGHT |
 | `1788104490855` | 8/30/2026, 10:05:40 PM | 452 | 2424KB | The Ruben computer which is number 760 280 7886 automatically hanged up on me when I call  |
-| `1788065744387` | 8/30/2026, 10:04:30 PM | 578 | 2481KB | ## — Chat Widget disclaimer + misrouting — COMPLETED |
 | `1788065826964` | 8/30/2026, 9:59:58 PM | 306 | 1273KB | ## — Kaizon Learner — MID-FLIGHT |
 | `1788065980737` | 8/30/2026, 9:57:51 PM | 196 | 793KB | ## Kaizon Learner (fork of window #5) — BLANK |
-| `1788065716274` | 8/30/2026, 9:48:58 PM | 708 | 2157KB | ## Argus Console Audit — MID-FLIGHT |
 | `1788065859789` | 8/30/2026, 6:59:56 PM | 302 | 650KB | ## — Cline Learner / cluster surfacing — COMPLETED |
 | `1788133241066` | 8/30/2026, 5:17:51 PM | 122 | 546KB | #Stuck windows |
 | `1788071557390` | 8/29/2026, 11:55:51 PM | 98 | 181KB | ## — GLM/LLMs (fork of window #4) — BLANK - 2 |
@@ -90,7 +94,170 @@ Generated: 8/30/2026, 10:09:57 PM PT | window: last 72h | 75 tasks | index total
 
 ## Per-window detail
 
-### `1788116945411` — 8/30/2026, 10:09:45 PM PT — 251 turns
+### `1788156466825` — 8/30/2026, 11:09:49 PM PT — 7 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Think about how many times that you've told me today that some claim that you made was false. How concerning is that? There's something seriously wrong. 
+
+Your treat gates are not working at all whatsoever. I would say that about just anecdotally if I had to guess 60 to 70% of windows here in cline contain false information. Pretty devastating if you ask me
+
+Maybe you could create a veritas agent? Maybe you could attach it to a learner and work in tandem with Kai zone on it to ensure the truth. I'm just throwing ideas out there I don't know if this is the best way or not but we are h
+```
+
+**Ideas referenced:** #26696
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788154719401` — 8/30/2026, 11:09:26 PM PT — 87 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+please see the follwoing for Argus imprrovements/errors to resolve and take rule 29 action
+
+--
+EMSU Argus · QA regression run · prompts 1–12
+Argus Browser-AI Test Run
+Executed live against production, Sun Aug 30, 2026, 21:19–22:20 PT, as rmajor@emsuniversity.com (MasterAdmin), full-fidelity wait windows, live submissions approved. Test chat: #2715. Background tasks created during the run: #747–#751. Ideas filed as side effects: #28936, #28945.
+Verdict board
+#	Test	Verdict	One-line result
+P1	Executor throughput + inline lane	FAIL	Read-only question never answered inline; of
+```
+
+**Ideas referenced:** #178806, #19455, #22687, #2670, #2672, #2698, #2715, #28465, #28551, #28552, #28607, #28730, #28751, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28899, #28901, #28905, #28912, #28933, #28936, #28945, #347734, #4357, #475569, #5391, #5449, #5451, #5920, #5932, #6064, #6067, #6109, #6218, #6226, #6366, #64748
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788065744387` — 8/30/2026, 11:09:10 PM PT — 721 turns
+
+**Original task:**
+
+```
+## — Chat Widget disclaimer + misrouting — COMPLETED
+
+**Original ask:** Add an "automated agent may make mistakes" disclaimer to the chat widget (and check the Email Agent has the same).
+
+**Status:** Completed + shipped. Build fixes live-verified; disclaimer gap (#18541 was recorded deployed but never actually applied) closed. Open thread is the 18-question browser-AI test pass.
+
+```
+Pick up task #28758 — Chat widget misrouting + 23-finding audit remediation (verification pass remaining).
+
+Where we left off (verified 2026-08-29 20:59 PT):
+- Build fixes shipped and live-verified (disclaimer app
+```
+
+**Ideas referenced:** #059669, #081020, #0891, #111827, #1119, #121218, #12364, #1242, #12584, #13033, #13035, #13037, #13442, #13965, #1567, #15815, #16474, #166534, #16732, #177796, #178593, #178629, #178634, #178640, #178656, #178671, #178805, #178806, #178813, #18335, #18541 [deployed], #18758, #1912, #19338, #1998, #20495, #2168, #2242, #22583, #22897 [executing], #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #23989, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #2516, #2521, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #252532, #25366 [deployed], #25385 [deployed], #25421, #25422, #25423, #25424, #25425, #25426, #25427, #25442, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #25550, #25796, #25797, #25798, #25962, #25964, #25965, #26229, #26376, #26377, #2642, #2654, #2659, #2662, #2666, #26696, #26710, #26725 [proposed], #26816, #26834, #26932, #27284, #28042, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #2850, #28504 [deployed], #28505, #28506 [deployed], #28543, #28546, #28605, #28606, #28612, #28613, #28615, #28621 [deployed], #28622 [deployed], #28643, #28683, #28705, #28706 [executing], #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28722 [deployed], #28723, #28725 [blocked], #28726, #28729, #28730 [executing], #28735 [deployed], #28738, #28740 [proposed], #28744 [deployed], #28745 [deployed], #28746, #28747, #28748, #28749, #28750, #28751, #28752 [executing], #28753, #28758 [deployed], #28759 [executing], #28769 [executing], #28770 [proposed], #28774 [proposed], #28775, #28787 [executing], #28788 [deployed], #28789, #28892 [executing], #28893, #28904 [executing], #28934 [proposed], #2916, #334155, #33689, #3577, #3988, #475569, #5918, #6104, #6111, #6366, #8966, #9084, #9112, #9131, #9132, #9152, #9222, #9263, #9510
+
+**Last PICKUP PROMPT:**
+
+```
+ollow-up for a full remap.
+
+---
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Admin chat console audit + improvements (2026-08-30).
+
+Where we left off (verified 22:03 PT):
+- 12-tab console mapped: routes/chat_portal.php (3812 lines).
+- Claude-nuke completed in admin surface: api/chat_portal_api.php:1937 create-site default, routes/chat_portal.php:56 schema + :290-291 seeds → frankenstein-llm. php -l clean, 0 residual.
+- #28904 updated with admin-console extension; #28787 corrected with live diagnosis; #28934 filed (frankenstein-llm stall).
+
+Open threads to drive next:
+1. #28934 [proposed] — frankenstein-llm stall: reasoning-token tax + load queueing. Add reasoning_effort=low / non-reasoning lane for widget; probe load again.
+2. #28787 [executing] — widget brain latency: apply the #28934 recommendation (reasoning disabled for widget turns) and re-measure the public endpoint.
+
+Reference IDs:
+- Ticket: n/a
+- Ideas: #28787, #28892, #28904, #28934
+- Files touched: api/chat_portal_api.php, routes/chat_portal.php, api/chat_widget_api.php, lib/emsu_ai_brain.php, lib/widget_force_handoff.php, lib/AIReasoningLeakScanner.php, api/chat_widget_embed.js
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788154492433` — 8/30/2026, 11:08:53 PM PT — 220 turns
+
+**Original task:**
+
+```
+#Frankenstein-LLM Routing
+
+Qwen 3.8 27B has a crap ton of lanes but they are not being used. I'm jsut really confused asa to why not. I thought we discussed this before and even i this window and you fixed it? So why the regression. I'm honestly confused. 
+
+The franekstein-llm routing needs to be obeyed GLM 5.3 local -> Qwen 3.8 27B -> 120Bs -> Deepseek v4 pro -> other paid, super simple. 
+
+confused as to how this makes things dumber. Obviously it's dumber if it's using the dumbest model of 120B which is two generations older -> __Dumber / rule-91 off = 27B spill.__ At saturation, interactive 
+```
+
+**Ideas referenced:** #10740, #13108, #13874, #14000, #16120, #178805, #2050, #20722, #23574, #25178, #25185, #25764, #26400, #2675, #2676, #2677, #2679 [deployed], #26925, #27673, #28605, #28705 [deployed], #28723, #28762 [executing], #28766 [executing], #28780 [deployed], #28894 [deployed], #28895 [executing], #28897 [executing], #28905 [deployed], #28912 [deployed], #28925 [executing], #28926 [executing], #28930 [executing], #28943, #28944, #28948 [proposed], #28950 [proposed], #28956 [executing]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788147338340` — 8/30/2026, 11:07:42 PM PT — 254 turns
+
+**Original task:**
+
+```
+#EMTSkills Slowness
+
+Read emtskills slowness .md document on desktop and help resovle emsuniversity.com/emtskills slowness again. Append to it and resolve. Give recipies to Kaizon and learner for Kaizon for autoresolve going forward. Docuemnt in the document.
+```
+
+**Ideas referenced:** #16613, #178805, #178806, #1912, #19370, #2168, #2174, #23133, #2342, #23945, #23952, #23954, #24026, #24635, #25764, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #26400, #2647, #26470, #2654, #2659, #2662, #2663, #2670, #2672, #2675, #2677, #26932, #27691, #28118, #28200, #28586, #28596, #28607, #28622, #28704, #28705, #28706, #28722 [proposed], #28723, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28939 [proposed], #28940 [proposed], #28941 [proposed], #28953 [proposed], #4357, #5533, #8639
+
+**Last PICKUP PROMPT:**
+
+```
+i params from the live config.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — EMTSkills slowness follow-up (2026-08-30 night: approved de-flux + guard hardening + cron hygiene).
+
+Where we left off (verified 23:06 PT):
+- Public TTFB 13ms, canary 0.6ms, load 7.8 falling; md0 0% util.
+- Four ideas executed and [deployed]: #28939 (cron hygiene), #28940 (guard http=000), #28941 (AGENT_POOL_V2 prefix), #28953 (heavy cron de-flux).
+- Heavy boundary jobs now off :00/:30: payment_reconciliation → 13,43; ruben_pipeline_feeder → 17,47.
+- Kaizen recipe `failure_repair_recipes` #453 (`cron_boundary_load_spike`, strategy `deflux_defer`) seeded + active for autonomous future resolution.
+
+Open threads to drive next:
+1. #28953 [deployed] — observe one full day for the :02/:32 CRIT pattern to confirm it's gone; if it reappears after two clean cycles, re-run the de-flux algorithm against the next heaviest `*/30` job (Kaizen recipe #453 fires first).
+
+Reference IDs:
+- Ideas: #28939 [deployed], #28940 [deployed], #28941 [deployed], #28953 [deployed]
+- Kaizen recipes: failure_repair_recipes #453 (cron_boundary_load_spike), #454 (telephony_endpoint_lands_on_www_pool)
+- Files touched: `/etc/cron.d/emsu-payment-reconciliation`, `/etc/cron.d/emsu-ruben-pipeline-feeder`, `/etc/cron.d.disabled/` (123 moved), `/usr/local/bin/emsu-portal-health-guard.sh`, `/etc/nginx/sites-enabled/emtskills`, `/var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf`, `/usr/local/bin/nvme-mirror-sync.sh`, `/Users/rubenmajor/Desktop/emtskills-slowness.md`
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788156197612` — 8/30/2026, 11:03:17 PM PT — 1 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Think about how many times that you've told me today that some claim that you made was false. How concerning is that? There's something seriously wrong. 
+
+Your treat gates are not working at all whatsoever. I would say that about just anecdotally if I had to guess 60 to 70% of windows here in cline contain false information. Pretty devastating if you ask me
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788116945411` — 8/30/2026, 10:48:43 PM PT — 336 turns
 
 **Original task:**
 
@@ -100,7 +267,7 @@ Generated: 8/30/2026, 10:09:57 PM PT | window: last 72h | 75 tasks | index total
 See this email. Seen one like this before, maybe even the same person. We do not have a product that costs $12.8K. What happened here?
 ```
 
-**Ideas referenced:** #1242, #1456, #16613, #178806, #25185, #26501, #2670, #27100, #27144 [deployed], #28089 [deployed], #28115 [blocked], #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28859 [proposed], #28881 [proposed], #28924 [proposed], #28938 [deployed], #4308, #4929
+**Ideas referenced:** #1242, #1456, #16613, #178806, #25185, #26501, #2670, #27100, #27144 [deployed], #28089 [deployed], #28115 [blocked], #28551, #28552, #28607, #28705, #28730, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28859 [proposed], #28881 [proposed], #28924 [proposed], #28938 [deployed], #28946 [proposed], #4308, #4929
 
 **Last PICKUP PROMPT:**
 
@@ -139,7 +306,7 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </c9UIA90mcp0clinerules_validate_completion>
 ```
 
-### `1788143372563` — 8/30/2026, 10:08:53 PM PT — 117 turns
+### `1788143372563` — 8/30/2026, 10:22:21 PM PT — 130 turns
 
 **Original task:**
 
@@ -149,26 +316,40 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 Jon is having problems with this in grievance manager. Please resolve
 ```
 
-**Ideas referenced:** #20333, #20410, #20555, #20565, #20569 [deployed], #20627, #20628, #20629, #20630, #2177, #22334, #23133, #23954, #25940 [executing], #26207, #27284, #28564, #28631, #6106
+**Ideas referenced:** #20333, #20410, #20555, #20565, #20569 [deployed], #20627, #20628, #20629, #20630, #2177, #22334, #23133, #23954, #25940 [executing], #26207, #27284, #28564, #28631, #28949 [proposed], #6106
 
 **Last PICKUP PROMPT:**
 
 ```
-further actionable steps can be taken without additional information or files.
+no action), not Jon's browser.
 
+═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-───────────────────────────────────────────────────────────────────────
-Pick up task # (unknown) — Resolve grievance manager issue for Jon.
-Where we left off (verified 2026-08-30 19:48 PT):
-- Desktop directory empty.
-- /var/www/emtskills empty.
-- /var/www empty; grievance manager files not found.
-Open threads to drive next:
-1. # (blocked) — Locate the grievance manager source code directory or repository path.
-───────────────────────────────────────────────────────────────────────
+═══════════════════════════════════════════════
+Pick up task — grievance manager: repair remaining code/schema drift and close out the jtgruiz empty-complaint ticket.
+
+Where we left off (verified 2026-08-30 22:21 PT):
+- Fixed 3 code/schema mismatches in routes/api/grievance_api.php: notification_log INSERT (line 506), certificate_blocker_classification SELECT (line 1639), and created missing admin_portal.grievance_ocr_queue table.
+- php -l clean, PHP-FPM reloaded, no new grievance errors in log since 22:13 PT.
+- Backup: routes/api/grievance_api.php.bak-20260830-2204-jon-fix.
+- Handoff notes updated with the fix summary.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #28949 [proposed] — Ticket #28564 (TKT-20260828-BB9A8D57, jtgruiz@msn.com): student message body was empty ("Sent from my iPhone" only), AI reply failed (ai_response_sent=0), no student record matched. CS Auto-Agent took over 08-30. Human judgment needed to reply/handle an effectively empty complaint.
+
+Reference IDs:
+- Tickets: 28564 (TKT-20260828-BB9A8D57)
+- Ideas filed: #28949 [proposed]
+- Files touched: routes/api/grievance_api.php (+ backup .bak-20260830-2204-jon-fix), HANDOFF_NOTES.md
+- DB: admin_portal.grievance_ocr_queue (table created)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
-### `1788152243395` — 8/30/2026, 10:08:02 PM PT — 25 turns
+### `1788152243395` — 8/30/2026, 10:22:19 PM PT — 60 turns
 
 **Original task:**
 
@@ -176,99 +357,106 @@ Open threads to drive next:
 Tell me how routting has gone for LLMs accoring to cllne rules in the last hour.
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12299, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16588, #16844, #178805, #18312, #18326, #1912, #2168, #2174, #25097, #2537, #2543, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #26908, #26923, #26932, #26967, #27259, #28034, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28943 [proposed], #28944 [proposed]
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12299, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16588, #16844, #178805, #18312, #18326, #1912, #2168, #2174, #25097, #2537, #2543, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #26908, #26923, #26932, #26967, #27259, #28034, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28943 [proposed], #28944 [proposed], #28948 [proposed], #28950 [proposed]
 
 **Last PICKUP PROMPT:**
 
 ```
-ur's log matches a recurrence.
+ from a names-only audit view.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Frankenstein LLM routing health in the last hour (probe-and-reconcile).
+Pick up task — Frankenstein LLM routing health, corrected report (last 60 min).
 
-Where we left off (verified 2026-08-30 22:01 PT):
-- 60-min audit window (ending 21:57 PT): 1,388 turns, 15 backends, $0. Dominant: frankenstein-tools (772), deepseek-v4-pro (147), qwen3.8-max (82), ollama ring (7b/14b/32b ≈ 175), frankenstein-llm (50).
-- Live tier-health at 21:57 PT: cicero-235b L4b DOWN, zero traffic, `llm_locate` shows served nowhere (#28944).
-- decode-wedged (HTTP 200 / 0 tok/s): 11530, 8211, 11525; QUARANTINED (fail_streak 6): 11513, 10.100.0.4:8001 (#28943).
-- Bug library resolves prior router non-JSON class (#2543, idea #26967 deployed). No recurrence in window.
-- All probes in this window: frankenstein_what_served, frankenstein_tier_health, fleet_now, llm_locate(cicero-235b), frankenstein_bug_library.
+Where we left off (verified 2026-08-30 22:19 PT):
+- Corrected traffic table from /var/log/emsu-adapter-upstream.log (21:18-22:18 PT, 1,152 turns): Artemis 120B 676, BigMac 120B 423, Julia+Claudia Qwen3.8-27B 27, GLM-5.3 ring 24, Nero Qwen3.8-27B 2. Cline lane: 98 turns, 95% 120Bs.
+- All false claims from the first report corrected: no claude-3-7-sonnet / qwen3.8-max / 70B in routing; 11530/8211/11525/8210 live HTTP 200; 11513/11520 are tunnel-unreachable not down; #28943 and #28944 rejected.
+- Rule 317 clause 12 amended (alias resolution + this-window probe + tracker reconciliation required). Durable gate idea #28948 [proposed] filed.
+- Open verification gap: adapter env unreadable without sudo, pin-breaker/lane flags unverified, 120Bs carrying 95% vs GLM-first 4x4 intent → #28950 [proposed].
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #28943 [proposed] — Investigate the 3 decode-wedged adapters (127.0.0.1:11530, :8211, :11525) and 2 quarantined adapters (:11513, 10.100.0.4:8001). Live-curl each and classify wedge cause (rule 297) before any restart, then re-run a decode canary to confirm tok/s > 0.
-2. #28944 [proposed] — Resolve cicero-235b L4b DOWN: decide whether the 235B is supposed to be serving. If yes, restart/reload and re-probe LLM locate; if retired, remove it from the registry so the tier table stops showing a dead configured member (rule 317 clause 12c).
-3. Stale-heartbeat triage (no idea yet): cicero (15,268 min), tiberius (53,186 min), claudia (12,140 min) all exceed the 120-min trust window (rule 255). Live-probe before trusting any inventory status.
+1. #28950 [proposed] — Verify GLM-first intent vs observed ~2% GLM share: read adapter env with sudo, check /tmp/emsu_glm_floor_window.json, grep PREFIX_AFFINITY_YIELD_GLMFIRST/FLOOR/CANARY in adapter log, decide if routing regression or expected load shape.
+2. #28948 [proposed] — Build the fleet-truth pre-flight gate: alias resolve through registry+config, block unprobed down/wedge verdicts, build tables from adapter upstream log only.
+3. Reinstate a read of /etc/litellm/config.yaml model list + frankenstein_registry.yaml + GLM53_RING_STATE_TRACKER.md as a mandatory first step for any future routing report (trackers warn READ FIRST; the gate makes it mechanical).
 
 Reference IDs:
-- Ticket: none (proactive health review)
-- Ideas filed: #28943 [proposed], #28944 [proposed]
-- Files touched: none
+- Ticket: none (proactive health review, corrected after Ruben steer)
+- Ideas filed: #28948 [proposed], #28950 [proposed]; rejected: #28943, #28944
+- Files touched: GLM53_RING_STATE_TRACKER.md (read-only), frankenstein_registry.yaml (read-only), /etc/litellm/config.yaml (read-only), rule 317 amended on disk via clinerules_amend_rule
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 <task_progress>
-- [x] Probe router audit log for last hour (what backends actually served)
-- [x] Probe live tier/fleet health for the same window
-- [x] Check bug library for failures in the last hour
-- [x] Verify a live model route (rule 140 ground truth) — llm_locate(cicero-235b) returned served_at []
-- [x] Reconcile failures alongside traffic (rule 317 clause 12) — filed #28943, #28944
-- [x] Report with verified timestamps
+- [x] Read GLM53_RING_STATE_TRACKER.md (ground truth)
+- [x] Read frankenstein_registry.yaml (alias resolution)
+- [x] Live-probe disputed endpoints (11530/8211/11525/8210=200; 11513/11520=tunnel-unreachable)
+- [x] Resolve litellm aliases through registry (gateway 11510 = one backend; 70B retired; claude-3-7-sonnet/qwen3.8-max absent)
+- [x] Re-run true traffic from adapter upstream log (1,152 turns, resolved to real underlying LLMs)
+- [x] Correct stale records: #28943 and #28944 rejected with stated reasons
+- [x] File durable solution #28948 (fleet-truth pre-flight gate) and #28950 (GLM-share verification)
+- [x] Amend rule 317 clause 12 mechanically (alias resolve + this-window probe + tracker reconciliation)
+- [x] Ship corrected report with Reversal Log and pickup prompt
 </task_progress>
 </attempt_completion>
 ```
 
-### `1788147338340` — 8/30/2026, 10:06:51 PM PT — 148 turns
+### `1788065716274` — 8/30/2026, 10:18:26 PM PT — 742 turns
 
 **Original task:**
 
 ```
-#EMTSkills Slowness
+## Argus Console Audit — MID-FLIGHT
 
-Read emtskills slowness .md document on desktop and help resovle emsuniversity.com/emtskills slowness again. Append to it and resolve. Give recipies to Kaizon and learner for Kaizon for autoresolve going forward. Docuemnt in the document.
+**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.
+
+**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.
+
+```
+Pick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.
+
+Where we left off (verified 2026-08-29 21:36 PT):
+- 
 ```
 
-**Ideas referenced:** #16613, #178806, #23133, #2342, #23945, #23952, #23954, #24635, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #26470, #2670, #2672, #27691, #28118, #28200, #28607, #28722 [proposed], #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28939 [proposed], #28940 [proposed], #28941 [proposed], #4357, #8639
+**Ideas referenced:** #10014, #10740, #11506, #12459, #12584, #12601, #127891, #128274, #13108, #13874, #13984, #14944, #16589, #16844, #17759, #178805, #178806, #1820, #18493, #18567, #1875, #1877, #1889, #1912, #19338, #19713, #1998, #20674, #20903, #21125, #21126, #2113, #2168, #2174, #2247, #22511, #23036, #23037, #23038, #23281, #23428, #23941, #23982, #24897, #24963, #25047, #25125, #25471, #25573, #25647, #25764, #2626, #26325, #26400, #2647, #26470, #2654, #2659, #2662, #2663, #26731, #2675 [deployed], #2676 [rejected], #2677 [deployed], #2678 [deployed], #2680, #26895, #26932, #27284, #27646, #27860, #28034, #28125, #28127, #28133, #28155, #28189, #28199, #28201, #28249, #28252, #28254, #28309, #28310, #28337, #28385, #28453, #28457, #28459, #28586, #28596, #28607, #28622, #28704, #28705 [deployed], #28706, #28708, #28730, #28745, #28760 [proposed], #28761 [proposed], #28762 [blocked], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767, #28768, #28780 [proposed], #28783, #28786, #28821, #28842, #28843, #28874, #28877, #28878, #28879, #28884, #28885 [proposed], #28891, #28894 [proposed], #28895 [proposed], #28896, #28897 [proposed], #28898, #28905 [proposed], #28912 [proposed], #28925 [executing], #28926 [executing], #28930 [executing], #30363, #347593, #347594, #347596, #347597, #347599, #347600, #347601, #347602, #347603, #347604, #347605, #347606, #347607, #347608, #347609, #347610, #347613, #347614, #347615, #347617, #347618, #347619, #347621, #347622, #347623, #347624, #347625, #347626, #347627, #347628, #347629, #347630, #347632, #347633, #347634, #347638, #347639, #347640, #347641, #347642, #347643, #347644, #347645, #347646, #347647, #347649, #347650, #347651, #347653, #347654, #37030, #37031, #5008, #5020, #5057, #5091, #5203, #5227, #5298, #5309, #7325, #7557, #7569, #7579, #7581, #8505, #9321, #9596, #9614
 
 **Last PICKUP PROMPT:**
 
 ```
-of the result so it reads first. Re-emitting with the summary placed before the PICKUP PROMPT and also a Summary line inside the block.
-
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-SUMMARY (what happened this window)
-═══════════════════════════════════════════════
-Resolved /emtskills "slow again" (recurrence #14, Aug 30) — TWO independent root causes found, both fixed and probe-verified live:
-
-1. **cron-boundary load spikes** — 3,189 cron jobs (951 active in /etc/cron.d) collide at :00/:30. Heaviest jobs (`payment_reconciliation` ~60s MariaDB churn, `capacity-ramp` with gate breaches, `deploy-backlog-sweeper` FPM reload) cause portal-guard CRIT latencies at :02/:32 every 30 min (14:02, 14:32, 15:32, 17:02, 17:32, 18:02, 19:32).
-   - **Fix:** payment_reconciliation de-fluxed off the boundary (`*/30` → `13,43`); `nvme-mirror-sync.sh` now excludes ephemeral sessions (`/var/www/vhosts/*/sessions`, `/var/lib/php/sessions`) — kills the "file has vanished" wall and shortens the md0 100% mirror window.
-
-2. **Telephony keepalives missing from AGENT_POOL_V1 regex** — `internal_messages_api`, `heartbeat`, `sms_api`, `agent_status` fell through to the shared www pool, causing continuous `session_start()` stalls all day (23.9k / 11.1k / 10.9k slowlog entries).
-   - **Fix:** added all 4 endpoints to the AGENT_POOL regex in BOTH `/etc/nginx/sites-enabled/emtskills` and `vhost_nginx.conf` (verify-by-reread patch, `nginx -t` + reload OK).
-   - **Probe proof:** accepted-conn delta: 8x `internal_messages_api` → agents **+21** vs www **+2**. **0 telephony-on-www stalls after 21:20** (was continuous).
-
-3. **Kaizon/Kaizen autoresolve recipes seeded** (failure_repair_recipes, enabled=1, both report-only max_attempts=0):
-   - #453 **[deployed]** `cron_boundary_load_spike` — detect fixed-cadence CRITs, de-flux crons, never touch FPM pools.
-   - #454 **[deployed]** `telephony_endpoint_lands_on_www_pool` — detect telephony slowlog on www, add endpoint to AGENT_POOL in both configs, reload.
-
-4. **Documented:** full incident + recipes appended to `/Users/rubenmajor/Desktop/emtskills-slowness.md` (now 493 lines).
-
-**Final live state:** public TTFB 13ms, canary 0.6ms, load 6.0 and settling, both FPM pools healthy (listen-queue 0), portal-guard clean since 19:34 RECOVERED.
+attern already in the tracker.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task emtskills-slowness-2026-08-30 — resolve /emtskills "slow again" (recurrence #14).
+Pick up task #1788050474905 — verify vision callers on julia-qwen38-27b, Joshua warm-up, alias block removal after 7d.
 
-Summary: two root causes found + fixed + probe-verified (cron-boundary load spikes; telephony keepalives on www pool). Recipes #453/#454 seeded. Full writeup appended to /Users/rubenmajor/Desktop/emtskills-slowness.md (493 lines).
+Where we left off (verified 2026-08-30 21:48 PT):
+- 7 PHP vision callers repointed minicpm-v → julia-qwen38-27b (true name), lint clean, FPM reloaded. Rule 322 amended: misleading legacy aliases BANNED (ledger-recorded).
+- Vision ports enumerated: Julia :11513 vision PROVEN; Joshua :8001 = second vision body when warm (vLLM, same weights); Nero/Maximus MLX = text until harness supports images; :11521 dead (Claudia is Julia's TP=2 worker).
+- minicpm-v litellm blocks unreferenced by our code — remove after 7d zero audit picks.
+- Earlier this window: Julia relaunch+repool, Joshua disk heal (95%→83%) + restart policy, Nero 317 (was never down), 70B retired, executor floor 8 + saturation guard + reserve 8, tracker 3 dated sections, bug library #2675/#2676/#2677, rule 317 amended 3x + rule 322 1x.
 
-Where we left off (verified 2026-08-30 21:29 PT):
-- (1) cron-boundary load spikes: 3,189 cron jobs (951 active) collide at :00/:30; portal-guard :02/:32 CRITs every 30 min. Fixed: payment_reconciliation `*/30` → `13,43` (de-fluxed), mirror now excludes ephemeral sessions.
-- (2) telephony keepalives missing from AGENT_POOL_V1 nginx regex → drained www pool with continuous `session_start()` stalls (internal_messages_api/heartbeat/sms_api/agent_status). Fixed: added all 4 to AGENT_POOL in BOTH nginx configs via verify-by-reread; `nginx -t` + reload OK; accepted-conn delta probe proves agents +21 vs www +2; 0 telephony-on-www stalls after 21:20.
-- Seeded 2 Kaizon/Kaizen automatic recipes: failure_repair_recipes #453 `cron_boundary_load_spike`, #454 `telephony_endpoint_lands_on_www_poo
+Open threads to drive next:
+1. #28925 [executing] — Joshua :8001 200 + canary; kern.log end-trace spam hunt; verify first vision picks hit julia-qwen38-27b in audit log.
+2. #28926 [executing] — Raise executor floor 8→12 (pool wide, guard live); percentage-balance within class.
+3. #28930 [executing] — Drift auditor + restart-ownership audit + minicpm litellm-block removal (7d) + MLX vision harness check.
+4. #28780 [deployed] — 12-prompt browser battery.
+
+Reference IDs:
+- Ideas: #28925, #28926, #28930, #28895, #28897, #28762, #28766 [executing]; #28894, #28905, #28912, #28780, #28705 [deployed]
+- Bug library: #2675, #2676, #2677
+- Files touched: 7 PHP vision callers (.bak-minicpm-truename-20260830 each), config.yaml, GLM53_RING_STATE_TRACKER.md (3 sections), frankenstein_registry.yaml, Rules/317 + Rules/322 (amended), fleet_admission.py, live-pool-20260829.conf
+
+# Reversal Log
+- "local Qwen 27B text-only" → reversed with official card + live image probes on Julia | RCA bucket: insufficient probe | causal rule updated: 317 (amended this window, ledger-recorded).
+- "keep minicpm-v alias, just repoint it" → superseded by Ruben directive: aliases that name retired models are banned; callers moved to true names | RCA bucket: stale assumption | causal rule updated: 322 (clinerules_amend_rule this window, ledger-recorded).
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
 
 ### `1788104490855` — 8/30/2026, 10:05:40 PM PT — 452 turns
@@ -317,55 +505,6 @@ Reference IDs:
 - "CS/patient-interview/EMD webhooks need static-greeting speed parity" → corrected: all already send static firstMessage; EMD's empty string is intentional for `assistant-waits-for-user` | insufficient probe | recommended work from assumption instead of reading the firstMessage code path first
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788065744387` — 8/30/2026, 10:04:30 PM PT — 578 turns
-
-**Original task:**
-
-```
-## — Chat Widget disclaimer + misrouting — COMPLETED
-
-**Original ask:** Add an "automated agent may make mistakes" disclaimer to the chat widget (and check the Email Agent has the same).
-
-**Status:** Completed + shipped. Build fixes live-verified; disclaimer gap (#18541 was recorded deployed but never actually applied) closed. Open thread is the 18-question browser-AI test pass.
-
-```
-Pick up task #28758 — Chat widget misrouting + 23-finding audit remediation (verification pass remaining).
-
-Where we left off (verified 2026-08-29 20:59 PT):
-- Build fixes shipped and live-verified (disclaimer app
-```
-
-**Ideas referenced:** #059669, #081020, #111827, #1119, #12364, #1242, #12584, #13442, #13965, #1567, #15815, #16474, #16732, #177796, #178593, #178629, #178634, #178640, #178656, #178671, #18335, #18541 [deployed], #18758, #1912, #19338, #1998, #20495, #2168, #2242, #22583, #22897 [executing], #23190 [rejected], #23191 [executing], #23192 [rejected], #23205 [rejected], #23307 [rejected], #23339 [executing], #23428 [deployed], #23429 [deployed], #23467 [executing], #23468, #23489 [executing], #23505 [deployed], #23511 [deployed], #23513 [deployed], #23520 [deployed], #23530 [deployed], #23592, #23989, #24184, #24400, #24895, #24897, #24898, #24900, #24901, #24902, #24904, #24905, #24913, #24946, #25039, #2516, #2521, #25229 [proposed], #25238 [executing], #25240 [executing], #25241 [executing], #25366 [deployed], #25385 [deployed], #25421, #25422, #25423, #25424, #25442, #25468, #25471, #25515 [proposed], #25525 [executing], #25528 [executing], #25530 [executing], #25531 [executing], #25532 [executing], #25534 [executing], #25535 [executing], #25550, #25796, #25797, #25798, #25962, #25964, #25965, #26229, #26376, #26377, #2642, #2654, #2659, #2662, #2666, #26696, #26710, #26725 [proposed], #26816, #26834, #26932, #27284, #28042, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #2850, #28504 [deployed], #28505, #28506 [deployed], #28543, #28546, #28605, #28606, #28612, #28613, #28615, #28621 [deployed], #28622 [deployed], #28643, #28683, #28705, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28722 [deployed], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28745 [deployed], #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758 [deployed], #28759 [executing], #28770 [proposed], #28787 [executing], #28788 [deployed], #28789, #28892 [executing], #28893, #28904 [executing], #28934 [proposed], #2916, #33689, #3577, #3988, #5918, #6104, #6111, #6366, #9084, #9112, #9131, #9132, #9152, #9222, #9263
-
-**Last PICKUP PROMPT:**
-
-```
-ollow-up for a full remap.
-
----
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Admin chat console audit + improvements (2026-08-30).
-
-Where we left off (verified 22:03 PT):
-- 12-tab console mapped: routes/chat_portal.php (3812 lines).
-- Claude-nuke completed in admin surface: api/chat_portal_api.php:1937 create-site default, routes/chat_portal.php:56 schema + :290-291 seeds → frankenstein-llm. php -l clean, 0 residual.
-- #28904 updated with admin-console extension; #28787 corrected with live diagnosis; #28934 filed (frankenstein-llm stall).
-
-Open threads to drive next:
-1. #28934 [proposed] — frankenstein-llm stall: reasoning-token tax + load queueing. Add reasoning_effort=low / non-reasoning lane for widget; probe load again.
-2. #28787 [executing] — widget brain latency: apply the #28934 recommendation (reasoning disabled for widget turns) and re-measure the public endpoint.
-
-Reference IDs:
-- Ticket: n/a
-- Ideas: #28787, #28892, #28904, #28934
-- Files touched: api/chat_portal_api.php, routes/chat_portal.php, api/chat_widget_api.php, lib/emsu_ai_brain.php, lib/widget_force_handoff.php, lib/AIReasoningLeakScanner.php, api/chat_widget_embed.js
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -463,63 +602,6 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788065716274` — 8/30/2026, 9:48:58 PM PT — 708 turns
-
-**Original task:**
-
-```
-## Argus Console Audit — MID-FLIGHT
-
-**Original ask:** Read the Argus Console Audit artifact, address EACH item (some may need confirmation), then produce a followup instruction set for a browser AI to do additional testing.
-
-**Status:** In progress. Read HANDOFF_NOTES + core Argus files (terminal, API, worker, catalog). The full P0/P1/P2 roadmap is in the focus chain. Last action was an `ssh_command` probe of `lib/probe_feedback.php`.
-
-```
-Pick up task #1788050474905 — Argus Console Audit: implement each roadmap item + browser-AI followup.
-
-Where we left off (verified 2026-08-29 21:36 PT):
-- 
-```
-
-**Ideas referenced:** #10014, #11506, #12459, #12584, #12601, #127891, #128274, #13108, #13984, #14944, #16589, #16844, #17759, #178805, #178806, #1820, #18493, #18567, #1875, #1877, #1889, #1912, #19338, #19713, #1998, #20674, #20903, #21125, #21126, #2113, #2168, #2174, #2247, #22511, #23036, #23037, #23038, #23281, #23428, #23941, #23982, #24897, #24963, #25047, #25125, #25471, #25573, #25647, #25764, #2626, #26325, #26400, #2647, #26470, #2654, #2659, #2662, #2663, #26731, #2675, #2676, #2677, #2680, #26895, #26932, #27284, #27646, #27860, #28034, #28125, #28127, #28133, #28155, #28189, #28199, #28201, #28249, #28252, #28254, #28309, #28310, #28337, #28385, #28453, #28457, #28459, #28586, #28596, #28607, #28622, #28704, #28705 [deployed], #28706, #28708, #28730, #28745, #28760 [proposed], #28761 [proposed], #28762 [blocked], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767, #28768, #28780 [proposed], #28783, #28786, #28821, #28842, #28843, #28874, #28877, #28878, #28879, #28884, #28885 [proposed], #28891, #28894 [proposed], #28895 [proposed], #28896, #28897 [proposed], #28898, #28905 [proposed], #28912 [proposed], #28925 [executing], #28926 [executing], #28930 [executing], #30363, #347593, #347594, #347596, #347597, #347599, #347600, #347601, #347602, #347603, #347604, #347605, #347606, #347607, #347608, #347609, #347610, #347613, #347614, #347615, #347617, #347618, #347619, #347621, #347622, #347623, #347624, #347625, #347626, #347627, #347628, #347629, #347630, #347632, #347633, #347634, #347638, #347639, #347640, #347641, #347642, #347643, #347644, #347645, #347646, #347647, #347649, #347650, #347651, #347653, #347654, #37030, #37031, #5008, #5020, #5057, #5091, #5203, #5227, #5298, #5309, #7325, #7557, #7569, #7579, #7581, #8505, #9321, #9596, #9614
-
-**Last PICKUP PROMPT:**
-
-```
-attern already in the tracker.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1788050474905 — verify vision callers on julia-qwen38-27b, Joshua warm-up, alias block removal after 7d.
-
-Where we left off (verified 2026-08-30 21:48 PT):
-- 7 PHP vision callers repointed minicpm-v → julia-qwen38-27b (true name), lint clean, FPM reloaded. Rule 322 amended: misleading legacy aliases BANNED (ledger-recorded).
-- Vision ports enumerated: Julia :11513 vision PROVEN; Joshua :8001 = second vision body when warm (vLLM, same weights); Nero/Maximus MLX = text until harness supports images; :11521 dead (Claudia is Julia's TP=2 worker).
-- minicpm-v litellm blocks unreferenced by our code — remove after 7d zero audit picks.
-- Earlier this window: Julia relaunch+repool, Joshua disk heal (95%→83%) + restart policy, Nero 317 (was never down), 70B retired, executor floor 8 + saturation guard + reserve 8, tracker 3 dated sections, bug library #2675/#2676/#2677, rule 317 amended 3x + rule 322 1x.
-
-Open threads to drive next:
-1. #28925 [executing] — Joshua :8001 200 + canary; kern.log end-trace spam hunt; verify first vision picks hit julia-qwen38-27b in audit log.
-2. #28926 [executing] — Raise executor floor 8→12 (pool wide, guard live); percentage-balance within class.
-3. #28930 [executing] — Drift auditor + restart-ownership audit + minicpm litellm-block removal (7d) + MLX vision harness check.
-4. #28780 [deployed] — 12-prompt browser battery.
-
-Reference IDs:
-- Ideas: #28925, #28926, #28930, #28895, #28897, #28762, #28766 [executing]; #28894, #28905, #28912, #28780, #28705 [deployed]
-- Bug library: #2675, #2676, #2677
-- Files touched: 7 PHP vision callers (.bak-minicpm-truename-20260830 each), config.yaml, GLM53_RING_STATE_TRACKER.md (3 sections), frankenstein_registry.yaml, Rules/317 + Rules/322 (amended), fleet_admission.py, live-pool-20260829.conf
-
-# Reversal Log
-- "local Qwen 27B text-only" → reversed with official card + live image probes on Julia | RCA bucket: insufficient probe | causal rule updated: 317 (amended this window, ledger-recorded).
-- "keep minicpm-v alias, just repoint it" → superseded by Ruben directive: aliases that name retired models are banned; callers moved to true names | RCA bucket: stale assumption | causal rule updated: 322 (clinerules_amend_rule this window, ledger-recorded).
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 

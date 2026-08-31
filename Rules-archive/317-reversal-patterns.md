@@ -5,27 +5,27 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **195**
-- Last generated: 2026-08-30 21:41
+- Reversals tracked: **198**
+- Last generated: 2026-08-30 22:41
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 91 | 47% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
-| wrong premise | 35 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
+| insufficient probe | 91 | 46% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| wrong premise | 36 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 27 | 14% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 23 | 12% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
-| stale assumption | 19 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
+| stale assumption | 21 | 11% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 72 amendment(s)
+- Rule 317: 74 amendment(s)
 - Rule 297: 44 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
+- Rule 322: 8 amendment(s)
 - Rule 302: 7 amendment(s)
-- Rule 322: 7 amendment(s)
 - Rule 321: 7 amendment(s)
 - Rule 99: 5 amendment(s)
 
@@ -45,10 +45,10 @@ _You had SOME evidence and stopped early. One auth error is not a dead credentia
 
 _The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it._
 
+- **2026-08-31** — Amends clause 3: a guard expressed as a HARDCODED ABSOLUTE THRESHOLD (dollar ceiling, row-count limit, byte size, latency bound) is not a durable fix - it is a deferred outage that fires the day the business legitimately crosses it. Shipping DUNNING_MAX_PLAUSI
 - **2026-08-30** — Amends the Step-2 four-state classification table: a CALL RECORD carrying a long duration is NOT evidence that the AI/assistant layer ever ran. On 2026-08-29 the Vapi SIP parent legs logged 610s durations while every assistant-request response was 400'd and th
 - **2026-08-29** — 2026-08-28 reversal (task 1787931475695): claimed GLM 5.3 served ~477 turns as the #1 engine, derived from (a) REQUESTED lane-name counts in the router audit log and (b) an engine-log POST count. Both are the wrong instruments: requested != served (requests ge
 - **2026-08-28** — 2026-08-28 reversal: recommended raising the GLM ring admission ceiling as the 'obvious' next improvement BEFORE probing the wedge-rate population; the ring had wedged 3x in 3 hours under seq=128 load (each a 14-min hard failure), which the recommendation neve
-- **2026-08-28** — - "frankenstein-llm's rule 91 text is too shallow" → corrected: the rule TEXT was adequate; the ENFORCEMENT GATE was dead code (_r91_validate returned None, 0-byte violations log,
 - **2026-08-28** — - "frankenstein-llm's rule 91 text is too shallow" → corrected: the rule TEXT was adequate; the ENFORCEMENT GATE was dead code (_r91_validate returned None, 0-byte violations log,
 
 ### unread source
@@ -75,11 +75,11 @@ _The claim was true of a narrower population than stated. Enumerate the outcome 
 
 _A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting._
 
+- **2026-08-31** — Amends clause 12 (aggregation integrity for serving/routing tables): a routing report that names a backend by its litellm ALIAS is a misrepresentation. frankenstein-tools, frankenstein-llm, and emsu-codegen are ALL the same gateway (api_base 127.0.0.1:11510), 
+- **2026-08-31** — MISLEADING LEGACY ALIAS NAMES ARE BANNED for routing (Ruben directive 2026-08-30). A litellm model_name that names a RETIRED model (e.g. 'minicpm-v' secretly serving qwen3.8-27b, 'julia-235b' serving deepseek) poisons every future agent's diagnosis — this was 
 - **2026-08-30** — Amends the Step-1 record-search ladder: a recorded reverse-tunnel PORT is a stale hypothesis, not an identity. Before declaring a box unreachable/blocked-on-key at tunnel port N, identify WHO actually holds port N (ss -ltnp for the sshd pid, then ss -tnp for t
 - **2026-08-29** — Amends clause 12 (aggregation integrity): adds the STALE-WEDGE-CLAIM INHERITANCE failure — a "wedged/decode-dead" verdict recorded in a state file, floor window, or prior-window completion is a TIMESTAMPED HYPOTHESIS that expires the moment any repair ships (e
 - **2026-08-29** — - "cloudflared restart churn is the cause (bug-library known-repair match)" -> corrected: cloudflared NRestarts=0 and tunnel up since 2026-08-22, so that path was ruled out and the
-- **2026-08-29** — 2026-08-28 double reversal (task 1787931475695): (1) explained BigMac's adapter-pick dominance by citing the 2232 batch-prefer-120B patch as 'still live' WITHOUT reading the adapter source; grep showed SUBAGENT_PREFER_120B no longer exists. The live mechanism 
-- **2026-08-28** — 2026-08-28 reversal: environment_details displayed '163,525 / 200K tokens used (82%)' and the window began a compression flow at 81%, but the model's real context window is 1M (display later corrected to 'X / 1,000K'). Per rule 119's own text, Y is often a fal
 
 ## How to use this
 

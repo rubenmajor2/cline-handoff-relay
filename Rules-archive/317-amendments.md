@@ -647,3 +647,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 1/INSUFFICIENT_PROBE: a capability rejection from ONE serving stack is NEVER a model-capability verdict. This window probed an MLX 4-bit lane (Maximus :11530), got 'Only text content type is supported', and declared Qwen3.8-27B text-only — but the official HF card says native vision-language model, and the vLLM deployment of the SAME model (Julia :11513) answered a red-pixel image correctly seconds later. Serving-stack limits (MLX harness, missing flags) must be attributed to THE LANE, never the model. Before any capability claim: check the official model card (rule 324) AND probe a second deployment of the same weights.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 05:11 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 12860-suspension
+- RCA bucket: wrong premise
+- Trigger pattern: Shipping a validation guard as a hardcoded absolute threshold (or a global derived one) rather than an entity-relative invariant, creating a false-block landmine that detonates when the business legit
+- Reversal note: Amends clause 3: a guard expressed as a HARDCODED ABSOLUTE THRESHOLD (dollar ceiling, row-count limit, byte size, latency bound) is not a durable fix - it is a deferred outage that fires the day the business legitimately crosses it. Shipping DUNNING_MAX_PLAUSIBLE_BALANCE=6000.00 would have silently blocked collections for every student in any future course priced above $6k. Deriving the same ceiling globally from fleet-wide max was equally wrong in the other direction: it produced $32,140, which would NOT have caught the actual $12,860 defect. The durable form is a RELATIVE INVARIANT scoped to the entity: the emailed figure must reconcile to that student's OWN rows and stay within a small multiple of that student's OWN price (Alex was 8.06x his own max invoice - identical signature whether tuition is $500 or $50,000). Before shipping any guard, ask: what happens to this constant when the business grows 10x? If the answer is a false block, the threshold is the wrong shape - express it a
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-31 05:17 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: (unknown)
+- RCA bucket: stale assumption
+- Trigger pattern: Reciting tier/ladder/alias labels as live serving status, and emitting down/wedge/quarantine verdicts from memory or prior-window canary instead of a this-window live probe + tracker read.
+- Reversal note: Amends clause 12 (aggregation integrity for serving/routing tables): a routing report that names a backend by its litellm ALIAS is a misrepresentation. frankenstein-tools, frankenstein-llm, and emsu-codegen are ALL the same gateway (api_base 127.0.0.1:11510), so grouping them as three distinct 'backends that served' overstates the fleet. A truthful routing table MUST resolve aliases to underlying adapter upstreams and cite /var/log/emsu-adapter-upstream.log per-lane counts for the window, AND must reconcile against GLM53_RING_STATE_TRACKER.md (append-only fleet identity) which redundantly warns 'READ THIS TRACKER FIRST before any fleet verdict'. A DOWN/WEDGE/QUARANTINE verdict for any endpoint (cicero-235b, decoded-wedged, fail-streak quarantine) requires a live probe THIS window returning proof: this session reported 'claude-3-7-sonnet 35 turns', '70B 6 turns', and 3 decode-wedged + 2 quarantined adapters, all DISPROVEN by config grep (alias absent), registry (70B retired:true 8/22), 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -77,3 +77,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Julia/Claudia false-down + text-only claim from a WOPR-side tunnel-port curl (human_corrections #3). The TUNNEL vs MODEL discipline in rule 322 is now MECHANICALLY enforced: R322_TUNNEL_VERDICT gate in clinerules_validate_completion blocks any DOWN/dead/text-only/no-vision verdict about a host/model/service whose only nearby evidence is a localhost/tunnel-port probe (127.0.0.1:PORT). Legal outs: cite an on-box artifact (ssh/systemctl/ps/nvidia-smi/decode probe) or scope the claim to the tunnel (TUNNEL-UNREACHABLE). Positive control (the exact Julia/Claudia claim) BLOCKS; negative control (tunnel-scoped verdict + on-box evidence) PASSES.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 17:45 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 29179
+- RCA bucket: unread source
+- Trigger pattern: Serving table built from router audit log upstream field + .4:8001 mislabeled Claudia; endpoint counts conflated host vs physical model; retired vision pack reported as active.
+- Reversal note: Amends the resolution rules with verified endpoint->LLM identity map and source-integrity lesson. (1) 10.100.0.4:8001 is JOSHUA qwen3.8-27b, NOT Claudia; Claudia is 127.0.0.1:11521. (2) Julia+Claudia are ONE TP=2 lane at 127.0.0.1:11513, not two rows. (3) Additional Qwen3.8-27B fleet: Nero 11525, Cicero 11520 (batch/distill only, not in interactive pool), Maximus 11530 (down). (4) 127.0.0.1:11455 vision pack (minicpm-v/GLM-4.6V) is RETIRED; Qwen3.8-27B is now the vision model. (5) The 5,185 'upstream' count came from the router AUDIT log (debug/admission events), NOT the true served-request log /var/log/emsu-adapter-upstream.log (5,193 rows) - never build the serving table from the audit log's upstream field. (6) A single host can serve multiple physical models (Artemis:8000 gpt-oss-120b vLLM + Artemis:11434 ollama qwen2.5-coder), so endpoint counts must be resolved to physical model per host. (7) Paid-spill check: llm_call_log provider+model+cost_usd proves spill - claude-haiku-4-5 is
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -877,3 +877,43 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate): an absence-of-traffic observation is NOT evidence of low usage until the surface itself has been invoked end to end this window. The prior window read argus_analytics=0 rows/7d and reported it as "no real traffic", when every Argus request had in fact been returning HTTP 502 since 2026-08-28 because haproxy bound :4000 loopback-only while api/argus_proxy.php dials 10.100.0.1:4000. Clause 2 now requires that any claim explaining WHY a surface has no data must be backed by a live invocation of that surface, not by a row count of its own output table. A zero row count is a symptom shared by "nobody used it" and "it is completely broken", and those need opposite responses.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 17:31 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: joshua-tp2-stabilize-20260901
+- RCA bucket: insufficient probe
+- Trigger pattern: trusting a success-echo without re-reading the artifact
+- Reversal note: Amends clause 2 (acquisition gate): a tool output that prints APPEND_OK / exit 0 is not proof of a write — the artifact content itself must be re-read. First GLM53 tracker append attempt printed APPEND_OK while the write had failed with Permission denied (stderr); corrected by re-running with sudo tee -a and verifying tail -3 showed the new section.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 18:02 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 29178
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: Amends clause 3 (escalation probe before declaring any wall): on 2026-09-01 the TastyBot task declared a credentials wall (no TASTY_API_TOKEN, no sync code) after probing only the EMSU server and Mac dotfiles. The real, already-authorized TastyBot program (OAuth client id/secret in .env, refresh_token in tokens.json, live dashboard at 127.0.0.1:8765) sat at ~/Library/Application Support/TastyBot/repo the whole time. Lesson: when the deliverable is a Mac desktop app, the Mac APP SUPPORT DIRECTORIES (~/Library/Application Support, Preferences, LaunchAgents, Containers) are probe surfaces on par with server configs; declaring any credential/source wall without enumerating them is INSUFFICIENT_PROBE.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 18:13 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788281756491
+- RCA bucket: insufficient probe
+- Trigger pattern: A count JUMPED after a bug fix and the jump was reported as the deliverable ("224 students unmasked") without probing whether the NEW larger population actually passes the downstream gate that consume
+- Reversal note: Amends clause 3 (escalation probe / claim-scope): a bug fix that CHANGES A POPULATION COUNT is not verified by the new count alone. Before reporting the delta as the win, run the downstream consumer of that population against its own gate and confirm the two agree. If the count moved because an exception stopped throwing, the pre-fix filtering may have been accidental and the explicit gate may never have existed. Source 2026-09-01: fixed a $ov use-before-assign crash in externship_eligibility_gate, reported "224 eligible students unmasked, list 39 -> 263" as a shipped win; a dry-run of the offer dispatcher then showed 224 of the 263 fail the 80% course-progress gate (206 at 60%, 15 at 0%, 3 at 40%). The list and its consumer disagreed for ~40 minutes and the completion had already claimed the larger number. Fix: waiting list now gates on progress_ok + empty(missing) explicitly, back to 39, and dispatcher re-checks independently.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 18:14 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: joshua-lanes-disk-20260901
+- RCA bucket: insufficient probe
+- Trigger pattern: port-probe 000 treated as a fleet DOWN verdict instead of UNKNOWN
+- Reversal note: Amends clause 1 (fleet/routing state) and adds a numbered blip-class rule: a single HTTP-000 on a reverse-tunnel port alias (127.0.0.1:NNNN on WOPR) is NOT a down-model verdict and MUST be recorded UNVERIFIED, never DOWN — the 000 may be a tunnel blip or stale reference while the on-box endpoint is healthy. Joshua re-probes this window: Julia/Claudia :11513 000 and :11521 000 were labeled DOWN; legal on-box re-probe must be attempted (via SSH control alias to the serving host) before any DOWN disposition. Also amends clause 12(e): HTTP-200 on /v1/models plus HTTP-200 on /v1/chat/completions is still not serving — decode body must show non-null reasoning/content tokens; a 200 with content=null and finish_reason=length can be a healthy reasoning-only generation, verified by the reasoning field, not assumed wedged.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

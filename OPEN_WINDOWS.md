@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 7:21:05 AM PT | window: last 72h | 76 tasks | index total 1019 (parsed 2, cached 1017)
+Generated: 9/1/2026, 8:21:06 AM PT | window: last 72h | 76 tasks | index total 1019 (parsed 1, cached 1018)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788244626168` | 9/1/2026, 7:12:36 AM | 265 | 2109KB | #CFA Learner status |
+| `1788244626168` | 9/1/2026, 8:17:08 AM | 346 | 2369KB | #CFA Learner status |
 | `1788237036746` | 9/1/2026, 6:51:29 AM | 504 | 1884KB | #Joshua Qwen 3.8 27B TP=2 |
 | `1788196060306` | 9/1/2026, 6:47:19 AM | 1198 | 3869KB | #Argus Improvmeents |
 | `1788244675583` | 9/1/2026, 5:07:26 AM | 286 | 1097KB | #Kaizon Learner status |
@@ -91,7 +91,7 @@ Generated: 9/1/2026, 7:21:05 AM PT | window: last 72h | 76 tasks | index total 1
 
 ## Per-window detail
 
-### `1788244626168` — 9/1/2026, 7:12:36 AM PT — 265 turns
+### `1788244626168` — 9/1/2026, 8:17:08 AM PT — 346 turns
 
 **Original task:**
 
@@ -101,38 +101,34 @@ Generated: 9/1/2026, 7:21:05 AM PT | window: last 72h | 76 tasks | index total 1
 Tell me hw this has been going since we last looked at it about 24-36 hours ago
 ```
 
-**Ideas referenced:** #059669, #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178806, #1893, #1912, #19163, #19419, #1998, #20092, #20495, #2050, #21586, #2168, #22229, #2230, #23133, #2322, #2338, #23455, #2358, #23982, #2450, #24895, #2490, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2563, #2569, #2570, #2571, #2573, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26225, #26229, #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #2642, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26501, #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28605, #28606, #28607, #28613, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29113, #29131 [proposed], #30043, #30515, #31646, #366377, #450438, #8157, #8162, #8184, #9333
+**Ideas referenced:** #059669, #1127, #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178806, #1893, #1912, #19163, #19419, #1998, #20092, #20495, #2050, #21586, #2168, #22229, #2230, #23133, #23184, #2322, #2338, #23455, #2358, #23982, #2450, #24895, #2490, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2563, #2569, #2570, #2571, #2573, #2579, #2580, #2582, #25830, #25888, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26225, #26229, #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #2642, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26501, #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28605, #28606, #28607, #28613, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28958, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29113, #29131 [proposed], #29156 [proposed], #29166 [proposed], #29169 [deployed], #30043, #30515, #31646, #366377, #450438, #48953, #7907, #8157, #8162, #8184, #9333
 
 **Last PICKUP PROMPT:**
 
 ```
-cation loop dead since April).
+o other reversals this window.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — CFA Learner status.
+Pick up task #29169 [deployed] — CFA Learner email reasoning-leak investigation and remediation.
 
-Where we left off (verified 2026-09-01 00:16 PT):
-- Email learner ALIVE: ai_learned_corrections=872 rows, 4 new this window (8207-8210), rule-317 reversal mining flowing in (8155/8146/8156)
-- Chat/voice/queue STALE: chat 720,250 rows last 05-31, voice 43 rows last 05-04, queue 924 rows last 04-21
-- Application loop DEAD: only 28 rows ever applied, last 2026-04-29
-- FIXED: cron_cfa_llm_health.php stale glm-5.2-15pct → glm-5.3-15pct (heartbeat 404 since 08-28 rename); verified healthy row 7541
-- Infra clean: failure watchdog clear, model failure log 0 in 36h, no-rule canary PASS, digest sent 06:30 (SMS block 8%, alerts 0)
+Where we left off (verified 2026-09-01 08:09 PT):
+- 36 leaked reasoning emails (communication_log 57150..63013) to 16 students since 2026-08-01, shipped raw LLM text
+- Root cause: cron_email_followup.php rendered pending_questions verbatim; CfaTerminologyGuard only filtered '?'+CFA; ai_auto_response path let becauseassistant through
+- FIXED: cron_email_followup.php + CfaTerminologyGuard.php + EmailContentSanitizer.php patched, php -l clean, probe-verified
+- SENT: 19 clean correction emails, all status='sent' in email_outbound_log with Postmark IDs 2026-09-01 07:27-07:34 PT
+- Kaizen: ai_learned_corrections row inserted (reasoning_leak_followup_email, 36 occurrences)
 
 Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29131 [proposed] — Sweep remaining glm-5.2 model-name references in lib/cron (100+ files) after heartbeat fix
-2. #29131 [proposed] — Investigate email-learner never-applied gap (detection works, application dead since 2026-04-29)
-3. #29131 [proposed] — Revive voice (blocked on ticket linkage) + chat (stale since 05-31) learning surfaces
+1. #29166 [proposed] - apply the same reasoning-leak gate to SMSConversationTracker.php + chatbot_tools.php pending_questions renderers
 
 Reference IDs:
-- Ideas filed: #29131
-- Files touched: /var/www/emtskills/cron/cron_cfa_llm_health.php (+ .bak-glm53-20260901)
-- Heartbeat rows: 7537-7541 (cfa_llm_heartbeat)
+- Ideas filed: #29169 [deployed], #29166 [proposed]
+- Files touched: /var/www/emtskills/cron/cron_email_followup.php, /var/www/emtskills/lib/CfaTerminologyGuard.php, /var/www/emtskills/lib/EmailContentSanitizer.php
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
+═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 

@@ -6,19 +6,20 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 10:19:46 PM PT | window: last 72h | 82 tasks | index total 1015 (parsed 6, cached 1009)
+Generated: 8/31/2026, 11:19:46 PM PT | window: last 72h | 82 tasks | index total 1016 (parsed 5, cached 1011)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788237036746` | 8/31/2026, 10:19:42 PM | 99 | 492KB | #Joshua Qwen 3.8 27B TP=2 |
-| `1788160972127` | 8/31/2026, 10:18:39 PM | 157 | 988KB | #Julia/Claudia Qwen 3.8 27B |
-| `1788196060306` | 8/31/2026, 10:17:41 PM | 779 | 2547KB | #Argus Improvmeents |
-| `1788234640445` | 8/31/2026, 10:17:22 PM | 132 | 652KB | #Nero Flaky: |
+| `1788212457240` | 8/31/2026, 11:19:43 PM | 595 | 1167KB | # VERITAS claim-falsity investigation (the window live at the 23:50 crash). |
+| `1788243351199` | 8/31/2026, 11:19:39 PM | 20 | 1453KB | #TDSHS |
+| `1788200522716` | 8/31/2026, 11:14:55 PM | 538 | 11001KB | #TDSHS |
+| `1788160972127` | 8/31/2026, 11:06:32 PM | 212 | 1296KB | #Julia/Claudia Qwen 3.8 27B |
+| `1788234640445` | 8/31/2026, 10:53:55 PM | 156 | 733KB | #Nero Flaky: |
+| `1788237036746` | 8/31/2026, 10:44:02 PM | 166 | 736KB | #Joshua Qwen 3.8 27B TP=2 |
+| `1788196060306` | 8/31/2026, 10:39:52 PM | 836 | 2743KB | #Argus Improvmeents |
 | `1788205619819` | 8/31/2026, 10:15:23 PM | 494 | 2044KB | #Postmark Issue |
-| `1788212457240` | 8/31/2026, 10:13:33 PM | 572 | 1122KB | # VERITAS claim-falsity investigation (the window live at the 23:50 crash). |
 | `1788229361019` | 8/31/2026, 9:39:21 PM | 272 | 1169KB | #Safely Increasing Cline/Argus/Executor Lanes |
 | `1788161048426` | 8/31/2026, 9:29:49 PM | 737 | 3451KB | #Joshua Qwen 3.8 27B |
-| `1788200522716` | 8/31/2026, 8:56:36 PM | 521 | 9483KB | #TDSHS |
 | `1788161302475` | 8/31/2026, 7:34:45 PM | 1088 | 12614KB | #Grievances |
 | `1788212361951` | 8/31/2026, 6:30:18 PM | 170 | 578KB | #Nero Qwen 3.8 27B |
 | `1788195724924` | 8/31/2026, 3:32:55 PM | 186 | 821KB | #EMT Skills Slowness |
@@ -91,13 +92,153 @@ Generated: 8/31/2026, 10:19:46 PM PT | window: last 72h | 82 tasks | index total
 | `1787960225304` | 8/29/2026, 12:41:14 AM | 624 | 6883KB | #Various |
 | `1787983724269` | 8/28/2026, 11:37:37 PM | 301 | 1104KB | #Argus |
 | `1787960052755` | 8/28/2026, 11:21:09 PM | 948 | 5311KB | frankenstein-llm having this issue. Can you resolve?  |
-| `1787983845643` | 8/28/2026, 11:11:05 PM | 3 | 12KB | How is this eepseek working |
 
 ---
 
 ## Per-window detail
 
-### `1788237036746` — 8/31/2026, 10:19:42 PM PT — 99 turns
+### `1788212457240` — 8/31/2026, 11:19:43 PM PT — 595 turns
+
+**Original task:**
+
+```
+# VERITAS claim-falsity investigation (the window live at the 23:50 crash).
+
+
+approved
+- Build detectors for prose-only rules 315/302/297/144/259/300 with pos+neg controls each (human-only decision — no idea; file per gate as built).
+
+- Implement bypass mitigations for vectors b/c/d (human-only decision — no idea; file per fix as built).
+
+Context hit the rule-119 compress threshold (957K of 1M) mid-way into your two new directives, so this window compressed its state rather than doing shallow work on them. Here is where things stand and what the fresh window picks up.
+
+Your two directives are 
+```
+
+**Ideas referenced:** #0000, #1007, #1008, #1066, #1093, #1094, #1095, #1096, #1156, #1168, #1170, #1171, #1172, #1173, #12584, #13202, #1446, #178815, #178819, #18471, #18494, #18567, #1876, #1877 [deployed], #1889, #1912, #19173, #19898, #19899 [proposed], #19904, #20251, #2168, #2174, #25185, #25888, #25935, #26349, #26435, #26696, #26914 [deployed], #26915 [executing], #26932, #26993, #27100, #27634, #27652, #28306, #28725, #28740, #28752, #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed], #29026, #29034 [deployed], #29039 [deployed], #29044, #29063 [deployed], #29064 [deployed], #29066 [executing], #29085 [proposed], #29103 [proposed], #29105 [proposed], #5344
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788243351199` — 8/31/2026, 11:19:39 PM PT — 20 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+It needs to be on this form I think:https://oag.my.site.com/OpenRecords/s/flow/CORA_External_Create_Complaint 
+
+These are the instructions: 
+In order to submit a general request for assistance please provide a copy of the original request for information and any correspondence received from the governmental body concerning your request. If you are unable to provide a copy of your original request, please submit documentation stating how your request was submitted to the governmental body and fully describing the information requested. If there are questions or concerns, please contact 
+```
+
+**Ideas referenced:** #178816, #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29060, #29069 [proposed], #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29113
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788200522716` — 8/31/2026, 11:14:55 PM PT — 538 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+AMR is also GMR / American Medial Response Global Medical Response, etc... The docuemnts are all in there somewhere, keep hunting. You can check Vicky and Jon emails if you need to do that. 
+
+can you resolve this -> One thing worth knowing before anyone else reads that registry: the pending_review and unknown values in the agreement_status column are internal AI-extraction review flags, not statements about whether an agreement exists or is signed. Several documents flagged pending_review are fully executed by both parties (verified: execute_query returned the flag alongside instrument
+```
+
+**Ideas referenced:** #1005, #1155 [deployed], #1159, #1166, #1447, #16957, #178816, #25185, #27100, #28958, #29011 [deployed], #29018 [deployed], #29019 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29069 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788160972127` — 8/31/2026, 11:06:32 PM PT — 212 turns
+
+**Original task:**
+
+```
+#Julia/Claudia Qwen 3.8 27B
+
+Bring back up Julia/Claudia Qwen 3.8 27B to serving
+```
+
+**Ideas referenced:** #11316, #12364, #1242, #13437, #15815, #16732, #16844, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #2114, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673 [deployed], #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705 [in_progress], #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29101 [rejected], #29113 [executing], #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+
+**Last PICKUP PROMPT:**
+
+```
+e old guard before v2 install.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Julia/Claudia Qwen3.8-27B restore to serving (guard false-kill RCA + fix).
+
+Where we left off (verified 2026-08-31 23:05 PT):
+- Engine SERVING: Qwen3.8-27B-FP8 TP=2 on Julia+Claudia, vLLM PID 3692486, Julia :8000 /v1/models HTTP 200, model qwen3.8-27b, 131072 ctx.
+- Tunnel: WOPR :11513 -> Julia :8000 HTTP 200.
+- LiteLLM lane julia-qwen38-27b (config.yaml lines 136-148) e2e verified — chat completion returned "Hello! How can I help you today".
+- Guard v2 live on Julia + WOPR canonical /usr/local/bin; prewedge cron re-armed; guard manual run reports state=SERVING (false-kill loop dead).
+- Idea #29113 [executing] — guard v2 RCA + installer source-of-truth gap.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29113 [executing] — Update /usr/local/bin/emsu-julia-guard-install.sh so a future re-ship pushes guard v2, not the stale 235B /tmp/guard.sh copy. The corrected guard is already at the WOPR canonical path; the installer still does cp /tmp/guard.sh, which would regress the fix on any reinstall.
+
+Reference IDs:
+- Ideas filed: #29113
+- Files touched: /home/rubenmajor/emsu-julia-prewedge-guard.sh (v2, backed up .v1-235b / .bak-20260831b), /usr/local/bin/emsu-julia-prewedge-guard.sh (WOPR canonical), /home/rubenmajor/julia_unified_tp2_qwen38.sh (relaunch script), /tmp/qwen38_relaunch_20260831b.log, /home/rubenmajor/logs/emsu/prewedge.log, HANDOFF_NOTES.md
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788234640445` — 8/31/2026, 10:53:55 PM PT — 156 turns
+
+**Original task:**
+
+```
+#Nero Flaky:
+
+- Nero 10.100.0.4:11525 = 200 but __FLAKY__ (adapter log shows TTFB 256–331s as late as 20:09)
+
+Can you resole this/ stabliize it?
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18720, #1912, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25378, #25381, #2546, #25764, #26400, #2659, #2677, #26932, #27236, #27249 [executing], #27250, #27503, #28256, #28306, #28586, #28596, #28948, #29044, #29103 [proposed], #29105, #29111 [executing], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ no new work is blocked on it.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task MiniCheck SKIP-condition watcher + Nero stabilization handoff.
+
+Where we left off (verified 2026-08-31 22:53 PT):
+- Nova/nero :11525 stabilized (Qwen3.8-27B MLX): root cause Metal OOM + ollama co-residency + watchdog kick-loop; MLX profile tightened, watchdog hardened, orphan runner killed. Decode HTTP=200 @ 8.5-9.1s TTFB.
+- MiniCheck truth gate (MiniCheckVerifier.php, bespoke-minicheck on ollama) silently SKIPs when cold: measured TTFB 10.15s cold on Nero against CLAIM_TIMEOUT_S=6.0, fail-open by design. Not an outage; it stops checking.
+- New watcher deployed: /var/www/emtskills/cron/cron_minicheck_skip_watch.php (lint OK) + /etc/cron.d/minicheck-skip-watch (root:root 644, */10) → emails rmajor@ on TTFB>6s per lane, 1/2h cooldown. Verified both files on disk.
+- GLM53_RING_STATE_TRACKER.md appended with full Nero + MiniCheck section.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29111 [executing] — Watcher live: on next 10-min tick confirm all three lanes (11455/11505/11535) return TTFB and/or the expected SKIP alert fires; check /var/log/minicheck_skip_watch.log for the first tick's output.
+2. #29103 [proposed] — NOT approved. Surveillance-only until VERITAS lands the dedicated-model fix. Owner: VERITAS window. When resolved, stamp this idea superseded/deployed and the watcher can be retired.
+
+Reference IDs:
+- Ideas: #29111 [executing] (watcher), #29103 [proposed] (durable Metal ceiling, monitor-only)
+- Files: /var/www/emtskills/cron/cron_minicheck_skip_watch.php, /etc/cron.d/minicheck-skip-watch, /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (appended), SMS Mac ~/bin/qwen38_serve.sh + ~/bin/nero_decode_watchdog.sh
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788237036746` — 8/31/2026, 10:44:02 PM PT — 166 turns
 
 **Original task:**
 
@@ -110,85 +251,31 @@ Good lord 2 lanes on Joshua is extremely slow. -> __3. How many lanes on Joshua 
 approved -> 1. #29101 [proposed] — TP=2 W4A16 experiment: stop :8001, relaunch with --tensor-parallel-size 2 --max-model-len 16384 on the 19G int4 checkpoint, verify inter-card collectives via IPC exchange, watch host RA
 ```
 
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25097, #2537, #25378, #25381, #2546, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27503, #29090 [deployed], #29100 [deployed], #29101 [proposed], #7142, #7149
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #18312, #18326, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25097, #2537, #25378, #25381, #2546, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27503, #29090 [deployed], #29100 [deployed], #29101 [proposed], #29107 [proposed], #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-
-<attempt_completion>
-<result>
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Joshua Qwen-3.8-27B lane cleanup (vision + 70B removal, qwen38 service relaunch)
-
-Where we left off (verified 2026-08-31 21:44 PT):
-- Rejected idea #29101 [rejected] — the TP=2 W4A16 experiment; Ruben said "Remove it then as it does not help," so it will not run.
-- Removed gurubot/GLM-4.6V-Flash-GGUF:Q4_K_M from Joshua ollama (:11434) — this was the actual vision lane; minicpm-v itself was never installed on Joshua (it lives on M4 Mac :11505 / Maximus :11455 per registry).
-- Confirmed zero 70B / llama3.3 / auto-llama remnants in Joshua ollama list and the two joshua-llama3.3-70b registry entries are already retired:true per the 2026-08-30 "NO 70B on Joshua" directive.
-- joshua-qwen38.service was found inactive (dead) at 22:30 MDT after an RPC sample_tokens timeout; re-started manually (systemctl start) — unit is active, container relaunching, engine mid-init (Ray placement group creating).
-- Current serving probe of :8001 returns HTTP 000 (engine still warming / not yet answering /v1/models); not yet confirmed serving.
-
-Open threads to drive next:
-1. #29101 [rejected] — TP=2 W4A16 experiment on the 19G int4 checkpoint is closed, not to run.
-2. (no idea yet — needs filing) — Re-verify joshua-qwen38 :8001 returns HTTP 200 /v1/models and decode-probe coherent once the engine finishes its ~2-4 min warmup; if it crash-loops again on sample_tokens RPC timeout, diagnose the engine-wedge (rule 315: decode probe with zero tokens = wedged).
-
-Reference IDs:
-- Ideas filed: #29101 [rejected], #29090 [deployed] (restore), #29100 [deployed] (RCA retraction)
-- Files touched: none this session (ollama model deletion + systemd start only)
-═══════════════════════════════════════════════
-
-Answer: Joshua currently has two active lanes — joshua-qwen38-27b on :8001 (service re-started this window, engine still warming) and the ollama :11434 lane (now stripped of its vision model). The 70B lanes are retired per the 2026-08-30 directive, with both registry entries already retired:true and zero 70B models left on disk. The only remaining work is confirming the qwen38 engine comes back to HTTP 200 after warmup and updating registry vision entries to reflect the GLM-4.6V removal.
-</result>
-<task_progress>
-- [x] Reject #29101 TP=2 experiment (Ruben: "remove it")
-- [x] Remove vision model GLM-4.6V from Joshua ollama :11434
-- [x] Confirm no 70B / llama3.3 / auto-llama remnants on Joshua
-- [x] Re-start joshua-qwen38.service (was inactive dead)
-- [ ] Confirm qwen38 :8001 returns HTTP 200 /v1/models after warmup
-- [ ] Retire/update stale Joshua vision registry entries for removed GLM-4.6V
-</task_progress>
-</attempt_completion>
-```
-
-### `1788160972127` — 8/31/2026, 10:18:39 PM PT — 157 turns
-
-**Original task:**
-
-```
-#Julia/Claudia Qwen 3.8 27B
-
-Bring back up Julia/Claudia Qwen 3.8 27B to serving
-```
-
-**Ideas referenced:** #11316, #12364, #1242, #13437, #15815, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #2114, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673 [deployed], #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705 [in_progress], #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
-
-**Last PICKUP PROMPT:**
-
-```
-ot exactly as it did at 02:07.
+only viable TP=2 unblock path.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Julia/Claudia Qwen 3.8 27B back to serving.
+Pick up task — Joshua Qwen3.8-27B TP=2 experiment closed + removals verified + lane restored.
 
-Where we left off (verified 2026-08-31 06:50:14 PT):
-- Julia/Claudia Qwen 3.8 27B (vLLM TP=2, :8000 → WOPR :11513 + :11521) was restored and verified serving at 01:41-02:22 PT (HTTP 200, qwen3.8-27b, 2 ray nodes, 2.0/2.0 GPU).
-- ROOT CAUSE of repeated downings, PROVEN: emsu-julia-prewedge-guard.sh L2 decode probe false-fails on qwen3 reasoning output (greps missing '"text"' when content:null/reasoning tokens present) → pkill vllm serve every time. prewedge.log kills at 21:04/21:37/23:16/23:42/02:07/02:26 PT.
-- Engine currently mid-relaunch from the guard's 05:38 L1 (state=LOADING, port 8000 not bound). Guard will kill healthy boots again until patched.
-- LiteLLM lane julia-qwen38-27b verified correct in /etc/litellm/config.yaml (api_base http://127.0.0.1:11513/v1, line 136-148); e2e probe must be re-run after boot (the 05:00 500 was a dead-engine artifact, not a lane defect).
-- SSH path to Julia: ssh -p 2205 -i /home/emsuserver/.ssh/id_ed25519 rubenmajor@127.0.0.1 (ws_ssh_proxy.py; julia=port 2205, claudia=port 2206, hosts 10.100.0.10). Relaunch script: ~/julia_full_relaunch_qwen38.sh. Guard cron: root * * * * * /home/rubenmajor/emsu-julia-prewedge-guard.sh.
+Where we left off (verified 2026-08-31 22:43 PT):
+- joshua-qwen38 on 10.100.0.4:8001 serving qwen3.8-27b TP=1 W4A16 int4 + fp8 KV 16K ctx: /v1/models HTTP 200, weights 18.28 GiB, decode coherent (7+4=11, finish_reason=stop).
+- TP=2 experiment (#29101 [rejected]) wedged xe 04:00.0 Tile0 GT0 at RayWorkerProc.initialize_worker then endless GuC reset storm (34/5min); recovered via host reboot 23:29:43 MDT.
+- Joshua :11434 ollama tags now only: bespoke-minicheck, qwen3:32b/14b, nomic-embed-text, qwen2.5-coder:32b/14b/7b, emsu-qwen2.5-coder:7b-lora. NO minicpm-v, NO glm-4.6v-flash, NO llama3.3-70b. No 70B/vision containers on the box.
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #28705 [in_progress] — Patch /home/rubenmajor/emsu-julia-prewedge-guard.sh L2 decoder probe: replace /v1/completions + grep '"text"' with /v1/chat/completions accepting content OR reasoning tokens (or a tool-call shaped ping) with timeout ≥60s; also fix julia_unified_tp2_qwen38.sh single-flight so a lone raylet is not treated as "engine alive" (idea #27673 [deployed] comment at lines 26-32). Verify with the next minute-cron tick that a healthy boot stays SERVING.
-2. #28705 [in_progress] — Once :11513 is HTTP 200 again, run the end-to-end LiteLLM probe with the real master key (sk-emsu-cf8a63ff... from /etc/litellm/env): POST http://127.0.0.1:4000/v1/chat/completions model=julia-qwen38-27b, expect HTTP 200 + generated text; also confirm frankenstein_verify_routing sees the lane healthy.
+Open threads to drive next (every item has a real filed idea #):
+1. #29107 [proposed] — Joshua TP=2 unblock: run headless (mask/disable display compositor so renderD128 is free) OR fix xe P2P/IPC path (CCL_ZE_IPC_EXCHANGE=pidfd already set). Needs Ruben decision on headless vs not before any further TP=2 work.
+2. #29101 [rejected] — TP=2 W4A16 on current intel/llm-scaler-vllm:0.21.0-b1-xpufp8 image is non-viable on this Battlemage/UMA host (GPU wedge); verdict recorded, no re-attempt without #29107's unblock.
 
 Reference IDs:
-- Ticket: none (direct Ruben task)
-- Ideas filed: #28705 [in_progress], #27673 [deployed] (cited as script logic)
-- Files touched: /home/rubenmajor/julia_full_relaunch_qwen38.sh (run), /home/rubenmajor/julia_serve_qwen38_tp2.sh (read), /home/rubenmajor/emsu-julia-prewedge-guard.sh (READ — next patch target), /home/rubenmajor/logs/emsu/prewedge.log (evidence), /etc/litellm/config.yaml (lane verified, lines 136-148), /var/www/emtskills/scripts/ws_ssh_proxy.py (port map verified)
+- Ideas: #29101 [rejected] (TP=2 verdict), #29107 [proposed] (TP=2 unblock path)
+- Files touched: /var/www/emtskills/docs/HANDOFF_NOTES.md (experiment + recovery + removals recorded)
+- Unit verified: joshua-qwen38.service (TP=1 W4A16 int4/fp8-KV/16K, ExecStartPre stop+rm, systemd owns lifecycle)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -196,7 +283,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1788196060306` — 8/31/2026, 10:17:41 PM PT — 779 turns
+### `1788196060306` — 8/31/2026, 10:39:52 PM PT — 836 turns
 
 **Original task:**
 
@@ -211,79 +298,37 @@ approved
 
 ```
 
-**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #166534, #18745, #18770, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25058, #25269, #25313, #25466, #25768, #26325, #28155, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #30363, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648, #9650, #9660, #9670
+**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #166534, #18745, #18770, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25047, #25058, #25269, #25313, #25466, #25573, #25768, #26325, #28155, #28607, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #30363, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #92400, #9261, #9648, #9650, #9660, #9670
 
 **Last PICKUP PROMPT:**
 
 ```
- closed deployed this session.
+ pull it out of the queue.
 
-═══════════════════════════════════════════════
+═══════════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus P10 improvements (ideas #29014/#29015/#29050/#29051/#29052/#29055).
+═══════════════════════════════════════════════════
+Pick up task — Argus P10 improvements, Complaint Hub Phases 2-4 via Rule 267 offload.
 
-Where we left off (verified 2026-08-31 ~21:38 PT):
-- All 8 P10 fixes shipped and Ruben-verified 8/8 PASS in-browser round 4
-- Round-3 regression fixed: duplicate `action` JS key → renamed to facet_action/facet_who (#29089 resolved)
-- Inline-JS SyntaxError root cause fixed + node --check 3/3 OK (#29088 resolved)
-- #29055 Phase 1 (complaint_draft_regulator) built + lint clean
-- #29050/#29078/#29088/#29089 stamped deployed this session
+Where we left off (verified 2026-08-31 22:40 PT):
+- 8/8 core P10 items shipped + Ruben-verified in-browser
+- Phase 1 (regulator) live, untouched (my early patch reverted pristine)
+- 6 executor sub-tasks enqueued: #763-768; #763/#764 running, #765-768 queued
+- #29055 dev_stage=queued with sub-task map; #29079 unblocked by queued #768
 
 Open threads to drive next (EVERY item has a real filed idea #):
-1. #29079 [proposed] — need Ruben's OK to insert synthetic test matter for RRE live draft test, or a real upload
-2. #29095 [proposed] — need Ruben to re-send the two truncated round-4 behavior notes
-3. #29055 [executing] — need Ruben's scope decision: build Phases 2-4 (BBB/chargeback/rude-student) or ship regulator-only
+1. #29055 [executing] — Complaint Hub Phases 3-4: poll argus_task_queue for #763-765 to completion, verify catalog entries exist, php -l, then mark phases deployed
+2. #29079 [proposed] — once executor task #768 inserts the synthetic matter row, run the one-line end-to-end proof: new RegulatorResponseEngine(getPortalPdo())->analyze(<id>) and verify a response_draft emerges
+3. #29095 [proposed] — Ruben's two round-4 behavior notes are still truncated in transcript; ask him to re-state them
+4. #29088/#29089 [deployed] — R317 reversal records closed; verify the causal-rule amendments landed by re-reading the 317 file
 
 Reference IDs:
-- Ideas filed: #29079, #29095 (this session: #29078, #29088, #29089, #29095)
-- Files touched: routes/argus_download.php, routes/alltastic_api.php, lib/argus_action_catalog.php, api/telephony/internal_messages_api.php (probe only)
+- Ideas filed: #29055 (updating), #29079 (unblocked), #29095 (pending restatement)
+- Executor tasks: #763, #764, #765, #766, #767, #768
+- Files touched: personnel/lib/RegulatorResponseEngine.php (restored pristine; no net change), lib/argus_action_catalog.php (not yet — executor will edit)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788234640445` — 8/31/2026, 10:17:22 PM PT — 132 turns
-
-**Original task:**
-
-```
-#Nero Flaky:
-
-- Nero 10.100.0.4:11525 = 200 but __FLAKY__ (adapter log shows TTFB 256–331s as late as 20:09)
-
-Can you resole this/ stabliize it?
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #1798, #1828, #18720, #1912, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25378, #25381, #2546, #25764, #26400, #2659, #2677, #26932, #27236, #27249 [executing], #27250, #27503, #28256, #28306, #28586, #28596, #28948, #29044, #29103 [proposed], #29105, #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-20) — not touched this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task Nero flaky stabilization + MiniCheck co-residency verdict.
-
-Where we left off (verified 2026-08-31 22:16 PT):
-- Nero (:11525, Qwen3.8-27B-4bit MLX on SMS Mac) stabilized: root cause Metal GPU OOM + oresec ollama contention + watchdog kick-loop; fixes live (MLX profile tightened in ~/bin/qwen38_serve.sh, watchdog hardened + restarted, orphan runner killed). Probe-verified decode HTTP=200 @ 8.5-9.1s TTFB; watchdog OK; swap frozen.
-- #29103 [proposed] filed: durable g13s Metal ceiling + move ollama verifier/vision off SMS Mac.
-- GLM53_RING_STATE_TRACKER.md appended with full Nero section (verified on disk, root-owned, 44,729 bytes).
-- MiniCheck truth gate probed: cold bespoke-minicheck on Nero = 10.15s TTFB > 6s CLAIM_TIMEOUT_S → SKIP (fail-open), so gate is fleet-safe (Maximus :11505 + Cicero :11535 warm failovers + lane watchdog) but Nero's primary is not reliably checking under co-residency.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29103 [proposed] — when it recurs, alert on `[METAL]` OOM in qwen38-mlx.err.log, and either move ollama verifier/vision off SMS Mac, drop to one co-resident model, or add a warm-ping keepalive for bespoke-minicheck so the 6s timeout no longer SKIPs.
-
-Reference IDs:
-- Ideas: #29103 [proposed] (filed this session), #28306 [ref: existing MiniCheck cutover], #29105 [ref: cicero-235b LiteLLM repoint pending]
-- Files touched: /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (appended), /tmp/nero_glm53_append_29103.md (staging), SMS Mac ~/bin/qwen38_serve.sh + ~/bin/nero_decode_watchdog.sh (via SSH :2223, backups created)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
+═══════════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```
@@ -358,28 +403,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1788212457240` — 8/31/2026, 10:13:33 PM PT — 572 turns
-
-**Original task:**
-
-```
-# VERITAS claim-falsity investigation (the window live at the 23:50 crash).
-
-
-approved
-- Build detectors for prose-only rules 315/302/297/144/259/300 with pos+neg controls each (human-only decision — no idea; file per gate as built).
-
-- Implement bypass mitigations for vectors b/c/d (human-only decision — no idea; file per fix as built).
-
-Context hit the rule-119 compress threshold (957K of 1M) mid-way into your two new directives, so this window compressed its state rather than doing shallow work on them. Here is where things stand and what the fresh window picks up.
-
-Your two directives are 
-```
-
-**Ideas referenced:** #0000, #1007, #1008, #1066, #1093, #1094, #1095, #1096, #1156, #1168, #1170, #1171, #1172, #1173, #12584, #13202, #178815, #178819, #18471, #18494, #18567, #1876, #1877 [deployed], #1889, #1912, #19173, #19898, #19899 [proposed], #19904, #20251, #2168, #2174, #25185, #25888, #25935, #26349, #26435, #26696, #26914 [deployed], #26915 [executing], #26932, #26993, #27100, #27634, #27652, #28725, #28740, #28752, #28958 [deployed], #28961 [deployed], #29011 [deployed], #29012 [deployed], #29013 [deployed], #29014 [deployed], #29024 [deployed], #29026, #29034 [deployed], #29039 [deployed], #29044, #29063 [deployed], #29064 [deployed], #29066 [executing], #29085 [proposed], #29105 [proposed], #5344
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788229361019` — 8/31/2026, 9:39:21 PM PT — 272 turns
 
@@ -475,22 +498,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </task_progress>
 </attempt_completion>
 ```
-
-### `1788200522716` — 8/31/2026, 8:56:36 PM PT — 521 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-AMR is also GMR / American Medial Response Global Medical Response, etc... The docuemnts are all in there somewhere, keep hunting. You can check Vicky and Jon emails if you need to do that. 
-
-can you resolve this -> One thing worth knowing before anyone else reads that registry: the pending_review and unknown values in the agreement_status column are internal AI-extraction review flags, not statements about whether an agreement exists or is signed. Several documents flagged pending_review are fully executed by both parties (verified: execute_query returned the flag alongside instrument
-```
-
-**Ideas referenced:** #1005, #1155 [deployed], #1159, #1166, #16957, #178816, #25185, #27100, #28958, #29011 [deployed], #29018 [deployed], #29019 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29069 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788161302475` — 8/31/2026, 7:34:45 PM PT — 1088 turns
 
@@ -3167,13 +3174,3 @@ Open threads to drive next:
 2. #28605 [proposed] — canary: decode_live=false must quarantine an upstream (:8211 sat healthy=true, tok_s=0).
 3. #28606 [proposed] — GLM ring --reasoning-parser launch flag so preamble separates
 ```
-
-### `1787983845643` — 8/28/2026, 11:11:05 PM PT — 3 turns
-
-**Original task:**
-
-```
-How is this eepseek working
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

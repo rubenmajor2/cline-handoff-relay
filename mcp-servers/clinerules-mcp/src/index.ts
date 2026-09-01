@@ -1822,8 +1822,8 @@ server.tool(
         );
       }
       const markerRe = /\((?:verified|probed|measured|confirmed)\s*:\s*([^)]{0,200})\)/gi;
-      const artifactShape = /\b(?:HTTP\s*\d{3}|\/v1\/|curl|grep|ssh|mysql|SELECT|DESCRIBE|php\s+-l|git\s|sha256)\b|\b\d[\d,]*\s*(?:tok\/s|ms|%|GB|GiB|MB|KB|bytes|rows?|tokens|days?|hours?|minutes?)\b|\d{4}-\d{2}-\d{2}|\d{1,2}:\d{2}\s*(?:PT|UTC|AM|PM)|\b[A-Za-z_]+\.[A-Za-z_]+\b|\bid\s*=?\s*\d+|#\d{3,}|["`]/i;
-      const knownTool = /\b(?:verify_payment_state|get_student_lifecycle_state|lookup_paperwork_state|get_student_360|check_exam_enforcement|check_proctoring_status|check_student|check_ticket|run_moodle_query|execute_query|fetch_data|ssh_command|read_server_file|check_server_logs|frankenstein_verify_routing|frankenstein_registry|frankenstein_host_probe|frankenstein_what_served|check_affirm_status|find_authnet_by_email|verify_routing|truth_judge|list_files|read_file|search_files|describe_table|reconcile_ideas|get_idea_progress|clinerules_log_probe|launchctl|npm\s+run\s+build|py_compile)\b/i;
+      const artifactShape = /\b(?:HTTP\s*\d{3}|\/v1\/|curl|grep|ssh|mysql|SELECT|DESCRIBE|php\s+-l|git\s|sha256)\b|\b\d[\d,]*\s*(?:tok\/s|ms|%|GB|GiB|MiB|TiB|MB|KB|bytes|rows?|tokens|days?|hours?|minutes?)\b|\d{4}-\d{2}-\d{2}|\d{1,2}:\d{2}\s*(?:PT|UTC|AM|PM)|\b[A-Za-z_]+\.[A-Za-z_]+\b|\bid\s*=?\s*\d+|#\d{3,}|["`]/i;
+      const knownTool = /\b(?:verify_payment_state|get_student_lifecycle_state|lookup_paperwork_state|get_student_360|check_exam_enforcement|check_proctoring_status|check_student|check_ticket|run_moodle_query|execute_query|fetch_data|ssh_command|read_server_file|check_server_logs|frankenstein_verify_routing|frankenstein_registry|frankenstein_host_probe|frankenstein_what_served|check_affirm_status|find_authnet_by_email|verify_routing|truth_judge|list_files|read_file|search_files|describe_table|nvidia-smi|systemctl|ss\s+-ltnp|sudo\s+tee|reconcile_ideas|get_idea_progress|clinerules_log_probe|launchctl|npm\s+run\s+build|py_compile)\b/i;
       const fake: string[] = [];
       let m: RegExpExecArray | null;
       while ((m = markerRe.exec(result_text)) !== null) {

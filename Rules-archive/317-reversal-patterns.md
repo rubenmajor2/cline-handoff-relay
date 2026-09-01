@@ -6,7 +6,7 @@
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
 - Reversals tracked: **210**
-- Last generated: 2026-08-31 17:51
+- Last generated: 2026-08-31 18:51
 
 ## Mistake classes by frequency
 

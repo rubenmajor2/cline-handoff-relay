@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-01T22:30:20.143Z",
+ "generated_at": "2026-09-01T23:30:20.598Z",
  "counts": {
-  "parsed": 6,
-  "reused": 1024,
+  "parsed": 0,
+  "reused": 1030,
   "failed": 0,
   "total": 1030
  },
@@ -148039,11 +148039,11 @@
   },
   "1788160972127": {
    "task_id": "1788160972127",
-   "mtime": 1788301489838,
+   "mtime": 1788302377259,
    "created_at": "2026-08-31T07:22:52.127Z",
-   "last_modified": "2026-09-01T22:24:49.838Z",
-   "size_kb": 2201,
-   "turn_count": 397,
+   "last_modified": "2026-09-01T22:39:37.259Z",
+   "size_kb": 2273,
+   "turn_count": 423,
    "title": "#Julia/Claudia Qwen 3.8 27B\n\nBring back up Julia/Claudia Qwen 3.8 27B to serving",
    "pickup_prompt": "n_tokens 2, finish_reason stop\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Julia/Claudia Qwen3.8-27B guard fix (false-kill loop).\n\nWhere we left off (verified 2026-09-01 01:29 PT):\n- Julia vLLM qwen3.8-27b UP and serving (PID 3799458, TP=2, :8000 HTTP 200).\n- v2 prewedge guard was false-killing the healthy engine on malformed-client 400s; fixed with v3 deployed to /home/rubenmajor/emsu-julia-prewedge-guard.sh (backup .bak-v2-20260901). Idea #29147 filed.\n- LiteLLM end-to-end verified: julia-qwen38-27b and claudia-qwen38-27b both decode cleanly through :4000.\n\nOpen threads to drive next (EVERY item MUST have a real filed idea #):\n1. #29147 — Julia prewedge guard v3 fix (4xx/5xx = engine alive); verify no further false kills accumulate in prewedge.log over the next hour.\n\nReference IDs:\n- Ideas filed: #29147 [executing]\n- Files touched: /home/rubenmajor/emsu-julia-prewedge-guard.sh (v3), /home/rubenmajor/emsu-julia-prewedge-guard.sh.bak-v2-20260901\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
@@ -151040,11 +151040,11 @@
   },
   "1788281168059": {
    "task_id": "1788281168059",
-   "mtime": 1788282930342,
+   "mtime": 1788302586210,
    "created_at": "2026-09-01T16:46:08.059Z",
-   "last_modified": "2026-09-01T17:15:30.342Z",
-   "size_kb": 429,
-   "turn_count": 175,
+   "last_modified": "2026-09-01T22:43:06.210Z",
+   "size_kb": 430,
+   "turn_count": 176,
    "title": "#Safely Increasing Cline/Argus/Executor Lanes\n\n\nCan you then fix this? -> TWO HONEST LIMITS. First, this still cannot fire when Argus gets no page context: verify() returns early with reason 'no_evidence' when evidence is under 40 characters (lib/MiniCheckVerifier.php line ~185), so a contextless Argus question is unchecked. Second, I could not exercise the regenerate path end to end because Argus has had no real traffic (argus_analytics returned 0 rows in 7 days), so the regeneration branch is verified by construction and by its components rather than by a live user session.\n\napproved / but 29099 confused what Im approving as it does not say if analyssi or build. If safe build, build it. Al",
    "pickup_prompt": null,
    "ideas": {
@@ -151219,13 +151219,13 @@
   },
   "1788285310173": {
    "task_id": "1788285310173",
-   "mtime": 1788301819756,
+   "mtime": 1788302320445,
    "created_at": "2026-09-01T17:55:10.173Z",
-   "last_modified": "2026-09-01T22:30:19.756Z",
-   "size_kb": 313,
-   "turn_count": 58,
+   "last_modified": "2026-09-01T22:38:40.445Z",
+   "size_kb": 431,
+   "turn_count": 114,
    "title": "#Florida CE Program Approval\n\nPick up the florida CE Program Approval package and help me to get our program online. Whats the next step here? \n\nDo you have a page/pages and files for me to work from?",
-   "pickup_prompt": "y plus filing the wiring idea.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task: Florida CE Program Approval (FL DOH Training Center DH 681-018).\n\nWhere we left off (verified 2026-09-01 11:02 PT):\n- FL CE package = idea #26183 [deployed] \"File FL DOH Bureau of EMS Training Center application (DH 681-018)\".\n- View page exists: /var/www/emtskills/routes/_view_fl_doh_training_center_application.php (reads fl_doh_applications table).\n- Specs exist: docs/specs/fl_doh_training_center_application.md and fl_doh_bems_tc_application.md.\n- DEFECTS CONFIRMED: no fl_doh_training_center_application entry in lib/report_registry.php; no dispatch in routes/reports.php; fl_doh_applications table does not exist anywhere in information_schema; the 4 required DH 681-018 documents are absent from the server.\n\nOpen threads to drive next:\n1. #29205 [proposed] — Wire the FL DOH card: create admin_portal.fl_doh_applications table (checklist_json, documents_json, status, submitted_at, updated_at), seed one pending row, add the getReportDefinitions() entry keyed 'fl_doh_training_center_application' in lib/report_registry.php, and add the view include/dispatch so the card is reachable from the reports dashboard. Verify via a live HTTP probe of the card route.\n2. (human-only dependency) — Obtain from Ruben the actual DH 681-018 submission documents: medical director agreement, FL-scope curriculum mapping, clinical site letters, and distance learning plan. None exist on the server; the application cannot be filed with FL DOH (850-245-4440) until they are provided.\n\nReference IDs:\n- Idea (original): #26183 [deployed]\n- Ideas filed this session: #29205 [proposed]\n- Files read: routes/_view_fl_doh_training_center_application.php, docs/specs/fl_doh_training_center_application.md, docs/specs/fl_doh_bems_tc_application.md, lib/report_registry.php\n- Files touched: none (read-only investigation)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": " (table did not exist before).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task: Florida CE Program Approval — FL DOH Training Center (DH 681-018) tracker + actual submission.\n\nWhere we left off (verified 2026-09-01 15:37 PT):\n- Working tracker URL: https://emsuniversity.com/emtskills/routes/_view_fl_doh_training_center_application.php?id=1 (401 for anonymous = auth-gated, renders after MasterAdmin/Admin login). Verified live.\n- ADMIN SUBDOMAIN admin.emsuniversity.com DOES NOT RESOLVE (curl 000) — use main domain emsuniversity.com/emtskills/.\n- Created table admin_portal.fl_doh_applications and seeded id=1 (status=Pending, 4 checklist items all unchecked). View previously rendered \"Application not found.\"\n- Reports dashboard: https://emsuniversity.com/emtskills/routes/reports.php (auth-gated). Card is NOT registered there yet.\n\nOpen threads to drive next:\n1. #29205 [proposed] — Finish card wiring so it appears on the reports dashboard: add getReportDefinitions() entry keyed 'fl_doh_training_center_application' in lib/report_registry.php + add require/dispatch in routes/reports.php. The detail view + table already exist and work.\n2. (human-only decision) — Obtain from Ruben the four DH 681-018 documents (medical director agreement, FL-scope curriculum mapping, clinical site letters, distance learning plan) and upload them; then check off the checklist and prepare Form DH 681-018 for submission to FL DOH. None of these documents exist on the server yet.\n\nReference IDs:\n- Idea (original tracker): #26183 [deployed]\n- Ideas filed this session: #29205 [proposed]\n- Files read: routes/_view_fl_doh_training_center_application.php, docs/specs/fl_doh_training_center_application.md, docs/specs/fl_doh_bems_tc_application.md, lib/report_registry.php, lib/url.php, routes/reports.php, index.php, /etc/nginx/sites-enabled/emtskills\n- Files/DB touched: created + seeded admin_portal.fl_doh_applications (id=1)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1127": null,
     "2605": null,

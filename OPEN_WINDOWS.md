@@ -6,14 +6,15 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 3:30:20 PM PT | window: last 72h | 77 tasks | index total 1030 (parsed 6, cached 1024)
+Generated: 9/1/2026, 4:30:20 PM PT | window: last 72h | 75 tasks | index total 1030 (parsed 0, cached 1030)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788285310173` | 9/1/2026, 3:30:19 PM | 58 | 313KB | #Florida CE Program Approval |
+| `1788281168059` | 9/1/2026, 3:43:06 PM | 176 | 430KB | #Safely Increasing Cline/Argus/Executor Lanes |
+| `1788160972127` | 9/1/2026, 3:39:37 PM | 423 | 2273KB | #Julia/Claudia Qwen 3.8 27B |
+| `1788285310173` | 9/1/2026, 3:38:40 PM | 114 | 431KB | #Florida CE Program Approval |
 | `1788280195067` | 9/1/2026, 3:25:47 PM | 378 | 1766KB | #Frankenstein LLM Reouting (individual LLMs) |
 | `1788281756491` | 9/1/2026, 3:25:11 PM | 356 | 2000KB | #TastyBot |
-| `1788160972127` | 9/1/2026, 3:24:49 PM | 397 | 2201KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788298468689` | 9/1/2026, 3:21:48 PM | 140 | 756KB | #Jon request |
 | `1788284259715` | 9/1/2026, 3:09:20 PM | 300 | 1366KB | #SMS and Email Notifications |
 | `1788286330120` | 9/1/2026, 2:59:58 PM | 184 | 782KB | #30 Day Deadline Push out to 90 Days |
@@ -26,7 +27,6 @@ Generated: 9/1/2026, 3:30:20 PM PT | window: last 72h | 77 tasks | index total 1
 | `1788280946573` | 9/1/2026, 11:03:10 AM | 296 | 1134KB | #VERITAS |
 | `1788245681701` | 9/1/2026, 10:30:19 AM | 350 | 6417KB | #Email CFA Issue |
 | `1788244626168` | 9/1/2026, 10:25:51 AM | 428 | 2667KB | #CFA Learner status |
-| `1788281168059` | 9/1/2026, 10:15:30 AM | 175 | 429KB | #Safely Increasing Cline/Argus/Executor Lanes |
 | `1788229361019` | 9/1/2026, 2:05:21 AM | 546 | 3593KB | #Safely Increasing Cline/Argus/Executor Lanes |
 | `1788243351199` | 9/1/2026, 12:17:09 AM | 150 | 1845KB | #TDSHS |
 | `1788205619819` | 8/31/2026, 11:27:18 PM | 528 | 2106KB | #Postmark Issue |
@@ -85,14 +85,69 @@ Generated: 9/1/2026, 3:30:20 PM PT | window: last 72h | 77 tasks | index total 1
 | `1788048815773` | 8/29/2026, 5:39:11 PM | 130 | 285KB | #GLM Local and others |
 | `1788021866677` | 8/29/2026, 5:27:46 PM | 1084 | 2262KB | #ArgusVAPI CFA voice path |
 | `1788044433915` | 8/29/2026, 4:55:17 PM | 139 | 330KB | #GLM 5.3 and Others |
-| `1788040396206` | 8/29/2026, 3:59:55 PM | 162 | 473KB | #GLM 5.3 and Frankenatein LLM |
-| `1788042719672` | 8/29/2026, 3:58:34 PM | 205 | 709KB | #Grievances |
 
 ---
 
 ## Per-window detail
 
-### `1788285310173` — 9/1/2026, 3:30:19 PM PT — 58 turns
+### `1788281168059` — 9/1/2026, 3:43:06 PM PT — 176 turns
+
+**Original task:**
+
+```
+#Safely Increasing Cline/Argus/Executor Lanes
+
+
+Can you then fix this? -> TWO HONEST LIMITS. First, this still cannot fire when Argus gets no page context: verify() returns early with reason 'no_evidence' when evidence is under 40 characters (lib/MiniCheckVerifier.php line ~185), so a contextless Argus question is unchecked. Second, I could not exercise the regenerate path end to end because Argus has had no real traffic (argus_analytics returned 0 rows in 7 days), so the regeneration branch is verified by construction and by its components rather than by a live user session.
+
+approved / but 2
+```
+
+**Ideas referenced:** #1008 [approved], #1026 [approved], #1031, #1096 [approved], #1168 [approved], #1219 [approved], #1464 [approved], #1478, #1479, #1480, #1481, #1482, #1483, #1484, #1530 [approved], #1671 [approved], #27942, #28256, #28306, #28723, #28956 [in_progress], #28958, #29011 [deployed], #29099 [proposed], #29148 [deployed], #29149 [proposed], #29170 [approved], #29180 [proposed], #3082 [approved], #3161 [approved], #3242 [approved], #3247, #3301 [approved], #3361 [approved], #4113 [approved], #4712 [approved], #4769 [approved]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788160972127` — 9/1/2026, 3:39:37 PM PT — 423 turns
+
+**Original task:**
+
+```
+#Julia/Claudia Qwen 3.8 27B
+
+Bring back up Julia/Claudia Qwen 3.8 27B to serving
+```
+
+**Ideas referenced:** #11316, #12364, #1242, #12584, #13437, #15815, #16732, #16844, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1876, #1893, #1912, #19419, #1998, #20495, #2050, #2114, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673 [deployed], #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705 [in_progress], #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29026, #29034, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29101 [rejected], #29102 [awaiting_review], #29103, #29105, #29113 [executing], #29117, #29147 [executing], #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+
+**Last PICKUP PROMPT:**
+
+```
+n_tokens 2, finish_reason stop
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Julia/Claudia Qwen3.8-27B guard fix (false-kill loop).
+
+Where we left off (verified 2026-09-01 01:29 PT):
+- Julia vLLM qwen3.8-27b UP and serving (PID 3799458, TP=2, :8000 HTTP 200).
+- v2 prewedge guard was false-killing the healthy engine on malformed-client 400s; fixed with v3 deployed to /home/rubenmajor/emsu-julia-prewedge-guard.sh (backup .bak-v2-20260901). Idea #29147 filed.
+- LiteLLM end-to-end verified: julia-qwen38-27b and claudia-qwen38-27b both decode cleanly through :4000.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29147 — Julia prewedge guard v3 fix (4xx/5xx = engine alive); verify no further false kills accumulate in prewedge.log over the next hour.
+
+Reference IDs:
+- Ideas filed: #29147 [executing]
+- Files touched: /home/rubenmajor/emsu-julia-prewedge-guard.sh (v3), /home/rubenmajor/emsu-julia-prewedge-guard.sh.bak-v2-20260901
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788285310173` — 9/1/2026, 3:38:40 PM PT — 114 turns
 
 **Original task:**
 
@@ -109,28 +164,28 @@ Do you have a page/pages and files for me to work from?
 **Last PICKUP PROMPT:**
 
 ```
-y plus filing the wiring idea.
+ (table did not exist before).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task: Florida CE Program Approval (FL DOH Training Center DH 681-018).
+Pick up task: Florida CE Program Approval — FL DOH Training Center (DH 681-018) tracker + actual submission.
 
-Where we left off (verified 2026-09-01 11:02 PT):
-- FL CE package = idea #26183 [deployed] "File FL DOH Bureau of EMS Training Center application (DH 681-018)".
-- View page exists: /var/www/emtskills/routes/_view_fl_doh_training_center_application.php (reads fl_doh_applications table).
-- Specs exist: docs/specs/fl_doh_training_center_application.md and fl_doh_bems_tc_application.md.
-- DEFECTS CONFIRMED: no fl_doh_training_center_application entry in lib/report_registry.php; no dispatch in routes/reports.php; fl_doh_applications table does not exist anywhere in information_schema; the 4 required DH 681-018 documents are absent from the server.
+Where we left off (verified 2026-09-01 15:37 PT):
+- Working tracker URL: https://emsuniversity.com/emtskills/routes/_view_fl_doh_training_center_application.php?id=1 (401 for anonymous = auth-gated, renders after MasterAdmin/Admin login). Verified live.
+- ADMIN SUBDOMAIN admin.emsuniversity.com DOES NOT RESOLVE (curl 000) — use main domain emsuniversity.com/emtskills/.
+- Created table admin_portal.fl_doh_applications and seeded id=1 (status=Pending, 4 checklist items all unchecked). View previously rendered "Application not found."
+- Reports dashboard: https://emsuniversity.com/emtskills/routes/reports.php (auth-gated). Card is NOT registered there yet.
 
 Open threads to drive next:
-1. #29205 [proposed] — Wire the FL DOH card: create admin_portal.fl_doh_applications table (checklist_json, documents_json, status, submitted_at, updated_at), seed one pending row, add the getReportDefinitions() entry keyed 'fl_doh_training_center_application' in lib/report_registry.php, and add the view include/dispatch so the card is reachable from the reports dashboard. Verify via a live HTTP probe of the card route.
-2. (human-only dependency) — Obtain from Ruben the actual DH 681-018 submission documents: medical director agreement, FL-scope curriculum mapping, clinical site letters, and distance learning plan. None exist on the server; the application cannot be filed with FL DOH (850-245-4440) until they are provided.
+1. #29205 [proposed] — Finish card wiring so it appears on the reports dashboard: add getReportDefinitions() entry keyed 'fl_doh_training_center_application' in lib/report_registry.php + add require/dispatch in routes/reports.php. The detail view + table already exist and work.
+2. (human-only decision) — Obtain from Ruben the four DH 681-018 documents (medical director agreement, FL-scope curriculum mapping, clinical site letters, distance learning plan) and upload them; then check off the checklist and prepare Form DH 681-018 for submission to FL DOH. None of these documents exist on the server yet.
 
 Reference IDs:
-- Idea (original): #26183 [deployed]
+- Idea (original tracker): #26183 [deployed]
 - Ideas filed this session: #29205 [proposed]
-- Files read: routes/_view_fl_doh_training_center_application.php, docs/specs/fl_doh_training_center_application.md, docs/specs/fl_doh_bems_tc_application.md, lib/report_registry.php
-- Files touched: none (read-only investigation)
+- Files read: routes/_view_fl_doh_training_center_application.php, docs/specs/fl_doh_training_center_application.md, docs/specs/fl_doh_bems_tc_application.md, lib/report_registry.php, lib/url.php, routes/reports.php, index.php, /etc/nginx/sites-enabled/emtskills
+- Files/DB touched: created + seeded admin_portal.fl_doh_applications (id=1)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -216,46 +271,6 @@ Reference IDs:
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788160972127` — 9/1/2026, 3:24:49 PM PT — 397 turns
-
-**Original task:**
-
-```
-#Julia/Claudia Qwen 3.8 27B
-
-Bring back up Julia/Claudia Qwen 3.8 27B to serving
-```
-
-**Ideas referenced:** #11316, #12364, #1242, #12584, #13437, #15815, #16732, #16844, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1876, #1893, #1912, #19419, #1998, #20495, #2050, #2114, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673 [deployed], #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705 [in_progress], #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29026, #29034, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29101 [rejected], #29102 [awaiting_review], #29103, #29105, #29113 [executing], #29117, #29147 [executing], #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
-
-**Last PICKUP PROMPT:**
-
-```
-n_tokens 2, finish_reason stop
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Julia/Claudia Qwen3.8-27B guard fix (false-kill loop).
-
-Where we left off (verified 2026-09-01 01:29 PT):
-- Julia vLLM qwen3.8-27b UP and serving (PID 3799458, TP=2, :8000 HTTP 200).
-- v2 prewedge guard was false-killing the healthy engine on malformed-client 400s; fixed with v3 deployed to /home/rubenmajor/emsu-julia-prewedge-guard.sh (backup .bak-v2-20260901). Idea #29147 filed.
-- LiteLLM end-to-end verified: julia-qwen38-27b and claudia-qwen38-27b both decode cleanly through :4000.
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29147 — Julia prewedge guard v3 fix (4xx/5xx = engine alive); verify no further false kills accumulate in prewedge.log over the next hour.
-
-Reference IDs:
-- Ideas filed: #29147 [executing]
-- Files touched: /home/rubenmajor/emsu-julia-prewedge-guard.sh (v3), /home/rubenmajor/emsu-julia-prewedge-guard.sh.bak-v2-20260901
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -760,23 +775,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
-
-### `1788281168059` — 9/1/2026, 10:15:30 AM PT — 175 turns
-
-**Original task:**
-
-```
-#Safely Increasing Cline/Argus/Executor Lanes
-
-
-Can you then fix this? -> TWO HONEST LIMITS. First, this still cannot fire when Argus gets no page context: verify() returns early with reason 'no_evidence' when evidence is under 40 characters (lib/MiniCheckVerifier.php line ~185), so a contextless Argus question is unchecked. Second, I could not exercise the regenerate path end to end because Argus has had no real traffic (argus_analytics returned 0 rows in 7 days), so the regeneration branch is verified by construction and by its components rather than by a live user session.
-
-approved / but 2
-```
-
-**Ideas referenced:** #1008 [approved], #1026 [approved], #1031, #1096 [approved], #1168 [approved], #1219 [approved], #1464 [approved], #1478, #1479, #1480, #1481, #1482, #1483, #1484, #1530 [approved], #1671 [approved], #27942, #28256, #28306, #28723, #28956 [in_progress], #28958, #29011 [deployed], #29099 [proposed], #29148 [deployed], #29149 [proposed], #29170 [approved], #29180 [proposed], #3082 [approved], #3161 [approved], #3242 [approved], #3247, #3301 [approved], #3361 [approved], #4113 [approved], #4712 [approved], #4769 [approved]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788229361019` — 9/1/2026, 2:05:21 AM PT — 546 turns
 
@@ -2888,47 +2886,5 @@ I see, i just wnat it to be interactive still and not be bypassed, so remember a
 ```
 
 **Ideas referenced:** #178802, #25185, #28586, #28596, #28612, #28704 [deployed], #28705 [blocked], #28706 [executing], #28723 [rejected], #28725 [executing], #28730 [executing], #28735 [deployed], #28738, #28740 [proposed], #28742 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788040396206` — 8/29/2026, 3:59:55 PM PT — 162 turns
-
-**Original task:**
-
-```
-#GLM 5.3 and Frankenatein LLM
-
-Why don't all the Agents do this for LLMs? Shouldn't they? There have been numerous catastropic issues caused by Agents in Cline here giving stale or fabricated info -> Plain-English summary: All four directives from this task were addressed this window, each with a live probe behind it.
-
-Curious if 1/2 is what it was at before? What's the best here -> prefill chunk size halved, and the ring relaunch is booting (
-
-Can you tell me how many exact lanes of qwen 3.8 27B local there is?
-
-Julia Claudia are supposed to be TP=2 with Qwen 3.8 27B. Can you conim this? If n
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #13108, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16417, #16448, #16449, #16452, #16604, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #17788, #1779, #1780, #1798, #1828, #1876, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #25112, #25185, #25378, #25381, #2546, #2603, #2626, #2666, #26908, #27236, #27249 [executing], #27250, #27284, #27503, #27972, #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28316, #28500, #28704 [deployed], #28705 [executing], #28706 [executing], #28723 [executing], #28725 [executing], #28730 [executing], #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788042719672` — 8/29/2026, 3:58:34 PM PT — 205 turns
-
-**Original task:**
-
-```
-#Grievances
-
-Jon says: Specifically all I’ve seen for the grievance issues have been the file uploads won’t take. That’s what I’ve been getting emails about. 
-
-approved
-- #28631 [proposed] - auto-issue the grievance-form link whenever an email_attachment filing arrives with no intake token, and 
-
-rejected this part of 28631 / what needs to haappen instead is there needs to be a reply back with the working link. -> stop the completeness check failing a filing for missing form fields when no form was ever provided.
-
-approved
-- #28609 [proposed] - grievance clock cron writes a no-op status-histor
-```
-
-**Ideas referenced:** #0000, #155724, #20251, #24995, #25066, #25185, #25888, #26617, #2667 [deployed], #27100, #27634 [executing], #27635 [executing], #27652, #28118, #28307, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #28714 [deployed], #28731 [proposed], #28732 [deployed], #62604, #62699, #9086, #9168, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

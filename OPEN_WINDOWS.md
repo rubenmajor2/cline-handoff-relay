@@ -6,13 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 5:19:44 PM PT | window: last 72h | 84 tasks | index total 1012 (parsed 1, cached 1011)
+Generated: 8/31/2026, 6:19:44 PM PT | window: last 72h | 83 tasks | index total 1012 (parsed 2, cached 1010)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788161048426` | 8/31/2026, 5:19:41 PM | 509 | 2665KB | #Joshua Qwen 3.8 27B |
+| `1788161302475` | 8/31/2026, 6:19:33 PM | 653 | 2368KB | #Grievances |
+| `1788161048426` | 8/31/2026, 6:17:12 PM | 569 | 2881KB | #Joshua Qwen 3.8 27B |
 | `1788196060306` | 8/31/2026, 4:18:03 PM | 480 | 1537KB | #Argus Improvmeents |
-| `1788161302475` | 8/31/2026, 4:03:34 PM | 540 | 2194KB | #Grievances |
 | `1788212361951` | 8/31/2026, 3:36:22 PM | 166 | 547KB | #Nero Qwen 3.8 27B |
 | `1788195724924` | 8/31/2026, 3:32:55 PM | 186 | 821KB | #EMT Skills Slowness |
 | `1788200522716` | 8/31/2026, 3:26:15 PM | 413 | 9089KB | #TDSHS |
@@ -93,13 +93,54 @@ Generated: 8/31/2026, 5:19:44 PM PT | window: last 72h | 84 tasks | index total 
 | `1787978044041` | 8/28/2026, 9:38:11 PM | 17 | 33KB | #Argus |
 | `1787977854047` | 8/28/2026, 9:31:14 PM | 3 | 14KB | #Argus |
 | `1787977832880` | 8/28/2026, 9:31:09 PM | 2 | 12KB | #Argus |
-| `1787707484695` | 8/28/2026, 5:29:57 PM | 406 | 4577KB | See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=i |
 
 ---
 
 ## Per-window detail
 
-### `1788161048426` — 8/31/2026, 5:19:41 PM PT — 509 turns
+### `1788161302475` — 8/31/2026, 6:19:33 PM PT — 653 turns
+
+**Original task:**
+
+```
+#Grievances
+
+Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
+
+Jon says: Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
+```
+
+**Ideas referenced:** #1242, #12770, #14743, #14748, #16844, #17712, #177949, #178805, #178806, #178816, #18135, #18480 [deployed], #18481 [blocked], #18491 [rejected], #18853, #1912, #19426, #19802, #1998, #202608, #20292, #20295, #2168, #2174, #22250, #24184, #25185, #25466, #25764, #25888, #25913, #26400, #2647, #2654, #2659, #2662, #2663, #2670, #2672, #2675, #2677, #2679, #26932, #2782, #28546, #28551, #28552, #28564, #28586, #28596, #28607, #28622, #28704, #28705, #28706, #28723, #28730, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #28949 [proposed], #28958, #28992, #29017 [deployed], #29026 [deployed], #29027 [proposed], #29028 [proposed], #29034 [deployed], #29054 [proposed], #35944, #3957, #4930, #4931, #5095, #5249, #5770, #5795, #6039, #6064, #6106, #6230, #64748, #6789, #6852, #7164, #7359, #7381, #8672, #9019
+
+**Last PICKUP PROMPT:**
+
+```
+/final_julia_vision.py output)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: Grievances open item #28949 [blocked] (jtgruiz reply, human-gated).
+
+Where we left off (verified 2026-08-31 15:55 PT):
+- #28949 [blocked] : jtgruiz@msn.com = Toni Ruiz, repeat parent complainant; ticket 28564 now assigned to Vicky Yu (id 2) with evidence + draft logged as internal comment; ticket 28992 (withdrawal) already with Vicky.
+- Rule 317 clause 1 amended (ROW_COUNT is not a read-back probe): mechanical reversal repair done.
+- julia-qwen38-27b vision passthrough fix is live in /etc/litellm/_router_core.py; litellm restarted 15:31:26; image probe returns CONTENT='SOLID RED'.
+
+Open threads to drive next (EVERY item has a real idea #):
+1. #28949 [blocked] : Vicky Yu human decision: call Toni Ruiz (jtgruiz@msn.com), identify the son via call-center/CT logs (no Students match), decide the withdrawal/refund, and send the drafted reply on ticket 28564. Auto-close deadline 2026-09-01 23:23 (comment 193432): do not let it auto-close while human-gated.
+
+Reference IDs:
+- Ticket: 28564 (complaint, now assigned Vicky id 2), 28992 (withdrawal, Vicky id 2)
+- Ideas: #28949 [blocked]
+- Files touched: /etc/litellm/_router_core.py (+ .bak-passthrough-20260831); admin_portal tickets, ticket_comments, orchestrator_ideas, idea_comments
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788161048426` — 8/31/2026, 6:17:12 PM PT — 569 turns
 
 **Original task:**
 
@@ -109,7 +150,7 @@ Generated: 8/31/2026, 5:19:44 PM PT | window: last 72h | 84 tasks | index total 
 Bring back up Joshua Qwen 3.8 27B to serving
 ```
 
-**Ideas referenced:** #10756, #11316, #11847, #12364, #1242, #12477, #12612, #12618, #12680, #12689, #12824, #12872, #12878, #13202, #13437, #13490, #13842, #13874, #15815, #16163, #16304, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
+**Ideas referenced:** #10756, #11316, #11847, #12364, #1242, #12477, #12612, #12618, #12680, #12689, #12824, #12872, #12878, #13202, #13437, #13490, #13842, #13874, #15815, #16163, #16304, #16732, #1724, #178693, #178712, #178713, #178716, #178805, #178806, #1893, #1912, #19419, #1998, #20495, #2050, #21586, #2168, #2174, #22229, #2230, #23133, #2328, #2338, #2340, #2341, #2343, #2344, #23455, #2358, #23982, #24895, #2511, #2513, #2517, #2518, #2522, #2524, #2525, #2537, #2539, #2546, #2547, #2550, #2554, #2569, #2570, #2571, #2573, #25764, #2579, #2580, #2582, #25830, #2589, #2590, #25916, #25962, #25965, #2597, #25973, #25989, #26003, #2603, #26038, #26040, #26041, #26045, #26046, #2605, #26050, #26054, #26065, #26067, #26068, #26090, #26196, #26207, #26209 [proposed], #26211 [proposed], #26214 [executing], #26215 [executing], #26225, #26229, #26233, #26238, #26241 [proposed], #26244 [superseded], #26245 [proposed], #26249 [proposed], #2625, #2626, #2628, #2629, #2631 [investigating], #26322, #26336, #26348, #26368, #26376, #26377, #2640, #26400, #2642, #2647, #26471, #26475, #26476, #26495 [deployed], #26496 [deployed], #26507, #26508 [proposed], #26509 [proposed], #26515, #2654, #2659, #26613, #2662, #26625, #26626, #2663, #26638 [executing], #26639 [executing], #26642 [executing], #2666, #26663, #26678, #2670, #26711, #26712, #26713 [proposed], #26715 [deployed], #26719, #2672, #26743, #2675, #2677, #2679, #26816, #26820, #26823 [executing], #26824 [executing], #26825 [executing], #26827, #26834 [in_progress], #26835 [proposed], #26847, #26851, #26871, #26892 [executing], #26894, #26895, #26896, #26902, #26909, #26914, #26925 [deployed], #26931, #26932, #26934, #26938 [deployed], #26954 [deployed], #26975 [proposed], #27069, #27109, #27110, #27128, #27129, #27152, #27201, #27203, #27232 [rejected], #27236 [deployed], #27240, #27243, #27244, #27245, #27249 [executing], #27250, #27257, #27258, #27259, #27271, #27272, #27273, #27276, #27280 [deployed], #27281 [proposed], #27284, #27287, #27353, #27354, #27355, #27395, #27396, #27397, #27398, #27399, #27400, #27447, #27492, #27494, #27503 [proposed], #27508 [executing], #27514 [executing], #27515 [executing], #27518 [deployed], #27520 [deployed], #27524, #27531 [proposed], #27603 [deployed], #27631, #27640 [deployed], #27646, #27647 [proposed], #27648, #27655 [deployed], #27656, #27663, #27673, #27684, #27685, #27690 [deployed], #27691, #27692, #27698 [deployed], #27699, #27702, #27715 [deployed], #27734, #27767 [deployed], #27771, #27811, #27812, #27832, #27933, #27935, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28042, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28133, #28153, #28205 [deployed], #28213 [proposed], #28214, #28220, #28221, #28225 [deployed], #28226 [deployed], #28234, #28238 [deployed], #28244, #28245, #28246, #28250, #28252, #28253, #28254, #28255, #28304, #28306 [deployed], #28307, #28308, #28309, #28310, #28313 [proposed], #28314, #28315 [proposed], #28316 [proposed], #28317 [proposed], #28330 [deployed], #28331 [deployed], #28369 [deployed], #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28551, #28552, #28586, #28596, #28605, #28606, #28607, #28615, #28621 [deployed], #28622 [deployed], #28704, #28705, #28706, #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723, #28725, #28726, #28729, #28730, #28735 [deployed], #28738, #28740, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29044, #29048 [deployed], #30043, #30515, #31646, #3261, #3319, #3346, #366377, #450438, #8157, #8162, #8184
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
@@ -162,48 +203,6 @@ Reference IDs:
 - Ideas stamped: #29050 [deployed], #29055 [executing], #29015 [deployed]
 - Files touched: routes/argus_download.php, routes/alltastic_api.php, lib/argus_action_catalog.php
 - Backup: /tmp/argus_action_catalog.php.bak-20260831-paymerge
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788161302475` — 8/31/2026, 4:03:34 PM PT — 540 turns
-
-**Original task:**
-
-```
-#Grievances
-
-Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
-
-Jon says: Self-completed: root cause was 3 live code/schema mismatches in routes/api/grievance_api.php. Note one open item it surfaced: #28949 [proposed] "jtgruiz grievance reply needs human decision" - if that reply still needs you, pick it up.
-```
-
-**Ideas referenced:** #1242, #12770, #14743, #14748, #16844, #17712, #177949, #178805, #178806, #178816, #18135, #18480 [deployed], #18481 [blocked], #18491 [rejected], #18853, #1912, #19426, #19802, #1998, #202608, #20292, #20295, #2168, #2174, #22250, #24184, #25185, #25466, #25764, #25888, #25913, #26400, #2647, #2654, #2659, #2662, #2663, #2670, #2672, #2675, #2677, #2679, #26932, #2782, #28546, #28551, #28552, #28564, #28586, #28596, #28607, #28622, #28704, #28705, #28706, #28723, #28730, #28746, #28747, #28748, #28749, #28750, #28751, #28752, #28753, #28758, #28759, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28795, #28891, #28893, #28894, #28895, #28897, #28948, #28949 [proposed], #28958, #28992, #29017 [deployed], #29026 [deployed], #29027 [proposed], #29028 [proposed], #29034 [deployed], #29054 [proposed], #35944, #3957, #4930, #4931, #5095, #5249, #5770, #5795, #6039, #6064, #6106, #6230, #6789, #6852, #7164, #7359, #7381, #8672, #9019
-
-**Last PICKUP PROMPT:**
-
-```
-/final_julia_vision.py output)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Grievances open item #28949 [blocked] (jtgruiz reply, human-gated).
-
-Where we left off (verified 2026-08-31 15:55 PT):
-- #28949 [blocked] : jtgruiz@msn.com = Toni Ruiz, repeat parent complainant; ticket 28564 now assigned to Vicky Yu (id 2) with evidence + draft logged as internal comment; ticket 28992 (withdrawal) already with Vicky.
-- Rule 317 clause 1 amended (ROW_COUNT is not a read-back probe): mechanical reversal repair done.
-- julia-qwen38-27b vision passthrough fix is live in /etc/litellm/_router_core.py; litellm restarted 15:31:26; image probe returns CONTENT='SOLID RED'.
-
-Open threads to drive next (EVERY item has a real idea #):
-1. #28949 [blocked] : Vicky Yu human decision: call Toni Ruiz (jtgruiz@msn.com), identify the son via call-center/CT logs (no Students match), decide the withdrawal/refund, and send the drafted reply on ticket 28564. Auto-close deadline 2026-09-01 23:23 (comment 193432): do not let it auto-close while human-gated.
-
-Reference IDs:
-- Ticket: 28564 (complaint, now assigned Vicky id 2), 28992 (withdrawal, Vicky id 2)
-- Ideas: #28949 [blocked]
-- Files touched: /etc/litellm/_router_core.py (+ .bak-passthrough-20260831); admin_portal tickets, ticket_comments, orchestrator_ideas, idea_comments
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
@@ -3073,63 +3072,3 @@ You were right to flag the missing idea numbers — that was a rule-91 violation
 **Ideas referenced:** #178778, #28042 [deployed], #28133 [proposed], #28214 [executing], #28221 [deployed], #28234 [deployed], #28304 [deployed], #28310 [proposed], #28369 [deployed], #28497 [deployed], #28504 [proposed], #28505 [proposed], #28506 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1787707484695` — 8/28/2026, 5:29:57 PM PT — 406 turns
-
-**Original task:**
-
-```
-See this: https://emsuniversity.com/emtskills/personnel/institutional_compliance.php?tab=investigations 
-
-as well as latest (cost estimate letter / see latest email using spark, etc... from openrecords DSHS) as well as Cost estimate  A07292026.0450006.pdf in downloads folder. 
-
-Craft a response for me. We are sending the check today/tomorrow. So obviously need to accept it.
-```
-
-**Ideas referenced:** #000000, #0070, #010000, #0176, #04844, #070707, #07190, #111827, #16325, #166534, #16957, #178712, #178778, #19419, #19587, #19595 [executing], #19599, #20734, #237747, #2563, #25973, #2603, #2605, #26067, #26663, #27100, #27492, #27933, #27942, #27972, #28025, #28026, #28028, #28034, #28036, #28038, #28039 [deployed], #28040 [deployed], #28041, #28043 [deployed], #28044 [deployed], #28045 [proposed], #28046 [deployed], #28047, #28049 [proposed], #28088 [deployed], #28089 [deployed], #28090 [proposed], #28110 [deployed], #28111 [deployed], #28117, #28118 [deployed], #28119, #28153, #28213 [proposed], #28219 [proposed], #28594 [proposed], #303030, #363636, #394149, #450438, #475569, #494949, #54688, #54698, #600179, #623992, #64748, #673900, #709171, #797979, #870500, #92400
-
-**Last PICKUP PROMPT:**
-
-```
- Log
-No reversals this window.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787784000000: DSHS ORR A07292026.0450006 + TPIA-010, AG complaint remains.
-
-Where we left off (verified 2026-08-28 4:27 PM AKDT):
-- Email 1 SENT 2026-08-28 4:03:23 PM PDT, supplement to Jon's acceptance + payment (check #7091718227, $2,318.40, USPS 9410 8301 0935 5011 0022 15)
-- Email 2 SENT 2026-08-28 5:03:54 PM PDT, point-by-point answer to the HHSC 8/24 clarification on TPIA-010 (ORR A08132026.0450013). 552.222 toll ENDS on their receipt; 552.221 clock RESTARTED 2026-08-28
-- Both logged in admin_portal.tpia_request_tracking with full detail
-- AG intake channel established: portal https://www.texasattorneygeneral.gov/open-government/open-records-complaint or mail to Open Records Complaint, PO Box 12548, Austin, TX 78711-2548. NO published email address exists, do not guess one
-- ~/Desktop/DSHS_openrecords_copy_emails.html updated, both emails marked SENT, Doc 3 card carries portal + PO Box + warning
-
-Open threads to drive next:
-1. #28219 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle at 2026-08-28 4:27 PM AKDT). File Doc 3 with the TX AG by 2026-09-09 via the portal or certified mail to PO Box 12548; enclose the 8/25 estimate letter and a copy of Email 1; track check #7091718227 delivery
-2. #28594 [proposed] (verified: reconcile_ideas returned status=proposed dev_stage=idle at 2026-08-28 4:27 PM AKDT). Email 2 is sent, so the remaining work is tracking: compute the new 552.221 deadline from HHSC's receipt date of 2026-08-28 and chase if they go silent again
-
-Reference IDs:
-- Ideas carried: #28219 [proposed], #28594 [proposed]
-- Files touched: ~/Desktop/DSHS_openrecords_copy_emails.html
-- DB touched: admin_portal.tpia_request_tracking rows EMSU-TPIA-2026-010, ORR-A07292026.0450006
-
-# Reversal Log
-No reversals this window.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<command>open -a "Google Chrome" "https://www.texasattorneygeneral.gov/open-government/open-records-complaint"</command>
-<task_progress>
-- [x] Verify both sends from Sent folder
-- [x] Log both in tpia_request_tracking
-- [x] Establish AG intake channel (portal + PO Box, no published email)
-- [x] Update HTML, stray tag removed, reopened in Chrome
-- [x] Reconcile ideas
-- [x] Validate ALL PASSED, gate CLEAR, shipped
-</task_progress>
-</attempt_completion>
-```

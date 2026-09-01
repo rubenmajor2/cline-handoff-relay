@@ -6,17 +6,18 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 1:30:19 PM PT | window: last 72h | 77 tasks | index total 1028 (parsed 1, cached 1027)
+Generated: 9/1/2026, 2:30:19 PM PT | window: last 72h | 76 tasks | index total 1029 (parsed 2, cached 1027)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788284221639` | 9/1/2026, 1:29:56 PM | 614 | 1566KB | #September 1 Externship Switchover |
+| `1788296990463` | 9/1/2026, 2:30:05 PM | 123 | 319KB | #September 1 Externship Switchover |
+| `1788284221639` | 9/1/2026, 2:06:52 PM | 710 | 1866KB | #September 1 Externship Switchover |
+| `1788281756491` | 9/1/2026, 1:55:14 PM | 330 | 1903KB | #TastyBot |
+| `1788286330120` | 9/1/2026, 1:51:22 PM | 100 | 527KB | #30 Day Deadline Push out to 90 Days |
+| `1788284259715` | 9/1/2026, 1:40:58 PM | 186 | 963KB | #SMS and Email Notifications |
 | `1788237036746` | 9/1/2026, 11:30:58 AM | 686 | 2570KB | #Joshua Qwen 3.8 27B TP=2 |
 | `1788244675583` | 9/1/2026, 11:26:38 AM | 546 | 1907KB | #Kaizon Learner status |
-| `1788286330120` | 9/1/2026, 11:24:52 AM | 70 | 414KB | #30 Day Deadline Push out to 90 Days |
 | `1788285768610` | 9/1/2026, 11:24:17 AM | 98 | 545KB | #EMT Skills Slowness |
-| `1788284259715` | 9/1/2026, 11:22:09 AM | 170 | 774KB | #SMS and Email Notifications |
-| `1788281756491` | 9/1/2026, 11:10:32 AM | 236 | 897KB | #TastyBot |
 | `1788280195067` | 9/1/2026, 11:08:57 AM | 300 | 1369KB | #Frankenstein LLM Reouting (individual LLMs) |
 | `1788285310173` | 9/1/2026, 11:03:32 AM | 52 | 301KB | #Florida CE Program Approval |
 | `1788280946573` | 9/1/2026, 11:03:10 AM | 296 | 1134KB | #VERITAS |
@@ -85,14 +86,31 @@ Generated: 9/1/2026, 1:30:19 PM PT | window: last 72h | 77 tasks | index total 1
 | `1788044433915` | 8/29/2026, 4:55:17 PM | 139 | 330KB | #GLM 5.3 and Others |
 | `1788040396206` | 8/29/2026, 3:59:55 PM | 162 | 473KB | #GLM 5.3 and Frankenatein LLM |
 | `1788042719672` | 8/29/2026, 3:58:34 PM | 205 | 709KB | #Grievances |
-| `1788036414021` | 8/29/2026, 2:28:28 PM | 214 | 493KB | #GLM 5.3 Local and Frankenstein LLM |
-| `1788027890157` | 8/29/2026, 1:59:23 PM | 120 | 526KB | #/emtskills slowness |
 
 ---
 
 ## Per-window detail
 
-### `1788284221639` — 9/1/2026, 1:29:56 PM PT — 614 turns
+### `1788296990463` — 9/1/2026, 2:30:05 PM PT — 123 turns
+
+**Original task:**
+
+```
+#September 1 Externship Switchover
+
+
+I still don't see dates and times pre-filled as I asked before, I need that built. Also others approved as per rule 29. Give and poll Vicky followup questions. Running your questions as well now:
+
+Here is the browser AI test and every outstanding item, so you can open a fresh window with all of it in hand. I am at 95% of my context window, which is why I am handing off rather than starting the next build.
+
+Quick orientation before the test. The assign page is live and works, but three things you flagged are NOT done: the suggested date and time do not prefi
+```
+
+**Ideas referenced:** #166534, #178828, #29196 [deployed], #29197 [deployed], #29199 [proposed], #29200 [deployed], #29201 [deployed], #29202 [deployed], #29203 [deployed], #29213 [deployed], #29214 [deployed], #29216 [deployed], #29225 [proposed], #29227 [deployed], #29228 [deployed], #29230 [deployed], #3730, #374151, #5873, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788284221639` — 9/1/2026, 2:06:52 PM PT — 710 turns
 
 **Original task:**
 
@@ -102,9 +120,136 @@ Generated: 9/1/2026, 1:30:19 PM PT | window: last 72h | 77 tasks | index total 1
 Couple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and 
 ```
 
-**Ideas referenced:** #059669, #111827, #1486, #1487, #1488, #1489, #1490, #1492, #1493, #1494, #1495, #1496, #166534, #19419, #20315, #25185, #25821, #25822, #2631, #26663, #27100, #27492, #28613, #28958, #29011 [deployed], #29196 [proposed], #29197 [proposed], #29199 [proposed], #29200 [proposed], #29201 [deployed], #29202 [proposed], #29203 [deployed], #29213 [proposed], #29214 [proposed], #29216 [proposed], #374151, #856404, #92400, #939803, #939806
+**Ideas referenced:** #059669, #111827, #1486, #1487, #1488, #1489, #1490, #1492, #1493, #1494, #1495, #1496, #1497, #1498, #166534, #178828, #19419, #20315, #25185, #25821, #25822, #2631, #26663, #27100, #27492, #28613, #28958, #29011 [deployed], #29196 [proposed], #29197 [proposed], #29199 [proposed], #29200 [proposed], #29201 [deployed], #29202 [proposed], #29203 [deployed], #29213 [proposed], #29214 [proposed], #29216 [proposed], #29225 [proposed], #29227 [proposed], #29228 [proposed], #29230 [deployed], #374151, #856404, #92400, #939803, #939806, #939843, #939847, #939851, #939855, #939859, #939863
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788281756491` — 9/1/2026, 1:55:14 PM PT — 330 turns
+
+**Original task:**
+
+```
+#TastyBot
+
+can you install the tastybot program on this computer?
+```
+
+**Ideas referenced:** #05131, #060810, #10131, #141823, #14532, #24635, #24645, #25185, #25888, #25947, #273549, #28958, #29166, #29178 [proposed], #29195 [proposed], #334155, #475569, #64748, #8790
+
+**Last PICKUP PROMPT:**
+
+```
+4" + proof row in rule_amend).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29178 - TastyBot desktop app (Dock) + deadline vs immediate clarity
+
+Where we left off (verified 2026-09-01 13:54 PT):
+- TastyBot.app on Desktop has real icon (TastyBot.icns 159,643 bytes) + CFBundleIconFile set; Dock entry persists
+- Local dashboard on 127.0.0.1:8765 now labels "close now" (mandatory >= 70% immediate close) separate from "Close by (deadline, not immediate)" + "in Nd" column and "Close by date" header
+- Real Tastytrade data live: 5 positions in account 5WX51247, Net Liq $208,607
+
+Open threads to drive next:
+- None - all work completed this session
+
+Reference IDs:
+- Ideas filed: #29178 [deployed], #29195 [rejected]
+- Files touched: /Users/rubenmajor/Desktop/TastyBot.app/Contents/MacOS/TastyBot, /Users/rubenmajor/Desktop/TastyBot.app/Contents/Resources/TastyBot.icns, /Users/rubenmajor/Desktop/TastyBot.app/Contents/Info.plist, tastybot/app.py (TastyBot repo, Mac user Library Application Support)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788286330120` — 9/1/2026, 1:51:22 PM PT — 100 turns
+
+**Original task:**
+
+```
+#30 Day Deadline Push out to 90 Days
+
+I would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. 
+
+Scope how this could be done and then we can take act
+```
+
+**Ideas referenced:** #10060, #1127, #1405, #16168, #19419, #25185, #25888, #2605, #27100, #29026, #29034, #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29208 [proposed], #3368, #48953, #9306, #9465, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+s) | causal rule updated: 263.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29208 [proposed] - 30-day deadline to 90 days (silent PD approval buffer)
+
+Where we left off (verified 2026-09-01 13:50 PT):
+- Scope doc updated: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md (externship system + page wiring sections added).
+- Idea #29208 [proposed] in orchestrator_ideas = the implementation plan, pending Ruben go-ahead.
+- Externship pipeline has no separate deadline; NREMT window = src/Status.php:91 (60-day); extends with the same change set.
+- Pages (admin_profile.php, pd_80_percent_students, pd_80_percent_review, externship_assignment_queue) all read the calculators and follow automatically.
+- Deadline mapped across 7 code sites + 4 AI-policy files.
+
+Open threads to drive next:
+1. #29208 [proposed] - Answer the 4 in-line questions (anchor; PD reminders on/off; backfill mid-window; warnings off/cadence), then execute the 7 change sets in the scope doc.
+
+Reference IDs:
+- Ideas filed: #29208 [proposed]
+- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788284259715` — 9/1/2026, 1:40:58 PM PT — 186 turns
+
+**Original task:**
+
+```
+#SMS and Email Notifications
+
+Canyou give me the link to where I can turn on/off all student notificaitons for SMS/Emails?
+```
+
+**Ideas referenced:** #0056, #14532, #155724, #1565, #16168, #166534, #212529, #28775, #29209 [executing], #495057, #78350, #856404, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+Center page where they belong.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Confirm where Ruben's 60-day + NREMT notification controls live.
+
+Where we left off (verified 2026-09-01 13:40 PT):
+- manage.php reads only student_notification_types (14 rows; 4 are the 60-day ladder)
+- jobs.php (Notification Control Center) reads notification_job_registry (all 9 NREMT/completion/recert/exam jobs present + active)
+- notification_templates is empty (0 rows) — the "Email Templates" tab content is absent; toggles still functional via student_notification_types.is_active
+- Ruben's toggle state confirmed live: 14d ON, 7d/3d/1d OFF; per-type gate wired and dry-run verified (28 students skipped on 3d)
+
+Open threads:
+1. Whether to populate notification_templates (Email Templates tab), generating bodies/subjects from cron inline text — needs Ruben decision: yes/no (human-policy decision, no idea filed)
+
+Reference IDs:
+- Ideas filed: #29209 [executing] (RCA — repair + toggle wiring)
+- Files touched: cron/cron_completion_warnings.php, lib/comms_killswitch_guard.php, cron/cron_error_alert.php (restored)
+- Tables read: student_notification_types, notification_templates, notification_job_registry, comms_killswitch
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1788237036746` — 9/1/2026, 11:30:58 AM PT — 686 turns
 
@@ -198,50 +343,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1788286330120` — 9/1/2026, 11:24:52 AM PT — 70 turns
-
-**Original task:**
-
-```
-#30 Day Deadline Push out to 90 Days
-
-I would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. 
-
-Scope how this could be done and then we can take act
-```
-
-**Ideas referenced:** #10060, #1127, #1405, #16168, #19419, #25185, #25888, #2605, #27100, #29026, #29034, #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29208 [proposed], #3368, #48953, #9306, #9465, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-m) | causal rule updated: 263.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #29208 [proposed] - 30-day deadline to 90 days (silent PD approval buffer)
-
-Where we left off (verified 2026-09-01 11:22 PT):
-- Scope document written to /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md (this session's deliverable).
-- Idea #29208 [proposed] filed in orchestrator_ideas (academic/high) = the implementation plan, pending Ruben go-ahead.
-- Deadline = course_end_date + 30 days (= didactic + 60 days), verified in 6 code sites plus 4 AI-policy files.
-- Notification silence path confirmed: student_notification_types.is_active kill switch on completion_warning_14d/7d/3d/1d; PD-facing reminders stay ON.
-
-Open threads to drive next:
-1. #29208 [proposed] - Answer the 4 go-ahead questions (anchor = course_end+90 vs didactic+90; PD reminders on/off; one-time backfill of mid-window students; warnings fully off vs re-armed), then execute the 7 change sets in the scope doc.
-
-Reference IDs:
-- Ideas filed: #29208 [proposed]
-- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
 ### `1788285768610` — 9/1/2026, 11:24:17 AM PT — 98 turns
 
 **Original task:**
@@ -281,89 +382,6 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1788284259715` — 9/1/2026, 11:22:09 AM PT — 170 turns
-
-**Original task:**
-
-```
-#SMS and Email Notifications
-
-Canyou give me the link to where I can turn on/off all student notificaitons for SMS/Emails?
-```
-
-**Ideas referenced:** #0056, #14532, #155724, #1565, #16168, #166534, #212529, #28775, #29209 [executing], #495057, #78350, #856404, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-filed: **#29209 [executing]**.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Verify 60-day notification toggles wired + fix dead cron.
-
-Where we left off (verified 2026-09-01 11:21 PT):
-- DB state confirmed: completion_warning_14d is_active=1; 7d/3d/1d is_active=0
-- cron_completion_warnings.php had a 5-layer fatal cascade, dead since ~Aug 22; all fixed (killswitch require/inversion, clog() hoisting, missing cron_error_alert.php restored, missing secrets require, added per-touch-point is_active gate)
-- Dry-run verified: 28 students skipped for disabled 3-day type, 0 sends; registry last_checked_at stamped 2026-09-01 11:16
-- Sibling NREMT/recert/exam/60day-failer crons probed CLEAN; RCA idea #29209 [executing] on record
-
-Open threads:
-None — all repair work completed and verified this session.
-
-Reference IDs:
-- Ideas filed: #29209 [executing]
-- Files touched: cron/cron_completion_warnings.php, lib/comms_killswitch_guard.php, cron/cron_error_alert.php (restored from .bak-ruben-impl-20260715-151620), config/secrets.php (require added), notifications/manage.php (read), notification_job_registry / student_notification_types (read)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788281756491` — 9/1/2026, 11:10:32 AM PT — 236 turns
-
-**Original task:**
-
-```
-#TastyBot
-
-can you install the tastybot program on this computer?
-```
-
-**Ideas referenced:** #05131, #060810, #10131, #141823, #14532, #24635, #24645, #25185, #25888, #25947, #273549, #28958, #29166, #29178 [proposed], #29195 [proposed], #334155, #475569, #64748, #8790
-
-**Last PICKUP PROMPT:**
-
-```
-ejected + description updated.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #29178 [deployed] - TastyBot desktop app + real Tastytrade data
-
-Where we left off (verified 2026-09-01 11:09 PT):
-- Real TastyBot program located at ~/Library/Application Support/TastyBot/repo (Python, OAuth-authorized, tokens.json + .env present)
-- Local dashboard running at 127.0.0.1:8765, showing REAL data (5 positions in 5WX51247, Net Liq $208,607)
-- Desktop app /Users/rubenmajor/Desktop/TastyBot.app pinned to Dock; launcher self-starts local server and opens /positions
-- Server-side /emtskills/routes/tastybot_positions.php is a separate demo surface (hardcoded placeholder data); its $currentUser access bug was fixed this session (patched + lint + FPM reload + live ACL probe ALLOWED=YES)
-- Idea #29178 [deployed], #29195 [rejected] (no 'superseded' in status enum)
-
-Open threads to drive next:
-- None - all work completed this session
-
-Reference IDs:
-- Ideas filed: #29178 [deployed], #29195 [rejected]
-- Files touched: /Users/rubenmajor/Desktop/TastyBot.app, ~/Library/Application Support/TastyBot/repo, /var/www/emtskills/routes/tastybot_positions.php (+ .bak-20260901-tastyfix)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
 
@@ -2878,62 +2896,3 @@ approved
 **Ideas referenced:** #0000, #155724, #20251, #24995, #25066, #25185, #25888, #26617, #2667 [deployed], #27100, #27634 [executing], #27635 [executing], #27652, #28118, #28307, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #28714 [deployed], #28731 [proposed], #28732 [deployed], #62604, #62699, #9086, #9168, #9339
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788036414021` — 8/29/2026, 2:28:28 PM PT — 214 turns
-
-**Original task:**
-
-```
-#GLM 5.3 Local and Frankenstein LLM
-
-Seems like we have some work to do
-
-the other things is to avoid a box from being saturated, if there are other boxes of the same class (i.e. multiple 120Bs, Qwen 3.8 27Bs, etc...) then there should be some even distribution according to capacity, not just take one box down and oversaturate it. Let's be smarter about hos this works. 
-
-yes, let's tune this up now - build and ship here -> Honest speed verdict: the ring is correct and serving but decode IS slow right now (about 4 tok/s aggregate, 2.15 tok/s single-stream vs the 5.2-era 12.65 decode reference) 
-```
-
-**Ideas referenced:** #1130, #1131, #11953, #12247, #12262, #12363, #12368, #1241, #12425, #1248, #1249, #1252, #1258, #12657, #12689, #13108, #13874, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #17246, #1744, #1779, #1798, #1828, #1912, #19567, #19653, #1986, #19903, #20042, #2050, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25185, #25378, #25381, #2546, #25764, #26400, #2647, #2654 [deployed], #2659, #2663, #26908, #26932, #27236, #27249 [executing], #27250, #27503, #28586, #28622, #28704 [executing], #28705 [executing], #28706 [executing], #28723 [proposed], #28725 [proposed], #7142, #7149
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788027890157` — 8/29/2026, 1:59:23 PM PT — 120 turns
-
-**Original task:**
-
-```
-#/emtskills slowness
-
-See emtskills slowness. /emtskills folder is spinning very slowly and needs to be fixed. I need you to review that file that is on the desktop the EMT skills slowness file on the desktop and then append to it after you resolve the issue.
-```
-
-**Ideas referenced:** #15815, #1912, #1998, #20495, #2168, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #2640, #2642, #2654, #2659, #2662, #26712, #26713, #26932, #27691, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28722 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-never needs a support session.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up the /emtskills slowness follow-up — make the llm_pool_isolation_guard self-heal (idea #28722).
-
-Where we left off (verified 2026-08-29 13:58 PT):
-- /emtskills slowness fixed + probe-verified: routes/api_fleet_inventory.php added to AGENT_POOL in /etc/nginx/sites-enabled/emtskills (backup emtskills.bak-20260829-fleetinventory). Guard rc=0, accepted-conn delta agents +9 / www +1, 0 www slowlog post-fix.
-- RCA appended to /Users/rubenmajor/Desktop/emtskills-slowness.md (Aug 29 section).
-- Idea #28722 filed [proposed]; bug #17 in frankenstein_bug_library [resolved]; handoff note written to /var/www/emtskills/docs/HANDOFF_NOTES.md.
-
-Open threads to drive next:
-1. #28722 [proposed] — Upgrade /var/www/emtskills/scripts/llm_pool_isolation_guard.py from alert-only to self-heal: on detection of an unisolated trafficked form, auto-patch the AGENT_POOL alternation in BOTH PLESK_VHOST (/var/www/vhosts/system/emsuniversity.com/conf/vhost_nginx.conf) and LOCAL_VHOST (/etc/nginx/sites-enabled/emtskills), backup first, run nginx -t, reload nginx, re-run the isolation check, and an accepted-conn delta probe; ship --dry-run default → --self-heal flag → wire into /etc/cron.d/emsu-llm-pool-isolation-guard. This is the durable close of the 13× recurrence class.
-
-Reference IDs:
-- Ticket: n/a (direct Ruben task)
-- Ideas filed: #28722
-- Bug: #17 (frankenstein_bug_library)
-- Files touched: /etc/nginx/sites-enabled/emtskills (+ .bak-20260829-fleetinventory), /Users/rubenmajor/Desktop/emtskills-slowness.md, /var/www/emtskills/docs/HANDOFF_NOTES.md
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```

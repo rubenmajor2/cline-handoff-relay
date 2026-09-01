@@ -817,3 +817,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 1/2 (acquisition gate): declared 'TP=2 not viable on Joshua' from a single pidfd-IPC attempt after a GPU reset storm, WITHOUT checking the box's own proven TP=2 serving recipe first. Forensics then found unit backup service.bak-tp2-20260831 (pidfd TP=2) vs the 2026-08-22 serving recipe (CCL_ZE_IPC_EXCHANGE=sockets + CCL_TOPO_FABRIC_VERTEX_CONNECTION_CHECK=0, W4A16 int4 131K, 64 tok/s@8 for days). The wedge is the pidfd path + gdm greeter contention, not TP=2 per se. Rule now requires: before declaring any flag/config combination non-viable, grep the box's own unit backups + HANDOFF_NOTES for a prior successful run of that combination and name the exact env delta.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 07:28 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: kaizen-learner-status-20260901
+- RCA bucket: insufficient probe
+- Trigger pattern: declaring a negative runtime state (zero failures/no activity) from a coverage report without probing the live fires table
+- Reversal note: Amends clause 2 (acquisition gate): a coverage/backfill report showing '0 unclassified patterns' does NOT prove the runtime is quiet. Claimed 'zero failures since 08-30 20:32' while orchestrator_recipe_fires showed 43k live fires (33k unclassified fallback + 9.9k worker_silent_death) in the same 36h window. A completion claims about runtime activity must probe the live fires/execution table this window, never infer from the forensic coverage view.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 08:12 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: lane-health-checkpoint-20260831
+- RCA bucket: insufficient probe
+- Trigger pattern: Using an empty result from a guessed table/file name as positive proof that a subsystem does not exist or is not wired
+- Reversal note: Amends clause 2 (acquisition gate): a NULL/empty result from a GUESSED identifier (SHOW TABLES LIKE '%minicheck%' returning nothing) is NOT evidence about architecture. I asserted 'MiniCheck is not wired to Cline, nothing was checking my numbers' citing that empty result as proof. grep -rln MiniCheckVerifier then returned 5 real callers (argus_proxy.php, AgentReplyPipeline.php, SMSAIResponder.php, mailer.php, cron_minicheck_skip_watch.php) and the class logs to truth_judge_log, whose surface column DEFAULTS to 'cline'. Clause 2 now requires: before any claim that a component is absent or unwired, grep for the CLASS/FUNCTION name in code, never infer absence from a guessed table name. Absence of a name you invented is not absence of the system.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

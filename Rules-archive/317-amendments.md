@@ -857,3 +857,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: amends clause 2 (acquisition gate): a TP=2 collective-viability claim requires a LIVE cross-tile collective probe (actual allreduce over 2 tiles reaching startup-complete), never an inference from a prior dated boot recipe. This session reversed 'TP=2 viable with proven 8/22 recipe' -> definitive wall: ProcessGroupXCCL::initXCCLComm/allreduce_impl crashes on BOTH ray and mp executors after stale-ray cleanup, so oneCCL cannot create a 2-tile communicator on Joshua with this image/driver.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 16:59 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: joshua-tp2-experiment-20260901
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: Within-window reversal: I declared 'TP=2 cannot serve on this stack today' after one env variant (CCL_ATL_SHM=1 + FI_PROVIDER=shm) wedged at shm_broadcast. Ruben then said 'babysit it to serving.' The very next variant (remove CCL_ATL_SHM + FI_PROVIDER=tcp) reached Application startup complete, HTTP:200, and a clean decode (content 'OK', finish_reason=stop, fingerprint ...tp2). Amends clause 3/numbered-clause discipline: a negative verdict ('cannot serve', 'impossible', 'not achievable') is only valid after exhausting candidate env variants, never from one failed config. The declarative unit change was verified by a live serving probe this window, not by config presence.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 17:07 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788245681701
+- RCA bucket: insufficient probe
+- Trigger pattern: Reading an empty output/analytics table and attributing it to low demand, without invoking the producing surface once to distinguish idle from broken.
+- Reversal note: Amends clause 2 (acquisition gate): an absence-of-traffic observation is NOT evidence of low usage until the surface itself has been invoked end to end this window. The prior window read argus_analytics=0 rows/7d and reported it as "no real traffic", when every Argus request had in fact been returning HTTP 502 since 2026-08-28 because haproxy bound :4000 loopback-only while api/argus_proxy.php dials 10.100.0.1:4000. Clause 2 now requires that any claim explaining WHY a surface has no data must be backed by a live invocation of that surface, not by a row count of its own output table. A zero row count is a symptom shared by "nobody used it" and "it is completely broken", and those need opposite responses.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

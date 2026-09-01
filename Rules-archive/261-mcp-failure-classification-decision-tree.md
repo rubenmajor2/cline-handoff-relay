@@ -72,3 +72,13 @@ WOPR hard-reset at 10:01 PT; nginx (which fronts the MCP bridges) crash-looped u
 3. Do NOT pivot to raw SSH. Do NOT report the MCP as down or moved. Do NOT file "MCP broken" ideas.
 
 **After ANY WOPR reboot or nginx restart, expect mode B in every open window.** Bug library #1759 (`mcp_sessions_stale_after_wopr_reboot_20260715`) has the full incident. Port map is stable: 7841=emsu-operations, 7842=ruben-control, 7843=ruben-orchestrator, 7844=gdrive, 7845=imessage, 7846=mysql, 7847=github, 7848=fetch, 7855=clinerules, 7856=fleet-state (all via Mac localhost).
+
+## Amendment (from reversal, 2026-08-20 01:34 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: rule317-audit-handship-20260819
+- RCA bucket: insufficient probe
+- Trigger pattern: Treating two orchestrator-MCP read-tool timeouts as a blocker instead of falling back to a direct mysql orchestrator_ideas probe for idea state
+- Reversal note: Orchestrator MCP idea_spec and get_idea_progress both timed out (child response timeout) when reviewing idea #27634's build under load. Per rule 261 this is class C/D transport, not a wedge: the fallback that worked was probing orchestrator_ideas directly via the mysql MCP (SELECT status, dev_stage, readiness FROM admin_portal.orchestrator_ideas WHERE id=N). Amendment: when ruben-orchestrator read tools time out, fall back to direct mysql orchestrator_ideas probes for idea state before concluding anything about the build.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

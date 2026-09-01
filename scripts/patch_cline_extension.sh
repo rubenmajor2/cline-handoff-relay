@@ -49,11 +49,13 @@ log "Active extension: Cline v$VERSION"
 # --- Check if already patched ---
 RECONNECT_PATCHED=0
 YOLO_PATCHED=0
+TASKPROGRESS_PATCHED=0
 grep -q 'Auto-reconnected stdio MCP' "$EXT_JS" 2>/dev/null && RECONNECT_PATCHED=1
 grep -q 'maxConsecutiveMistakes:{default:10}' "$EXT_JS" 2>/dev/null && YOLO_PATCHED=1
+if grep -q 'recommended:""' "$EXT_JS" 2>/dev/null; then TASKPROGRESS_PATCHED=0; else TASKPROGRESS_PATCHED=1; fi  # 2026-08-28 TODO visibility restored
 
-if [ "$RECONNECT_PATCHED" = "1" ] && [ "$YOLO_PATCHED" = "1" ]; then
-    log "Both patches already present in v$VERSION. Nothing to do."
+if [ "$RECONNECT_PATCHED" = "1" ] && [ "$YOLO_PATCHED" = "1" ] && [ "$TASKPROGRESS_PATCHED" = "1" ]; then
+    log "All three patches already present in v$VERSION. Nothing to do."
     exit 0
 fi
 
@@ -63,7 +65,7 @@ cp "$EXT_JS" "$BACKUP"
 log "Backup: $BACKUP"
 
 # --- Apply patches via Python (handles special chars in minified JS safely) ---
-python3 - "$EXT_JS" <<'PYEOF'
+PATCH_OUT=$(python3 - "$EXT_JS" <<'PYEOF'
 import sys
 
 path = sys.argv[1]
@@ -132,8 +134,19 @@ if 'maxConsecutiveMistakes:{default:10}' not in s:
     else:
         changes.append("Patch 2 (YOLO ceiling): WARNING - pattern not found (maybe already 10 or renamed), skipping")
 
+# --- Patch 3 (task_progress suppression): DISABLED 2026-08-28 ---
+# Ruben: 'many models not showing TODOs here in cline - just showing 0/0.'
+# Blanking the FocusChain reminder map killed the TODO list (0/0 TODOs placeholder).
+# Reverted to stock behavior: models are prompted to emit task_progress checklists.
+
 for c in changes:
     print(c)
+
+# Emit a machine-greppable status line so the shell wrapper can log WARNINGs.
+if any('WARNING' in c for c in changes):
+    print("PATCHER_STATUS=WARNING")
+else:
+    print("PATCHER_STATUS=CLEAN")
 
 if s != original:
     open(path, 'w', encoding='utf-8').write(s)
@@ -141,8 +154,21 @@ if s != original:
 else:
     print("No changes made (all patches already present or patterns not found)")
 PYEOF
-
+)
 PY_RC=$?
+echo "$PATCH_OUT"
+
+# --- Log every WARNING line from the patcher (idea #28114) ---
+while IFS= read -r _line; do
+    case "$_line" in
+        *WARNING*) log "PATCHER WARNING: $_line" ;;
+    esac
+done <<< "$PATCH_OUT"
+
+if echo "$PATCH_OUT" | grep -q 'PATCHER_STATUS=WARNING'; then
+    log "WARNING: patcher reported a degraded match. Cline may have renamed the reminder-template map. Review the WARNING lines above."
+    osascript -e "display notification \"Cline patcher hit a WARNING on v$VERSION. Check /tmp/cline-extension-patch.log\" with title \"Cline Extension Patcher\" sound name \"Basso\"" 2>/dev/null
+fi
 if [ "$PY_RC" -ne 0 ]; then
     log "ERROR: Python patcher exited $PY_RC. Restoring backup."
     cp "$BACKUP" "$EXT_JS"
@@ -160,17 +186,19 @@ log "JS syntax check: OK"
 # --- Verify markers ---
 RECONNECT_OK=0
 YOLO_OK=0
+TASKPROGRESS_OK=0
 grep -q 'Auto-reconnected stdio MCP' "$EXT_JS" && RECONNECT_OK=1
 grep -q 'maxConsecutiveMistakes:{default:10}' "$EXT_JS" && YOLO_OK=1
+if ! grep -q 'recommended:""' "$EXT_JS" 2>/dev/null; then TASKPROGRESS_OK=1; fi  # not-blanked = desired
 
-log "Verification: reconnect=$RECONNECT_OK yolo=$YOLO_OK"
+log "Verification: reconnect=$RECONNECT_OK yolo=$YOLO_OK task_progress=$TASKPROGRESS_OK"
 
-if [ "$RECONNECT_OK" = "1" ] && [ "$YOLO_OK" = "1" ]; then
-    log "SUCCESS: Both patches applied to Cline v$VERSION"
+if [ "$RECONNECT_OK" = "1" ] && [ "$YOLO_OK" = "1" ] && [ "$TASKPROGRESS_OK" = "1" ]; then
+    log "SUCCESS: All three patches applied to Cline v$VERSION"
     log "ACTION NEEDED: RELOAD VS CODE (Cmd+Shift+P → Developer: Reload Window)"
     osascript -e "display notification \"Patches applied to Cline v$VERSION. RELOAD VS CODE now: Cmd+Shift+P → Reload Window\" with title \"Cline Extension Patcher\" sound name \"Glass\"" 2>/dev/null
     exit 0
-elif [ "$RECONNECT_PATCHED" = "0" ] || [ "$YOLO_PATCHED" = "0" ]; then
+elif [ "$RECONNECT_PATCHED" = "0" ] || [ "$YOLO_PATCHED" = "0" ] || [ "$TASKPROGRESS_PATCHED" = "0" ]; then
     log "PARTIAL/FAIL: Some patches did not apply. Check /tmp/cline-extension-patch.log"
     osascript -e "display notification \"Partial patch on Cline v$VERSION. Check log.\" with title \"Cline Extension Patcher\" sound name \"Basso\"" 2>/dev/null
     exit 1

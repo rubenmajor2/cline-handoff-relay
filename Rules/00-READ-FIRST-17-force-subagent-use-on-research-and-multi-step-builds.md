@@ -1,9 +1,14 @@
 # Force subagent use + first-tool-call tripwire (default-on, not judgment)
 
+## ⛔ SUBAGENT BAN — frankenstein-llm windows (2026-08-11 Ruben directive)
+
+**Running on `frankenstein-llm`? Subagents are BANNED. Do NOT call `use_subagents`.** Too slow, stall out easily. Run all multi-step work inline in the main window — use parallel MCP tool calls in a single response block when you need speed. This OVERRIDES the default-ON policy below until Ruben explicitly lifts the ban.
 
 ## The default (FLIPPED 2026-06-21 — subagents are default-ON)
 
-**Default first move on every new Cline task that needs research or multi-step work = subagents.** Subagents route through `deepseek-v4-pro` (enforced server-side in `router_hook.py`), costing effectively $0 due to prefix caching (-120x cost reduction shipped 2026-06-21). This keeps the local 120B pool free for the main interactive window (rule 146).
+**Default first move on every new Cline task that needs research or multi-step work = subagents.**
+
+**Where subagents actually run:** the local 120B pool via `frankenstein-tools` adapter (NOT `deepseek-v4-pro`; see idea #23528). Cost is ~$0 but dispatch CONSUMES the same 120B capacity as the main window, so a wide fan-out can slow your interactive turns. Full routing analysis: `Rules-archive/00-case-law.md`.
 
 The main window uses inline MCP tools for single-step operations (one server read, one DB query, one status check). Multi-step research, multi-file analysis, or anything needing parallel investigation → dispatch subagents per the fetch-then-paste pattern below.
 
@@ -14,6 +19,7 @@ Use inline MCP tools (no dispatch) when the entire task is:
 - A direct response to a simple question with no investigation needed
 - Work that requires MCP tools the subagent doesn't have (server reads, DB writes, iMessage sends)
 - Ruben explicitly says "no subagents" / "inline" / "just do it directly"
+- **frankenstein-llm window** — subagents BANNED (2026-08-11 Ruben directive: too slow, stall out). Run inline. See BAN block at top.
 
 ## The tripwire (mandatory — applies to EVERY tool call, not just the first)
 
@@ -94,52 +100,34 @@ Subagents have local shell + filesystem ONLY (`read_file`, `list_files`, `search
 
 A subagent can absolutely WORK with MCP/server/web data — it just cannot FETCH it. The parent fetches, the subagent reasons. The data crosses the boundary as **plain text baked into the prompt**, never as a tool the subagent calls.
 
-**WRONG (go-fetch — what causes the loop):**
-```
-use_subagents prompt: "Research the chat widget. Use emsu-operations read_server_file
-                       to read chat_widget_api.php and analyze it."
-→ subagent can't call the MCP → "not available" → falls to raw ssh → loops → dead
-```
+**WRONG:** prompt says "Use emsu-operations read_server_file to read X and analyze it" → subagent can't call the MCP → "not available" → falls to raw ssh → loops → dead.
 
-**RIGHT (fetch-then-paste):**
-```
-1. Parent calls read_server_file / mysql / web search ITSELF (MCP works in the main window).
-2. Parent dispatches: "Here is the full contents of chat_widget_api.php:
-                       <pastes the 400 lines>. Analyze it for X, Y, Z and report findings."
-→ subagent has the data inline → pure local reasoning → works
-```
+**RIGHT:** parent calls read_server_file / mysql / web search ITSELF, then dispatches "Here is the full contents of X: <pasted>. Analyze it for Y, Z." → subagent has the data inline → pure local reasoning → works.
 
-The subagent never touches a tool it doesn't have. It receives the MCP's *output* as text. That is the entire speedup model: the parent gathers (MCP, server reads, web), then fans out subagents to reason over big text blobs in parallel without burning the parent's context.
+The subagent never touches a tool it doesn't have. It receives the MCP's *output* as text. The parent gathers (MCP, server reads, web), then fans out subagents to reason over big text blobs in parallel without burning the parent's context.
 
 ### Banned subagent-dispatch phrases (self-check BEFORE every `use_subagents` call)
 
-Scan each subagent prompt. If it contains any of these, the dispatch is doomed — STOP, fetch the data inline in the main window, then re-dispatch with the data pasted in (or just do the work inline):
+Self-check: *"Does this prompt tell the subagent to FETCH something (MCP/web/server), or to REASON over something I'm pasting in?"* If FETCH → wrong; fetch it myself first. If REASON-over-pasted-text or local-file-read/grep → correct.
 
-- "Use emsu-operations" / "use the MCP" / "call use_mcp_tool" / "use ruben-orchestrator" / "use fleet-state" / "use the mysql MCP" / "query the database"
-- "Use web search" / "search the web" / "curl https://" / "google it" / "look online"
-- "ssh into" / "ssh wopr" / "ssh root@" / "on the server, run" / "check the server logs"
-- Any instruction that requires a tool a subagent does not have (MCP / network / server shell)
+**MECHANICAL SCAN (do this, don't just intend it).** That self-check is judgment; this is a string test. Before EVERY `use_subagents` call, scan each prompt for these literals — case-insensitive, substring match:
 
-Self-check: *"Does this subagent prompt tell it to FETCH something (MCP/web/server), or to REASON over something I'm pasting in?"* If FETCH → wrong; fetch it myself first. If REASON-over-pasted-text or local-file-read/grep → correct.
+`curl` · `http://` · `https://` · `web search` · `search the web` · `ssh ` · `mcp` · `from server` · `call the tool` · `query the database` · `check the server`
+
+ANY hit = doomed dispatch. Fetch that data inline first, paste it in, then dispatch. Measured 2026-08-06 (idea #24241): ALL 27 subagent runs at 50+ tool calls were this violation. Worst burned **177 tool calls** looping on fetches it cannot perform, holding its fan-out ~41 min (wall-clock = slowest member).
+
+**Bare `mcp` is deliberate, and so is `from server`.** 2026-08-09: a dispatch worded "Call the MCP tool `X` from server `Y`" hit ZERO literals on the older list (which named only `use the mcp` / `use_mcp_tool` / specific server names) and hung 5 subagents for 11 minutes. Match the CAPABILITY, not one phrasing of it. If a new wording slips through, widen this list in the same session.
 
 ### Exploratory research is inline-only, never subagent-dispatched
 
-There's a phase subagents cannot help with: **when you don't yet know what you're looking for** — you're forming the question, not answering one. This is different from bounded research (rule 00's normal case), where the sources/scope are already known.
+**When you don't yet know what you're looking for** (forming the question, not answering one), the shape is iterative: fetch → read → decide what to fetch next → repeat. Subagents have no fetch tools, so "go figure out what's relevant" is a fetch-then-paste violation waiting to happen.
 
-If the task is "figure out what I even need to look at" — the shape is iterative: fetch → read → decide what to fetch next based on what you just read → repeat. Subagents have no fetch tools (see above), so telling one to "go figure out what's relevant" is an instant fetch-then-paste violation waiting to happen — it can't iterate on live data itself.
-
-**The test:** do you already know the bounded, fixed set of sources (specific URLs, specific files, specific query results)? If yes → fetch them yourself, paste in, dispatch subagents to synthesize/compare in parallel (the normal fetch-then-paste flow above). If no — you're still discovering what's even out there — that discovery phase MUST stay inline, sequential, in the parent window, until it converges to a concrete bounded scope. Only THEN does dispatch become legal.
-
-Same principle applies to the async Orchestrator/Executor lever (rule 267) — exploratory/open-ended discovery can't be offloaded there either, for the identical reason (no mid-chain feedback channel to redirect based on what was found).
+**The test:** do you already know the bounded, fixed set of sources? If yes → fetch them, paste in, dispatch to synthesize in parallel. If no → that discovery phase stays inline and sequential in the parent window until it converges to a concrete scope. Only THEN is dispatch legal. Same applies to the async Orchestrator/Executor lever (rule 267), for the identical reason.
 
 ## Self-check
 
 
 Before any non-`use_subagents` tool early in a task: is this task single-step (one lookup, one check)? If no → dispatch subagents. If halfway through `attempt_completion` on a multi-step task I never dispatched a subagent for → abandon, dispatch.
-
-## Reversal
-
-Revert this section. cline-handoff-relay syncs to Artemis hourly.
 
 ## Source incidents
 

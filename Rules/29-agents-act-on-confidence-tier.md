@@ -6,7 +6,11 @@ Permanent hardfloor rule. v3 (2026-06-25) trims v2's 28KB of case law to the cor
 
 **Before you route a case to a human OR list anything as an "open thread" in a pickup prompt, ask: "Can I do this right now with a tool I have?" If YES → DO IT. Do not list it. Do not route it.** This gate fires BEFORE any other consideration. The default is action. Inaction is the deviation that needs justification.
 
-**The 2-second test:** scan every candidate "open thread" or "route to human" item. For each: do I have a tool (update_ticket, add_ticket_comment, create_idea, ssh_command, fix_moodle_enrollment, SQL write, safe_deploy, etc.) that performs this action? If yes → it is NOT an open thread. It is undone work. Do it now.
+**The 2-second test:** scan every candidate "open thread" or "route to human" item. For each: do I have a tool (update_ticket, add_ticket_comment, ssh_command, fix_moodle_enrollment, SQL write, safe_deploy, write_server_file, etc.) that performs THE ACTUAL WORK? If yes → it is NOT an open thread. It is undone work. Do it now.
+
+**`create_idea` is NOT an action that satisfies this gate.** Filing an idea is *recording* the work, not *doing* it. An idea filed for work you had the tools to finish this session is a rule-29 violation that PASSES every downstream gate (rule 91's bare-number scan, rule 267's reconcile, `clinerules_validate_completion`) because those gates only verify that an idea number EXISTS, never whether it should have existed. That makes it the most dangerous shape of inaction: it looks like compliance. See rule 208 STEP 0.
+
+**Before ANY `create_idea` call, name the blocker** that stops you doing it right now: a missing tool, a human-policy gate (money over cap / regulator / irreversible), a genuinely multi-session scope, or an exhausted budget. If you cannot name one, cancel the call and do the work. **The tell:** if your idea description contains a specific implementation plan naming the files and queries, you had enough to execute it.
 
 ## The principle
 
@@ -43,9 +47,9 @@ Before EVERY `attempt_completion` on fleet/llm/orchestrator/multi-system tasks, 
 1. Prior handoff claims checked against live state?
 2. Rule violations from this/ prior chain surfaced (not buried)?
 3. All "filed at proposed" ideas promoted to autonomous tier per rule 38?
-4. All "in flight" items verified picked up (not snoozed) — via a rule-267 GATE B reconcile call (`list_decisions` / `get_idea_progress`) returning the LIVE executor state, NOT a filing-time memory?
-5. **Every filed idea's disposition tag in the rule-91 pickup prompt reflects the verified live executor state** (deployed / executing / queued / blocked) — NOT the filing action? `[approved:autonomous]` in a final prompt = audit FAIL (ambiguous between "executing" and "queued").
-5b. **TAG-SCAN audit:** does the ENTIRE `result` (not just the pickup prompt block) contain ANY bare `#NNNN` without a disposition bracket? If yes → audit FAIL — the agent shipped a raw idea number Ruben cannot interpret. Tag every bare number before shipping. The rule-91 context-scan (primary gate — scan result text directly in context, no subprocess) catches these mechanically — run it before `attempt_completion`. A bare `#17537` in a "Where we left off" prose paragraph is exactly this violation. Python/grep/awk subprocesses are unreliable on this host and should NOT be the primary check (systemic FD issue, idea #17619 [deployed]).
+4. All "in flight" items verified picked up (not snoozed) — via a rule-267 GATE B reconcile call returning the LIVE executor state, NOT a filing-time memory?
+5. **Every filed idea's disposition tag reflects the verified live executor state** — NOT the filing action? `[approved:autonomous]` in a final prompt = audit FAIL.
+5b. **TAG-SCAN audit:** does the ENTIRE `result` contain ANY bare `#NNNN` without a disposition bracket? If yes → audit FAIL. Tag every bare number before shipping (rule-91 context-scan is the mechanical enforcer).
 6. Config changes verified to change PRODUCTION behavior (re-run failing case end-to-end, not grep)?
 7. Low-call / decorative findings traced to WHY?
 8. Dollar figures checked against ≥7-day trend?
@@ -62,9 +66,7 @@ The rule-91 PICKUP PROMPT is NOT a parking lot. If an "open thread" item is a re
 
 **A "server busy" / gateway-timeout / 502-503-504 / stream-dropped condition is infrastructure noise, not a fact the end-user needs to hear.** Any customer-facing agent or tool (Argus, CFA email/chat/SMS/voice) that surfaces a message like "the server was busy and could not answer, press Send to try again" WITHOUT first attempting automatic retries through the frankenstein-llm spill ladder is committing a rule-29 violation — it is choosing to make the human do the retry work the system should do itself.
 
-**The gate:** before ANY user-facing error/failure message ships, ask: "Did the system retry through the spill ladder first?" If no → this is not a real failure yet, it's an untried recovery path. Wire the retry (2-3 attempts against frankenstein-llm's local-first ladder, short backoff) BEFORE ever telling the user. If retries are exhausted, the fallback message must never dead-end the interaction — requeue the original request and tell the user work is continuing in the background, not that they must manually resend.
-
-**Source incident:** 2026-07-23 — Argus terminal (`argus_download.php`, `argus-chrome/sidebar.js`) showed "The server was busy reloading and could not answer right now... press Send to try again" on any stream failure or non-retryable gateway error, with zero automatic recovery attempt on that failure class. Ruben live-reproduced it and called it out directly: "The user doesn't need to know the server is busy as an excuse not to do something either... I already explained how this is supposed to work." Fixed same-session via a macro-retry wrapper (3 auto-retries before ever showing a message, then a non-dead-end "still working in background" fallback that requeues the request) — see idea #18806.
+**The gate:** before ANY user-facing error/failure message ships, ask: "Did the system retry through the spill ladder first?" If no → this is not a real failure yet, it's an untried recovery path. Wire the retry (2-3 attempts against frankenstein-llm's local-first ladder, short backoff) BEFORE ever telling the user. If retries are exhausted, the fallback message must never dead-end the interaction — requeue the original request and tell the user work is continuing in the background, not that they must manually resend. Source incident + fix: `Rules-archive/29-case-law.md` (2026-07-23 Argus, idea #18806).
 
 ## Alternative-path discipline (failed access = try next path, never ask)
 

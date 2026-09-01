@@ -1,0 +1,475 @@
+#!/usr/bin/env node
+"use strict";
+/**
+ * clinerules-mcp — On-demand .clinerules lookup MCP
+ * =================================================
+ *
+ * Replaces loading all 118 .clinerules into every Cline task's system prompt
+ * (~972KB / ~243K tokens, ~$3.65/task at Opus pricing). With this MCP +
+ * a fail-safe _INDEX.md, Cline fetches rules on demand via clinerules_lookup.
+ *
+ * Architecture: stdio MCP wrapped by supergateway → streamableHttp on port 7860.
+ * Source of truth: ~/Documents/Cline/Rules/*.md (untouched).
+ * Index: SQLite + FTS5 at ~/.clinerules-mcp/index.sqlite (rebuilt on startup).
+ *
+ * Phase 1 tools shipped here:
+ *   - clinerules_lookup(rule_id | slug | filename)
+ *   - clinerules_search(query, limit?)
+ *   - clinerules_list_by_topic(topic)
+ *   - clinerules_record_violation(rule_id, task_id, evidence)
+ *   - clinerules_reindex()
+ *
+ * Per orchestrator_idea #5344 (P0, approved).
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, m) {
+    Object.defineProperty(o, "default", { enumerable: true, value: m });
+}) : function(o, m) {
+    o["default"] = m;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return o;
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const mcp_js_1 = require("@modelcontextprotocol/sdk/server/mcp.js");
+const stdio_js_1 = require("@modelcontextprotocol/sdk/server/stdio.js");
+const zod_1 = require("zod");
+const better_sqlite3_1 = __importDefault(require("better-sqlite3"));
+const fs = __importStar(require("fs"));
+const path = __importStar(require("path"));
+const os = __importStar(require("os"));
+// ─── Configuration ──────────────────────────────────────────────────────────
+const HOME = os.homedir();
+const RULES_DIR = path.join(HOME, "Documents/Cline/Rules");
+const ARCHIVE_DIR = path.join(HOME, "Documents/Cline/Rules-archive");
+const DB_DIR = path.join(HOME, ".clinerules-mcp");
+const DB_PATH = path.join(DB_DIR, "index.sqlite");
+const VERSION = "0.1.0";
+if (!fs.existsSync(DB_DIR)) fs.mkdirSync(DB_DIR, { recursive: true });
+
+const HARDFLOOR_SLUGS = new Set([
+    "00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds",
+    "01-voice-and-persona",
+    "02-no-apologies-in-student-emails",
+    "29-agents-act-on-confidence-tier",
+    "38-ruben-asks-equals-autonomous-or-shipped",
+    "41-post-deploy-call-the-tool-do-not-narrate",
+    "91-every-completion-needs-pickup-prompt",
+    "92-work-at-the-core-not-bandaids",
+    "99-yolo-prevention-learned",
+]);
+
+function parseRuleId(filename) {
+    const base = filename.replace(/\.md$/, "");
+    const m = base.match(/^(\d+(?:-READ-FIRST-\d+)?)/);
+    if (m) return m[1];
+    return base;
+}
+function extractTitle(body, fallback) {
+    const m = body.match(/^#\s+(.+)$/m);
+    return m ? m[1].trim() : fallback;
+}
+function extractCrossRefs(body) {
+    const refs = new Set();
+    const patterns = [
+        /\.clinerules\/(\d+(?:-READ-FIRST-\d+)?)/gi,
+        /\brule[s]?\s+(\d{1,3})\b/gi,
+    ];
+    for (const re of patterns) {
+        let m;
+        while ((m = re.exec(body)) !== null) refs.add(m[1]);
+    }
+    return Array.from(refs).sort();
+}
+function hasSourceIncident(body) {
+    return /(?:source incident|## source|## last updated|^Source:)/im.test(body);
+}
+function initSchema(db) {
+    db.exec(`
+    CREATE TABLE IF NOT EXISTS rules (
+      rule_id TEXT NOT NULL, slug TEXT PRIMARY KEY, filename TEXT NOT NULL,
+      path TEXT NOT NULL, title TEXT, body TEXT, size_bytes INTEGER,
+      size_tokens_est INTEGER, cross_refs TEXT, last_updated TEXT,
+      has_source_incident INTEGER DEFAULT 0, is_hardfloor INTEGER DEFAULT 0, mtime INTEGER
+    );
+    CREATE INDEX IF NOT EXISTS idx_rules_rule_id ON rules(rule_id);
+    CREATE INDEX IF NOT EXISTS idx_rules_hardfloor ON rules(is_hardfloor);
+    CREATE VIRTUAL TABLE IF NOT EXISTS rules_fts USING fts5(
+      slug UNINDEXED, title, body, tokenize = 'porter unicode61'
+    );
+    CREATE TABLE IF NOT EXISTS violations (
+      id INTEGER PRIMARY KEY AUTOINCREMENT, rule_id TEXT NOT NULL, task_id TEXT,
+      evidence TEXT, recorded_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+    );
+    CREATE INDEX IF NOT EXISTS idx_violations_rule ON violations(rule_id);
+    CREATE TABLE IF NOT EXISTS lookups (
+      id INTEGER PRIMARY KEY AUTOINCREMENT, rule_id TEXT, slug TEXT, query TEXT,
+      via TEXT, task_id TEXT, looked_up_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now'))
+    );
+    CREATE TABLE IF NOT EXISTS meta (k TEXT PRIMARY KEY, v TEXT);
+  `);
+}
+function reindex(db, verbose) {
+    if (verbose === void 0) { verbose = false; }
+    const collected = [];
+    const walk = function (dir) {
+        if (!fs.existsSync(dir)) return;
+        for (var _i = 0, _a = fs.readdirSync(dir).sort(); _i < _a.length; _i++) {
+            var f = _a[_i];
+            if (!f.endsWith(".md")) continue;
+            collected.push({ full: path.join(dir, f), filename: f });
+        }
+    };
+    walk(RULES_DIR);
+    walk(ARCHIVE_DIR);
+    var seen = new Set();
+    var files = collected.filter(function (c) {
+        var slug = c.filename.replace(/\.md$/, "");
+        if (seen.has(slug)) return false;
+        seen.add(slug);
+        return true;
+    });
+    var tx = db.transaction(function () {
+        db.exec("DELETE FROM rules; DELETE FROM rules_fts;");
+        var ins = db.prepare("\n      INSERT INTO rules (\n        rule_id, slug, filename, path, title, body,\n        size_bytes, size_tokens_est, cross_refs, last_updated,\n        has_source_incident, is_hardfloor, mtime\n      ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)\n    ");
+        var insFts = db.prepare("INSERT INTO rules_fts (slug, title, body) VALUES (?,?,?)");
+        for (var _i = 0, files_1 = files; _i < files_1.length; _i++) {
+            var _a = files_1[_i], full = _a.full, f = _a.filename;
+            var stat = fs.statSync(full);
+            var body = fs.readFileSync(full, "utf-8");
+            var slug = f.replace(/\.md$/, "");
+            var rule_id = parseRuleId(f);
+            var title = extractTitle(body, slug);
+            var refs = extractCrossRefs(body);
+            var sizeBytes = stat.size;
+            var sizeTokens = Math.ceil(body.length / 4);
+            var hasSrc = hasSourceIncident(body) ? 1 : 0;
+            var isHf = HARDFLOOR_SLUGS.has(slug) ? 1 : 0;
+            var lastUpdMatch = body.match(/##\s+(?:last\s+updated|Last\s+updated)\s*\n+\s*([\d-]+)/i);
+            var lastUpd = lastUpdMatch ? lastUpdMatch[1] : "";
+            ins.run(rule_id, slug, f, full, title, body, sizeBytes, sizeTokens, JSON.stringify(refs), lastUpd, hasSrc, isHf, Math.floor(stat.mtimeMs));
+            insFts.run(slug, title, body);
+        }
+        db.prepare("INSERT OR REPLACE INTO meta (k,v) VALUES (?,?)").run("last_reindex", new Date().toISOString());
+        db.prepare("INSERT OR REPLACE INTO meta (k,v) VALUES (?,?)").run("last_reindex_ts", String(Date.now()));
+        db.prepare("INSERT OR REPLACE INTO meta (k,v) VALUES (?,?)").run("version", VERSION);
+    });
+    tx();
+    try { db.pragma("wal_checkpoint(PASSIVE)"); } catch (_a) { }
+    var stats = db.prepare("\n    SELECT COUNT(*) AS n, COALESCE(SUM(size_bytes),0) AS total_bytes,\n           COALESCE(SUM(size_tokens_est),0) AS total_tokens,\n           COALESCE(SUM(is_hardfloor),0) AS hardfloor_count\n    FROM rules\n  ").get();
+    if (verbose) {
+        console.error("[clinerules-mcp] reindexed " + stats.n + " rules, " + stats.total_bytes + " bytes, ~" + stats.total_tokens + " tokens, " + stats.hardfloor_count + " hardfloor");
+    }
+    return {
+        count: stats.n,
+        total_bytes: stats.total_bytes,
+        total_tokens: stats.total_tokens,
+        hardfloor_count: stats.hardfloor_count,
+    };
+}
+process.stdin.on("error", function (e) {
+    console.error("[clinerules-mcp] stdin error (swallowed): " + (e === null || e === void 0 ? void 0 : e.code || e === null || e === void 0 ? void 0 : e.message));
+});
+process.stdout.on("error", function (e) {
+    console.error("[clinerules-mcp] stdout error (swallowed): " + (e === null || e === void 0 ? void 0 : e.code || e === null || e === void 0 ? void 0 : e.message));
+});
+process.on("uncaughtException", function (e) {
+    console.error("[clinerules-mcp] uncaughtException (swallowed): " + (e === null || e === void 0 ? void 0 : e.message || e));
+});
+process.on("unhandledRejection", function (e) {
+    console.error("[clinerules-mcp] unhandledRejection (swallowed): " + (e === null || e === void 0 ? void 0 : e.message || e));
+});
+var db = new better_sqlite3_1.default(DB_PATH);
+db.pragma("journal_mode = WAL");
+db.pragma("busy_timeout = 5000");
+db.pragma("wal_autocheckpoint = 500");
+initSchema(db);
+
+function needsReindex() {
+    var newestMtime = 0;
+    for (var _i = 0, _a = [RULES_DIR, ARCHIVE_DIR]; _i < _a.length; _i++) {
+        var dir = _a[_i];
+        if (!fs.existsSync(dir)) continue;
+        for (var _b = 0, _c = fs.readdirSync(dir); _b < _c.length; _b++) {
+            var f = _c[_b];
+            if (!f.endsWith(".md")) continue;
+            try {
+                var st = fs.statSync(path.join(dir, f));
+                if (st.mtimeMs > newestMtime) newestMtime = st.mtimeMs;
+            }
+            catch (_d) { }
+        }
+    }
+    var row = db.prepare("SELECT v FROM meta WHERE k = 'last_reindex_ts'").get();
+    var lastTs = row !== null && row !== void 0 ? row.v : 0;
+    if (typeof lastTs === 'string') lastTs = parseInt(lastTs, 10);
+    return newestMtime > lastTs;
+}
+if (process.argv.includes("--reindex-only")) {
+    var stats = reindex(db, true);
+    console.error(JSON.stringify({ ok: true, stats: stats }, null, 2));
+    process.exit(0);
+}
+var stats = { count: 0, total_bytes: 0, total_tokens: 0, hardfloor_count: 0 };
+var server = new mcp_js_1.McpServer({ name: "clinerules-mcp", version: VERSION });
+
+function logLookup(rule_id, slug, query, via, task_id) {
+    try {
+        db.prepare("INSERT INTO lookups (rule_id, slug, query, via, task_id) VALUES (?,?,?,?,?)").run(rule_id, slug, query, via, task_id || null);
+    }
+    catch (_a) { }
+}
+function violationCount(rule_id) {
+    var r = db.prepare("SELECT COUNT(*) AS n FROM violations WHERE rule_id = ?").get(rule_id);
+    return r.n;
+}
+function findRule(query) {
+    var q = query.trim();
+    var r = db.prepare("SELECT * FROM rules WHERE slug = ?").get(q);
+    if (r) return r;
+    r = db.prepare("SELECT * FROM rules WHERE rule_id = ?").get(q);
+    if (r) return r;
+    if (/^\d+$/.test(q)) {
+        var n = parseInt(q, 10);
+        var padded2 = n.toString().padStart(2, "0");
+        r = db.prepare("SELECT * FROM rules WHERE rule_id = ? OR slug LIKE ? OR slug LIKE ? LIMIT 1").get(n.toString(), padded2 + "-%", n + "-%");
+        if (r) return r;
+    }
+    r = db.prepare("SELECT * FROM rules WHERE filename = ?").get(q);
+    if (r) return r;
+    r = db.prepare("SELECT * FROM rules WHERE slug LIKE ? ORDER BY slug LIMIT 1").get(q + "%");
+    if (r) return r;
+    return null;
+}
+// ─── Tools ─────────────────────────────────────────────────────────────────
+server.tool("clinerules_lookup", "Fetch the full body of a single .clinerules file by rule_id, slug, or filename.", {
+    rule_id: zod_1.z.string().describe("Rule ID, slug, or filename."),
+    task_id: zod_1.z.string().optional().describe("Optional Cline task ID for audit."),
+}, async function (_a) {
+    var rule_id = _a.rule_id, task_id = _a.task_id;
+    var row = findRule(rule_id);
+    if (!row) {
+        logLookup(null, null, rule_id, "lookup_miss", task_id);
+        return { content: [{ type: "text", text: "No rule found matching '" + rule_id + "'. Try clinerules_search('" + rule_id + "') or read ~/Documents/Cline/Rules/_INDEX.md." }] };
+    }
+    logLookup(row.rule_id, row.slug, rule_id, "lookup_hit", task_id);
+    var vc = violationCount(row.rule_id);
+    var refs = JSON.parse(row.cross_refs || "[]");
+    var header = "📖 Rule " + row.rule_id + " — " + row.title + "\nSlug: " + row.slug + "\nSize: " + row.size_bytes + " bytes (~" + row.size_tokens_est + " tokens) · Hardfloor: " + (row.is_hardfloor ? "yes" : "no") + " · Source incident: " + (row.has_source_incident ? "yes" : "no") + " · Violations recorded: " + vc + "\n" + (refs.length ? "Cross-refs: " + refs.map(function (r) { return ".clinerules/" + r; }).join(", ") : "Cross-refs: (none parsed)") + "\n\n──── BODY ────\n";
+    return { content: [{ type: "text", text: header + row.body }] };
+});
+server.tool("clinerules_search", "Full-text search across all .clinerules bodies.", {
+    query: zod_1.z.string().describe("Search query."),
+    limit: zod_1.z.number().int().min(1).max(20).default(5),
+    task_id: zod_1.z.string().optional(),
+}, async function (_a) {
+    var query = _a.query, limit = _a.limit, task_id = _a.task_id;
+    var safe = query.replace(/["']/g, " ").replace(/[^\w\s\-]/g, " ").trim();
+    if (!safe) return { content: [{ type: "text", text: "Empty/unsupported query: '" + query + "'." }] };
+    var rows;
+    try {
+        rows = db.prepare("\n      SELECT r.rule_id, r.slug, r.title, r.size_tokens_est, r.is_hardfloor,\n             snippet(rules_fts, 2, '\u00AB', '\u00BB', '\u2026', 24) AS snippet,\n             bm25(rules_fts) AS score\n      FROM rules_fts\n      JOIN rules r ON r.slug = rules_fts.slug\n      WHERE rules_fts MATCH ?\n      ORDER BY score\n      LIMIT ?\n    ").all(safe, limit);
+    }
+    catch (e) {
+        return { content: [{ type: "text", text: "Search error: " + e.message + ". Try simpler keywords." }] };
+    }
+    logLookup(null, null, query, "search", task_id);
+    if (!rows.length) return { content: [{ type: "text", text: "No matches for '" + query + "'. Browse ~/Documents/Cline/Rules/_INDEX.md." }] };
+    var out = ["🔎 " + rows.length + " match(es) for '" + query + "':", ""];
+    for (var _i = 0, rows_1 = rows; _i < rows_1.length; _i++) {
+        var r = rows_1[_i];
+        out.push("• Rule " + r.rule_id + " — " + r.title + "  (~" + r.size_tokens_est + " tokens" + (r.is_hardfloor ? ", hardfloor" : "") + ")");
+        out.push("  slug: " + r.slug);
+        out.push("  " + r.snippet.replace(/\s+/g, " ").trim());
+        out.push("");
+    }
+    out.push("Use clinerules_lookup(rule_id='<id>') to fetch the full body.");
+    return { content: [{ type: "text", text: out.join("\n") }] };
+});
+server.tool("clinerules_list_by_topic", "List rules matching a topic keyword with 1-line summary.", {
+    topic: zod_1.z.string().describe("Topic keyword."),
+    limit: zod_1.z.number().int().min(1).max(50).default(15),
+}, async function (_a) {
+    var topic = _a.topic, limit = _a.limit;
+    var t = "%" + topic.replace(/[%_]/g, "") + "%";
+    var rows = db.prepare("\n      SELECT rule_id, slug, title, size_tokens_est, is_hardfloor, SUBSTR(body, 1, 200) AS preview\n      FROM rules\n      WHERE title LIKE ? OR slug LIKE ? OR SUBSTR(body, 1, 500) LIKE ?\n      ORDER BY is_hardfloor DESC, CAST(rule_id AS INTEGER), slug\n      LIMIT ?\n    ").all(t, t, t, limit);
+    if (!rows.length) return { content: [{ type: "text", text: "No rules matching topic '" + topic + "'." }] };
+    var out = ["📚 " + rows.length + " rule(s) matching topic '" + topic + "':", ""];
+    for (var _i = 0, rows_2 = rows; _i < rows_2.length; _i++) {
+        var r = rows_2[_i];
+        var star = r.is_hardfloor ? "★" : " ";
+        var preview = (r.preview || "").replace(/\s+/g, " ").trim().slice(0, 100);
+        out.push(star + " Rule " + r.rule_id + " — " + r.title + " (~" + r.size_tokens_est + "t)");
+        out.push("    " + preview + "…");
+    }
+    out.push("");
+    out.push("★ = hardfloor. Use clinerules_lookup() for full body.");
+    return { content: [{ type: "text", text: out.join("\n") }] };
+});
+server.tool("clinerules_record_violation", "Record a .clinerules violation instance.", {
+    rule_id: zod_1.z.string().describe("Rule ID or slug."),
+    task_id: zod_1.z.string().describe("Cline task ID."),
+    evidence: zod_1.z.string().describe("Brief evidence text."),
+}, async function (_a) {
+    var rule_id = _a.rule_id, task_id = _a.task_id, evidence = _a.evidence;
+    var row = findRule(rule_id);
+    var resolvedId = row ? row.rule_id : rule_id;
+    db.prepare("INSERT INTO violations (rule_id, task_id, evidence) VALUES (?,?,?)").run(resolvedId, task_id, evidence);
+    var total = violationCount(resolvedId);
+    return { content: [{ type: "text", text: "✓ Recorded violation of rule " + resolvedId + " for task " + task_id + ". Total violations: " + total + "." }] };
+});
+server.tool("clinerules_reindex", "Rebuild the SQLite + FTS5 index from ~/Documents/Cline/Rules/. Idempotent.", {}, async function () {
+    var s = reindex(db, false);
+    return { content: [{ type: "text", text: "✓ Reindexed: " + s.count + " rules, " + s.total_bytes + " bytes, ~" + s.total_tokens + " tokens, " + s.hardfloor_count + " hardfloor." }] };
+});
+
+server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224): Validates that a pending attempt_completion result complies with rule 91 (PICKUP PROMPT block required). Call BEFORE attempt_completion. Returns pass/fail with specific violations.", {
+    result_text: zod_1.z.string().describe("The result text you plan to pass to attempt_completion."),
+    task_id: zod_1.z.string().optional().describe("Optional Cline task ID for audit."),
+}, async function (_a) {
+    var result_text = _a.result_text, task_id = _a.task_id;
+    var failures = [];
+    var DIVIDER_LEN = 47;
+    var DIVIDER_GLYPH = String.fromCodePoint(0x2550);
+    var lines = result_text.split("\n");
+    var isFullDivider = function (s) {
+        var t = s.trimEnd();
+        return t.length === DIVIDER_LEN && new RegExp("^" + DIVIDER_GLYPH + "+$").test(t);
+    };
+    var dividerIndices = [];
+    for (var i = 0; i < lines.length; i++) {
+        if (isFullDivider(lines[i])) {
+            dividerIndices.push(i);
+            var stripped = lines[i].trimEnd();
+            for (var _i = 0, stripped_1 = stripped; _i < stripped_1.length; _i++) {
+                var ch = stripped_1[_i];
+                if (ch.codePointAt(0) !== 0x2550) {
+                    failures.push("DIVIDER_WRONG_GLYPH: line " + (i + 1) + " uses wrong character (U+" + ch.codePointAt(0).toString(16) + ") instead of U+2550.");
+                    break;
+                }
+            }
+        }
+        else {
+            var stripped = lines[i].trimEnd();
+            if (stripped.length > 20 && new RegExp("^" + DIVIDER_GLYPH + "+$").test(stripped)) {
+                failures.push("DIVIDER_WRONG_LENGTH: line " + (i + 1) + " divider is " + stripped.length + " chars, must be exactly 47 chars of U+2550.");
+            }
+        }
+    }
+    var pickupHeaderIdx = (function () {
+        for (var _i = 0, dividerIndices_1 = dividerIndices; _i < dividerIndices_1.length; _i++) {
+            var di = dividerIndices_1[_i];
+            var hdrIdx = di + 1;
+            if (hdrIdx < lines.length) {
+                var hdr = lines[hdrIdx].trim();
+                if (/^PICKUP PROMPT\b/i.test(hdr)) return hdrIdx;
+            }
+        }
+        return -1;
+    })();
+    var hasBlock = pickupHeaderIdx !== -1 && dividerIndices.length >= 2;
+    if (!hasBlock) {
+        failures.push("MISSING_PICKUP_PROMPT: result text does not contain a structurally-valid PICKUP PROMPT block.");
+    }
+    var pickupBlock = "";
+    if (dividerIndices.length === 0) {
+        failures.push("DIVIDER_MISSING: no valid 47-char U+2550 divider lines found.");
+    }
+    else if (dividerIndices.length < 2) {
+        failures.push("DIVIDER_UNPAIRED: only " + dividerIndices.length + " divider(s) found.");
+    }
+    else {
+        pickupBlock = lines.slice(dividerIndices[0], dividerIndices[dividerIndices.length - 1] + 1).join("\n");
+    }
+    if (/#NNNN|#0000|#XXXX|<task_id>|<timestamp\s*PT>/i.test(pickupBlock)) {
+        failures.push("PLACEHOLDER_DETECTED: literal placeholder token found in pickup prompt.");
+    }
+    if (pickupBlock) {
+        var taskLineMatch = pickupBlock.match(/^Pick up task\b[^\n]*$/im);
+        if (taskLineMatch) {
+            if (!/#\d+/.test(taskLineMatch[0])) {
+                failures.push("MISSING_TASK_ID: 'Pick up task' line has no #<numeric id>.");
+            }
+        }
+        else {
+            failures.push("MISSING_TASK_LINE: no 'Pick up task ...' line found.");
+        }
+    }
+    if (/see\s+handoff\s+file/i.test(pickupBlock)) failures.push("PICKUP_BY_REFERENCE: 'see handoff file' detected.");
+    if (/hold\s+until\s+Ruben\s+confirms|wait\s+before\s+acting|pause\s+until|ask\s+first\s+if/i.test(pickupBlock)) failures.push("R91_WAIT_STATE: forbidden wait-state language.");
+    if (/(?:I.ll|I will)\s+(?:mention this|raise this|flag this)\s+and\s+Ruben\s+(?:decides|can decide|will decide)/i.test(result_text)) failures.push("R29_DECISION_QUEUE: 'I'll mention this and Ruben decides'.");
+    if (/(?:the\s+)?(?:fleet|executor|orchestrator|cron)\s+(?:agent\s+)?(?:will|should|can)\s+(?:handle|do|pick\s+up|take\s+care\s+of)\s+(?:it|this|that)/i.test(pickupBlock)) failures.push("R29_DEFER_TO_SYSTEM.");
+    if (/(?:wait\s+for|let)\s+(?:the\s+)?(?:other|parallel|sibling)\s+(?:Cline|agent)\s+(?:window|session)s?/i.test(pickupBlock)) failures.push("R29_PARALLEL_WAIT.");
+    if (/(?:due\s+to|given|because\s+of|owing\s+to)\s+(?:the\s+)?(?:context|token)\s+(?:constraints?|limitations?|window|size|budget)/i.test(result_text)) failures.push("R120_CONTEXT_EXCUSE.");
+    if (/(?:to\s+conserve|to\s+save|preserving|conserving)\s+(?:context|tokens)/i.test(result_text)) failures.push("R120_CONTEXT_EXCUSE: 'conserving context'.");
+    var looksLikeOps = /\b(?:student|ticket|Jon|Vicky|Moodle|QB|Authnet|externship|NREMT|class|section|instructor|enrollment)\b/i.test(result_text);
+    if (looksLikeOps) {
+        if (/\u2014|\u2015|\u2e3a|\u2e3b/.test(result_text)) failures.push("R01_EM_DASH: em dashes in ops text.");
+        if (/\b(?:the\s+)?(?:finance|tech|support|dev)\s+(?:department|team)\b/i.test(result_text)) failures.push("R01_FAKE_DEPARTMENT.");
+    }
+    var looksLikeStudent = /\b(?:Hi|Hello|Dear)\b.*\b(?:student|EMS)/i.test(result_text) || /\b(?:your\s+course|your\s+grade|your\s+exam|your\s+enrollment|your\s+deadline)\b/i.test(result_text);
+    if (looksLikeStudent) {
+        if (/(?:I(?:.m|\s+am)|we\s+are|we.re)\s+(?:sorry|very\s+sorry)/i.test(result_text)) failures.push("R02_APOLOGY: 'sorry'.");
+        if (/(?:I|we)\s+apologi[sz]e/i.test(result_text)) failures.push("R02_APOLOGY: 'apologize'.");
+    }
+    var pass = failures.length === 0;
+    try {
+        db.prepare("INSERT INTO violations (rule_id, task_id, evidence) VALUES (?,?,?)").run("91", task_id || "unknown", pass ? "VALIDATION_PASS" : "VALIDATION_FAIL: " + failures.join("; "));
+    }
+    catch (_b) { }
+    // ── STRUCTURAL GATE (idea #20251): write/delete gate file ──
+    var gateFile = path.join(os.tmpdir(), task_id ? "clinerules_completion_gate_BLOCKED_" + task_id : "clinerules_completion_gate_BLOCKED");
+    try {
+        if (pass) {
+            if (fs.existsSync(gateFile)) fs.unlinkSync(gateFile);
+        }
+        else {
+            fs.writeFileSync(gateFile, JSON.stringify({ blocked: true, task_id: task_id || "unknown", failures: failures, timestamp: new Date().toISOString(), message: "attempt_completion is BLOCKED. Fix the failures below and re-validate." }, null, 2));
+        }
+    }
+    catch (e) {
+        if (!pass) failures.push("GATE_FILE_WRITE_FAILED: " + e.message);
+    }
+    if (pass) {
+        return { content: [{ type: "text", text: "✅ RULE 91 GATES: ALL PASSED\n\nDivider: 47 U+2550 chars ✓\nPickup prompt present ✓\nNo placeholders ✓\nNo pickup-by-reference ✓\nNo wait-state phrases ✓\n\nSafe to call attempt_completion." }] };
+    }
+    return { content: [{ type: "text", text: "❌ RULE 91 GATES: " + failures.length + " FAILURE(S)\n\n" + failures.map(function (f, i) { return (i + 1) + ". " + f; }).join("\n") + "\n\nGate file written: " + gateFile + "\nFix these before calling attempt_completion. The gate file MUST NOT exist when you call attempt_completion.\n\nRun clinerules_check_gate after fixing to confirm the gate is clear." }] };
+});
+
+server.tool("clinerules_check_gate", "PRE-COMPLETION GATE CHECK (idea #20251): Checks if a validation gate file exists that would block attempt_completion. MUST be called right before attempt_completion after clinerules_validate_completion returns ALL PASSED. If the gate file exists, attempt_completion is BLOCKED -- you must fix failures and re-validate. If no gate file, it is safe to proceed.", {
+    task_id: zod_1.z.string().describe("The Cline task ID to check for a gate file."),
+}, async function (_a) {
+    var task_id = _a.task_id;
+    var gateFile = path.join(os.tmpdir(), task_id ? "clinerules_completion_gate_BLOCKED_" + task_id : "clinerules_completion_gate_BLOCKED");
+    try {
+        if (fs.existsSync(gateFile)) {
+            var raw = fs.readFileSync(gateFile, 'utf-8');
+            var data = JSON.parse(raw);
+            return { content: [{ type: "text", text: "❌ RULE 91 GATE BLOCKED: Gate file exists at " + gateFile + "\nTask ID: " + data.task_id + "\nFailures: " + (data.failures || []).join("; ") + "\

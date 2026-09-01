@@ -29,21 +29,34 @@ LOG="/tmp/cline_rules_audit.log"
 QUIET="${1:-}"
 TIMESTAMP=$(date '+%Y-%m-%dT%H:%M:%S%z')
 
-# Hardfloor slugs (must match .pre-write-lint.sh HARDFLOOR_SLUGS exactly)
-HARDFLOOR_SLUGS=(
-    "00-READ-FIRST-17-force-subagent-use-on-research-and-multi-step-builds"
-    "01-voice-and-persona"
-    "02-no-apologies-in-student-emails"
-    "29-agents-act-on-confidence-tier"
-    "41-post-deploy-call-the-tool-do-not-narrate"
-    "91-every-completion-needs-pickup-prompt"
-    "119-mandatory-context-compress"
-    "120-context-is-not-an-excuse"
-    "143-prose-loop-circuit-breaker"
-    "144-no-write-to-file-on-server-paths"
-)
-# Meta files allowed in Rules/ (must match .pre-write-lint.sh META_FILES exactly)
-META_FILES=("_INDEX" "_RULE_TREE" "EXECUTE_ORDER_66" "99-yolo-prevention-learned")
+# ----------------------------------------------------------------------
+# HARDFLOOR_SLUGS + META_FILES — READ FROM THE GENERATED MANIFEST (idea #25151)
+# ----------------------------------------------------------------------
+# 2026-08-08 RCA: this script used to carry its OWN hardcoded copy of the list,
+# the FOURTH copy alongside clinerules-mcp/src/index.ts, .pre-write-lint.sh, and
+# the Rules/ dir itself. Its copy was the stalest (10 rules while 20 were on disk),
+# so A4 "drift" fired on legitimate hardfloor rules as false positives while the
+# REAL divergence (the MCP registry reporting 9 hardfloor rules) went undetected
+# for ~2 weeks. An auditor holding its own stale copy of the thing it audits can
+# only ever compare the directory to itself. It now reads the same manifest every
+# other consumer reads, and A7 below does the actual cross-source comparison.
+MANIFEST="${RULES_DIR}/.hardfloor-manifest"
+SYNC_SCRIPT="$HOME/Documents/Cline/scripts/sync_hardfloor_manifest.sh"
+[ -x "$SYNC_SCRIPT" ] && "$SYNC_SCRIPT" --quiet >/dev/null 2>&1
+
+read_manifest_section() {
+    [ -f "$MANIFEST" ] || return 0
+    awk -v want="[$1]" '
+        /^\[/ { insec = ($0 == want); next }
+        insec && NF && $0 !~ /^#/ { print }
+    ' "$MANIFEST"
+}
+
+HARDFLOOR_SLUGS=()
+while IFS= read -r line; do [ -n "$line" ] && HARDFLOOR_SLUGS+=("$line"); done < <(read_manifest_section hardfloor)
+META_FILES=()
+while IFS= read -r line; do [ -n "$line" ] && META_FILES+=("$line"); done < <(read_manifest_section meta)
+
 
 ALERTS=()
 
@@ -66,11 +79,12 @@ if [ -f "$LINT" ]; then
     done < <(ls "$RULES_DIR"/*.md 2>/dev/null)
 fi
 
-# --- A1 file count ---
+# --- A1 file count (expected count derived from the manifest, not a stale constant) ---
 MD_COUNT=$(ls "$RULES_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ')
-note "A1 file-count: ${MD_COUNT} .md files in Rules/ (cap 14)"
-if [ "$MD_COUNT" -gt 14 ]; then
-    ALERTS+=("A1 file-count: ${MD_COUNT} .md files in Rules/ exceeds cap of 14 (10 hardfloor + 4 meta)")
+EXPECTED_COUNT=$(( ${#HARDFLOOR_SLUGS[@]} + ${#META_FILES[@]} ))
+note "A1 file-count: ${MD_COUNT} .md files in Rules/ (manifest expects ${EXPECTED_COUNT})"
+if [ "$MD_COUNT" -ne "$EXPECTED_COUNT" ]; then
+    ALERTS+=("A1 file-count: ${MD_COUNT} .md files in Rules/ but manifest lists ${EXPECTED_COUNT}. Re-run sync_hardfloor_manifest.sh.")
 fi
 
 # --- A2 per-rule size (G7) ---
@@ -83,16 +97,38 @@ while IFS= read -r f; do
     for mf in "${META_FILES[@]}"; do [ "$slug" = "$mf" ] && is_meta=1; done
     if [ "$is_hf" = "1" ] && [ "$bytes" -gt 12288 ]; then
         ALERTS+=("A2 G7 hard-size-cap: hardfloor rule $slug is ${bytes} bytes (>12KB)")
+    elif [ "$is_hf" = "1" ] && [ "$bytes" -gt 10240 ]; then
+        # G2b warn-early (2026-08-19, Ruben-approved): 10KB early warning gives a
+        # 2KB trim runway before the 12KB G7 block. Source: rule-317 reversal-log
+        # audit found 5 hardfloor rules between 10-16KB, all failing/near-failing G7.
+        ALERTS+=("A2b G2b warn-early: hardfloor rule $slug is ${bytes} bytes (>10KB) — trim-then-archive before it hits the 12KB G7 block")
     elif [ "$is_meta" = "1" ] && [ "$bytes" -gt 20480 ]; then
         ALERTS+=("A2 G7 hard-size-cap: meta file $slug is ${bytes} bytes (>20KB)")
     fi
 done < <(ls "$RULES_DIR"/*.md 2>/dev/null)
 
-# --- A3 total Rules/ size ---
+# --- A3 floor total (aligned to the ENFORCED G8 gate, and counting what LOADS) ---
+# Was: du -sk with a 250KB threshold that matched nothing the lint gate enforces,
+# and du counts the whole dir including dotfiles. G8 blocks at 153600 bytes of
+# non-dotfile content. An auditor whose thresholds disagree with the enforced gate
+# reports "clean" while writes are being rejected. These now match exactly.
 TOTAL_KB=$(du -sk "$RULES_DIR" 2>/dev/null | cut -f1)
-note "A3 total-size: ${TOTAL_KB} KB in Rules/ (warn 180KB, alert 250KB)"
-if [ "${TOTAL_KB:-0}" -gt 250 ]; then
-    ALERTS+=("A3 total-size: Rules/ is ${TOTAL_KB} KB (>250KB alert threshold)")
+FLOOR_BYTES=$(find "$RULES_DIR" -maxdepth 1 -type f ! -name '.*' -exec cat {} \; | wc -c | tr -d ' ')
+# 2026-08-12: the audit previously hardcoded 153600, diverging from .pre-write-lint.sh
+# which reads the .g8-floor-cap override (default 160000). An auditor that ignores the
+# override false-alerts every night after Ruben raises the cap. Match the lint gate.
+G8_CAP=160000
+[ -f "$RULES_DIR/.g8-floor-cap" ] && G8_CAP=$(tr -dc '0-9' < "$RULES_DIR/.g8-floor-cap")
+G8_WARN=$(( G8_CAP * 85 / 100 ))
+note "A3 floor-total: ${FLOOR_BYTES} bytes always-loaded (G8 warn ${G8_WARN}, block ${G8_CAP})"
+if [ "${FLOOR_BYTES:-0}" -gt "${G8_CAP}" ]; then
+    ALERTS+=("A3 floor-total: Rules/ is ${FLOOR_BYTES} bytes, PAST the G8 hard block of ${G8_CAP}. Rules/ writes are being REJECTED right now.")
+elif [ "${FLOOR_BYTES:-0}" -gt "${G8_WARN}" ]; then
+    ALERTS+=("A3 floor-total: Rules/ is ${FLOOR_BYTES} bytes (G8 warn ${G8_WARN}). Trim soon.")
+fi
+STRAY=$(find "$RULES_DIR" -maxdepth 1 -type f ! -name '.*' \( -name '*.bak*' -o -name '*~' \) 2>/dev/null | wc -l | tr -d ' ')
+if [ "${STRAY:-0}" -gt 0 ]; then
+    ALERTS+=("A3 stray-backups: ${STRAY} backup file(s) in Rules/ are injected into EVERY window. Move them to Rules-backups/.")
 fi
 
 # --- A4 HARDFLOOR_SLUGS drift (G6) ---
@@ -107,6 +143,34 @@ while IFS= read -r f; do
     fi
 done < <(ls "$RULES_DIR"/*.md 2>/dev/null)
 
+# --- A7 CROSS-SOURCE hardfloor drift (idea #25151, the check that was missing) ---
+# A4 above compares the directory against the manifest, which is derived FROM the
+# directory, so it can never catch a consumer that disagrees. THIS check compares
+# the manifest against what the MCP registry actually indexed. That divergence is
+# what went undetected for ~2 weeks: the MCP reported 9 hardfloor rules while 20
+# were on disk, so rules 119/120/143/144/259/267/161/297/99-subagent were loaded
+# into every window but flagged as not-binding.
+MCP_DB="$HOME/.clinerules-mcp/index.sqlite"
+if [ -f "$MCP_DB" ] && command -v sqlite3 >/dev/null 2>&1; then
+    MCP_HF=$(sqlite3 "$MCP_DB" "SELECT COUNT(*) FROM rules WHERE is_hardfloor=1;" 2>/dev/null || echo "ERR")
+    MANIFEST_HF=${#HARDFLOOR_SLUGS[@]}
+    note "A7 cross-source: manifest=${MANIFEST_HF} hardfloor, MCP index=${MCP_HF}"
+    if [ "$MCP_HF" != "ERR" ] && [ "${MCP_HF:-0}" -ne "$MANIFEST_HF" ]; then
+        ALERTS+=("A7 CROSS-SOURCE DRIFT: manifest lists ${MANIFEST_HF} hardfloor rules but the MCP registry indexed ${MCP_HF}. Rules are loading into every window while being reported as not-binding. Fix: node ~/Documents/Cline/mcp-servers/clinerules-mcp/build/index.js --reindex-only")
+    fi
+    # Per-slug comparison so the alert names the specific offender, not just a count.
+    for hf in "${HARDFLOOR_SLUGS[@]}"; do
+        got=$(sqlite3 "$MCP_DB" "SELECT is_hardfloor FROM rules WHERE slug='${hf}';" 2>/dev/null)
+        if [ -z "$got" ]; then
+            ALERTS+=("A7 cross-source: '${hf}' is in Rules/ but MISSING from the MCP index entirely.")
+        elif [ "$got" != "1" ]; then
+            ALERTS+=("A7 cross-source: '${hf}' is a hardfloor rule on disk but the MCP index has is_hardfloor=${got}. It loads every window but nothing treats it as binding.")
+        fi
+    done
+else
+    note "A7 cross-source: skipped (MCP index or sqlite3 unavailable)"
+fi
+
 # --- A5 rule-number collisions in archive (only real .md files) ---
 COLLISIONS=$(ls "$ARCHIVE_DIR"/*.md 2>/dev/null | xargs -n1 basename | grep -oE '^[0-9]+' | sort | uniq -d)
 if [ -n "$COLLISIONS" ]; then
@@ -119,7 +183,12 @@ note "A5 collisions: ${COLLISIONS:-none}"
 # --- A6 counter drift ---
 if [ -f "$COUNTER_FILE" ]; then
     COUNTER_VAL=$(cat "$COUNTER_FILE" 2>/dev/null | tr -d ' \n')
-    HIGHEST=$(ls "$ARCHIVE_DIR"/*.md 2>/dev/null | xargs -n1 basename | grep -oE '^[0-9]+' | sort -n | tail -1)
+    # Cap at 999: some archive files are named after IDEA ids (e.g. 16925-*.md),
+    # not rule numbers. Counting those made A6 claim the counter was "behind" by
+    # ~16,000 every night since forever, which is noise that trains you to ignore
+    # the audit. Rule numbers are 3 digits or fewer.
+    HIGHEST=$(ls "$ARCHIVE_DIR"/*.md 2>/dev/null | xargs -n1 basename | grep -oE '^[0-9]+' | awk '$1 < 1000' | sort -n | tail -1)
+
     note "A6 counter: file=${COUNTER_VAL}, highest-archive-rule=${HIGHEST:-none}"
     if [ -n "$HIGHEST" ] && [ -n "$COUNTER_VAL" ]; then
         if [ "$COUNTER_VAL" -lt "$HIGHEST" ]; then
@@ -128,6 +197,38 @@ if [ -f "$COUNTER_FILE" ]; then
     fi
 else
     ALERTS+=("A6 counter-missing: $COUNTER_FILE does not exist")
+fi
+
+# --- A7 gate telemetry (idea #25906, Ruben approved 2026-08-12) ---
+# Reads the clinerules MCP violations table (~/.clinerules-mcp/index.sqlite) so the
+# rule-91 gate's fire-rate is visible nightly WITHOUT manual queries. Every call to
+# clinerules_validate_completion logs a row (evidence contains R317_UNVERIFIED_STATE /
+# R317_REVERSAL_LOG / SELF_CONTRADICTING_DISPOSITION / MISSING_PICKUP_PROMPT, etc).
+# This makes the 24h win/loss and the top failure codes part of the routine audit.
+MCP_DB="$HOME/.clinerules-mcp/index.sqlite"
+GATE_24H=""
+GATE_PASS=""
+if [ -f "$MCP_DB" ] && command -v sqlite3 >/dev/null 2>&1; then
+    GATE_24H=$(sqlite3 "$MCP_DB" "SELECT COUNT(*) FROM violations WHERE recorded_at >= datetime('now','-1 day');" 2>/dev/null | tr -d ' ')
+    GATE_PASS=$(sqlite3 "$MCP_DB" "SELECT COUNT(*) FROM violations WHERE recorded_at >= datetime('now','-1 day') AND evidence LIKE 'VALIDATION_PASS%';" 2>/dev/null | tr -d ' ')
+    [ -z "$GATE_24H" ] && GATE_24H=0
+    [ -z "$GATE_PASS" ] && GATE_PASS=0
+    GATE_FAIL=$(( GATE_24H - GATE_PASS ))
+    note "A7 gate-telemetry: ${GATE_24H} completion validations in 24h - ${GATE_PASS} passed, ${GATE_FAIL} failed"
+    if [ "$GATE_24H" -gt 0 ] && [ "$GATE_FAIL" -gt 0 ]; then
+        sqlite3 "$MCP_DB" "SELECT evidence FROM violations WHERE recorded_at >= datetime('now','-1 day') AND evidence NOT LIKE 'VALIDATION_PASS%';" 2>/dev/null \
+        | while IFS= read -r ev; do
+            echo "$ev" | grep -oE '[A-Z][A-Z0-9_]+:' | sed 's/:$//'
+        done | sort | uniq -c | sort -rn | head -8 \
+        | while read -r cnt code; do
+            note "A7   failure-code ${code} x ${cnt}"
+        done
+    fi
+    if [ "$GATE_24H" -eq 0 ]; then
+        note "A7   (no validations in the last 24h)"
+    fi
+else
+    note "A7 gate-telemetry: skipped (sqlite3 or MCP db unavailable)"
 fi
 
 # --- Report ---

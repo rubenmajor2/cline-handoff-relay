@@ -1,0 +1,163 @@
+# Rule 297 — Classify the Code Before You Diagnose (strengthened 2026-08-01)
+
+## Original Text (2026-06)
+> A COUNT(*) of "impossible" rows is a hypothesis, not a bug. Classify the population before you alarm.
+
+**2026-08-01 STRENGTHENING — this rule now covers DIAGNOSIS, not just SQL anomalies. What went wrong during the Argus-slow investigation:**
+
+## The Failure Pattern (Argus investigation, 2026-08-01)
+
+```
+Cline probe → symptom → Cline announces ROOT CAUSE from probe alone
+         ↑                      ↑
+      (useful)             (destructive — unverified inference)
+```
+
+Specifically:
+
+| Claim Made | Actual Code Fact | Cost of Wrong Claim |
+|---|---|---|
+| "Canary tok_s=999.0 is a hardcoded override" | `_canary_init()` line 648: `"tok_s": 999.0` is the INITIALIZATION SENTINEL for every upstream before first probe | Wasted ~4 turns writing idea #20958 to "remove" a non-existent override |
+| "Only 2/3 boxes in pool, federation missing" | Adapter UPSTREAMS has 4 members; `_least_loaded_order()` correctly ranks all of them | Wrote idea #20957 to "restore full pool width" — pool was never narrow |
+| "Canary is blind, not detecting dead ring" | Canary measured `tok_s=0.0 decode_live=false` correctly. The ring WAS genuinely not decoding at that moment (mid-warmup after boot at 11:23) | Blamed the canary for correctly reporting a transient boot state |
+
+**Root cause**: every claim was derived from PROBES (curl, canary JSON, systemctl) and NONE from reading the adapter source code. A probe tells you WHAT happened once. Code tells you WHY, and whether the symptom is transient, by-design, or a real bug.
+
+## The FIX — MANDATORY before any diagnostic claim
+
+```
+SYMPTOM → READ SOURCE → CLASSIFY → CLAIM (or silence)
+```
+
+### When investigating ANY system behavior (performance, routing, errors, unexpected state):
+
+1. **RUN the probe** — establish the symptom
+2. **READ the relevant source code** — the adapter/router/hook that PRODUCED that symptom
+3. **CLASSIFY the finding into exactly one bucket before stating it:**
+   - **By-design** — code does this intentionally. State the line number that proves it
+   - **Transient boot/warmup state** — normal during startup. State what the code will do when it finishes
+   - **Real bug** — code intends X but does Y. Cite the line that proves the mismatch
+   - **Unknown** — you ran out of context/time to read the code. Say "unverified" and file an idea for later
+
+4. **Only THEN make the diagnostic claim**, WITH the code citation that proves it
+
+### Hard stop: if you cannot cite a specific line number in a specific file that produced the symptom you are describing, you do not yet understand WHY. Say so. Do not guess.
+
+## REAL EXAMPLE (applied correctly)
+
+```
+Symptom: canary health JSON shows tok_s=0.0 on :8210
+Step 2: read /usr/local/bin/frankenstein_tools_adapter.py, search for "tok_s"
+Step 3: find line 648 — _canary_init sets tok_s=999.0 as sentinel
+         find line 931-932 — _canary_probe_upstream sets tok_s from real measurement
+         CLASSIFY: the canary IS measuring; 0.0 means the probe completed with 0 tokens
+Step 4: CLAIM with citation — "Canary line 931 measures tok_s from comp_tokens/elapsed. 
+         0.0 means the ring returned a completion with 0 tokens. This is decode-dead, 
+         not canary failure."
+```
+
+## If the source file is too large for context
+
+Read the RELEVANT SECTION only. Grep for the function/method name that handles the behavior you're investigating. Read that function and its callers. Do not read the whole file. Do not claim to know the whole file.
+
+## Relation to Rule 263 (verify-before-claim)
+
+Rule 263 says: verify facts with tools before stating them. Rule 297 extends this: for DIAGNOSIS (not just factual claims), the verification tool is `read_server_file` on the source code that produces the behavior. A curl against an endpoint is a symptom-gathering tool, not a verification tool for a claim about WHY the endpoint behaves that way.
+
+## Relation to Rule 298 (novelty is not authority) — READ 298 WHEN YOU HAVE *CONFLICTING* EVIDENCE
+
+**297 and 298 cover opposite failure modes and you need to know which one you are in.**
+
+| you have | rule | failure it prevents |
+|---|---|---|
+| **too little** evidence | **297** (this rule) | claiming a root cause from a probe alone, without reading the code |
+| **conflicting** evidence | **298** | serially adopting whichever reading arrived most recently |
+
+297's fix is *go get more evidence, specifically the source*. **That fix does not work when the
+problem is that you already have several readings and they disagree.** More gathering will not
+resolve a disagreement; it just adds a fourth number to argue about. 298 supplies the missing
+procedure: build a **confound table**, rank instruments by what is in the measurement path and
+what is actually being counted, and never discard a reading until you can *name the specific
+defect in it*.
+
+**Trigger to jump to 298:** the moment a new measurement disagrees with one you already have,
+or you notice you have stated the same quantity two different ways in one session.
+
+Source incident for 298: 2026-08-04, one session reported GLM per-stream throughput as
+`2.65 → 2.96 → 36.44 → 1.71 → 36.44 → 1.96 → 1.88` tok/s in an hour. Every flip was
+individually justified with real data, which is exactly why it evaded self-correction. 297
+alone would not have caught it, because the agent *was* gathering evidence the whole time.
+
+**298 also carries the threshold-sanity gate**, which is where this class does real damage: a
+number derived this way becomes a threshold, and the threshold gates availability. Backtested
+2026-08-04 against 755,800 real inter-token observations, a plausible-sounding "below 5 tok/s
+= down" rule would have flagged **99.15% of healthy production traffic**. A threshold derived
+from the system's own baseline flagged **1.03%**. Always backtest a threshold against the
+system's own observed distribution before shipping it.
+
+---
+
+**Hardfloor: NO** (can be overridden by a higher-priority operational directive)
+**Source incident: Argus-slow investigation 2026-08-01 (3 wrong diagnostic claims from probes alone, ~10 wasted tool calls)**
+**Last strengthened: 2026-08-01 by Cline (Ruben directive: "modify rule 297 so it is stronger")**
+---
+
+## 2026-08-07 STRENGTHENING — a failed PROBE is not a diagnosed FAULT (remote-box case)
+
+**Source incident:** 2026-08-06 00:07 PT. Cline curled `127.0.0.1:11513/metrics` and `/v1/models` from WOPR, got HTTP 000 three times, and told Ruben **"Julia's vLLM is dead, no process, local probes fail."** Ruben replied: *"Julia and claudia TP=2 are here with me and fine. I can SSH into them no issue."* He was right. Going on-box showed hostname `spark-6ae6` resolving, SSH exit code 0, and the **Ray cluster alive** (gcs_server, autoscaler monitor, ray client server, session started 23:42). The box was never dead.
+
+### The rule
+
+**A remote HTTP 000 has at least four distinct causes, and a curl cannot tell them apart:**
+
+1. the model process is genuinely down
+2. the model process is **starting** and has not bound its port yet
+3. the **reverse tunnel** between the box and WOPR is down
+4. the box is reachable but the port is firewalled / not listening
+
+Collapsing all four into cause 1 is the rule-297 error in its remote form: a probe told you **WHAT** happened once, and you reported it as **WHY**.
+
+### The gate
+
+**NEVER claim a remote LLM box is down from probe failures alone.** Minimum evidence for a "down" claim:
+
+```
+ssh <box> 'hostname; ps -eo pid,etime,cmd | grep -i vllm; ss -tln | grep <port>'
+```
+
+Then classify explicitly:
+
+| On-box finding | Correct claim |
+|---|---|
+| SSH fails entirely | "the box is unreachable" (still not "down") |
+| SSH works, processes alive, port listening | **"the PATH is broken"** — tunnel or network, NOT the box |
+| SSH works, Ray/supervisor alive, no serve proc, no listener | "the ENGINE is down, the box is healthy" |
+| SSH works, serve proc present, port bound | "it is UP" — your probe was the thing that was wrong |
+
+### The tell that makes this checkable
+
+An on-box `curl_rc=7` ("failed to connect", measured **from the box itself**) is the evidence that justifies an engine-down claim. A WOPR-side 000 never is. If your only artifact is a remote 000, you have not yet diagnosed anything.
+
+### Postscript (why this is not academic)
+
+In the same incident the engine **was** in fact not serving. Cline was right about the conclusion and wrong about the grounds. That is the dangerous shape: being accidentally correct trains the bad habit. The grounds matter, because the identical evidence next time will mean the tunnel, and the report will be confidently wrong while a healthy box sits next to the person reading it. (See the addendum below: on a fuller check the engines were ALIVE the whole time, so even the conclusion was wrong.)
+
+Cross-refs: rule 271 (no SSH to the box = no claims about the box), rule 252 / 296 (live-probe before declaring any host down), rule 263 (verify before claim). Ideas #24370 (RCA), #24372 (the precise on-box state that followed).
+
+### 2026-08-07 ADDENDUM — verify your GREP PATTERN and the box's ROLE before claiming "process absent"
+
+Same box, same night, **two more wrong calls** after the section above was written. Ruben had to say *"Julia is doing just fine do not tell me that Julia is off-line. It's really annoying."* He was right both times.
+
+**Trap 1: the pattern could not match a healthy instance.**
+Cline ran `ps -eo pid,etime,cmd | grep "[v]llm serve"`, got nothing, and reported "no vLLM process". But a Ray-managed vLLM worker presents its cmdline as **`VLLM::EngineCore`**, never as `vllm serve`. Julia had **two** EngineCore processes alive with 8h53m and 7h55m uptime. The grep measured the absence of a **string**, and it was reported as the absence of a **process**.
+
+> Before claiming a process is absent, confirm your pattern can match a *healthy* instance. Use `grep -iE "vllm|EngineCore"`, never a single literal.
+
+**Trap 2: probing an API port on a WORKER node.**
+Cline curled `127.0.0.1:8000` on Julia, got connection-refused, and called the engine down. In a TP=2 Ray pair only **one** node runs the OpenAI API server. On a worker, refused-on-:8000 is **health, not failure**. The registry already encodes this for Claudia (`do_not_probe_ports`: *"Ray worker inside Julia CX7 TP=2 cluster. HTTP-000 here is CORRECT. Never probe/route/restart"*, rule 157). Cline knew the rule and applied it to the wrong box, because a **stale registry label** called Julia the head.
+
+> Establish HEAD vs WORKER before probing. Ask *"should anything be listening here?"* before treating silence as a fault. Live `ps` beats the registry label (rule 294).
+
+**What the box actually was:** both Julia (spark-6ae6) and Claudia (spark-6d51) running EngineCore workers, neither binding :8000, and WOPR `:11513` being a bare `sshd` reverse-forward with nothing live behind it. The engines were up ~9 hours. The missing thing was the HTTP surface, not the compute.
+
+**The compounding lesson:** a stale registry entry plus a too-narrow grep plus a role-blind port probe produced three confident wrong reports about a box the operator was physically sitting next to. Each instrument was individually plausible. None was checked against the box. Ideas #24611, #24613.

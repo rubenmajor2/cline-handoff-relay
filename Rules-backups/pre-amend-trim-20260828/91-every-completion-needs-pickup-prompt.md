@@ -1,0 +1,192 @@
+# 91 — MUST end with PICKUP PROMPT block
+
+Hardfloor. 2026-05-19. 2026-08-01: `[queued]` disposition BANNED (Ruben directive — queued is a parking-lot excuse, not a state). See .clinerules/161-ideas-never-queued.
+
+**The PICKUP PROMPT block MUST end every `attempt_completion` result.** No exceptions for status reports, investigations, bug analysis, or "read-only" tasks. The ONLY exemption: zero system-state changes AND the result starts with `"Not a task completion — conversational/read-only only"`.
+
+**Tool-call disqualifier (2026-08-08, idea #25066):** if ANY tool was called after the prior completion — including read-only diagnostic calls (SELECT, grep, read_server_file, ssh_command) — the Q&A exemption does NOT apply. That tool call makes this a follow-up task, not Q&A, regardless of how casual the user's framing is. Example: user asks "can I close this window?" and the agent runs ssh_command to verify executor health — that completion MUST carry a full PICKUP PROMPT block, not a bare conversational reply.
+
+## Human-readable summary (MANDATORY, added 2026-08-22 via Ruben RCA 297)
+
+Every attempt_completion result MUST open with a plain-English summary of 3-6 sentences BEFORE the PICKUP PROMPT block (and before any SESSION MEMORY blob when compressed). Written for Ruben, not the next agent: what this window did, the current state of the work, what happens next. No unexplained jargon (wedge, rung, send site), no bare pids or log ids without context, no machine-handoff artifact as the opening. The PICKUP PROMPT block is for the next window; the summary is for the human reading the result. A completion that opens with a SESSION MEMORY blob or a dense pickup prompt, leaving the human unable to parse what happened, violates this rule.
+
+Source incident 2026-08-22: VERITAS window shipped a compression blob + jargon-dense pickup prompt as the entire result. Ruben: "I don't really understand or know what happened here." 297 classification: scope error. The completion was scoped to machine handoff only and excluded the human reader. Rule 91 mandated the block for the next agent but nothing mandated a human-facing summary.
+
+## Do NOT retype the divider. Use the template below.
+
+Copy the 47-char U+2550 divider from the template block below — do NOT retype it from memory. Every observed rule-91 failure came from a model retyping the divider and getting the glyphs wrong.
+
+**Then verify before shipping: call `clinerules_validate_completion`** with BOTH `result_text` and `task_prompt`. Passing `task_prompt` turns on the coverage gate: every `#NNNN` enumerated in the original task must appear in the result, or the gate names the missing ids.
+
+## The gate is STRUCTURAL now. A FAILURE writes a file.
+
+`clinerules_validate_completion` used to be advisory: it printed failures and did nothing, so agents read `BARE_IDEA_NUMBERS` and called `attempt_completion` anyway. As of 2026-07-30 (#20251) a FAILURE **writes a gate file**; a PASS **deletes it**.
+
+Two-call sequence, every completion, no exceptions:
+
+1. `clinerules_validate_completion(result_text, task_prompt, task_id)` - fix every failure it names, then call it again. Repeat until ALL PASSED.
+2. `clinerules_check_gate(task_id)` - must return `GATE CLEAR`.
+
+**If `clinerules_check_gate` returns `GATE BLOCKED`, calling `attempt_completion` is a hardfloor violation.** The block names the exact failures. Fix them, re-validate, re-check. Never ship past a blocked gate.
+
+## Template (copy divider — do NOT retype)
+
+```
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #<real task id> — <topic>.
+
+Where we left off (verified <PT timestamp>):
+- <bullet — every #NNNN gets a [bracket]>
+
+Open threads to drive next:
+1. #<id> [disposition] — action
+...or "None — reason"
+
+Reference IDs:
+- Ideas filed: #<id> [tag], ...
+- Ideas closed: #<id> [tag], ...
+- Files touched: <paths>
+
+# Reversal Log
+No reversals this window. (Or: "- initial → corrected | RCA bucket | causal rule updated (file/slug) or filed idea #NNNN [tag]" for each within-window flip.)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+```
+
+**The `# Reversal Log` section is MANDATORY** (added 2026-08-26 per idea #25888's R317_REVERSAL_LOG gate — this template was drifting from the live validator, causing agents who copied it verbatim to fail on first submission every time). Write "No reversals this window." if nothing flipped, or itemize every within-window correction per rule 317.
+
+
+## Valid dispositions (NO `[queued]` — 2026-08-01 ban)
+
+| Tag | Meaning |
+|-----|---------|
+| `[deployed]` | Live in production, verified |
+| `[executing]` | In active motion — being worked THIS session or by a live agent (approved ideas are EXECUTING, not queued) |
+| `[awaiting_review]` | Ready for review but not yet reviewed — NOT a parking state; must carry a review deadline |
+| `[blocked]` | Stuck on a real obstruction — name the obstruction |
+| `[proposed]` | Not yet approved |
+| `[rejected]` | Denied |
+| `[superseded]` | Replaced by a newer idea |
+
+`queued` is NOT a valid disposition. An approved idea is `[executing]`. An idea sitting "in the queue" is either `[executing]` (active motion) or `[blocked]` (real obstruction named). Parking an idea as queued so it sits indefinitely is a hardfloor violation (Ruben directive 2026-08-01, rule 161).
+
+## Hardfloor bans
+
+| Ban | Why |
+|-----|-----|
+| **NO `[queued]` tags** | Banned 2026-08-01. Approved = executing. No parking lot. |
+| **NO fake IDs** (`IDEA-001`) | Must be real `create_idea` integer |
+| **NO unfiled-but-plausible IDs** | Every `#NNNN` you cite as filed must have come back from a `create_idea` call **in THIS session**. The id space is dense, so a made-up number usually resolves to a REAL but UNRELATED idea and every syntax gate passes. If you did not see the id in a `create_idea` return this session, you do not have it |
+| **NO bare `#NNNN`** | Every idea number gets `[deployed|executing|awaiting_review|blocked|proposed|rejected|superseded]` |
+| **NO unfiled open threads** | Every open-thread item MUST cite a real filed idea `#NNNN [tag]`, OR be explicitly marked `(human-only decision — no idea)`. A thread with no idea number is undone work: file it via `create_idea` BEFORE shipping |
+| **NO tag-without-number** | A `[tag]` next to an open-thread item with NO `#NNNN` is FAKE PROVENANCE — it implies a filed idea that does not exist. Mechanical test per item: "what integer idea ID backs this tag?" None → `create_idea` first, or mark `(human-only decision — no idea)` |
+| **NO missing open-threads** | Section mandatory — write "None — reason" if empty |
+| **NO "pure Q&A" self-exemption** | Status reports, investigations, bug analysis, diagnostics are NOT Q&A |
+| **NO `[approved:autonomous]` tags** | Ambiguous between executing/queued. Banned in final pickup prompts — must be replaced by verified live-state tag from reconcile call per rule 267 GATE B (reconcile_ideas no longer emits approved; it emits executing) |
+| **NO placeholders** | `#NNNN`, `<...>`, `#0000` are banned |
+| **NO pick-up-by-reference** | Block must be inline in the `attempt_completion` **`result`** parameter string itself — not a separate file, and not `task_progress` or any other tool parameter |
+
+## Quick check before shipping
+
+1. Extract ONLY the `result` string in isolation (ignore `task_progress` and every other parameter) — does THAT string end with ═══ PICKUP PROMPT ═══ block?
+2. Is divider exactly 47 U+2550 chars?
+3. Every `#NNNN` in entire `result` — does it have a `[tag]`?
+4. Does ANY `#NNNN` carry `[queued]`? → FAIL, re-tag as `[executing]` or `[blocked]`
+5. Any `IDEA-001`, `#0000`, `<real_idea_number>`? → FAIL
+6. Open-threads section present? Reference IDs present?
+7. Does EVERY open-thread item have a filed idea `#NNNN [tag]` or `(human-only decision — no idea)` marker? If any item has neither → STOP, call `create_idea` first
+8. **Provenance check — for EACH `#NNNN`, name the tool call it came from.** A `create_idea` return this session, a reconcile call, or the task prompt. If you cannot point at one, the number is fabricated. Run `clinerules_validate_completion` and READ THE IDENTITY ECHO: it prints the real DB title of every id you cited. If a printed title does not match what you wrote beside that number, you cited the wrong idea.
+9. **Rule 317 state-claim check.** ANY LLM/fleet/host state claim MUST carry a `(verified: ...)` marker quoting the live probe (registry, headers, curl). Validator `R317_UNVERIFIED_STATE` = BLOCKED. Never recite fleet status from memory.
+10. **Rule 317 Reversal Log section** (idea #25888). Completion MUST contain `# Reversal Log` — "No reversals this window." or each flip as `initial → corrected | RCA bucket | causal rule updated (file/slug) or idea #NNNN`. Validator `R317_REVERSAL_LOG` = BLOCKED. Written ONCE at completion time.
+
+
+## Cross-refs
+
+
+- Rule 29 — act, don't defer
+- Rule 161 — ideas never queued (2026-08-01 Ruben directive)
+- Rule 267 — reconcile ideas before completion
+- _RULE_TREE.md Gate 9 — pre-completion gate
+
+## Compression is a completion. Both halves are gated. (2026-08-11)
+
+A rule-119 compression produces TWO gated artifacts, not one.
+
+**Half 1, the `pickup_prompt` parameter of `cline_compress_session`.** That string is the only state that survives into the next window, so it must be a full, gate-valid block on its own: real divider, real task id, `Where we left off`, `Open threads`, `Reference IDs`, every `#NNNN` bracketed. The tool truncates at 5KB, so put load-bearing state FIRST. A prompt cut mid-`Open threads` loses exactly what the next window needs.
+
+**Half 2, the `attempt_completion` that ships the SESSION MEMORY blob.** The blob is NOT a pickup prompt. Compression exempts nothing: run `clinerules_validate_completion`, then `clinerules_check_gate`, then append a PICKUP PROMPT block to the `result` string BELOW the blob. Two copies of the block in one window is correct.
+
+**Never paste the tool's echoed blob back verbatim as the whole result.** Its internal divider is 63 chars, not 47, and it truncates the embedded prompt with `…[pickup truncated]…`. Shipping it unedited fails `DIVIDER_WRONG_LENGTH` four times over. Write your own block.
+
+This is the highest-risk completion in the system: it fires under context pressure, at the moment the agent is most inclined to shortcut (rule 120), and it is the only handoff where a dropped thread is unrecoverable, because the conversation it came from is gone.
+
+## Degraded-mode escape hatch (2026-08-08, idea #24995)
+
+
+**Degraded-mode escape hatch:** if the agent has attempted a valid PICKUP PROMPT 2+ times AND all MCP `create_idea` calls fail with documented transport errors, the agent may use a pre-allocated pool ID (from the reserved pool, IDs 25002-25029) and complete. The pool slot is burned by updating its title to the actual topic. A sync process later reconciles.
+
+Conditions (ALL must be true):
+1. The agent has attempted at least 2 valid PICKUP PROMPT blocks that the transport layer dropped.
+2. `create_idea` calls via `ruben-orchestrator` MCP fail with documented errors (not silent success).
+3. The agent uses the `/var/www/emtskills/scripts/burn_pool_id.sh` helper to consume the next available pool slot.
+4. The agent cites the burned pool ID in the PICKUP PROMPT with `[executing]` tag and the note "(pool #<id> burned for transport-degraded completion)".
+
+This is a LAST RESORT. If `create_idea` works, the agent MUST file ideas normally. Pool IDs are a finite resource (28 slots, 25002-25029).
+
+## Source
+
+2026-05-19 Ruben directive. 2026-07-14: 3 violations in one window (no pickup block, bare #NNNN, no open threads). Root cause: steering injection's "pure Q&A exception" + bloated 151-line rule. Both fixed. 2026-07-22 violation #15 (per Cline_Obedience.md): agent shipped a structurally-correct PICKUP PROMPT block inside `task_progress` instead of `result` — added explicit ban + quick-check step 1 rewording to gate on `result` specifically. 2026-08-01: `[queued]` disposition banned by Ruben directive — queued was being used as an excuse to park ideas indefinitely instead of implementing them. reconcile_ideas no longer derives `[queued]` (approved → executing, ready_for_review → awaiting_review, default → unknown). See rule 161. 2026-08-22: human-readable summary section added after Ruben RCA 297 (completion opened with compression blob + jargon pickup prompt, human could not parse what happened).
+
+## Amendment (from reversal, 2026-08-20 02:56 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 26422FT-18-r317
+- RCA bucket: scope error
+- Trigger pattern: within-window reversal corrected a material claim
+- Reversal note: 2026-08-19 within-window reversal: completion listed open threads #27657/#27658 in the PICKUP PROMPT block with NO bracketed disposition tag, violating rule 91's bracket mandate and rule 317's disposition consistency. Causal fix: rule 91 open-thread lines must carry a real [proposed|executing|deployed|blocked|awaiting_review|rejected|superseded] tag on every #NNNN; a thread whose disposition is unknown is emitted as [proposed] only after a create_idea/INSERT produced a real id. Re-emitted corrected completion with [proposed] on both.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:25 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778-r91-rca
+- RCA bucket: unread source
+- Trigger pattern: Agent submitted 12+ consecutive attempt_completion calls with visually-correct PICKUP PROMPT blocks (correct divider length, correct header, all documented sections present) that were repeatedly rejec
+- Reversal note: RCA (rule 297/317, triggered by Ruben catching repeated rule-91 rejections): the copy-paste TEMPLATE block inside rule 91's own corpus text does NOT contain the "# Reversal Log" section that idea #25888 made mandatory (R317_REVERSAL_LOG gate). An agent following the rule's own template verbatim will ALWAYS fail R317_REVERSAL_LOG on first submission, because the template it was told to copy is incomplete relative to the validator it must satisfy. Live-verified via clinerules_validate_completion this session: a text with correct 47-char dividers, correct "PICKUP PROMPT" header, and all other required sections still failed with R317_REVERSAL_LOG because no Reversal Log section was present (this rule's own template never showed one). Root cause bucket = unread source: the validator's gate set (R317_REVERSAL_LOG, added by idea #25888) was never back-ported into rule 91's inline template, so the two artifacts drifted. Fix: rule 91's template must include a "# Reversal Log" section (either "N
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:39 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778
+- RCA bucket: unread source
+- Trigger pattern: Agent submitted 12+ consecutive attempt_completion calls with visually-correct PICKUP PROMPT blocks that were repeatedly rejected because rule 91's own template omitted the mandatory Reversal Log sect
+- Reversal note: Follow-up ledger stamp for task 1787606148778 (same fix as task 1787606148778-r91-rca): rule 91's copy-paste template lacked the mandatory Reversal Log section required by idea #25888's R317_REVERSAL_LOG gate. Template edited on disk to add the section after Reference IDs; MCP reindexed.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-26 07:59 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787606148778-mailer-rca
+- RCA bucket: unread source
+- Trigger pattern: Agent submitted 12+ consecutive attempt_completion calls with visually-correct PICKUP PROMPT blocks that were repeatedly rejected because rule 91's own template omitted the mandatory Reversal Log sect
+- Reversal note: Follow-up ledger stamp for task 1787606148778-mailer-rca (same fix as tasks 1787606148778 and 1787606148778-r91-rca): rule 91's copy-paste template lacked the mandatory Reversal Log section required by idea #25888's R317_REVERSAL_LOG gate. Template edited on disk to add the section after Reference IDs; MCP reindexed.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-08-28 07:50 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: exam5-lockout-rca-20260827
+- RCA bucket: scope error
+- Trigger pattern: completion listed 'Open threads to drive next' as prose action items with zero #NNNN idea numbers and zero [disposition] brackets, because the threads were framed as narrative recommendations rather t
+- Reversal note: 2026-08-27 reversal (Ruben caught it): the Exam 5 root-cause completion shipped an 'Open threads to drive next' section containing three numbered prose items - build a monitor, a policy decision, investigate the auto-void class - with NO filed idea numbers and NO disposition brackets on any of them. Rule 91 requires every open-thread item to carry a real #NNNN [disposition] or the explicit '(human-only decision - no idea)' marker. The failure mode is specific: when open threads are written as RECOMMENDATIONS ('my advice, in priority order') rather than as filed work, the prose framing suppresses the filing step entirely - the agent never asks 'what integer backs this?' because it reads as advice, not as a thread. Amended behavior: before writing ANY open-threads section, each item must first be filed via create_idea and cited with its returned integer plus a bracketed disposition; an item that is genuinely a human policy decision still gets either a filed idea number or the literal '(h
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

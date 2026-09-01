@@ -104,3 +104,23 @@ Self-check before any `sleep`: "is a machine already watching this?" If yes → 
 2026-07-13 — GATE B rewrite per Ruben directive (idea #17537 [rejected]): added the verbatim reconcile-return → rule-91-tag mapping table, banned `[approved:autonomous]` in final pickup prompts (ambiguous between executing and queued), added drift-forbidden clause + `[blocked:reconcile-unavailable]` fallback, added Ruben's closeout test. Goal: Ruben can close threads from the tag alone, no re-verification tool call needed.
 
 2026-07-11 — compliance rewrite. Moved 2 addendums (tool-bug findings, drift safeguards) to case law to de-bloat the core gates. Added the 3-question offload test to make Gate A mechanically detectable. Condensed Gate A2 + known tool gaps into brief cross-refs. Core rule now ~5KB (under 8KB warn cap).
+
+## 2026-08-15 — GATE A0 source incident + trimmed long-form sections
+
+GATE A0 (build-here-first) added after Ruben called out approve-instead-of-build 3 times in one session ("lol, you are still approving rather than taking advantage of rule 267. The entire point of rule 267 was to get things in window deployed quicker as well as to ensure executor ideas are working (quasi frankenstein doctor of executor)"). Ideas #26591/#26593 were filed+promoted when both were buildable in-window in under 10 tool calls each; the window then built them by hand anyway. Executor queue that day: cap 3 workers vs 60 eligible ideas.
+
+Executor doctor shipped same session: /var/www/emtskills/cron/cron_executor_doctor.php (crontab */15). Repairs orphan shape A (status=approved + dev_stage='' — 66 rows found) and shape B (status='' + active dev_stage — the promote_and_run status-blanking bug, 464 rows over 30d, scope-guarded to 7d/50-per-run). Flags impl_failed spikes (>5/24h) and stale mid-stage rows (>2h in drafting/coding/auditing/testing). Logs to orchestrator_event_log as system_health/cron_executor_doctor.
+
+### Long-form text trimmed from the hardfloor rule for the G7 12KB cap, preserved here:
+
+**GATE A3 environment-blocker (full text):** If a sub-task fails because a binary/tool isn't on PATH in Cline's non-interactive shell (`command -v brew`/`node`/etc. → not found), do NOT repeatedly retry the same failing command. This is an environment mismatch, not a logic bug, and it's a valid Gate-A trigger on its own: the executor runs its own shell context (often with a full login PATH, different user, or root) and may resolve what Cline's shell cannot. Offload the blocked sub-task via `create_idea` rather than looping on `command not found`.
+
+**Reconcile evidence quoting rationale (2026-07-13):** the `(verified: ...)` parenthetical is the proof a reconcile call actually ran — prevents agents writing `[deployed]`/`[rejected]` as a guess. Required for ideas filed or reconciled this session; optional for carried-forward tags.
+
+**`[approved:autonomous]` ban rationale:** ambiguous between executing and queued; forces Ruben to re-verify. Mid-task-only fallback right after idea_action(approve); must be replaced by a verified tag before attempt_completion (2026-07-13 Ruben directive, idea #17537 [rejected]).
+
+**Known tool gap:** `get_idea_progress` may return `{"error": "Unknown action"}` — use reconcile_ideas / list_decisions / get_activity_feed instead.
+
+**Ruben's closeout test:** verified tags let him close threads with zero re-verification. The verified tag IS the verification.
+
+**Exploratory discovery carve-out (full text):** The discovery/scoping phase (you don't yet know the table, query shape, or pattern) is NOT an independent sub-unit — it's the thing that DEFINES the sub-units. The executor runs a fire-and-forget chain against a FIXED plan with no channel back mid-chain. Test: "do I already know the boundaries (table, query shape, file, exact fix), or am I still forming the question?" Forming → inline. Boundaries known → offload. Mirrors rule 00's carve-out.

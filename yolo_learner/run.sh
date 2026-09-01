@@ -21,6 +21,14 @@ fi
 # Bridge yolo_trips → MCP violations table so clinerules_stats shows live counts
 /usr/bin/python3 "$HOME/Documents/Cline/yolo_learner/sync_to_mcp.py" >> /tmp/yolo_learner.log 2>&1
 
+# Mine rule-317 reversals (the rule_amend ledger) into the learner corpus and
+# regenerate Rules-archive/317-reversal-patterns.md. The YOLO half only learns
+# from tasks that DIED; this half learns from tasks that were WRONG and got
+# corrected. Idempotent (dedups on rule_amend id). Added 2026-08-30 per Ruben:
+# "shouldn't Cline learner be combing through rule 317s and adding to its
+# repertoire? I think so."
+/usr/bin/python3 "$HOME/Documents/Cline/yolo_learner/sync_reversals.py" >> /tmp/yolo_learner.log 2>&1
+
 # Mac-only push helpers (ledger sync to WOPR, ops chat alert) — run if they exist
 if [ "$(uname -s)" = "Darwin" ] ; then
   [ -f "$HOME/Documents/Cline/yolo_learner/push_to_ruben.sh" ] && /bin/bash "$HOME/Documents/Cline/yolo_learner/push_to_ruben.sh"  >> /tmp/yolo_learner.log 2>&1

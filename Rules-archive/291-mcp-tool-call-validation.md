@@ -38,6 +38,7 @@ Before calling ANY MCP tool via `use_mcp_tool`, verify:
 | `modify_idea` (ruben-orchestrator) | `idea_action` — same as `update_idea` |
 | `close_idea` (ruben-orchestrator) | `idea_action` with `action: "deny"` |
 | `resolve_idea` (ruben-orchestrator) | `idea_action` with `action: "approve"` |
+| `get_rule91_template` (clinerules) | Use the template block copy-paste from Rule 91 directly | Referenced in Rule 91 body as "shipped 2026-07-25" but never deployed. The 47-char divider is in the rule body. |
 | `clinrerules_reindex` (clinerules) | `clinerules_reindex` |
 | `clinernules_lookup` (clinerules) | `clinerules_lookup` |
 
@@ -78,3 +79,12 @@ If you see `MCP error -32602: Input validation error: expected number, received 
 - Agent ensures numbers are unquoted, required fields are present.
 - New rule indexed in clinerules MCP.
 - Bug library entries #1767-#1770 recorded for future agents.
+## Amendment (from reversal, 2026-08-20 02:34 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1787187212000
+- RCA bucket: unread source
+- Trigger pattern: execute_query dispatched to emsu-operations instead of the mysql MCP server
+- Reversal note: 2026-08-19: called execute_query on emsu-operations and got MCP error -32601 Unknown tool; execute_query lives on the mysql MCP server, not emsu-operations. Amended behavior: the Hallucinated-Tools map must include execute_query/fetch_data -> mysql server; check the connected-server tool list before dispatch.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

@@ -48,6 +48,10 @@ const PORT = parseInt(process.env.BRIDGE_PORT || "0", 10);
 const CHILD_BIN = process.env.BRIDGE_CHILD_BIN || "";
 const CHILD_ARGS = (process.env.BRIDGE_CHILD_ARGS || "").trim();
 const NAME = process.env.BRIDGE_NAME || "mcp-http-bridge";
+// VERITAS (2026-08-19): child response timeout was hardcoded 24s below, which
+// killed long-running tools like clinerules_truth_judge (30-90s judge calls).
+// Configurable per-service via BRIDGE_CHILD_TIMEOUT_MS; default unchanged (24s).
+const CHILD_TIMEOUT_MS = parseInt(process.env.BRIDGE_CHILD_TIMEOUT_MS || "24000", 10);
 
 if (!PORT || !CHILD_BIN) {
   console.error(`[${NAME}] FATAL: BRIDGE_PORT and BRIDGE_CHILD_BIN are required`);
@@ -202,7 +206,7 @@ function doForward(msg, resolve) {
       pending.delete(internalId);
       resolve({ jsonrpc: "2.0", id: originalId, error: { code: -32001, message: "child response timeout" } });
     }
-  }, 24000);
+  }, CHILD_TIMEOUT_MS);
   pending.set(internalId, {
     timer,
     resolve: (childMsg) => {

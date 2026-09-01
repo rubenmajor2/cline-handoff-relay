@@ -6,13 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 8:21:06 AM PT | window: last 72h | 76 tasks | index total 1019 (parsed 1, cached 1018)
+Generated: 9/1/2026, 9:30:17 AM PT | window: last 72h | 75 tasks | index total 1020 (parsed 2, cached 1018)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1788196060306` | 9/1/2026, 9:30:14 AM | 1215 | 3937KB | #Argus Improvmeents |
+| `1788280195067` | 9/1/2026, 9:30:10 AM | 3 | 43KB | #Frankenstein LLM Reouting (individual LLMs) |
 | `1788244626168` | 9/1/2026, 8:17:08 AM | 346 | 2369KB | #CFA Learner status |
 | `1788237036746` | 9/1/2026, 6:51:29 AM | 504 | 1884KB | #Joshua Qwen 3.8 27B TP=2 |
-| `1788196060306` | 9/1/2026, 6:47:19 AM | 1198 | 3869KB | #Argus Improvmeents |
 | `1788244675583` | 9/1/2026, 5:07:26 AM | 286 | 1097KB | #Kaizon Learner status |
 | `1788160972127` | 9/1/2026, 4:56:50 AM | 386 | 2175KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788229361019` | 9/1/2026, 2:05:21 AM | 546 | 3593KB | #Safely Increasing Cline/Argus/Executor Lanes |
@@ -84,12 +85,69 @@ Generated: 9/1/2026, 8:21:06 AM PT | window: last 72h | 76 tasks | index total 1
 | `1788021587569` | 8/29/2026, 10:46:18 AM | 602 | 858KB | #GLM 5.3 Local |
 | `1788021695555` | 8/29/2026, 9:58:19 AM | 144 | 2186KB | #TDSHS OpenRecords |
 | `1788021480367` | 8/29/2026, 9:57:58 AM | 56 | 324KB | #Restart Storm |
-| `1787980519299` | 8/29/2026, 9:27:49 AM | 342 | 12997KB | #Various 2 |
-| `1787996122566` | 8/29/2026, 9:18:10 AM | 88 | 441KB | #SMS/Email Notifications Externships/NREMT and End of Class |
 
 ---
 
 ## Per-window detail
+
+### `1788196060306` — 9/1/2026, 9:30:14 AM PT — 1215 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #166534, #18745, #18770, #22850, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25047, #25058, #25269, #25313, #25466, #25573, #25768, #26325, #28155, #28607, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #28954, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #29110 [proposed], #29112 [proposed], #29114 [proposed], #29115, #29122 [proposed], #30363, #3730, #4434, #4575, #475569, #495057, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #8226, #92400, #9261, #9648, #9650, #9660, #9670
+
+**Last PICKUP PROMPT:**
+
+```
+al confirmation, per rule 317.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Argus terminal-takeover feature + Complaint Hub phases 3/4 + Activity entity deep-links (continuation of #29055).
+
+Where we left off (verified 2026-09-01 06:45 PT):
+- Terminal takeover SHIPPED: lock columns added to argus_task_queue; takeover/release POST handlers + state (`$lockedOut`/`$isController`/`$canTakeover`) + "overtaken by {role}" owner banner + Take over/Release buttons in routes/argus_task_status.php. php -l clean, FPM reloaded, on-disk verified.
+- Complaint phases 3/4 SHIPPED: complaint_draft_chargeback + complaint_draft_rude_student in lib/argus_action_catalog.php (registry 183-184, handlers 2156/2169). Ideas #29110/#29112 stamped deployed.
+- Activity deep-links: rows with task_id → argus_task_status.php?task=N (interactive terminal); rows mentioning tickets → tickets/view.php?id=N; ticket linkify regex now matches "ticket N" without '#'; openActDetail renders renderRich() HTML.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #29122 [blocked] — Executor proof gate NOT yet implemented. I could not locate the executor's done-write site this window. Concrete step: probe api/argus_offloaded_task_api.php for the UPDATE that sets orchestrator_ideas status='done' (or its result_summary write), and require a quoted real artifact path + probe result in result_summary before 'done' is stamped. This is the false-done/lie pattern Ruben called out; do it FIRST.
+2. #29095 [awaiting_review] — Ruben has the two in-line browser questions (see completion body). When he pastes answers, file them into the idea and apply the mechanical vs behavioral decision.
+3. Browser-QA the takeover feature as admin: open a running task owned by a CS user as Admin, click Take over, confirm the CS owner sees the amber banner and no note form; release and confirm input returns.
+
+Reference IDs:
+- Ideas filed: #29055 (this task), #29110 [deployed], #29112 [deployed], #29122 [blocked], #29095 [awaiting_review]
+- Files touched: routes/argus_task_status.php (takeover + gate), lib/argus_action_catalog.php (complaint actions), routes/argus_download.php (deep-links), routes/alltastic_api.php (read/verify), lib/argus_task_status_ux.php (read)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788280195067` — 9/1/2026, 9:30:10 AM PT — 3 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Reouting (individual LLMs)
+
+Tell me which LLMs, the individual ones, have been running over the last eight hours. I do not want you to give me groupings of LLMs. I want you to give me the individual LLMs. So no frankenstein-tools or emsucodegen or frankenstein-llm. Look inside of those and give me the numbers of turns for each in the last 8 hours. Make sure you honestly probe
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788244626168` — 9/1/2026, 8:17:08 AM PT — 346 turns
 
@@ -172,53 +230,6 @@ Reference IDs:
 - Files touched: /etc/systemd/system/joshua-qwen38.service, /var/www/emtskills/docs/HANDOFF_NOTES.md
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788196060306` — 9/1/2026, 6:47:19 AM PT — 1198 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-approved
-- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
-
-- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
-
-
-```
-
-**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #166534, #18745, #18770, #22850, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25047, #25058, #25269, #25313, #25466, #25573, #25768, #26325, #28155, #28607, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #28954, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #29110 [proposed], #29112 [proposed], #29114 [proposed], #29115, #29122 [proposed], #30363, #3730, #4434, #4575, #475569, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #8226, #92400, #9261, #9648, #9650, #9660, #9670
-
-**Last PICKUP PROMPT:**
-
-```
-al confirmation, per rule 317.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Argus terminal-takeover feature + Complaint Hub phases 3/4 + Activity entity deep-links (continuation of #29055).
-
-Where we left off (verified 2026-09-01 06:45 PT):
-- Terminal takeover SHIPPED: lock columns added to argus_task_queue; takeover/release POST handlers + state (`$lockedOut`/`$isController`/`$canTakeover`) + "overtaken by {role}" owner banner + Take over/Release buttons in routes/argus_task_status.php. php -l clean, FPM reloaded, on-disk verified.
-- Complaint phases 3/4 SHIPPED: complaint_draft_chargeback + complaint_draft_rude_student in lib/argus_action_catalog.php (registry 183-184, handlers 2156/2169). Ideas #29110/#29112 stamped deployed.
-- Activity deep-links: rows with task_id → argus_task_status.php?task=N (interactive terminal); rows mentioning tickets → tickets/view.php?id=N; ticket linkify regex now matches "ticket N" without '#'; openActDetail renders renderRich() HTML.
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #29122 [blocked] — Executor proof gate NOT yet implemented. I could not locate the executor's done-write site this window. Concrete step: probe api/argus_offloaded_task_api.php for the UPDATE that sets orchestrator_ideas status='done' (or its result_summary write), and require a quoted real artifact path + probe result in result_summary before 'done' is stamped. This is the false-done/lie pattern Ruben called out; do it FIRST.
-2. #29095 [awaiting_review] — Ruben has the two in-line browser questions (see completion body). When he pastes answers, file them into the idea and apply the mechanical vs behavioral decision.
-3. Browser-QA the takeover feature as admin: open a running task owned by a CS user as Admin, click Take over, confirm the CS owner sees the amber banner and no note form; release and confirm input returns.
-
-Reference IDs:
-- Ideas filed: #29055 (this task), #29110 [deployed], #29112 [deployed], #29122 [blocked], #29095 [awaiting_review]
-- Files touched: routes/argus_task_status.php (takeover + gate), lib/argus_action_catalog.php (complaint actions), routes/argus_download.php (deep-links), routes/alltastic_api.php (read/verify), lib/argus_task_status_ux.php (read)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -2769,112 +2780,4 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1787980519299` — 8/29/2026, 9:27:49 AM PT — 342 turns
-
-**Original task:**
-
-```
-#Various 2
-
-See the following screenshot and put this person on the DNC list Also, investigate why email AI responded so unhelpfully and genrally, makes zero sense.
-```
-
-**Ideas referenced:** #16473, #166603, #178796, #178798, #18847 [deployed], #19492, #2036, #22060, #23710, #24990, #25185, #25821, #25822, #25916 [awaiting_review], #25932, #26084 [approved], #2631, #26661, #26663, #27082 [approved], #27100, #2728, #2743, #27486, #27488, #27489, #27491, #27492, #27503, #27808, #27809, #27810, #27811 [deployed], #2783, #27832 [executing], #28023 [proposed], #28110, #28118, #28212, #28213, #28220, #28224 [rejected], #28233, #2829, #2836, #2843, #28481, #28493, #2850, #28550, #2856, #28612 [proposed], #28613 [proposed], #28625 [executing], #28626 [executing], #2864, #28643 [proposed], #2959, #2965, #374825, #4929, #6067, #6106, #9083, #9086, #9168, #9339
-
-**Last PICKUP PROMPT:**
-
-```
-nded, per rule 317 clause 11).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1787960052755 — Various 2 RCA: Casas multi-class question, per-student delay causation, CFA response quality, exam-ext flag false-fire.
-
-Where we left off (probed 2026-08-29 09:25 AM PT):
-- #28612 [executing] open work: dead OPENAI_API_KEY (401) at cron_email_responder.php line 3671/3760; rotate or reroute.
-- #28613 [executing] open work: cancel fast-path exists post-classifier; move pre-classifier.
-- RCA delivered: two distinct Casas students (ymaris 26424T pre-start cancelled+DNC; Matthew 26914T-29 mid-course exam-blocked) + unrelated Trippy Speakz thread; no double enrollment.
-- Ticket 28224 loop broken via [EXAM-EXT-RESOLVED] internal comment.
-- Handler change live in lib/ai_ticket_agent_exam_extension_handler.php (payment carve-out + email-first resolution + flag cap), php -l clean, read back; idea 28643 tag in Reference IDs.
-
-Open threads to drive next:
-1. #28612 [executing] - rotate OpenAI key or reroute classifier to frankenstein-llm; then watch failure rate fall.
-2. #28613 [executing] - DNC/cancellation short-circuit before LLM call.
-3. (human-only decision - no idea) Vicky: remove ymaris card profile in Authorize.net + process drop; she is DNC.
-
-Reference IDs:
-- Ideas: #28612 [executing]
-- Ideas: #28613 [executing]
-- Tickets: 28224, 27061
-- Files touched: lib/ai_ticket_agent_exam_extension_handler.php, lib/ExternshipKnowledgePack.php
-- After the next steps, append to cline_task_ledger.md (rule 07), run order 66.
-- Ideas: #28643 [deployed]
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] RCA evidence complete (three threads separated, per-student assignment maps)
-- [x] #28643 deployed + stamped
-- [x] #28612 root cause (dead OpenAI key)
-- [x] Loop broken on 28224
-- [x] Reconcile tags verbatim
-- [x] Validate: ALL PASSED
-- [x] Gate clear + attempt_completion shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1787996122566` — 8/29/2026, 9:18:10 AM PT — 88 turns
-
-**Original task:**
-
-```
-#SMS/Email Notifications Externships/NREMT and End of Class
-
-You have actually done it before. I need you to provide me with a page that has a list of notifications. This again may be already sitting on the reports.php page is a card link there, but the idea is that we are looking for the SMS messages and emails that are sent in regards to the students externship deadlines as well as NREMT deadlines near the end of the class. Again I believe you've already sent this before but I wanted to assess those to see which ones you need to turn off as that is creating some anxiety students with the mul
-```
-
-**Ideas referenced:** #15815, #1912, #1998, #20495, #2563, #2640, #2642, #26712, #26713, #26932, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28306 [deployed], #28307, #28308, #28310, #28316, #28330 [deployed], #28331 [deployed], #28369, #28370 [deployed], #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28683 [proposed], #5615, #64748, #92400
-
-**Last PICKUP PROMPT:**
-
-```
-ied evidence. Shipping the completion directly with a complete, properly-formed PICKUP PROMPT block.
-
-<attempt_completion>
-<result>
-Found it. The page already exists, it IS linked from reports.php, and the toggles genuinely stop the sends — I proved that live this window.
-
-**The page (Notification Control Center):**
-https://emsuniversity.com/emtskills/notifications/jobs.php
-(requires MasterAdmin / ITAdmin / Admin login; an unauthenticated curl returns 401 because it sits behind the role guard, which is correct).
-
-It is the "Notification Control Center" card on your reports.php page (the card states "Externship and NREMT reminders are highlighted for review"), and it links to this exact URL. There is a second card, "Student Notification Manager" → /emtskills/notifications/manage.php, but jobs.php is the one that lists every externship / NREMT / end-of-class deadline notification with per-job Pause / Activate / Delete controls plus a dedicated externship / NREMT / completion filter.
-
-**The toggle actually works (verified end-to-end this window):**
-The Pause button writes status='paused' into notification_job_registry via lib/NotificationGate.php. Every running sender cron calls NotificationGate::checkOrExit(slug) as its first action; when paused it logs the block and exits BEFORE sending. I proved the full chain live:
-- paused cron_under18_refresher_reminder → NotificationGate::isActive() returned false
-- restored it → returned true
-- gate re-stamped last_checked_at = 2026-08-29 09:13:03 PT
-
-So when a row shows the green "wired" pill, pausing it really stops that notification. Rows showing "not wired" carry an explicit warning: "Pausing here would not stop it."
-
-**The externship / NREMT / end-of-class notifications actually firing right now (all 6 wired + gated):**
-- cron_externship_sms_reminders — Externship Ride-Along SMS (every 30 min, 8am–8pm)
-- cron_externship_waiver_prestage — Externship Required Docs pre-stage (email, daily 9am)
-- cron_externship_additional_date_detector — Externship Additional Dates (email, hourly :15)
-- cron_externship_missing_sig_hold — Externship Missing Signature Hold (email, daily 12pm)
-- cron_under18_refresher_reminder — Under-18 NREMT Refresher Deadline (email, daily 6:30am)
-- cron_completion_warnings — 60-Day EMT Completion Window 4-message ladder (email+SMS, daily 5pm)
-
-These are the live deadline notifications in these categories. Pause whichever you want silenced from the Control Center and it stops for real.
-
-**Cleanup I did so the page never offers a toggle for a notification that does not exist:**
-Soft-deleted 4 dead registry rows that had no sender file anywhere and were never running: cron_externship_request_confirmation, cron_externship_pending_nudge, cron_externship_reminder, cron_externship_nremt_window_escalation (soft-delete = recoverable, audit row written for each).
-
-**Filed #28683 [proposed] for the one real follow-up:** 7 dormant-but-real sender files exist (cron_auto_nremt_confirmation, cron_certificate_completion_watchdog, cron_externship_skills_checklist_notify, cron_externship_auto_notify, cron_externship_notification_digest, cron_externship_60day_failer, cron_nremt_weekly_reminder) but they are NOT scheduled in crontab, so they are silent right now and toggling them does nothing. They need the one-line gate guard plus a schedule decision before they become controllable. Nothing live to turn off there today.
-
-**To use it:** open the link, apply the externship / NREMT / completion filter (or the externship_nremt quick filter), and Pause the jobs you want silenced. 
 ```

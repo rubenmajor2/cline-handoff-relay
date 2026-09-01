@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 8/31/2026, 4:19:43 PM PT | window: last 72h | 84 tasks | index total 1012 (parsed 3, cached 1009)
+Generated: 8/31/2026, 5:19:44 PM PT | window: last 72h | 84 tasks | index total 1012 (parsed 1, cached 1011)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788161048426` | 8/31/2026, 4:19:41 PM | 422 | 2365KB | #Joshua Qwen 3.8 27B |
+| `1788161048426` | 8/31/2026, 5:19:41 PM | 509 | 2665KB | #Joshua Qwen 3.8 27B |
 | `1788196060306` | 8/31/2026, 4:18:03 PM | 480 | 1537KB | #Argus Improvmeents |
 | `1788161302475` | 8/31/2026, 4:03:34 PM | 540 | 2194KB | #Grievances |
 | `1788212361951` | 8/31/2026, 3:36:22 PM | 166 | 547KB | #Nero Qwen 3.8 27B |
@@ -99,7 +99,7 @@ Generated: 8/31/2026, 4:19:43 PM PT | window: last 72h | 84 tasks | index total 
 
 ## Per-window detail
 
-### `1788161048426` — 8/31/2026, 4:19:41 PM PT — 422 turns
+### `1788161048426` — 8/31/2026, 5:19:41 PM PT — 509 turns
 
 **Original task:**
 

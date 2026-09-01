@@ -5,14 +5,14 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **216**
-- Last generated: 2026-09-01 00:51
+- Reversals tracked: **219**
+- Last generated: 2026-09-01 01:51
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 106 | 49% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 109 | 50% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 37 | 17% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 28 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 24 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
@@ -20,7 +20,7 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 ## Causal rules most often amended
 
-- Rule 317: 90 amendment(s)
+- Rule 317: 93 amendment(s)
 - Rule 297: 45 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-01** — amends clause 2 (acquisition gate): a TP=2 collective-viability claim requires a LIVE cross-tile collective probe (actual allreduce over 2 tiles reaching startup-complete), never an inference from a prior dated boot recipe. This session reversed 'TP=2 viable w
+- **2026-09-01** — Amends clause 2 (acquisition gate) for CONFIG values copied between hosts. Building the MiniCheck gate, I copied MiniCheckVerifier.php's endpoint list (127.0.0.1:11535/11455/11505) into an MCP that runs on a DIFFERENT host, and separately guessed the ssh alias
+- **2026-09-01** — Amends clause 2 (acquisition gate): a NULL/empty result from a GUESSED identifier (SHOW TABLES LIKE '%minicheck%' returning nothing) is NOT evidence about architecture. I asserted 'MiniCheck is not wired to Cline, nothing was checking my numbers' citing that e
 - **2026-09-01** — Amends clause 2 (acquisition gate): a coverage/backfill report showing '0 unclassified patterns' does NOT prove the runtime is quiet. Claimed 'zero failures since 08-30 20:32' while orchestrator_recipe_fires showed 43k live fires (33k unclassified fallback + 9
 - **2026-09-01** — Amends clause 1/2 (acquisition gate): declared 'TP=2 not viable on Joshua' from a single pidfd-IPC attempt after a GPU reset storm, WITHOUT checking the box's own proven TP=2 serving recipe first. Forensics then found unit backup service.bak-tp2-20260831 (pidf
-- **2026-09-01** — Amends clause 3 (escalation probe before declaring any wall) and the INSUFFICIENT_PROBE golden mode: an OUTAGE ROOT-CAUSE claim ("the box was asleep") is a wall-class claim requiring the box's own forensic record (pmset -g log sleep events, uptime, last reboot
-- **2026-09-01** — Carryover flip from earlier segment (same window): declared Julia/Claudia 'physically down / WG no route' based on stale Docker-WG IPs 10.100.0.15/.16; corrected to ALIVE via reverse SSH tunnels WOPR:2205/2206. Amends clause 2 (acquisition gate): host state mu
-- **2026-09-01** — Amends clause 2 (acquisition gate) + clause 3 (escalation probe): a fleet box was declared PHYSICALLY DOWN (WG dead, no route, 'physical action needed') after probing a STALE WireGuard IP (10.100.0.15/.16 from the old Docker-WG era in GLM53 tracker). The REAL 
 
 ### wrong premise
 

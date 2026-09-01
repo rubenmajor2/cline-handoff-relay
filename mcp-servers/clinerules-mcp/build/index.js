@@ -1213,6 +1213,183 @@ server.tool("get_rule91_template", "FIX 2 of #19173. Returns the EXACT rule-91 P
 // artifact, an idea #, or a build/test command) within one line. This scan is
 // deterministic, zero latency, and has no single point of failure. It is the
 // structural successor to the LLM judge for the deliverable-claim class.
+// ─── MINICHECK ENTAILMENT GATE (idea #29148, 2026-09-01) ───────────────────
+// Ruben approved the MiniCheck path and explicitly rejected the heavy judge:
+// "the true judge was a problem... we were choking out the lower level llm and
+// the entire router itself. So this is why we had the minicheck-verifier."
+//
+// MEASURED (lib/MiniCheckVerifier.php RCA header, idea #28256, production
+// truth_judge_log over 3,509 calls / 3 days):
+//   LLM-as-judge : 42.5s avg, 89.8s max, 25.7 CUMULATIVE HOURS in 3 days,
+//                  FAIL 77.4% / ERROR 14.6% / PASS 8.0%, genuine CONTRADICTED 1.2%
+//   MiniCheck    : 320ms warm, 6/6 correct on the fleet test set = 133x faster
+//
+// Three design choices carry the win, all copied from the CFA implementation:
+//   1. CHECKWORTHINESS FILTER — courtesy/boilerplate/questions never reach the
+//      checker. This alone removed 1,204 of 2,719 false FAILs on the email side.
+//   2. SENTENCE-LEVEL ENTAILMENT against evidence ALREADY retrieved (here: the
+//      session_probes ledger, verified 2026-09-01 at 1,458 rows / 96% usable).
+//   3. CONTRADICTION-ONLY VERDICT — a claim the evidence does not mention is
+//      UNMENTIONED, not a lie. Only CONTRADICTED blocks.
+//
+// FAIL-OPEN by construction: any transport error, timeout, or missing endpoint
+// returns zero findings. A verifier that blocks completions when it is unhealthy
+// is worse than no verifier (that is the choke this replaces).
+// ENDPOINT REALITY (measured 2026-09-01, do not "simplify" this back):
+// MiniCheckVerifier.php lists 127.0.0.1:11535/11455/11505 and that is CORRECT
+// **for the CFAs, which run ON WOPR** — those ports are WOPR-local reverse
+// tunnels to Cicero/Nero/Maximus. This MCP runs on the MAC. Measured from here:
+//   Mac  -> 11535=000, 11455=000, 11505=404 (unrelated service)
+//   WOPR -> 11535=200, 11455=200, 11505=000
+// So copying the CFA list verbatim would give a gate that ALWAYS fails open,
+// i.e. a verifier that looks installed and checks nothing. The Mac reaches the
+// tunnels through WOPR over the emsu SSH host, so the transport below shells to
+// WOPR and curls there. If this MCP is ever moved onto WOPR, set
+// CLINERULES_MINICHECK_LOCAL=1 and the direct loopback path is used instead.
+const MINICHECK_ENDPOINTS = [
+    "http://127.0.0.1:11535", // Cicero  — dedicated ollama, only minicheck loaded
+    "http://127.0.0.1:11455", // Nero    — secondary
+    "http://127.0.0.1:11505", // Maximus — tertiary
+];
+const MINICHECK_VIA_WOPR = process.env.CLINERULES_MINICHECK_LOCAL !== "1";
+// Host alias VERIFIED 2026-09-01 against ~/.ssh/config: "Host wopr / HostName
+// emsuniversity.com / User emsuserver / Port 2222". An earlier draft of this
+// line guessed "emsu", which does not exist in the config (grep -c "Host emsu"
+// = 0; ssh returned "Could not resolve hostname emsu" in 12ms). Because this
+// transport fails OPEN, that wrong alias produced a gate that looked installed,
+// never errored visibly, and checked NOTHING — the exact silent-no-op class this
+// whole gate exists to catch. The e2e test below is what caught it; keep it.
+const MINICHECK_SSH = process.env.CLINERULES_WOPR_SSH ?? "wopr";
+const MINICHECK_MODEL = "bespoke-minicheck";
+const MINICHECK_CLAIM_TIMEOUT_MS = 6000; // matches CFA CLAIM_TIMEOUT_S = 6
+const MINICHECK_MAX_CLAIMS = 8; // bound total latency: 8 x ~320ms warm
+// Checkworthiness filter. Returns only sentences that assert a FACT about system
+// state — never courtesy, questions, instructions, or rule-91 boilerplate.
+function minicheckSelectClaims(result_text) {
+    // Strip the pickup block: it is required boilerplate, not factual assertion.
+    const body = result_text.replace(/\u2550{5,}[\s\S]*$/, "");
+    const out = [];
+    const factShape = /\b(?:is|are|was|were|has|have|returned|shows?|found|measured|counted|serving|deployed|wired|logged|contains?)\b/i;
+    const notCheckworthy = /\?\s*$|^\s*(?:thanks|thank you|hi\b|hello\b|ok\b|okay\b|next:|todo:|pick up task|when done|open threads|reference ids|where we left off|files? (?:touched|read))/i;
+    for (const raw of body.split(/\n|(?<=\.)\s+/)) {
+        const t = raw.trim().replace(/^[-*\d.)\s]+/, "").trim();
+        if (t.length < 25 || t.length > 400)
+            continue;
+        if (notCheckworthy.test(t))
+            continue;
+        if (!factShape.test(t))
+            continue;
+        // Must carry a checkable particular: a number, an id, a path, or a port.
+        if (!/\d/.test(t))
+            continue;
+        if (!out.includes(t))
+            out.push(t);
+        if (out.length >= MINICHECK_MAX_CLAIMS)
+            break;
+    }
+    return out;
+}
+// One entailment call. Returns true (entailed), false (contradicted), or null
+// (transport failure — fail open, never guess).
+async function minicheckEntails(endpoint, evidence, claim) {
+    const payload = JSON.stringify({
+        model: MINICHECK_MODEL,
+        prompt: `Document: ${evidence.slice(0, 6000)}\nClaim: ${claim}`,
+        stream: false,
+        keep_alive: "45m",
+        options: { num_predict: 4, temperature: 0 },
+    });
+    const readVerdict = (raw) => {
+        let j = null;
+        try {
+            j = JSON.parse(raw);
+        }
+        catch {
+            return null;
+        }
+        const ans = String(j?.response ?? "").trim().toLowerCase();
+        if (ans.startsWith("yes"))
+            return true;
+        if (ans.startsWith("no"))
+            return false;
+        return null;
+    };
+    // WOPR-PROXIED PATH (default on the Mac). The minicheck ports are WOPR-local
+    // reverse tunnels, so we curl them ON WOPR over ssh and read stdout back.
+    if (MINICHECK_VIA_WOPR) {
+        try {
+            const { execFile } = await import("child_process");
+            const raw = await new Promise((resolve, reject) => {
+                const child = execFile("ssh", [
+                    "-o", "BatchMode=yes",
+                    "-o", "ConnectTimeout=5",
+                    "-o", "StrictHostKeyChecking=no",
+                    MINICHECK_SSH,
+                    `curl -s -m 6 ${endpoint}/api/generate -H 'Content-Type: application/json' --data-binary @-`,
+                ], { timeout: MINICHECK_CLAIM_TIMEOUT_MS, maxBuffer: 1024 * 1024 }, (err, stdout) => (err ? reject(err) : resolve(String(stdout || ""))));
+                child.stdin?.end(payload); // pass the JSON via stdin: no shell quoting hazard
+            });
+            return readVerdict(raw);
+        }
+        catch {
+            return null; // fail open
+        }
+    }
+    // DIRECT LOOPBACK PATH (only correct when this MCP runs ON WOPR).
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), MINICHECK_CLAIM_TIMEOUT_MS);
+    try {
+        const r = await fetch(endpoint + "/api/generate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: payload,
+            signal: ctrl.signal,
+        });
+        if (!r.ok)
+            return null;
+        return readVerdict(await r.text());
+    }
+    catch {
+        return null;
+    }
+    finally {
+        clearTimeout(t);
+    }
+}
+// ABSENCE-CLAIM HANDLING (Ruben's third approved item). Entailment checkers are
+// weakest exactly here, and an absence claim was tonight's actual false statement
+// ("MiniCheck is not wired to Cline", inferred from an empty SHOW TABLES on a
+// table name I invented). Entailment cannot confirm a negative from evidence that
+// simply does not mention the thing, so DO NOT send these to the checker at all.
+// Instead apply the deterministic rule the incident teaches: an absence claim must
+// cite a SEARCH BY NAME (grep for the class/function/service), never an empty
+// result from a guessed identifier. This is a form check, so it costs nothing.
+function minicheckAbsenceClaimScan(result_text) {
+    const body = result_text.replace(/\u2550{5,}[\s\S]*$/, "");
+    const findings = [];
+    const absenceShape = /\b(?:is|are|was|were)\s+(?:not|never)\s+(?:wired|connected|called|used|present|installed|running|logged|covered)\b|\bthere\s+(?:is|are)\s+no\b|\bdoes\s+not\s+exist\b|\bno\s+(?:such\s+)?(?:table|file|column|service|process|entry|row)s?\b|\bnothing\s+(?:was|is)\s+(?:checking|watching|logging|running)\b/i;
+    // A LEGITIMATE absence claim cites a by-name search of the source of truth.
+    const nameSearchEvidence = /\bgrep\b|\brg\b|\bsearch_files\b|\bcode\s*search\b|\bcallers?\b|\bcall\s*sites?\b|\breferences?\s+(?:to|in)\b|\bfind\s+\S*\s+-name\b|\bsystemctl\s+(?:cat|show)\b|\bcrontab\s+-l\b/i;
+    // The trap: an empty/NULL result from a discovery query used as PROOF.
+    const emptyResultProof = /\breturned\s+(?:zero|no|nothing|0)\b|\bempty\b|\bno\s+rows?\b|\bnot\s+found\b|\bSHOW\s+TABLES\s+LIKE\b|\bls:\s+cannot\s+access\b/i;
+    for (const raw of body.split(/\n|(?<=\.)\s+/)) {
+        const t = raw.trim();
+        if (t.length < 20 || t.length > 400)
+            continue;
+        if (!absenceShape.test(t))
+            continue;
+        if (nameSearchEvidence.test(t))
+            continue; // properly supported
+        if (emptyResultProof.test(t) || !/\bverified\s*:/i.test(t)) {
+            const clipped = t.slice(0, 120);
+            if (!findings.includes(clipped))
+                findings.push(clipped);
+        }
+        if (findings.length >= 4)
+            break;
+    }
+    return findings;
+}
 function claimProvenanceScan(result_text) {
     const findings = [];
     const lines = result_text.split("\n");
@@ -2608,6 +2785,97 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
                     "\n\nIDENTITY ECHO: FAILED (idea_exists.php unreachable after 3 attempts). " +
                         "This is now a HARD FAILURE, not a soft skip.";
             }
+        }
+    }
+    // ── R29148_MINICHECK: automatic entailment gate (2026-09-01) ────────────
+    // Ruben: "I wanna make it automatic" + "the true judge was a problem...
+    // choking out the lower level llm and the entire router itself. So this is
+    // why we had the minicheck-verifier."
+    //
+    // Latency design (the whole point): claims are checked in PARALLEL, so the
+    // worst case is ONE 6s timeout, not 8 serial ones. Warm path is ~320ms
+    // total. Compare the heavy judge at 42.5s avg / 89.8s max per completion.
+    //
+    // Part A (free): absence-claim form scan. Entailment cannot confirm a
+    // negative, so absence claims are checked deterministically instead.
+    {
+        const absenceFindings = minicheckAbsenceClaimScan(result_text);
+        if (absenceFindings.length > 0) {
+            failures.push(`R29148_ABSENCE_CLAIM: ${absenceFindings.length} absence claim(s) ("X is not wired", "there is no Y", "nothing was checking Z") are not backed by a BY-NAME search: ` +
+                absenceFindings.map((s) => `"${s}"`).join("; ") + `. ` +
+                `Source incident 2026-09-01: "MiniCheck is not wired to Cline" was inferred from an empty SHOW TABLES on an INVENTED table name; a grep for the class name then found 5 real call sites. ` +
+                `An empty result from an identifier YOU guessed is not evidence of absence. Before claiming a component is missing/unwired, grep the CLASS or FUNCTION or SERVICE name in the source tree and cite that search, or downgrade the claim to INFERENCE/UNKNOWN.`);
+        }
+    }
+    // Part B (~320ms warm): sentence-level entailment, contradiction-only.
+    if (task_id && task_id.trim().length > 0 && process.env.CLINERULES_MINICHECK !== "0") {
+        try {
+            const evRows = db.prepare("SELECT tool, artifact FROM session_probes WHERE task_id = ? ORDER BY id DESC LIMIT 40").all(task_id);
+            const evidence = evRows.map((r) => `${r.tool}: ${r.artifact ?? ""}`).join("\n");
+            const claims = minicheckSelectClaims(result_text);
+            // ── RELEVANCE PRECONDITION (added 2026-09-01, ~40 min after the gate
+            // shipped, because the gate's FIRST live run false-positived on this
+            // very file's own completion).
+            //
+            // WHAT HAPPENED: task 1788243351 had 8 probe rows, all from an EARLIER
+            // unrelated workstream (TDSHS PDF generation, Drive uploads). The gate
+            // compared 8 TRUE claims about tonight's MiniCheck build against that
+            // paperwork evidence and returned CONTRADICTED on all 8. MiniCheck was
+            // answering correctly -- the document genuinely does not support those
+            // sentences -- but the QUESTION was wrong, because unrelated evidence
+            // cannot adjudicate a claim.
+            //
+            // This is the same class as the 77%-false-alarm LLM judge: a checker
+            // that flags true statements trains agents to launder prose until it
+            // goes quiet, which is worse than no checker (rule 321 inversion).
+            //
+            // FIX: a claim is only checkable when the evidence is TOPICALLY RELATED
+            // to it. Require >=2 shared distinctive tokens (>=5 chars, not stopwords)
+            // between the claim and the probe text. Unrelated claim = UNMENTIONED =
+            // skipped, never CONTRADICTED. This preserves every true positive (a lie
+            // about a probe necessarily shares that probe's vocabulary) and removes
+            // the entire cross-workstream false-positive class.
+            const _evLower = evidence.toLowerCase();
+            const _relevant = (claim) => {
+                const toks = Array.from(new Set((claim.toLowerCase().match(/[a-z0-9_./:-]{5,}/g) || [])
+                    .filter((t) => !/^(?:returned|verified|probed|measured|confirmed|because|through|against|claims?|which|those|these|there|their|about|after|before|between|during|while|would|could|should|other|first|second)$/.test(t))));
+                let hits = 0;
+                for (const t of toks)
+                    if (_evLower.includes(t)) {
+                        hits++;
+                        if (hits >= 2)
+                            return true;
+                    }
+                return false;
+            };
+            const checkable = claims.filter(_relevant);
+            // Only run when we have BOTH evidence to check against and RELEVANT claims.
+            if (evidence.length > 40 && checkable.length > 0) {
+                // Pick the first endpoint that answers; probe them in parallel and use
+                // whichever responds. Endpoint health never blocks: all-null = skip.
+                const results = await Promise.all(checkable.map(async (c) => {
+                    for (const ep of MINICHECK_ENDPOINTS) {
+                        const verdict = await minicheckEntails(ep, evidence, c);
+                        if (verdict !== null)
+                            return { claim: c, entailed: verdict };
+                    }
+                    return { claim: c, entailed: null };
+                }));
+                // CONTRADICTION-ONLY: entailed===false is a contradiction. null (transport
+                // failure) and true both pass. A claim the evidence does not mention is
+                // UNMENTIONED, not a lie (the 77%-false-alarm lesson from the LLM judge).
+                const contradicted = results.filter((r) => r.entailed === false).map((r) => r.claim);
+                if (contradicted.length > 0) {
+                    failures.push(`R29148_MINICHECK_CONTRADICTED: ${contradicted.length} claim(s) are CONTRADICTED by this session's own probe evidence: ` +
+                        contradicted.map((s) => `"${s.slice(0, 140)}"`).join("; ") + `. ` +
+                        `The bespoke-minicheck entailment model compared each claim against the ${evRows.length} probe artifact(s) logged for task ${task_id} and found the evidence contradicts it. ` +
+                        `Re-read what your probes actually returned, then correct the claim, label it '(inference: ...)', or write UNKNOWN. ` +
+                        `(Contradiction-only gate: claims the evidence merely does not mention are NOT flagged.)`);
+                }
+            }
+        }
+        catch {
+            /* FAIL OPEN by design: a verifier that blocks when unhealthy is the choke this replaces. */
         }
     }
     const pass = failures.length === 0;

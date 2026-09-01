@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-01T18:30:18.622Z",
+ "generated_at": "2026-09-01T19:30:18.953Z",
  "counts": {
-  "parsed": 10,
-  "reused": 1018,
+  "parsed": 0,
+  "reused": 1028,
   "failed": 0,
   "total": 1028
  },
@@ -150083,13 +150083,13 @@
   },
   "1788237036746": {
    "task_id": "1788237036746",
-   "mtime": 1788287406045,
+   "mtime": 1788287458492,
    "created_at": "2026-09-01T04:30:36.746Z",
-   "last_modified": "2026-09-01T18:30:06.045Z",
-   "size_kb": 2553,
-   "turn_count": 683,
+   "last_modified": "2026-09-01T18:30:58.492Z",
+   "size_kb": 2570,
+   "turn_count": 686,
    "title": "#Joshua Qwen 3.8 27B TP=2\n\nGood lord 2 lanes on Joshua is extremely slow. -> __3. How many lanes on Joshua right now? Two active.__ Active/serving: joshua-qwen38-27b :8001 (this restore) + minicpm-v vision :11434. Retired/dead (per the 2026-08-30 \"NO 70B on Joshua\" directive): joshua-llama3.3-70b-vllm :8001 and joshua-llama3.3-70b :11434, plus the auto-llama3-3-70b artifact.\n\n\napproved -> 1. #29101 [proposed] — TP=2 W4A16 experiment: stop :8001, relaunch with --tensor-parallel-size 2 --max-model-len 16384 on the 19G int4 checkpoint, verify inter-card collectives via IPC exchange, watch host RAM. Needs approval (brief lane downtime).\n\nRemove it then as it does not help -. minicpm-v vision :11",
-   "pickup_prompt": "Causal rule 317 (clause 1).\\n\\n═══════════════════════════════════════════════\\nPICKUP PROMPT (paste into a fresh Cline window)\\n═══════════════════════════════════════════════\\nPick up task #29156 [deployed] — Joshua Qwen3.8-27B TP=2 permanent + lane census + disk triage.\\n\\nWhere we left off (verified 2026-09-01 11:25 PT):\\n- Joshua Qwen3.8-27B TP=2 serving on 10.100.0.4:8001 (restart soak passed: startup complete, decode 200 with reasoning tokens, fingerprint tp2-a04662d8). Registry line 852 updated to TP=2 SERVING. #29193 [deployed].\\n- Lane census: ONE Qwen lane on Joshua (:8001). :11434 is a separate ollama zoo (no minicpm-v, no 70B — 8/30 directive already satisfied).\\n- Down lanes (escalation-graded): Julia :11513, Claudia :11521 (tunnel alive/engine dead), Maximus :11530 (tunnel dead), BigMac 10.100.0.19:8000 (WG endpoint 000).\\n- Disk: root 78%. apport 9.9G purged. Snapd 6.3G left for Ruben's call.\\n- Stabilization shipped: decode-hang watchdog + journald 2G cap + rule 317 blip-class amendment (reindexed).\\n- Truth judge: first run FAIL (2 fixes), corrected; re-judge aborted fail-closed (reported honestly, no PASS claimed).\\n\\nOpen threads to drive next:\\n1. #29193 [deployed] — Restore the 4 down lanes: Julia/Claudia :11513 (engine dead behind alive tunnel), Claudia :11521, Maximus :11530 (launchd KeepAlive absent), BigMac 10.100.0.19:8000.\\n2. #29193 [deployed] — Ruben call on /var/lib/snapd 6.3G offload (not needed for vllm/docker) to reclaim further root space.\\n\\nReference IDs:\\n- Ideas filed: #29193 [deployed] (Joshua decode-hang watchdog + restart soak + TP=2 permanence)\\n- Files touched: /etc/litellm/frankenstein_registry.yaml (line 852, + .bak-tp2-20260901), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /home/emsusrvr2/joshua_qwen38_decode_watchdog.sh (on 10.100.0.4), /etc/systemd/journald.conf.d/99-size.conf (on 10.100.0.4), rule 317 file (clinerules_amend_rule)\\n\\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\\n═══════════════════════════════════════════════\", \"task_id\": \"joshua-lanes-disk-20260901\"}</arguments>\n</use_mcp_tool>",
+   "pickup_prompt": "). Causal rule 317 (clause 1).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #29156 [deployed] — Joshua Qwen3.8-27B TP=2 permanent + lane census + disk triage.\n\nWhere we left off (verified 2026-09-01 11:25 PT):\n- Joshua Qwen3.8-27B TP=2 serving on 10.100.0.4:8001 (restart soak passed: startup complete, decode 200 with reasoning tokens, fingerprint tp2-a04662d8). Registry line 852 updated to TP=2 SERVING. #29193 [deployed].\n- Lane census: ONE Qwen lane on Joshua (:8001). :11434 is a separate ollama zoo (no minicpm-v, no 70B — 8/30 directive already satisfied).\n- Down lanes (escalation-graded): Julia :11513, Claudia :11521 (tunnel alive/engine dead), Maximus :11530 (tunnel dead), BigMac 10.100.0.19:8000 (WG endpoint 000).\n- Disk: root 78%. apport 9.9G purged. Snapd 6.3G left for Ruben's call.\n- Stabilization shipped: decode-hang watchdog + journald 2G cap + rule 317 blip-class amendment (reindexed).\n- Truth judge: first run FAIL (2 fixes), corrected; re-judge aborted fail-closed (reported honestly, no PASS claimed).\n\nOpen threads to drive next:\n1. #29193 [deployed] — Restore the 4 down lanes: Julia/Claudia :11513 (engine dead behind alive tunnel), Claudia :11521, Maximus :11530 (launchd KeepAlive absent), BigMac 10.100.0.19:8000.\n2. #29193 [deployed] — Ruben call on /var/lib/snapd 6.3G offload (not needed for vllm/docker) to reclaim further root space.\n\nReference IDs:\n- Ideas filed: #29193 [deployed] (Joshua decode-hang watchdog + restart soak + TP=2 permanence)\n- Files touched: /etc/litellm/frankenstein_registry.yaml (line 852, + .bak-tp2-20260901), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /home/emsusrvr2/joshua_qwen38_decode_watchdog.sh (on 10.100.0.4), /etc/systemd/journald.conf.d/99-size.conf (on 10.100.0.4), rule 317 file (clinerules_amend_rule)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1127": null,
     "1130": null,
@@ -151101,11 +151101,11 @@
   },
   "1788284221639": {
    "task_id": "1788284221639",
-   "mtime": 1788287396312,
+   "mtime": 1788287545808,
    "created_at": "2026-09-01T17:37:01.639Z",
-   "last_modified": "2026-09-01T18:29:56.312Z",
-   "size_kb": 1011,
-   "turn_count": 409,
+   "last_modified": "2026-09-01T18:32:25.808Z",
+   "size_kb": 1050,
+   "turn_count": 416,
    "title": "#September 1 Externship Switchover\n\nCouple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and I can answer them for you using the browser AI.",
    "pickup_prompt": null,
    "ideas": {

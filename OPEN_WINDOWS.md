@@ -6,12 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 11:30:18 AM PT | window: last 72h | 80 tasks | index total 1028 (parsed 10, cached 1018)
+Generated: 9/1/2026, 12:30:18 PM PT | window: last 72h | 77 tasks | index total 1028 (parsed 0, cached 1028)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788237036746` | 9/1/2026, 11:30:06 AM | 683 | 2553KB | #Joshua Qwen 3.8 27B TP=2 |
-| `1788284221639` | 9/1/2026, 11:29:56 AM | 409 | 1011KB | #September 1 Externship Switchover |
+| `1788284221639` | 9/1/2026, 11:32:25 AM | 416 | 1050KB | #September 1 Externship Switchover |
+| `1788237036746` | 9/1/2026, 11:30:58 AM | 686 | 2570KB | #Joshua Qwen 3.8 27B TP=2 |
 | `1788244675583` | 9/1/2026, 11:26:38 AM | 546 | 1907KB | #Kaizon Learner status |
 | `1788286330120` | 9/1/2026, 11:24:52 AM | 70 | 414KB | #30 Day Deadline Push out to 90 Days |
 | `1788285768610` | 9/1/2026, 11:24:17 AM | 98 | 545KB | #EMT Skills Slowness |
@@ -87,15 +87,26 @@ Generated: 9/1/2026, 11:30:18 AM PT | window: last 72h | 80 tasks | index total 
 | `1788042719672` | 8/29/2026, 3:58:34 PM | 205 | 709KB | #Grievances |
 | `1788036414021` | 8/29/2026, 2:28:28 PM | 214 | 493KB | #GLM 5.3 Local and Frankenstein LLM |
 | `1788027890157` | 8/29/2026, 1:59:23 PM | 120 | 526KB | #/emtskills slowness |
-| `1788029135575` | 8/29/2026, 12:04:36 PM | 114 | 254KB | #GLM 5.3 Local/Frankenstein-LLM Routing |
-| `1788027731969` | 8/29/2026, 12:04:22 PM | 322 | 596KB | #Overdue Grievances and Rule 317  |
-| `1788022793741` | 8/29/2026, 11:33:04 AM | 158 | 1779KB | #Frankenstein LLM Routing Probe |
 
 ---
 
 ## Per-window detail
 
-### `1788237036746` — 9/1/2026, 11:30:06 AM PT — 683 turns
+### `1788284221639` — 9/1/2026, 11:32:25 AM PT — 416 turns
+
+**Original task:**
+
+```
+#September 1 Externship Switchover
+
+Couple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and 
+```
+
+**Ideas referenced:** #059669, #111827, #1486, #1487, #1488, #1489, #1490, #1492, #1493, #1494, #166534, #19419, #20315, #25821, #25822, #2631, #26663, #27100, #27492, #28613, #28958, #29011 [deployed], #29196 [proposed], #29197 [proposed], #29199 [proposed], #29200 [proposed], #29201 [deployed], #29202 [proposed], #29203 [deployed], #29213 [proposed], #29214 [proposed], #374151, #856404, #92400, #939803, #939806
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788237036746` — 9/1/2026, 11:30:58 AM PT — 686 turns
 
 **Original task:**
 
@@ -113,23 +124,34 @@ approved -> 1. #29101 [proposed] — TP=2 W4A16 experiment: stop :8001, relaunch
 **Last PICKUP PROMPT:**
 
 ```
-Causal rule 317 (clause 1).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #29156 [deployed] — Joshua Qwen3.8-27B TP=2 permanent + lane census + disk triage.\n\nWhere we left off (verified 2026-09-01 11:25 PT):\n- Joshua Qwen3.8-27B TP=2 serving on 10.100.0.4:8001 (restart soak passed: startup complete, decode 200 with reasoning tokens, fingerprint tp2-a04662d8). Registry line 852 updated to TP=2 SERVING. #29193 [deployed].\n- Lane census: ONE Qwen lane on Joshua (:8001). :11434 is a separate ollama zoo (no minicpm-v, no 70B — 8/30 directive already satisfied).\n- Down lanes (escalation-graded): Julia :11513, Claudia :11521 (tunnel alive/engine dead), Maximus :11530 (tunnel dead), BigMac 10.100.0.19:8000 (WG endpoint 000).\n- Disk: root 78%. apport 9.9G purged. Snapd 6.3G left for Ruben's call.\n- Stabilization shipped: decode-hang watchdog + journald 2G cap + rule 317 blip-class amendment (reindexed).\n- Truth judge: first run FAIL (2 fixes), corrected; re-judge aborted fail-closed (reported honestly, no PASS claimed).\n\nOpen threads to drive next:\n1. #29193 [deployed] — Restore the 4 down lanes: Julia/Claudia :11513 (engine dead behind alive tunnel), Claudia :11521, Maximus :11530 (launchd KeepAlive absent), BigMac 10.100.0.19:8000.\n2. #29193 [deployed] — Ruben call on /var/lib/snapd 6.3G offload (not needed for vllm/docker) to reclaim further root space.\n\nReference IDs:\n- Ideas filed: #29193 [deployed] (Joshua decode-hang watchdog + restart soak + TP=2 permanence)\n- Files touched: /etc/litellm/frankenstein_registry.yaml (line 852, + .bak-tp2-20260901), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /home/emsusrvr2/joshua_qwen38_decode_watchdog.sh (on 10.100.0.4), /etc/systemd/journald.conf.d/99-size.conf (on 10.100.0.4), rule 317 file (clinerules_amend_rule)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════", "task_id": "joshua-lanes-disk-20260901"}</arguments>
-</use_mcp_tool>
+). Causal rule 317 (clause 1).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #29156 [deployed] — Joshua Qwen3.8-27B TP=2 permanent + lane census + disk triage.
+
+Where we left off (verified 2026-09-01 11:25 PT):
+- Joshua Qwen3.8-27B TP=2 serving on 10.100.0.4:8001 (restart soak passed: startup complete, decode 200 with reasoning tokens, fingerprint tp2-a04662d8). Registry line 852 updated to TP=2 SERVING. #29193 [deployed].
+- Lane census: ONE Qwen lane on Joshua (:8001). :11434 is a separate ollama zoo (no minicpm-v, no 70B — 8/30 directive already satisfied).
+- Down lanes (escalation-graded): Julia :11513, Claudia :11521 (tunnel alive/engine dead), Maximus :11530 (tunnel dead), BigMac 10.100.0.19:8000 (WG endpoint 000).
+- Disk: root 78%. apport 9.9G purged. Snapd 6.3G left for Ruben's call.
+- Stabilization shipped: decode-hang watchdog + journald 2G cap + rule 317 blip-class amendment (reindexed).
+- Truth judge: first run FAIL (2 fixes), corrected; re-judge aborted fail-closed (reported honestly, no PASS claimed).
+
+Open threads to drive next:
+1. #29193 [deployed] — Restore the 4 down lanes: Julia/Claudia :11513 (engine dead behind alive tunnel), Claudia :11521, Maximus :11530 (launchd KeepAlive absent), BigMac 10.100.0.19:8000.
+2. #29193 [deployed] — Ruben call on /var/lib/snapd 6.3G offload (not needed for vllm/docker) to reclaim further root space.
+
+Reference IDs:
+- Ideas filed: #29193 [deployed] (Joshua decode-hang watchdog + restart soak + TP=2 permanence)
+- Files touched: /etc/litellm/frankenstein_registry.yaml (line 852, + .bak-tp2-20260901), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /home/emsusrvr2/joshua_qwen38_decode_watchdog.sh (on 10.100.0.4), /etc/systemd/journald.conf.d/99-size.conf (on 10.100.0.4), rule 317 file (clinerules_amend_rule)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
 ```
-
-### `1788284221639` — 9/1/2026, 11:29:56 AM PT — 409 turns
-
-**Original task:**
-
-```
-#September 1 Externship Switchover
-
-Couple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and 
-```
-
-**Ideas referenced:** #059669, #111827, #1486, #1487, #1488, #1489, #1490, #1492, #1493, #1494, #166534, #19419, #20315, #25821, #25822, #2631, #26663, #27100, #27492, #28613, #28958, #29011 [deployed], #29196 [proposed], #29197 [proposed], #29199 [proposed], #29200 [proposed], #29201 [deployed], #29202 [proposed], #29203 [deployed], #29213 [proposed], #29214 [proposed], #374151, #856404, #92400, #939803, #939806
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788244675583` — 9/1/2026, 11:26:38 AM PT — 546 turns
 
@@ -2914,94 +2936,4 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
-```
-
-### `1788029135575` — 8/29/2026, 12:04:36 PM PT — 114 turns
-
-**Original task:**
-
-```
-#GLM 5.3 Local/Frankenstein-LLM Routing
-
-Combine all below analysis top part is probably more correct than bottom part, but all need addressing and possibly reprobing. You may need also to create a tracking document for your reference. 
-
-Go ahead and judge the speed. 
-
-OK we have a problem with this 30% thing it's just being used as an excuse to not use the GLM ring. The idea behind 30% was to it ensure that the GLM 5.3 was actually picked. And now what I'm seeing is that only the 120 B is being picked. Which is kind of crazy I'm not exactly what we were intending at all in the first place so 
-```
-
-**Ideas referenced:** #11316, #12584, #13831, #13874, #1807, #1912, #19903, #2050, #2168, #2174, #25185, #25764, #2582, #26400, #2647, #2653, #2654, #2659, #2662, #2663, #2665 [deployed], #26932, #27243, #28586, #28596, #28622, #28704 [proposed], #28705 [proposed], #28706 [proposed], #45425
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788027731969` — 8/29/2026, 12:04:22 PM PT — 322 turns
-
-**Original task:**
-
-```
-#Overdue Grievances and Rule 317 
-
-OK for Oliver, he needs to actually fill out the form for the grievance, but can you first tell me whether or not he actually has finished the class or what's going on with him exactly?
-
-Also I need to know what you were talking about regarding the vision doorman. The vision doorman needs to be Qwen 3.8 27B (preferably) or Qwen 3.8 max. I asked you to check and see how we could get these working. They are supposed to be superior to Kimi K3 and Sonnet 5. Check with the community and see how you can make sure that these are working properly. They work just fine
-```
-
-**Ideas referenced:** #1807, #18329, #20549, #2544, #26908, #28034, #28118, #28307, #28609 [proposed], #28610 [proposed], #28619 [proposed], #28629 [deployed], #28631 [proposed], #28635 [deployed], #28714 [deployed], #9086, #9168, #9339
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788022793741` — 8/29/2026, 11:33:04 AM PT — 158 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM Routing Probe
-
-Please pro Frankenstein LLM and tell me exactly which underlying LLM's have been used in the last six hours. I need you to dive into them according to cline rules. I do not care about how many turns frankenstein llm or frankenstein tools did. I need you to actually look inside each of those LLMs to see what individual LLMs are being used for iterationg in cline, argus, batch. I need to see them separated in a table. I need them actually probed. Do not give me stale or inaccurate info. Crazy I have to say that, but I need the actual info, not something stale or
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12314, #12365, #12430, #12477, #12618, #12689, #12708, #12824, #12872, #12878, #13108, #13202, #13703, #16163, #16265, #16304, #16718, #16844, #18312, #18326, #18868, #19100 [executing], #19102 [executing], #19126 [rejected], #19134 [executing], #19135 [executing], #19143 [executing], #19144 [executing], #19160 [executing], #19161 [executing], #19163 [executing], #19166 [executing], #19167 [executing], #19168 [executing], #19169 [executing], #19338, #1965, #1968, #19686, #1969, #1970, #1972, #1973, #1998, #2050, #25097, #25150, #25185, #2537, #25764, #2579, #25991 [approved], #26617, #2664, #26908, #26923, #27100, #27259, #27634 [executing], #27635 [executing], #27652, #27933 [deployed], #28034, #28238, #28704 [proposed], #28705 [proposed], #28706 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
- Qwen3.8 slander cannot recur.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #28705 [proposed] — Frankenstein routing RCA + repair drive (GLM floor, dead lanes, doorman swap, 317 strengthening).
-
-Where we left off (verified 2026-08-29 11:23 PT):
-- GLM 30% floor live but at 0/50: ring :8210 HTTP-200 yet decode-dead (verified: ssh_command curl chat/completions 0 bytes in 20.0s; floor window file glm_pct=0.0 vs floor_pct=30.0)
-- Pool collapsed to BigMac: 5/8 upstreams dead (verified: ssh_command adapter CANARY lines 11:05 PDT reset/timeout as quoted); Artemis 3x empty-200 quarantines; BigMac 4,096/4,119 by elimination
-- Julia = Qwen3.8-27B-FP8 now (NOT 235B), crash-looping (verified: ssh_command on-box ls ~/models + crash logs 10:32/11:00); registry julia-235b entry stale
-- Vision doorman swap only half-wired: config has qwen3.8-max but _router_core.py:5928-5973 hardcodes kimi/sonnet 50/50 (verified: ssh_command grep lines 5929/5961); 125+96 stale picks in 6h
-- Registry served_ctx raise 131072→262144 on all three Qwen3.8-27B lanes applied this window (verified: ssh_command grep post-patch; HF card via fetch: 262K native / 1M extensible); bug library entry 2664; clinerule 324 indexed
-- Rule 317 clause 12 added + amendment ledger recorded (aggregation integrity)
-
-Open threads to drive next:
-1. #28704 [proposed] — wire qwen3.8-max into doorman selection code + safe-restart + audit readback; NEEDS RUBEN DECISION: solo vs 50/50 with minicpm-v
-2. #28705 [proposed] — Frankenstein Doctor on GLM ring wedge + revive Claudia/Nero/Joshua tunnels + repair Julia crash-loop + raise --max-model-len to 262144 in serve scripts + consider removing stale Cesar/Cato pool members
-3. #28706 [proposed] — retire 8 zombie frankenstein-405b cron callers, remove registry row, verify 0 picks for 24h
-
-Reference IDs:
-- Ideas filed: #28704 [proposed], #28705 [proposed], #28706 [proposed] (all efficiency_priority=1; ids returned by create_idea this session, tags derived server-side by reconcile_ideas)
-- Ideas closed: none
-- Files touched: /etc/litellm/frankenstein_registry.yaml (+ .bak-2664-20260829), ~/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md, ~/Documents/Cline/Rules-archive/324-model-capability-claims-cite-the-card.md, ~/Documents/Cline/Rules/_RULE_TREE.md
-
-# Reversal Log
-- 'fleet healthy, BigMac dominant by design' → corrected: pool collapsed 5/8 dead, BigMac last survivor | insufficient probe | rule 317 clause 12 added (317-reversal-triggers-297-and-rule-update.md, amendment ledger recorded)
-- 'julia-235b + frankenstein-405b rows in served table' → corrected: Julia runs Qwen3.8-27B-FP8 crash-looping; 405B nonexistent since 2026-07-19 | stale assumption | rule 317 clause 12(d) (same amendment)
-- 'GLM barely used (20 reqs)' without mechanism → corrected: 30% floor armed but ring decode-dead, window 0/50 | insufficient probe | rule 317 clause 12 (same amendment)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] RCA complete: GLM floor 0/50 (ring decode-dead), pool collapse 5/8 dead, Julia crash-looping Qwen3.8-27B-FP8, doorman half-wired, Artemis quarantines, 405b zombies
-- [x] Rule 317 strengthened: amendment ledger + numbered clause 12 + reindexed
-- [x] Qwen3.8-27B capability: HF card 262K native / 1M extensible confirmed; bug library 2664; registry caps raised; clinerule 324 indexed
-- [x] Filed #28704/#28705/#2870
 ```

@@ -5,22 +5,22 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **224**
-- Last generated: 2026-09-01 11:02
+- Reversals tracked: **227**
+- Last generated: 2026-09-01 12:03
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 113 | 50% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
-| wrong premise | 37 | 17% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
+| insufficient probe | 116 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| wrong premise | 37 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 29 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 24 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
 | stale assumption | 21 | 9% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 97 amendment(s)
+- Rule 317: 99 amendment(s)
 - Rule 297: 45 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 322: 10 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-01** — Amends rule 263 (verify before claim): before INSERT into an enumerated column (orchestrator_ideas.domain), probe the column definition first. An unverified enum value is silently rejected and stored as empty, which is an unverified write. Corrected 29208's do
+- **2026-09-01** — Amends clause 1 (fleet/routing state) and adds a numbered blip-class rule: a single HTTP-000 on a reverse-tunnel port alias (127.0.0.1:NNNN on WOPR) is NOT a down-model verdict and MUST be recorded UNVERIFIED, never DOWN — the 000 may be a tunnel blip or stale
+- **2026-09-01** — Amends clause 3 (escalation probe / claim-scope): a bug fix that CHANGES A POPULATION COUNT is not verified by the new count alone. Before reporting the delta as the win, run the downstream consumer of that population against its own gate and confirm the two a
 - **2026-09-01** — Amends clause 3 (escalation probe before declaring any wall): on 2026-09-01 the TastyBot task declared a credentials wall (no TASTY_API_TOKEN, no sync code) after probing only the EMSU server and Mac dotfiles. The real, already-authorized TastyBot program (OAu
 - **2026-09-01** — Amends clause 2 (acquisition gate): a tool output that prints APPEND_OK / exit 0 is not proof of a write — the artifact content itself must be re-read. First GLM53 tracker append attempt printed APPEND_OK while the write had failed with Permission denied (stde
-- **2026-09-01** — Amends clause 2 (acquisition gate): an absence-of-traffic observation is NOT evidence of low usage until the surface itself has been invoked end to end this window. The prior window read argus_analytics=0 rows/7d and reported it as "no real traffic", when ever
-- **2026-09-01** — Within-window reversal: I declared 'TP=2 cannot serve on this stack today' after one env variant (CCL_ATL_SHM=1 + FI_PROVIDER=shm) wedged at shm_broadcast. Ruben then said 'babysit it to serving.' The very next variant (remove CCL_ATL_SHM + FI_PROVIDER=tcp) re
-- **2026-09-01** — amends clause 2 (acquisition gate): a TP=2 collective-viability claim requires a LIVE cross-tile collective probe (actual allreduce over 2 tiles reaching startup-complete), never an inference from a prior dated boot recipe. This session reversed 'TP=2 viable w
 
 ### wrong premise
 

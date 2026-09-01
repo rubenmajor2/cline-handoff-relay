@@ -2853,17 +2853,39 @@ server.tool("clinerules_validate_completion", "PRE-COMPLETION GATE (idea #16224)
             if (evidence.length > 40 && checkable.length > 0) {
                 // Pick the first endpoint that answers; probe them in parallel and use
                 // whichever responds. Endpoint health never blocks: all-null = skip.
+                //
+                // ── NEGATION-PROBE (added 2026-09-01, ~12h after the gate shipped) ──
+                // Live measurement (task 1788244626168): bespoke-minicheck answers "No"
+                // for TRUE-but-paraphrased claims — its "No" means "not verbatim-
+                // supported by the document", NOT "contradicted". A completion quoting
+                // its own probes verbatim was blocked 5 validation rounds in a row on
+                // claims that were straightforwardly true. Measured discrimination:
+                //   doc: "ping returned 100% loss; port 11535=200"
+                //   claim "host is off-network"            -> No  (true inference!)
+                //   claim "port 11535 returned HTTP 500"   -> No  (actually false)
+                //   NEGATION "host is NOT off-network"     -> No  <- negation ALSO unsupported
+                //   NEGATION "11535 did NOT return 500"    -> Yes <- negation IS entailed
+                // So the real contradiction test is two-step: claim gets "No" AND the
+                // claim's negation gets "Yes". If both directions are "No" the evidence
+                // simply doesn't settle it (UNMENTIONED) — never a block. Cost: one
+                // extra ~320ms call ONLY for claims that failed step 1.
                 const results = await Promise.all(checkable.map(async (c) => {
                     for (const ep of MINICHECK_ENDPOINTS) {
                         const verdict = await minicheckEntails(ep, evidence, c);
-                        if (verdict !== null)
-                            return { claim: c, entailed: verdict };
+                        if (verdict === true)
+                            return { claim: c, entailed: true };
+                        if (verdict === false) {
+                            // Step 2: is the NEGATION entailed? Only then is it a real
+                            // contradiction rather than an unmentioned/paraphrased claim.
+                            const negVerdict = await minicheckEntails(ep, evidence, `It is false that ${c}`);
+                            return { claim: c, entailed: negVerdict === true ? false : null };
+                        }
                     }
                     return { claim: c, entailed: null };
                 }));
-                // CONTRADICTION-ONLY: entailed===false is a contradiction. null (transport
-                // failure) and true both pass. A claim the evidence does not mention is
-                // UNMENTIONED, not a lie (the 77%-false-alarm lesson from the LLM judge).
+                // CONTRADICTION-ONLY: entailed===false now means "claim unsupported AND
+                // its negation entailed" — a genuine contradiction. null (transport
+                // failure or merely-unmentioned) and true both pass.
                 const contradicted = results.filter((r) => r.entailed === false).map((r) => r.claim);
                 if (contradicted.length > 0) {
                     failures.push(`R29148_MINICHECK_CONTRADICTED: ${contradicted.length} claim(s) are CONTRADICTED by this session's own probe evidence: ` +

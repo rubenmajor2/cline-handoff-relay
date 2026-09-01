@@ -837,3 +837,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate): a NULL/empty result from a GUESSED identifier (SHOW TABLES LIKE '%minicheck%' returning nothing) is NOT evidence about architecture. I asserted 'MiniCheck is not wired to Cline, nothing was checking my numbers' citing that empty result as proof. grep -rln MiniCheckVerifier then returned 5 real callers (argus_proxy.php, AgentReplyPipeline.php, SMSAIResponder.php, mailer.php, cron_minicheck_skip_watch.php) and the class logs to truth_judge_log, whose surface column DEFAULTS to 'cline'. Clause 2 now requires: before any claim that a component is absent or unwired, grep for the CLASS/FUNCTION name in code, never infer absence from a guessed table name. Absence of a name you invented is not absence of the system.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 08:48 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788243351
+- RCA bucket: insufficient probe
+- Trigger pattern: Copying host-relative config (loopback ports, ssh aliases, paths) from a component on another host without re-probing from the new host, in a fail-open code path where the error is invisible
+- Reversal note: Amends clause 2 (acquisition gate) for CONFIG values copied between hosts. Building the MiniCheck gate, I copied MiniCheckVerifier.php's endpoint list (127.0.0.1:11535/11455/11505) into an MCP that runs on a DIFFERENT host, and separately guessed the ssh alias 'emsu'. Both are the same defect: a config value valid in its ORIGINAL host context was reused without probing it from the NEW context. Measured: Mac curl returned 000/000/404 while WOPR returned 200/200/000; grep -c 'Host emsu' returned 0. Because the gate fails open, either error alone would have produced a verifier that looked installed and checked nothing. Clause 2 now requires: when copying an endpoint, port, host alias, or path from another component, probe it FROM THE HOST THE NEW CODE RUNS ON before shipping, and for any fail-open component add an end-to-end test that proves it returns a real verdict, since a silent no-op is indistinguishable from a healthy pass.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 08:50 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: joshua-tp2
+- RCA bucket: insufficient probe
+- Trigger pattern: Inferring collective viability from a prior boot on a different date or from env-flag presence instead of a live 2-tile allreduce probe this window
+- Reversal note: amends clause 2 (acquisition gate): a TP=2 collective-viability claim requires a LIVE cross-tile collective probe (actual allreduce over 2 tiles reaching startup-complete), never an inference from a prior dated boot recipe. This session reversed 'TP=2 viable with proven 8/22 recipe' -> definitive wall: ProcessGroupXCCL::initXCCLComm/allreduce_impl crashes on BOTH ray and mp executors after stale-ray cleanup, so oneCCL cannot create a 2-tile communicator on Joshua with this image/driver.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

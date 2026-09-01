@@ -6,18 +6,23 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 10:30:17 AM PT | window: last 72h | 76 tasks | index total 1023 (parsed 9, cached 1014)
+Generated: 9/1/2026, 11:30:18 AM PT | window: last 72h | 80 tasks | index total 1028 (parsed 10, cached 1018)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788245681701` | 9/1/2026, 10:29:54 AM | 349 | 6409KB | #Email CFA Issue |
-| `1788237036746` | 9/1/2026, 10:29:42 AM | 609 | 2321KB | #Joshua Qwen 3.8 27B TP=2 |
-| `1788280195067` | 9/1/2026, 10:29:40 AM | 181 | 855KB | #Frankenstein LLM Reouting (individual LLMs) |
-| `1788280946573` | 9/1/2026, 10:28:54 AM | 293 | 1101KB | #VERITAS |
-| `1788244675583` | 9/1/2026, 10:26:56 AM | 440 | 1580KB | #Kaizon Learner status |
+| `1788237036746` | 9/1/2026, 11:30:06 AM | 683 | 2553KB | #Joshua Qwen 3.8 27B TP=2 |
+| `1788284221639` | 9/1/2026, 11:29:56 AM | 409 | 1011KB | #September 1 Externship Switchover |
+| `1788244675583` | 9/1/2026, 11:26:38 AM | 546 | 1907KB | #Kaizon Learner status |
+| `1788286330120` | 9/1/2026, 11:24:52 AM | 70 | 414KB | #30 Day Deadline Push out to 90 Days |
+| `1788285768610` | 9/1/2026, 11:24:17 AM | 98 | 545KB | #EMT Skills Slowness |
+| `1788284259715` | 9/1/2026, 11:22:09 AM | 170 | 774KB | #SMS and Email Notifications |
+| `1788281756491` | 9/1/2026, 11:10:32 AM | 236 | 897KB | #TastyBot |
+| `1788280195067` | 9/1/2026, 11:08:57 AM | 300 | 1369KB | #Frankenstein LLM Reouting (individual LLMs) |
+| `1788285310173` | 9/1/2026, 11:03:32 AM | 52 | 301KB | #Florida CE Program Approval |
+| `1788280946573` | 9/1/2026, 11:03:10 AM | 296 | 1134KB | #VERITAS |
+| `1788196060306` | 9/1/2026, 10:59:21 AM | 1344 | 4264KB | #Argus Improvmeents |
+| `1788245681701` | 9/1/2026, 10:30:19 AM | 350 | 6417KB | #Email CFA Issue |
 | `1788244626168` | 9/1/2026, 10:25:51 AM | 428 | 2667KB | #CFA Learner status |
-| `1788281756491` | 9/1/2026, 10:20:07 AM | 114 | 393KB | #TastyBot |
-| `1788196060306` | 9/1/2026, 10:17:07 AM | 1332 | 4224KB | #Argus Improvmeents |
 | `1788281168059` | 9/1/2026, 10:15:30 AM | 175 | 429KB | #Safely Increasing Cline/Argus/Executor Lanes |
 | `1788160972127` | 9/1/2026, 4:56:50 AM | 386 | 2175KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788229361019` | 9/1/2026, 2:05:21 AM | 546 | 3593KB | #Safely Increasing Cline/Argus/Executor Lanes |
@@ -85,57 +90,12 @@ Generated: 9/1/2026, 10:30:17 AM PT | window: last 72h | 76 tasks | index total 
 | `1788029135575` | 8/29/2026, 12:04:36 PM | 114 | 254KB | #GLM 5.3 Local/Frankenstein-LLM Routing |
 | `1788027731969` | 8/29/2026, 12:04:22 PM | 322 | 596KB | #Overdue Grievances and Rule 317  |
 | `1788022793741` | 8/29/2026, 11:33:04 AM | 158 | 1779KB | #Frankenstein LLM Routing Probe |
-| `1788021587569` | 8/29/2026, 10:46:18 AM | 602 | 858KB | #GLM 5.3 Local |
 
 ---
 
 ## Per-window detail
 
-### `1788245681701` — 9/1/2026, 10:29:54 AM PT — 349 turns
-
-**Original task:**
-
-```
-#Email CFA Issue
-
-Im getting tired of seeing this placehodler response over and over again. Why does this happen isntead of the Email CFA actually answering the underlying question? How do we resolve it so that it does going forward?
-```
-
-**Ideas referenced:** #1119, #12206, #12687, #128260, #13440, #14132, #15669, #15670, #16152, #16153, #16154, #16473, #16732, #17446, #177851, #177914, #18713, #19437, #19682, #20346, #21710, #22060, #2316, #23184, #2323, #23276, #23477, #23710, #24990, #252532, #2563, #25895, #25896, #25943, #25984, #25986, #26320, #26334, #26349, #26592, #26593, #26661, #26663, #26851, #27120, #27492, #28043, #28221, #28226, #28306, #28612, #28613, #29011, #29132 [deployed], #29142 [deployed], #29143, #29145 [proposed], #29172 [deployed], #29232, #3237, #32548, #32584, #3572, #366377, #4007, #4013, #4991, #5298, #5447, #5646, #5908, #6064, #6106, #6111, #61286, #6168, #6228, #6670, #6723, #6751, #7174, #7206, #7207, #7317, #7356, #7872, #7906, #7907, #7925, #8103, #813772, #9077, #9086, #9090, #9109, #9132, #9158, #9173, #9193, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-this turn hit its tool budget.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up — Build the PRE-SEND HOLLOW-PLACEHOLDER GATE so "monitor your email" can never ship again. (Ruben steer: prompt text is not enough; need structural guarantee; "We need a better guarantee".)
-
-Where we left off (verified 2026-09-01 ~09:58 PT):
-- Root cause fixed: placeholder was literally instructed in 4 prompt/KB files — ALL 7 lines patched, lint-clean, verified gone. Idea #29172 [deployed].
-- Remaining work is a MECHANICAL pre-send gate. Exact insertion points already located:
-  - `lib/AIReasoningLeakScanner.php` — add `scanHollowPlaceholder(string $text, array $toolsUsed): array` + `hollowPlaceholderFallback()` right after `scanReceiptClaim`/`receiptClaimFallback` (lines ~745-820). Pattern: block replies that are ONLY deflections (monitor email / under review / team will follow up) when NO lookup tool (get_payment_status, get_student_skills_status, get_certificate_readiness, get_externship_info, check_moodle_enrollment, etc.) was called.
-  - `lib/EmailAIResponder.php` — wire into the guard chain at line ~2680 (the receipt-claim/money-promise block) plus `lib/AgentReplyPipeline.php::guard()` at the `scanReceiptClaim` step (line ~238) so chat/sms/voice get it too.
-  - On block: regenerate once with the existing structural-regen pattern (line ~2752), else canonical fallback; log via `AIReasoningLeakScanner::logDetection` like the other gates.
-
-Open threads to drive next:
-1. #29172 [deployed] — Implement `scanHollowPlaceholder()` + `hollowPlaceholderFallback()` in AIReasoningLeakScanner and wire into EmailAIResponder + AgentReplyPipeline pre-send chains; test with a canned "please monitor your email" draft to prove block+fallback fires.
-2. #29145 [deployed] — After gate ships, monthly crontab check for any inbound that got a hollow reply in the 48h window; auto-file RCA if detected.
-
-Reference IDs:
-- Ideas: #29172 [deployed] (root-cause fix), #29145 [deployed] (strand drain)
-- Files touched: lib/emsu_knowledge_base.php, lib/EmailAIResponder.php, api/livechat/webhook.php, lib/CanonicalAgentPolicy.php
-- Files to touch next: lib/AIReasoningLeakScanner.php, lib/AgentReplyPipeline.php
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788237036746` — 9/1/2026, 10:29:42 AM PT — 609 turns
+### `1788237036746` — 9/1/2026, 11:30:06 AM PT — 683 turns
 
 **Original task:**
 
@@ -148,98 +108,30 @@ Good lord 2 lanes on Joshua is extremely slow. -> __3. How many lanes on Joshua 
 approved -> 1. #29101 [proposed] — TP=2 W4A16 experiment: stop :8001, relaunch with --tensor-parallel-size 2 --max-model-len 16384 on the 19G int4 checkpoint, verify inter-card collectives via IPC exchange, watch host RA
 ```
 
-**Ideas referenced:** #10108, #10740, #1127, #1130, #1131, #11741, #11781, #1241, #1242, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #14253, #14560, #1463, #1464 [approved], #1465 [approved], #1466, #1474 [deployed], #1475 [deployed], #1476, #14848, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #1706, #17084, #1721, #17246, #1729, #1744, #1779, #178805, #1798, #1828, #18312, #18326, #1876, #1877, #1912, #19567, #20042, #2052, #2053, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2271, #2299, #25097, #2537, #25378, #25381, #2546, #25764, #25888, #2603, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26908, #26923, #26932, #27236, #27249 [executing], #27250, #27259, #27503, #27933, #27972, #28034, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28725, #28740, #28894, #28948, #28958, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29100 [deployed], #29101 [proposed], #29102, #29103, #29105, #29106, #29107 [proposed], #29113 [executing], #29117, #29146 [proposed], #29147 [deployed], #29156 [proposed], #29166 [proposed], #35313, #41663, #45540, #48953, #52735, #53211, #7142, #7149
+**Ideas referenced:** #10108, #10740, #1127, #1130, #1131, #11741, #11781, #1241, #1242, #12425, #12477, #1248, #1249, #1252, #1258, #12584, #12618, #1264, #12824, #12872, #12878, #13202, #14253, #14560, #1463, #1464 [approved], #1465 [approved], #1466, #1474 [deployed], #1475 [deployed], #1476, #14848, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16844, #16851, #1706, #17084, #1721, #17246, #1729, #1744, #1779, #178805, #1798, #1828, #18312, #18326, #1876, #1877, #1912, #19567, #20042, #2052, #2053, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2271, #2299, #25097, #2537, #25378, #25381, #2546, #25764, #25888, #2603, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26908, #26923, #26932, #27236, #27249 [executing], #27250, #27259, #27503, #27933, #27972, #28034, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28725, #28740, #28894, #28948, #28958, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29100 [deployed], #29101 [proposed], #29102, #29103, #29105, #29106, #29107 [proposed], #29113 [executing], #29117, #29146 [proposed], #29147 [deployed], #29156 [proposed], #29166 [proposed], #29193 [deployed], #35313, #41663, #45540, #48953, #52735, #53211, #7142, #7149
 
 **Last PICKUP PROMPT:**
 
 ```
-edger row, reindex confirmed).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #29156 [deployed] - Joshua TP=2 W4A16 serving via FI_PROVIDER=tcp + no CCL_ATL_SHM.
-
-Where we left off (verified 2026-09-01 10:03 PT):
-- TP=2 qwen3.8-27b SERVING on Joshua :8001: HTTP:200, Application startup complete, decode content="\n\nOK" finish_reason=stop (18 completion tokens), fingerprint ...tp2-a04662d8, RAM 39G available.
-- Fix: remove CCL_ATL_SHM + FI_PROVIDER=tcp (keep validated IPC env). Root cause of shm_broadcast wedge = CCL_ATL_SHM=1 + FI_PROVIDER=shm forcing shm ATL transport between tiles.
-- Unit: /etc/systemd/system/joshua-qwen38.service is now the TP=2 variant; TP=1 backup at .bak-tp1-before-shmbroadcast-tcp-20260901.
-- minicpm-v and 70B remain removed. Lanes: :8001 TP=2 qwen3.8-27b + :11434 ollama.
-
-Open threads to drive next:
-1. #29156 [deployed] - Soak/persistence follow-up: let TP=2 run and verify a clean systemctl restart still reaches startup-complete (crash-loop proof), then decide whether TP=2 becomes the permanent Joshua lane.
-2. #29101 [rejected] - Original TP=2 experiment, superseded (now succeeded via the corrected env variant).
-
-Reference IDs:
-- Ideas filed: #29101 [rejected], #29156 [deployed]
-- Incident: joshua_tp2_shm_broadcast_sync_stall_20260901 [resolved]
-- Files touched: /etc/systemd/system/joshua-qwen38.service (+ .bak-tp1-before-shmbroadcast-tcp-20260901), /var/www/emtskills/docs/HANDOFF_NOTES.md, /Users/rubenmajor/Documents/Cline/Rules/317-reversal-triggers-297-and-rule-update.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
+Causal rule 317 (clause 1).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task #29156 [deployed] — Joshua Qwen3.8-27B TP=2 permanent + lane census + disk triage.\n\nWhere we left off (verified 2026-09-01 11:25 PT):\n- Joshua Qwen3.8-27B TP=2 serving on 10.100.0.4:8001 (restart soak passed: startup complete, decode 200 with reasoning tokens, fingerprint tp2-a04662d8). Registry line 852 updated to TP=2 SERVING. #29193 [deployed].\n- Lane census: ONE Qwen lane on Joshua (:8001). :11434 is a separate ollama zoo (no minicpm-v, no 70B — 8/30 directive already satisfied).\n- Down lanes (escalation-graded): Julia :11513, Claudia :11521 (tunnel alive/engine dead), Maximus :11530 (tunnel dead), BigMac 10.100.0.19:8000 (WG endpoint 000).\n- Disk: root 78%. apport 9.9G purged. Snapd 6.3G left for Ruben's call.\n- Stabilization shipped: decode-hang watchdog + journald 2G cap + rule 317 blip-class amendment (reindexed).\n- Truth judge: first run FAIL (2 fixes), corrected; re-judge aborted fail-closed (reported honestly, no PASS claimed).\n\nOpen threads to drive next:\n1. #29193 [deployed] — Restore the 4 down lanes: Julia/Claudia :11513 (engine dead behind alive tunnel), Claudia :11521, Maximus :11530 (launchd KeepAlive absent), BigMac 10.100.0.19:8000.\n2. #29193 [deployed] — Ruben call on /var/lib/snapd 6.3G offload (not needed for vllm/docker) to reclaim further root space.\n\nReference IDs:\n- Ideas filed: #29193 [deployed] (Joshua decode-hang watchdog + restart soak + TP=2 permanence)\n- Files touched: /etc/litellm/frankenstein_registry.yaml (line 852, + .bak-tp2-20260901), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /home/emsusrvr2/joshua_qwen38_decode_watchdog.sh (on 10.100.0.4), /etc/systemd/journald.conf.d/99-size.conf (on 10.100.0.4), rule 317 file (clinerules_amend_rule)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════", "task_id": "joshua-lanes-disk-20260901"}</arguments>
+</use_mcp_tool>
 ```
 
-### `1788280195067` — 9/1/2026, 10:29:40 AM PT — 181 turns
+### `1788284221639` — 9/1/2026, 11:29:56 AM PT — 409 turns
 
 **Original task:**
 
 ```
-#Frankenstein LLM Reouting (individual LLMs)
+#September 1 Externship Switchover
 
-Tell me which LLMs, the individual ones, have been running over the last eight hours. I do not want you to give me groupings of LLMs. I want you to give me the individual LLMs. So no frankenstein-tools or emsucodegen or frankenstein-llm. Look inside of those and give me the numbers of turns for each in the last 8 hours. Make sure you honestly probe
+Couple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and 
 ```
 
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12247, #12262, #12477, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #15978, #15979, #15980, #15995, #16163, #16265, #16304, #16844, #178742, #178750, #18312, #18326, #21432, #21587, #21588, #21667, #21710, #21712, #22104, #22105, #22138, #22189, #22244, #22245, #22726, #22776, #22871 [proposed], #25097, #25112, #25238, #25240, #25241, #25242, #25269, #25313, #25314, #25315, #25316 [deployed], #25364 [executing], #2537, #25888, #26368, #26525 [deployed], #26586 [deployed], #26597 [deployed], #26867 [deployed], #26877 [approved], #26879 [deployed], #26898, #26899, #26900, #26908, #26923, #27203, #27251, #27252, #27253, #27259, #27869 [proposed], #27874, #27875, #28033 [proposed], #28034, #28042, #28636 [deployed], #28745, #28958, #29179 [proposed], #8151, #8179, #8181, #8182, #8183
-
-**Last PICKUP PROMPT:**
-
-```
-t a subset as the population).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #29179 [proposed] - Frankenstein per-individual-LLM turn counts (last 8h)
-
-Where we left off (verified 2026-09-01 10:03 PT):
-- Pool/wrapper traffic fully resolved to individual hosts: gpt-oss-120b on Artemis 3,794 / on BigMac 637, qwen3.8-27b on Claudia 461 / Julia 51 / Nero 14, glm-5.3 ring 226, vision pack 2 (5,185 total, complete adapter record).
-- Direct models partial only: deepseek-v4-pro 616, qwen38-27b-voice 133 (r91 tee); llm_call_log instrumented 528 rows/8h.
-- Idea #29179 [proposed]: complete per-request log for direct models.
-
-Open threads to drive next:
-1. #29179 [proposed]: build full LiteLLM per-request capture (or DB spend table) covering direct non-adapter routes so deepseek-v4-pro / voice / claude totals are complete in one query; deploy then re-run this 8h report.
-
-Reference IDs:
-- Ideas filed: #29179 [proposed]
-- Files touched: /var/log/emsu-adapter-upstream.log, /tmp/emsu_router_audit.log, /etc/litellm/config.yaml, /usr/local/bin/frankenstein_tools_adapter.py, admin_portal.llm_call_log
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788280946573` — 9/1/2026, 10:28:54 AM PT — 293 turns
-
-**Original task:**
-
-```
-#VERITAS
-
-Rebase and give this again, along with a fresh analysis of how things did overnight and what improvements need to be made per your recommendation
-
-Direct answers on Maximus and the secondary question, probed live just now.
-
-WHY IS MAXIMUS DARK AGAIN, AND WILL IT COME BACK ON ITS OWN? No, it will not come back on its own, and here is why it died right after you racked it. From WOPR right now: the box is completely off-network (verified: ping 192.168.1.55 returned 100% packet loss over 3 packets; ss -ltn shows zero listeners for 2226/11505/11530; ssh to 2226 Connection refused), and it
-```
-
-**Ideas referenced:** #0000, #1467, #1468, #1469, #1470, #1471, #1472, #1473, #1477, #16224, #17657, #178821, #1877, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27634, #27652, #27808, #28256, #28586, #28596, #28958, #28959, #28961, #29011 [deployed], #29012, #29063 [deployed], #29064 [deployed], #29066 [executing], #29085 [executing], #29103 [proposed], #29105 [executing], #29148, #29173 [deployed], #29174 [deployed], #29181 [deployed], #5344
+**Ideas referenced:** #059669, #111827, #1486, #1487, #1488, #1489, #1490, #1492, #1493, #1494, #166534, #19419, #20315, #25821, #25822, #2631, #26663, #27100, #27492, #28613, #28958, #29011 [deployed], #29196 [proposed], #29197 [proposed], #29199 [proposed], #29200 [proposed], #29201 [deployed], #29202 [proposed], #29203 [deployed], #29213 [proposed], #29214 [proposed], #374151, #856404, #92400, #939803, #939806
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788244675583` — 9/1/2026, 10:26:56 AM PT — 440 turns
+### `1788244675583` — 9/1/2026, 11:26:38 AM PT — 546 turns
 
 **Original task:**
 
@@ -255,32 +147,458 @@ Window is labeled "fork of window #5 - BLANK" - an empty re-open, not a real in-
 Window is labeled "fork of window #5 - BLANK" - an empty re-open, not a real in-flight session. Skip/close unless you meant to re-fork; the real learner is window 1788065826964.
 ```
 
-**Ideas referenced:** #1141, #1458 [deployed], #1459, #1460, #1461 [deployed], #1462, #14741, #1485, #15637, #1775, #178806, #178824, #20890, #21667, #23277, #23281, #23285, #24176, #24191, #24248, #24369 [proposed], #25185, #25888, #26083, #2641, #28581 [deployed], #28889, #28958, #29011 [deployed], #29017 [deployed], #29026, #29034, #29134 [proposed], #29135 [proposed], #29136 [proposed], #29137, #29152 [proposed], #29192 [proposed], #30350 [proposed], #30351 [proposed], #30352 [proposed], #8502, #8563
+**Ideas referenced:** #1141, #1458 [deployed], #1459, #1460, #1461 [deployed], #1462, #14741, #1485 [deployed], #1491 [deployed], #15637, #1775, #178806, #178824, #20890, #21667, #23277, #23281, #23285, #24176, #24191, #24248, #24369 [proposed], #25185, #25888, #26083, #2641, #28581 [deployed], #28745, #28786, #28889, #28958, #29011 [deployed], #29017 [deployed], #29026, #29034, #29134 [proposed], #29135 [proposed], #29136 [proposed], #29137, #29152 [proposed], #29192 [proposed], #29211 [proposed], #30350 [proposed], #30351 [proposed], #30352 [proposed], #8502, #8563
 
 **Last PICKUP PROMPT:**
 
 ```
-se 12 (aggregation integrity).
+ the only remaining known gap.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1788244675583 - Kaizen Learner overnight + loop root cause fixes.
+Pick up task #1788244675583 - Kaizen learner promo-dormancy follow-up.
 
-Where we left off (verified 2026-09-01 10:26 PT):
-- 3 loop defects fixed: classifier recipefire refeed, view executor NULL-error promotion, pipeline dedup source_log_id=0. Unclassified fires 0 in last 5 min.
-- 807,172 phantom rows purged; learner-to-runtime bridge live (failure_repair_recipes 369 active, action_repair_recipes 89).
-- Dead ticket_ai path retired: 3 files deleted (archived), orphan table dropped.
-- Canonical view DDL now in database/migrations/kaizen_v_kaizen_all_findings.sql.
+Where we left off (verified 2026-09-01 11:26 PT):
+- #29192 [deployed]; 579,185 legacy fires purged; sp_kaizen_fire_recipe restored + guarded; view DDL preserved.
+- Fire side healthy; learner promotion side dormant (0 recipes / 0 corrections in 24h).
 
 Open threads to drive next:
-1. #29192 [proposed] - low-risk hardening: purge remaining legacy unclassified fires (579,185 total, 506,942 source_log_id=0); add worker_silent_death dedup guard (NULL source_log_id); keep view DDL in migrations file. Do end-to-end.
+1. #29211 [proposed] - investigate why learner promotion is dormant (0 recipes / 0 corrections despite 519 classifications); prove whether the 3 loop fixes starved its input.
 
 Reference IDs:
-- Ideas: #29134 [deployed], #29135 [deployed], #29136 [deployed], #29152 [deployed], #29192 [proposed]
-- Files: /var/www/emtskills/cron_kaizen_classifier.php, /var/www/emtskills/cron_kaizen_pipeline.php, /var/www/emtskills/database/migrations/kaizen_v_kaizen_all_findings.sql, /var/www/emtskills/lib/kaizen_recipe_sync.php
+- Ideas filed: #29192 [deployed], #29211 [proposed], #29152 [deployed], #29135 [deployed], #29134 [deployed], #29136 [deployed]
+- Files touched: cron_kaizen_classifier.php, cron_kaizen_pipeline.php, lib/kaizen_recipe_sync.php, cron_kaizen_recipe_sync.php, database/migrations/kaizen_v_kaizen_all_findings.sql
 
-When done, append to cline_task_ledger.md per rule 07 and run order 66.
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788286330120` — 9/1/2026, 11:24:52 AM PT — 70 turns
+
+**Original task:**
+
+```
+#30 Day Deadline Push out to 90 Days
+
+I would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. 
+
+Scope how this could be done and then we can take act
+```
+
+**Ideas referenced:** #10060, #1127, #1405, #16168, #19419, #25185, #25888, #2605, #27100, #29026, #29034, #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29208 [proposed], #3368, #48953, #9306, #9465, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+m) | causal rule updated: 263.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29208 [proposed] - 30-day deadline to 90 days (silent PD approval buffer)
+
+Where we left off (verified 2026-09-01 11:22 PT):
+- Scope document written to /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md (this session's deliverable).
+- Idea #29208 [proposed] filed in orchestrator_ideas (academic/high) = the implementation plan, pending Ruben go-ahead.
+- Deadline = course_end_date + 30 days (= didactic + 60 days), verified in 6 code sites plus 4 AI-policy files.
+- Notification silence path confirmed: student_notification_types.is_active kill switch on completion_warning_14d/7d/3d/1d; PD-facing reminders stay ON.
+
+Open threads to drive next:
+1. #29208 [proposed] - Answer the 4 go-ahead questions (anchor = course_end+90 vs didactic+90; PD reminders on/off; one-time backfill of mid-window students; warnings fully off vs re-armed), then execute the 7 change sets in the scope doc.
+
+Reference IDs:
+- Ideas filed: #29208 [proposed]
+- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788285768610` — 9/1/2026, 11:24:17 AM PT — 98 turns
+
+**Original task:**
+
+```
+#EMT Skills Slowness
+
+See emtskills_slowness md document on my desktop here. Happening yet again. please durably fix AGAIN. append to document - make durable AGAIN.
+```
+
+**Ideas referenced:** #18329, #18337, #22298, #22550, #23133, #2342, #23945, #23952, #23954, #25042, #2590, #25940 [executing], #26009, #26068, #26218, #26219, #26234, #26258, #26336, #26348, #27691, #28722 [proposed], #28941
+
+**Last PICKUP PROMPT:**
+
+```
+nce, durable lesson, records).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — /emtskills slowness recurrence #15 durable fix (argus_proxy www-pool leak + guard V2-mask anchor blind spot + dead disk-pressure guard).
+
+Where we left off (verified 2026-09-01 11:23 PT):
+- nginx 8082 lane `/etc/nginx/sites-enabled/emtskills`: V1 AGENT_POOL alternation now includes `|api/argus_proxy`; V2 telephony regex cleaned back to `([a-z_]+)`; `nginx -t` OK + reloaded; backup `emtskills.bak-20260901-argusproxy`.
+- `llm_pool_isolation_guard.py`: `heal_config()` anchor changed `find` → `rfind('# AGENT_POOL_V1')`; `--self-test` rc=0 PASSED; default scan rc=0 (196 files / 355 trafficked forms all isolated).
+- `cron_error_alert.php` restored from `.bak-ruben-impl-20260705-015026`; `wopr_disk_pressure_guard.php` lints clean and logs HEALTHY at 11:15/11:20.
+- Accepted-conn delta proof: 8x POST `/api/argus_proxy.php` → agents +28 / www +3.
+- `emtskills-slowness.md` (Desktop) has the full Sep 1 RECURRENCE #15 section appended.
+
+Open threads to drive next:
+None — all work completed this session.
+
+Reference IDs:
+- Ideas filed: none this session (fixes deployed on the existing #28722 self-heal guard surface; no new idea required).
+- Files touched: /etc/nginx/sites-enabled/emtskills (+ .bak-20260901-argusproxy), /var/www/emtskills/scripts/llm_pool_isolation_guard.py, /var/www/emtskills/cron/cron_error_alert.php (restored), /Users/rubenmajor/Desktop/emtskills-slowness.md.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788284259715` — 9/1/2026, 11:22:09 AM PT — 170 turns
+
+**Original task:**
+
+```
+#SMS and Email Notifications
+
+Canyou give me the link to where I can turn on/off all student notificaitons for SMS/Emails?
+```
+
+**Ideas referenced:** #0056, #14532, #155724, #1565, #16168, #166534, #212529, #28775, #29209 [executing], #495057, #78350, #856404, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+filed: **#29209 [executing]**.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Verify 60-day notification toggles wired + fix dead cron.
+
+Where we left off (verified 2026-09-01 11:21 PT):
+- DB state confirmed: completion_warning_14d is_active=1; 7d/3d/1d is_active=0
+- cron_completion_warnings.php had a 5-layer fatal cascade, dead since ~Aug 22; all fixed (killswitch require/inversion, clog() hoisting, missing cron_error_alert.php restored, missing secrets require, added per-touch-point is_active gate)
+- Dry-run verified: 28 students skipped for disabled 3-day type, 0 sends; registry last_checked_at stamped 2026-09-01 11:16
+- Sibling NREMT/recert/exam/60day-failer crons probed CLEAN; RCA idea #29209 [executing] on record
+
+Open threads:
+None — all repair work completed and verified this session.
+
+Reference IDs:
+- Ideas filed: #29209 [executing]
+- Files touched: cron/cron_completion_warnings.php, lib/comms_killswitch_guard.php, cron/cron_error_alert.php (restored from .bak-ruben-impl-20260715-151620), config/secrets.php (require added), notifications/manage.php (read), notification_job_registry / student_notification_types (read)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788281756491` — 9/1/2026, 11:10:32 AM PT — 236 turns
+
+**Original task:**
+
+```
+#TastyBot
+
+can you install the tastybot program on this computer?
+```
+
+**Ideas referenced:** #05131, #060810, #10131, #141823, #14532, #24635, #24645, #25185, #25888, #25947, #273549, #28958, #29166, #29178 [proposed], #29195 [proposed], #334155, #475569, #64748, #8790
+
+**Last PICKUP PROMPT:**
+
+```
+ejected + description updated.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29178 [deployed] - TastyBot desktop app + real Tastytrade data
+
+Where we left off (verified 2026-09-01 11:09 PT):
+- Real TastyBot program located at ~/Library/Application Support/TastyBot/repo (Python, OAuth-authorized, tokens.json + .env present)
+- Local dashboard running at 127.0.0.1:8765, showing REAL data (5 positions in 5WX51247, Net Liq $208,607)
+- Desktop app /Users/rubenmajor/Desktop/TastyBot.app pinned to Dock; launcher self-starts local server and opens /positions
+- Server-side /emtskills/routes/tastybot_positions.php is a separate demo surface (hardcoded placeholder data); its $currentUser access bug was fixed this session (patched + lint + FPM reload + live ACL probe ALLOWED=YES)
+- Idea #29178 [deployed], #29195 [rejected] (no 'superseded' in status enum)
+
+Open threads to drive next:
+- None - all work completed this session
+
+Reference IDs:
+- Ideas filed: #29178 [deployed], #29195 [rejected]
+- Files touched: /Users/rubenmajor/Desktop/TastyBot.app, ~/Library/Application Support/TastyBot/repo, /var/www/emtskills/routes/tastybot_positions.php (+ .bak-20260901-tastyfix)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788280195067` — 9/1/2026, 11:08:57 AM PT — 300 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM Reouting (individual LLMs)
+
+Tell me which LLMs, the individual ones, have been running over the last eight hours. I do not want you to give me groupings of LLMs. I want you to give me the individual LLMs. So no frankenstein-tools or emsucodegen or frankenstein-llm. Look inside of those and give me the numbers of turns for each in the last 8 hours. Make sure you honestly probe
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12247, #12262, #12314, #12365, #12366, #12368, #12477, #12584, #12618, #12824, #12872, #12878, #13108, #13202, #15978, #15979, #15980, #15995, #16163, #16265, #16304, #16844, #178742, #178750, #18312, #18326, #19173, #21432, #21587, #21588, #21667, #21710, #21712, #22104, #22105, #22138, #22189, #22244, #22245, #22726, #22776, #22871 [proposed], #25097, #25112, #25185, #25238, #25240, #25241, #25242, #25269, #25313, #25314, #25315, #25316 [deployed], #25364 [executing], #2537, #25888, #26368, #26525 [deployed], #26586 [deployed], #26597 [deployed], #26867 [deployed], #26877 [approved], #26879 [deployed], #26898, #26899, #26900, #26908, #26923, #27203, #27251, #27252, #27253, #27259, #27869 [proposed], #27874, #27875, #28033 [proposed], #28034, #28042, #28636 [deployed], #28745, #28958, #29179 [proposed], #29198 [proposed], #8151, #8179, #8181, #8182, #8183
+
+**Last PICKUP PROMPT:**
+
+```
+sal rule cited: 317 clause 12.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29179 [deployed] - Frankenstein per-individual-LLM turn counts (last 8h)
+
+Where we left off (verified 2026-09-01 11:04 PT):
+- Corrected per-LLM 8h table written to /Users/rubenmajor/Desktop/Frankenstein_LLM_Turns.md
+- idea #29179 [deployed]: /usr/local/bin/frankenstein_direct_lane_logger.py + cron, 23,570 rows backfilled, confirmed live
+- idea #29198 [proposed]: Qwen fleet titration, nothing started for it yet
+- Rule 322 amended (reindexed)
+
+Open threads to drive next:
+1. idea #29198 [proposed]: Qwen3.8-27B fleet percent-of-capacity titration so Artemis stops saturating (~285 per capacity unit) while Claudia/Nero/TP=2 sit near-empty. Next action: routing change in frankenstein_tools_adapter.py even-distribution.
+
+Reference IDs:
+- Ideas filed: #29179 [deployed], #29198 [proposed]
+- Files touched: /Users/rubenmajor/Desktop/Frankenstein_LLM_Turns.md, /usr/local/bin/frankenstein_direct_lane_logger.py, /etc/cron.d/frankenstein-direct-lane-logger, /var/www/emtskills/logs/emsu-direct-served-turns.jsonl
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788285310173` — 9/1/2026, 11:03:32 AM PT — 52 turns
+
+**Original task:**
+
+```
+#Florida CE Program Approval
+
+Pick up the florida CE Program Approval package and help me to get our program online. Whats the next step here? 
+
+Do you have a page/pages and files for me to work from?
+```
+
+**Ideas referenced:** #1127, #178806, #19338, #19458, #19491, #2605, #26183 [deployed], #28774, #28776, #28795, #28891, #28893, #28894, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29205 [proposed], #48953
+
+**Last PICKUP PROMPT:**
+
+```
+y plus filing the wiring idea.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: Florida CE Program Approval (FL DOH Training Center DH 681-018).
+
+Where we left off (verified 2026-09-01 11:02 PT):
+- FL CE package = idea #26183 [deployed] "File FL DOH Bureau of EMS Training Center application (DH 681-018)".
+- View page exists: /var/www/emtskills/routes/_view_fl_doh_training_center_application.php (reads fl_doh_applications table).
+- Specs exist: docs/specs/fl_doh_training_center_application.md and fl_doh_bems_tc_application.md.
+- DEFECTS CONFIRMED: no fl_doh_training_center_application entry in lib/report_registry.php; no dispatch in routes/reports.php; fl_doh_applications table does not exist anywhere in information_schema; the 4 required DH 681-018 documents are absent from the server.
+
+Open threads to drive next:
+1. #29205 [proposed] — Wire the FL DOH card: create admin_portal.fl_doh_applications table (checklist_json, documents_json, status, submitted_at, updated_at), seed one pending row, add the getReportDefinitions() entry keyed 'fl_doh_training_center_application' in lib/report_registry.php, and add the view include/dispatch so the card is reachable from the reports dashboard. Verify via a live HTTP probe of the card route.
+2. (human-only dependency) — Obtain from Ruben the actual DH 681-018 submission documents: medical director agreement, FL-scope curriculum mapping, clinical site letters, and distance learning plan. None exist on the server; the application cannot be filed with FL DOH (850-245-4440) until they are provided.
+
+Reference IDs:
+- Idea (original): #26183 [deployed]
+- Ideas filed this session: #29205 [proposed]
+- Files read: routes/_view_fl_doh_training_center_application.php, docs/specs/fl_doh_training_center_application.md, docs/specs/fl_doh_bems_tc_application.md, lib/report_registry.php
+- Files touched: none (read-only investigation)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788280946573` — 9/1/2026, 11:03:10 AM PT — 296 turns
+
+**Original task:**
+
+```
+#VERITAS
+
+Rebase and give this again, along with a fresh analysis of how things did overnight and what improvements need to be made per your recommendation
+
+Direct answers on Maximus and the secondary question, probed live just now.
+
+WHY IS MAXIMUS DARK AGAIN, AND WILL IT COME BACK ON ITS OWN? No, it will not come back on its own, and here is why it died right after you racked it. From WOPR right now: the box is completely off-network (verified: ping 192.168.1.55 returned 100% packet loss over 3 packets; ss -ltn shows zero listeners for 2226/11505/11530; ssh to 2226 Connection refused), and it
+```
+
+**Ideas referenced:** #0000, #1467, #1468, #1469, #1470, #1471, #1472, #1473, #1477, #16224, #17657, #178821, #1877, #19173, #19175 [executing], #19176 [queued], #19898, #19899 [proposed], #19904, #20251, #25151, #25185, #2525, #25888, #25925, #25926, #25935, #26349, #26435, #26696, #26774, #26914 [deployed], #26915 [executing], #26916, #26993, #27100, #27634, #27652, #27808, #28256, #28586, #28596, #28958, #28959, #28961, #29011 [deployed], #29012, #29063 [deployed], #29064 [deployed], #29066 [executing], #29085 [executing], #29103 [proposed], #29105 [executing], #29148, #29173 [deployed], #29174 [deployed], #29181 [deployed], #5344
+
+**Last PICKUP PROMPT:**
+
+```
+Log
+
+No reversals this window.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788212457240 — VERITAS rebase: Maximus clamshell-sleep + minicheck order + overnight analysis.
+
+Where we left off (verified 09-01 11:01 PT):
+- Maximus still off-network (ping .55 100% loss, zero WOPR listeners, ssh refused) — clamshell sleep on lid-close, will NOT self-recover. Fix ready: sudo pmset -a disablesleep 1 sleep 0 displaysleep 5 && sudo pmset -a womp 1 — recorded in #29085 [executing] (verified: mysql UPDATE rows affected 1 08-31)
+- Minicheck order final: Cicero :11535 primary, Nero :11455 secondary (warm-pinned every 20 min), Maximus :11505 tertiary post-pmset; Joshua out; no better candidates
+- Overnight: minicheck lanes held (Cicero stable, watchdog + warm-pin on schedule); VERITAS L4 eval exposed + fixed 3 bugs (negation false-unssupported, R29148 freshness gate false positive, watchdog alert fatigue) — all deployed + verified; clinerules MCP rebuilt + restarted so the corrected validator is live
+- Ideas: #29063 [deployed], #29064 [deployed], #29066 [executing], #29085 [executing], #29105 [executing], #29103 [proposed]
+
+Open threads to drive next:
+1. #29085 [executing] — Ruben runs pmset on Maximus (MDM shell or lid-open for 60s); then verify tunnels return + watchdog holds it, and apply the same pmset to Cicero + Nero
+2. #29105 [executing] — VERITAS L4 accuracy monitoring post-3-bug-fix: confirm clean verdict log + veritas_l4_runs rows through tonight's eval
+3. #29103 [proposed] — Nero vision-model relocation (optional clean-secondary upgrade)
+4. #29066 [executing] — extension-side pre-completion validation check + WOPR meter stream repair
+
+Reference IDs:
+- Ticket: 1788212457240 (VERITAS claim-falsity investigation, continuation)
+- Ideas filed: #29063 [deployed], #29064 [deployed], #29066 [executing], #29085 [executing], #29105 [executing]; cross-ref #29103 [proposed]
+- Files touched: orchestrator_ideas #29085 [executing] description; MiniCheckVerifier.php; /etc/cron.d/minicheck-warm-pin; cron_minicheck_lane_watchdog.php (alert backoff); VERITAS L4 verifier (3 eval bug fixes); clinerules MCP validator (R29148 negation gate fix); GLM53_RING_STATE_TRACKER.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<command>true</command>
+<task_progress>
+- [x] Rule 119 signal check
+- [x] Live re-probe Maximus
+- [x] Overnight analysis: minicheck lanes, watchdog, warm-pin, skip-watch
+- [x] Overnight analysis: VERITAS L4 eval — root-caused + fixed 3 bugs, deployed
+- [x] Watchdog alert backoff deployed + verified
+- [x] Reconcile idea dispositions live
+- [x] Root-caused + fixed R29148 gate false positives (negation probe)
+- [x] Rebuild clinerules MCP + restart
+- [x] Validation gates passed + shipped completion
+</task_progress>
+</attempt_completion>
+```
+
+### `1788196060306` — 9/1/2026, 10:59:21 AM PT — 1344 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #16263, #166534, #18745, #18770, #22850, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25047, #25058, #25185, #25269, #25313, #25466, #25573, #25768, #26325, #26895, #27100, #274160, #28155, #28607, #28761, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #28954, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #29110 [proposed], #29112 [proposed], #29114 [proposed], #29115, #29122 [proposed], #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [approved], #29189 [approved], #29190 [executing], #30363, #3730, #4434, #4575, #475569, #495057, #5499, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #8226, #856404, #92400, #9261, #9648, #9650, #9660, #9670
+
+**Last PICKUP PROMPT:**
+
+```
+ the console during this test.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29122 — Argus QA round 5 follow-up: triage browser-AI test results from Ruben.
+
+Where we left off (verified 2026-09-01 10:56 PT):
+- Ruben steered: produced paste-ready browser-AI test instructions covering sections 1-6 (Tasks smoke, Type column/badge, dropdowns+stats replacing chip wall, sort/pagination regression, proof gate positive+negative, API activity_mode regression).
+- This round's builds all live: Type column + terminal badge (argus_download.php + alltastic_api.php activity_mode), dropdown filters + plain-language stats table, executor proof gate #29122 [deployed] at cron_argus_task_worker.php done-write.
+- #29095 dropped per Ruben (4th time asked — do NOT surface again).
+- QA backlog ideas filed: #29182-#29190 [executing], remedies NOT built.
+
+Open threads to drive next:
+1. Awaiting Ruben — browser-AI test results (sections 1-6 report). On reply, fix any FAIL/PARTIAL findings.
+2. #29182 [executing] — per-iframe height keying (cross-talk bug, remedy not built)
+3. #29183 [executing] — approvals-queue reconcile against orchestrator_ideas state (remedy not built)
+4. #29184 [executing] — intent-based idea triage to replace keyword match (remedy not built)
+5. #29185 [executing] — 60-120s max-gap in burst grouping predicate (remedy not built)
+6. #29186 [executing] — perm matrix re-baseline + click-confirm (remedy not built)
+7. #29187 [executing] — Chrome extension safer defaults, autopilot OFF + EMSU scope (remedy not built)
+8. #29188 [executing] — Requests pending/decided split + principal labels + recommender hygiene (remedy not built)
+9. #29189 [executing] — hidden-tab polling pause + Tasks stale-search clear (remedy not built)
+10. #29190 [executing] — browser-QA the terminal takeover feature as admin (needs live admin session)
+
+Reference IDs:
+- Ideas filed: #29182-#29190 [executing]; #29122 [deployed]; #29095 [awaiting_review] (Ruben dismissed — no longer an open thread)
+- Files touched: routes/cron_argus_task_worker.php, routes/alltastic_api.php, routes/argus_download.php, docs/specs/argus_qa_round5_master_todo.md
+- Kaizen: failure_repair_recipes id 5499 (executor_false_done)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Master temp doc written (docs/specs/argus_qa_round5_master_todo.md)
+- [x] #29122: executor proof gate implemented at done-write, lint clean, idea stamped deployed
+- [x] Activity: per-row TYPE column + terminal-action badge (API activity_mode + UI)
+- [x] Activity: chip wall replaced with dropdowns + plain-language stats table, JS + PHP lint clean, FPM reloaded
+- [x] 9 real ideas filed for QA-sweep bugs + takeover-QA thread (#29182-#29190)
+- [x] Kaizen: executor_false_done recipe active (id 5499)
+- [x] Browser-AI test instructions delivered (sections 1-6, paste-ready)
+- [x] #29095 dismissed per Ruben (dropped from open threads)
+</task_progress>
+</
+```
+
+### `1788245681701` — 9/1/2026, 10:30:19 AM PT — 350 turns
+
+**Original task:**
+
+```
+#Email CFA Issue
+
+Im getting tired of seeing this placehodler response over and over again. Why does this happen isntead of the Email CFA actually answering the underlying question? How do we resolve it so that it does going forward?
+```
+
+**Ideas referenced:** #1119, #12206, #12687, #128260, #13440, #14132, #15669, #15670, #16152, #16153, #16154, #16473, #16732, #17446, #177851, #177914, #18713, #19437, #19682, #20346, #21710, #22060, #2316, #23184, #2323, #23276, #23477, #23710, #24990, #252532, #2563, #25895, #25896, #25943, #25984, #25986, #26320, #26334, #26349, #26592, #26593, #26661, #26663, #26851, #27120, #27492, #28043, #28221, #28226, #28306, #28612, #28613, #29011, #29132 [deployed], #29142 [deployed], #29143, #29145 [proposed], #29172 [deployed], #29194 [deployed], #29232, #3237, #32548, #32584, #3572, #366377, #4007, #4013, #4991, #5298, #5447, #5646, #5908, #6064, #6106, #6111, #61286, #6168, #6228, #6670, #6723, #6751, #7174, #7206, #7207, #7317, #7356, #7872, #7906, #7907, #7925, #8103, #813772, #9077, #9086, #9090, #9109, #9132, #9158, #9173, #9193, #9222
+
+**Last PICKUP PROMPT:**
+
+```
+to proceed on all of them now.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up — Finish the comprehensive CFA harmful-instruction remediation (Ruben: "do a comprehensive analysis so we can durably improve CFAs"). Step 1 (mechanical gate) is DONE and live-tested.
+
+Where we left off (verified 2026-09-01 10:29 PT):
+- Built + wired `scanHollowPlaceholder()` / `hollowPlaceholderFallback()` in lib/AIReasoningLeakScanner.php; wired into lib/EmailAIResponder.php (pre-send chain ~2709) and lib/AgentReplyPipeline.php::guard() (section 3b). Live test: hollow draft blocked (hollow_placeholder_no_substance), substantive draft passed. All lint clean. Filed #29194 [deployed].
+- Root-cause prompt-language fixes already shipped earlier as #29172 [deployed] (4 files, 7 lines).
+- Comprehensive audit found 5 remaining harmful instruction classes: (A) never-admit-server-issues, (B) timing/deadline no-fault, (C) canned course-access human-misroute, (D) create_ticket "never auto-create" contradiction, (E) never-admit-tool-failure + never-say-ticket-created + never-promise-timeline setup.
+
+Open threads to drive next:
+1. #29194 [deployed] — Obtain Ruben's go/no-go on the 5 rewrites in Section 4 (policy-level honesty changes); on approval, patch classes A-E in the same 4 files + add `scanAccessDenial()` and `scanCannedCourseAccess()` mechanical gates mirroring scanHollowPlaceholder, then live-test each with canned drafts.
+2. #29172 [deployed] — Add a weekly cron sweep over email_ai_leak_log for `hollow_placeholder` rows to confirm the gate's production hit-rate is zero; if nonzero, file an RCA.
+
+Reference IDs:
+- Ideas: #29194 [deployed] (gate + audit), #29172 [deployed] (prompt root-cause fix)
+- Files touched this window: lib/AIReasoningLeakScanner.php, lib/EmailAIResponder.php, lib/AgentReplyPipeline.php (+ lib/emsu_knowledge_base.php, lib/CanonicalAgentPolicy.php, api/livechat/webhook.php earlier)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -324,98 +642,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788281756491` — 9/1/2026, 10:20:07 AM PT — 114 turns
-
-**Original task:**
-
-```
-#TastyBot
-
-can you install the tastybot program on this computer?
-```
-
-**Ideas referenced:** #14532, #25185, #25888, #25947, #273549, #28958, #29178 [proposed], #334155, #475569, #64748
-
-**Last PICKUP PROMPT:**
-
-```
-s_overhaul.php before patching
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #29178 [deployed] - TastyBot desktop app + access fix
-
-Where we left off (verified 2026-09-01 10:19 PT):
-- Root cause of access denied: $currentUser never assigned in routes/tastybot_positions.php; patched with $currentUser = currentUser() ?? null; (backup .bak-20260901-tastyfix, php -l clean, FPM reloaded)
-- Live ACL probe for Ruben (MasterAdmin id 1): ALLOWED=YES
-- Desktop app built: /Users/rubenmajor/Desktop/TastyBot.app (Info.plist OK, executable launcher verified)
-- Pinned to Dock: com.emsuniversity.tastybot present in persistent-apps pointing to Desktop/TastyBot.app
-- Idea #29178 [deployed] updated: title='TastyBot: desktop app (Dock) + access-denied fix', implemented_files=[Desktop/TastyBot.app, routes/tastybot_positions.php]
-
-Open threads to drive next:
-- None - all work completed this session
-
-Reference IDs:
-- Ideas filed: #29178 [deployed]
-- Files touched: /Users/rubenmajor/Desktop/TastyBot.app, /var/www/emtskills/routes/tastybot_positions.php (+ .bak-20260901-tastyfix)
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788196060306` — 9/1/2026, 10:17:07 AM PT — 1332 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-approved
-- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
-
-- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
-
-
-```
-
-**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #16263, #166534, #18745, #18770, #22850, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25047, #25058, #25185, #25269, #25313, #25466, #25573, #25768, #26325, #26895, #27100, #274160, #28155, #28607, #28761, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #28954, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #29110 [proposed], #29112 [proposed], #29114 [proposed], #29115, #29122 [proposed], #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [approved], #29189 [approved], #29190 [executing], #30363, #3730, #4434, #4575, #475569, #495057, #5499, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #8226, #856404, #92400, #9261, #9648, #9650, #9660, #9670
-
-**Last PICKUP PROMPT:**
-
-```
-ast turn and remains open.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — Role-hierarchy user management for Cori (ExecAdmin) + earlier Argus-improvement open threads.
-
-Where we left off (verified 2026-09-01 10:00 PT):
-- Argus admin_create_user min_role → ExecAdmin (catalog line 211); NEW admin_delete_user action (line 213 + handler 2291); default-role = one below caller (2241-2242)
-- create_user.php below-own-level gate (line 88) replacing MasterAdmin-only/4-role whitelist
-- admin_users.php update_user (323-330) + delete_user (415) level-hierarchy gates
-- All php -l clean, FPM reloaded, on-disk verified
-- Awaiting Cori's live click-test (create via admin_users page + Argus terminal)
-
-Open threads to drive next (EVERY item has a real filed idea #):
-1. #29122 [blocked] — Executor proof gate NOT implemented. Locate executor done-write (probe api/argus_offloaded_task_api.php) and require a real artifact path + probe result in result_summary before status='done'. This is the false-done/lie pattern Ruben flagged.
-2. #29095 [awaiting_review] — Ruben's two truncated round-4 behavior notes; questions already handed in-line; apply mechanical-vs-behavioral decision when he answers.
-3. #29055 [executing] — Confirm Cori (ExecAdmin) can create/delete lower-role users in BOTH surfaces; revert or re-gate if any role still denied (capture the exact error text).
-
-Reference IDs:
-- Ideas: #29055 [executing], #29122 [blocked], #29095 [awaiting_review]
-- Files touched: lib/argus_action_catalog.php, routes/create_user.php, routes/admin_users.php
-- Backups: /tmp/patch_catalog1.py, patch_catalog2.py, patch_create_user.py, patch_admin_users.php, patch_default_role.py (staged scripts, applied successfully)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════════
-</result>
 </attempt_completion>
 ```
 
@@ -2778,58 +3004,4 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Rule 317 strengthened: amendment ledger + numbered clause 12 + reindexed
 - [x] Qwen3.8-27B capability: HF card 262K native / 1M extensible confirmed; bug library 2664; registry caps raised; clinerule 324 indexed
 - [x] Filed #28704/#28705/#2870
-```
-
-### `1788021587569` — 8/29/2026, 10:46:18 AM PT — 602 turns
-
-**Original task:**
-
-```
-#GLM 5.3 Local
-
-Make sure you add all of this to the bug library and also consult a bug library when you are working on the LLM's. Per cline rules you should be doing this already.
-
-The goal of this window is to get GLM 5.3 local iterating quickly and safely as primary rung, etc... 
-
-Proceed. 
-
-#GLM 5.3 Local
-Please make sure that you are consulting the bug library as well as updating it properly
-Cline just killed my window for no reason at all it's over which is really really annoying about GLM 5.3. It was a subsequent window which you should have some information on in your hand off notes ho
-```
-
-**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12672, #12824, #12872, #12878, #13202, #13832, #15815, #16163, #16265, #16304, #16680, #16844, #1754, #1755, #178798, #18312, #18326, #1912, #1986, #1998, #20495, #2050 [investigating], #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25097, #25185, #2537, #2569 [resolved], #25764, #2603, #2626 [investigating], #2640, #26400, #2641 [resolved], #2642 [resolved], #2644 [resolved], #2645 [resolved], #2647 [resolved], #2650 [resolved], #2653 [resolved], #2654 [investigating], #2656 [resolved], #2659 [investigating], #2662 [deployed], #2663 [deployed], #26712, #26713, #26908, #26923, #26932, #27100, #27259, #28034, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28308, #28310, #28316, #28331, #28369, #28370, #28465 [deployed], #28497 [deployed], #28500, #28504 [deployed], #28505, #28506 [deployed], #28586, #28596, #28605 [deployed], #28606 [deployed], #28615 [deployed], #28621 [deployed], #28622 [executing], #28693 [proposed], #28696 [proposed], #45425
-
-**Last PICKUP PROMPT:**
-
-```
-oor to engage within the hour.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1787984810000 — GLM-5.3 local primary rung: 0.26.1 cutover complete, speed re-bench + pick-rate watch next.
-
-Where we left off (verified 2026-08-29 10:36 PT):
-- Ring SERVING on vLLM 0.26.1rc1.dev1231 (eugr/spark-vllm:latest, container fb021bafaf64, up since 10:18 PT): FULL cudagraphs, kv fp8, KV cache 2.18M tokens, 8/8 lanes. Cutover idea #28622 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=idle for the GLM-5.3 durable-fix cutover idea at 10:36 PT this session).
-- Concurrent corruption GONE: uni_7/8/9 all 'Paris' finish=stop (bug library incident 2663, resolved).
-- Ring was dark 5.7h due to orphaned watchdog pause (bug library incident 2662, resolved); watchdog v2 re-armed single-owner PID 256252, @reboot cron restored, WOPR watchdog stays STOPPED per bug library incident 2659 prevention guidance.
-- First x8 bench 5.0 tok/s agg was CONTAMINATED by live load — no speed verdict yet.
-
-Open threads to drive next:
-1. #28693 [proposed] — run the clean warm-idle x8 re-bench (/tmp/x8c.sh on cato; first check running=0 in the engine stats) + 60-min sustained counter-delta (/tmp/cd2.sh); compare vs 12.8 tok/s PIECEWISE baseline; record the measured result in the tracker doc.
-2. #28696 [proposed] — move the uni/x8/cd2 verification payload set out of /tmp to a durable path on cato + README (filler is by design; use the _200 variants).
-3. #28693 [proposed] — check /tmp/emsu_glm_floor_window.json glm_pct each hour; if it stalls near 2% while the ring is healthy, read the adapter log for YIELD_FLOOR/OVERLOAD pairs (the prior window's threshold change FRANK_GLM_AFFINITY_YIELD_RUNNING=8 is expected to prevent cancels — watch that it holds under load).
-4. (human-only decision — no idea) glm-fanout-proxy.service on WOPR is still running unrouted (root-owned; stopping it needs Ruben's sudo password; harmless until then).
-
-Reference IDs:
-- Ideas filed: #28693 [proposed], #28696 [proposed]
-- Ideas closed: #28622 [deployed], #28605 [deployed], #28615 [deployed], #28606 [deployed], #28621 [deployed] (all verified via reconcile_ideas this session: status=deployed dev_stage=idle)
-- Bug library incidents (frankenstein_router_incidents, NOT orchestrator ideas): 2662 resolved, 2663 resolved (this window); 2654, 2656, 2659 context (prior windows)
-- Files touched: WOPR /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (appended), HANDOFF_NOTES.md (2 entries), cato ~/glm53_launch_cfg_pp6.sh (+backup .bak-pre026-r2-20260829), ~/bin/glm53_relaunch_seq128.sh (flock-line repair), ~/bin/glm53_026_cutover.sh (executed), watchdog @reboot crontab restored, /etc/systemd/system/frankenstein-tools.service.d/zzz...-glm-yield-thr-20260829.conf (live from prior window, env var read back via systemctl show)
-
-# Reversal Log
-- "uni_8/uni_9 concurrent corruption still present on 0.26.1" → corrected: the 'marsh router' text was the payload's OWN intentional filler (the corruption detector), and the empty content was max_tokens=60 truncation; the _200 re-run returned 'Paris' for all three | RCA bucket: insufficient probe | follow-up tracked: idea #28696 [proposed] (durable payload home + filler documentation so the misread cannot recur)
-- "x8 bench 5.0 tok/s = slower than PIECEWISE" → corrected: the bench ran while 5-13 live requests shared the ring, so it is not comparable to the 12.8 idle baseline; no speed verdict is possible from it | RCA bucket:
 ```

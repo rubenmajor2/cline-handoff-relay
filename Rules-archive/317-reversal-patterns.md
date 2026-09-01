@@ -5,26 +5,26 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **220**
-- Last generated: 2026-09-01 10:02
+- Reversals tracked: **224**
+- Last generated: 2026-09-01 11:02
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 110 | 50% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 113 | 50% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 37 | 17% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
-| unread source | 28 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
+| unread source | 29 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 24 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
-| stale assumption | 21 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
+| stale assumption | 21 | 9% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 94 amendment(s)
+- Rule 317: 97 amendment(s)
 - Rule 297: 45 amendment(s)
 - Rule 315: 26 amendment(s)
+- Rule 322: 10 amendment(s)
 - Rule 91: 9 amendment(s)
-- Rule 322: 9 amendment(s)
 - Rule 302: 7 amendment(s)
 - Rule 321: 7 amendment(s)
 - Rule 99: 5 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-01** — Amends clause 3 (escalation probe before declaring any wall): on 2026-09-01 the TastyBot task declared a credentials wall (no TASTY_API_TOKEN, no sync code) after probing only the EMSU server and Mac dotfiles. The real, already-authorized TastyBot program (OAu
+- **2026-09-01** — Amends clause 2 (acquisition gate): a tool output that prints APPEND_OK / exit 0 is not proof of a write — the artifact content itself must be re-read. First GLM53 tracker append attempt printed APPEND_OK while the write had failed with Permission denied (stde
+- **2026-09-01** — Amends clause 2 (acquisition gate): an absence-of-traffic observation is NOT evidence of low usage until the surface itself has been invoked end to end this window. The prior window read argus_analytics=0 rows/7d and reported it as "no real traffic", when ever
 - **2026-09-01** — Within-window reversal: I declared 'TP=2 cannot serve on this stack today' after one env variant (CCL_ATL_SHM=1 + FI_PROVIDER=shm) wedged at shm_broadcast. Ruben then said 'babysit it to serving.' The very next variant (remove CCL_ATL_SHM + FI_PROVIDER=tcp) re
 - **2026-09-01** — amends clause 2 (acquisition gate): a TP=2 collective-viability claim requires a LIVE cross-tile collective probe (actual allreduce over 2 tiles reaching startup-complete), never an inference from a prior dated boot recipe. This session reversed 'TP=2 viable w
-- **2026-09-01** — Amends clause 2 (acquisition gate) for CONFIG values copied between hosts. Building the MiniCheck gate, I copied MiniCheckVerifier.php's endpoint list (127.0.0.1:11535/11455/11505) into an MCP that runs on a DIFFERENT host, and separately guessed the ssh alias
-- **2026-09-01** — Amends clause 2 (acquisition gate): a NULL/empty result from a GUESSED identifier (SHOW TABLES LIKE '%minicheck%' returning nothing) is NOT evidence about architecture. I asserted 'MiniCheck is not wired to Cline, nothing was checking my numbers' citing that e
-- **2026-09-01** — Amends clause 2 (acquisition gate): a coverage/backfill report showing '0 unclassified patterns' does NOT prove the runtime is quiet. Claimed 'zero failures since 08-30 20:32' while orchestrator_recipe_fires showed 43k live fires (33k unclassified fallback + 9
 
 ### wrong premise
 
@@ -55,11 +55,11 @@ _The reasoning was sound but rested on a false starting fact. State the premise 
 
 _The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing._
 
+- **2026-09-01** — Amends the resolution rules with verified endpoint->LLM identity map and source-integrity lesson. (1) 10.100.0.4:8001 is JOSHUA qwen3.8-27b, NOT Claudia; Claudia is 127.0.0.1:11521. (2) Julia+Claudia are ONE TP=2 lane at 127.0.0.1:11513, not two rows. (3) Addi
 - **2026-08-31** — Amends clauses 1 and 13: before writing a disposition to orchestrator_ideas.status, probe information_schema.COLUMNS; MySQL non-strict silently coerces enum values not in the column type (an UPDATE to 'superseded' became 'rejected' with rows affected=1). A liv
 - **2026-08-30** — Amends the resolution rules: (1) an llm_call_log model string is a LABEL, not a physical model — litellm model_names can be ALIASES backed by a different provider (verified 2026-08-29: config.yaml lines 244-253 back claude-haiku/claude-haiku-4-5 with deepseek/
 - **2026-08-29** — Amends clause 2 (acquisition gate): a mailer's transport must be read from the config file the mailer ACTUALLY loads (config/config.php merged via array_replace_recursive with config.local.php), never from a config file that exists but is unused (config/mail.p
 - **2026-08-29** — amends the cgroup-identity gate: never claim 'all watchdogs stopped' from pkill alone — a root-owned systemd unit (observed: glm52-watchdog.service PID 678) survives user pkill and can fire relaunches mid-boot. Always enumerate /proc/<PID>/cgroup owners for ev
-- **2026-08-29** — 2026-08-28 reversal: Email 2 in the DSHS copy-paste set was written as a generic 'where are my records' follow-up for TPIA-010 (ORR A08132026.0450013) while HHSC had already sent a clarification/narrowing demand on 2026-08-24 22:03 UTC that the draft never ans
 
 ### scope error
 

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-09-01T20:30:19.353Z",
+ "generated_at": "2026-09-01T21:30:19.699Z",
  "counts": {
-  "parsed": 1,
+  "parsed": 2,
   "reused": 1027,
   "failed": 0,
-  "total": 1028
+  "total": 1029
  },
  "tasks": {
   "1784522296714": {
@@ -151070,13 +151070,13 @@
   },
   "1788281756491": {
    "task_id": "1788281756491",
-   "mtime": 1788286232462,
+   "mtime": 1788296114666,
    "created_at": "2026-09-01T16:55:56.491Z",
-   "last_modified": "2026-09-01T18:10:32.462Z",
-   "size_kb": 897,
-   "turn_count": 236,
+   "last_modified": "2026-09-01T20:55:14.666Z",
+   "size_kb": 1903,
+   "turn_count": 330,
    "title": "#TastyBot\n\ncan you install the tastybot program on this computer?",
-   "pickup_prompt": "ejected + description updated.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #29178 [deployed] - TastyBot desktop app + real Tastytrade data\n\nWhere we left off (verified 2026-09-01 11:09 PT):\n- Real TastyBot program located at ~/Library/Application Support/TastyBot/repo (Python, OAuth-authorized, tokens.json + .env present)\n- Local dashboard running at 127.0.0.1:8765, showing REAL data (5 positions in 5WX51247, Net Liq $208,607)\n- Desktop app /Users/rubenmajor/Desktop/TastyBot.app pinned to Dock; launcher self-starts local server and opens /positions\n- Server-side /emtskills/routes/tastybot_positions.php is a separate demo surface (hardcoded placeholder data); its $currentUser access bug was fixed this session (patched + lint + FPM reload + live ACL probe ALLOWED=YES)\n- Idea #29178 [deployed], #29195 [rejected] (no 'superseded' in status enum)\n\nOpen threads to drive next:\n- None - all work completed this session\n\nReference IDs:\n- Ideas filed: #29178 [deployed], #29195 [rejected]\n- Files touched: /Users/rubenmajor/Desktop/TastyBot.app, ~/Library/Application Support/TastyBot/repo, /var/www/emtskills/routes/tastybot_positions.php (+ .bak-20260901-tastyfix)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
+   "pickup_prompt": "4\" + proof row in rule_amend).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #29178 - TastyBot desktop app (Dock) + deadline vs immediate clarity\n\nWhere we left off (verified 2026-09-01 13:54 PT):\n- TastyBot.app on Desktop has real icon (TastyBot.icns 159,643 bytes) + CFBundleIconFile set; Dock entry persists\n- Local dashboard on 127.0.0.1:8765 now labels \"close now\" (mandatory >= 70% immediate close) separate from \"Close by (deadline, not immediate)\" + \"in Nd\" column and \"Close by date\" header\n- Real Tastytrade data live: 5 positions in account 5WX51247, Net Liq $208,607\n\nOpen threads to drive next:\n- None - all work completed this session\n\nReference IDs:\n- Ideas filed: #29178 [deployed], #29195 [rejected]\n- Files touched: /Users/rubenmajor/Desktop/TastyBot.app/Contents/MacOS/TastyBot, /Users/rubenmajor/Desktop/TastyBot.app/Contents/Resources/TastyBot.icns, /Users/rubenmajor/Desktop/TastyBot.app/Contents/Info.plist, tastybot/app.py (TastyBot repo, Mac user Library Application Support)\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════</result>\n</attempt_completion>",
    "ideas": {
     "8790": null,
     "10131": null,
@@ -151101,11 +151101,11 @@
   },
   "1788284221639": {
    "task_id": "1788284221639",
-   "mtime": 1788294596928,
+   "mtime": 1788296812730,
    "created_at": "2026-09-01T17:37:01.639Z",
-   "last_modified": "2026-09-01T20:29:56.928Z",
-   "size_kb": 1566,
-   "turn_count": 614,
+   "last_modified": "2026-09-01T21:06:52.730Z",
+   "size_kb": 1866,
+   "turn_count": 710,
    "title": "#September 1 Externship Switchover\n\nCouple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and I can answer them for you using the browser AI.",
    "pickup_prompt": null,
    "ideas": {
@@ -151119,6 +151119,8 @@
     "1494": null,
     "1495": null,
     "1496": null,
+    "1497": null,
+    "1498": null,
     "2631": null,
     "19419": null,
     "20315": null,
@@ -151141,25 +151143,36 @@
     "29213": "proposed",
     "29214": "proposed",
     "29216": "proposed",
+    "29225": "proposed",
+    "29227": "proposed",
+    "29228": "proposed",
+    "29230": "deployed",
     "92400": null,
     "111827": null,
     "166534": null,
+    "178828": null,
     "374151": null,
     "856404": null,
     "939803": null,
     "939806": null,
+    "939843": null,
+    "939847": null,
+    "939851": null,
+    "939855": null,
+    "939859": null,
+    "939863": null,
     "059669": null
    }
   },
   "1788284259715": {
    "task_id": "1788284259715",
-   "mtime": 1788286929049,
+   "mtime": 1788295258575,
    "created_at": "2026-09-01T17:37:39.715Z",
-   "last_modified": "2026-09-01T18:22:09.049Z",
-   "size_kb": 774,
-   "turn_count": 170,
+   "last_modified": "2026-09-01T20:40:58.575Z",
+   "size_kb": 963,
+   "turn_count": 186,
    "title": "#SMS and Email Notifications\n\nCanyou give me the link to where I can turn on/off all student notificaitons for SMS/Emails?",
-   "pickup_prompt": "filed: **#29209 [executing]**.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Verify 60-day notification toggles wired + fix dead cron.\n\nWhere we left off (verified 2026-09-01 11:21 PT):\n- DB state confirmed: completion_warning_14d is_active=1; 7d/3d/1d is_active=0\n- cron_completion_warnings.php had a 5-layer fatal cascade, dead since ~Aug 22; all fixed (killswitch require/inversion, clog() hoisting, missing cron_error_alert.php restored, missing secrets require, added per-touch-point is_active gate)\n- Dry-run verified: 28 students skipped for disabled 3-day type, 0 sends; registry last_checked_at stamped 2026-09-01 11:16\n- Sibling NREMT/recert/exam/60day-failer crons probed CLEAN; RCA idea #29209 [executing] on record\n\nOpen threads:\nNone — all repair work completed and verified this session.\n\nReference IDs:\n- Ideas filed: #29209 [executing]\n- Files touched: cron/cron_completion_warnings.php, lib/comms_killswitch_guard.php, cron/cron_error_alert.php (restored from .bak-ruben-impl-20260715-151620), config/secrets.php (require added), notifications/manage.php (read), notification_job_registry / student_notification_types (read)\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "Center page where they belong.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\nPick up task — Confirm where Ruben's 60-day + NREMT notification controls live.\n\nWhere we left off (verified 2026-09-01 13:40 PT):\n- manage.php reads only student_notification_types (14 rows; 4 are the 60-day ladder)\n- jobs.php (Notification Control Center) reads notification_job_registry (all 9 NREMT/completion/recert/exam jobs present + active)\n- notification_templates is empty (0 rows) — the \"Email Templates\" tab content is absent; toggles still functional via student_notification_types.is_active\n- Ruben's toggle state confirmed live: 14d ON, 7d/3d/1d OFF; per-type gate wired and dry-run verified (28 students skipped on 3d)\n\nOpen threads:\n1. Whether to populate notification_templates (Email Templates tab), generating bodies/subjects from cron inline text — needs Ruben decision: yes/no (human-policy decision, no idea filed)\n\nReference IDs:\n- Ideas filed: #29209 [executing] (RCA — repair + toggle wiring)\n- Files touched: cron/cron_completion_warnings.php, lib/comms_killswitch_guard.php, cron/cron_error_alert.php (restored)\n- Tables read: student_notification_types, notification_templates, notification_job_registry, comms_killswitch\n\nWhen done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1565": null,
     "14532": null,
@@ -151255,13 +151268,13 @@
   },
   "1788286330120": {
    "task_id": "1788286330120",
-   "mtime": 1788287092031,
+   "mtime": 1788295882368,
    "created_at": "2026-09-01T18:12:10.120Z",
-   "last_modified": "2026-09-01T18:24:52.031Z",
-   "size_kb": 414,
-   "turn_count": 70,
+   "last_modified": "2026-09-01T20:51:22.368Z",
+   "size_kb": 527,
+   "turn_count": 100,
    "title": "#30 Day Deadline Push out to 90 Days\n\nI would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. \n\nScope how this could be done and then we can take action with a good plan",
-   "pickup_prompt": "m) | causal rule updated: 263.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #29208 [proposed] - 30-day deadline to 90 days (silent PD approval buffer)\n\nWhere we left off (verified 2026-09-01 11:22 PT):\n- Scope document written to /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md (this session's deliverable).\n- Idea #29208 [proposed] filed in orchestrator_ideas (academic/high) = the implementation plan, pending Ruben go-ahead.\n- Deadline = course_end_date + 30 days (= didactic + 60 days), verified in 6 code sites plus 4 AI-policy files.\n- Notification silence path confirmed: student_notification_types.is_active kill switch on completion_warning_14d/7d/3d/1d; PD-facing reminders stay ON.\n\nOpen threads to drive next:\n1. #29208 [proposed] - Answer the 4 go-ahead questions (anchor = course_end+90 vs didactic+90; PD reminders on/off; one-time backfill of mid-window students; warnings fully off vs re-armed), then execute the 7 change sets in the scope doc.\n\nReference IDs:\n- Ideas filed: #29208 [proposed]\n- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
+   "pickup_prompt": "s) | causal rule updated: 263.\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #29208 [proposed] - 30-day deadline to 90 days (silent PD approval buffer)\n\nWhere we left off (verified 2026-09-01 13:50 PT):\n- Scope doc updated: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md (externship system + page wiring sections added).\n- Idea #29208 [proposed] in orchestrator_ideas = the implementation plan, pending Ruben go-ahead.\n- Externship pipeline has no separate deadline; NREMT window = src/Status.php:91 (60-day); extends with the same change set.\n- Pages (admin_profile.php, pd_80_percent_students, pd_80_percent_review, externship_assignment_queue) all read the calculators and follow automatically.\n- Deadline mapped across 7 code sites + 4 AI-policy files.\n\nOpen threads to drive next:\n1. #29208 [proposed] - Answer the 4 in-line questions (anchor; PD reminders on/off; backfill mid-window; warnings off/cadence), then execute the 7 change sets in the scope doc.\n\nReference IDs:\n- Ideas filed: #29208 [proposed]\n- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════\n</result>\n</attempt_completion>",
    "ideas": {
     "1127": null,
     "1405": null,
@@ -151292,6 +151305,38 @@
     "29166": "proposed",
     "29208": "proposed",
     "48953": null
+   }
+  },
+  "1788296990463": {
+   "task_id": "1788296990463",
+   "mtime": 1788298205432,
+   "created_at": "2026-09-01T21:09:50.463Z",
+   "last_modified": "2026-09-01T21:30:05.432Z",
+   "size_kb": 319,
+   "turn_count": 123,
+   "title": "#September 1 Externship Switchover\n\n\nI still don't see dates and times pre-filled as I asked before, I need that built. Also others approved as per rule 29. Give and poll Vicky followup questions. Running your questions as well now:\n\nHere is the browser AI test and every outstanding item, so you can open a fresh window with all of it in hand. I am at 95% of my context window, which is why I am handing off rather than starting the next build.\n\nQuick orientation before the test. The assign page is live and works, but three things you flagged are NOT done: the suggested date and time do not prefill (you have to click a chip), sites have no start/end times or total hours recorded, and the stat c",
+   "pickup_prompt": null,
+   "ideas": {
+    "3730": null,
+    "5873": null,
+    "29196": "deployed",
+    "29197": "deployed",
+    "29199": "proposed",
+    "29200": "deployed",
+    "29201": "deployed",
+    "29202": "deployed",
+    "29203": "deployed",
+    "29213": "deployed",
+    "29214": "deployed",
+    "29216": "deployed",
+    "29225": "proposed",
+    "29227": "deployed",
+    "29228": "deployed",
+    "29230": "deployed",
+    "92400": null,
+    "166534": null,
+    "178828": null,
+    "374151": null
    }
   }
  }

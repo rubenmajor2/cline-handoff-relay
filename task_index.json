@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-01T19:30:18.953Z",
+ "generated_at": "2026-09-01T20:30:19.353Z",
  "counts": {
-  "parsed": 0,
-  "reused": 1028,
+  "parsed": 1,
+  "reused": 1027,
   "failed": 0,
   "total": 1028
  },
@@ -151101,11 +151101,11 @@
   },
   "1788284221639": {
    "task_id": "1788284221639",
-   "mtime": 1788287545808,
+   "mtime": 1788294596928,
    "created_at": "2026-09-01T17:37:01.639Z",
-   "last_modified": "2026-09-01T18:32:25.808Z",
-   "size_kb": 1050,
-   "turn_count": 416,
+   "last_modified": "2026-09-01T20:29:56.928Z",
+   "size_kb": 1566,
+   "turn_count": 614,
    "title": "#September 1 Externship Switchover\n\nCouple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and I can answer them for you using the browser AI.",
    "pickup_prompt": null,
    "ideas": {
@@ -151117,9 +151117,12 @@
     "1492": null,
     "1493": null,
     "1494": null,
+    "1495": null,
+    "1496": null,
     "2631": null,
     "19419": null,
     "20315": null,
+    "25185": null,
     "25821": null,
     "25822": null,
     "26663": null,
@@ -151137,6 +151140,7 @@
     "29203": "deployed",
     "29213": "proposed",
     "29214": "proposed",
+    "29216": "proposed",
     "92400": null,
     "111827": null,
     "166534": null,

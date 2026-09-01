@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 12:30:18 PM PT | window: last 72h | 77 tasks | index total 1028 (parsed 0, cached 1028)
+Generated: 9/1/2026, 1:30:19 PM PT | window: last 72h | 77 tasks | index total 1028 (parsed 1, cached 1027)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788284221639` | 9/1/2026, 11:32:25 AM | 416 | 1050KB | #September 1 Externship Switchover |
+| `1788284221639` | 9/1/2026, 1:29:56 PM | 614 | 1566KB | #September 1 Externship Switchover |
 | `1788237036746` | 9/1/2026, 11:30:58 AM | 686 | 2570KB | #Joshua Qwen 3.8 27B TP=2 |
 | `1788244675583` | 9/1/2026, 11:26:38 AM | 546 | 1907KB | #Kaizon Learner status |
 | `1788286330120` | 9/1/2026, 11:24:52 AM | 70 | 414KB | #30 Day Deadline Push out to 90 Days |
@@ -92,7 +92,7 @@ Generated: 9/1/2026, 12:30:18 PM PT | window: last 72h | 77 tasks | index total 
 
 ## Per-window detail
 
-### `1788284221639` — 9/1/2026, 11:32:25 AM PT — 416 turns
+### `1788284221639` — 9/1/2026, 1:29:56 PM PT — 614 turns
 
 **Original task:**
 
@@ -102,7 +102,7 @@ Generated: 9/1/2026, 12:30:18 PM PT | window: last 72h | 77 tasks | index total 
 Couple things here. I need an honest assement of what's going on with our externships now that we are no longer accepting student requests and auto-asisgning with admin approval or maybe it was after 72 hours, not sure based on various rules. I don't understand what the exact plan or process is right now and need to be able to see it properly. See Chat 55 from this morning about it in the last 10 minutes or so, continue polling that for back and forth/ideas. Also, I need to develop a browser AI test that I can run. So you will give me a set of questions and 
 ```
 
-**Ideas referenced:** #059669, #111827, #1486, #1487, #1488, #1489, #1490, #1492, #1493, #1494, #166534, #19419, #20315, #25821, #25822, #2631, #26663, #27100, #27492, #28613, #28958, #29011 [deployed], #29196 [proposed], #29197 [proposed], #29199 [proposed], #29200 [proposed], #29201 [deployed], #29202 [proposed], #29203 [deployed], #29213 [proposed], #29214 [proposed], #374151, #856404, #92400, #939803, #939806
+**Ideas referenced:** #059669, #111827, #1486, #1487, #1488, #1489, #1490, #1492, #1493, #1494, #1495, #1496, #166534, #19419, #20315, #25185, #25821, #25822, #2631, #26663, #27100, #27492, #28613, #28958, #29011 [deployed], #29196 [proposed], #29197 [proposed], #29199 [proposed], #29200 [proposed], #29201 [deployed], #29202 [proposed], #29203 [deployed], #29213 [proposed], #29214 [proposed], #29216 [proposed], #374151, #856404, #92400, #939803, #939806
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

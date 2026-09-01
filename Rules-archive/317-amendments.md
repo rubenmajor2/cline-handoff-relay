@@ -787,3 +787,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 2 (acquisition gate) + clause 3 (escalation probe): a fleet box was declared PHYSICALLY DOWN (WG dead, no route, 'physical action needed') after probing a STALE WireGuard IP (10.100.0.15/.16 from the old Docker-WG era in GLM53 tracker). The REAL production access path is a reverse SSH tunnel via WOPR:2205/2206, which was reachable, no WG involved. Correct probing showed the box ALIVE (uptime 2d+) with only the vLLM LANE not serving (empty :8000 listener). New requirement: before declaring any box down/offline, enumerate the access paths a LIVE process uses (reverse tunnels, mDNS names, /etc/hosts, ssh -p 220x) and probe the one serving code actually originates from; a failed ping on a legacy IP is never evidence of physical down.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 04:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: lane-health-checkpoint-20260831
+- RCA bucket: insufficient probe
+- Trigger pattern: Declaring host-down from a stale IP map instead of probing the live access path (reverse tunnel ports)
+- Reversal note: Carryover flip from earlier segment (same window): declared Julia/Claudia 'physically down / WG no route' based on stale Docker-WG IPs 10.100.0.15/.16; corrected to ALIVE via reverse SSH tunnels WOPR:2205/2206. Amends clause 2 (acquisition gate): host state must be probed via the REAL documented access path (reverse SSH tunnel ports), never a remembered legacy IP map.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 05:05 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788212457240
+- RCA bucket: insufficient probe
+- Trigger pattern: outage root-cause asserted from plausibility (laptops sleep) without reading pmset -g log / uptime on the affected box
+- Reversal note: Amends clause 3 (escalation probe before declaring any wall) and the INSUFFICIENT_PROBE golden mode: an OUTAGE ROOT-CAUSE claim ("the box was asleep") is a wall-class claim requiring the box's own forensic record (pmset -g log sleep events, uptime, last reboot) before shipping. 2026-08-31 flip: claimed Maximus+Cicero vanished because "laptops sleep"; live probe showed Cicero up 11 days with ZERO Entering-Sleep events — the real cause was tunnel agents targeting an unroutable WG IP (10.100.0.1) after the box's WireGuard was disabled, making any single tunnel drop permanent. A plausible mechanism is not a root cause until the box's own logs confirm it.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

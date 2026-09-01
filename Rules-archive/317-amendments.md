@@ -767,3 +767,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 1. A write's ROW_COUNT/affected-rows is NOT a disposition probe. When any INSERT/UPDATE targets a status column, SELECT the row back and quote the returned value as the disposition proof. Specifically: an invalid ENUM value silently coerces to '' under non-strict sql_mode, and a BEFORE UPDATE trigger (orchestrator_ideas_status_audit) can re-derive the value from dev_stage, so ROW_COUNT=1 can coexist with the wrong status landed (observed: status=awaiting_review was set, coerced to '', trigger re-derived approved).
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 03:41 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: postmark-webhook-rca-20260831
+- RCA bucket: insufficient probe
+- Trigger pattern: Agent declared a recurring failure 'durably fixed' after verifying only the symptom-suppression layer (autoheal re-enabled the triggers) without ever probing WHY the vendor kept disabling them. Inheri
+- Reversal note: Amends clause 3 (escalation probe before declaring any wall) and the INSUFFICIENT_PROBE golden-rule row. New requirement: when an EXTERNAL service reports connection-level failure (StatusCode 0, HttpRequestException, connect timeout) while your own endpoint returns 200 to LOCAL curl, a local HTTP probe is NOT probative - it traverses the hairpin path and cannot see an inbound drop. You MUST (a) run a packet capture to determine whether the vendor's SYNs arrive and are answered, and (b) inspect the FULL netfilter path including `iptables -t raw -L PREROUTING -n -v` and mangle/nat, not just INPUT, before attributing the failure to the vendor. An INPUT-chain audit returning clean is NOT evidence of no block: raw PREROUTING executes before INPUT, so an ACCEPT at INPUT position 1 can show 0 packets while tcpdump captures the SYNs. Additionally: re-enabling/restarting a resource the vendor keeps disabling is symptom suppression, not a fix - a recurrence after a claimed durable fix means the 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 04:03 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: current-lane-planning
+- RCA bucket: insufficient probe
+- Trigger pattern: probing stale legacy WireGuard IP 10.100.0.15/.16 instead of the live reverse-SSH tunnel path WOPR:2205/2206, then declaring the box down
+- Reversal note: Amends clause 2 (acquisition gate) + clause 3 (escalation probe): a fleet box was declared PHYSICALLY DOWN (WG dead, no route, 'physical action needed') after probing a STALE WireGuard IP (10.100.0.15/.16 from the old Docker-WG era in GLM53 tracker). The REAL production access path is a reverse SSH tunnel via WOPR:2205/2206, which was reachable, no WG involved. Correct probing showed the box ALIVE (uptime 2d+) with only the vLLM LANE not serving (empty :8000 listener). New requirement: before declaring any box down/offline, enumerate the access paths a LIVE process uses (reverse tunnels, mDNS names, /etc/hosts, ssh -p 220x) and probe the one serving code actually originates from; a failed ping on a legacy IP is never evidence of physical down.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

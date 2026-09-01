@@ -5,22 +5,22 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **211**
-- Last generated: 2026-08-31 20:51
+- Reversals tracked: **213**
+- Last generated: 2026-08-31 21:51
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 101 | 48% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
-| wrong premise | 37 | 18% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
+| insufficient probe | 103 | 48% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| wrong premise | 37 | 17% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 28 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 24 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
 | stale assumption | 21 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 85 amendment(s)
+- Rule 317: 87 amendment(s)
 - Rule 297: 45 amendment(s)
 - Rule 315: 26 amendment(s)
 - Rule 91: 9 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-01** — Carryover flip from earlier segment (same window): declared Julia/Claudia 'physically down / WG no route' based on stale Docker-WG IPs 10.100.0.15/.16; corrected to ALIVE via reverse SSH tunnels WOPR:2205/2206. Amends clause 2 (acquisition gate): host state mu
+- **2026-09-01** — Amends clause 2 (acquisition gate) + clause 3 (escalation probe): a fleet box was declared PHYSICALLY DOWN (WG dead, no route, 'physical action needed') after probing a STALE WireGuard IP (10.100.0.15/.16 from the old Docker-WG era in GLM53 tracker). The REAL 
 - **2026-09-01** — Amends clause 3 (escalation probe before declaring any wall) and the INSUFFICIENT_PROBE golden-rule row. New requirement: when an EXTERNAL service reports connection-level failure (StatusCode 0, HttpRequestException, connect timeout) while your own endpoint re
 - **2026-08-31** — Amends clause 1. A write's ROW_COUNT/affected-rows is NOT a disposition probe. When any INSERT/UPDATE targets a status column, SELECT the row back and quote the returned value as the disposition proof. Specifically: an invalid ENUM value silently coerces to ''
 - **2026-08-31** — Amends clause 13 (MLX decode-wedge). The wedge is TWO axes, not one: (1) prompt-cache growth under concurrent decode — fixed by --prompt-cache-size/bytes + decode/prompt-concurrency caps, verified by a live Prompt Cache read under load; and (2) cold-start-load
-- **2026-08-31** — Julia/Claudia false-down + text-only claim from a WOPR-side tunnel-port curl (human_corrections #3). The TUNNEL vs MODEL discipline in rule 322 is now MECHANICALLY enforced: R322_TUNNEL_VERDICT gate in clinerules_validate_completion blocks any DOWN/dead/text-o
-- **2026-08-31** — Further amends clause 3, second reversal in the same session on the same question. The first amendment (alias/brand-family search) was still insufficient: the "AMR genuinely absent from Drive" claim was based on a name search of the DEFAULT Drive corpus, which
 
 ### wrong premise
 

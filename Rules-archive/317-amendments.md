@@ -807,3 +807,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 3 (escalation probe before declaring any wall) and the INSUFFICIENT_PROBE golden mode: an OUTAGE ROOT-CAUSE claim ("the box was asleep") is a wall-class claim requiring the box's own forensic record (pmset -g log sleep events, uptime, last reboot) before shipping. 2026-08-31 flip: claimed Maximus+Cicero vanished because "laptops sleep"; live probe showed Cicero up 11 days with ZERO Entering-Sleep events — the real cause was tunnel agents targeting an unroutable WG IP (10.100.0.1) after the box's WireGuard was disabled, making any single tunnel drop permanent. A plausible mechanism is not a root cause until the box's own logs confirm it.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-01 06:38 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: joshua-tp2-followup
+- RCA bucket: insufficient probe
+- Trigger pattern: Concluding 'X is not viable' from one failed attempt when the same box previously served X with a different env var; missing the config-diff instead of the hardware verdict.
+- Reversal note: Amends clause 1/2 (acquisition gate): declared 'TP=2 not viable on Joshua' from a single pidfd-IPC attempt after a GPU reset storm, WITHOUT checking the box's own proven TP=2 serving recipe first. Forensics then found unit backup service.bak-tp2-20260831 (pidfd TP=2) vs the 2026-08-22 serving recipe (CCL_ZE_IPC_EXCHANGE=sockets + CCL_TOPO_FABRIC_VERTEX_CONNECTION_CHECK=0, W4A16 int4 131K, 64 tok/s@8 for days). The wedge is the pidfd path + gdm greeter contention, not TP=2 per se. Rule now requires: before declaring any flag/config combination non-viable, grep the box's own unit backups + HANDOFF_NOTES for a prior successful run of that combination and name the exact env delta.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

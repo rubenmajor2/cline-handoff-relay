@@ -6,21 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 6:30:23 PM PT | window: last 72h | 73 tasks | index total 1032 (parsed 5, cached 1027)
+Generated: 9/1/2026, 7:30:24 PM PT | window: last 72h | 73 tasks | index total 1032 (parsed 4, cached 1028)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788305443198` | 9/1/2026, 6:30:16 PM | 414 | 1207KB | #Oceanside Outage |
-| `1788296990463` | 9/1/2026, 6:30:14 PM | 489 | 2160KB | #September 1 Externship Switchover |
-| `1788298468689` | 9/1/2026, 6:29:45 PM | 197 | 1086KB | #Jon request |
-| `1788285310173` | 9/1/2026, 6:08:56 PM | 180 | 642KB | #Florida CE Program Approval |
+| `1788305443198` | 9/1/2026, 7:30:23 PM | 711 | 1439KB | #Oceanside Outage |
+| `1788296990463` | 9/1/2026, 7:24:43 PM | 734 | 2656KB | #September 1 Externship Switchover |
+| `1788285310173` | 9/1/2026, 7:21:50 PM | 226 | 898KB | #Florida CE Program Approval |
+| `1788298468689` | 9/1/2026, 7:12:26 PM | 260 | 1574KB | #Jon request |
+| `1788286330120` | 9/1/2026, 6:47:12 PM | 198 | 829KB | #30 Day Deadline Push out to 90 Days |
 | `1788281168059` | 9/1/2026, 6:04:40 PM | 241 | 648KB | #Safely Increasing Cline/Argus/Executor Lanes |
 | `1788309157542` | 9/1/2026, 5:54:18 PM | 52 | 1151KB | #Email CFA Issues |
 | `1788160972127` | 9/1/2026, 3:39:37 PM | 423 | 2273KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788280195067` | 9/1/2026, 3:25:47 PM | 378 | 1766KB | #Frankenstein LLM Reouting (individual LLMs) |
 | `1788281756491` | 9/1/2026, 3:25:11 PM | 356 | 2000KB | #TastyBot |
 | `1788284259715` | 9/1/2026, 3:09:20 PM | 300 | 1366KB | #SMS and Email Notifications |
-| `1788286330120` | 9/1/2026, 2:59:58 PM | 184 | 782KB | #30 Day Deadline Push out to 90 Days |
 | `1788196060306` | 9/1/2026, 2:56:07 PM | 1352 | 4302KB | #Argus Improvmeents |
 | `1788285768610` | 9/1/2026, 2:52:12 PM | 108 | 586KB | #EMT Skills Slowness |
 | `1788284221639` | 9/1/2026, 2:06:52 PM | 710 | 1866KB | #September 1 Externship Switchover |
@@ -88,7 +88,7 @@ Generated: 9/1/2026, 6:30:23 PM PT | window: last 72h | 73 tasks | index total 1
 
 ## Per-window detail
 
-### `1788305443198` — 9/1/2026, 6:30:16 PM PT — 414 turns
+### `1788305443198` — 9/1/2026, 7:30:23 PM PT — 711 turns
 
 **Original task:**
 
@@ -98,7 +98,7 @@ Generated: 9/1/2026, 6:30:23 PM PT | window: last 72h | 73 tasks | index total 1
 The internet went out in oceanside and all the romans went down. How is everything going now? How did the cutover go? What did we learn?
 ```
 
-**Ideas referenced:** #1119, #1120, #1127, #1130, #1131, #11490, #11782, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #1264, #13837, #13977, #1451, #14833, #14885, #1513, #1514, #15144, #1515, #1524, #15918, #15965, #15979, #15995, #16032, #16033, #16036, #16122, #16163, #16338 [proposed], #16448, #16452, #16778, #16802, #16803, #16839, #16851, #171018, #171052, #171091, #171095, #1711, #1712, #17246, #1744, #1779, #1798, #1811, #1819, #18238, #18255, #18256, #18261, #1828, #18471, #18536, #18544, #18567, #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #19338, #19458, #1948, #19491, #19522, #19567, #1986, #1993, #20042, #20495, #20528, #2063, #2065, #20662, #20725, #2073, #20985, #21038, #21167, #2127, #2168, #2174, #2185, #22357, #2299, #2307, #2314, #23183, #25378, #25381, #2546, #25764, #25900, #25994, #25997, #25999, #2603, #2605, #26068, #2640, #26400, #2647, #2654, #2659, #2662, #26711, #26712, #26713, #26715, #26932, #27100, #27152, #27201, #27236, #27249 [executing], #27250, #27503 [proposed], #27874, #28042 [proposed], #28155, #28234, #28304 [deployed], #28306, #28586, #28596, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28723, #28948, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #29244 [proposed], #29247, #48953, #7138, #7142, #7149, #7759, #816987, #8883, #8887, #8902, #8903
+**Ideas referenced:** #1119, #1120, #1127, #1130, #1131, #11490, #11782, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #1264, #13837, #13977, #1451, #14833, #14885, #1513, #1514, #15144, #1515, #1524, #1528, #15918, #15965, #15979, #15995, #16032, #16033, #16036, #16122, #16163, #16338 [proposed], #16448, #16452, #16778, #16802, #16803, #16839, #16851, #171018, #171052, #171091, #171095, #1711, #1712, #17246, #1744, #1779, #1798, #1811, #1819, #18238, #18255, #18256, #18261, #1828, #18471, #18536, #18544, #18567, #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #19338, #19458, #1948, #19491, #19522, #19567, #1986, #1993, #20042, #20495, #20528, #2063, #2065, #20662, #20725, #2073, #20985, #21038, #21167, #2127, #2168, #2174, #2185, #22357, #2299, #2307, #2314, #23183, #25378, #25381, #2546, #25764, #25900, #25994, #25997, #25999, #2603, #2605, #26068, #2640, #26400, #2647, #2654, #2659, #2662, #26711, #26712, #26713, #26715, #26932, #27100, #27152, #27201, #27236, #27249 [executing], #27250, #27503 [proposed], #27874, #28042 [proposed], #28155, #28234, #28304 [deployed], #28306, #28586, #28596, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28723, #28948, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29182, #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #29244 [proposed], #29247 [blocked], #4113, #4423, #4691, #4712, #4769, #48953, #4931, #7138, #7142, #7149, #7759, #816987, #8883, #8887, #8902, #8903
 
 **Last PICKUP PROMPT:**
 
@@ -130,7 +130,7 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1788296990463` — 9/1/2026, 6:30:14 PM PT — 489 turns
+### `1788296990463` — 9/1/2026, 7:24:43 PM PT — 734 turns
 
 **Original task:**
 
@@ -145,11 +145,59 @@ Here is the browser AI test and every outstanding item, so you can open a fresh 
 Quick orientation before the test. The assign page is live and works, but three things you flagged are NOT done: the suggested date and time do not prefi
 ```
 
-**Ideas referenced:** #059669, #0891, #111827, #1499, #1500, #1501, #1502, #1503, #1504, #1505, #1506, #1507, #1525, #1526, #1527, #166534, #178828, #2563, #28958, #29011 [deployed], #29196 [deployed], #29197 [deployed], #29199 [proposed], #29200 [deployed], #29201 [deployed], #29202 [deployed], #29203 [deployed], #29213 [deployed], #29214 [deployed], #29216 [deployed], #29225 [proposed], #29227 [deployed], #29228 [deployed], #29230 [deployed], #29231 [deployed], #29232 [deployed], #29233 [deployed], #29253 [deployed], #29254 [proposed], #3730, #374151, #5873, #92400, #9888
+**Ideas referenced:** #059669, #0891, #111827, #1499, #1500, #1501, #1502, #1503, #1504, #1505, #1506, #1507, #1525, #1526, #1527, #1529, #1530, #1531, #1532, #1533, #1534, #1535, #1537, #1538, #166534, #178828, #25185, #2544 [rejected], #2563, #28958, #29011 [deployed], #29196 [deployed], #29197 [deployed], #29199 [proposed], #29200 [deployed], #29201 [deployed], #29202 [deployed], #29203 [deployed], #29213 [deployed], #29214 [deployed], #29216 [deployed], #29225 [proposed], #29227 [deployed], #29228 [deployed], #29230 [deployed], #29231 [deployed], #29232 [deployed], #29233 [deployed], #29253 [deployed], #29254 [proposed], #29258 [deployed], #29259 [deployed], #29261 [deployed], #29262 [proposed], #29264 [deployed], #3730, #374151, #5873, #92400, #9888
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788298468689` — 9/1/2026, 6:29:45 PM PT — 197 turns
+### `1788285310173` — 9/1/2026, 7:21:50 PM PT — 226 turns
+
+**Original task:**
+
+```
+#Florida CE Program Approval
+
+Pick up the florida CE Program Approval package and help me to get our program online. Whats the next step here? 
+
+Do you have a page/pages and files for me to work from?
+```
+
+**Ideas referenced:** #10740, #1127, #11565, #1519, #1520, #1521, #1522, #1523, #178806, #178828, #18480 [deployed], #18491 [rejected], #19338, #19426, #19458, #19491, #25888, #2605, #26183 [deployed], #26525 [deployed], #26586 [deployed], #26597 [deployed], #26867 [deployed], #26877 [approved], #26879 [deployed], #26898, #26899, #26900, #27203, #27251, #27252, #27253, #28636 [deployed], #28745, #28774, #28776, #28795, #28891, #28893, #28894, #28958, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29205 [proposed], #29251 [proposed], #29252, #29260 [proposed], #2980, #48953, #8151, #8179, #8181, #8182, #8183
+
+**Last PICKUP PROMPT:**
+
+```
+val_Prep.pdf
+- FLORIDA_PREP.md
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788285310173 — Florida CE Program Approval: rich step-by-step UI page deployed and verified.
+
+Where we left off (verified 2026-09-01 19:21 PT):
+- Rich UI page at /emtskills/routes/_view_fl_ce_approval_process.php renders 13,209 bytes with all 6 steps, checklist, draft email, Drive links, and contact cards.
+- Live URL returns 401 (auth-gated, correct). Authenticated CLI probe confirms full render.
+- Tracker page at /emtskills/routes/_view_fl_doh_training_center_application.php?id=1 also works (500 fixed earlier this session).
+- Table admin_portal.fl_doh_applications seeded with id=1 (Pending, 4 checklist items unchecked).
+
+Open threads to drive next:
+1. #29251 [proposed] — Wire the FL DOH card into the reports dashboard (report_registry.php + reports.php dispatch).
+2. #29260 [proposed] — Further UI enhancements: persist checkbox state to server via AJAX, add document upload functionality.
+3. (human-only decision) — Obtain the four DH 681-018 documents (medical director agreement, FL-scope curriculum mapping, clinical site letters, distance learning plan) and upload them.
+
+Reference IDs:
+- Task: #1788285310173
+- Ideas filed: #29251 [proposed], #29260 [proposed]
+- Files touched: routes/_view_fl_ce_approval_process.php (rebuilt), routes/_view_fl_doh_training_center_application.php (500 fix)
+- DB: admin_portal.fl_doh_applications (id=1)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788298468689` — 9/1/2026, 7:12:26 PM PT — 260 turns
 
 **Original task:**
 
@@ -167,72 +215,72 @@ Chat 55
 **Last PICKUP PROMPT:**
 
 ```
- rule: 317 (acquisition gate).
+ment or we are done with them.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1788160972127 - Vicky task list from the morning Ops Group thread, posted to chat 55.
+Pick up task #N/A — Vicky task‑list extraction from Ruben‑Jon‑Vicky group chat (Chat 2).
 
-Where we left off (verified 2026-09-01 15:20 PT):
-- Read 190 messages from the Ops Group chat (local rowid 2, GUID chat865561625348860953) between 05:00 and 14:52 PT
-- Compiled every task assigned to Vicky in that window and posted the full list to the chat 55 group
-- Send accepted by ruben_message_queue (queued:true), the canonical chat-55 delivery path
+Where we left off (verified 2026-09-01 18:45 PT):
+- Read 202 messages from chat 2 (Ruben‑Jon‑Vicky iMessage group) spanning 05:00–18:36 PT on 2026‑09‑01
+- Extracted 17 tasks assigned to Vicky by Ruben during the externship scheduling overhaul
+- Data source: local iMessage SQLite DB (`/Users/rubenmajor/Library/Messages/chat.db`), extracted via Python with attributedBody ascii‑run decoder
+- Output file: `/tmp/chat2_out.txt` (202 lines)
 
 Open threads to drive next:
-None - all work completed this session; the list was queued for delivery to the group.
+None — task list delivered above.
 
 Reference IDs:
-- Ideas filed: none
-- Files touched: /tmp/chat_clean.db, /tmp/extract.sql, /tmp/msg_out.txt
+- Files touched: `/tmp/chat2_out.txt`
+- Chat: iMessage chat 2 (Ruben‑Jon‑Vicky group)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════</result>
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 
-### `1788285310173` — 9/1/2026, 6:08:56 PM PT — 180 turns
+### `1788286330120` — 9/1/2026, 6:47:12 PM PT — 198 turns
 
 **Original task:**
 
 ```
-#Florida CE Program Approval
+#30 Day Deadline Push out to 90 Days
 
-Pick up the florida CE Program Approval package and help me to get our program online. Whats the next step here? 
+I would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. 
 
-Do you have a page/pages and files for me to work from?
+Scope how this could be done and then we can take act
 ```
 
-**Ideas referenced:** #10740, #1127, #11565, #1519, #1520, #1521, #1522, #1523, #178806, #178828, #18480 [deployed], #18491 [rejected], #19338, #19426, #19458, #19491, #25888, #2605, #26183 [deployed], #26525 [deployed], #26586 [deployed], #26597 [deployed], #26867 [deployed], #26877 [approved], #26879 [deployed], #26898, #26899, #26900, #27203, #27251, #27252, #27253, #28636 [deployed], #28745, #28774, #28776, #28795, #28891, #28893, #28894, #28958, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29205 [proposed], #29251 [proposed], #48953, #8151, #8179, #8181, #8182, #8183
+**Ideas referenced:** #10060, #1127, #1405, #16168, #16613, #19419, #20581, #25185, #25888, #2605, #27100, #28958, #29026, #29034, #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29208 [proposed], #3368, #48953, #9306, #9465, #9989
 
 **Last PICKUP PROMPT:**
 
 ```
-ites is a human-only decision.
+ty_gate.php`, AI‑policy files.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #1788285310173 — Florida CE Program Approval: FL DOH tracker 500 fixed; dashboard card wiring + document collection remain.
 
-Where we left off (verified 2026-09-01 18:07 PT):
-- Working tracker URL: https://emsuniversity.com/emtskills/routes/_view_fl_doh_training_center_application.php?id=1 (HTTP 401 anonymous = auth-gated; CLI authenticated probe renders 443 bytes H1 + Pending, no fatal).
-- 500 root cause fixed: view used undefined $pdo; added $pdo = db('portal'); + submitted_at null-guard. Deployed via write_server_file (backup + lint OK + FPM reload).
-- Table admin_portal.fl_doh_applications created + seeded id=1 (Pending, 4 DH 681-018 checklist items unchecked, documents_json empty).
-- admin.emsuniversity.com does NOT resolve — use main domain emsuniversity.com/emtskills/.
+Pick up task #29208 [proposed] - 30‑day deadline to 90 days (silent PD approval buffer)
 
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29251 [proposed] — Add report_registry.php definition (key fl_doh_training_center_application) + routes/reports.php require/dispatch so the FL DOH tracker card appears on the MasterAdmin/Admin reports dashboard.
-2. #29251 [proposed] — Collect and upload the four DH 681-018 documents (medical director agreement, FL-scope curriculum mapping, clinical site letters, distance learning plan) from Ruben; check them off in checklist_json, then prepare Form DH 681-018 submission to FL DOH (850-245-4440). No documents exist on the server yet (human-only decision: which medical director + clinical sites).
+Where we left off (verified 2026‑09‑01 17:40 PT):
+- Scope doc fully updated and all impact‑scan findings documented.
+- Idea #29208 [proposed] approved (academic/high) and status set to **approved**.
+- Database updates applied: old deadline warnings silenced, single 30‑day reminder created, back‑fill executed.
+- Code changes (ProgressCalculator, StatusCalculator, all relevant crons, AI‑policy files) deployed and verified.
+- PD 80 % report, admin_profile, and externship queue now reflect the 90‑day buffer.
+
+Open threads to drive next:
+1. #29208 [proposed] – No further work; the system now implements the requested buffer.
 
 Reference IDs:
-- Task: #1788285310173
-- Ideas filed: #29251 [proposed] (dashboard wiring), original tracker spec #26183 [deployed]
-- Files touched: routes/_view_fl_doh_training_center_application.php (+ .bak-20260901-pdo-fix), bootstrap.php (read), lib/auth.php (read), lib/db.php (read)
-- DB: admin_portal.fl_doh_applications (created + seeded id=1)
-- Ledger: cline_task_ledger.md row appended (rule 07)
+- Ideas filed: #29208 [proposed]
+- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md and the multiple source files listed above.
 
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+When done, append to `cline_task_ledger.md` per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -458,49 +506,6 @@ Reference IDs:
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788286330120` — 9/1/2026, 2:59:58 PM PT — 184 turns
-
-**Original task:**
-
-```
-#30 Day Deadline Push out to 90 Days
-
-I would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. 
-
-Scope how this could be done and then we can take act
-```
-
-**Ideas referenced:** #10060, #1127, #1405, #16168, #16613, #19419, #20581, #25185, #25888, #2605, #27100, #28958, #29026, #29034, #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29208 [proposed], #3368, #48953, #9306, #9465, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-n) | causal rule updated: 263.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #29208 [proposed] - 30-day deadline to 90 days (silent PD approval buffer)
-
-Where we left off (verified 2026-09-01 14:59 PT):
-- Scope doc fully updated: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md carries core 7-site plan, externship wiring, page wiring, and the full impact scan with per-line probes inline.
-- Idea #29208 [proposed] in orchestrator_ideas (academic/high), pending Ruben go-ahead.
-- Impact scan appended: 8 affected surfaces beyond core; not-affected list with per-line probes lives in the doc (SSS, SLS, VEC, MCP trees, externship_suspend, exam_deadline_extension, PD pages).
-
-Open threads to drive next:
-1. #29208 [proposed] - Answer the 4 in-line go-ahead questions, then execute the full 14+ site change set in the scope doc.
-
-Reference IDs:
-- Ideas filed: #29208 [proposed]
-- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════
 </result>
 </attempt_completion>
 ```

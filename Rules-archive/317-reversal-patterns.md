@@ -5,22 +5,22 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **230**
-- Last generated: 2026-09-01 18:03
+- Reversals tracked: **232**
+- Last generated: 2026-09-01 19:03
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 116 | 50% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
-| wrong premise | 38 | 17% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
-| unread source | 29 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
+| insufficient probe | 118 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| wrong premise | 38 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
+| unread source | 29 | 12% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 25 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
-| stale assumption | 22 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
+| stale assumption | 22 | 9% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 100 amendment(s)
+- Rule 317: 102 amendment(s)
 - Rule 297: 46 amendment(s)
 - Rule 315: 27 amendment(s)
 - Rule 322: 10 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-02** — - Claimed 'renders after login' from an anonymous 401 probe -> corrected: the authenticated render fataled with undefined $pdo (HTTP 500) | RCA bucket: insufficient probe | causal
+- **2026-09-02** — Amends clause 2 (acquisition gate): an HTTP 401 on the anonymous surface of an auth-gated route proves only that the route exists and the front controller runs — it is NOT evidence the authenticated surface renders. Shipping 'renders after login' without probi
 - **2026-09-01** — Amends rule 263 (verify before claim): before INSERT into an enumerated column (orchestrator_ideas.domain), probe the column definition first. An unverified enum value is silently rejected and stored as empty, which is an unverified write. Corrected 29208's do
 - **2026-09-01** — Amends clause 1 (fleet/routing state) and adds a numbered blip-class rule: a single HTTP-000 on a reverse-tunnel port alias (127.0.0.1:NNNN on WOPR) is NOT a down-model verdict and MUST be recorded UNVERIFIED, never DOWN — the 000 may be a tunnel blip or stale
 - **2026-09-01** — Amends clause 3 (escalation probe / claim-scope): a bug fix that CHANGES A POPULATION COUNT is not verified by the new count alone. Before reporting the delta as the win, run the downstream consumer of that population against its own gate and confirm the two a
-- **2026-09-01** — Amends clause 3 (escalation probe before declaring any wall): on 2026-09-01 the TastyBot task declared a credentials wall (no TASTY_API_TOKEN, no sync code) after probing only the EMSU server and Mac dotfiles. The real, already-authorized TastyBot program (OAu
-- **2026-09-01** — Amends clause 2 (acquisition gate): a tool output that prints APPEND_OK / exit 0 is not proof of a write — the artifact content itself must be re-read. First GLM53 tracker append attempt printed APPEND_OK while the write had failed with Permission denied (stde
 
 ### wrong premise
 

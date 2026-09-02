@@ -6,13 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 10:58:40 AM PT | window: last 72h | 78 tasks | index total 1055 (parsed 3, cached 1052)
+Generated: 9/2/2026, 11:58:40 AM PT | window: last 72h | 81 tasks | index total 1058 (parsed 3, cached 1055)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788370171352` | 9/2/2026, 10:58:35 AM | 104 | 363KB | #GLM Ring |
-| `1788335345976` | 9/2/2026, 10:58:19 AM | 387 | 920KB | #September 1 Externship Switchover |
-| `1788365684899` | 9/2/2026, 10:52:30 AM | 310 | 9225KB | Jon says he can't access this page and he should be able t do so because not only is he a  |
+| `1788372387064` | 9/2/2026, 11:58:35 AM | 109 | 763KB | #September 1 Externship Switchover |
+| `1788373091938` | 9/2/2026, 11:58:35 AM | 127 | 509KB | #Frankenstein-llm vision |
+| `1788243351199` | 9/2/2026, 11:33:11 AM | 356 | 2795KB | #TDSHS |
+| `1788370171352` | 9/2/2026, 11:22:44 AM | 234 | 769KB | #GLM Ring |
+| `1788372693610` | 9/2/2026, 11:13:07 AM | 1 | 840KB | #Deepseek/Qwen Usage on Open Router |
+| `1788365684899` | 9/2/2026, 11:12:58 AM | 334 | 9325KB | Jon says he can't access this page and he should be able t do so because not only is he a  |
+| `1788335345976` | 9/2/2026, 11:02:38 AM | 396 | 972KB | #September 1 Externship Switchover |
 | `1788335461694` | 9/2/2026, 10:04:53 AM | 956 | 1177KB | #GLM Ring |
 | `1788335579641` | 9/2/2026, 2:16:21 AM | 182 | 2694KB | #Oceanside Outage Remainder |
 | `1788329209654` | 9/2/2026, 2:14:36 AM | 266 | 5300KB | #Frankenstein LLM not obeying Cline Rules |
@@ -23,7 +27,6 @@ Generated: 9/2/2026, 10:58:40 AM PT | window: last 72h | 78 tasks | index total 
 | `1788327849553` | 9/2/2026, 1:56:46 AM | 214 | 11552KB | #Julia/Claudia TP=2 Qwen |
 | `1788339072931` | 9/2/2026, 1:51:33 AM | 2 | 6KB | How does life treat an llm? |
 | `1788286330120` | 9/2/2026, 1:48:54 AM | 286 | 2275KB | #30 Day Deadline Push out to 90 Days |
-| `1788243351199` | 9/2/2026, 1:47:46 AM | 322 | 2280KB | #TDSHS |
 | `1788335898507` | 9/2/2026, 1:41:45 AM | 58 | 1574KB | Anty actionable ideas? |
 | `1788329531146` | 9/2/2026, 1:13:12 AM | 330 | 1366KB | #Joshua Qwen |
 | `1788309157542` | 9/2/2026, 12:59:29 AM | 112 | 1262KB | #Email CFA Issues |
@@ -93,7 +96,55 @@ Generated: 9/2/2026, 10:58:40 AM PT | window: last 72h | 78 tasks | index total 
 
 ## Per-window detail
 
-### `1788370171352` — 9/2/2026, 10:58:35 AM PT — 104 turns
+### `1788372387064` — 9/2/2026, 11:58:35 AM PT — 109 turns
+
+**Original task:**
+
+```
+#September 1 Externship Switchover
+
+
+If you get to the point to where you need a studnet ID number by the time you get to having to do externships, there's a real problem with that student SLS, so that seems wrong / check SLS -> And there are 506 already-started students with no student_id who the eligibility gate can never even evaluate, filed as #29365 [proposed].
+
+this seems wrong as there should be students in AZ that are waiting, espeically witht he number in CA and TX. Something doesn't add up. Canyou see if you can figure that out? Or is that becasue Ajo is so helpful?-> Zero AZ student
+```
+
+**Ideas referenced:** #12661, #13977, #1622, #1623, #1624, #1625, #16608, #17580, #178833, #18693, #19492, #20357, #2036, #25185, #28958, #29225 [awaiting_review], #29306 [deployed], #29309 [awaiting_review], #29313 [deployed], #29316 [executing], #29317 [proposed], #29318 [proposed], #29319 [proposed], #29320 [proposed], #29321 [proposed], #29322 [proposed], #29364 [deployed], #29365 [proposed], #29371 [deployed], #9086, #9168, #9339, #9343
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788373091938` — 9/2/2026, 11:58:35 AM PT — 127 turns
+
+**Original task:**
+
+```
+#Frankenstein-llm vision
+
+Frankenstein-llm vision model appears to be stalling. Can you look and resolve?
+```
+
+**Ideas referenced:** #10108, #10740, #1127, #11741, #11781, #12477, #12573, #12584, #12618, #12824, #12872, #12878, #13202, #15637, #16163, #16265, #16304, #16417, #16844, #18312, #18326, #1912, #19338, #19686, #1998, #2114, #2168, #2174, #25097, #2537, #2550, #25764, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #26908, #26923, #26932, #2712, #2714, #2715, #2716, #2719, #27259, #27673, #28586, #28596, #28622, #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29193, #29244, #29247, #29265, #29272, #29273, #29274, #29285 [deployed], #29299 [deployed], #29323, #29327, #29368, #48953
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788243351199` — 9/2/2026, 11:33:11 AM PT — 356 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+It needs to be on this form I think:https://oag.my.site.com/OpenRecords/s/flow/CORA_External_Create_Complaint 
+
+These are the instructions: 
+In order to submit a general request for assistance please provide a copy of the original request for information and any correspondence received from the governmental body concerning your request. If you are unable to provide a copy of your original request, please submit documentation stating how your request was submitted to the governmental body and fully describing the information requested. If there are questions or concerns, please contact 
+```
+
+**Ideas referenced:** #0070, #1450, #1451, #1452, #1453, #1454, #1455, #1456, #1457, #1585, #1593, #1595, #1597, #1598, #1599, #1627, #178816, #178824, #25185, #26282, #27100, #29011 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29060, #29069 [proposed], #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29113, #29123 [proposed], #29130 [proposed], #29311 [proposed], #29315 [proposed], #44546
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788370171352` — 9/2/2026, 11:22:44 AM PT — 234 turns
 
 **Original task:**
 
@@ -109,11 +160,103 @@ Then let's talk about how we can get this working faster next time. I don't want
 GLM-5.3 RING IS SERVING (verified: ssh_command curl returned HTTP 200 from 127.0.0.1:8210/v1/models, body id=glm-5.3-15pct, max_model_len=131072; ssh_command chat completion returned content=PONG, finish_reason=stop). Task #1788305443198 complete: the six-node Hexarchy ring came back to full service
 ```
 
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #1744, #1779, #178805, #178830, #1798, #1828, #1876, #1912, #19567, #20042, #20495, #20536, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #2307, #2314, #25378, #25381, #2546, #25764, #2603, #26400, #2647, #2654, #2659, #2662 [resolved], #2663, #2675, #2677, #2679, #26932, #2704, #2712, #2713, #27236, #27249 [executing], #27250, #27503, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [executing], #29279, #29284 [deployed], #29285 [deployed], #29299 [deployed], #7142, #7149
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #1617, #1618, #1619, #1620, #1621, #1626, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #1744, #1779, #178805, #178830, #178833, #1798, #1828, #1876, #1912, #19567, #20042, #20495, #20536, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #2307, #2314, #25150, #25185, #25378, #25381, #2546, #25764, #25925, #25926, #25935, #2603, #26400, #26435, #2647, #2654, #2659, #2662 [resolved], #2663, #2675, #2677, #2679, #26914 [deployed], #26915 [executing], #26916, #26932, #2704, #2712, #2713, #2719 [deployed], #27236, #27249 [executing], #27250, #27503, #27652, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #28958, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [executing], #29279, #29284 [deployed], #29285 [deployed], #29299 [deployed], #29368 [proposed], #29372 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+oposed] and #29372 [proposed].
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788335461694 — GLM-5.3 ring durable supervision + naming rule 326: COMPLETE.
+
+Where we left off (verified 2026-09-02 11:19 PT):
+- Ring serving GLM-5.3 LOCAL, id=glm-5.3-15pct, weights root=/home/rubenmajor/glm53-nvfp4 (verified: live probe curl :8210/v1/models at 11:17 PT)
+- Rule 326 live in the corpus and queryable by id (verified: clinerules_lookup tool returned the full body titled 'Rule 326 — GLM Ring Naming: Canonical IDs, No Version Aliases', 4540 bytes; lint script exited 0; reindex ran)
+- All engineering work landed and running in production (see probes below)
+- Ring serving :8210 HTTP 200 (verified: final-sweep ssh_command curl returned 200 at 11:03)
+- Worker v2.1 alive PID 1432875 (verified: ssh_command ps returned 1 match + banner 'v2.1-supervision ... coldboot=3cycles heartbeat=10cycles')
+- Respawn supervisor live-fired (verified: ssh_command log tail returned CRON-RESPAWN at 10:56:01 after kill at 10:54:20)
+- Dest-rule baked+live on all 6 nodes, broken script tombstoned (verified: ssh_command per-node sweep returned script=1 baked=1 live=1 tombstone=1 guard=1 on all six)
+- WOPR watchdog active PID 1710513 with GLM_WD_BOOT_GRACE=5400 (verified: systemctl is-active=active + /proc/1710513/environ read)
+- #29247 [deployed] + #29274 [deployed] stamped this window (verified: reconcile_ideas rows 'status=deployed dev_stage=ready_for_review')
+- #29299 [deployed] + #29285 [deployed] + #29284 [deployed] from the prior window (verified: same reconcile_ideas run returned 5 closed rows + 1 proposed row)
+
+Open threads to drive next:
+1. #29368 [proposed] — GLM-5.3 ring UPS: Ruben decision needed (hardware purchase ~$3-4K, 3-5kVA; only remaining lever on the 50-min cold-weights floor; NUT smart-shutdown option). Awaiting your approve/reject.
+2. #29372 [proposed] — rename legacy glm52-named infrastructure to glm_ring_* per rule 326 (churn risk on the freshly-hardened chain; ideally after the next power-event validation). Awaiting your approve/reject.
+
+Reference IDs:
+- Ideas filed: #29368 [proposed], #29372 [proposed]
+- Ideas closed: #29247 [deployed], #29274 [deployed]
+- Files touched: cato ~/bin/glm53_watchdog_worker_v2.sh (v2.1, backup .bak-supervision-20260902), ~/bin/glm53_worker_respawn.sh (new), ~/bin/glm52_fabric_guard.sh (fix, backup), ~/bin/glm53_wedge_detect.sh (log path, backup), cato crontab (+respawn line), /opt/emsu/glm52_ring_policy_routes.sh + /opt/emsu/glm52_dest_rule_general.sh + /etc/cron.d/emsu-fabric-boot-restore on all 6 nodes, WOPR /etc/systemd/system/glm52-ring-watchdog.service.d/coldboot-grace-20260902.conf + /usr/local/bin/glm52_ring_watchdog.sh (notify, backup .bak-notify-20260902), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /var/www/emtskills/cline_task_ledger.md, HANDOFF_NOTES.md, ~/Documents/Cline/Rules-archive/326-glm-ring-naming-canonical-ids.md + _RULE_TREE.md + .clinerule_counter
+- Bug library: frankenstein_router_incidents glm53_oceanside_unsupervised_supervisor_storm_2026_09_01 (resolved)
+
+# Reversal Log
+- "patched files moved into place" (mid-window belief) → worker respawned at 10:56:01 still running OLD v2 code; my v2 patch script had dropped the mv commands so .new files sat beside the originals | insufficient probe (announced patch success without immediate read-back of the RUNNING version) | causal rule cited: 317 clause 2 (acquisition gate already covers this; read-back discipli
+```
+
+### `1788372693610` — 9/2/2026, 11:13:07 AM PT — 1 turns
+
+**Original task:**
+
+```
+#Deepseek/Qwen Usage on Open Router
+
+Taking a look at open router, I am seeing charges for DeepSeek and Qwen 3.8. 27B (this one is absolutely dumb because we have local 27B). We should never use Qqwen 3.8 27B on Open Router. Max is fine, but 27B pretty dumb. 
+
+Anyway, we have a direct API for Deepseek so why are we using Open router. Can you find and correct that?
+```
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788335345976` — 9/2/2026, 10:58:19 AM PT — 387 turns
+### `1788365684899` — 9/2/2026, 11:12:58 AM PT — 334 turns
+
+**Original task:**
+
+```
+Jon says he can't access this page and he should be able t do so because not only is he a PD, but he's also an Exec Admin. He has dual roles, but also, he's concerned that other PDs can't access that page. Can you look and le tm know? 
+
+This page is specifically for PDs according to to their state.
+```
+
+**Ideas referenced:** #004085, #0056, #0288, #1127, #137333, #155724, #1565, #19338, #19458, #19491, #1976, #212529, #218838, #2196, #22193 [awaiting_review], #2563, #2605, #2714, #2715, #2716, #28310, #28465, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29244, #29247, #29272, #29273, #29323, #29327, #48953, #495057, #616161, #64748, #795548, #856404, #86868
+
+**Last PICKUP PROMPT:**
+
+```
+ct on that specific path next.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — grievance request page clarity (deployed) + pending live-flow confirmation for Desiree.
+
+Where we left off (verified 2026-09-02 11:12 PT):
+- Audited grievance flow end-to-end; nothing broken: request page 200, filing page 400-without-token (correct), policy/blank-form PDFs exist, uploads/grievances writable by www-data, FPM=www-data, zero fatal/error in today's php-fpm log on greed path.
+- Desiree Nettles: portal Students id 1347 (25324T-01, AZ, active, is_duplicate=0, is_current_account=1); Moodle user 45607 suspended=1 but matcher uses portal Students, so not the blocker.
+- Deployed copy clarification to routes/student_grievance_request.php (hero line + "How this works" 3-step card + tightened Read-first line). Backup student_grievance_request.php.bak-grievance-copy-20260902. Live-verified over HTTP: "does not file a grievance yet" / "How this works" / "Nothing is saved until you upload" all served.
+
+Open threads to drive next:
+1. (human-only decision - no idea) — If Vicky forwards Desiree's screenshot and it shows a stage-2 error (File too large / specific save error / token expired), fix that specific path; otherwise the clarity change likely resolves it.
+2. (human-only decision - no idea) — login_activity visibility: report_viewer.php caps session_logs at LIMIT 1000 (window cutoff 2026-08-26 07:31:44), so Rios (last login 08-12) and Gamez (08-24) fall out of view; decide whether to make per-user searchable or raise the limit.
+3. (human-only decision - no idea) — Candidate intake channel dead (jotform last row 2026-02-10, indeed 2026-07-10, website 2026-08-13; monthly intake 30→3; status 'new'=0) still uninvestigated.
+
+Reference IDs:
+- Files touched: routes/student_grievance_request.php (edited + .bak-grievance-copy-20260902), /tmp/grv_copy_patch.php (patch script)
+- Probed: grievance_request URLs, uploads/*.pdf, uploads/grievances permissions, php8.3-fpm.log, Students (Desiree 1347), moodle_c_live.user (45607 suspended), grievance_intake_request_log
+- Earlier this session: candidates.php + view_candidate.php null-safe render patches (candidate 3602 NULL source fatal), verified all row counts render; login_activity diagnosis documented.
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788335345976` — 9/2/2026, 11:02:38 AM PT — 396 turns
 
 **Original task:**
 
@@ -131,48 +274,6 @@ explain
 **Ideas referenced:** #1588, #1589, #1590, #1591, #1592, #1611, #1612, #1613, #1614, #1615, #1616, #178828, #25185, #2544, #28958, #29216 [deployed], #29225 [proposed], #29233 [deployed], #29254 [proposed], #29258 [deployed], #29259 [deployed], #29261 [deployed], #29262 [proposed], #29264 [deployed], #29304 [deployed], #29305 [rejected], #29306 [deployed], #29309 [executing], #29310 [deployed], #29313 [deployed], #29314 [deployed], #29316 [proposed], #29317 [proposed], #29318 [proposed], #29319 [proposed], #29320 [proposed], #29321 [proposed], #29322 [proposed], #29364 [deployed], #29365 [proposed], #374151
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788365684899` — 9/2/2026, 10:52:30 AM PT — 310 turns
-
-**Original task:**
-
-```
-Jon says he can't access this page and he should be able t do so because not only is he a PD, but he's also an Exec Admin. He has dual roles, but also, he's concerned that other PDs can't access that page. Can you look and le tm know? 
-
-This page is specifically for PDs according to to their state.
-```
-
-**Ideas referenced:** #004085, #0056, #0288, #1127, #137333, #155724, #1565, #19338, #19458, #19491, #1976, #212529, #218838, #2196, #22193 [awaiting_review], #2563, #2605, #2714, #2715, #2716, #28310, #28465, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29244, #29247, #29272, #29273, #29323, #29327, #48953, #495057, #616161, #64748, #795548, #856404, #86868
-
-**Last PICKUP PROMPT:**
-
-```
-non_hire 90 / interviewing 7).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — login_activity visibility + Desiree Nettles grievance save + Cori candidates (done).
-
-Where we left off (verified 2026-09-02 10:51 PT):
-- login_activity: report_viewer.php caps session_logs at ORDER BY login_time DESC LIMIT 1000; window cutoff = 2026-08-26 07:31:44; Gamez last login 08-24 15:33, Rios last 08-12 19:59, both fall outside -> invisible. Both exist (Gamez=Admin 127 sessions, Rios=PD 14 sessions). Not a role filter; pure LIMIT-1000 recency ceiling.
-- Desiree: portal Students id 1347 (25324T-01, AZ, active, desiree@trisummit.net) matches; Moodle user 45607 suspended=1; ZERO rows in grievance_intake_request_log for her in recent window. The request form only emails a code (does not save); actual save happens on post-code stage-2 form. Awaiting Vicky's screenshot (URL + exact message + timestamp) to pick one of three failure paths.
-- Cori candidates: FIXED and verified (candidate 3602 NULL source fatal -> null-safe render patch + data repair). Active/hired/non_hire/interviewing all render.
-
-Open threads to drive next:
-1. (human-only decision - no idea) — Get Vicky's Desiree screenshot (URL, exact error text, timestamp); then pin the failure to code-request-stage vs token-expiry vs stage-2 broken INSERT and fix accordingly.
-2. (human-only decision - no idea) — Decide whether login_activity report should be made per-user searchable or have its LIMIT-1000 raised, so older users like Rios/Gamez stay visible.
-3. (human-only decision - no idea) — Candidate intake is dead (jotform last row 2026-02-10, indeed 2026-07-10, website 2026-08-13; monthly intake 30->3; status 'new' = 0 rows) — still uninvestigated.
-
-Reference IDs:
-- Files touched this session: routes/report_viewer.php (read), routes/student_grievance_request.php (read), lib/grievance_intake.php (read), personnel/candidates.php (patched + .bak), personnel/view_candidate.php (patched + .bak)
-- DB tables: session_logs (15563 rows), users/user_profiles (Rios id6 PD / Gamez id13 Admin), Students (Desiree id1347 25324T-01), grievance_intake_request_log (Desiree absent), personnel_candidates (3602 repaired)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
 
 ### `1788335461694` — 9/2/2026, 10:04:53 AM PT — 956 turns
 
@@ -729,23 +830,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1788243351199` — 9/2/2026, 1:47:46 AM PT — 322 turns
-
-**Original task:**
-
-```
-#TDSHS
-
-It needs to be on this form I think:https://oag.my.site.com/OpenRecords/s/flow/CORA_External_Create_Complaint 
-
-These are the instructions: 
-In order to submit a general request for assistance please provide a copy of the original request for information and any correspondence received from the governmental body concerning your request. If you are unable to provide a copy of your original request, please submit documentation stating how your request was submitted to the governmental body and fully describing the information requested. If there are questions or concerns, please contact 
-```
-
-**Ideas referenced:** #0070, #1450, #1451, #1452, #1453, #1454, #1455, #1456, #1457, #1585, #1593, #1595, #1597, #1598, #1599, #178816, #25185, #26282, #27100, #29011 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29060, #29069 [proposed], #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29113, #29123 [proposed], #29130 [proposed], #29311 [proposed], #29315 [proposed], #44546
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788335898507` — 9/2/2026, 1:41:45 AM PT — 58 turns
 

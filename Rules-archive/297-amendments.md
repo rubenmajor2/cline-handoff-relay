@@ -127,3 +127,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends the CLASSIFY step: an arithmetic identity that fails across two tables is a HYPOTHESIS about missing terms, never evidence of corruption. I reported "14 arithmetically impossible invoices" from balance_due > total_amount - amount_paid, and escalated it as data corruption to a human. The formula was simply incomplete: EMSU adds a $250 finance fee stored in payment_plan_agreements, not in qb_invoices.total_amount, so plan students legitimately carry a balance exceeding the invoice total. Joining that table explained 6 of 14 to the penny, including the one I had escalated. Before labeling any data "corrupt", "impossible", or "invalid", enumerate every legitimate component of the quantity (fees, adjustments, credits, discounts, multi-row plans) by finding the tables that hold them; a term you have not located is the most likely explanation, far more likely than the business's books being broken. The word "corrupt" is an alarm that costs human trust: earn it by exhausting the benign 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 00:55 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788245681701
+- RCA bucket: scope error
+- Trigger pattern: Finding one broken component and generalising the failure to every component sharing the product name, plus quoting a raw grep hit count as a call-site count.
+- Reversal note: Amends the SCOPE GATE: a product name is NOT a population. Before claiming an outage affects "X", enumerate every SURFACE that carries the name X and probe EACH one, because surfaces that share a product name routinely use different endpoints. Source incident 2026-09-01: I found api/argus_proxy.php failing on 10.100.0.1:4000 and generalised it to "every Argus request had been failing since 8/28". Ruben pointed at the Activity log: argus_task_queue holds 68 rows since 2026-08-28, 55 of them status=done, latest 2026-09-01 13:15. The Argus surfaces people actually use (routes/alltastic_api.php and routes/cron_argus_task_worker.php) resolve LITELLM_BASE_URL to https://litellm.emsuniversity.com and never touch the WireGuard address, so they were never affected. Only the Chrome-extension proxy was. Same gate now also requires COUNTING BY OCCURRENCE TYPE: my "70 PHP call sites" came from a raw grep, but 65 of the 70 hits are comment lines and only 34 are unguarded live calls. Grep hits are te
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

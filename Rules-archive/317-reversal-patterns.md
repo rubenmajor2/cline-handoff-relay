@@ -5,8 +5,8 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **238**
-- Last generated: 2026-09-02 01:06
+- Reversals tracked: **239**
+- Last generated: 2026-09-02 02:12
 
 ## Mistake classes by frequency
 
@@ -14,8 +14,8 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 |---|---|---|---|
 | insufficient probe | 122 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 38 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
-| unread source | 31 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
-| scope error | 25 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
+| unread source | 32 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
+| scope error | 25 | 10% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
 | stale assumption | 22 | 9% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
@@ -23,8 +23,8 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 - Rule 317: 102 amendment(s)
 - Rule 297: 47 amendment(s)
 - Rule 315: 29 amendment(s)
+- Rule 91: 10 amendment(s)
 - Rule 322: 10 amendment(s)
-- Rule 91: 9 amendment(s)
 - Rule 302: 7 amendment(s)
 - Rule 321: 7 amendment(s)
 - Rule 323: 6 amendment(s)
@@ -55,11 +55,11 @@ _The reasoning was sound but rested on a false starting fact. State the premise 
 
 _The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing._
 
+- **2026-09-02** — Reversal: a completion claimed to be rule-91-compliant but the PICKUP PROMPT block was emitted as free prose AFTER the closing attempt_completion tag, i.e. OUTSIDE the result parameter string, so the gate read a result with no divider/header/sections and rejec
 - **2026-09-02** — Amends the gate's step 2 (READ SOURCE): when a canonical mechanical report exists for the symptom class, running it is now part of step 2, not optional. This session probed endpoints ad hoc for 30 minutes and blamed the GLM ring before reading the decision fun
 - **2026-09-02** — Amends obligation 1 (GROUND TRUTH FIRST): a FILE FOUND ON DISK IS NOT A GROUND-TRUTH SOURCE. On 2026-09-01 an agent answered "what model is running VAPI CFA" by grepping the Desktop, finding a file named VAPI_CFA_Model_Status.txt, and reporting its contents ("
 - **2026-09-01** — Amends the resolution rules with verified endpoint->LLM identity map and source-integrity lesson. (1) 10.100.0.4:8001 is JOSHUA qwen3.8-27b, NOT Claudia; Claudia is 127.0.0.1:11521. (2) Julia+Claudia are ONE TP=2 lane at 127.0.0.1:11513, not two rows. (3) Addi
 - **2026-08-31** — Amends clauses 1 and 13: before writing a disposition to orchestrator_ideas.status, probe information_schema.COLUMNS; MySQL non-strict silently coerces enum values not in the column type (an UPDATE to 'superseded' became 'rejected' with rows affected=1). A liv
-- **2026-08-30** — Amends the resolution rules: (1) an llm_call_log model string is a LABEL, not a physical model — litellm model_names can be ALIASES backed by a different provider (verified 2026-08-29: config.yaml lines 244-253 back claude-haiku/claude-haiku-4-5 with deepseek/
 
 ### scope error
 

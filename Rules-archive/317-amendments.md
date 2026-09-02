@@ -947,3 +947,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: - Claimed 'renders after login' from an anonymous 401 probe -> corrected: the authenticated render fataled with undefined $pdo (HTTP 500) | RCA bucket: insufficient probe | causal 
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 17:04 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788335461694
+- RCA bucket: wrong premise
+- Trigger pattern: Agent claims a patch/script/config was deployed because it ran a write command, without re-reading the target file to confirm the change landed.
+- Reversal note: Amends clause 2 (acquisition gate): a prior window claimed 'boot guard wired into relauncher line 12' but ssh diff showed the relauncher byte-identical to its pre-guard backup — a deployment claim shipped without a read-back probe. Reinforces the golden rule: claim scope must equal probe scope, and a DEPLOYMENT claim specifically requires a post-patch read-back (grep/diff), never an inference from having run the patch command.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

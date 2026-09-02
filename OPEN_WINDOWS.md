@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 9:58:40 AM PT | window: last 72h | 77 tasks | index total 1054 (parsed 2, cached 1052)
+Generated: 9/2/2026, 10:58:40 AM PT | window: last 72h | 78 tasks | index total 1055 (parsed 3, cached 1052)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788335461694` | 9/2/2026, 9:58:33 AM | 887 | 1073KB | #GLM Ring |
-| `1788365684899` | 9/2/2026, 9:53:59 AM | 196 | 824KB | Jon says he can't access this page and he should be able t do so because not only is he a  |
+| `1788370171352` | 9/2/2026, 10:58:35 AM | 104 | 363KB | #GLM Ring |
+| `1788335345976` | 9/2/2026, 10:58:19 AM | 387 | 920KB | #September 1 Externship Switchover |
+| `1788365684899` | 9/2/2026, 10:52:30 AM | 310 | 9225KB | Jon says he can't access this page and he should be able t do so because not only is he a  |
+| `1788335461694` | 9/2/2026, 10:04:53 AM | 956 | 1177KB | #GLM Ring |
 | `1788335579641` | 9/2/2026, 2:16:21 AM | 182 | 2694KB | #Oceanside Outage Remainder |
 | `1788329209654` | 9/2/2026, 2:14:36 AM | 266 | 5300KB | #Frankenstein LLM not obeying Cline Rules |
 | `1788324547743` | 9/2/2026, 2:14:28 AM | 834 | 2311KB | #Oceanside Outage |
@@ -23,7 +25,6 @@ Generated: 9/2/2026, 9:58:40 AM PT | window: last 72h | 77 tasks | index total 1
 | `1788286330120` | 9/2/2026, 1:48:54 AM | 286 | 2275KB | #30 Day Deadline Push out to 90 Days |
 | `1788243351199` | 9/2/2026, 1:47:46 AM | 322 | 2280KB | #TDSHS |
 | `1788335898507` | 9/2/2026, 1:41:45 AM | 58 | 1574KB | Anty actionable ideas? |
-| `1788335345976` | 9/2/2026, 1:24:27 AM | 278 | 645KB | #September 1 Externship Switchover |
 | `1788329531146` | 9/2/2026, 1:13:12 AM | 330 | 1366KB | #Joshua Qwen |
 | `1788309157542` | 9/2/2026, 12:59:29 AM | 112 | 1262KB | #Email CFA Issues |
 | `1788298468689` | 9/2/2026, 12:57:43 AM | 267 | 1671KB | #Jon request |
@@ -92,48 +93,46 @@ Generated: 9/2/2026, 9:58:40 AM PT | window: last 72h | 77 tasks | index total 1
 
 ## Per-window detail
 
-### `1788335461694` — 9/2/2026, 9:58:33 AM PT — 887 turns
+### `1788370171352` — 9/2/2026, 10:58:35 AM PT — 104 turns
 
 **Original task:**
 
 ```
 #GLM Ring
 
-Pick up task #1788305443198 (GLM Ring breakout) - Oceanside outage: restart-storm RCA + NCCL init stall. You own the six ring Sparks: Cato (192.168.1.115, rank 0, ssh via WOPR port 2204), Augustus (.244, rank 1), Pompey (.21, rank 2), Marcus (.171, rank 3), Tiberius (.32, rank 4), Cesar (.56, rank 5).
+Add it to the bug library. Add it here:: GLM53_RING_STATE_TRACKER.md
 
-CURRENT STATE (verified 2026-09-02 00:33 PT by the previous window):
-- Relaunch #11 (dispatched 00:07:57 via ~/bin/glm53_relaunch_seq128.sh) is FROZEN at 39 log lines since the pynccl line at 00:09:58, worker RSS flat at 1622868 KB over 20s, :8210 unbound (verified: ssh_command return
+fix it durably to prevent recurrence
+
+Then let's talk about how we can get this working faster next time. I don't want to be waiting around for 18 hours trying to reboot the ring if the power goes out. That's insanity
+
+GLM-5.3 RING IS SERVING (verified: ssh_command curl returned HTTP 200 from 127.0.0.1:8210/v1/models, body id=glm-5.3-15pct, max_model_len=131072; ssh_command chat completion returned content=PONG, finish_reason=stop). Task #1788305443198 complete: the six-node Hexarchy ring came back to full service
 ```
 
-**Ideas referenced:** #11991, #1602, #178805, #178830, #1876, #1912, #1986, #1993, #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #26712, #2675, #2677, #2679, #26932, #2704, #2708, #2718, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17202, #17246, #1744, #1779, #178805, #178830, #1798, #1828, #1876, #1912, #19567, #20042, #20495, #20536, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #2307, #2314, #25378, #25381, #2546, #25764, #2603, #26400, #2647, #2654, #2659, #2662 [resolved], #2663, #2675, #2677, #2679, #26932, #2704, #2712, #2713, #27236, #27249 [executing], #27250, #27503, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [executing], #29279, #29284 [deployed], #29285 [deployed], #29299 [deployed], #7142, #7149
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788335345976` — 9/2/2026, 10:58:19 AM PT — 387 turns
+
+**Original task:**
 
 ```
-filled after serving verified)
+#September 1 Externship Switchover
 
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
 
-Pick up task #1788305443198 — GLM-5.3 Ring Oceanside recovery: storm RCA + NCCL loop fix + relaunch #12 to serving.
+How is this going now? Did Vicky ask any quesitons or answer anything else in chat 55 that needs to be done? What about Discord and emails / are Customer service using the new system or still using their old stuff. What is the coversation there. What's happening and how can we support their transition as we need them to use the new systme quickly? 
 
-Where we left off (verified 2026-09-02 09:44 PT):
-- #29299 [deployed] restart-storm RCA COMPLETE: all 10 relaunches manual; watchdog never fired; boot guard genuinely wired; worker wedge short-circuit made functional
-- #29285 [awaiting_review→deployed pending serving verify] NCCL stall root cause: source-policy-table SYN-ACK loops; general dest-rule fix on all 6 nodes (durable)
-- Relaunch #12: NCCL Init COMPLETE, weights loading (31/87 at 09:43), serving expected ~09:55-10:05
+explain what this has to do with externships, I'm confused -> - #29262 [proposed] offer-history panel, grievance auto-attach, no-response early warning, decline reason codes, agency-cancellation status
 
-Open threads to drive next:
-1. Verify serving: :8210 200 + PONG + adapter re-admission (this window, before completion)
-Reference IDs:
-- Ideas: #29299 [deployed], #29285 [deployed], #29284 [deployed], #29274 [executing], #29247 [executing]
-- Bug library: 2708 (dest-rule loop), 2718 (general rule fix)
-- Files: glm53_relaunch_seq128.sh (+boot guard), glm53_watchdog_worker_v2.sh (+wedge counter), glm52_fabric_guard.sh (+general rule), all 6 nodes @reboot crontabs
-</content>
-</write_to_file>
+explain 
 ```
 
-### `1788365684899` — 9/2/2026, 9:53:59 AM PT — 196 turns
+**Ideas referenced:** #1588, #1589, #1590, #1591, #1592, #1611, #1612, #1613, #1614, #1615, #1616, #178828, #25185, #2544, #28958, #29216 [deployed], #29225 [proposed], #29233 [deployed], #29254 [proposed], #29258 [deployed], #29259 [deployed], #29261 [deployed], #29262 [proposed], #29264 [deployed], #29304 [deployed], #29305 [rejected], #29306 [deployed], #29309 [executing], #29310 [deployed], #29313 [deployed], #29314 [deployed], #29316 [proposed], #29317 [proposed], #29318 [proposed], #29319 [proposed], #29320 [proposed], #29321 [proposed], #29322 [proposed], #29364 [deployed], #29365 [proposed], #374151
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788365684899` — 9/2/2026, 10:52:30 AM PT — 310 turns
 
 **Original task:**
 
@@ -148,28 +147,84 @@ This page is specifically for PDs according to to their state.
 **Last PICKUP PROMPT:**
 
 ```
-re changing pipeline behavior.
+non_hire 90 / interviewing 7).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — explain Cori's "All Candidates" empty-statuses and "Ruben Major" observation.
+Pick up task — login_activity visibility + Desiree Nettles grievance save + Cori candidates (done).
 
-Where we left off (verified 2026-09-02 09:53 PT):
-- personnel/candidates.php renders candidate_name directly (line 398); column fully populated, no blanks, no "Ruben" fallback.
-- Live row counts: new=0, offer_sent=0, offer_accepted=0, paperwork_pending=0, reviewing=1, under_review=2, correction_needed=1, interviewing=7, hired=38, non_hire=90, archived=3033.
-- "Ruben Major" = candidate id 3602 (hired, created 2026-08-28 23:14, notes cite Argus #28465/#28310), top of list only because of created_at DESC sort.
-- No code bug; page is correct. Empty statuses are real data state, not a display failure.
+Where we left off (verified 2026-09-02 10:51 PT):
+- login_activity: report_viewer.php caps session_logs at ORDER BY login_time DESC LIMIT 1000; window cutoff = 2026-08-26 07:31:44; Gamez last login 08-24 15:33, Rios last 08-12 19:59, both fall outside -> invisible. Both exist (Gamez=Admin 127 sessions, Rios=PD 14 sessions). Not a role filter; pure LIMIT-1000 recency ceiling.
+- Desiree: portal Students id 1347 (25324T-01, AZ, active, desiree@trisummit.net) matches; Moodle user 45607 suspended=1; ZERO rows in grievance_intake_request_log for her in recent window. The request form only emails a code (does not save); actual save happens on post-code stage-2 form. Awaiting Vicky's screenshot (URL + exact message + timestamp) to pick one of three failure paths.
+- Cori candidates: FIXED and verified (candidate 3602 NULL source fatal -> null-safe render patch + data repair). Active/hired/non_hire/interviewing all render.
 
 Open threads to drive next:
-1. (human-only decision - no idea) — Whether to (a) produce a written explainer for Cori, or (b) restore/use the intermediate offer statuses (offer_sent → offer_accepted → paperwork_pending) so those buckets fill as a real workflow. Needs Ruben's product call before any behavior change.
+1. (human-only decision - no idea) — Get Vicky's Desiree screenshot (URL, exact error text, timestamp); then pin the failure to code-request-stage vs token-expiry vs stage-2 broken INSERT and fix accordingly.
+2. (human-only decision - no idea) — Decide whether login_activity report should be made per-user searchable or have its LIMIT-1000 raised, so older users like Rios/Gamez stay visible.
+3. (human-only decision - no idea) — Candidate intake is dead (jotform last row 2026-02-10, indeed 2026-07-10, website 2026-08-13; monthly intake 30->3; status 'new' = 0 rows) — still uninvestigated.
 
 Reference IDs:
-- Files read: personnel/candidates.php, personnel/view_candidate.php, personnel/index.php, personnel/lib/AdminPortalDB.php, config.local.php
-- DB tables: personnel_candidates, personnel_offers, users, page_access_log
-- Related Argus refs from candidate 3602 notes: #28465, #28310
+- Files touched this session: routes/report_viewer.php (read), routes/student_grievance_request.php (read), lib/grievance_intake.php (read), personnel/candidates.php (patched + .bak), personnel/view_candidate.php (patched + .bak)
+- DB tables: session_logs (15563 rows), users/user_profiles (Rios id6 PD / Gamez id13 Admin), Students (Desiree id1347 25324T-01), grievance_intake_request_log (Desiree absent), personnel_candidates (3602 repaired)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788335461694` — 9/2/2026, 10:04:53 AM PT — 956 turns
+
+**Original task:**
+
+```
+#GLM Ring
+
+Pick up task #1788305443198 (GLM Ring breakout) - Oceanside outage: restart-storm RCA + NCCL init stall. You own the six ring Sparks: Cato (192.168.1.115, rank 0, ssh via WOPR port 2204), Augustus (.244, rank 1), Pompey (.21, rank 2), Marcus (.171, rank 3), Tiberius (.32, rank 4), Cesar (.56, rank 5).
+
+CURRENT STATE (verified 2026-09-02 00:33 PT by the previous window):
+- Relaunch #11 (dispatched 00:07:57 via ~/bin/glm53_relaunch_seq128.sh) is FROZEN at 39 log lines since the pynccl line at 00:09:58, worker RSS flat at 1622868 KB over 20s, :8210 unbound (verified: ssh_command return
+```
+
+**Ideas referenced:** #11991, #1602, #1604 [deployed], #1605 [rejected], #1606 [rejected], #1607 [rejected], #1608, #1609, #1610, #178805, #178830, #1876, #1912, #1986, #1993, #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #26712, #2675, #2677, #2679, #26932, #2704, #2708, #27100, #2718, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #28958, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+imestamp 2026-09-02 10:00:34).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788305443198 — GLM-5.3 Ring Oceanside recovery: COMPLETE, ring serving since 09:57 PT 2026-09-02.
+
+Where we left off (verified 2026-09-02 10:04 PT):
+- Ring SERVING: glm-5.3-15pct, 131K ctx (verified: ssh_command curl HTTP 200, id=glm-5.3-15pct; WOPR tunnel probe WOPR_TUNNEL_8210=200)
+- Decode works (verified: ssh_command chat completion returned content=PONG, finish_reason=stop, 1051-byte response)
+- General dest-rule on all 6 nodes (verified: ssh_command ip rule sweep returned priority-40 to 10.220.0.0/16 lookup main on all six)
+- Boot guard + worker (verified: ssh_command grep returned line 12 guard call + bash -n SYNTAX_OK; ssh_command log tail returned watchdog v2 started pid 1349832 at 10:00:34)
+- #29299 [deployed] (verified: reconcile_ideas returned status=deployed, dev_stage=ready_for_review, title=GLM ring restart-storm RCA)
+- #29285 [deployed] (verified: reconcile_ideas returned status=deployed for GLM ring NCCL freeze)
+- #29284 [deployed] (verified: reconcile_ideas returned status=deployed for GLM-5.3 Hex ring relaunch)
+
+Open threads to drive next:
+1. #29274 [executing] — wedge-detector live-fire verification (worker short-circuit functionalized this window but never test-fired on a real wedge)
+2. #29247 [executing] — Oceanside runbook: bake the general dest-rule into /opt/emsu root-owned fabric scripts (currently durable via user-space fabric_guard.sh + @reboot crontabs only)
+
+Reference IDs:
+- Ideas filed: #29299 [deployed], #29285 [deployed]
+- Ideas closed: none this window
+- Files touched: cato ~/bin/glm53_relaunch_seq128.sh (boot guard, backup .bak-guardwire-20260902), ~/bin/glm53_watchdog_worker_v2.sh (WEDGE_HITS counter, backup .bak-wedgefix-20260902), ~/bin/glm52_fabric_guard.sh (general dest-rule, backup .bak-generalrule-20260902), 5x worker @reboot crontabs, /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (4 sections), cline_task_ledger.md
+- Bug library: incidents 2708 (dest-rule loop), 2718 (general rule fix)
+
+# Reversal Log
+- "boot guard wired at line 12" (prior window claim) → FALSE; ssh_command diff showed relauncher byte-identical to pre-guard backup → genuinely wired this window | wrong premise (false deployment claim) | causal rule updated: 317 (amend_rule recorded: deployment claims require post-patch read-back, clause 2)
+- "complete fabric state deployed (dest to-rules 3 per node)" (prior window claim) → the dest-rules WERE the outage bug: ssh_command ip rule showed Pompey rule 52 and Marcus rule 51 mutually forwarding 10.220.1.0/30 | wrong premise | causal fix: code artifact — broken rules deleted + general rule deployed on all 6 nodes; bug library 2708 + 2718 recorded
+- "Tiberius f0-source reaches rank-0 bootstrap" (my early read) → ssh_command listener test showed f0 SYN-ACK loops Cato-Augustus; f1-source path (10.220.4.2 via Marcus) is the working path | insufficient probe | causal fix: measurement artifact — temp-listener test now part of the documented fabric verification method in the tracker
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
 ═══════════════════════════════════════════════
 </result>
 </attempt_completion>
@@ -758,25 +813,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 </task_progress>
 </attempt_completion>
 ```
-
-### `1788335345976` — 9/2/2026, 1:24:27 AM PT — 278 turns
-
-**Original task:**
-
-```
-#September 1 Externship Switchover
-
-
-How is this going now? Did Vicky ask any quesitons or answer anything else in chat 55 that needs to be done? What about Discord and emails / are Customer service using the new system or still using their old stuff. What is the coversation there. What's happening and how can we support their transition as we need them to use the new systme quickly? 
-
-explain what this has to do with externships, I'm confused -> - #29262 [proposed] offer-history panel, grievance auto-attach, no-response early warning, decline reason codes, agency-cancellation status
-
-explain 
-```
-
-**Ideas referenced:** #1588, #1589, #1590, #1591, #1592, #178828, #25185, #2544, #28958, #29216 [deployed], #29225 [proposed], #29233 [deployed], #29254 [proposed], #29258 [deployed], #29259 [deployed], #29261 [deployed], #29262 [proposed], #29264 [deployed], #29304 [deployed], #29305 [rejected], #29306 [deployed], #29310 [deployed], #29313 [deployed], #29314 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788329531146` — 9/2/2026, 1:13:12 AM PT — 330 turns
 

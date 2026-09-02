@@ -167,3 +167,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends Step 2 (the four-state classification): ZERO TRAFFIC IN A LOG IS NOT A STATE. A box with 0 turns in /var/log/emsu-adapter-upstream.log may be (a) not a member of that pool at all (direct LiteLLM lanes like claudia/julia/cicero are NOT :11510 adapter members, so absence there is expected and meaningless), (b) tunnel-flapping, (c) genuinely down, or (d) serving other traffic. Before any DOWN claim sourced from a traffic table, the agent must FIRST check pool membership (FRANK_TOOLS_UPSTREAMS) and THEN live-probe /v1/models this turn. Also adds a fifth mis-classification to ban: reporting an engine as SATURATED from its own internal running-count while startup-complete=0 — that is the BOOTING/WEDGED state (state 3), never saturation. Source: 2026-09-01, a fleet report declared Julia/Claudia/Nero DOWN off an 8h traffic table while Claudia :11521 was live serving qwen3.8-27b and Nero :11525 was live on MLX; the same report called the GLM-5.3 ring "saturated by design" when docker log
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 06:05 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788326750196
+- RCA bucket: insufficient probe
+- Trigger pattern: Writing a box-level DOWN/WEDGED verdict from an endpoint probe plus a log line, without a host-liveness probe and without naming which layer is down.
+- Reversal note: Amends Step 4 (HOST-UP != ENGINE-DOWN): the rule already forbade collapsing the two layers, but its wording let me write "BigMac WEDGED 18h" as a whole-box verdict from an unreachable :8000 plus a stale unit-log line. Step 4 now requires that any DOWN sentence NAME THE LAYER in the sentence itself ("host up, engine not bound") and cite the host-liveness probe (uptime/load/container status) alongside the endpoint probe, so a healthy box can never be described with box-level language. Source: 2026-09-01, Ruben corrected "Big Mac is not wedged, stop the gaslighting"; on-box re-probe showed uptime 12d, load 1.28, container bigmac-vllm Up 19h, i.e. the HOST was fine and only the vLLM engine had not bound :8000.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

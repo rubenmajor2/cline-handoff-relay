@@ -6,11 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 8:58:39 AM PT | window: last 72h | 76 tasks | index total 1053 (parsed 1, cached 1052)
+Generated: 9/2/2026, 9:58:40 AM PT | window: last 72h | 77 tasks | index total 1054 (parsed 2, cached 1052)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788335461694` | 9/2/2026, 8:58:24 AM | 133 | 343KB | #GLM Ring |
+| `1788335461694` | 9/2/2026, 9:58:33 AM | 887 | 1073KB | #GLM Ring |
+| `1788365684899` | 9/2/2026, 9:53:59 AM | 196 | 824KB | Jon says he can't access this page and he should be able t do so because not only is he a  |
 | `1788335579641` | 9/2/2026, 2:16:21 AM | 182 | 2694KB | #Oceanside Outage Remainder |
 | `1788329209654` | 9/2/2026, 2:14:36 AM | 266 | 5300KB | #Frankenstein LLM not obeying Cline Rules |
 | `1788324547743` | 9/2/2026, 2:14:28 AM | 834 | 2311KB | #Oceanside Outage |
@@ -91,7 +92,7 @@ Generated: 9/2/2026, 8:58:39 AM PT | window: last 72h | 76 tasks | index total 1
 
 ## Per-window detail
 
-### `1788335461694` — 9/2/2026, 8:58:24 AM PT — 133 turns
+### `1788335461694` — 9/2/2026, 9:58:33 AM PT — 887 turns
 
 **Original task:**
 
@@ -104,9 +105,75 @@ CURRENT STATE (verified 2026-09-02 00:33 PT by the previous window):
 - Relaunch #11 (dispatched 00:07:57 via ~/bin/glm53_relaunch_seq128.sh) is FROZEN at 39 log lines since the pynccl line at 00:09:58, worker RSS flat at 1622868 KB over 20s, :8210 unbound (verified: ssh_command return
 ```
 
-**Ideas referenced:** #11991, #1602, #178805, #178830, #1876, #1912, #1986, #1993, #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #26712, #2675, #2677, #2679, #26932, #2704, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
+**Ideas referenced:** #11991, #1602, #178805, #178830, #1876, #1912, #1986, #1993, #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #26712, #2675, #2677, #2679, #26932, #2704, #2708, #2718, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
 
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+**Last PICKUP PROMPT:**
+
+```
+filled after serving verified)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788305443198 — GLM-5.3 Ring Oceanside recovery: storm RCA + NCCL loop fix + relaunch #12 to serving.
+
+Where we left off (verified 2026-09-02 09:44 PT):
+- #29299 [deployed] restart-storm RCA COMPLETE: all 10 relaunches manual; watchdog never fired; boot guard genuinely wired; worker wedge short-circuit made functional
+- #29285 [awaiting_review→deployed pending serving verify] NCCL stall root cause: source-policy-table SYN-ACK loops; general dest-rule fix on all 6 nodes (durable)
+- Relaunch #12: NCCL Init COMPLETE, weights loading (31/87 at 09:43), serving expected ~09:55-10:05
+
+Open threads to drive next:
+1. Verify serving: :8210 200 + PONG + adapter re-admission (this window, before completion)
+Reference IDs:
+- Ideas: #29299 [deployed], #29285 [deployed], #29284 [deployed], #29274 [executing], #29247 [executing]
+- Bug library: 2708 (dest-rule loop), 2718 (general rule fix)
+- Files: glm53_relaunch_seq128.sh (+boot guard), glm53_watchdog_worker_v2.sh (+wedge counter), glm52_fabric_guard.sh (+general rule), all 6 nodes @reboot crontabs
+</content>
+</write_to_file>
+```
+
+### `1788365684899` — 9/2/2026, 9:53:59 AM PT — 196 turns
+
+**Original task:**
+
+```
+Jon says he can't access this page and he should be able t do so because not only is he a PD, but he's also an Exec Admin. He has dual roles, but also, he's concerned that other PDs can't access that page. Can you look and le tm know? 
+
+This page is specifically for PDs according to to their state.
+```
+
+**Ideas referenced:** #004085, #0056, #0288, #1127, #137333, #155724, #1565, #19338, #19458, #19491, #1976, #212529, #218838, #2196, #22193 [awaiting_review], #2563, #2605, #2714, #2715, #2716, #28310, #28465, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29244, #29247, #29272, #29273, #29323, #29327, #48953, #495057, #616161, #64748, #795548, #856404, #86868
+
+**Last PICKUP PROMPT:**
+
+```
+re changing pipeline behavior.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — explain Cori's "All Candidates" empty-statuses and "Ruben Major" observation.
+
+Where we left off (verified 2026-09-02 09:53 PT):
+- personnel/candidates.php renders candidate_name directly (line 398); column fully populated, no blanks, no "Ruben" fallback.
+- Live row counts: new=0, offer_sent=0, offer_accepted=0, paperwork_pending=0, reviewing=1, under_review=2, correction_needed=1, interviewing=7, hired=38, non_hire=90, archived=3033.
+- "Ruben Major" = candidate id 3602 (hired, created 2026-08-28 23:14, notes cite Argus #28465/#28310), top of list only because of created_at DESC sort.
+- No code bug; page is correct. Empty statuses are real data state, not a display failure.
+
+Open threads to drive next:
+1. (human-only decision - no idea) — Whether to (a) produce a written explainer for Cori, or (b) restore/use the intermediate offer statuses (offer_sent → offer_accepted → paperwork_pending) so those buckets fill as a real workflow. Needs Ruben's product call before any behavior change.
+
+Reference IDs:
+- Files read: personnel/candidates.php, personnel/view_candidate.php, personnel/index.php, personnel/lib/AdminPortalDB.php, config.local.php
+- DB tables: personnel_candidates, personnel_offers, users, page_access_log
+- Related Argus refs from candidate 3602 notes: #28465, #28310
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1788335579641` — 9/2/2026, 2:16:21 AM PT — 182 turns
 

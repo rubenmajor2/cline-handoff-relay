@@ -6,12 +6,14 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 1:58:41 PM PT | window: last 72h | 83 tasks | index total 1060 (parsed 0, cached 1060)
+Generated: 9/2/2026, 2:58:42 PM PT | window: last 72h | 85 tasks | index total 1062 (parsed 2, cached 1060)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788373091938` | 9/2/2026, 12:44:03 PM | 340 | 1262KB | #Frankenstein-llm vision |
-| `1788376314623` | 9/2/2026, 12:43:42 PM | 56 | 2268KB | #Externship Agremeents: |
+| `1788384231784` | 9/2/2026, 2:58:23 PM | 260 | 531KB | #TeamHub |
+| `1788373091938` | 9/2/2026, 2:54:02 PM | 496 | 4051KB | #Frankenstein-llm vision |
+| `1788376314623` | 9/2/2026, 2:23:26 PM | 60 | 2303KB | #Externship Agremeents: |
+| `1788383838760` | 9/2/2026, 2:17:19 PM | 1 | 800KB | #Deepseek/Qwen Usage on Open Router |
 | `1788372387064` | 9/2/2026, 12:21:07 PM | 160 | 893KB | #September 1 Externship Switchover |
 | `1788376752251` | 9/2/2026, 12:19:12 PM | 1 | 800KB | #Deepseek/Qwen Usage on Open Router |
 | `1788336273670` | 9/2/2026, 12:15:32 PM | 178 | 2759KB | #Email CFA |
@@ -98,7 +100,25 @@ Generated: 9/2/2026, 1:58:41 PM PT | window: last 72h | 83 tasks | index total 1
 
 ## Per-window detail
 
-### `1788373091938` — 9/2/2026, 12:44:03 PM PT — 340 turns
+### `1788384231784` — 9/2/2026, 2:58:23 PM PT — 260 turns
+
+**Original task:**
+
+```
+#TeamHub
+
+Do an analysis of the entire Team Hub system. 
+
+https://emsuniversity.com/emtskills/routes/team_hub.php 
+
+There are complaints regarding chat functionality working, something also about 150 or so studeents showing in a current Tempe Fast Track class when there's only 3 that showed up and blank pages on chat communication channels as well as the private messages being able to be seen by evryone, and the chat portal jus tnot working in general. Can you do an assessment of these issues and see what's going on? I will run a sweep with the browser AI. Also give me browser AI instructions 
+```
+
+**Ideas referenced:** #0891, #14571, #14829, #1632, #1633, #1634, #1635, #22139, #22274, #22276, #24017 [awaiting_review], #24706 [deployed], #25185, #28109 [executing], #28155, #28189 [proposed], #28958, #29011 [deployed], #29381 [proposed], #29382 [proposed], #29383 [proposed], #7223, #92400, #9577
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788373091938` — 9/2/2026, 2:54:02 PM PT — 496 turns
 
 **Original task:**
 
@@ -108,40 +128,53 @@ Generated: 9/2/2026, 1:58:41 PM PT | window: last 72h | 83 tasks | index total 1
 Frankenstein-llm vision model appears to be stalling. Can you look and resolve?
 ```
 
-**Ideas referenced:** #10108, #10740, #1127, #11741, #11781, #12477, #12573, #12584, #12618, #12824, #12872, #12878, #13202, #15637, #16163, #16265, #16304, #16417, #16844, #17205, #18312, #18326, #1912, #19338, #19686, #1998, #2114, #2168, #2174, #24645, #25097, #2537, #2550, #25764, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #26908, #26923, #26932, #2712, #2714, #2715, #2716, #2719, #27259, #27673, #28586, #28596, #28622, #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29193, #29244, #29247, #29265, #29272, #29273, #29274, #29285 [deployed], #29299 [deployed], #29323, #29327, #29368, #48953, #7173
+**Ideas referenced:** #10108, #10740, #1127, #11741, #11781, #11847, #12477, #12573, #12584, #12618, #12824, #12872, #12878, #13202, #15637, #16163, #16265, #16304, #16417, #16510, #16523, #16717, #16844, #17205, #17300, #17535, #178837, #1807, #18312, #18326, #18820, #1912, #19338, #19686, #1998, #20549, #2114, #2168, #2174, #22601, #24645, #25097, #25185, #2537, #2550, #25764, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #26908, #26923, #26932, #2712, #2714, #2715, #2716, #2719, #2720 [deployed], #27259, #27673, #27684, #28586, #28596, #28622, #28958, #29054, #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29193, #29244, #29247, #29265, #29272, #29273, #29274, #29285 [deployed], #29299 [deployed], #29323, #29327, #29368, #29384 [proposed], #48953, #7173
 
 **Last PICKUP PROMPT:**
 
 ```
-cted (physical access needed).
+posed] (hunt + stop the loop).
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task — Frankenstein-llm vision stall: litellm-layer fix complete + EMT AI Grader impact assessed.
+Pick up task #1788373091938 — frankenstein-llm vision stall round 2 routing/engine fixes landed; rogue cloudflared restart loop still open.
 
-Where we left off (verified 2026-09-02 12:43 PT):
-- claudia-qwen38-27b alias repointed dead :11521 → live Julia+Claudia TP=2 :11513 in /etc/litellm/config.yaml.
-- supports_vision:true added to all 5 local Qwen 3.8 27B lanes (claudia, joshua, nero, maximus, julia); YAML valid (56 models); litellm blue :4100 + green :4101 restarted; haproxy :4000 active.
-- vision_doorman.php ladder = local-only round-robin (julia TP=2, joshua, nero, maximus) + openrouter/qwen/qwen3.8-max final fallback; ZERO Anthropic/sonnet/claude in vision path. FPM reloaded.
-- e2e verified: claudia, joshua, julia, frankenstein-llm all return vision content, finish=stop.
-- EMT AI Grader: no impact + no backlog (all queue/item/runs tables = 0); grader is glm-5.2 text over document_text, not vision-dependent.
+Where we left off (verified 2026-09-02 14:50 PT):
+- Julia TP=2 engine relaunched (verified: ssh_command 'ray status' returned '2.0/2.0 GPU' and curl :11513/v1/models returned HTTP 200 id qwen3.8-27b at 14:45 PT).
+- _router_core _vd_local_27b_alive probe fixed :11521 -> :11513 (backup _router_core.py.bak-20260902-vdprobe).
+- router_hook: text-only handles removed from _VISION_CAPABLE; _VISION_PREFERRED kept frankenstein-llm (canonical doorman flow; a direct-julia rewrite regressed the smoketest and was reverted). Backups router_hook.py.bak-20260902-visionroute + config.yaml.bak-20260902-visionroute.
+- config.yaml: claudia alias :11521 -> :11513; supports_vision:true on claudia/joshua/nero/maximus/julia; frankenstein-llm fallback chain +julia+claudia.
+- litellm blue+green restarted with fixed stack (verified: ssh_command smoketest printed 'All cases passed' 14:42 PT; python3 e2e probe content=' white' finish=stop on frankenstein-llm 14:44 PT).
+- Bug library incident 2720 recorded; HANDOFF_NOTES updated.
 
 Open threads to drive next:
-1. Nero (:11525) + Maximus (:11530) MLX lanes physically off-network — doorman ladder already includes them; they rejoin rotation when powered/connected (human-only physical access, no idea filed).
-2. Deeper visibility (optional, human decision): watch vision_doorman_health_log table to confirm post-fix routing before considering full regression suite.
+1. #29384 [proposed] — identify + stop the rogue cloudflared restart loop (emsuserver sudo systemctl restart cloudflared every ~15m37s; auth.log evidence since 12:58 PT; check active agent windows; candidate tool cron_cloudflared_tunnel_health.php needs the v4 cooldown discipline).
+2. #29384 [proposed] — after the loop is stopped, kill the stale :11521 Claudia reverse-tunnel forward (dead standalone era; only the TP=2 :11513 forward should remain).
 
 Reference IDs:
-- Ideas filed: none
-- Files touched: /etc/litellm/config.yaml (+ bak-20260902-visionfix), /var/www/emtskills/lib/vision_doorman.php (+ bak-20260902-prelocal4), HANDOFF_NOTES.md
+- Ideas filed: #29384 [proposed]
+- Bug library: frankenstein_router_incidents incident 2720
+- Files touched: /etc/litellm/_router_core.py, /etc/litellm/router_hook.py, /etc/litellm/config.yaml (+ backups), HANDOFF_NOTES.md
+
+# Reversal Log
+- ':11513 tunnel dead (no listener/no process)' -> 'tunnel fine; only the Julia engine behind it was down' (verified: ssh_command 'sudo ss -tlnp' returned 'LISTEN 127.0.0.1:11513 users:((sshd,pid=18283,fd=10))' at 14:39 PT) | insufficient probe | causal rule updated (315-verify-before-declaring-host-down, amended via clinerules_amend_rule this window)
+- '_VISION_PREFERRED=julia-qwen38-27b direct rewrite' -> 'reverted to frankenstein-llm canonical doorman flow' (verified: ssh_command smoketest returned exit 1 'FAIL vision_doorman_thinking_strip' on the rewrite at 14:28 PT, then 'All cases passed' after revert at 14:42 PT) | scope error | causal fix: the litellm smoketest gate caught the thinking-strip/ctx-clamp regression (gate worked as designed; no rule change)
 
 When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
 </result>
+<task_progress>
+- [x] All vision fixes verified (TP=2, tunnel, e2e OK on 3 paths)
+- [x] Bug library incident 2720 + idea #29384 + handoff recorded
+- [x] Rule 315 amended (reversal repair)
+- [x] Validator ALL PASSED + gate CLEAR
+- [x] Completion shipped
+</task_progress>
 </attempt_completion>
 ```
 
-### `1788376314623` — 9/2/2026, 12:43:42 PM PT — 56 turns
+### `1788376314623` — 9/2/2026, 2:23:26 PM PT — 60 turns
 
 **Original task:**
 
@@ -155,66 +188,59 @@ from here for example: https://emsuniversity.com/emtskills/externship/manage_sit
 and says document not found. That needs to be resolved for this and the others.
 ```
 
-**Ideas referenced:** #059669, #155724, #2563, #25947, #3498, #856404, #92400
+**Ideas referenced:** #059669, #155724, #2563, #25947, #29377, #29378, #29379, #3498, #856404, #92400
 
 **Last PICKUP PROMPT:**
 
 ```
-t summarizing findings, maybe propose actions. Also need to ensure we include a PICKUP PROMPT block with proper formatting, and any open threads must be real idea numbers and tags.
+h status "proposed". Good. Now we need to produce final attempt_completion with PICKUP PROMPT block. Ensure the block includes task id (unknown numeric Cline task). We don't have a task ID; we can omit task id? The block requires "Pick up task #<task_id> — <short topic>". If unknown, we can omit # and just write topic. However rule: "Pick up task #<task_id> — <short topic>" and "If unknown, omit the # and just name the topic". So we can just write "Pick up task — Externship agreements currency audit". Need to include open threads with real idea numbers and proper tags.
 
-We haven't created any new ideas; perhaps we need to file ideas for those that need action, e.g.,:
+Open threads should list outstanding actions after audit. Perhaps we consider that we have filed ideas for remediation. Are there any blocked items? None remain; we have done the scan and filed ideas.
 
-- For agreements that are expired or pending_review, we might need to update the document/renew.
+Thus open threads can be empty, or we can list the ideas as next actions. Typically open threads should list next steps. We could list the three ideas as next actions. They are already filed; we can list them with status [proposed].
 
-- For sites with no doc linked, need toThe query result gives me the non-current / problematic rows. Let me analyze:
+Open threads:
+1. #29377 — Renew or collect 4 expired externship agreements [proposed]
+2. #29378 — Capture missing expiration date on AMR San Antonio agreement doc 125 [proposed]
+3. #29379 — Resolve externship sites with missing or stale agreement status/doc [proposed]
 
-Not-current (site_status='expired'):
-1. site 92 (AMR San Antonio) - active site, dated doc 125, but doc_exp missing → dated_expired_review YES. Actually doc 125 expiration date is null → needs a date.
-2. site 42 Brougham Ambulance - expired
-3. site 26 Odessa - expired, exp 2025-06-18
-4. site 54 Ponderosa Fire - expired, doc 36 pending_review
-5. site 32 St. Josephs/Carondelet - expired, exp 2025-02-17, doc 28 pending_review
+Now produce the final attempt_completion with result containing the audit report and the PICKUP PROMPT block.
 
-pending_review sites: 5 (Gila River, no doc), 23 (Heart of Texas, doc 20 unknown), 2 (Mesa Fire Training, no doc), 28 (ProTransport-1, doc 49 unknown), 8 (Regional Fire, no doc), 10 (Sonoita-Elgin, no doc), 35 (Wilson County ESD, doc 12 pending_review), 49 (Gonzales Co EMS - has doc 128)
+Make sure to include the divider line: exactly 47 U+2550 characters. Use copy-paste from template. Let's construct.
 
-unknown status sites: 57 (City of Justin), 60 (Dixie EMS), 61 (Compass Phoenix Healthcare)
+Divider: 47 times "═". That's U+2550. Provide exactly.
 
-none status sites: 40 (Allegiance Mobile Health Dallas), 81 (Allen Fire), 82 (Desoto Fire Rescue Station 2), 84 (TEST RECORD - do not assign), 91 (Keller Fire)
+Now produce final answer.<attempt_completion><result>
+**Externship Agreements – Currency Audit (2026‑09‑02 14:22 PT)**  
 
-Sites without compliance docs: 5, 2, 8, 10, 57, 60, 61, and others (49 has doc 128)
+**Scope:** All 86 rows in `ExternshipSite` (including linked rows in `compliance_documents`).  
 
-I should also note sites with docs but no issues (active/perpetual), e.g., most others.
+**Key Findings**
 
-The user asked: "I think we need to scan those agreements to make sure they are all current" - i.e., audit the externship agreements for currency. The deliverable is a report identifying which agreements are expired, pending review, unknown, or missing, so action can be taken.
-
-I have enough data now to produce the completion report. The key findings:
-
-1. **4 sites have expired agreements** (properly flagged as `expired` in the system):
-   - Site 26: Odessa Texas Fire Rescue (expired 2025-06-18)
-   - Site 32: St. Josephs / Carondelet Healthcare (expired 2025-02-17)
-   - Site 42: Brougham Ambulance (no expiry date)
-   - Site 54: Ponderosa Fire (no expiry date)
-
-2. **7 sites pending review** (these need human/ops attention):
-   - Site 5: Gila River EMS (no document on file)
-   - Site 23: Heart of Texas Healthcare System
-   - Site 28: ProTransport-1 (PT-1)
-   - Site 35: Wilson County ESD
-   - Site 49: Gonzales Co EMS
-   - Site 2: Mesa Fire Department - Training Division
-   - Site 8: Regional Fire and Medical Department
-   - Site 10: Sonoita-Elgin Fire Department
-
-3. **3 sites with unknown status**: 57 (City of Justin Fire & EMS), 60 (Dixie EMS), 61 (Compass Phoenix Healthcare)
-
-4. **5 sites with no agreement status** ('none'): 40 (Allegiance Mobile Health - Dallas), 81 (Allen Fire), 82 (Desoto Fire Rescue Station 2), 84 (TEST RECORD - do not assign), 91 (Keller Fire)
-
-I should also note that doc 125 (the AMR San Antonio agreement the user originally clicked) is marked active/perpetual with an actual file, so it's current from a document perspective.
-
-Now I need to wrap this up. The user's request is informational - they want a scan/audit. I have the data. I should present the findings clearly. But do I need to do anything else? The user said "scan those agreements to make sure they are all current" - this could imply they want me to check and report. I have the data needed for a comprehensive report.
-
-Let m
+| Category | Site ID(s) | Department / Site Name | Current Status | Document ID | Document Status / Expiration Type | Expiration Date (if dated) | Action Needed |
+|----------|------------|------------------------|----------------|------------|----------------------------------|-----------------------------|----------------|
+| **Expired – agreement_status = expired** | 26, 32, 42, 54 | Odessa Texas Fire Rescue; St. Josephs / Carondelet Healthcare – Tucson; Brougham Ambulance; Ponderosa Fire | expired | 5 (Odessa), 28 (St J‑C), 45 (Brougham), 36 (Ponderosa) | dated (Odessa, St J‑C) / unknown (Brougham) / pending_review (Ponderosa) | **Renew or collect** updated agreements; verify docs for Brougham & Ponderosa. |
+| **Pending Review – agreement_status = pending_review** | 5, 2, 8, 10, 23, 28, 35, 49 | Gila River EMS; Mesa Fire Dept‑Training; Regional Fire & Medical; Sonoita‑Elgin Fire; Heart of Texas Healthcare; ProTransport‑1; Wilson County ESD; Gonzales Co EMS | pending_review | – (5,2,8,10), 20 (Heart), 49 (ProTransport‑1), 12 (Wilson County ESD), 128 (Gonzales Co) | – / unknown / pending_review | **Review and upload** missing compliance docs; update status after review. |
+| **Unknown – agreement_status = unknown** | 57, 60, 61 | City of Justin Fire & EMS; Dixie EMS; Compass Phoenix Healthcare | unknown | – (all) | – | **Investigate** – determine if agreements exist; attach docs or update status. |
+| **None – agreement_status = none** (no agreement recorded) | 40, 81, 82, 84, 91, 55, 73, 64, 71 | Allegiance Mobile Health‑Dallas; Allen Fire; Desoto Fire‑Rescue‑Station 2; TEST RECORD‑do not assign; Keller Fire; (others) | none | – (all) | – | **Assess necessity** – create agreements where required or close sites if not needed. |
+| **Active – dated b
 ```
+
+### `1788383838760` — 9/2/2026, 2:17:19 PM PT — 1 turns
+
+**Original task:**
+
+```
+#Deepseek/Qwen Usage on Open Router
+
+Taking a look at open router, I am seeing charges for DeepSeek and Qwen 3.8. 27B (this one is absolutely dumb because we have local 27B). We should never use Qqwen 3.8 27B on Open Router. Max is fine, but 27B pretty dumb. 
+
+Anyway, we have a direct API for Deepseek so why are we using Open router. Can you find and correct that?
+
+Also, Befroe taking action, give me first a lay of the land as to what's actually going on.
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788372387064` — 9/2/2026, 12:21:07 PM PT — 160 turns
 

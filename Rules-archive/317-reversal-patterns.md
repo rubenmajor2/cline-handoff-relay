@@ -5,22 +5,22 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **239**
-- Last generated: 2026-09-02 09:33
+- Reversals tracked: **240**
+- Last generated: 2026-09-02 10:33
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
 | insufficient probe | 122 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
-| wrong premise | 38 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
+| wrong premise | 39 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 32 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 25 | 10% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
 | stale assumption | 22 | 9% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 102 amendment(s)
+- Rule 317: 103 amendment(s)
 - Rule 297: 47 amendment(s)
 - Rule 315: 29 amendment(s)
 - Rule 91: 10 amendment(s)
@@ -45,11 +45,11 @@ _You had SOME evidence and stopped early. One auth error is not a dead credentia
 
 _The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it._
 
+- **2026-09-02** — Amends clause 2 (acquisition gate): a prior window claimed 'boot guard wired into relauncher line 12' but ssh diff showed the relauncher byte-identical to its pre-guard backup — a deployment claim shipped without a read-back probe. Reinforces the golden rule: 
 - **2026-09-02** — Amends Step 2 classification: cross-site ping/ARP from a jump host is NOT valid down-evidence for remote-site boxes. WOPR's 192.168.1.x is its own San Diego LAN; the Oceanside Sparks share the same private range but are only reachable via their dial-out revers
 - **2026-08-31** — Amends the CLASSIFY step: an arithmetic identity that fails across two tables is a HYPOTHESIS about missing terms, never evidence of corruption. I reported "14 arithmetically impossible invoices" from balance_due > total_amount - amount_paid, and escalated it 
 - **2026-08-31** — Amends clause 3: a guard expressed as a HARDCODED ABSOLUTE THRESHOLD (dollar ceiling, row-count limit, byte size, latency bound) is not a durable fix - it is a deferred outage that fires the day the business legitimately crosses it. Shipping DUNNING_MAX_PLAUSI
 - **2026-08-30** — Amends the Step-2 four-state classification table: a CALL RECORD carrying a long duration is NOT evidence that the AI/assistant layer ever ran. On 2026-08-29 the Vapi SIP parent legs logged 610s durations while every assistant-request response was 400'd and th
-- **2026-08-29** — 2026-08-28 reversal (task 1787931475695): claimed GLM 5.3 served ~477 turns as the #1 engine, derived from (a) REQUESTED lane-name counts in the router audit log and (b) an engine-log POST count. Both are the wrong instruments: requested != served (requests ge
 
 ### unread source
 

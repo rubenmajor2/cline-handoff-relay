@@ -57,3 +57,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: 2026-08-27 reversal (Ruben caught it): the Exam 5 root-cause completion shipped an 'Open threads to drive next' section containing three numbered prose items - build a monitor, a policy decision, investigate the auto-void class - with NO filed idea numbers and NO disposition brackets on any of them. Rule 91 requires every open-thread item to carry a real #NNNN [disposition] or the explicit '(human-only decision - no idea)' marker. The failure mode is specific: when open threads are written as RECOMMENDATIONS ('my advice, in priority order') rather than as filed work, the prose framing suppresses the filing step entirely - the agent never asks 'what integer backs this?' because it reads as advice, not as a thread. Amended behavior: before writing ANY open-threads section, each item must first be filed via create_idea and cited with its returned integer plus a bracketed disposition; an item that is genuinely a human policy decision still gets either a filed idea number or the literal '(h
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 08:10 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: externship-actionable-ideas
+- RCA bucket: unread source
+- Trigger pattern: PICKUP PROMPT block emitted outside/after the attempt_completion result parameter (block-after-tag failure), observed on a frankenstein-llm window with weak rule obedience
+- Reversal note: Reversal: a completion claimed to be rule-91-compliant but the PICKUP PROMPT block was emitted as free prose AFTER the closing attempt_completion tag, i.e. OUTSIDE the result parameter string, so the gate read a result with no divider/header/sections and rejected it. Amended behavior: rule 91 now names this exact failure mode — the block MUST be inside the attempt_completion result string; a block placed after the tool call, in a separate message, or in any parameter other than result is a HARD FAIL. Windows that cannot guarantee inline placement MUST call clinerules_validate_completion before attempt_completion.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

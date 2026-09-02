@@ -6,11 +6,12 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 7:30:24 PM PT | window: last 72h | 73 tasks | index total 1032 (parsed 4, cached 1028)
+Generated: 9/1/2026, 8:30:24 PM PT | window: last 72h | 73 tasks | index total 1032 (parsed 2, cached 1030)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788305443198` | 9/1/2026, 7:30:23 PM | 711 | 1439KB | #Oceanside Outage |
+| `1788305443198` | 9/1/2026, 8:30:19 PM | 1020 | 1750KB | #Oceanside Outage |
+| `1788196060306` | 9/1/2026, 8:21:04 PM | 1353 | 4731KB | #Argus Improvmeents |
 | `1788296990463` | 9/1/2026, 7:24:43 PM | 734 | 2656KB | #September 1 Externship Switchover |
 | `1788285310173` | 9/1/2026, 7:21:50 PM | 226 | 898KB | #Florida CE Program Approval |
 | `1788298468689` | 9/1/2026, 7:12:26 PM | 260 | 1574KB | #Jon request |
@@ -21,7 +22,6 @@ Generated: 9/1/2026, 7:30:24 PM PT | window: last 72h | 73 tasks | index total 1
 | `1788280195067` | 9/1/2026, 3:25:47 PM | 378 | 1766KB | #Frankenstein LLM Reouting (individual LLMs) |
 | `1788281756491` | 9/1/2026, 3:25:11 PM | 356 | 2000KB | #TastyBot |
 | `1788284259715` | 9/1/2026, 3:09:20 PM | 300 | 1366KB | #SMS and Email Notifications |
-| `1788196060306` | 9/1/2026, 2:56:07 PM | 1352 | 4302KB | #Argus Improvmeents |
 | `1788285768610` | 9/1/2026, 2:52:12 PM | 108 | 586KB | #EMT Skills Slowness |
 | `1788284221639` | 9/1/2026, 2:06:52 PM | 710 | 1866KB | #September 1 Externship Switchover |
 | `1788237036746` | 9/1/2026, 11:30:58 AM | 686 | 2570KB | #Joshua Qwen 3.8 27B TP=2 |
@@ -88,7 +88,7 @@ Generated: 9/1/2026, 7:30:24 PM PT | window: last 72h | 73 tasks | index total 1
 
 ## Per-window detail
 
-### `1788305443198` — 9/1/2026, 7:30:23 PM PT — 711 turns
+### `1788305443198` — 9/1/2026, 8:30:19 PM PT — 1020 turns
 
 **Original task:**
 
@@ -98,7 +98,7 @@ Generated: 9/1/2026, 7:30:24 PM PT | window: last 72h | 73 tasks | index total 1
 The internet went out in oceanside and all the romans went down. How is everything going now? How did the cutover go? What did we learn?
 ```
 
-**Ideas referenced:** #1119, #1120, #1127, #1130, #1131, #11490, #11782, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #1264, #13837, #13977, #1451, #14833, #14885, #1513, #1514, #15144, #1515, #1524, #1528, #15918, #15965, #15979, #15995, #16032, #16033, #16036, #16122, #16163, #16338 [proposed], #16448, #16452, #16778, #16802, #16803, #16839, #16851, #171018, #171052, #171091, #171095, #1711, #1712, #17246, #1744, #1779, #1798, #1811, #1819, #18238, #18255, #18256, #18261, #1828, #18471, #18536, #18544, #18567, #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #19338, #19458, #1948, #19491, #19522, #19567, #1986, #1993, #20042, #20495, #20528, #2063, #2065, #20662, #20725, #2073, #20985, #21038, #21167, #2127, #2168, #2174, #2185, #22357, #2299, #2307, #2314, #23183, #25378, #25381, #2546, #25764, #25900, #25994, #25997, #25999, #2603, #2605, #26068, #2640, #26400, #2647, #2654, #2659, #2662, #26711, #26712, #26713, #26715, #26932, #27100, #27152, #27201, #27236, #27249 [executing], #27250, #27503 [proposed], #27874, #28042 [proposed], #28155, #28234, #28304 [deployed], #28306, #28586, #28596, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28723, #28948, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29182, #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #29244 [proposed], #29247 [blocked], #4113, #4423, #4691, #4712, #4769, #48953, #4931, #7138, #7142, #7149, #7759, #816987, #8883, #8887, #8902, #8903
+**Ideas referenced:** #1119, #1120, #1127, #1130, #1131, #11490, #11782, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #1264, #13837, #13977, #1451, #14833, #14885, #1513, #1514, #15144, #1515, #1524, #1528, #1539, #1540, #15918, #15965, #15979, #15995, #16032, #16033, #16036, #16122, #16163, #16338 [proposed], #16448, #16452, #16778, #16802, #16803, #16839, #16851, #171018, #171052, #171091, #171095, #1711, #1712, #17246, #1744, #1779, #1798, #1811, #1819, #18238, #18255, #18256, #18261, #1828, #18471, #18536, #18544, #18567, #1869 [investigating], #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #19338, #19458, #1948, #19491, #19522, #1956, #19567, #1958 [resolved], #1986, #1993, #20042, #20495, #20528, #2063, #2065, #20662, #20725, #2073, #20985, #21038, #21167, #2127, #2168, #2174, #2185, #22357, #2299, #2307, #2314, #23183, #25378, #25381, #2546, #25764, #25900, #25994, #25997, #25999, #2603, #2605, #26068, #2640, #26400, #2647, #2654, #2659, #2662 [resolved], #26711, #26712, #26713, #26715, #26932, #2701, #27100, #27152, #27201, #27236, #27249 [executing], #27250, #27503 [proposed], #27874, #28042 [proposed], #28155, #28234, #28304 [deployed], #28306, #28586, #28596, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28723, #28948, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29182, #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #29244 [proposed], #29247 [blocked], #4113, #4423, #4691, #4712, #4769, #48953, #4931, #7138, #7142, #7149, #7759, #816987, #8883, #8887, #8902, #8903
 
 **Last PICKUP PROMPT:**
 
@@ -128,6 +128,68 @@ Reference IDs:
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
+```
+
+### `1788196060306` — 9/1/2026, 8:21:04 PM PT — 1353 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+approved
+- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
+
+- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
+
+
+```
+
+**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #16263, #166534, #18745, #18770, #22850, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25047, #25058, #25185, #25269, #25313, #25466, #25573, #25768, #26325, #26895, #27100, #274160, #28155, #28607, #28761, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #28954, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #29110 [proposed], #29112 [proposed], #29114 [proposed], #29115, #29122 [proposed], #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [approved], #29189 [approved], #29190 [executing], #29207 [blocked], #29212 [blocked], #29214 [executing], #30363, #3730, #4434, #4575, #475569, #495057, #5499, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #8226, #856404, #92400, #9261, #9648, #9650, #9660, #9670
+
+**Last PICKUP PROMPT:**
+
+```
+ed or were accepted-by-design.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29214 — Argus activity_mode passthrough fix: make the Type column badges real.
+
+Where we left off (verified 2026-09-01 14:56 PT):
+- Browser-AI run (Ruben pasted the report) found Activity Type column all-gray: every row badged "Action". Root cause confirmed by the tester: alltastic_api.php activity_log response rows do NOT include activity_mode. Actual row keys returned: detail_id, user_email, action_key, target, summary, created_at, success, rule29_gate, detail_json, task_id, task_status, promise_unbuilt.
+- My earlier patch added activity_mode to the SQL SELECT of both union parts, but the handler later maps/rebuilds the response rows and drops it. FIX: locate where the union rows are mapped into the returned JSON array in the activity_log handler (routes/alltastic_api.php ~4470-4560) and add 'activity_mode' to the per-row mapping. Then verify live: POST {"action":"activity_log","writes_only":true} and confirm a returned row has activity_mode (terminal, chat, system, cron, action).
+- §5 proof gate PARTIAL is ACCEPTED as designed (worker honestly refuses writes it cannot do; gate is a defensive tripwire, no code change). Test-artifact ideas #29207 and #29212 were filed by the worker from the two test submissions — close them as test artifacts this window.
+- §1/§3/§4 PASS. Cosmetics (card-list Tasks, narrowing facet counts, sort arrow) are already tracked in #29189 [executing] / #29188 [executing].
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29214 [executing] — Fix activity_mode passthrough in the activity_log JSON mapping; verify live via POST; re-run browser section 2/6.
+2. #29207 [blocked] — Close test artifact idea from Side-B proof-gate test (worker honestly filed a feature idea for a fake deploy path).
+3. #29212 [blocked] — Close test artifact idea from Side-A proof-gate test (worker quality-gated its own unusable attempt).
+4. #29182 [executing] — per-iframe height keying (cross-talk bug)
+5. #29183 [executing] — approvals-queue reconcile against deployed reality
+6. #29184 [executing] — intent-based idea triage to replace keyword match
+7. #29185 [executing] — 60-120s max-gap in burst grouping predicate
+8. #29186 [executing] — perm matrix re-baseline + click-confirm
+9. #29187 [executing] — Chrome extension safer defaults (autopilot OFF, EMSU scope)
+10. #29188 [executing] — Requests pending/decided split + principal labels + recommender hygiene
+11. #29189 [executing] — hidden-tab polling pause + Tasks stale-search clear + cosmetic sort arrow
+12. #29190 [executing] — browser-QA the terminal takeover feature as admin (needs live admin session)
+
+Reference IDs:
+- Ideas filed: #29214 [executing] (new, the fix); #29207/#29212 [blocked] (close as test artifacts); #29182-#29190 [executing]; #29122 [deployed]
+- Files touched this round: routes/alltastic_api.php (needs the mapping fix), routes/argus_download.php (UI already correct — badge reads r.activity_mode), routes/cron_argus_task_worker.php (proof gate live)
+- Kaizen: failure_repair_recipes id 5499 (executor_false_done)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Digested browser-AI report (§1-§6)
+- [x] Root-caused §2/§6 FAIL: activity_mode dropped in the activity_log JSON row mapping, not the SQL
+- [x]
 ```
 
 ### `1788296990463` — 9/1/2026, 7:24:43 PM PT — 734 turns
@@ -508,68 +570,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 ═══════════════════════════════════════════════════════════════════════
 </result>
 </attempt_completion>
-```
-
-### `1788196060306` — 9/1/2026, 2:56:07 PM PT — 1352 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-approved
-- #29015 [proposed] — Locate the dispatcher/fleet queued-ideas render (PROMPT 8 target, likely in ruben_executor_live.php "queued idea list with created_at") and apply ORDER BY CASE WHEN created_at >= NOW()-INTERVAL 45 MINUTE THEN 0 ELSE 1 END, created_at DESC so fresh ideas (≤45 min) sort above older equal-priority ones; older ones stay visible.
-
-- #29014 [proposed] — Browser-QA P10: Activity tab write-only default + facets + burst grouping; Actions panel Escape-close, filter narrow, Payments merged under one header (T11). Needs a live browser session as admin.
-
-
-```
-
-**Ideas referenced:** #10003, #10005, #12611, #12612, #14532, #16213, #16263, #166534, #18745, #18770, #22850, #23428, #23429, #23468, #23506, #23941, #23952, #23982, #24941, #24990, #25047, #25058, #25185, #25269, #25313, #25466, #25573, #25768, #26325, #26895, #27100, #274160, #28155, #28607, #28761, #28765, #28766, #28775, #28894, #28895, #28914, #28936, #28954, #29014 [proposed], #29015 [proposed], #29049 [proposed], #29050 [proposed], #29051 [proposed], #29052 [proposed], #29053 [proposed], #29055 [proposed], #29059, #29078 [proposed], #29079 [proposed], #29088 [proposed], #29089 [proposed], #29095 [proposed], #29110 [proposed], #29112 [proposed], #29114 [proposed], #29115, #29122 [proposed], #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [approved], #29189 [approved], #29190 [executing], #29207 [blocked], #29212 [blocked], #29214 [executing], #30363, #3730, #4434, #4575, #475569, #495057, #5499, #5608, #5892, #6181, #6300, #6366, #6424, #64748, #6628, #7063, #7141, #78350, #8226, #856404, #92400, #9261, #9648, #9650, #9660, #9670
-
-**Last PICKUP PROMPT:**
-
-```
-ed or were accepted-by-design.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #29214 — Argus activity_mode passthrough fix: make the Type column badges real.
-
-Where we left off (verified 2026-09-01 14:56 PT):
-- Browser-AI run (Ruben pasted the report) found Activity Type column all-gray: every row badged "Action". Root cause confirmed by the tester: alltastic_api.php activity_log response rows do NOT include activity_mode. Actual row keys returned: detail_id, user_email, action_key, target, summary, created_at, success, rule29_gate, detail_json, task_id, task_status, promise_unbuilt.
-- My earlier patch added activity_mode to the SQL SELECT of both union parts, but the handler later maps/rebuilds the response rows and drops it. FIX: locate where the union rows are mapped into the returned JSON array in the activity_log handler (routes/alltastic_api.php ~4470-4560) and add 'activity_mode' to the per-row mapping. Then verify live: POST {"action":"activity_log","writes_only":true} and confirm a returned row has activity_mode (terminal, chat, system, cron, action).
-- §5 proof gate PARTIAL is ACCEPTED as designed (worker honestly refuses writes it cannot do; gate is a defensive tripwire, no code change). Test-artifact ideas #29207 and #29212 were filed by the worker from the two test submissions — close them as test artifacts this window.
-- §1/§3/§4 PASS. Cosmetics (card-list Tasks, narrowing facet counts, sort arrow) are already tracked in #29189 [executing] / #29188 [executing].
-
-Open threads to drive next (EVERY item MUST have a real filed idea #):
-1. #29214 [executing] — Fix activity_mode passthrough in the activity_log JSON mapping; verify live via POST; re-run browser section 2/6.
-2. #29207 [blocked] — Close test artifact idea from Side-B proof-gate test (worker honestly filed a feature idea for a fake deploy path).
-3. #29212 [blocked] — Close test artifact idea from Side-A proof-gate test (worker quality-gated its own unusable attempt).
-4. #29182 [executing] — per-iframe height keying (cross-talk bug)
-5. #29183 [executing] — approvals-queue reconcile against deployed reality
-6. #29184 [executing] — intent-based idea triage to replace keyword match
-7. #29185 [executing] — 60-120s max-gap in burst grouping predicate
-8. #29186 [executing] — perm matrix re-baseline + click-confirm
-9. #29187 [executing] — Chrome extension safer defaults (autopilot OFF, EMSU scope)
-10. #29188 [executing] — Requests pending/decided split + principal labels + recommender hygiene
-11. #29189 [executing] — hidden-tab polling pause + Tasks stale-search clear + cosmetic sort arrow
-12. #29190 [executing] — browser-QA the terminal takeover feature as admin (needs live admin session)
-
-Reference IDs:
-- Ideas filed: #29214 [executing] (new, the fix); #29207/#29212 [blocked] (close as test artifacts); #29182-#29190 [executing]; #29122 [deployed]
-- Files touched this round: routes/alltastic_api.php (needs the mapping fix), routes/argus_download.php (UI already correct — badge reads r.activity_mode), routes/cron_argus_task_worker.php (proof gate live)
-- Kaizen: failure_repair_recipes id 5499 (executor_false_done)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Digested browser-AI report (§1-§6)
-- [x] Root-caused §2/§6 FAIL: activity_mode dropped in the activity_log JSON row mapping, not the SQL
-- [x]
 ```
 
 ### `1788285768610` — 9/1/2026, 2:52:12 PM PT — 108 turns

@@ -6,12 +6,13 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 2:58:42 PM PT | window: last 72h | 85 tasks | index total 1062 (parsed 2, cached 1060)
+Generated: 9/2/2026, 3:58:42 PM PT | window: last 72h | 86 tasks | index total 1063 (parsed 3, cached 1060)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788384231784` | 9/2/2026, 2:58:23 PM | 260 | 531KB | #TeamHub |
-| `1788373091938` | 9/2/2026, 2:54:02 PM | 496 | 4051KB | #Frankenstein-llm vision |
+| `1788373091938` | 9/2/2026, 3:58:33 PM | 565 | 6526KB | #Frankenstein-llm vision |
+| `1788384231784` | 9/2/2026, 3:41:58 PM | 308 | 625KB | #TeamHub |
+| `1788386436202` | 9/2/2026, 3:37:09 PM | 89 | 626KB | please add Claude Fable 5.1 to my list of choices here in Cline for models to pick from. |
 | `1788376314623` | 9/2/2026, 2:23:26 PM | 60 | 2303KB | #Externship Agremeents: |
 | `1788383838760` | 9/2/2026, 2:17:19 PM | 1 | 800KB | #Deepseek/Qwen Usage on Open Router |
 | `1788372387064` | 9/2/2026, 12:21:07 PM | 160 | 893KB | #September 1 Externship Switchover |
@@ -100,25 +101,7 @@ Generated: 9/2/2026, 2:58:42 PM PT | window: last 72h | 85 tasks | index total 1
 
 ## Per-window detail
 
-### `1788384231784` — 9/2/2026, 2:58:23 PM PT — 260 turns
-
-**Original task:**
-
-```
-#TeamHub
-
-Do an analysis of the entire Team Hub system. 
-
-https://emsuniversity.com/emtskills/routes/team_hub.php 
-
-There are complaints regarding chat functionality working, something also about 150 or so studeents showing in a current Tempe Fast Track class when there's only 3 that showed up and blank pages on chat communication channels as well as the private messages being able to be seen by evryone, and the chat portal jus tnot working in general. Can you do an assessment of these issues and see what's going on? I will run a sweep with the browser AI. Also give me browser AI instructions 
-```
-
-**Ideas referenced:** #0891, #14571, #14829, #1632, #1633, #1634, #1635, #22139, #22274, #22276, #24017 [awaiting_review], #24706 [deployed], #25185, #28109 [executing], #28155, #28189 [proposed], #28958, #29011 [deployed], #29381 [proposed], #29382 [proposed], #29383 [proposed], #7223, #92400, #9577
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788373091938` — 9/2/2026, 2:54:02 PM PT — 496 turns
+### `1788373091938` — 9/2/2026, 3:58:33 PM PT — 565 turns
 
 **Original task:**
 
@@ -128,7 +111,7 @@ _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 Frankenstein-llm vision model appears to be stalling. Can you look and resolve?
 ```
 
-**Ideas referenced:** #10108, #10740, #1127, #11741, #11781, #11847, #12477, #12573, #12584, #12618, #12824, #12872, #12878, #13202, #15637, #16163, #16265, #16304, #16417, #16510, #16523, #16717, #16844, #17205, #17300, #17535, #178837, #1807, #18312, #18326, #18820, #1912, #19338, #19686, #1998, #20549, #2114, #2168, #2174, #22601, #24645, #25097, #25185, #2537, #2550, #25764, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #26908, #26923, #26932, #2712, #2714, #2715, #2716, #2719, #2720 [deployed], #27259, #27673, #27684, #28586, #28596, #28622, #28958, #29054, #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29193, #29244, #29247, #29265, #29272, #29273, #29274, #29285 [deployed], #29299 [deployed], #29323, #29327, #29368, #29384 [proposed], #48953, #7173
+**Ideas referenced:** #10108, #10740, #1127, #11741, #11781, #11847, #12477, #12573, #12584, #12618, #12824, #12872, #12878, #13202, #15637, #16163, #16265, #16304, #16417, #16510, #16523, #16717, #16844, #17205, #17300, #17535, #178805, #178837, #1807, #18312, #18326, #18329, #18820, #1912, #19338, #19686, #1998, #20549, #2114, #2168, #2174, #22584, #22601, #23172, #24645, #25097, #25185, #2537, #2550, #25764, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26908, #26923, #26932, #2712, #2714, #2715, #2716, #2719, #2720 [deployed], #27259, #27673, #27684, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #28958, #29054, #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29193, #29244, #29247, #29265, #29272, #29273, #29274, #29285 [deployed], #29299 [deployed], #29323, #29327, #29368, #29384 [proposed], #48953, #7173
 
 **Last PICKUP PROMPT:**
 
@@ -171,6 +154,62 @@ When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clin
 - [x] Validator ALL PASSED + gate CLEAR
 - [x] Completion shipped
 </task_progress>
+</attempt_completion>
+```
+
+### `1788384231784` — 9/2/2026, 3:41:58 PM PT — 308 turns
+
+**Original task:**
+
+```
+#TeamHub
+
+Do an analysis of the entire Team Hub system. 
+
+https://emsuniversity.com/emtskills/routes/team_hub.php 
+
+There are complaints regarding chat functionality working, something also about 150 or so studeents showing in a current Tempe Fast Track class when there's only 3 that showed up and blank pages on chat communication channels as well as the private messages being able to be seen by evryone, and the chat portal jus tnot working in general. Can you do an assessment of these issues and see what's going on? I will run a sweep with the browser AI. Also give me browser AI instructions 
+```
+
+**Ideas referenced:** #0891, #14571, #14574, #14829, #1632, #1633, #1634, #1635, #1637, #21547, #22139, #22274, #22276, #24017 [awaiting_review], #24706 [deployed], #25185, #28109 [executing], #28155, #28189 [proposed], #28958, #29011 [deployed], #29381 [proposed], #29382 [proposed], #29383 [proposed], #29387 [executing], #4929, #7223, #7700, #92400, #9577
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788386436202` — 9/2/2026, 3:37:09 PM PT — 89 turns
+
+**Original task:**
+
+```
+please add Claude Fable 5.1 to my list of choices here in Cline for models to pick from.
+```
+
+**Ideas referenced:** #1636
+
+**Last PICKUP PROMPT:**
+
+```
+ave directed me not to reload.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task: add Claude Fable 5.1 to Cline model dropdown (the -1 suffix ID).
+
+Where we left off (verified 2026-09-02 15:32 PT):
+- Installed claude-dev-4.1.17.vsix via code --install-extension --force; returned "successfully installed."
+- v4.1.17 next bundles both contain claude-fable-5-1 (25x) with label "Claude Fable 5.1 (Anthropic)".
+- Old 4.0.7 still on disk alongside 4.1.17; VS Code loads the higher version next time the extension host starts.
+- Per user instruction "Do not restart cline please," no restart/reload was performed, so the running dropdown is still the old 4.0.7 catalog until the user reloads a VS Code window themselves.
+
+Open threads to drive next:
+1. (human-only decision, no idea) — User reloads/restarts the VS Code window on their own, then opens Cline Settings > Anthropic provider and confirms "Claude Fable 5.1" appears in the dropdown.
+2. (human-only decision, no idea) — After selecting claude-fable-5-1, send a real test message; if a 400 on forced tool use appears, it is the known Fable 5.1 tool_choice limitation, not a config error.
+
+Reference IDs:
+- Ideas filed: none (no buildable work deferred, only a user-gated reload)
+- Files touched: ~/.vscode/extensions/saoudrizwan.claude-dev-4.1.17/ (new install); /tmp/claude-dev-4.1.17.vsix
+═══════════════════════════════════════════════
+</result>
 </attempt_completion>
 ```
 

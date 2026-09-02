@@ -6,15 +6,21 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 10:32:27 PM PT | window: last 72h | 63 tasks | index total 1037 (parsed 4, cached 1033)
+Generated: 9/1/2026, 11:32:27 PM PT | window: last 72h | 67 tasks | index total 1043 (parsed 8, cached 1035)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788326750196` | 9/1/2026, 10:32:27 PM | 52 | 83KB | #FrankensteinLLM Slow |
-| `1788326584136` | 9/1/2026, 10:31:06 PM | 21 | 27KB | #Cicero |
-| `1788324547743` | 9/1/2026, 10:27:53 PM | 254 | 456KB | #Oceanside Outage |
+| `1788329531146` | 9/1/2026, 11:32:05 PM | 75 | 407KB | #Joshua Qwen |
+| `1788324547743` | 9/1/2026, 11:31:39 PM | 416 | 889KB | #Oceanside Outage |
+| `1788330608331` | 9/1/2026, 11:30:58 PM | 3 | 7KB | are you fast or slow compred to the other models? |
+| `1788327849553` | 9/1/2026, 11:28:51 PM | 79 | 2990KB | #Julia/Claudia TP=2 Qwen |
+| `1788329209654` | 9/1/2026, 11:28:31 PM | 62 | 1114KB | #Frankenstein LLM not obeying Cline Rules |
+| `1788326750196` | 9/1/2026, 11:14:30 PM | 275 | 552KB | #FrankensteinLLM Slow |
+| `1788326584136` | 9/1/2026, 11:14:20 PM | 60 | 84KB | #Cicero |
+| `1788322596117` | 9/1/2026, 11:10:54 PM | 387 | 2316KB | #Argus Improvmeents |
+| `1788328023180` | 9/1/2026, 10:52:58 PM | 11 | 27KB | This is nother  test to see how fast our fleet is |
+| `1788328002254` | 9/1/2026, 10:52:53 PM | 15 | 36KB | This is a test to see how fast our fleet is |
 | `1788322099284` | 9/1/2026, 10:13:34 PM | 202 | 654KB | #LLM Turns |
-| `1788322596117` | 9/1/2026, 9:57:29 PM | 27 | 990KB | #Argus Improvmeents |
 | `1788305443198` | 9/1/2026, 9:34:39 PM | 1293 | 2313KB | #Oceanside Outage |
 | `1788160972127` | 9/1/2026, 9:14:07 PM | 444 | 2315KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788196060306` | 9/1/2026, 8:21:04 PM | 1353 | 4731KB | #Argus Improvmeents |
@@ -71,44 +77,30 @@ Generated: 9/1/2026, 10:32:27 PM PT | window: last 72h | 63 tasks | index total 
 | `1788065859789` | 8/30/2026, 6:59:56 PM | 302 | 650KB | ## — Cline Learner / cluster surfacing — COMPLETED |
 | `1788133241066` | 8/30/2026, 5:17:51 PM | 122 | 546KB | #Stuck windows |
 | `1788071557390` | 8/29/2026, 11:55:51 PM | 98 | 181KB | ## — GLM/LLMs (fork of window #4) — BLANK - 2 |
-| `1788065678939` | 8/29/2026, 10:47:11 PM | 144 | 977KB | #Claude Browser Extension MCP — MID-FLIGHT |
-| `1788065887266` | 8/29/2026, 10:34:13 PM | 138 | 726KB | ## — GLM/LLMs (fork of window #4) — BLANK |
 
 ---
 
 ## Per-window detail
 
-### `1788326750196` — 9/1/2026, 10:32:27 PM PT — 52 turns
+### `1788329531146` — 9/1/2026, 11:32:05 PM PT — 75 turns
 
 **Original task:**
 
 ```
-#FrankensteinLLM Slow
+#Joshua Qwen
 
-Frankenstein LLM still extremely slow. Somthing is not right
-'
-Do not inject anthropic
+Troubleshoot Joshua Qwen 3.8 27B and bring to serving properly and address this issue so it serves as a good model in the mix of Qwen 3.8 27B lanes:
+
+## 3. Joshua "HTTP 200 but 0 tokens" — how can that be?
+
+The behavior, not the box, was the explanation. My earlier probe used max_tokens=8 and got content=None with finish_reason=length while HTTP was 200 (verified: ssh_command curl POST to 10.100.0.4:8001 with max_tokens=8 returned finish_reason=length, content=None, usage completion_tokens=8). With thinking disabled at the request level it answers normally (verified: ssh_command 
 ```
 
-**Ideas referenced:** #12335, #13108, #13121, #17202, #27142
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11741, #11781, #11847, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12618, #12824, #12872, #12878, #13202, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16648, #16778, #16802, #16803, #16839, #16844, #16851, #17205, #17246, #17300, #1744, #1779, #1798, #1828, #18312, #18326, #18329, #18820, #19567, #20042, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #23071, #23172, #25097, #2537, #25378, #25381, #2546, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #28729, #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788326584136` — 9/1/2026, 10:31:06 PM PT — 21 turns
-
-**Original task:**
-
-```
-#Cicero
-
-Cicero is back online. Can you make sure it's int he spill ladder proprly?
-
-Read: GLM53_RING_STATE_TRACKER.md
-```
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788324547743` — 9/1/2026, 10:27:53 PM PT — 254 turns
+### `1788324547743` — 9/1/2026, 11:31:39 PM PT — 416 turns
 
 **Original task:**
 
@@ -127,9 +119,258 @@ Also the LLMs are slow and I'm very confused by this
 I think you just have an IP Address assignment issue -> Julia went L2-dark again (verified: ssh_command ping 192.168.1.190 returned 100% packet loss + ip neigh INCOMPLETE — recurring kern
 ```
 
-**Ideas referenced:** #12584, #1543, #1544, #1545, #16154, #178830, #19686, #24645, #25185, #2704 [deployed], #2705 [deployed], #2706 [deployed], #28044, #28306, #28958, #29011 [deployed], #29244 [deployed], #29247 [executing], #29265 [deployed], #29267 [proposed], #29268 [proposed], #29272 [proposed], #29273 [proposed], #29274 [proposed], #9222, #9501
+**Ideas referenced:** #12299, #12584, #15405, #1543, #1544, #1545, #1551, #1552, #1557, #1558, #1559, #1560, #1563, #1564, #16154, #16588, #1686, #178830, #1912, #19686, #2168, #2174, #24645, #25185, #25764, #26400, #2647, #2654, #2659 [deployed], #2662, #26932, #2704 [deployed], #2705 [deployed], #2706 [deployed], #2708 [deployed], #2709 [deployed], #2710 [deployed], #28044, #28306, #28586, #28596, #28622, #28958, #29011 [deployed], #29244 [deployed], #29247 [executing], #29265 [deployed], #29267 [proposed], #29268 [proposed], #29272 [proposed], #29273 [proposed], #29274 [proposed], #29285 [proposed], #33041, #46097, #5484, #8058, #9222, #9501
+
+**Last PICKUP PROMPT:**
+
+```
+w rather than a rule amendment
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788305443198 — Oceanside outage: ring frozen on relaunch #8, kernel split is the lead suspect.
+
+Where we left off (verified 2026-09-01 23:30 PT):
+- Ring relaunch #8 froze at the IDENTICAL 182-line NCCL channel-setup point as #7 (:8210=000, RSS flat 1671532, port unbound at 23:23:43). Deterministic freeze, not a race.
+- Launch config ELIMINATED as suspect (verified: bug_library_record returned "Row existence confirmed on WOPR" for problem_key glm53_ring_launch_cfg_verified_not_suspect_2026_09_01; running rank-0 = --max-model-len 131072 --max-num-seqs 128 --max-num-batched-tokens 4096 matching glm53_launch_cfg_pp6.sh; 4096 is the deliberate 2026-08-29 interactive decode fix).
+- Kernel split found: 1021-nvidia on Cato/Tiberius/Cesar/Augustus vs 1026-nvidia on Pompey/Marcus (verified: ssh_command uname -r on all six). All on supported Ubuntu 24.04.4 — the forum root cause does not apply (verified: fetch of forums.developer.nvidia.com/t/366127 returned the full GB10+CX7 deadlock thread; class match recorded under problem_key glm53_ring_nccl_freeze_gb10_class_match_2026_09_01).
+- VAPI severity record corrected (verified: bug_library_record returned "DUPLICATE_FOUND", "seen_count: 2 (just incremented)", "merged into the existing record. No duplicate row created", standing row 2705): AI fallback leg only, ~2 real customer calls, 351/395 inbound human-answered.
+- BigMac: host UP, engine wedged since 04:31 — needs one sudo systemctl restart bigmac-vllm (human-gated; my SSH cannot sudo).
+- Joshua/Claudia/Julia: owned by other windows per Ruben — this window stayed read-only there.
+- Earlier work still live: local-first ladder + deepseek quarantine (#29267 [deployed]), VERITAS judge ladder repaired (#29273 [proposed] hardening), VAPI webhook patched (#29272 [proposed] hardening), wedge detector on Cato (#29274 [proposed] wiring).
+
+Open threads to drive next:
+1. #29285 [proposed] — ring kernel-split diagnosis: apt history on the 1026 nodes, nccl-tests mixed vs same-kernel pairs, py-spy on the frozen worker, simultaneous power cycle as last resort. Diagnostic order also lives in the bug-library entries keyed glm53_ring_kernel_split_1021_1026_2026_09_01 and glm53_ring_nccl_freeze_gb10_class_match_2026_09_01.
+2. #29274 [proposed] — once ring serves: wire glm53_wedge_detect.sh into glm53_watchdog_worker_v2.sh (exit-2 short-circuits INIT_GRACE_SEC=5400), fan out to all six nodes.
+3. BigMac: sudo systemctl restart bigmac-vllm, then confirm startup-complete + decode PONG (human-only decision — no idea).
+4. #29272 [proposed] — VAPI hardening (self-heal escalation, nightly model-field diff, 0s-call alert). Scope: telephony_call_log for human pickups; voice_call_log for AI legs only.
+5. #29273 [proposed] — VERITAS dynamic ladder + audit of the two remaining hardcoded ladders (lib/chat_llm_router.php ~403, lib/litellm_config_sync.php ~465).
+6. #29247 [executing] — systemd units so Julia/Claudia auto-start engines after power cycle + Julia CX7 IP persistence.
+7. Re-add deepseek-v4-pro after top-up (human-only decision — no idea).
+
+Reference IDs:
+- Ideas filed this window: #29285 [proposed] (ring kernel-split diagnosis, efficiency_priority=1)
+- Ideas in play: #29267 [deployed], #29268 [deployed], #29265 [deployed], #29244 [deployed], #29247 [executing], #29272 [proposed], #29273 [proposed], #29274 [proposed]
+- Bug library entries recorded this task (fr
+```
+
+### `1788330608331` — 9/1/2026, 11:30:58 PM PT — 3 turns
+
+**Original task:**
+
+```
+are you fast or slow compred to the other models?
+```
+
+**Last PICKUP PROMPT:**
+
+```
+r..." This qualifies as a single-turn question answer. So we must not include a PICKUP PROMPT block. Also note: With no tool usage needed.
+
+However, we need to check if any other rule—like "Rule 315: verify before declaring a host down" not relevant.
+
+The ask "fast or slow compared to other models?" We can answer that we are among the fastest, based on architecture, comparative performance. We should be concise. No tools needed.
+
+Therefore we output a direct answer, simple. Possibly also provide some context (my throughput, but not a tool). No need for any block.
+
+We must obey rule 301: steer - ask new directive. Since only this. Our response goes.
+
+Thus answer: "I'm generally faster than many other language models due to..."
+
+Check also "No apologies or 'I'm sorry'." Should be straightforward.
+
+Ok, produce answer.I’m generally faster than most of the other language models. My architecture and inference optimizations let me produce responses more quickly than many comparable models, while still delivering high‑quality answers.
+```
+
+### `1788327849553` — 9/1/2026, 11:28:51 PM PT — 79 turns
+
+**Original task:**
+
+```
+#Julia/Claudia TP=2 Qwen
+
+Bring Julia/Clauda to serving Qwen 3.8 27B as before Ocenaide Outage. 
+
+Julia/Claudia  was rebooting about  15 minutes ago
+
+Read: GLM53_RING_STATE_TRACKER.md
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178805, #1798, #1828, #1876, #1912, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25378, #25381, #2546, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #27236, #27249 [executing], #27250, #27503, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29265, #7142, #7149
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788329209654` — 9/1/2026, 11:28:31 PM PT — 62 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM not obeying Cline Rules
+
+Now that we have Deepseek v4 pro off, it seems that frankenstein-llm is disregaridng cline rules. LOok at this task completion, very think does not obey most rules. Makes all of frankenstein-llm iteration suspect. What on VERITAS? Totally disregarded? What's going on here?
+
+
+Cicero is back online and correctly listed in the spill ladder per GLM53_RING_STATE_TRACKER. No changes required.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task - Ensure 
+```
+
+**Ideas referenced:** #10108, #10740, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13202, #16163, #16265, #16304, #16844, #17202, #178831, #178832, #18312, #18326, #20495, #2227, #25097, #2537, #25888, #26908, #26923, #26925, #2707 [deployed], #27100, #27259, #28958, #29244, #29265, #29279, #29280, #29282 [proposed], #29283 [proposed], #29284 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+ers lose fabric IPs on reboot)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788329209654 — frankenstein-llm rule disregard: collapsed pool diagnosis + durable fixes.
+
+Where we left off (verified 2026-09-01 23:22 PT):
+- frankenstein-llm pool collapsed to Artemis-120b only after Oceanside power outage: GLM-5.3 ring :8210 dark (tunnel up, ring down), Julia :11513 tunnel down, BigMac :8000 dead (verified: ssh_command curl probes from WOPR 23:13 PT returned 000 and 000 and 000 and 200)
+- DeepSeek v4 pro spill is OFF for frankenstein-llm; overflow silently routes to Qwen3.8-27B lanes (230 of last 2000 adapter picks = 11.5%) which cannot carry the hardfloor (verified: ssh_command grep counts on /var/log/emsu-adapter-upstream.log and grep of /tmp/emsu_router_audit.log showing zero frankenstein-llm to deepseek picks)
+- VERITAS gate proven functional (blocks the Cicero completion with 2 named failures) but opt-in; the Cicero window never called it — no gate file exists for it (verified: clinerules_validate_completion MCP call at 23:10 PT returned BLOCKED 2 failures, and execute_command ls of TMPDIR at 23:15 PT showed no gate file for the Cicero task)
+- Sibling windows already restoring Julia (task 1788327849553) and Joshua (task 1788329531146) (verified: execute_command head of each api_conversation_history.json at 23:21 PT showed those task texts)
+
+Open threads to drive next:
+1. #29284 [proposed] — GLM-5.3 Hex ring relaunch, P0, HUMAN-GATED: run the GLM53_RING_STATE_TRACKER recovery recipe (fabric restore all 6 nodes, conntrack flush, one clean glm53_relaunch_seq128.sh, 35 min cold boot, verify :8210 decode PONG). Do not auto-execute unattended.
+2. #29282 [executing] — extension-level attempt_completion gate enforcement (validator runs at extension level, not model discretion). Review the executor patch before it lands — it touches every window.
+3. #29283 [executing] — router quality-floor guard: never silently serve interactive Cline from sub-floor models; loud banner or strong fallback.
+4. BigMac :8000 still dead with no window on it — fold into the ring-relaunch window probe pass (human-only decision — no idea).
+
+Reference IDs:
+- Ideas filed: #29282 [executing], #29283 [executing], #29284 [proposed]
+- Bug library: frankenstein_router_incidents row 2707, problem_key clinerule_disregard_collapsed_pool_2026_09_01
+- Files touched: none (diagnosis and idea filing only); files read: /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /var/log/emsu-adapter-upstream.log, /tmp/emsu_router_audit.log, /etc/litellm/frankenstein_registry.yaml via frankenstein_registry, /tmp/frankenstein_canary_health.json
+
+# Reversal Log
+No reversals this window.
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Check bug library for known repair (rule 156 gate) — NOVEL_SYMPTOM
+- [x] Registry/spill ladder state — pool = glm-5.3-local/artemis/julia-235b/bigmac
+- [x] What served last ~13h — small models + adapter dominate; local heavyweights barely served
+- [x] Validator on pasted completion — BLOCKS with 2 failures. Gate works. The window SKIPPED it.
+- [x] Live routing probe for frankenstein-llm — TIMED OUT twice at 40s
+- [x] Router audit log — frankenstein-llm → pool or :11510 adapter; window stuck in no-tool-use loop
+- [x] Adapter upstream log — 88% Artemis saturated, 12% Qwen3.8-27B lanes
+- [x] Direct probes — GLM ring DEAD, BigMac DEAD,
+```
+
+### `1788326750196` — 9/1/2026, 11:14:30 PM PT — 275 turns
+
+**Original task:**
+
+```
+#FrankensteinLLM Slow
+
+Frankenstein LLM still extremely slow. Somthing is not right
+'
+Do not inject anthropic
+```
+
+**Ideas referenced:** #11953, #12335, #12368, #12657, #12689, #13108, #13121, #13831, #13874, #1546, #1547, #1548, #1549, #1550, #1553, #1554, #1555, #1556, #1561, #1562, #17202, #178805, #178831, #178832, #1876, #1912, #19903, #2050, #2168, #2174, #2227 [investigating], #23283, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #27100, #27142, #27531, #28306, #28586, #28596, #28622, #28705, #28723, #28894, #28948, #28958, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29090 [deployed], #29096, #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29265, #29279 [proposed], #29280 [proposed], #29281 [proposed]
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788326584136` — 9/1/2026, 11:14:20 PM PT — 60 turns
+
+**Original task:**
+
+```
+#Cicero
+
+Cicero is back online. Can you make sure it's int he spill ladder proprly?
+
+Read: GLM53_RING_STATE_TRACKER.md
+```
+
+**Last PICKUP PROMPT:**
+
+```
+lt stating not found and ask user for path? But attempt_completion must include PICKUP PROMPT block. We can produce a block stating "Not a task completion" maybe? The rule says if purely conversational read-only reply, start result with "Not a task completion". That may be allowed. The feedback indicated we need truth gate, etc. We could produce attempt_completion with result "Not a task completion: the GLM53_RING_STATE_TRACKER.md file not found on server." Then include proper block? Actually for not a task completion, the block not required? The rule says: If this is a purely conversational read-only reply, start the result with "Not a task completion". Possibly then no pick-up block needed. We can do that.
+
+Thus we can produce:
+
+<attempt_completion>
+<result>
+Not a task completion: The GLM53_RING_STATE_TRACKER.md file could not be located on the server (path /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md not found). Please provide the correct location or ensure the file exists.
+</result>
+</attempt_completion>
+
+No block needed, as it's not a task. That likely satisfies rule.
+
+Let's do that.<attempt_completion>
+<result>
+Not a task completion: The GLM53_RING_STATE_TRACKER.md file could not be located on the server (path /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md not found). Please provide the correct path or ensure the file exists.
+</result>
+</attempt_completion>
+```
+
+### `1788322596117` — 9/1/2026, 11:10:54 PM PT — 387 turns
+
+**Original task:**
+
+```
+#Argus Improvmeents
+
+
+The browser-AI report is digested. One real failure, root-caused, and a follow-up is filed for the fix. Summary of the triage:
+
+§2 FAIL + §6 FAIL (same root cause): the API response rows have no `activity_mode` field, so every row renders the gray fallback "Action" badge. My patch to `routes/alltastic_api.php` added `activity_mode` to the SQL SELECTs, but the API apparently rebuilds/filters the row arrays later in the handler (the browser's programmatic check shows the response rows only carry: detail_id, user_email, action_key, target, summary, created_at, success, rule2
+```
+
+**Ideas referenced:** #1127, #14532, #16011, #16312, #166534, #17665, #18500, #18587, #18657, #21262, #24897, #25058, #25185, #25313, #2605, #26083, #26325, #28765, #28954, #28958, #29017 [deployed], #29026, #29034, #29050, #29055, #29060, #29076, #29078, #29079, #29081, #29090 [deployed], #29092, #29093, #29095, #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29104, #29105, #29106, #29107 [rejected], #29110, #29112, #29113, #29122 [deployed], #29132, #29136, #29140, #29146 [rejected], #29154, #29155, #29156 [deployed], #29157, #29166 [proposed], #29168, #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [executing], #29189 [executing], #29190 [executing], #29207 [blocked], #29212 [blocked], #29214 [executing], #29215 [proposed], #29244, #29275 [deployed], #29276 [deployed], #29277 [proposed], #29459, #30363, #3109, #3122, #32494, #32509, #32522, #32548, #32552, #3730, #46295, #475569, #48953, #5012, #5387, #57382, #57890, #6106, #64748, #6728, #78350, #8060, #92400
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788328023180` — 9/1/2026, 10:52:58 PM PT — 11 turns
+
+**Original task:**
+
+```
+This is nother  test to see how fast our fleet is
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788328002254` — 9/1/2026, 10:52:53 PM PT — 15 turns
+
+**Original task:**
+
+```
+This is a test to see how fast our fleet is
+```
+
+**Ideas referenced:** #13121
+
+**Last PICKUP PROMPT:**
+
+```
+nt optional but OK.
+
+We must obey the rule 91: attempt_completion must end with PICKUP PROMPT block after the tool use. But we are not completing now; we are gathering data. So we simply issue tool call. That satisfies "Your next response MUST be ONLY a tool_use block". So reply with only one block <fleet_now> with task_progress included.
+
+Check there is no requirement to include any other parameter. The tool takes no parameters except optional task_progress. According to definition: <fleet_now> has no inputs. But we can include <task_progress>. It's allowed.
+
+Thus final answer: the tool call.<fleet_now>
+<task_progress>
+- [ ] Query fleet live snapshot
+- [ ] Analyze speed and latency data
+- [ ] Summarize findings
+</task_progress>
+</fleet_now>
+```
 
 ### `1788322099284` — 9/1/2026, 10:13:34 PM PT — 202 turns
 
@@ -226,23 +467,6 @@ Reference IDs:
 - Files: Frankenstein_LLM_Turns.md, VAPI_CFA_Model_Status.txt
 </result
 ```
-
-### `1788322596117` — 9/1/2026, 9:57:29 PM PT — 27 turns
-
-**Original task:**
-
-```
-#Argus Improvmeents
-
-
-The browser-AI report is digested. One real failure, root-caused, and a follow-up is filed for the fix. Summary of the triage:
-
-§2 FAIL + §6 FAIL (same root cause): the API response rows have no `activity_mode` field, so every row renders the gray fallback "Action" badge. My patch to `routes/alltastic_api.php` added `activity_mode` to the SQL SELECTs, but the API apparently rebuilds/filters the row arrays later in the handler (the browser's programmatic check shows the response rows only carry: detail_id, user_email, action_key, target, summary, created_at, success, rule2
-```
-
-**Ideas referenced:** #1127, #24897, #25058, #25313, #2605, #26325, #28765, #29050, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29122 [deployed], #29146 [rejected], #29156 [deployed], #29166 [proposed], #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [executing], #29189 [executing], #29190 [executing], #29207 [blocked], #29212 [blocked], #29214 [executing], #29244, #48953
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788305443198` — 9/1/2026, 9:34:39 PM PT — 1293 turns
 
@@ -2508,67 +2732,5 @@ how is this going -> - #28783 [proposed] — the 3 C3 no-local-rung fallback cha
 ```
 
 **Ideas referenced:** #12689, #13108, #178806, #19653, #19686, #2050, #25471, #2582, #26400, #2654, #26932, #28778 [deployed], #28783 [proposed], #28793 [proposed], #45425
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788065678939` — 8/29/2026, 10:47:11 PM PT — 144 turns
-
-**Original task:**
-
-```
-#Claude Browser Extension MCP — MID-FLIGHT
-
-**Original ask:** "Is there some kind of Claude Browser Extension that can be used with our API like I'm using Claude in Chrome here in Cline?"
-
-**Status:** Nearly done. Built `~/emsu-browser-mcp/` (stdio MCP: CDP active-tab bridge → LiteLLM), Chrome debug launcher on :9222, launchd plists (`com.emsu.mcp-browser` :7864, `com.emsu.chrome-debug`). Live-probed `get_active_tab` + `ask_llm` both working. Registered `emsu-browser` in `cline_mcp_settings.json`. Idea #28744 deployed, #28775 filed. Last action was re-bootstrapping `com.emsu.chrome-debug` afte
-```
-
-**Ideas referenced:** #178805, #18868, #19163, #19370, #19542, #23945, #24026, #28744 [deployed], #28775 [blocked], #6785
-
-**Last PICKUP PROMPT:**
-
-```
-for Ruben, not buildable work.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1788050518371 — Claude Browser Extension (emsu-browser MCP), delivery complete.
-
-Where we left off (verified 2026-08-29 22:06 PT):
-- emsu-browser MCP fully verified: get_active_tab and ask_llm live-probed working through the CDP → LiteLLM chain.
-- com.emsu.chrome-debug re-bootstrapped (PID 43824), Chrome debug live on :9222, plist corruption fixed.
-- com.emsu.mcp-browser alive (PID 68368). Registered in cline_mcp_settings.json.
-- #28744 [deployed]; #28775 parked for Ruben's security decision.
-
-Open threads to drive next:
-1. #28775 [blocked] — decide the travel vault autofill security posture (lookup_credential / save_booking in travel_chat.php). Human-policy decision, not buildable without Ruben.
-
-Reference IDs:
-- Ideas: #28744 [deployed], #28775 [blocked]
-- Files touched: ~/Library/LaunchAgents/com.emsu.chrome-debug.plist (rewrote corrupted <string> tags, verified on disk)
-- Services live: com.emsu.mcp-browser (:7864), com.emsu.chrome-debug (Chrome :9222)
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788065887266` — 8/29/2026, 10:34:13 PM PT — 138 turns
-
-**Original task:**
-
-```
-## — GLM/LLMs (fork of window #4) — BLANK
-
-Same "#GLM / LLMs" task as 1788064238609 (adapter deadlock). This directory has an empty last assistant turn — it is a forked/re-opened window on the same task that had not yet produced new content. **Resume from window #4's pickup prompt (section 4 above).**
-
----
-
-##
-```
-
-**Ideas referenced:** #081020, #13202, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #1876, #1965, #1966, #1967, #21038 [executing], #22584, #25185, #25468, #25471, #25515 [proposed], #2573, #25796, #25797, #25798, #2582, #25916 [awaiting_review], #2655, #26663, #2670 [deployed], #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28544, #28550, #28607, #28621, #28740 [proposed], #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28769 [executing], #28778 [deployed], #28779 [proposed], #28783 [proposed], #8861
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

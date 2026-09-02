@@ -137,3 +137,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends the SCOPE GATE: a product name is NOT a population. Before claiming an outage affects "X", enumerate every SURFACE that carries the name X and probe EACH one, because surfaces that share a product name routinely use different endpoints. Source incident 2026-09-01: I found api/argus_proxy.php failing on 10.100.0.1:4000 and generalised it to "every Argus request had been failing since 8/28". Ruben pointed at the Activity log: argus_task_queue holds 68 rows since 2026-08-28, 55 of them status=done, latest 2026-09-01 13:15. The Argus surfaces people actually use (routes/alltastic_api.php and routes/cron_argus_task_worker.php) resolve LITELLM_BASE_URL to https://litellm.emsuniversity.com and never touch the WireGuard address, so they were never affected. Only the Chrome-extension proxy was. Same gate now also requires COUNTING BY OCCURRENCE TYPE: my "70 PHP call sites" came from a raw grep, but 65 of the 70 hits are comment lines and only 34 are unguarded live calls. Grep hits are te
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 06:05 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788326750196
+- RCA bucket: unread source
+- Trigger pattern: Ad-hoc probing and an early causal verdict when a domain tracker document already names a canonical one-call diagnostic tool for that symptom class.
+- Reversal note: Amends the gate's step 2 (READ SOURCE): when a canonical mechanical report exists for the symptom class, running it is now part of step 2, not optional. This session probed endpoints ad hoc for 30 minutes and blamed the GLM ring before reading the decision function, while /var/www/emtskills/tools/fleet_truth_report.py (idea #28948) existed precisely to produce the rule-322 table in one call and GLM53_RING_STATE_TRACKER.md said "All future routing reports MUST start from this tool's output". Step 2 now reads: before diagnosing, check whether a canonical report/tool for this symptom class is named in the domain tracker doc, and run it FIRST. Source: 2026-09-01 frankenstein-slowness window.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

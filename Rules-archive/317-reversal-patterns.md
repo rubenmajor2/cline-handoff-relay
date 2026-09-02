@@ -5,24 +5,24 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **234**
-- Last generated: 2026-09-01 22:06
+- Reversals tracked: **236**
+- Last generated: 2026-09-01 23:06
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 119 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 120 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 38 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
-| unread source | 30 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
+| unread source | 31 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 25 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
 | stale assumption | 22 | 9% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
 - Rule 317: 102 amendment(s)
-- Rule 297: 46 amendment(s)
-- Rule 315: 28 amendment(s)
+- Rule 297: 47 amendment(s)
+- Rule 315: 29 amendment(s)
 - Rule 322: 10 amendment(s)
 - Rule 91: 9 amendment(s)
 - Rule 302: 7 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-02** — Amends Step 4 (HOST-UP != ENGINE-DOWN): the rule already forbade collapsing the two layers, but its wording let me write "BigMac WEDGED 18h" as a whole-box verdict from an unreachable :8000 plus a stale unit-log line. Step 4 now requires that any DOWN sentence
 - **2026-09-02** — Amends Step 2 (the four-state classification): ZERO TRAFFIC IN A LOG IS NOT A STATE. A box with 0 turns in /var/log/emsu-adapter-upstream.log may be (a) not a member of that pool at all (direct LiteLLM lanes like claudia/julia/cicero are NOT :11510 adapter mem
 - **2026-09-02** — - Claimed 'renders after login' from an anonymous 401 probe -> corrected: the authenticated render fataled with undefined $pdo (HTTP 500) | RCA bucket: insufficient probe | causal
 - **2026-09-02** — Amends clause 2 (acquisition gate): an HTTP 401 on the anonymous surface of an auth-gated route proves only that the route exists and the front controller runs — it is NOT evidence the authenticated surface renders. Shipping 'renders after login' without probi
 - **2026-09-01** — Amends rule 263 (verify before claim): before INSERT into an enumerated column (orchestrator_ideas.domain), probe the column definition first. An unverified enum value is silently rejected and stored as empty, which is an unverified write. Corrected 29208's do
-- **2026-09-01** — Amends clause 1 (fleet/routing state) and adds a numbered blip-class rule: a single HTTP-000 on a reverse-tunnel port alias (127.0.0.1:NNNN on WOPR) is NOT a down-model verdict and MUST be recorded UNVERIFIED, never DOWN — the 000 may be a tunnel blip or stale
 
 ### wrong premise
 
@@ -55,11 +55,11 @@ _The reasoning was sound but rested on a false starting fact. State the premise 
 
 _The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing._
 
+- **2026-09-02** — Amends the gate's step 2 (READ SOURCE): when a canonical mechanical report exists for the symptom class, running it is now part of step 2, not optional. This session probed endpoints ad hoc for 30 minutes and blamed the GLM ring before reading the decision fun
 - **2026-09-02** — Amends obligation 1 (GROUND TRUTH FIRST): a FILE FOUND ON DISK IS NOT A GROUND-TRUTH SOURCE. On 2026-09-01 an agent answered "what model is running VAPI CFA" by grepping the Desktop, finding a file named VAPI_CFA_Model_Status.txt, and reporting its contents ("
 - **2026-09-01** — Amends the resolution rules with verified endpoint->LLM identity map and source-integrity lesson. (1) 10.100.0.4:8001 is JOSHUA qwen3.8-27b, NOT Claudia; Claudia is 127.0.0.1:11521. (2) Julia+Claudia are ONE TP=2 lane at 127.0.0.1:11513, not two rows. (3) Addi
 - **2026-08-31** — Amends clauses 1 and 13: before writing a disposition to orchestrator_ideas.status, probe information_schema.COLUMNS; MySQL non-strict silently coerces enum values not in the column type (an UPDATE to 'superseded' became 'rejected' with rows affected=1). A liv
 - **2026-08-30** — Amends the resolution rules: (1) an llm_call_log model string is a LABEL, not a physical model — litellm model_names can be ALIASES backed by a different provider (verified 2026-08-29: config.yaml lines 244-253 back claude-haiku/claude-haiku-4-5 with deepseek/
-- **2026-08-29** — Amends clause 2 (acquisition gate): a mailer's transport must be read from the config file the mailer ACTUALLY loads (config/config.php merged via array_replace_recursive with config.local.php), never from a config file that exists but is unused (config/mail.p
 
 ### scope error
 

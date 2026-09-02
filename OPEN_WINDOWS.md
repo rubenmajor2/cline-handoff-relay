@@ -6,10 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 4:30:20 PM PT | window: last 72h | 75 tasks | index total 1030 (parsed 0, cached 1030)
+Generated: 9/1/2026, 5:30:21 PM PT | window: last 72h | 74 tasks | index total 1031 (parsed 1, cached 1030)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1788305443198` | 9/1/2026, 5:30:13 PM | 89 | 540KB | #Oceanside Outage |
 | `1788281168059` | 9/1/2026, 3:43:06 PM | 176 | 430KB | #Safely Increasing Cline/Argus/Executor Lanes |
 | `1788160972127` | 9/1/2026, 3:39:37 PM | 423 | 2273KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788285310173` | 9/1/2026, 3:38:40 PM | 114 | 431KB | #Florida CE Program Approval |
@@ -83,12 +84,52 @@ Generated: 9/1/2026, 4:30:20 PM PT | window: last 72h | 75 tasks | index total 1
 | `1788037909518` | 8/29/2026, 8:39:53 PM | 104 | 442KB | #emtskills slowness |
 | `1788051007231` | 8/29/2026, 6:17:13 PM | 265 | 518KB | #VAPI CFA |
 | `1788048815773` | 8/29/2026, 5:39:11 PM | 130 | 285KB | #GLM Local and others |
-| `1788021866677` | 8/29/2026, 5:27:46 PM | 1084 | 2262KB | #ArgusVAPI CFA voice path |
-| `1788044433915` | 8/29/2026, 4:55:17 PM | 139 | 330KB | #GLM 5.3 and Others |
 
 ---
 
 ## Per-window detail
+
+### `1788305443198` — 9/1/2026, 5:30:13 PM PT — 89 turns
+
+**Original task:**
+
+```
+#Oceanside Outage
+
+The internet went out in oceanside and all the romans went down. How is everything going now? How did the cutover go? What did we learn?
+```
+
+**Ideas referenced:** #1127, #11782, #12299, #1264, #13977, #1451, #14833, #14885, #15144, #15918, #15965, #15979, #15995, #16338 [proposed], #171018, #171052, #171091, #171095, #1811, #1819, #18238, #18255, #18256, #18261, #18471, #18536, #18544, #18567, #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #1948, #19522, #1993, #20495, #20528, #21167, #2168, #2174, #2307, #2314, #23183, #25764, #2603, #2605, #26400, #2647, #2654, #2659, #2662, #26711, #26712, #26713, #26715, #26932, #27201, #28306, #28586, #28596, #28622, #28961, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #48953, #816987, #8883, #8887, #8902, #8903
+
+**Last PICKUP PROMPT:**
+
+```
+ug 29, idea #29236 (15:12:56).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Oceanside outage recovery + GLM-5.3 ring relaunch.
+
+Where we left off (verified 2026-09-01 16:43 PT):
+- All 4 Romans rebooted ~15:50 PT and are reachable (SSH + WireGuard UP), but the GLM-5.3 ring is DOWN: :8210 empty, :8211 conn-reset, no containers/processes on Cato (:2204).
+- WOPR stayed up (boot Aug 19), so the outage was Roman-LAN-local.
+- Root cause the ring didn't recover on its own: WOPR glm52-ring-watchdog.service inactive since 2026-08-29 03:46:44.
+- Idea #29236 [proposed] (bring back fleet) auto-filed 15:12:56; #29240 [proposed] filed this session.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29240 — Relaunch the ring: run glm53_relaunch_seq128.sh with correct rank args on the Romans, then re-enable + verify glm52-ring-watchdog.service (systemctl enable/start + is-active), decode-probe :8210/:8211 until 200 + content tokens.
+2. #29240 — After relaunch, write the 09-01 Oceanside outage post-mortem into HANDOFF_NOTES.md (none exists after 06:05 PT) with the watchdog-was-dead-3-days finding.
+
+Reference IDs:
+- Ticket: none (infrastructure incident, no ticket)
+- Ideas filed: #29236 [proposed], #29240 [proposed]
+- Files touched: none (read-only probes; no server writes)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
 
 ### `1788281168059` — 9/1/2026, 3:43:06 PM PT — 176 turns
 
@@ -2814,77 +2855,5 @@ What do you think we need? -> If you want Julia above 16, it is a one-line launc
 ```
 
 **Ideas referenced:** #12366, #12368, #15815, #178804, #1912, #2168, #2174, #25185, #2654, #2659, #2662, #2666, #26932, #27284, #28042, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28705 [blocked], #28706 [executing], #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723 [rejected], #28725 [executing], #28726, #28729, #28730 [blocked], #28735 [deployed], #28738, #28740 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788021866677` — 8/29/2026, 5:27:46 PM PT — 1084 turns
-
-**Original task:**
-
-```
-#ArgusVAPI CFA voice path
-
-So the previous window kind of died on us. So what I will need is for you to essentially rehash whatever it is that you were working on here and then also I would like for you to consider skipping the GLM 5.3 local wrong and going immediately to Qwen 3.8 27B Local to be used for VAPI CFA. I would also like for you to consider using the Open Router Qwen 3.8 Max to answer VAPI CFA and give your honest assessment. I don't know that deepseek v4 pro  is the best model anymore as it's gotten expensive in the last week. 
-
---
-Done. The VAPI CFA voice path now runs DeepSeek a
-```
-
-**Ideas referenced:** #12584, #13202, #15405, #15815, #16648, #16844, #178798, #178802, #19100, #1912, #1965, #1998, #20495, #2168, #22820, #23071, #23133, #23945, #25185, #26253, #2640, #2642, #2654, #26617, #2666 [deployed], #26712, #26713, #26932, #27100, #27284 [deployed], #27634 [executing], #27635 [executing], #27652, #28042, #28133, #28213, #28214, #28220, #28221, #28234, #28304, #28307, #28310, #28316, #28331, #28369, #28465 [deployed], #28497, #28500, #28504 [deployed], #28505, #28506 [deployed], #28573, #28622, #28636 [deployed], #28637 [deployed], #28638 [proposed], #28639 [proposed], #28640 [proposed], #28641 [deployed], #28642 [rejected], #28710 [proposed], #28711 [proposed], #28712 [proposed], #28716 [proposed], #28723, #28729 [proposed], #28735 [proposed], #28738 [proposed], #6106, #9501
-
-**Last PICKUP PROMPT:**
-
-```
-uisition probe that caught it)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1788021866677 — Providerfault root-caused (restart drops); canary + smoketest proven in production
-
-Where we left off (verified 2026-08-29 17:26 PT):
-- Providerfault root cause: LiteLLM restarts drop in-flight voice calls ~44s; canary CAUGHT ONE LIVE at the 17:15 restart (verified: canary log probe greeting_shape http=502 RESULT=FAIL ALERTED; journalctl litellm.service start at 17:15:17; cloudflared EOF errors same second).
-- Guard rolled back after two attempts; gateway healthy (verified: curl HEALTH=200, voice lane HTTP=200 OK, canary RESULT=PASS at 17:25 PT).
-- No human callers yet — Saturday evening (verified: Vapi call-list pull at 17:17 PT, all own-number traffic).
-- Vapi support ticket DRAFTED paste-ready in HANDOFF_NOTES.md (requires Ruben's account-owner submission).
-- Voice-lane canary LIVE on */5 cron; maxTokens=150 on all 8 assistants; rule 317 amended (probe-shape clause).
-
-Open threads to drive next:
-1. #28738 [executing] — implement the unknown-model guard properly: registry-derived known-models unified with config.yaml, smoketest before restart, verify both directions live (recipe in the idea record).
-2. (human-only decision — no idea) Ruben pastes the Vapi support ticket from HANDOFF_NOTES.md (account-owner submission required).
-3. (human-only decision — no idea) Adopt a restart-coordination rule: no litellm restarts while voice calls are in flight; add drain-wait to litellm-safe-restart.sh.
-4. #28712 [executing] — spend logging work (other window).
-5. #28716 [blocked] — local Qwen boxes (other window; impl_failed, needs attention).
-
-Reference IDs:
-- #28735 [deployed]
-- #28738 [executing]
-- #28729 [deployed]
-- #28710 [deployed]
-- #28711 [deployed]
-- #28712 [executing]
-- #28716 [blocked]
-- Rule amended: 317 (probe-shape equivalence)
-- Bug library: frankenstein_router_incidents problem_key qwen38_lane_fallback_masquerade_2026_08_29, status resolved
-- Files touched: /etc/litellm/router_hook.py (attempted + rolled back to backup .bak-guard28738-20260829), /var/www/emtskills/cron/cron_vapi_voice_lane_canary.php, HANDOFF_NOTES.md, the guard idea's orchestrator_ideas record
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788044433915` — 8/29/2026, 4:55:17 PM PT — 139 turns
-
-**Original task:**
-
-```
-#GLM 5.3 and Others
-
-I see, i just wnat it to be interactive still and not be bypassed, so remember also that we have Virtual EMSU Corpus and on Box context so what's the point of prefill even? I jus twonder on that. But either way, again, I need interactive to still work, so if you want to bring it down / the prefill chunks. I don't want quality degredation,b ut again if on box context, etc.. why would tha tmatter? Anyway if it doesn't matter than sure bring it down and make the GLM work better for me. If not, lmk as I'm confused here -> - "Curious if 1/2 is what it was at before?" Yes, exact
-```
-
-**Ideas referenced:** #178802, #25185, #28586, #28596, #28612, #28704 [deployed], #28705 [blocked], #28706 [executing], #28723 [rejected], #28725 [executing], #28730 [executing], #28735 [deployed], #28738, #28740 [proposed], #28742 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

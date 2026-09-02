@@ -147,3 +147,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Adds the mechanical countermeasure for the port-theft class: cron_tunnel_identity_watchdog.php (WOPR, */15) now probes every reverse-tunnel port and verifies HOSTNAME + hardware SERIAL of the answering box against an identity map. Rule text now requires: any SSH auth failure on a tunnel port MUST first check the identity watchdog log (/var/log/tunnel-identity-watchdog.log) before concluding key problems — a listener that answers as the WRONG box is an IDENTITY_MISMATCH, not an auth failure. Joshua's rogue -R :2224 was renumbered to :2227; :2224 is reserved-Maximus and alarmed.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 00:43 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788305443198
+- RCA bucket: wrong premise
+- Trigger pattern: pinging a remote-site private IP from a host on a different site's identically-numbered subnet and declaring the box down
+- Reversal note: Amends Step 2 classification: cross-site ping/ARP from a jump host is NOT valid down-evidence for remote-site boxes. WOPR's 192.168.1.x is its own San Diego LAN; the Oceanside Sparks share the same private range but are only reachable via their dial-out reverse tunnels. Before classifying any remote-site host DOWN, verify the probing vantage shares the target's actual L2 (gateway MAC check) or probe via the tunnel/fleet heartbeat — same-numbered private subnets across sites made 6 healthy Romans look LAN-dark on 2026-09-01.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

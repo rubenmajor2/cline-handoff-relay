@@ -6,21 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 5:30:21 PM PT | window: last 72h | 74 tasks | index total 1031 (parsed 1, cached 1030)
+Generated: 9/1/2026, 6:30:23 PM PT | window: last 72h | 73 tasks | index total 1032 (parsed 5, cached 1027)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788305443198` | 9/1/2026, 5:30:13 PM | 89 | 540KB | #Oceanside Outage |
-| `1788281168059` | 9/1/2026, 3:43:06 PM | 176 | 430KB | #Safely Increasing Cline/Argus/Executor Lanes |
+| `1788305443198` | 9/1/2026, 6:30:16 PM | 414 | 1207KB | #Oceanside Outage |
+| `1788296990463` | 9/1/2026, 6:30:14 PM | 489 | 2160KB | #September 1 Externship Switchover |
+| `1788298468689` | 9/1/2026, 6:29:45 PM | 197 | 1086KB | #Jon request |
+| `1788285310173` | 9/1/2026, 6:08:56 PM | 180 | 642KB | #Florida CE Program Approval |
+| `1788281168059` | 9/1/2026, 6:04:40 PM | 241 | 648KB | #Safely Increasing Cline/Argus/Executor Lanes |
+| `1788309157542` | 9/1/2026, 5:54:18 PM | 52 | 1151KB | #Email CFA Issues |
 | `1788160972127` | 9/1/2026, 3:39:37 PM | 423 | 2273KB | #Julia/Claudia Qwen 3.8 27B |
-| `1788285310173` | 9/1/2026, 3:38:40 PM | 114 | 431KB | #Florida CE Program Approval |
 | `1788280195067` | 9/1/2026, 3:25:47 PM | 378 | 1766KB | #Frankenstein LLM Reouting (individual LLMs) |
 | `1788281756491` | 9/1/2026, 3:25:11 PM | 356 | 2000KB | #TastyBot |
-| `1788298468689` | 9/1/2026, 3:21:48 PM | 140 | 756KB | #Jon request |
 | `1788284259715` | 9/1/2026, 3:09:20 PM | 300 | 1366KB | #SMS and Email Notifications |
 | `1788286330120` | 9/1/2026, 2:59:58 PM | 184 | 782KB | #30 Day Deadline Push out to 90 Days |
 | `1788196060306` | 9/1/2026, 2:56:07 PM | 1352 | 4302KB | #Argus Improvmeents |
-| `1788296990463` | 9/1/2026, 2:56:05 PM | 332 | 711KB | #September 1 Externship Switchover |
 | `1788285768610` | 9/1/2026, 2:52:12 PM | 108 | 586KB | #EMT Skills Slowness |
 | `1788284221639` | 9/1/2026, 2:06:52 PM | 710 | 1866KB | #September 1 Externship Switchover |
 | `1788237036746` | 9/1/2026, 11:30:58 AM | 686 | 2570KB | #Joshua Qwen 3.8 27B TP=2 |
@@ -82,14 +83,12 @@ Generated: 9/1/2026, 5:30:21 PM PT | window: last 72h | 74 tasks | index total 1
 | `1788051831962` | 8/29/2026, 8:55:54 PM | 330 | 635KB | This is the kind of stupid garbage ruining our LLMs and all of our operations. Needs durab |
 | `1788021977080` | 8/29/2026, 8:53:29 PM | 618 | 4756KB | #Various 2 |
 | `1788037909518` | 8/29/2026, 8:39:53 PM | 104 | 442KB | #emtskills slowness |
-| `1788051007231` | 8/29/2026, 6:17:13 PM | 265 | 518KB | #VAPI CFA |
-| `1788048815773` | 8/29/2026, 5:39:11 PM | 130 | 285KB | #GLM Local and others |
 
 ---
 
 ## Per-window detail
 
-### `1788305443198` — 9/1/2026, 5:30:13 PM PT — 89 turns
+### `1788305443198` — 9/1/2026, 6:30:16 PM PT — 414 turns
 
 **Original task:**
 
@@ -99,7 +98,7 @@ Generated: 9/1/2026, 5:30:21 PM PT | window: last 72h | 74 tasks | index total 1
 The internet went out in oceanside and all the romans went down. How is everything going now? How did the cutover go? What did we learn?
 ```
 
-**Ideas referenced:** #1127, #11782, #12299, #1264, #13977, #1451, #14833, #14885, #15144, #15918, #15965, #15979, #15995, #16338 [proposed], #171018, #171052, #171091, #171095, #1811, #1819, #18238, #18255, #18256, #18261, #18471, #18536, #18544, #18567, #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #1948, #19522, #1993, #20495, #20528, #21167, #2168, #2174, #2307, #2314, #23183, #25764, #2603, #2605, #26400, #2647, #2654, #2659, #2662, #26711, #26712, #26713, #26715, #26932, #27201, #28306, #28586, #28596, #28622, #28961, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #48953, #816987, #8883, #8887, #8902, #8903
+**Ideas referenced:** #1119, #1120, #1127, #1130, #1131, #11490, #11782, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #1264, #13837, #13977, #1451, #14833, #14885, #1513, #1514, #15144, #1515, #1524, #15918, #15965, #15979, #15995, #16032, #16033, #16036, #16122, #16163, #16338 [proposed], #16448, #16452, #16778, #16802, #16803, #16839, #16851, #171018, #171052, #171091, #171095, #1711, #1712, #17246, #1744, #1779, #1798, #1811, #1819, #18238, #18255, #18256, #18261, #1828, #18471, #18536, #18544, #18567, #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #19338, #19458, #1948, #19491, #19522, #19567, #1986, #1993, #20042, #20495, #20528, #2063, #2065, #20662, #20725, #2073, #20985, #21038, #21167, #2127, #2168, #2174, #2185, #22357, #2299, #2307, #2314, #23183, #25378, #25381, #2546, #25764, #25900, #25994, #25997, #25999, #2603, #2605, #26068, #2640, #26400, #2647, #2654, #2659, #2662, #26711, #26712, #26713, #26715, #26932, #27100, #27152, #27201, #27236, #27249 [executing], #27250, #27503 [proposed], #27874, #28042 [proposed], #28155, #28234, #28304 [deployed], #28306, #28586, #28596, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28723, #28948, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #29244 [proposed], #29247, #48953, #7138, #7142, #7149, #7759, #816987, #8883, #8887, #8902, #8903
 
 **Last PICKUP PROMPT:**
 
@@ -131,7 +130,115 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </attempt_completion>
 ```
 
-### `1788281168059` — 9/1/2026, 3:43:06 PM PT — 176 turns
+### `1788296990463` — 9/1/2026, 6:30:14 PM PT — 489 turns
+
+**Original task:**
+
+```
+#September 1 Externship Switchover
+
+
+I still don't see dates and times pre-filled as I asked before, I need that built. Also others approved as per rule 29. Give and poll Vicky followup questions. Running your questions as well now:
+
+Here is the browser AI test and every outstanding item, so you can open a fresh window with all of it in hand. I am at 95% of my context window, which is why I am handing off rather than starting the next build.
+
+Quick orientation before the test. The assign page is live and works, but three things you flagged are NOT done: the suggested date and time do not prefi
+```
+
+**Ideas referenced:** #059669, #0891, #111827, #1499, #1500, #1501, #1502, #1503, #1504, #1505, #1506, #1507, #1525, #1526, #1527, #166534, #178828, #2563, #28958, #29011 [deployed], #29196 [deployed], #29197 [deployed], #29199 [proposed], #29200 [deployed], #29201 [deployed], #29202 [deployed], #29203 [deployed], #29213 [deployed], #29214 [deployed], #29216 [deployed], #29225 [proposed], #29227 [deployed], #29228 [deployed], #29230 [deployed], #29231 [deployed], #29232 [deployed], #29233 [deployed], #29253 [deployed], #29254 [proposed], #3730, #374151, #5873, #92400, #9888
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788298468689` — 9/1/2026, 6:29:45 PM PT — 197 turns
+
+**Original task:**
+
+```
+#Jon request
+
+Starting point of this morning’s text messages in the you, me and Vicky text messages group until right now. (So about 5am)
+Have whatever Ai you want make a list of every task assigned to Vicky in that window of text messages and post it here. 
+
+Chat 55
+```
+
+**Ideas referenced:** #1127, #11764, #1255, #15204, #16523, #178816, #18343, #25888, #2605, #28958, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29244, #48953
+
+**Last PICKUP PROMPT:**
+
+```
+ rule: 317 (acquisition gate).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788160972127 - Vicky task list from the morning Ops Group thread, posted to chat 55.
+
+Where we left off (verified 2026-09-01 15:20 PT):
+- Read 190 messages from the Ops Group chat (local rowid 2, GUID chat865561625348860953) between 05:00 and 14:52 PT
+- Compiled every task assigned to Vicky in that window and posted the full list to the chat 55 group
+- Send accepted by ruben_message_queue (queued:true), the canonical chat-55 delivery path
+
+Open threads to drive next:
+None - all work completed this session; the list was queued for delivery to the group.
+
+Reference IDs:
+- Ideas filed: none
+- Files touched: /tmp/chat_clean.db, /tmp/extract.sql, /tmp/msg_out.txt
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════</result>
+</attempt_completion>
+```
+
+### `1788285310173` — 9/1/2026, 6:08:56 PM PT — 180 turns
+
+**Original task:**
+
+```
+#Florida CE Program Approval
+
+Pick up the florida CE Program Approval package and help me to get our program online. Whats the next step here? 
+
+Do you have a page/pages and files for me to work from?
+```
+
+**Ideas referenced:** #10740, #1127, #11565, #1519, #1520, #1521, #1522, #1523, #178806, #178828, #18480 [deployed], #18491 [rejected], #19338, #19426, #19458, #19491, #25888, #2605, #26183 [deployed], #26525 [deployed], #26586 [deployed], #26597 [deployed], #26867 [deployed], #26877 [approved], #26879 [deployed], #26898, #26899, #26900, #27203, #27251, #27252, #27253, #28636 [deployed], #28745, #28774, #28776, #28795, #28891, #28893, #28894, #28958, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29205 [proposed], #29251 [proposed], #48953, #8151, #8179, #8181, #8182, #8183
+
+**Last PICKUP PROMPT:**
+
+```
+ites is a human-only decision.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task #1788285310173 — Florida CE Program Approval: FL DOH tracker 500 fixed; dashboard card wiring + document collection remain.
+
+Where we left off (verified 2026-09-01 18:07 PT):
+- Working tracker URL: https://emsuniversity.com/emtskills/routes/_view_fl_doh_training_center_application.php?id=1 (HTTP 401 anonymous = auth-gated; CLI authenticated probe renders 443 bytes H1 + Pending, no fatal).
+- 500 root cause fixed: view used undefined $pdo; added $pdo = db('portal'); + submitted_at null-guard. Deployed via write_server_file (backup + lint OK + FPM reload).
+- Table admin_portal.fl_doh_applications created + seeded id=1 (Pending, 4 DH 681-018 checklist items unchecked, documents_json empty).
+- admin.emsuniversity.com does NOT resolve — use main domain emsuniversity.com/emtskills/.
+
+Open threads to drive next (EVERY item MUST have a real filed idea #):
+1. #29251 [proposed] — Add report_registry.php definition (key fl_doh_training_center_application) + routes/reports.php require/dispatch so the FL DOH tracker card appears on the MasterAdmin/Admin reports dashboard.
+2. #29251 [proposed] — Collect and upload the four DH 681-018 documents (medical director agreement, FL-scope curriculum mapping, clinical site letters, distance learning plan) from Ruben; check them off in checklist_json, then prepare Form DH 681-018 submission to FL DOH (850-245-4440). No documents exist on the server yet (human-only decision: which medical director + clinical sites).
+
+Reference IDs:
+- Task: #1788285310173
+- Ideas filed: #29251 [proposed] (dashboard wiring), original tracker spec #26183 [deployed]
+- Files touched: routes/_view_fl_doh_training_center_application.php (+ .bak-20260901-pdo-fix), bootstrap.php (read), lib/auth.php (read), lib/db.php (read)
+- DB: admin_portal.fl_doh_applications (created + seeded id=1)
+- Ledger: cline_task_ledger.md row appended (rule 07)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788281168059` — 9/1/2026, 6:04:40 PM PT — 241 turns
 
 **Original task:**
 
@@ -144,9 +251,52 @@ Can you then fix this? -> TWO HONEST LIMITS. First, this still cannot fire when 
 approved / but 2
 ```
 
-**Ideas referenced:** #1008 [approved], #1026 [approved], #1031, #1096 [approved], #1168 [approved], #1219 [approved], #1464 [approved], #1478, #1479, #1480, #1481, #1482, #1483, #1484, #1530 [approved], #1671 [approved], #27942, #28256, #28306, #28723, #28956 [in_progress], #28958, #29011 [deployed], #29099 [proposed], #29148 [deployed], #29149 [proposed], #29170 [approved], #29180 [proposed], #3082 [approved], #3161 [approved], #3242 [approved], #3247, #3301 [approved], #3361 [approved], #4113 [approved], #4712 [approved], #4769 [approved]
+**Ideas referenced:** #1008 [approved], #1026 [approved], #1031, #1096 [approved], #1168 [approved], #1219 [approved], #1464 [approved], #1478, #1479, #1480, #1481, #1482, #1483, #1484, #1516, #1517, #1518, #1530 [approved], #1671 [approved], #19370, #19542, #22511, #23428, #23945, #24026, #25185, #27942, #28256, #28306, #28723, #28941, #28956 [in_progress], #28958, #28961, #29011 [deployed], #29099 [proposed], #29148 [deployed], #29149 [proposed], #29170 [approved], #29180 [proposed], #29246 [proposed], #3082 [approved], #3161 [approved], #3242 [approved], #3247, #3301 [approved], #3361 [approved], #4113 [approved], #4712 [approved], #4769 [approved], #6978
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788309157542` — 9/1/2026, 5:54:18 PM PT — 52 turns
+
+**Original task:**
+
+```
+#Email CFA Issues
+
+Email CFA seems to have error here as student says they already printed their certificate, but then CFA cites a bunch of stuff missing. Which is it and what's going on here?
+```
+
+**Ideas referenced:** #20346, #20357, #23472, #23477, #28118, #29245 [proposed], #29482, #4929, #9086, #9168, #9339
+
+**Last PICKUP PROMPT:**
+
+```
+ cert — probes were read-only.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Reconcile issued cert vs post-print grader rejections (Alejandro Ibarra 26415W-06).
+
+Where we left off (verified 2026-09-01 17:53 PT):
+- Certificate ISSUED 2026-09-01 16:50:18 PT (simplecertificate_issues id=46238, TX cert 44, timedeleted NULL). SLS what_am_i_missing: no coursework blockers; only next step nremt_not_cleared.
+- Same-day 17:11–17:24 PT grader 49090 zeroed 4 externship items: PCRs (17:12:43), Preceptor eval missing signature (17:17:52), Time sheet 1.0→0 (17:18:11), CV (17:20:41); final zero 17:24:56. Ticket #29482 open.
+- Idea #29245 [proposed] filed: reconciliation decision, completion-date repair, NREMT PD step.
+
+Open threads to drive next (EVERY item has a real filed idea #):
+1. #29245 [proposed] — Obtain Ruben/PD decision: honor issued cert per rule 303 vs require resubmission given the grader's specific rejection reasons; then restore or keep grades accordingly.
+2. #29245 [proposed] — Run `php /var/www/emtskills/_scripts/audit_moodle_completion_vs_course_cert.php --student=26415W-06 --apply` to repoint stale moodle_completion_date (2026-07-25) to the real print date (2026-09-01); dry-run first.
+3. #29245 [proposed] — Advance the NREMT PD verification queue so nremt_cleared_date is set; human-gated, no student coursework action.
+
+Reference IDs:
+- Ticket: #29482 (TKT-20260901-AE99E748)
+- Ideas filed: #29245 [proposed]
+- Files touched: none (read-only probes of SLS, simplecertificate_issues, grade_grades, grade_grades_history, assignfeedback_comments)
+
+When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
 
 ### `1788160972127` — 9/1/2026, 3:39:37 PM PT — 423 turns
 
@@ -181,52 +331,6 @@ Open threads to drive next (EVERY item MUST have a real filed idea #):
 Reference IDs:
 - Ideas filed: #29147 [executing]
 - Files touched: /home/rubenmajor/emsu-julia-prewedge-guard.sh (v3), /home/rubenmajor/emsu-julia-prewedge-guard.sh.bak-v2-20260901
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788285310173` — 9/1/2026, 3:38:40 PM PT — 114 turns
-
-**Original task:**
-
-```
-#Florida CE Program Approval
-
-Pick up the florida CE Program Approval package and help me to get our program online. Whats the next step here? 
-
-Do you have a page/pages and files for me to work from?
-```
-
-**Ideas referenced:** #1127, #178806, #19338, #19458, #19491, #2605, #26183 [deployed], #28774, #28776, #28795, #28891, #28893, #28894, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29205 [proposed], #48953
-
-**Last PICKUP PROMPT:**
-
-```
- (table did not exist before).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task: Florida CE Program Approval — FL DOH Training Center (DH 681-018) tracker + actual submission.
-
-Where we left off (verified 2026-09-01 15:37 PT):
-- Working tracker URL: https://emsuniversity.com/emtskills/routes/_view_fl_doh_training_center_application.php?id=1 (401 for anonymous = auth-gated, renders after MasterAdmin/Admin login). Verified live.
-- ADMIN SUBDOMAIN admin.emsuniversity.com DOES NOT RESOLVE (curl 000) — use main domain emsuniversity.com/emtskills/.
-- Created table admin_portal.fl_doh_applications and seeded id=1 (status=Pending, 4 checklist items all unchecked). View previously rendered "Application not found."
-- Reports dashboard: https://emsuniversity.com/emtskills/routes/reports.php (auth-gated). Card is NOT registered there yet.
-
-Open threads to drive next:
-1. #29205 [proposed] — Finish card wiring so it appears on the reports dashboard: add getReportDefinitions() entry keyed 'fl_doh_training_center_application' in lib/report_registry.php + add require/dispatch in routes/reports.php. The detail view + table already exist and work.
-2. (human-only decision) — Obtain from Ruben the four DH 681-018 documents (medical director agreement, FL-scope curriculum mapping, clinical site letters, distance learning plan) and upload them; then check off the checklist and prepare Form DH 681-018 for submission to FL DOH. None of these documents exist on the server yet.
-
-Reference IDs:
-- Idea (original tracker): #26183 [deployed]
-- Ideas filed this session: #29205 [proposed]
-- Files read: routes/_view_fl_doh_training_center_application.php, docs/specs/fl_doh_training_center_application.md, docs/specs/fl_doh_bems_tc_application.md, lib/report_registry.php, lib/url.php, routes/reports.php, index.php, /etc/nginx/sites-enabled/emtskills
-- Files/DB touched: created + seeded admin_portal.fl_doh_applications (id=1)
 
 When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════
@@ -311,48 +415,6 @@ Reference IDs:
 - Files touched: /Users/rubenmajor/Desktop/TastyBot.app/Contents/Resources/TastyBot.icns
 
 When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-</attempt_completion>
-```
-
-### `1788298468689` — 9/1/2026, 3:21:48 PM PT — 140 turns
-
-**Original task:**
-
-```
-#Jon request
-
-Starting point of this morning’s text messages in the you, me and Vicky text messages group until right now. (So about 5am)
-Have whatever Ai you want make a list of every task assigned to Vicky in that window of text messages and post it here. 
-
-Chat 55
-```
-
-**Ideas referenced:** #1127, #178816, #25888, #2605, #28958, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #48953
-
-**Last PICKUP PROMPT:**
-
-```
- rule: 317 (acquisition gate).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #1788160972127 - Vicky task list from the morning Ops Group thread, posted to chat 55.
-
-Where we left off (verified 2026-09-01 15:20 PT):
-- Read 190 messages from the Ops Group chat (local rowid 2, GUID chat865561625348860953) between 05:00 and 14:52 PT
-- Compiled every task assigned to Vicky in that window and posted the full list to the chat 55 group
-- Send accepted by ruben_message_queue (queued:true), the canonical chat-55 delivery path
-
-Open threads to drive next:
-None - all work completed this session; the list was queued for delivery to the group.
-
-Reference IDs:
-- Ideas filed: none
-- Files touched: /tmp/chat_clean.db, /tmp/extract.sql, /tmp/msg_out.txt
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
 ═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```
@@ -504,25 +566,6 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 - [x] Root-caused §2/§6 FAIL: activity_mode dropped in the activity_log JSON row mapping, not the SQL
 - [x]
 ```
-
-### `1788296990463` — 9/1/2026, 2:56:05 PM PT — 332 turns
-
-**Original task:**
-
-```
-#September 1 Externship Switchover
-
-
-I still don't see dates and times pre-filled as I asked before, I need that built. Also others approved as per rule 29. Give and poll Vicky followup questions. Running your questions as well now:
-
-Here is the browser AI test and every outstanding item, so you can open a fresh window with all of it in hand. I am at 95% of my context window, which is why I am handing off rather than starting the next build.
-
-Quick orientation before the test. The assign page is live and works, but three things you flagged are NOT done: the suggested date and time do not prefi
-```
-
-**Ideas referenced:** #111827, #1499, #1500, #1501, #1502, #1503, #1504, #1505, #1506, #1507, #166534, #178828, #28958, #29011 [deployed], #29196 [deployed], #29197 [deployed], #29199 [proposed], #29200 [deployed], #29201 [deployed], #29202 [deployed], #29203 [deployed], #29213 [deployed], #29214 [deployed], #29216 [deployed], #29225 [proposed], #29227 [deployed], #29228 [deployed], #29230 [deployed], #29231 [deployed], #29232 [deployed], #29233 [deployed], #3730, #374151, #5873, #92400
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
 ### `1788285768610` — 9/1/2026, 2:52:12 PM PT — 108 turns
 
@@ -2821,39 +2864,3 @@ When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per
 </result>
 </attempt_completion>
 ```
-
-### `1788051007231` — 8/29/2026, 6:17:13 PM PT — 265 turns
-
-**Original task:**
-
-```
-#VAPI CFA
-
-Odd, why am i not seeing any transcripts here? -> https://www.emsuniversity.com/emtskills/routes/telephony_hub.php?view=agent&page=2&per_page=25#history 
-
-I think that might be why you think ther'es no AIs answering. However, i see calls of numerous minutes that need evaluation. I believe the transcript system then needs repair and then for you to do an analysis and fix the telephony system and install a self-heal. Needs more stability here. 
-
-I see the logs from the telephony hub link and many were answered by EMSU Service Agent, so something is messing up your ping / you thinking 
-```
-
-**Ideas referenced:** #059669, #16154, #16826, #16928, #16931, #178802, #23989, #24645, #25701, #2669 [rejected], #27100, #28710 [deployed], #28711 [deployed], #28712 [executing], #28716 [blocked], #28729 [deployed], #28735 [deployed], #28738 [executing], #28746 [executing], #28747 [executing], #28748 [executing], #28749 [executing], #28750 [executing], #28751 [executing], #475569, #6366, #64748, #9222, #9501
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788048815773` — 8/29/2026, 5:39:11 PM PT — 130 turns
-
-**Original task:**
-
-```
-#GLM Local and others
-
-so if zero effect on quality then why did we ven care? So yeah then reboot if if you didn't already -> GLM ring prefill chunk dropped to 4096 for next boot after measuring decode at 8192.
-
-but on the MDM you have access to Joshua to resolve this right? This link has SSH access so do you theen -> https://www.emsuniversity.com/emtskills/routes/mdm_portal.php  and I still need my question answered about totla Qwen 3.8 lanes -> but SSH to Joshua returned "Permission denied (publickey,password)"
-
-What do you think we need? -> If you want Julia above 16, it is a one-line launc
-```
-
-**Ideas referenced:** #12366, #12368, #15815, #178804, #1912, #2168, #2174, #25185, #2654, #2659, #2662, #2666, #26932, #27284, #28042, #28133, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28705 [blocked], #28706 [executing], #28710, #28711 [deployed], #28712 [approved], #28716 [in_progress], #28723 [rejected], #28725 [executing], #28726, #28729, #28730 [blocked], #28735 [deployed], #28738, #28740 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

@@ -5,24 +5,24 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **227**
-- Last generated: 2026-09-01 17:03
+- Reversals tracked: **230**
+- Last generated: 2026-09-01 18:03
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 116 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
-| wrong premise | 37 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
+| insufficient probe | 116 | 50% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| wrong premise | 38 | 17% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 29 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
-| scope error | 24 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
-| stale assumption | 21 | 9% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
+| scope error | 25 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
+| stale assumption | 22 | 10% | A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting. |
 
 ## Causal rules most often amended
 
-- Rule 317: 99 amendment(s)
-- Rule 297: 45 amendment(s)
-- Rule 315: 26 amendment(s)
+- Rule 317: 100 amendment(s)
+- Rule 297: 46 amendment(s)
+- Rule 315: 27 amendment(s)
 - Rule 322: 10 amendment(s)
 - Rule 91: 9 amendment(s)
 - Rule 302: 7 amendment(s)
@@ -45,11 +45,11 @@ _You had SOME evidence and stopped early. One auth error is not a dead credentia
 
 _The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it._
 
+- **2026-09-02** — Amends Step 2 classification: cross-site ping/ARP from a jump host is NOT valid down-evidence for remote-site boxes. WOPR's 192.168.1.x is its own San Diego LAN; the Oceanside Sparks share the same private range but are only reachable via their dial-out revers
 - **2026-08-31** — Amends the CLASSIFY step: an arithmetic identity that fails across two tables is a HYPOTHESIS about missing terms, never evidence of corruption. I reported "14 arithmetically impossible invoices" from balance_due > total_amount - amount_paid, and escalated it 
 - **2026-08-31** — Amends clause 3: a guard expressed as a HARDCODED ABSOLUTE THRESHOLD (dollar ceiling, row-count limit, byte size, latency bound) is not a durable fix - it is a deferred outage that fires the day the business legitimately crosses it. Shipping DUNNING_MAX_PLAUSI
 - **2026-08-30** — Amends the Step-2 four-state classification table: a CALL RECORD carrying a long duration is NOT evidence that the AI/assistant layer ever ran. On 2026-08-29 the Vapi SIP parent legs logged 610s durations while every assistant-request response was 400'd and th
 - **2026-08-29** — 2026-08-28 reversal (task 1787931475695): claimed GLM 5.3 served ~477 turns as the #1 engine, derived from (a) REQUESTED lane-name counts in the router audit log and (b) an engine-log POST count. Both are the wrong instruments: requested != served (requests ge
-- **2026-08-28** — 2026-08-28 reversal: recommended raising the GLM ring admission ceiling as the 'obvious' next improvement BEFORE probing the wedge-rate population; the ring had wedged 3x in 3 hours under seq=128 load (each a 14-min hard failure), which the recommendation neve
 
 ### unread source
 
@@ -65,21 +65,21 @@ _The answer was already written down and nobody read it. Search the record (regi
 
 _The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything._
 
+- **2026-09-02** — Amends the SCOPE GATE: a product name is NOT a population. Before claiming an outage affects "X", enumerate every SURFACE that carries the name X and probe EACH one, because surfaces that share a product name routinely use different endpoints. Source incident 
 - **2026-08-31** — Amends clause 12 (aggregation integrity): a traffic-share explanation scoped to ONE pool (the free-local adapter pool) must not be phrased as a statement about the WHOLE routing ladder. 2026-08-30: a completion said 'there was nothing else left to route to' af
 - **2026-08-30** — Amends the SCOPE GATE: when the human's question names ONE instance of a bad output ("this student got a $12,860 bill"), the investigation population is every recipient of that same output surface in the relevant window, NOT the one named instance. Scoping the
 - **2026-08-30** — Amends the SCOPE GATE: a count INHERITED from a prior artifact (idea text, handoff note, ticket) is a hypothesis with an unstated window, not a measurement — re-run the count with an explicit window and population BEFORE acting on it, and report the corrected 
 - **2026-08-29** — Amends the deliverable-counting clause to cover EMBEDDED REPORTS.
-- **2026-08-29** — Amends clause 11 (amendment discipline) with its mechanical half. Clause 11 forbade free-floating appended notes but nothing enforced it: amendRuleOnDisk still appended every amendment to the tail of the always-loaded rule file. Patched amendRuleOnDisk so any 
 
 ### stale assumption
 
 _A fact true in an earlier window was recited as current. Mutable state expires: re-probe before re-asserting._
 
+- **2026-09-02** — Amends clause 1 (LLM/fleet state — never recite from memory). This window recited fleet topology and watchdog state without probing: claimed '4 Romans down' when the ring is 6 nodes (Cato rank0 2aa8 + Augustus e3b2 + Pompey 50c0 + Marcus 63ce + Tiberius e9e0 +
 - **2026-08-31** — Amends clause 12 (aggregation integrity for serving/routing tables): a routing report that names a backend by its litellm ALIAS is a misrepresentation. frankenstein-tools, frankenstein-llm, and emsu-codegen are ALL the same gateway (api_base 127.0.0.1:11510), 
 - **2026-08-31** — MISLEADING LEGACY ALIAS NAMES ARE BANNED for routing (Ruben directive 2026-08-30). A litellm model_name that names a RETIRED model (e.g. 'minicpm-v' secretly serving qwen3.8-27b, 'julia-235b' serving deepseek) poisons every future agent's diagnosis — this was 
 - **2026-08-30** — Amends the Step-1 record-search ladder: a recorded reverse-tunnel PORT is a stale hypothesis, not an identity. Before declaring a box unreachable/blocked-on-key at tunnel port N, identify WHO actually holds port N (ss -ltnp for the sshd pid, then ss -tnp for t
 - **2026-08-29** — Amends clause 12 (aggregation integrity): adds the STALE-WEDGE-CLAIM INHERITANCE failure — a "wedged/decode-dead" verdict recorded in a state file, floor window, or prior-window completion is a TIMESTAMPED HYPOTHESIS that expires the moment any repair ships (e
-- **2026-08-29** — - "cloudflared restart churn is the cause (bug-library known-repair match)" -> corrected: cloudflared NRestarts=0 and tunnel up since 2026-08-22, so that path was ruled out and the
 
 ## How to use this
 

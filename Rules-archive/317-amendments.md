@@ -917,3 +917,33 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 1 (fleet/routing state) and adds a numbered blip-class rule: a single HTTP-000 on a reverse-tunnel port alias (127.0.0.1:NNNN on WOPR) is NOT a down-model verdict and MUST be recorded UNVERIFIED, never DOWN — the 000 may be a tunnel blip or stale reference while the on-box endpoint is healthy. Joshua re-probes this window: Julia/Claudia :11513 000 and :11521 000 were labeled DOWN; legal on-box re-probe must be attempted (via SSH control alias to the serving host) before any DOWN disposition. Also amends clause 12(e): HTTP-200 on /v1/models plus HTTP-200 on /v1/chat/completions is still not serving — decode body must show non-null reasoning/content tokens; a 200 with content=null and finish_reason=length can be a healthy reasoning-only generation, verified by the reasoning field, not assumed wedged.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 00:31 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: oceanside-outage
+- RCA bucket: stale assumption
+- Trigger pattern: Recited ring node count and watchdog status from memory instead of reading the topology doc, relaunch script, and ring state tracker first.
+- Reversal note: Amends clause 1 (LLM/fleet state — never recite from memory). This window recited fleet topology and watchdog state without probing: claimed '4 Romans down' when the ring is 6 nodes (Cato rank0 2aa8 + Augustus e3b2 + Pompey 50c0 + Marcus 63ce + Tiberius e9e0 + Cesar 3b41, confirmed in GLM52_RING_TOPOLOGY.md and the relaunch script's 6 call sites), and claimed the watchdog 'silent dead 3 days' when the tracker documents it intentionally STOPPED (single-owner #2659) and re-armed this window. Both corrected by probing the topology doc, the relaunch script, and the tracker. Causal fix: a node count or fleet state must cite the authoritative artifact (GLM52_RING_TOPOLOGY.md rank table, relaunch script call sites, tracker), never memory.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 01:03 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: cli-fl-doh-500-fix
+- RCA bucket: insufficient probe
+- Trigger pattern: claimed 'renders after login' from an anonymous 401 probe; the authenticated render fatally errored with undefined $pdo
+- Reversal note: Amends clause 2 (acquisition gate): an HTTP 401 on the anonymous surface of an auth-gated route proves only that the route exists and the front controller runs — it is NOT evidence the authenticated surface renders. Shipping 'renders after login' without probing the authenticated render path caused a live 500 to reach the user. Before claiming any page renders, probe the authenticated render path (CLI include with simulated session, or authenticated request) this window.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 01:07 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788285310173
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - Claimed 'renders after login' from an anonymous 401 probe -> corrected: the authenticated render fataled with undefined $pdo (HTTP 500) | RCA bucket: insufficient probe | causal 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

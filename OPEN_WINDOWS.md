@@ -6,21 +6,22 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 1:32:29 AM PT | window: last 72h | 75 tasks | index total 1052 (parsed 13, cached 1039)
+Generated: 9/2/2026, 2:58:36 AM PT | window: last 72h | 76 tasks | index total 1053 (parsed 6, cached 1047)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788243351199` | 9/2/2026, 1:32:13 AM | 284 | 2152KB | #TDSHS |
-| `1788326750196` | 9/2/2026, 1:32:13 AM | 495 | 1032KB | #FrankensteinLLM Slow |
-| `1788335512875` | 9/2/2026, 1:32:12 AM | 81 | 334KB | #Bigmac |
-| `1788324547743` | 9/2/2026, 1:32:07 AM | 797 | 2153KB | #Oceanside Outage |
-| `1788336273670` | 9/2/2026, 1:32:01 AM | 49 | 93KB | #Email CFA |
-| `1788335898507` | 9/2/2026, 1:32:01 AM | 45 | 1012KB | Anty actionable ideas? |
-| `1788335579641` | 9/2/2026, 1:31:40 AM | 79 | 1196KB | #Oceanside Outage Remainder |
-| `1788286330120` | 9/2/2026, 1:31:37 AM | 239 | 1897KB | #30 Day Deadline Push out to 90 Days |
-| `1788329209654` | 9/2/2026, 1:30:49 AM | 217 | 3739KB | #Frankenstein LLM not obeying Cline Rules |
-| `1788335461694` | 9/2/2026, 1:28:35 AM | 77 | 232KB | #GLM Ring |
-| `1788327849553` | 9/2/2026, 1:27:07 AM | 203 | 9274KB | #Julia/Claudia TP=2 Qwen |
+| `1788335461694` | 9/2/2026, 2:28:14 AM | 129 | 336KB | #GLM Ring |
+| `1788335579641` | 9/2/2026, 2:16:21 AM | 182 | 2694KB | #Oceanside Outage Remainder |
+| `1788329209654` | 9/2/2026, 2:14:36 AM | 266 | 5300KB | #Frankenstein LLM not obeying Cline Rules |
+| `1788324547743` | 9/2/2026, 2:14:28 AM | 834 | 2311KB | #Oceanside Outage |
+| `1788335512875` | 9/2/2026, 2:02:55 AM | 146 | 497KB | #Bigmac |
+| `1788326750196` | 9/2/2026, 2:02:39 AM | 589 | 1264KB | #FrankensteinLLM Slow |
+| `1788336273670` | 9/2/2026, 1:59:13 AM | 134 | 1837KB | #Email CFA |
+| `1788327849553` | 9/2/2026, 1:56:46 AM | 214 | 11552KB | #Julia/Claudia TP=2 Qwen |
+| `1788339072931` | 9/2/2026, 1:51:33 AM | 2 | 6KB | How does life treat an llm? |
+| `1788286330120` | 9/2/2026, 1:48:54 AM | 286 | 2275KB | #30 Day Deadline Push out to 90 Days |
+| `1788243351199` | 9/2/2026, 1:47:46 AM | 322 | 2280KB | #TDSHS |
+| `1788335898507` | 9/2/2026, 1:41:45 AM | 58 | 1574KB | Anty actionable ideas? |
 | `1788335345976` | 9/2/2026, 1:24:27 AM | 278 | 645KB | #September 1 Externship Switchover |
 | `1788329531146` | 9/2/2026, 1:13:12 AM | 330 | 1366KB | #Joshua Qwen |
 | `1788309157542` | 9/2/2026, 12:59:29 AM | 112 | 1262KB | #Email CFA Issues |
@@ -90,114 +91,148 @@ Generated: 9/2/2026, 1:32:29 AM PT | window: last 72h | 75 tasks | index total 1
 
 ## Per-window detail
 
-### `1788243351199` — 9/2/2026, 1:32:13 AM PT — 284 turns
+### `1788335461694` — 9/2/2026, 2:28:14 AM PT — 129 turns
 
 **Original task:**
 
 ```
-#TDSHS
+#GLM Ring
 
-It needs to be on this form I think:https://oag.my.site.com/OpenRecords/s/flow/CORA_External_Create_Complaint 
+Pick up task #1788305443198 (GLM Ring breakout) - Oceanside outage: restart-storm RCA + NCCL init stall. You own the six ring Sparks: Cato (192.168.1.115, rank 0, ssh via WOPR port 2204), Augustus (.244, rank 1), Pompey (.21, rank 2), Marcus (.171, rank 3), Tiberius (.32, rank 4), Cesar (.56, rank 5).
 
-These are the instructions: 
-In order to submit a general request for assistance please provide a copy of the original request for information and any correspondence received from the governmental body concerning your request. If you are unable to provide a copy of your original request, please submit documentation stating how your request was submitted to the governmental body and fully describing the information requested. If there are questions or concerns, please contact 
+CURRENT STATE (verified 2026-09-02 00:33 PT by the previous window):
+- Relaunch #11 (dispatched 00:07:57 via ~/bin/glm53_relaunch_seq128.sh) is FROZEN at 39 log lines since the pynccl line at 00:09:58, worker RSS flat at 1622868 KB over 20s, :8210 unbound (verified: ssh_command return
 ```
 
-**Ideas referenced:** #0070, #1450, #1451, #1452, #1453, #1454, #1455, #1456, #1457, #1585, #1593, #178816, #25185, #26282, #27100, #29011 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29060, #29069 [proposed], #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29113, #29123 [proposed], #29130 [proposed], #29311 [proposed], #29315 [proposed], #44546
+**Ideas referenced:** #11991, #1602, #178805, #178830, #1876, #1912, #1986, #1993, #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #26712, #2675, #2677, #2679, #26932, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788326750196` — 9/2/2026, 1:32:13 AM PT — 495 turns
+### `1788335579641` — 9/2/2026, 2:16:21 AM PT — 182 turns
 
 **Original task:**
 
 ```
-#FrankensteinLLM Slow
+#Oceanside Outage Remainder
 
-Frankenstein LLM still extremely slow. Somthing is not right
-'
-Do not inject anthropic
+Pick up task #1788305443198 (Everything Else breakout) - Oceanside outage follow-ups: VAPI hardening, VERITAS dynamic ladder, Julia/Claudia systemd, deepseek re-admission. You own WOPR surfaces and the Julia/Claudia boxes; NOT the ring Sparks (window 1) and NOT BigMac (window 2).
+
+CURRENT STATE (verified 2026-09-01/02 by the previous windows):
+- Local-first fallback ladder LIVE: /etc/litellm/config.yaml fallbacks reordered local-first with deepseek-v4-pro quarantined out of all 31 chains (verified: ssh_command grep -c '^    - deepseek-v4-pro$' in the fallbacks bloc
 ```
 
-**Ideas referenced:** #11261, #11302, #11936, #11953, #12184, #12299, #12335, #12368, #12657, #12689, #13108, #13121, #13831, #13874, #1546, #1547, #1548, #1549, #1550, #1553, #1554, #1555, #1556, #1561, #1562, #1567, #1570, #1571, #1572, #1578, #1579, #1580, #1581, #1587, #16588, #16718, #17202, #178805, #178831, #178832, #1876, #1912, #19903, #2050, #2168, #2174, #2227 [investigating], #23283, #25185, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #27100, #27142, #27531, #28306, #28586, #28596, #28622, #28705, #28723, #28894, #28948, #28958, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29090 [deployed], #29096, #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29265, #29279 [proposed], #29280 [proposed], #29281 [proposed], #29288 [proposed], #29290 [proposed], #29291 [proposed], #6077 [deployed]
+**Ideas referenced:** #10740, #1127, #11781, #12584, #1603, #16449, #178830, #2114, #24635, #24645, #25185, #2537, #2550, #2605, #2659, #26908, #26923, #2705, #2706, #2714 [deployed], #2715 [deployed], #2716 [approved], #27259, #27673, #28044, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29244, #29247 [executing], #29267 [deployed], #29272 [proposed], #29273 [proposed], #29274 [proposed], #29323, #29327 [proposed], #48953
 
 **Last PICKUP PROMPT:**
 
 ```
-e, closed via the DB update\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1788326750196 — Frankenstein slowness RCA complete; answer delivered; ONE decision pending (executor cap).\n\nWhere we left off (verified 2026-09-02 01:15 PT):\n- Cline lane: p50 16.8s / p90 49.4s / max 185.2s over the last 20 min (n=169); picks 137 Artemis / 25 Joshua / 7 Julia; ADMIT usable=3/4, queue_depth 2-3 per turn.\n- Root cause of current slowness (all routing bugs already fixed and verified tonight): 3-box pool + batch:cline volume 589:169 + cold prefills on spill targets (Joshua no prefix caching, 16K ctx). Artemis itself healthy at 3 running/1 waiting.\n- Trajectory tonight: 25-221s incident → 9.3s post-fixes → 16.8s now as batch volume rose.\n- Fleet API: timeout mismatch (12-13s server vs 10s MCP client, project-frankenstein-mcp/src/index.ts line 25). Not an outage. #29288 [proposed].\n- All fixes live: affinity-yield anybox, RESPONSES_RETRY, vision doorman fast-fail, executor stopgap cap 6, Claudia in pool (she flapped at 00:41 — re-probe before verdict).\n\nOpen threads to drive next:\n1. #29279 [proposed] — ring relaunch (check :8210 first; other window may be doing it) + BigMac engine restart + sudoers + wedge-detector extension. Biggest single capacity win: +8 ring slots.\n2. #29280 [proposed] — Joshua prefix caching + ctx + max-num-seqs. Makes spill targets warm, kills the cold-prefill tax.\n3. #29290 [proposed] — RUBEN'S CALL: executor admission cap 2-when-degraded / 6-when-healthy. Stops the 3.5:1 batch out-queueing of Cline.\n4. #29288 [proposed] — fleet API timeout fix (FETCH_TIMEOUT_MS 10s→30s, or server-side probe caching).\n5. #29291 [proposed] — vision doorman on OUR Qwen3.8 (Claudia :11521 or Julia), ollama-to-OpenAI payload translation; revive Nero :11455.\n\nReference IDs:\n- Ideas filed: #29279 [proposed], #29280 [proposed], #29288 [proposed], #29290 [proposed], #29291 [proposed], #29281 [rejected]\n- Bug library record (NOT an idea id): standing record 2273, seen_count 2\n- Files touched this session: /usr/local/bin/frankenstein_tools_adapter.py (3 backups), /etc/systemd/system/frankenstein-tools.service.d/ (3 drop-ins), ~/Documents/Cline/Rules/ (315, 297, 323)\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════", "task_id": "1788326750196"}</arguments></use_mcp_tool>
-```
-
-### `1788335512875` — 9/2/2026, 1:32:12 AM PT — 81 turns
-
-**Original task:**
-
-```
-#Bigmac
-
-Pick up task #1788305443198 (BigMac breakout) - Oceanside outage: BigMac engine restart + wedge-detector hardening. You own BigMac only: 10.100.0.19 (ssh emsu-big-mac@10.100.0.19 -i /home/emsuserver/.ssh/id_ed25519 from WOPR).
-
-CURRENT STATE (verified 2026-09-02 00:37 PT by the previous window):
-- Host HEALTHY: uptime 12 days 16:38, load average 1.24. Container RUNNING: bigmac-vllm Up 20 hours. Engine NOT BOUND: :8000 listeners = 0, on-box curl 127.0.0.1:8000/v1/models = 000, journalctl 'startup complete' count today = 0 (all from the 00:37 ssh_command on-box probe, which returned exa
-```
-
-**Ideas referenced:** #178694, #178819, #178828, #178830, #2073, #2298, #25185, #25916 [awaiting_review], #2593, #26349, #26663, #2704, #2713 [investigating], #27142, #27152, #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28550, #28958, #29017 [deployed], #29026, #29034, #29044 [proposed], #29067, #29274 [proposed], #29279 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-arks owned by separate window)
+nce Ruben tops up the account.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
 
-Pick up task #1788305443198 - BigMac breakout: engine restart + wedge-detector hardening
+Pick up task #1788305443198 — Oceanside outage remainder: VAPI hardening, VERITAS dynamic ladder, Julia/Claudia persistence, deepseek re-admission.
 
-Where we left off (verified 2026-09-02 01:15 PT):
-- BigMac state verified 01:04 PT via ssh_command on-box probe: ENGINE WEDGED / NEVER BOUND (container Up 20h, 0 startup-complete, port 8000 unbound, curl 000, journal frozen at Ray placement group since Sep 01 04:31). Host healthy (uptime 12 days, load 1.30).
-- Wedge detector script at ~/bigmac_wedge_detector.sh on BigMac (v3). Detects NEVER_BOUND, PORT_CLOSED, DECODE_DEAD classes. Test run 01:04 PT returned exit 1 with WEDGED: NEVER_BOUND PORT_CLOSED (verified: ssh_command).
-- Ruben sent exact commands via chat 55 at 01:05 PT: (a) sudo systemctl restart bigmac-vllm, (b) NOPASSWD sudoers at /etc/sudoers.d/bigmac-vllm-restart, (c) install detector to /usr/local/bin/.
-- #29279 [blocked] title re-worded away from 'wedged' per Ruben note. Bug library incident bigmac_never_bound_wedge_ray_placement_group_2026_09_01 recorded (row 2713, investigating).
+Where we left off (verified 2026-09-02 02:05 PT):
+- #29267 [deployed] — local-first fallback ladder live, deepseek-v4-pro quarantined out of all 31 chains (prior window, per task handoff)
+- #29272 [deployed] — VAPI hardening cron live + planted-condition tested (verified: reconcile_ideas returned status=deployed dev_stage=idle; planted tests fired all 3 alerts)
+- #29273 [deployed] — VERITAS dynamic judge ladder from canary health + both hardcoded ladders repaired (verified: reconcile_ideas returned status=deployed dev_stage=idle; clinerules_truth_judge returned verdict=FAIL judge_model=claudia-qwen38-27b 20836ms)
+- #29247 [executing] — Julia engine back online (verified: ssh_command curl WOPR:11513 decode returned OK at 02:01 PT); @reboot persistence in place (verified: ssh_command crontab -l grep -c @reboot returned 2); roce_ipv4 record now carries .3 matching live iface (verified: ssh_command cat ~/.config/emsu/roce_ipv4 returned 192.168.100.3/24 at 02:00 PT); fresh reboot test still pending, see open thread 1
+- #29274 [executing] — wedge-detector family, overlaps windows 1/2; not worked this window (verified: reconcile_ideas returned status=approved dev_stage=auditing)
+- #29327 [proposed] — deepseek-v4-pro re-admission tracking idea, filed this session (create_idea returned id 29327); no work until Ruben confirms top-up
 
 Open threads to drive next:
-1. #29279 [blocked] - BLOCKED ON RUBEN interactive root step: run the restart + sudoers + install commands on BigMac. After: verify sudo -n systemctl restart bigmac-vllm works from SSH, verify detector returns HEALTHY after successful boot, move detector to /usr/local/bin/, then stamp deployed.
+1. #29247 [executing] — fresh reboot test of Julia's @reboot chain once Ruben OKs a reboot; confirm roce-preflight restores .3 and the unified script brings TP=2 back without guard-cron intervention, then close the idea out
+2. #29327 [proposed] — when Ruben confirms the DeepSeek account is topped up, re-add deepseek-v4-pro to the TAIL of the 31 fallback chains in /etc/litellm/config.yaml, restart via /usr/local/bin/litellm-safe-restart.sh only, and confirm a test call routes to it
+3. #29274 [executing] — wedge-detector family belongs to windows 1/2; only touch if explicitly reassigned
 
 Reference IDs:
-- Ideas filed: #29279 [blocked]
-- Files touched: ~/bigmac_wedge_detector.sh (on BigMac 10.100.0.19), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md
+- Ideas filed: #29327 [proposed]
+- Ideas closed: #29272 [deployed], #29273 [deployed]
+- Bug library incidents: 2714 vapi_hardening_zero_dur_alert_model_drift_escalation_2026_09_02, 2715 veritas_judge_ladder_dynamic_from_canary_health_2026_09_02, 2716 julia_cx7_roce_record_drift_and_reboot_persistence_2026_09_02
+- Files touched: cron/cron_vapi_hardening_watch.php, lib/VeritasJudgeLadder.php, lib/chat_llm_router.php, lib/litellm_config_sync.php (WOPR); ~/.config/emsu/roce_ipv4, ~/julia_serve_qwen38_tp1.sh, crontab (Julia)
 
 # Reversal Log
-No reversals this window.
+- Task prompt said Julia CX7 = 192.168.100.2 → corrected to 192.168.100.3 | stale assumption | causal artifact repaired on disk (Julia ~/.config/emsu/roce_ipv4 record + julia_serve_qwen38_tp1.sh VLLM_HOST_IP, backup kept); no causal rule change needed, rules 294/317 already mandate re-probing inherited infra facts and the live probe won
 
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
 <task_progress>
-- [x] bug_library_check_before_fix (process discipline)
-- [x] Verify current BigMac state: ENGINE WEDGED / NEVER BOUND confirmed (0 startup-complete, curl 000, 0 listeners, journal frozen at placement group)
-- [x] Remind Ruben to sudo systemctl restart bigmac-vllm (sent to ops chat)
-- [x] Locate bigmac_wedge_detector.sh: DOES NOT EXIST YET — will create it
-- [x] Find actual paths: /usr/local/bin/bigmac_watchdog_arm.sh, /usr/local/bin/bigmac_session_canary.sh, /opt/bigmac-vllm-start.sh
-- [x] Read existing watchdog scripts to understand pattern
-- [x] Create bigmac_wedge_detector.sh locally with never-bound-port class check
-- [x] Deploy detector v1 to BigMac — fired WEDGED: PORT_CLOSED correctly but had 2 bugs
-- [x] Fix bugs: log path to /tmp (permission), grep -c multi-line output (head -1)
-- [x] Deploy detector v2 — still had parsing issues with multi-line grep output
-- [x] Deploy detector v3 with cleaner parsing (sed, tail -1, proper defaults)
-- [x] Test detector v3 fires on current wedge: WEDGED: NEVER_BOUND PORT_CLOSED, exit 1 ✓
-- [x] Sent Ruben the sudoers + install commands (waiting for him to run)
-- [x] Re-word #29279 title away from 'wedged' → 'BigMac engine stuck mid-init + no remote restart path: detector hardening + NOPASSWD sudoers'
-- [x] bug_library_record the incident (#2713, status: investigating)
-- [x] Append cline_task_ledger.md (rule 07)
-- [x] Reconcile #29279 + #29274 per rule 267
-- [x] Update #29279 status to in_progress (actively worked this session)
-- [x] Validate completion with clinerules_validate_completion — ALL PASSED
-- [x] Check gate with clinerules_check_gate — GATE CLEAR
-- [x] Completion with pickup prompt
+- [x] bug_library_check_before_fix (VAPI symptom — NOVEL_SYMPTOM, gate opened)
+- [x] Read HANDOFF_NOTES.md + prior window state
+- [x] Reconcile ideas #29272, #29273, #29247, #29274 live (deployed=1, executing=1, proposed=3)
+- [x] MISSION 1: #29272 V
+```
+
+### `1788329209654` — 9/2/2026, 2:14:36 AM PT — 266 turns
+
+**Original task:**
+
+```
+#Frankenstein LLM not obeying Cline Rules
+
+Now that we have Deepseek v4 pro off, it seems that frankenstein-llm is disregaridng cline rules. LOok at this task completion, very think does not obey most rules. Makes all of frankenstein-llm iteration suspect. What on VERITAS? Totally disregarded? What's going on here?
+
+
+Cicero is back online and correctly listed in the spill ladder per GLM53_RING_STATE_TRACKER. No changes required.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task - Ensure 
+```
+
+**Ideas referenced:** #10108, #10740, #11316, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13121, #13202, #15269, #16163, #16265, #16304, #16844, #17202, #178831, #178832, #178840, #18312, #18326, #18918, #19338, #19458, #19491, #20495, #2227, #25097, #25185, #2537, #25888, #25925, #25926, #25935, #26435, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #26925, #2707 [deployed], #27100, #2711, #27238, #27259, #27652, #28958, #29244, #29265, #29279, #29280, #29282 [proposed], #29283 [proposed], #29284 [proposed], #29285 [executing], #29292 [executing], #29302 [executing], #29303 [rejected], #29328 [proposed], #6825, #9731
+
+**Last PICKUP PROMPT:**
+
+```
+t-in) + context-aware routing.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788329209654 — frankenstein-llm rule-91 non-compliance RCA (VERITAS gap).
+
+Where we left off (verified 2026-09-02 02:05 PT):
+- Live-proved the Cicero window (conv_17450aa4e2cf4090) = frankenstein-llm -> frankenstein-tools -> Artemis gpt-oss-120b (10.100.0.5:8000), total_chars=277523, ctx_overflow_reroute=None (verified: /tmp/emsu_router_audit.log row req=frankenstein-llm picked=frankenstein-tools total_chars=277523 ctx_overflow_reroute=None).
+- Clean low-context test through the SAME routing produced a rule-91-COMPLIANT completion (verified: clinerules_validate_completion returned 'ALL STRUCTURAL RULE-91 GATES PASS' with the single failure 'R91_TASKID_SPOOF: Task id 9999999999999 does not exist in Cline history' — i.e. every structural gate passed and the only failure was my deliberately invented test id).
+- REVERSED the prior "weak model under load" claim: mechanism is context-overload attention dilution on the local 120B model, NOT model weakness.
+- VERITAS gap confirmed: validator is opt-in; overloaded model skips it, so non-compliant completions ship.
+- 66 recent Cline Main frankenstein-llm requests -> claudia-qwen38-27b (27B), 80 -> glm-5.3-local (verified: /tmp/emsu_router_audit.log surface=Cline Main count by picked).
+
+Open threads to drive next:
+1. #29328 [proposed] — make rule-91 completion gate server-side (not opt-in) + context-aware routing for local-pool Cline windows; needs Ruben approval to promote.
+
+Reference IDs:
+- Ideas filed: #29328 [proposed]
+- Ideas closed: none this window
+- Files touched: none (read-only RCA + idea filing)
+- Evidence: /tmp/emsu_router_audit.log (conv_17450aa4e2cf4090), /var/log/emsu-adapter-upstream.log
+
+# Reversal Log
+- "weak model under load" -> "context-overload attention dilution on local 120B + opt-in validator skipped" | stale assumption (unverified premise) | causal fix filed as idea #29328 [proposed] (server-side gate + context-aware routing).
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Full 297 RCA with live evidence
+- [x] Clean test: 120B compliant at low context; Cicero window 277K chars → overload
+- [x] Classified: REVERSE "weak model under load" → context-overload + opt-in validator skipped
+- [x] Filed structural-fix idea #29328
+- [x] Reconciled #29328 [proposed]
+- [x] Validate completion — ALL PASSED
+- [x] Check gate — GATE CLEAR
+- [x] Delivered honest RCA + reversal log
 </task_progress>
 </attempt_completion>
 ```
 
-### `1788324547743` — 9/2/2026, 1:32:07 AM PT — 797 turns
+### `1788324547743` — 9/2/2026, 2:14:28 AM PT — 834 turns
 
 **Original task:**
 
@@ -216,16 +251,165 @@ Also the LLMs are slow and I'm very confused by this
 I think you just have an IP Address assignment issue -> Julia went L2-dark again (verified: ssh_command ping 192.168.1.190 returned 100% packet loss + ip neigh INCOMPLETE — recurring kern
 ```
 
-**Ideas referenced:** #12299, #12584, #15405, #1543, #1544, #1545, #1551, #1552, #1557, #1558, #1559, #1560, #1563, #1564, #1573, #1574, #1575, #1576, #1577, #1586, #16154, #16588, #1686, #178830, #1912, #19686, #2083, #2157, #2159, #2168, #2174, #24645, #25185, #25764, #26400, #2647, #2654, #2659 [deployed], #2662, #26932, #2704 [deployed], #2705 [deployed], #2706 [deployed], #2708 [deployed], #2709 [deployed], #2710 [deployed], #28044, #28306, #28586, #28596, #28622, #28705, #28958, #29011 [deployed], #29244 [deployed], #29247 [executing], #29265 [deployed], #29267 [proposed], #29268 [proposed], #29272 [proposed], #29273 [proposed], #29274 [proposed], #29279 [proposed], #29284 [proposed], #29285 [proposed], #29299 [proposed], #29312 [proposed], #33041, #46097, #5484, #8058, #9222, #9501
+**Ideas referenced:** #12299, #12584, #15405, #1543, #1544, #1545, #1551, #1552, #1557, #1558, #1559, #1560, #1563, #1564, #1573, #1574, #1575, #1576, #1577, #1586, #1602, #16154, #16588, #1686, #178830, #1912, #19686, #2083, #2157, #2159, #2168, #2174, #24645, #25185, #25764, #26400, #2647, #2654, #2659 [deployed], #2662, #26932, #2704 [deployed], #2705 [deployed], #2706 [deployed], #2708 [deployed], #2709 [deployed], #2710 [deployed], #28044, #28306, #28586, #28596, #28622, #28705, #28958, #28961, #29011 [deployed], #29244 [deployed], #29247 [executing], #29265 [deployed], #29267 [proposed], #29268 [proposed], #29272 [proposed], #29273 [proposed], #29274 [proposed], #29279 [proposed], #29284 [proposed], #29285 [proposed], #29299 [proposed], #29312 [proposed], #33041, #46097, #5484, #8058, #9222, #9501
 
 **Last PICKUP PROMPT:**
 
 ```
-w, no rule amendment needed\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1788305443198 - Oceanside outage: ring boot watch + seamlessness hardening + deepseek re-admission\n\nWhere we left off (verified 2026-09-02 01:14 PT):\n- GLM launch config identical to pre-outage except 2 deliberate Aug-29 decode-tune deltas; config NOT the boot blocker (verified: ssh_command diff).\n- Seamlessness root cause FIXED: glm52_fabric_up.sh + glm52_dest_rules.sh distributed to /opt/emsu on all 6 nodes; clean 4-line @reboot cron in place (verified: ssh_command 2-files-present each node).\n- Ring relaunch #11 still FROZEN at 39 lines, RSS flat, :8210 unbound despite complete fabric state; boot guard installed at relauncher line 12 (verified: ssh_command 00:33 probe). NCCL init stall suspects: NCCL_SOCKET_IFNAME fabric pinning, GLOO_SOCKET_IFNAME=enP7s7, RoCE NCCL_IB_DISABLE=0.\n- BigMac host-healthy, engine unbound, needs sudo restart + NOPASSWD sudoers (#29279 [executing]).\n- DeepSeek v4 Pro: account HAS CREDITS; test 400'd on system-message-order (3 system msgs), no fallback; re-admission filed as #29312 [proposed].\n\nOpen threads to drive next:\n1. #29299 [proposed] - restart-storm RCA: attribute the 10 relaunches (18:04-00:07) to actor (root glm52_watchdog_daemon.sh PID 664 vs manual ssh), find why the daemon fired during cold boot despite INIT_GRACE_SEC=5400, fix root cause; boot guard is backstop only.\n2. #29285 [executing] - ring NCCL init stall: py-spy the frozen rank-0 worker, work the IFNAME/RoCE suspect list, nccl-tests to isolate, verify :8210 200 + PONG when a boot clears.\n3. #29312 [proposed] - deepseek re-admission: fix system-message merge to one leading system msg, re-add to chain tails via litellm-safe-restart, verify PONG + skip-to-next-rung on paid failure.\n4. #29279 [executing] - BigMac: sudo restart + NOPASSWD sudoers + never-bound-port detector class + re-word title away from 'wedged'.\n5. #29247 [executing] - SEAMLESSNESS: systemd units so Julia/Claudia AND the ring vllm_slot auto-start after power cycle, Julia CX7 IP persistence, plus a boot-health alert if fabric/ring fails to come up.\n6. #29274 [proposed] - wedge detector: verify the short-circuit fires correctly on the next wedge; fan glm53_wedge_detect.sh out to all 6 nodes.\n7. #29273 [proposed] - VERITAS dynamic ladder from canary health + audit the two remaining hardcoded ladders.\n8. #29284 [proposed] - human-gated Hex ring relaunch recipe (do not auto-execute unattended).\n\nReference IDs:\n- Ideas filed this window: #29312 [proposed] (deepseek re-admission, verified: create_idea ok:true id 29312), #29299 [proposed] (restart-storm RCA, verified: create_idea ok:true id 29299)\n- Ideas in play: #29285 [executing], #29279 [executing], #29284 [proposed], #29247 [executing], #29274 [proposed], #29273 [proposed], #29272 [deployed], #29267 [deployed]\n- Bug library problem_keys: oceanside_outage_glm53_ring_nccl_wedge_2026_09_01, dead_paid_rung_poisons_ladders_deepseek_veritas_2026_09_01 (resolved), vapi_custom_llm_missing_url_resolver_2026_09_01, glm53_ring_nccl_freeze_gb10_class_match_2026_09_01\n- Files touched this window: /opt/emsu/glm52_fabric_up.sh + /opt/emsu/glm52_dest_rules.sh (all 6 nodes), /etc/cron.d/emsu-fabric-boot-restore (all 6), GLM53_RING_STATE_TRACKER.md\n\nWhen done, append to cline_task_ledger.md per rule 07, run order 66.\n═══════════════════════════════════════════════"}</arguments>
-</use_mcp_tool>
+-system-message merge fix only
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788305443198 - Oceanside outage: lessons-learned recorded; drive the supervision + alert layers next
+
+Where we left off (verified 2026-09-02 02:01 PT):
+- DeepSeek v4 Pro LIVE and serving (verified: ssh_command router audit returned picked=deepseek-v4-pro at 08:58:31Z/08:59:30Z/09:00:05Z/09:00:28Z). Remaining defect: multi-system-message requests 400 on 'System message must be at the beginning' (3 journal hits in 25 min) — #29312 [executing] is now ONLY that merge fix.
+- BigMac SERVING (verified: ssh_command curl 10.100.0.19:8000/v1/models = 200). Julia/Claudia TP=2 SERVING qwen3.8-27b ctx 131072 via :11513 (verified: ssh_command curl = 200); :11521 = 000 expected with the pair on :11513.
+- GLM ring owned by another window - do not touch.
+- Outage lessons: 5 stacked failures (broken fabric restore path, human-dependent engine restarts, recovery-vs-recovery churn, no shared boot truth, silent failures). Fabric restore repaired this task (scripts + cron on all 6 nodes, verified 2-files-present). Boot guard in place. Ladder local-first with dead-rung skip, covered under #29267 [deployed].
+- Human correction #13 logged (stale deepseek claim, rule 323 freshness).
+
+Open threads to drive next (all approved by Ruben):
+1. #29247 [executing] - SUPERVISION + ALERT layers: systemd units (Restart=always + port-bind health check) for Julia, Claudia, BigMac, ring vllm_slot; boot-health alert cron that pages 10 min after any reboot if fabric/ports are not up; Julia CX7 IP persistence.
+2. #29299 [proposed] - restart-storm RCA: attribute the 10 relaunches, find why the daemon fired inside INIT_GRACE_SEC=5400, fix root cause; boot guard stays backstop.
+3. #29312 [executing] - deepseek multi-system-message merge fix (lane is otherwise live); verify multi-system requests stop 400ing.
+4. #29274 [executing] - verify wedge short-circuit fires on next wedge; fan glm53_wedge_detect.sh to all 6 nodes.
+5. #29284 [executing] - Hex ring relaunch recipe; HUMAN-GATED, do not auto-execute unattended (ring window owns execution).
+6. #29285 [executing] - ring NCCL init stall diagnosis (ring window owns).
+
+Reference IDs:
+- Ideas: #29247 [executing], #29299 [proposed], #29312 [executing], #29279 [deployed], #29274 [executing], #29273 [deployed], #29284 [executing], #29285 [executing], #29272 [deployed], #29267 [deployed]
+- Human corrections logged: #13 (stale deepseek claim)
+- Bug library problem_keys: oceanside_outage_glm53_ring_nccl_wedge_2026_09_01, dead_paid_rung_poisons_ladders_deepseek_veritas_2026_09_01 (resolved), vapi_custom_llm_missing_url_resolver_2026_09_01, glm53_ring_nccl_freeze_gb10_class_match_2026_09_01
+- Files touched this task: /opt/emsu/glm52_fabric_up.sh + glm52_dest_rules.sh (all 6 nodes), /etc/cron.d/emsu-fabric-boot-restore (all 6), GLM53_RING_STATE_TRACKER.md, /etc/litellm/config.yaml (+bak, local-first ladder), vapi_server_webhook.php (+bak), api_fleet_inventory.php (+bak)
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>- [x] Human correction #13 logged (stale deepseek claim, rule 323)
+- [x] Live re-probes: deepseek serving (router audit 08:58-09:00Z), BigMac 200, Julia/Claudia 200 via :11513
+- [x] Lessons-learned: 5 stacked failures identified with probes behind each
+- [x] Few-minutes-recovery plan mapped to filed ideas (#29247 supervision+alert
 ```
 
-### `1788336273670` — 9/2/2026, 1:32:01 AM PT — 49 turns
+### `1788335512875` — 9/2/2026, 2:02:55 AM PT — 146 turns
+
+**Original task:**
+
+```
+#Bigmac
+
+Pick up task #1788305443198 (BigMac breakout) - Oceanside outage: BigMac engine restart + wedge-detector hardening. You own BigMac only: 10.100.0.19 (ssh emsu-big-mac@10.100.0.19 -i /home/emsuserver/.ssh/id_ed25519 from WOPR).
+
+CURRENT STATE (verified 2026-09-02 00:37 PT by the previous window):
+- Host HEALTHY: uptime 12 days 16:38, load average 1.24. Container RUNNING: bigmac-vllm Up 20 hours. Engine NOT BOUND: :8000 listeners = 0, on-box curl 127.0.0.1:8000/v1/models = 000, journalctl 'startup complete' count today = 0 (all from the 00:37 ssh_command on-box probe, which returned exa
+```
+
+**Ideas referenced:** #178694, #178819, #178828, #178830, #2073, #2298, #25185, #25916 [awaiting_review], #2593, #26349, #26663, #2704, #2713 [investigating], #27142, #27152, #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28550, #28958, #29017 [deployed], #29026, #29034, #29044 [proposed], #29067, #29274 [proposed], #29279 [proposed]
+
+**Last PICKUP PROMPT:**
+
+```
+has it approved and in motion)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788305443198 - BigMac breakout: engine restart + wedge-detector hardening
+
+Where we left off (verified 2026-09-02 02:01 PT):
+- BigMac ENGINE SERVING (verified: ssh_command 01:34-01:36 PT returned STARTUP=1, PORT=1, CURL=200, decode probe real tokens, router POST 200s, wedge detector HEALTHY exit 0).
+- No-sudo recovery path proven: docker stop bigmac-vllm (user in docker group) + unit Restart=always = clean relaunch.
+- Durable auto-recovery deployed: ~/bigmac_wedge_detector.sh + ~/bigmac_wedge_autorecover.sh on user crontab */5 (2-consecutive-wedged-verdict docker stop, MIN_UPTIME_MIN=45 gate).
+- NOPASSWD sudoers deployed safely (Ruben-approved): /etc/sudoers.d/bigmac-vllm-restart, 0440 root:root, exact-match systemctl restart/status bigmac-vllm (+ .service variants), visudo -cf parsed OK pre-install, negative test passed (sshd still demands password), engine still serving after install (verified: ssh_command 02:01 PT returned CURL=200 STARTUP=1 PORT=1).
+- #29279 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Bug library row 2713 resolved. fleet_inventory bigmac=healthy. Ledger appended twice (recovery + sudoers).
+
+Open threads to drive next:
+None — all work completed this session (engine serving, auto-recovery deployed, sudoers deployed and safety-verified).
+
+Reference IDs:
+- Ideas filed: #29279 [deployed]
+- Bug library: bigmac_never_bound_wedge_ray_placement_group_2026_09_01 (row 2713, resolved)
+- Files touched: ~/bigmac_wedge_detector.sh, ~/bigmac_wedge_autorecover.sh, ~/bigmac-vllm-restart.staged, user crontab, /etc/sudoers.d/bigmac-vllm-restart (on BigMac 10.100.0.19), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md
+
+# Reversal Log
+- 'blocked on Ruben sudoers entry' -> 'docker-group restart path, no sudo needed' | insufficient probe | The initial claim that a sudoers entry was REQUIRED for restart was wrong: the SSH user has docker group access and the unit has Restart=always, so docker stop is a complete restart lever. Discovered when the steer forced a deeper lever probe. Causal note recorded in the bug library resolution text.
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Engine serving verified (01:34-01:36 PT: STARTUP=1, PORT=1, CURL=200, decode tokens, router 200s)
+- [x] Durable auto-recovery deployed (detector + crontab wrapper)
+- [x] #29279 [deployed], bug library resolved, ledger, fleet_inventory healthy
+- [x] STEER: staged sudoers file, visudo -cf → parsed OK
+- [x] Install via docker (0440 root:root), includedir confirmed
+- [x] Verify read-only sudo status works + grant scope narrow
+- [x] Negative test: non-granted command still demands password ✓
+- [x] Re-verify engine still serving (CURL=200, STARTUP=1, PORT=1)
+- [x] Update records (#29279 + ledger x2)
+- [x] Validate completion — ALL PASSED, GATE CLEAR
+- [x] Ship completion with pickup prompt
+</task_progress>
+</attempt_completion>
+```
+
+### `1788326750196` — 9/2/2026, 2:02:39 AM PT — 589 turns
+
+**Original task:**
+
+```
+#FrankensteinLLM Slow
+
+Frankenstein LLM still extremely slow. Somthing is not right
+'
+Do not inject anthropic
+```
+
+**Ideas referenced:** #11261, #11302, #11936, #11953, #12184, #12299, #12335, #12368, #12657, #12689, #13108, #13121, #13831, #13874, #1546, #1547, #1548, #1549, #1550, #1553, #1554, #1555, #1556, #1561, #1562, #1567, #1570, #1571, #1572, #1578, #1579, #1580, #1581, #1587, #1594, #1596, #1600, #1601, #16588, #16648, #16718, #17202, #17203, #17205, #178805, #178831, #178832, #1876, #18820, #1912, #19903, #2050, #2168, #2174, #2227 [investigating], #23283, #24144, #25185, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #27100, #27142, #27531, #28306, #28586, #28596, #28622, #28705, #28723, #28894, #28948, #28958, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29090 [deployed], #29096, #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29265, #29279 [proposed], #29280 [proposed], #29281 [proposed], #29288 [proposed], #29290 [proposed], #29291 [proposed], #29326 [proposed], #6077 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+ error | no rule change needed
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788326750196 — Frankenstein slowness RCA: routing obedience confirmed 10/10; DeepSeek speedup explained (credit top-up drained background retry loops; pool grew to 5 healthy).
+
+Where we left off (verified 2026-09-02 02:01 PT):
+- frankenstein-llm routing obedience: 10/10 reqs picked frankenstein-tools, zero spill-to-DeepSeek hops (verified: `ssh_command` audit tally).
+- DeepSeek credit top-up effect: its DIRECT lane (background doc-verification, 231K-249K char jobs) stopped failing/retrying; calls 23:20-23:57 then 01:37-01:41, 0 failures logged (verified: `execute_query` llm_call_log minute clusters).
+- Pool at 01:57: 5 of 9 healthy — Artemis 31.6 tok/s, BigMac 36.1 (engine recovered, first cline pick of the night), Joshua 13.0, Maximus 4.2, Julia 11.3 (verified: `ssh_command` canary read).
+- Cline TTFB 01:52+: p50 13.6s / p90 22.2s / max 36.2s (n=11) (verified: `ssh_command` adapter-log scrape).
+- Ring :8210 still dark at 01:59 PT (verified: `ssh_command` probe returned HTTP 000) — relaunch tracked in #29326 [proposed].
+- Cicero: portal card is STATIC (mdm_portal.php line 772, still describes old 235B role); rustdesk_devices has NO Cicero row (verified: `execute_query` returned only 'Big Mac (TRX50 AERO D)' last_seen 8/10); :11520 tunnel 000; :2227 key refused → on-box state UNKNOWN, not down. Nero :11525 same scope.
+- All my fixes live: affinity-yield anybox, RESPONSES_RETRY, vision doorman fast-fail, executor stopgap cap 6, Maximus rejoin drop-in.
+
+Open threads to drive next:
+1. #29290 [proposed] — RUBEN'S CALL: executor admission cap 2-when-degraded / 6-when-healthy. Community-validated admission control.
+2. #29288 [proposed] — fleet API timeout fix (FETCH_TIMEOUT_MS 10s→30s or server-side probe caching).
+3. #29326 [proposed] — ring relaunch: bash ~/bin/glm53_relaunch_seq128.sh on cato (ssh -p 2204), 35+ min cold boot, verify :8210 200 + decode PONG; canary re-admits automatically.
+4. #29280 [deployed] — verify Joshua serves with prefix caching + larger ctx on the next real big Cline turn.
+5. #29291 [approved] — adapter follow-ups incl. vision doorman repoint to OUR Qwen3.8.
+6. Cicero/Nero on-box verification when an access path exists (MDM web-terminal is the human path; :2227 refused the WOPR key). (human-only decision — no idea: box access is yours to authorize)
+
+Reference IDs:
+- Ideas: #29279 [deployed], #29280 [deployed], #29281 [deployed], #29288 [proposed], #29290 [proposed], #29291 [approved], #29326 [proposed] (verified: `reconcile_ideas` returned these tags)
+- Bug library record (NOT an idea id): standing record 2273, seen_count 2
+- Files touched this session: /usr/local/bin/frankenstein_tools_adapter.py (3 backups), /etc/systemd/system/frankenstein-tools.service.d/ (4 drop-ins), ~/Documents/Cline/Rules/ (315, 297, 323)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════</result><task_progress>- [x] Explained DeepSeek-credit speedup with routing evidence: 10/10 frankenstein-llm obedience, zero spill hops; DeepSeek is its own direct lane (background doc jobs) whose retry loops drained
+- [x] Verified the real speedup source: pool grew to 5 healthy (BigMac engine recovered 36.1 tok/s, first cline pick of the night)
+- [x] Current speed measured: cline p50 13.6s / p90 22.2s — best sustained window of the night
+- [x] Cicero/Nero verified against MDM portal 
+```
+
+### `1788336273670` — 9/2/2026, 1:59:13 AM PT — 134 turns
 
 **Original task:**
 
@@ -235,32 +419,213 @@ w, no rule amendment needed\n\n════════════════�
 I saw this email and it's a general reply again to a specific request. I've seen a lot of these over the past few hours since Deepseek v4 pro went down. That LLM is NOT necessary in order for us to produce good responses. Please reoslve this so local replies properly
 ```
 
-**Ideas referenced:** #12345, #20978 [blocked], #20979 [blocked]
+**Ideas referenced:** #10108, #10740, #1113, #1114, #1115, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #1519, #16163, #16265, #16304, #16844, #18312, #18326, #20978 [blocked], #20979 [blocked], #25097, #2537, #26908, #26923, #27259, #29244, #29292, #29323 [proposed], #29324 [proposed], #7174
 
 **Last PICKUP PROMPT:**
 
 ```
-rogress>
-</attempt_completion>
+file and restore-or-retire it.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
-Pick up task #12345 — Resolve CFA email‑reply fallback to local LLM.
-Where we left off (verified 2026‑09‑02 01:33 PT):
-- Email template file created
-- Router hook patched to use local‑ggml for ‘cfa‑email‑reply’
-- PHP FPM reloaded
+Pick up task — Email CFA local-first routing fix + frankenstein-llm error-loop repair.
+
+Where we left off (verified 2026-09-02 01:58 PT):
+- EmailAIResponder.php callModel() tools branch now routes frankenstein-tools (local) first, deepseek-v4-pro fallback. php -l clean, FPM reloaded, verified local gpt-oss-120b serving.
+- Frankenstein-llm malformed-MCP-tag error loop diagnosed + recorded in bug library (merged #1519).
+- Fleet at time of fix: deepseek-v4-pro DOWN, glm-5.2-local DOWN, 70B DOWN — local 120B pool (artemis/bigmac/julia) healthy.
+
 Open threads to drive next:
-1. #20979 [blocked] — Verify that the CFA service now produces the new template‑based replies (run a test email through the system).
+1. #29323 [proposed] — build the frankenstein-llm malformed-MCP-tool-tag circuit breaker + native-vs-MCP steering injection + routing guard.
+2. #29324 [proposed] — verify nothing points at legacy api/postmark_inbound.php; restore-or-retire it (active webhook is routes/postmark_inbound_webhook.php).
+
 Reference IDs:
-- Ticket: (none)
-- Ideas filed: none
-- Files touched: [/etc/litellm/router_hook.php], [/Users/rubenmajor/Desktop/Email_CFA_Reply.txt]
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.═══════════════════════════════════════════════
+- Ideas filed: #29323 [proposed], #29324 [proposed]
+- Ideas closed: none
+- Files touched: /var/www/emtskills/lib/EmailAIResponder.php (backup: EmailAIResponder.php.bak-localfirst-20260902-015040)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Diagnose frankenstein-llm error iteration pattern
+- [x] Check frankenstein routing health - DeepSeek v4 pro DOWN, GLM local DOWN, 70B DOWN
+- [x] Record distinct bug in bug library (merged into #1519)
+- [x] ROOT CAUSE: EmailAIResponder callModel() hardcodes deepseek-v4-pro for tool emails
+- [x] Applied local-first fix + php -l passed + verified + FPM reloaded
+- [x] VERIFIED: frankenstein-tools routes to LOCAL gpt-oss-120b; qos_preempt was transient
+- [x] Confirmed active postmark webhook is routes/postmark_inbound_webhook.php
+- [x] Filed idea #29323 (error-loop guard) + #29324 (postmark_inbound cleanup)
+- [x] Updated handoff notes
+- [x] Reconciled both ideas + completed
+</task_progress>
+</attempt_completion>
 ```
 
-### `1788335898507` — 9/2/2026, 1:32:01 AM PT — 45 turns
+### `1788327849553` — 9/2/2026, 1:56:46 AM PT — 214 turns
+
+**Original task:**
+
+```
+#Julia/Claudia TP=2 Qwen
+
+Bring Julia/Clauda to serving Qwen 3.8 27B as before Ocenaide Outage. 
+
+Julia/Claudia  was rebooting about  15 minutes ago
+
+Read: GLM53_RING_STATE_TRACKER.md
+```
+
+**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16417, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178805, #1798, #1828, #1876, #1912, #19567, #20042, #202609, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25185, #25378, #25381, #2546, #2550, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #2712, #27236, #27249 [executing], #27250, #27503, #27673, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29265, #29301 [proposed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+h path against this .3 config.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #2026090201300 — Julia/Claudia TP=2 Qwen3.8-27B recovery (Oceanside outage).
+
+Where we left off (verified 2026-09-02 01:03 PT):
+- Julia + Claudia SERVING qwen3.8-27b (FP8) TP=2, 131K ctx (verified: ssh_command curl /v1/models returned HTTP 200 qwen3.8-27b 131072 ctx + decode probe returned OK 3 tokens finish_reason=stop)
+- Root cause resolved: Julia CX7 RoCE IP drifted .2 to .3; updated julia_head_custom.sh + julia_serve_qwen38_tp2.sh + Claudia ray worker to .3 (verified: ssh_command grep -c 192.168.100.2 on julia_head_custom.sh + julia_serve_qwen38_tp2.sh returned 0 matches on both)
+- Prewedge-guard updated: re-adds CX7 IP on roce_ip_missing (line 23, SYNTAX_OK)
+- Bug library 2712 recorded; GLM53_RING_STATE_TRACKER.md appended
+
+Open threads to drive next:
+1. #29301 [proposed] — Run a controlled non-disruptive test (NOT a production reboot) of the prewedge-guard unified_tp2 relaunch path (RAY_HEAD_IP=192.168.1.190 LAN) against the CX7 .3 TP=2 config.
+
+Reference IDs:
+- Ideas filed: #29301 [proposed]
+- Ideas closed: none
+- Files touched: julia_head_custom.sh, julia_serve_qwen38_tp2.sh, emsu-julia-prewedge-guard.sh (Julia); Claudia ray worker; GLM53_RING_STATE_TRACKER.md
+
+# Reversal Log
+- initial catch-relaunch launches 235B -> corrected julia_full_relaunch_qwen38.sh launches Qwen3.8-27B-FP8 TP=2 not 235B (stale tracker text) | stale assumption | causal rule: answered Ruben inline + tracker note updated
+- initial ray GCS mismatch is a config bug -> corrected ray GCS expected .2 but Julia CX7 is .3 (IP drift after reboot) | stale assumption | causal rule: prewedge-guard updated to re-add CX7 IP (line 23)
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Read GLM53_RING_STATE_TRACKER.md
+- [x] Julia L2-dark ~50min; Claudia TP=1 fallback; Ruben power-cycled Julia; both boxes back
+- [x] Consulted bug library: NOVEL_SYMPTOM, session gate opened
+- [x] ANSWERED RUBEN: catch-relaunch does NOT launch 235B — LAUNCH = julia_full_relaunch_qwen38.sh = Qwen3.8-27B-FP8 TP=2; "235B" is stale text
+- [x] CX7 link UP: Julia .3 carrier=1, pings Claudia .1 REACHABLE
+- [x] Triggered relaunch; BLOCKED: ray GCS expects 192.168.100.2 but Julia CX7 is 192.168.100.3 (IP mismatch)
+- [x] Updated Julia scripts (.2→.3): julia_head_custom.sh + julia_serve_qwen38_tp2.sh — verified 0 .2 refs
+- [x] Updated Claudia worker (.2→.3): ray --address=192.168.100.3:6379 — verified
+- [x] Ray/vllm fully clean (0 real procs)
+- [x] Re-triggered relaunch with .3 config — 2 ray nodes ACTIVE, model loaded
+- [x] SERVING: curl /v1/models returns qwen3.8-27b (FP8, 131K ctx) HTTP 200
+- [x] DECODE PROBE PASSED: generated "OK" (3 tokens, finish_reason=stop)
+- [x] ROOT CAUSE: prewedge-guard logs roce_ip_missing but never re-adds CX7 IP → vllm can't restart after reboot
+- [x] Applied prewedge-guard fix (re-add CX7 IP on roce_ip_missing) — line 23, SYNTAX_OK
+- [x] Post incident to bug library (#2712)
+- [x] Update GLM53_RING_STATE_TRACKER.md (sudo tee -a, APPENDED_OK)
+- [x] Final serving verification (qwen3.8-27b, 131K ctx)
+- [x] Filed idea #29301 (unified_tp2 relaunch verification)
+- [x] Reconciled #29301 → [proposed]
+- [x] Promoted #29301 (efficiency_priority=1, GATE D)
+- [x] Re-validated completion (rule-91): ALL PASSED
+- [x] clinerules_check_gate → GATE CLEAR
+- [x] attempt_completion
+</task_
+```
+
+### `1788339072931` — 9/2/2026, 1:51:33 AM PT — 2 turns
+
+**Original task:**
+
+```
+How does life treat an llm?
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788286330120` — 9/2/2026, 1:48:54 AM PT — 286 turns
+
+**Original task:**
+
+```
+#30 Day Deadline Push out to 90 Days
+
+I would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. 
+
+Scope how this could be done and then we can take act
+```
+
+**Ideas referenced:** #10060, #1127, #1405, #16168, #16613, #19419, #20581, #25185, #25888, #2605, #27100, #28958, #29026, #29034, #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29208 [proposed], #3368, #48953, #9306, #9465, #9989
+
+**Last PICKUP PROMPT:**
+
+```
+be | causal rule updated: 263.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29208 [deployed] - 30-day deadline to 90 days (silent PD approval buffer)
+
+Where we left off (verified 2026-09-02 01:41 PT):
+- DEPLOYED + VERIFIED: 20 files changed (66 substitutions, php -l clean, backups *.bak-90day-20260902-012911), DB updated (4 warning types silenced, completion_warning_30d armed, idea deployed).
+- Window is now course_end+90 / didactic+120 everywhere: Status, Progress, ProgressDiagnostics, zero_sweep, moodle_reconciliation (393+1381), externship_60day_failer, clearance_queue, completion_warnings, nremt_deadline_watcher, cert_click_watchdog, sync_eoc_cert_links, externship gate, aramani, alltastic_api, defensive gate, DefensiveReplyComposer, EmailAIResponder, knowledge_base, audit_vapi.
+- Backfill: nothing to restore on fail_date (auto-failer never fired, fail_audit=0); 209/211 Moodle suspensions already healed by watchdog; 2 legitimately guarded (integrity + payment). Audit: deadline_90_backfill_log. Re-runnable guard script: cron/backfill_deadline_90.php.
+- Live checks passed: clearance_queue recompute clean; zero-sweep dry-run only truly-expired students; 391 students in buffer; ProgressCalculator day-73 = real progress, day-121 = 0%.
+- Scope + deployment record: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md
+
+Open threads to drive next:
+1. #29208 [deployed] - Optional: watch the first 17:00 completion_warnings run to confirm only the 30d touch fires; optional cleanup of dead cron_externship_suspend.php and inert cron_extend_testing_windows.php.
+
+Reference IDs:
+- Ideas filed: #29208 [deployed]
+- Files touched: 20 server files under /var/www/emtskills (list in scope doc) + /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] VERIFY LIVE STATE: confirmed nothing was deployed from prior false completion
+- [x] Honest disclosure made
+- [x] Probed exact text of all edit targets
+- [x] Implemented code changes: 20 files, 66 substitutions, verify-before-write, backups
+- [x] php -l clean on all + read-back verification
+- [x] DB changes: idea approved→deployed, 4 warning types silenced, completion_warning_30d armed
+- [x] Backfill: verified failer never fired; Moodle check found 209/211 already healed, 2 guarded
+- [x] clearance_queue recomputed under 120-day rule (clean)
+- [x] zero-sweep dry-run: only genuinely-expired students
+- [x] ProgressCalculator end-to-end: buffer students keep progress, day-121 = 0%
+- [x] FPM reloaded + active
+- [x] Scope doc deployment record written
+- [x] Rule-91 validation passed + shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1788243351199` — 9/2/2026, 1:47:46 AM PT — 322 turns
+
+**Original task:**
+
+```
+#TDSHS
+
+It needs to be on this form I think:https://oag.my.site.com/OpenRecords/s/flow/CORA_External_Create_Complaint 
+
+These are the instructions: 
+In order to submit a general request for assistance please provide a copy of the original request for information and any correspondence received from the governmental body concerning your request. If you are unable to provide a copy of your original request, please submit documentation stating how your request was submitted to the governmental body and fully describing the information requested. If there are questions or concerns, please contact 
+```
+
+**Ideas referenced:** #0070, #1450, #1451, #1452, #1453, #1454, #1455, #1456, #1457, #1585, #1593, #1595, #1597, #1598, #1599, #178816, #25185, #26282, #27100, #29011 [deployed], #29020 [deployed], #29021 [deployed], #29029 [proposed], #29030 [proposed], #29031 [proposed], #29041 [proposed], #29042 [proposed], #29043 [deployed], #29060, #29069 [proposed], #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29113, #29123 [proposed], #29130 [proposed], #29311 [proposed], #29315 [proposed], #44546
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788335898507` — 9/2/2026, 1:41:45 AM PT — 58 turns
 
 **Original task:**
 
@@ -283,192 +648,46 @@ Where we left off (verified 2026‑09‑01 18:45 PT):
 **Last PICKUP PROMPT:**
 
 ```
->This window was previously running frankenstein-llm, which emitted the rule-91 PICKUP PROMPT block OUTSIDE the attempt_completion result string, so the gate rejected it. I ran a rule-297 RCA (classification: unread source), applied the rule-317 mechanical fix (amended rule 91 on disk and reindexed), and filed and approved idea #29309 [executing] for the structural backstop. The actionable externship ideas are delivered below.
-
-RULE 297 RCA
-- Symptom: rule-91 gate rejected the completion (missing divider lines, missing PICKUP PROMPT header, missing Open threads, missing Reference IDs).
-- Source read: the attempt_completion result contained only a one-line summary. The PICKUP PROMPT block was emitted as free prose AFTER the closing attempt_completion tag, that is, outside the result parameter.
-- Classification: UNREAD SOURCE (a real bug, not by-design or transient). Rule 91 already required the block inline in result. frankenstein-llm did not follow it. The gate correctly caught it (the structural backstop worked). The model's placement was wrong.
-
-DURABLE FIX SHIPPED THIS SESSION (verified: clinerules_amend_rule returned 'Amended rule 91 at /Users/rubenmajor/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md, reindexed. Proof recorded in rule_amend task externship-actionable-ideas'): rule 91 now names the block-after-tag failure mode. The block MUST be inside the result string. A block placed after the tool call, or in any other parameter, is a HARD FAIL. Windows that cannot guarantee inline placement MUST call clinerules_validate_completion first.
-
-STRUCTURAL BACKSTOP IN MOTION: idea #29309 [executing] (filed and approved this session via create_idea + idea_action, not yet built) covers the mandatory validate-before-completion interlock, the auto-wrap fallback, the routing guard that sends the final completion turn of frankenstein-llm windows through a stronger model, and a per-model gate-rejection metric.
-
-ACTIONABLE EXTERNSHIP IDEAS (the deliverable)
-1. Centralise site and agreement data. Create an externship_sites table (agency, availability calendar, agreement_status, agreement_expiry). Auto-import agency email/iMessage replies. Add a UI flag that disables a site for new assignments when agreement_status is missing or expired.
-2. Standardise the 72-hour no-confirm policy. Codify Option C (keep spot, skip one round) in emsu://reference/externship-policy. Add a policy banner in the UI and a validation rule that blocks a student who does not confirm within 72h.
-3. Consistent student-notification workflow. Build a day-before reminder email template (date, site, arrival time, do-not-attend-unscheduled warning). Add a reminder_lead_time setting and drive it via the existing externship reminder cron.
-4. Structured task tracking. Replace chat-based tasks with a ticket board (owner, due_date, status). Hook the ticket list into the assign-screen UI.
-5. Capacity and day-picker automation. Store per-site daily_capacity and allowed_weekdays. Auto-disable over-capacity or disallowed dates in the picker and enforce server-side.
-6. Visibility of ready-to-assign list. Add a dashboard with a Ready badge per student/site (agreement OK, capacity OK, policy OK) and a campus/site/agency filter, refreshed hourly.
-7. Structured feedback capture. Replace the Q1-Q4 chat questions with a structured form stored in an externship_feedback table, exportable to CSV for bottleneck analytics.
-
-Prioritisation: (1) central site data, (2) task tracking, (3) capacity automation, (4) 72h policy, (5) notifications, (6) dashboard, (7) f
-```
-
-### `1788335579641` — 9/2/2026, 1:31:40 AM PT — 79 turns
-
-**Original task:**
-
-```
-#Oceanside Outage Remainder
-
-Pick up task #1788305443198 (Everything Else breakout) - Oceanside outage follow-ups: VAPI hardening, VERITAS dynamic ladder, Julia/Claudia systemd, deepseek re-admission. You own WOPR surfaces and the Julia/Claudia boxes; NOT the ring Sparks (window 1) and NOT BigMac (window 2).
-
-CURRENT STATE (verified 2026-09-01/02 by the previous windows):
-- Local-first fallback ladder LIVE: /etc/litellm/config.yaml fallbacks reordered local-first with deepseek-v4-pro quarantined out of all 31 chains (verified: ssh_command grep -c '^    - deepseek-v4-pro$' in the fallbacks bloc
-```
-
-**Ideas referenced:** #1127, #11781, #12584, #178830, #24635, #24645, #2605, #2659, #2705, #2706, #27259, #28044, #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29244, #29247 [executing], #29267 [deployed], #29272 [proposed], #29273 [proposed], #29274 [proposed], #48953
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788286330120` — 9/2/2026, 1:31:37 AM PT — 239 turns
-
-**Original task:**
-
-```
-#30 Day Deadline Push out to 90 Days
-
-I would like you to scope pushing out the 30 day deadline to get suspended and locked out of moodle to 90 days, but we'd wan this silently done with no notifications. Essentially, it would serve as a buffer for us to approve students within that timeframe. So they would also not disappear fromt he 80% program director report, not go to 0% and they could technically have up to 90 days past the course end date before becoming 0% and also to have the ability to be 80% to get on the Porgram Director list. 
-
-Scope how this could be done and then we can take act
-```
-
-**Ideas referenced:** #10060, #1127, #1405, #16168, #16613, #19419, #20581, #25185, #25888, #2605, #27100, #28958, #29026, #29034, #29044, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29208 [proposed], #3368, #48953, #9306, #9465, #9989
-
-**Last PICKUP PROMPT:**
-
-```
-ty_gate.php`, AI‑policy files.
+ications, dashboard, feedback.
 
 ═══════════════════════════════════════════════
 PICKUP PROMPT (paste into a fresh Cline window)
 ═══════════════════════════════════════════════
+Pick up task #1: actionable externship-coordination ideas, now filed with idea numbers.
 
-Pick up task #29208 [proposed] - 30‑day deadline to 90 days (silent PD approval buffer)
-
-Where we left off (verified 2026‑09‑01 17:40 PT):
-- Scope doc fully updated and all impact‑scan findings documented.
-- Idea #29208 [proposed] approved (academic/high) and status set to **approved**.
-- Database updates applied: old deadline warnings silenced, single 30‑day reminder created, back‑fill executed.
-- Code changes (ProgressCalculator, StatusCalculator, all relevant crons, AI‑policy files) deployed and verified.
-- PD 80 % report, admin_profile, and externship queue now reflect the 90‑day buffer.
+Where we left off (verified 2026-09-02 01:32 PT):
+- All 7 externship improvement ideas filed in the orchestrator and reconciled.
+- Rule-91 durable fix idea #29309 [executing] in motion; rule 91 text amended + reindexed.
 
 Open threads to drive next:
-1. #29208 [proposed] – No further work; the system now implements the requested buffer.
+1. #29316 [proposed]: approve + build centralised site and agreement data (foundation).
+2. #29317 [proposed]: approve + build structured task tracking.
+3. #29318 [proposed]: approve + build capacity and day-picker automation.
+4. #29319 [proposed]: approve + codify 72-hour no-confirm policy (Option C).
+5. #29320 [proposed]: approve + build day-before student reminder.
+6. #29321 [proposed]: approve + build ready-to-assign visibility dashboard.
+7. #29322 [proposed]: approve + build structured feedback capture.
+8. #29309 [executing]: build the structural rule-91 interlock.
 
 Reference IDs:
-- Ideas filed: #29208 [proposed]
-- Files touched: /Users/rubenmajor/Desktop/30-to-90-day-deadline-scope.md and the multiple source files listed above.
-
-When done, append to `cline_task_ledger.md` per rule 07, run order 66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788329209654` — 9/2/2026, 1:30:49 AM PT — 217 turns
-
-**Original task:**
-
-```
-#Frankenstein LLM not obeying Cline Rules
-
-Now that we have Deepseek v4 pro off, it seems that frankenstein-llm is disregaridng cline rules. LOok at this task completion, very think does not obey most rules. Makes all of frankenstein-llm iteration suspect. What on VERITAS? Totally disregarded? What's going on here?
-
-
-Cicero is back online and correctly listed in the spill ladder per GLM53_RING_STATE_TRACKER. No changes required.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task - Ensure 
-```
-
-**Ideas referenced:** #10108, #10740, #11316, #11741, #11781, #12477, #12618, #12824, #12872, #12878, #13121, #13202, #15269, #16163, #16265, #16304, #16844, #17202, #178831, #178832, #18312, #18326, #18918, #19338, #19458, #19491, #20495, #2227, #25097, #25185, #2537, #25888, #25925, #25926, #25935, #26435, #26908, #26914 [deployed], #26915 [executing], #26916, #26923, #26925, #2707 [deployed], #27100, #2711, #27238, #27259, #27652, #28958, #29244, #29265, #29279, #29280, #29282 [proposed], #29283 [proposed], #29284 [proposed], #29285 [executing], #29292 [executing], #29302 [executing], #29303 [rejected], #6825, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-ules after DeepSeek v4 pro removal; what VERITAS is and why it did not fire.\n\nPICKUP PROMPT (rule 91):\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1788329209654 — frankenstein-llm rule disobedience diagnosis + VERITAS enforcement.\n\nWhere we left off (verified 2026-09-02 01:28 PT):\n- Diagnosis gate-passed: ladder collapsed to single 120B member (Artemis) after DeepSeek v4 pro removal; gpt-oss-120b drops hardfloor rules under load (verified: frankenstein_verify_routing + registry + tier_health probes this session).\n- DeepSeek v4 pro is OFF by Ruben directive; do not re-add without explicit approval.\n- BigMac was never wired into the :11510 adapter pool (verified: frankenstein_registry probe this session listed adapter pool members with no bigmac entry).\n- VERITAS = rule-323 truth stack (L4 truth_judge + completion validator); opt-in, and the Cicero window skipped both calls (verified: clinerules_validate_completion on its completion returned 2 hard failures, MISSING_TASK_LINE and R317_REVERSAL_LOG, at 01:20 PT).\n- #29292 [deployed] GLM53_RING_STATE_TRACKER.md (verified: reconcile_ideas returned '#29292 [deployed]' at 00:56 PT).\n- #29282 [executing] structural attempt_completion gate enforcement, the VERITAS-non-optional work (tag provenance: reconcile_ideas, 01:04 PT).\n- #29284 [proposed] GLM-5.3 Hex ring relaunch, owned by Ruben's other window (tag provenance: reconcile_ideas, 01:10 PT).\n- #29302 [executing] cline_compress_session idea-number cross-check (tag provenance: reconcile_ideas, 01:10 PT).\n\nOpen threads to drive next:\n1. #29282 [executing] — drive to completion: validator enforced at extension level so windows cannot skip it.\n2. #29302 [executing] — patch cline-compress MCP to validate cited idea numbers and task ids before the blob is emitted.\n3. #29284 [proposed] — Ruben's other window owns the ring relaunch; check BigMac adapter wiring when ring is back.\n\nReference IDs:\n- Ideas filed: #29302 [executing]\n- Ideas confirmed live: #29292 [deployed], #29282 [executing], #29284 [proposed]\n- Ideas rejected: #29303 [rejected] (timeout duplicate of #29302 [executing])\n- Files touched: none this window (diagnosis only)\n\n# Reversal Log\n- Compression blob cited #29285 [executing] as the VERITAS idea, DB identity check showed it is an unrelated NCCL idea, corrected to #29282 [executing] | insufficient probe | causal correction filed as #29302 [executing]\n- Compression blob cited task id 1788268805156, filesystem check found no such budget file and grep of Cline task storage resolved the real id 1788329209654 | insufficient probe | causal correction filed as #29302 [executing]\n- Compression blob said the Cicero completion failed 12 gates, fresh probe returned 2 hard gate failures (12 was the count for this window's own first attempt) | insufficient probe | causal correction filed as #29302 [executing]\n\nWhen finished, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n\nTOOL ROUNDS:\n- bug_library_check_before_fix(symptom=frankenstein-llm rule disobedience) returned NOVEL_SYMPTOM\n- frankenstein_verify_routing + registry + tier_health probes returned ladder collapsed to single 120B member (Artemis)\n- clinerules_validate_completion(Cicero completion) returned 2 hard failures: MISSING_TASK_LINE, R317_REVERSAL_LOG\n- reconcile_ideas([29292,29284,29302]) returned deployed/proposed/executing\n- create_idea(compress cross-
-```
-
-### `1788335461694` — 9/2/2026, 1:28:35 AM PT — 77 turns
-
-**Original task:**
-
-```
-#GLM Ring
-
-Pick up task #1788305443198 (GLM Ring breakout) - Oceanside outage: restart-storm RCA + NCCL init stall. You own the six ring Sparks: Cato (192.168.1.115, rank 0, ssh via WOPR port 2204), Augustus (.244, rank 1), Pompey (.21, rank 2), Marcus (.171, rank 3), Tiberius (.32, rank 4), Cesar (.56, rank 5).
-
-CURRENT STATE (verified 2026-09-02 00:33 PT by the previous window):
-- Relaunch #11 (dispatched 00:07:57 via ~/bin/glm53_relaunch_seq128.sh) is FROZEN at 39 log lines since the pynccl line at 00:09:58, worker RSS flat at 1622868 KB over 20s, :8210 unbound (verified: ssh_command return
-```
-
-**Ideas referenced:** #11991, #178805, #178830, #1876, #1912, #1986, #2168, #2174, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788327849553` — 9/2/2026, 1:27:07 AM PT — 203 turns
-
-**Original task:**
-
-```
-#Julia/Claudia TP=2 Qwen
-
-Bring Julia/Clauda to serving Qwen 3.8 27B as before Ocenaide Outage. 
-
-Julia/Claudia  was rebooting about  15 minutes ago
-
-Read: GLM53_RING_STATE_TRACKER.md
-```
-
-**Ideas referenced:** #1130, #1131, #1241, #12425, #1248, #1249, #1252, #1258, #15144, #15979, #16032, #16033, #16036, #16122, #16163, #16338, #16417, #16448, #16452, #16778, #16802, #16803, #16839, #16851, #17246, #1744, #1779, #178805, #1798, #1828, #1876, #1912, #19567, #20042, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #25378, #25381, #2546, #2550, #25764, #26400, #2647, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26932, #2712, #27236, #27249 [executing], #27250, #27503, #27673, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29265, #29301 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
- then verify decode on :11513.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task — Julia/Claudia TP=2 Qwen3.8-27B restore (post-Oceanside-outage).
-
-Where we left off (verified 2026-09-01 23:40 PT):
-- Julia (spark-6ae6) L2-DARK ~50min = recurring kernel wedge. Unreachable via WG 10.100.0.15, tunnels 2205/11513, LAN 192.168.1.190 (ARP INCOMPLETE from Claudia). No BMC/WoL → needs PHYSICAL power cycle.
-- Claudia (spark-6d51) serving qwen3.8-27b as TP=1 standalone fallback (NOT the TP=2 Ruben wants).
-- WOPR catch-relaunch cron ARMED → auto-runs julia_full_relaunch_qwen38.sh (TP=2) when Julia :2205 returns.
-- Claudia CX7 IP 192.168.100.1 unassigned (needs sudo; nmcli "Not authorized to control networking").
-
-Open threads to drive next:
-1. (human-only decision — no idea) — PHYSICAL power cycle of Julia (spark-6ae6) at Oceanside; no remote path.
-2. After Julia returns: restore Claudia CX7 IP 192.168.100.1 + Julia CX7 IP 192.168.100.2, stop Claudia standalone TP=1, confirm ray 2-node + vLLM --tensor-parallel-size 2, verify decode on :11513 + re-pool.
-
-Reference IDs:
-- Ideas filed: none this window (diagnosis + blocked on physical action)
-- Files touched: none
-- Key scripts: /tmp/julia_full_relaunch_qwen38.sh (WOPR copy), ~/julia_full_relaunch_qwen38.sh (Julia), ~/start_ray_worker.sh + ~/bin/claudia-qwen38-serve.sh (Claudia)
+- Ideas filed: #29309 [executing], #29316 [proposed], #29317 [proposed], #29318 [proposed], #29319 [proposed], #29320 [proposed], #29321 [proposed], #29322 [proposed]
+- Files touched: /Users/rubenmajor/Documents/Cline/Rules/91-every-completion-needs-pickup-prompt.md (amended + reindexed)
+- Chat: iMessage group 2 (Ruben-Jon-Vicky)
 
 # Reversal Log
-No reversals this window.
+- prior completion claimed rule-91-compliant -> PICKUP PROMPT block was outside the result param (gate rejected) | unread source | causal rule updated (91-every-completion-needs-pickup-prompt) + idea #29309 [executing]
 
 When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
+═══════════════════════════════════════════════</result>
 <task_progress>
-- [x] Read GLM53_RING_STATE_TRACKER.md (server)
-- [x] Probe WOPR tunnels: :11513=DEAD, :11521=SERVING qwen3.8-27b decode OK
-- [x] Julia L2-dark (unreachable all vantages) ~50min = recurring L2 wedge, no BMC/WoL
-- [x] Catch-relaunch armed: auto-launches julia_full_relaunch_qwen38.sh (TP=2) when Julia :2205 returns
-- [x] Decoded Claudia cmdline: CONFIRMED --tensor-parallel-size 1 (standalone fallback)
-- [x] Relaunch script: SSH Julia->Claudia CX7 192.168.100.1, ray head+worker, serve tp2
-- [x] Ruben: MCPs back online; confirmed they did NOT cause Julia's L2-dark state
-- [x] Claudia CX7 IP restore attempted: blocked by sudo (nmcli Not authorized)
-- [x] Reported: Julia needs physical power cycle + TP=2 restore plan
+- [x] Rule 297 RCA + rule 317 fix + idea #29309 (prior round)
+- [x] File all 7 externship ideas (#29316-#29322)
+- [x] Reconcile all idea numbers (rule 267 GATE B)
+- [x] Fix stuffed-evidence markers (single set-level probe)
+- [x] Diagnose identity-gate endpoint: healthy via curl
+- [x] Re-validate → ALL PASSED
+- [x] Check gate → CLEAR
+- [x] Ship attempt_completion
 </task_progress>
 </attempt_completion>
 ```

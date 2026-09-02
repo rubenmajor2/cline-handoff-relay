@@ -6,13 +6,16 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/1/2026, 9:32:26 PM PT | window: last 72h | 67 tasks | index total 1034 (parsed 4, cached 1030)
+Generated: 9/1/2026, 10:32:27 PM PT | window: last 72h | 63 tasks | index total 1037 (parsed 4, cached 1033)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788305443198` | 9/1/2026, 9:32:17 PM | 1288 | 2285KB | #Oceanside Outage |
-| `1788322099284` | 9/1/2026, 9:27:21 PM | 28 | 173KB | #LLM Turns |
-| `1788322596117` | 9/1/2026, 9:16:36 PM | 1 | 400KB | #Argus Improvmeents |
+| `1788326750196` | 9/1/2026, 10:32:27 PM | 52 | 83KB | #FrankensteinLLM Slow |
+| `1788326584136` | 9/1/2026, 10:31:06 PM | 21 | 27KB | #Cicero |
+| `1788324547743` | 9/1/2026, 10:27:53 PM | 254 | 456KB | #Oceanside Outage |
+| `1788322099284` | 9/1/2026, 10:13:34 PM | 202 | 654KB | #LLM Turns |
+| `1788322596117` | 9/1/2026, 9:57:29 PM | 27 | 990KB | #Argus Improvmeents |
+| `1788305443198` | 9/1/2026, 9:34:39 PM | 1293 | 2313KB | #Oceanside Outage |
 | `1788160972127` | 9/1/2026, 9:14:07 PM | 444 | 2315KB | #Julia/Claudia Qwen 3.8 27B |
 | `1788196060306` | 9/1/2026, 8:21:04 PM | 1353 | 4731KB | #Argus Improvmeents |
 | `1788296990463` | 9/1/2026, 7:24:43 PM | 734 | 2656KB | #September 1 Externship Switchover |
@@ -70,37 +73,65 @@ Generated: 9/1/2026, 9:32:26 PM PT | window: last 72h | 67 tasks | index total 1
 | `1788071557390` | 8/29/2026, 11:55:51 PM | 98 | 181KB | ## — GLM/LLMs (fork of window #4) — BLANK - 2 |
 | `1788065678939` | 8/29/2026, 10:47:11 PM | 144 | 977KB | #Claude Browser Extension MCP — MID-FLIGHT |
 | `1788065887266` | 8/29/2026, 10:34:13 PM | 138 | 726KB | ## — GLM/LLMs (fork of window #4) — BLANK |
-| `1788065789865` | 8/29/2026, 10:26:49 PM | 144 | 431KB | ##  GLM/LLMs: adapter deadlock → LiteLLM restart storm — MID-FLIGHT |
-| `1788066032421` | 8/29/2026, 10:13:02 PM | 82 | 163KB | ## Maximus/Joshua/GLM fleet + adapter deadlock — MID-FLIGHT (new question) |
-| `1788064817596` | 8/29/2026, 9:53:06 PM | 34 | 293KB | #Lost Cline Windows |
-| `1788049703999` | 8/29/2026, 9:36:20 PM | 255 | 1045KB | #Chat Widget |
-| `1788050474905` | 8/29/2026, 9:36:19 PM | 277 | 1870KB | #Argus |
-| `1788050518371` | 8/29/2026, 9:36:09 PM | 175 | 723KB | #Claude Browser Externsion |
-| `1788064238609` | 8/29/2026, 9:36:08 PM | 37 | 234KB | #GLM / LLMs |
 
 ---
 
 ## Per-window detail
 
-### `1788305443198` — 9/1/2026, 9:32:17 PM PT — 1288 turns
+### `1788326750196` — 9/1/2026, 10:32:27 PM PT — 52 turns
+
+**Original task:**
+
+```
+#FrankensteinLLM Slow
+
+Frankenstein LLM still extremely slow. Somthing is not right
+'
+Do not inject anthropic
+```
+
+**Ideas referenced:** #12335, #13108, #13121, #17202, #27142
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788326584136` — 9/1/2026, 10:31:06 PM PT — 21 turns
+
+**Original task:**
+
+```
+#Cicero
+
+Cicero is back online. Can you make sure it's int he spill ladder proprly?
+
+Read: GLM53_RING_STATE_TRACKER.md
+```
+
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788324547743` — 9/1/2026, 10:27:53 PM PT — 254 turns
 
 **Original task:**
 
 ```
 #Oceanside Outage
 
-The internet went out in oceanside and all the romans went down. How is everything going now? How did the cutover go? What did we learn?
+Are all of these issues documented then int he bug library and the units hardened in case of similar outage? 
+
+I have conflicting info about other units being down. Like for example Julia/Claudia TP=2 - i saw tht down in one window and up in another, so what's going on? 
+
+Also VERITAS is not showing the truth very well here in Cline. 
+
+
+Also the LLMs are slow and I'm very confused by this 
+
+I think you just have an IP Address assignment issue -> Julia went L2-dark again (verified: ssh_command ping 192.168.1.190 returned 100% packet loss + ip neigh INCOMPLETE — recurring kern
 ```
 
-**Ideas referenced:** #1119, #1120, #1127, #1130, #1131, #11490, #11782, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #1264, #13837, #13977, #1451, #14833, #14885, #1513, #1514, #15144, #1515, #1524, #1528, #1539, #1540, #1541, #1542, #15918, #15965, #15979, #15995, #16032, #16033, #16036, #16122, #16163, #16338 [proposed], #16448, #16452, #16778, #16802, #16803, #16839, #16851, #171018, #171052, #171091, #171095, #1711, #1712, #17246, #1744, #1779, #178830, #1798, #1811, #1819, #18238, #18255, #18256, #18261, #1828, #18471, #18536, #18544, #18567, #1869 [investigating], #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #19338, #19458, #1948, #19491, #19522, #1956, #19567, #1958 [resolved], #19686, #1986, #1993, #20042, #20495, #20528, #2063, #2065, #20662, #20725, #2073, #20985, #21038, #21167, #2127, #2168, #2174, #2185, #22357, #2299, #2307, #2314, #23183, #25185, #25378, #25381, #2546, #25764, #25900, #25994, #25997, #25999, #2603, #2605, #26068, #2640, #26400, #2647, #2654, #2659, #2662 [resolved], #26711, #26712, #26713, #26715, #26932, #2701 [deployed], #2702 [deployed], #27100, #27152, #27201, #27236, #27249 [executing], #27250, #27503 [proposed], #27874, #28042 [proposed], #28155, #28234, #28304 [deployed], #28306, #28586, #28596, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28723, #28948, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29182, #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #29244 [proposed], #29247 [blocked], #29265 [deployed], #29267 [proposed], #29268 [proposed], #4113, #4423, #4691, #4712, #4769, #48953, #4931, #7138, #7142, #7149, #7759, #816987, #8883, #8887, #8902, #8903
+**Ideas referenced:** #12584, #1543, #1544, #1545, #16154, #178830, #19686, #24645, #25185, #2704 [deployed], #2705 [deployed], #2706 [deployed], #28044, #28306, #28958, #29011 [deployed], #29244 [deployed], #29247 [executing], #29265 [deployed], #29267 [proposed], #29268 [proposed], #29272 [proposed], #29273 [proposed], #29274 [proposed], #9222, #9501
 
-**Last PICKUP PROMPT:**
+_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-```
- (ZDT, never hard restart).\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1788305443198 — Oceanside outage: finish ring boot verification + fix frankenstein-llm local-first routing.\n\nWhere we left off (verified 2026-09-01 21:31 PT):\n- GLM ring relaunch #7 dispatched 21:14:19 PT after dest-based ip rule fix; NCCL channels forming (verified: ssh_command returned docker logs 182 lines + NCCL Channel 55/56/57 lines + RSS climbing 1494340→1671480 KB) — first boot past the barrier in 7 attempts. Watchdog grace 5400s owns relaunch; do not relaunch manually.\n- Root cause (bug library incident 2701, resolved): source-based-only policy routing sent NCCL replies the wrong way around the ring (loop) = ncclCommInitRank deadlock. Fix = /opt/emsu/glm52_dest_rules.sh (dest-based to-rules) deployed + persisted in /etc/cron.d/emsu-fabric-boot-restore on all 6 nodes (verified: ssh_command returned TIB-TCP-CATO-FABRIC-OK after rule add, was STILL-FAIL before).\n- Fabric @reboot persistence recorded under #29265 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review).\n- Claudia SERVING (verified: curl WOPR:11521 returned HTTP 200 qwen3.8-27b). Julia L2-DARK (verified: ssh_command ping 192.168.1.190 returned 100% loss + ip neigh INCOMPLETE; recurring kernel wedge, needs PHYSICAL power cycle; was serving qwen3.8-27b TP=1 via ~/julia_serve_qwen38_tp1.sh; its CX7 IP 192.168.100.2 also needs @reboot persistence).\n- frankenstein-llm routing defect located (verified: ssh_command sed of config.yaml line ~803 returned glm-5.3-local commented WINDOW_O_DOWN, paid deepseek rungs ahead of locals, deepseek-v4-pro out of balance).\n- Executor doctored: 11 frankenstein-timeout impl_failed ideas re-queued, 2 dupes rejected (verified: mysql execute_query returned Rows affected: 1 for the requeue UPDATE).\n\nOpen threads to drive next:\n1. #29268 [proposed] — verify ring serving: curl WOPR http://127.0.0.1:8210/v1/models → 200 + decode PONG; confirm adapter re-admission (glm_pct climbing); if 000 after 40 min total, check docker logs vllm_slot on Cato for NCCL errors.\n2. #29267 [proposed] — the fallback-ladder fix spec above (local-first reorder, quarantine deepseek-v4-pro until topped up, skip-to-next-rung on paid failure, system-message normalization); apply via /usr/local/bin/litellm-safe-restart.sh.\n3. Julia physical power cycle (human-only decision — no idea) then relaunch ~/julia_serve_qwen38_tp1.sh + add CX7 IP to @reboot restore.\n4. #29247 [executing] — outage recovery runbook idea in the executor queue; the tracker doc and durable scripts it references were completed in-window, the idea itself is still queued for executor processing.\n\nReference IDs:\n- Ideas filed: #29244 [deployed] (watchdog COLDBOOTFIX), #29265 [deployed] (fabric @reboot restore, built in-window), #29247 [executing] (outage runbook), #29267 [proposed] (fallback ladder fix), #29268 [proposed] (ring serving verification)\n- Bug library: incident 2701 (ring NCCL deadlock, resolved w/ recipe), incident 2702 (dead paid rung + vision mismatch)\n- Files touched: /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (topology + lessons + recipe appended), /opt/emsu/glm52_dest_rules.sh (all 6 nodes), /etc/cron.d/emsu-fabric-boot-restore (all 6 nodes), ~/bin/glm53_watchdog_worker_v2.sh on Cato (COLDBOOTFIX + grace 5400), ~/julia_serve_qwen38_tp1.sh (new)\n\n# Reversal Log\n- \"All 6 Romans LAN-dark/down\" → all UP; I had ping
-```
-
-### `1788322099284` — 9/1/2026, 9:27:21 PM PT — 28 turns
+### `1788322099284` — 9/1/2026, 10:13:34 PM PT — 202 turns
 
 **Original task:**
 
@@ -112,7 +143,7 @@ See Frankenstein LLM Turns document on the desktop. Nice, curious now that Deeps
 Also tell me what model is running VAPI CFA now and how that's going.
 ```
 
-**Ideas referenced:** #19840, #19843, #19845, #23050 [executing], #29198, #6704, #7907, #9040, #9041, #9086, #9168
+**Ideas referenced:** #11809, #11832, #11908, #11912, #11913, #11977, #12046, #12059, #12061, #12184, #12231, #12247, #12251, #12315, #12334, #12364, #12366, #12367, #12375, #12463, #12554, #12584, #12643, #12900, #13075, #13188, #13199, #13412, #13413, #13418, #13419, #13434, #13436, #13437, #13439, #13440, #13441, #13442, #13453, #13470, #13471, #13472, #13487, #16578, #17202, #1806, #1809, #1810, #1811 [resolved], #18282 [rejected], #18283 [queued], #18320, #1838 [resolved], #18387 [executing], #18389 [approved], #1839, #1854 [resolved], #1858 [resolved], #1859 [investigating], #18795 [deployed], #18820, #19840, #19843, #19845, #19879, #19882, #19883, #19903, #2014, #22086, #22704 [proposed], #23050 [executing], #23063, #23122 [executing], #25185, #2703 [deployed], #28958, #29198, #29269 [proposed], #29270 [proposed], #29271 [proposed], #3911, #3915, #6704, #7907, #9040, #9041, #9086, #9168, #9498
 
 **Last PICKUP PROMPT:**
 
@@ -196,7 +227,7 @@ Reference IDs:
 </result
 ```
 
-### `1788322596117` — 9/1/2026, 9:16:36 PM PT — 1 turns
+### `1788322596117` — 9/1/2026, 9:57:29 PM PT — 27 turns
 
 **Original task:**
 
@@ -209,9 +240,55 @@ The browser-AI report is digested. One real failure, root-caused, and a follow-u
 §2 FAIL + §6 FAIL (same root cause): the API response rows have no `activity_mode` field, so every row renders the gray fallback "Action" badge. My patch to `routes/alltastic_api.php` added `activity_mode` to the SQL SELECTs, but the API apparently rebuilds/filters the row arrays later in the handler (the browser's programmatic check shows the response rows only carry: detail_id, user_email, action_key, target, summary, created_at, success, rule2
 ```
 
-**Ideas referenced:** #29122 [deployed], #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [executing], #29189 [executing], #29190 [executing], #29207 [blocked], #29212 [blocked], #29214 [executing]
+**Ideas referenced:** #1127, #24897, #25058, #25313, #2605, #26325, #28765, #29050, #29060, #29090 [deployed], #29098, #29100 [deployed], #29101 [rejected], #29106, #29107 [rejected], #29113, #29122 [deployed], #29146 [rejected], #29156 [deployed], #29166 [proposed], #29182 [executing], #29183 [executing], #29184 [executing], #29185 [executing], #29186 [executing], #29187 [executing], #29188 [executing], #29189 [executing], #29190 [executing], #29207 [blocked], #29212 [blocked], #29214 [executing], #29244, #48953
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788305443198` — 9/1/2026, 9:34:39 PM PT — 1293 turns
+
+**Original task:**
+
+```
+#Oceanside Outage
+
+The internet went out in oceanside and all the romans went down. How is everything going now? How did the cutover go? What did we learn?
+```
+
+**Ideas referenced:** #1119, #1120, #1127, #1130, #1131, #11490, #11782, #12299, #1241, #12425, #1248, #1249, #1252, #1258, #12584, #1264, #13837, #13977, #1451, #14833, #14885, #1513, #1514, #15144, #1515, #1524, #1528, #1539, #1540, #1541, #1542, #15918, #15965, #15979, #15995, #16032, #16033, #16036, #16122, #16163, #16338 [proposed], #16448, #16452, #16778, #16802, #16803, #16839, #16851, #171018, #171052, #171091, #171095, #1711, #1712, #17246, #1744, #1779, #178830, #1798, #1811, #1819, #18238, #18255, #18256, #18261, #1828, #18471, #18536, #18544, #18567, #1869 [investigating], #1876, #1877, #18791 [proposed], #1889, #18918 [deployed], #1894, #18982, #18985, #1912, #19338, #19458, #1948, #19491, #19522, #1956, #19567, #1958 [resolved], #19686, #1986, #1993, #20042, #20495, #20528, #2063, #2065, #20662, #20725, #2073, #20985, #21038, #21167, #2127, #2168, #2174, #2185, #22357, #2299, #2307, #2314, #23183, #25185, #25378, #25381, #2546, #25764, #25900, #25994, #25997, #25999, #2603, #2605, #26068, #2640, #26400, #2647, #2654, #2659, #2662 [resolved], #26711, #26712, #26713, #26715, #26932, #2701 [deployed], #2702 [deployed], #27100, #27152, #27201, #27236, #27249 [executing], #27250, #27503 [proposed], #27874, #28042 [proposed], #28155, #28234, #28304 [deployed], #28306, #28586, #28596, #28605, #28606, #28615, #28621 [deployed], #28622 [deployed], #28723, #28948, #28961, #29011 [deployed], #29017 [deployed], #29026 [deployed], #29034 [deployed], #29044, #29060, #29090 [deployed], #29094 [blocked], #29096 [blocked], #29098, #29100 [deployed], #29101 [rejected], #29102, #29103, #29105, #29106, #29107 [rejected], #29113 [executing], #29117, #29146 [rejected], #29147 [deployed], #29156 [deployed], #29166 [proposed], #29182, #29193, #29198, #29217, #29236 [proposed], #29240 [proposed], #29244 [proposed], #29247 [blocked], #29265 [deployed], #29267 [proposed], #29268 [proposed], #4113, #4423, #4691, #4712, #4769, #48953, #4931, #7138, #7142, #7149, #7759, #816987, #8883, #8887, #8902, #8903
+
+**Last PICKUP PROMPT:**
+
+```
+.sh (ZDT, never hard restart).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788305443198 — Oceanside outage: finish ring boot verification + fix frankenstein-llm local-first routing.
+
+Where we left off (verified 2026-09-01 21:31 PT):
+- GLM ring relaunch #7 dispatched 21:14:19 PT after dest-based ip rule fix; NCCL channels forming (verified: ssh_command returned docker logs 182 lines + NCCL Channel 55/56/57 lines + RSS climbing 1494340→1671480 KB) — first boot past the barrier in 7 attempts. Watchdog grace 5400s owns relaunch; do not relaunch manually.
+- Root cause (bug library incident 2701, resolved): source-based-only policy routing sent NCCL replies the wrong way around the ring (loop) = ncclCommInitRank deadlock. Fix = /opt/emsu/glm52_dest_rules.sh (dest-based to-rules) deployed + persisted in /etc/cron.d/emsu-fabric-boot-restore on all 6 nodes (verified: ssh_command returned TIB-TCP-CATO-FABRIC-OK after rule add, was STILL-FAIL before).
+- Fabric @reboot persistence recorded under #29265 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review).
+- Claudia SERVING (verified: curl WOPR:11521 returned HTTP 200 qwen3.8-27b). Julia L2-DARK (verified: ssh_command ping 192.168.1.190 returned 100% loss + ip neigh INCOMPLETE; recurring kernel wedge, needs PHYSICAL power cycle; was serving qwen3.8-27b TP=1 via ~/julia_serve_qwen38_tp1.sh; its CX7 IP 192.168.100.2 also needs @reboot persistence).
+- frankenstein-llm routing defect located (verified: ssh_command sed of config.yaml line ~803 returned glm-5.3-local commented WINDOW_O_DOWN, paid deepseek rungs ahead of locals, deepseek-v4-pro out of balance).
+- Executor doctored: 11 frankenstein-timeout impl_failed ideas re-queued, 2 dupes rejected (verified: mysql execute_query returned Rows affected: 1 for the requeue UPDATE).
+
+Open threads to drive next:
+1. #29268 [proposed] — verify ring serving: curl WOPR http://127.0.0.1:8210/v1/models → 200 + decode PONG; confirm adapter re-admission (glm_pct climbing); if 000 after 40 min total, check docker logs vllm_slot on Cato for NCCL errors.
+2. #29267 [proposed] — the fallback-ladder fix spec above (local-first reorder, quarantine deepseek-v4-pro until topped up, skip-to-next-rung on paid failure, system-message normalization); apply via /usr/local/bin/litellm-safe-restart.sh.
+3. Julia physical power cycle (human-only decision — no idea) then relaunch ~/julia_serve_qwen38_tp1.sh + add CX7 IP to @reboot restore.
+4. #29247 [executing] — outage recovery runbook idea in the executor queue; the tracker doc and durable scripts it references already exist on disk from this window's work, and the idea itself is still in the executor queue for processing.
+
+Reference IDs:
+- Ideas filed: #29244 [deployed] (watchdog COLDBOOTFIX), #29265 [deployed] (fabric @reboot restore, built in-window), #29247 [executing] (outage runbook), #29267 [proposed] (fallback ladder fix), #29268 [proposed] (ring serving verification)
+- Bug library: incident 2701 (ring NCCL deadlock, resolved w/ recipe), incident 2702 (dead paid rung + vision mismatch)
+- Files touched: /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md (topology + lessons + recipe appended), /opt/emsu/glm52_dest_rules.sh (all 6 nodes), /etc/cron.d/emsu-fabric-boot-restore (all 6 nodes), ~/bin/glm53_watchdog_worker_v2.sh on Cato (COLDBOOTFIX + grace 5400), ~/julia_serve_qwen38_tp1.sh (new)
+
+# Reversal Log
+- "All 6 Romans LAN-dark/down" → all UP; I had 
+```
 
 ### `1788160972127` — 9/1/2026, 9:14:07 PM PT — 444 turns
 
@@ -2493,211 +2570,5 @@ Same "#GLM / LLMs" task as 1788064238609 (adapter deadlock). This directory has 
 ```
 
 **Ideas referenced:** #081020, #13202, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #1876, #1965, #1966, #1967, #21038 [executing], #22584, #25185, #25468, #25471, #25515 [proposed], #2573, #25796, #25797, #25798, #2582, #25916 [awaiting_review], #2655, #26663, #2670 [deployed], #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28544, #28550, #28607, #28621, #28740 [proposed], #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28769 [executing], #28778 [deployed], #28779 [proposed], #28783 [proposed], #8861
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788065789865` — 8/29/2026, 10:26:49 PM PT — 144 turns
-
-**Original task:**
-
-```
-##  GLM/LLMs: adapter deadlock → LiteLLM restart storm — MID-FLIGHT
-
-**Original ask:** Gaslighting/LLM stability — make local LLMs durably stable. Resolved the frankenstein-tools adapter deadlock (patched + shipped). Then Ruben's follow-up landed and this is now the active thread: **who is restarting LiteLLM every few minutes, and how do we protect frankenstein-llm from continual restarts while still reaping routing changes?** (research with the community).
-
-**Status:** In progress. Adapter deadlock work is shipped (pickup prompt at task #1788135215000). The NEW investigation just found the re
-```
-
-**Ideas referenced:** #1128, #1145 [approved], #13202, #13490, #178806, #178813, #18312, #1876, #1965 [deployed], #1966 [deployed], #1967 [rejected], #21582, #22584 [deployed], #24645, #25630, #2582, #28544, #28725 [blocked], #28730 [executing], #28740 [proposed], #28752 [executing], #28769 [executing], #28777 [deployed], #28781 [deployed]
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788066032421` — 8/29/2026, 10:13:02 PM PT — 82 turns
-
-**Original task:**
-
-```
-## Maximus/Joshua/GLM fleet + adapter deadlock — MID-FLIGHT (new question)
-
-**Original ask:** "This is the kind of stupid garbage ruining our LLMs..." → Maximus SSH mystery (Joshua stole WOPR :2224), Cicero/Nero identity, GLM ring 4096, Maximus Qwen3.8 standup. Fleet work shipped (two full pickup prompts embedded). Then a NEW mid-flight thread: the identity echo caught a fabricated citation.
-
-**Status:** In progress. Last tail: "The identity echo caught a fabricated citation — I referenced #28758 without filing it. File the real idea now:"
-
-```
-Pick up task #1788051831962 — Maximus/Joshua/GLM 
-```
-
-**Ideas referenced:** #081020, #10676 [approved], #12960, #178634, #178640, #178656, #178671, #178694, #178701, #178709, #178712, #178805, #21038 [executing], #25468, #25471, #25515 [proposed], #2573, #25738, #25796, #25797, #25798, #25916 [awaiting_review], #26663, #26711 [deployed], #26712 [proposed], #26713 [proposed], #26715 [deployed], #27011, #27012, #27069 [deployed], #27152, #27232 [rejected], #27236 [deployed], #27259, #27271, #27287 [deployed], #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27613 [proposed], #27614 [proposed], #27630 [deployed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28550 [deployed], #28551 [proposed], #28552 [proposed], #28553 [deployed], #28705, #28706 [executing], #28725 [blocked], #28730, #28740 [proposed], #28758, #7630, #9019, #9025, #9269
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788064817596` — 8/29/2026, 9:53:06 PM PT — 34 turns
-
-**Original task:**
-
-```
-#Lost Cline Windows
-
-I lost every single cline window just now on a random restart. All the windows restarted, but restarted blank. There were 8-11 of them. Can you give pickup prompts for all of them in a document. ONLY from Cline. Not from Argus and not from Executor. From Cline only.
-```
-
-**Ideas referenced:** #178796, #178805, #178806, #178813, #18541 [deployed], #2420, #2645, #2647, #2648, #2649, #2677, #2679, #2680, #28612 [executing], #28613 [executing], #28643 [deployed], #28683 [proposed], #28705 [deployed], #28706 [executing], #28712 [approved], #28713, #28716 [in_progress], #28722 [proposed], #28725 [blocked], #28730 [executing], #28740 [proposed], #28744 [deployed], #28745 [deployed], #28752 [executing], #28753 [rejected], #28758 [deployed], #28759 [executing], #28769 [executing], #28770 [proposed], #28774 [proposed], #28775
-
-_No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
-
-### `1788049703999` — 8/29/2026, 9:36:20 PM PT — 255 turns
-
-**Original task:**
-
-```
-#Chat Widget
-
-Please place a disclaimer on the chat window in small print at the bottom below "Start chatting!" that says: "This response may be from an automated agent which can sometimes make mistakes" or something like that. It's the same thing that SHOULD be on Email Agent generated replies whcih I think may also need fixing.
-```
-
-**Ideas referenced:** #059669, #12364, #13965, #1567, #16474, #16732, #177796, #18335, #18541 [deployed], #18758, #23989, #25185, #25550, #25888, #25962, #25964, #25965, #26229, #26376, #26377, #26816, #26834, #2850, #28758 [proposed], #28759 [executing], #2916, #33689, #3577, #6366, #9084, #9112, #9131, #9132, #9152, #9222
-
-**Last PICKUP PROMPT:**
-
-```
-317 (record must match claim).
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #28758 - Chat widget misrouting + 23-finding audit remediation
-
-Where we left off (verified 2026-08-29 20:59 PT):
-- Build fixes shipped and live-verified (see reversal log + file list)
-- #28759 [executing] holds the 18-question browser-AI test checklist for the remaining verification pass
-
-Open threads:
-1. #28759 [executing] - Run the 18-question browser-AI test pass against a live widget site (arizonaemt.com); checklist is in the idea description
-2. None other - all buildable work completed this window
-
-Reference IDs:
-- Ideas filed: #28758 [deployed], #28759 [executing], #18541 [deployed]
-- Files touched: /var/www/emtskills/api/chat_widget_embed.js, /var/www/emtskills/api/chat_widget_api.php, /var/www/emtskills/lib/chat_queue_confidence.php, /var/www/emtskills/lib/widget_force_handoff.php, /var/www/emtskills/lib/disclaimer_helper.php
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Attach 18-question list to #28759 (durable)
-- [x] Validate completion with list embedded
-- [x] Ship completion with followup questions for AI Browser agent
-</task_progress>
-</attempt_completion>
-```
-
-### `1788050474905` — 8/29/2026, 9:36:19 PM PT — 277 turns
-
-**Original task:**
-
-```
-#Argus
-
-Read this and make improvements based on it -> https://claude.ai/code/artifact/0432eb26-08a9-4b76-a68f-d7ad08ac4b57 
-
---
-EMSU Argus · Terminal, Activity, Tasks
-Argus Console Audit
-A hands-on review of the admin terminal and its two operational tabs, backed by the last 3,000 activity-log rows (Aug 12–29) and the 60 most recent background tasks. Recommendations are scoped to the existing self-hosted GLM stack and the current PHP/API surface.
-
-Reviewed 2026-08-30 · as MasterAdmin · rmajor@emsuniversity.com
-
-16%
-of terminal queries hit "model pool saturated" (135 / 847)
-40 / 60
-recent task
-```
-
-**Ideas referenced:** #0432, #10005, #10866, #127908, #128193, #128203, #128206, #128263, #128275, #15815, #1779, #18378, #18745, #18946, #18947, #18948, #18949, #18950, #18951, #18973, #1912, #19348, #1998, #2006, #20495, #21125, #21126, #21262, #2168, #22310, #22511, #22583, #22688, #23036, #23039, #23428, #23429, #23468, #23489, #23506, #23675, #23920, #23941, #23952, #23982, #2420, #24766, #24897, #24902, #24905, #24906, #24909, #24910, #24912, #24913, #24926, #24941, #24990, #25047, #25058, #25269, #25313, #25571, #25573, #25768, #26000, #26067, #26325, #26327, #2640, #2642, #2645, #2647, #2648, #2649, #2654, #2659, #2662, #2666, #26712, #26713, #2677, #2679, #2680, #26895, #26932, #2698, #27126, #27243, #27244, #27284, #27860, #28042, #28133, #28155, #28214, #28221, #28234, #28304, #28310, #28369, #28465 [deployed], #28497, #28504 [deployed], #28505, #28506 [deployed], #28605, #28606, #28607, #28614, #28615, #28621 [deployed], #28622 [deployed], #28705, #28710, #28711 [deployed], #28712 [approved], #28713, #28716 [in_progress], #28723, #28725, #28726, #28729, #28735 [deployed], #28738, #28740, #28760 [proposed], #28761 [proposed], #28762 [proposed], #28763 [proposed], #28764 [proposed], #28765 [proposed], #28766 [proposed], #28767 [proposed], #28768 [proposed], #30363, #334155, #4338, #64748, #69707, #8645, #8942, #9650, #9660, #9733, #9889
-
-**Last PICKUP PROMPT:**
-
-```
- source of the four-way split.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task #N/A — Argus Console Audit follow-through (Ruben's Q1-Q3 above, plus remaining filed roadmap items).
-
-Where we left off (verified 2026-08-29 20:12 PT):
-- 7 code artifacts deployed and php -l clean: routes/alltastic_api.php, routes/cron_argus_task_worker.php, routes/argus_download.php, routes/argus_task_status.php, lib/argus_audit_fixes_p0.php; DB column argus_task_queue.next_retry_at added.
-- Ideas #28767 and #28768 marked deployed; #28762 marked blocked on the Q3 decision; #28760/#28761 await Q1/Q2.
-- Awaiting Ruben's answers to Q1 (inline lane approach), Q2 (full-answer vs compact postback), Q3 (announcement scoping by user+text vs session_key).
-
-Open threads to drive next (each has a real filed idea #):
-1. #28760 [blocked] — Argus inline lane for single-action read-only queries (awaiting Q1: rule table vs LLM classifier).
-2. #28761 [blocked] — Post finished-task FULL answer into originating chat (awaiting Q2: full vs compact notice).
-3. #28762 [blocked] — Off-by-one task link / announcement scoping (awaiting Q3; root cause: same text under 4 session_keys).
-4. #28763 [proposed] — Session context slot (current student + last N turns across chats).
-5. #28764 [proposed] — Tool contract: sort/limit/count_only; validation errors logged as invalid_args not gate fail.
-6. #28765 [proposed] — Activity tab: writes-only default, facet filters, promise_unbuilt column, burst grouping.
-7. #28766 [proposed] — Tasks tab: native list + side panel, truthful progress, single answer render, grouped dup.
-
-Reference IDs:
-- Ideas filed: #28760–#28768 (closed/deployed: #28767, #28768; blocked: #28760-#28762; rest proposed)
-- Files touched: routes/alltastic_api.php, routes/cron_argus_task_worker.php, routes/argus_download.php, routes/argus_task_status.php, lib/argus_audit_fixes_p0.php, docs/HANDOFF_NOTES_ARCHIVE_2026.md
-- No ticket number; this was the Claude artifact audit #0432eb26-08a9-4b76-a68f-d7ad08ac4b57.
-
-When done, append a row to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
-═══════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788050518371` — 8/29/2026, 9:36:09 PM PT — 175 turns
-
-**Original task:**
-
-```
-#Claude Browser Externsion
-
-Is there some kind of Claude Browser Extension that can be used with our API like I'm using Claude in Chrome here in Cline?
-```
-
-**Ideas referenced:** #15158, #1894, #19653 [queued], #19671 [rejected], #19686 [queued], #19689 [queued], #27503 [proposed], #28744 [proposed], #28775, #7380, #9731
-
-**Last PICKUP PROMPT:**
-
-```
-ace, and we don't need it.
-
-═══════════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════════
-Pick up task — BYO-key Chrome browser extension equivalent of Claude-in-Chrome (idea #28744).
-
-Where we left off (verified 2026-08-29 17:53 PT):
-- Confirmed via Cline repo README (fetched this window): no Chrome extension exists in Cline's official lineup (VS Code, JetBrains, CLI, Kanban, SDK).
-- Confirmed official Claude-in-Chrome is closed: subscription-gated, no BYO API key, no automation surface — cannot be scripted or pointed at our LiteLLM endpoint.
-- Cline already has built-in browser control ("browse the web") + MCP support, pointed at our own endpoint (frankenstein-llm probe returned 200 in ~3.3s this window). Gap vs Claude-in-Chrome = reading the user's ACTIVE tab, not a managed browser window.
-
-Open threads to drive next:
-1. #28744 [proposed] — Build the active-tab bridge: MV3 Chrome extension + browser MCP server that exposes active tab DOM/screenshot to Cline (or Cline SDK app), streamed to our LiteLLM key, with click/fill actions confirmed by Ruben. ~2-4h build; waiting on Ruben's "build it" to promote to [executing].
-2. #28744 [proposed] — After bridge is live, wire the encrypted travel credential vault (8 logins in api/travel_chat.php) + save_booking so the extension can autofill airline sites end-to-end.
-
-Reference IDs:
-- Ticket: none
-- Ideas filed: #28744 [proposed]
-- Files touched: none (read Cline repo README via GitHub API)
-═══════════════════════════════════════════════════
-</result>
-</attempt_completion>
-```
-
-### `1788064238609` — 8/29/2026, 9:36:08 PM PT — 37 turns
-
-**Original task:**
-
-```
-#GLM / LLMs
-
-Problemmatic since these hidden errors and issues seem to be able to continually plague our LLMs and create false gates/ gas lighting that evertyhign is fine. I remain very converned on this and wonder how we can avoid gaslighting durably when it comes to anything, but most especially LLMs and their routing as getting it wrong is EXTREMELY distructive. It is incredibel taht you were not able to see this before. Can you consult the community perhaps and see if you can figure a better way of making sure the LLMs are more stable? What can be done here? We need to think really hard an
-```
-
-**Ideas referenced:** #15668, #178813, #1876, #1965, #1966, #1967, #22584, #28544, #28705 [deployed], #28725 [blocked], #28730 [executing], #28740 [proposed], #28752 [executing], #28753 [rejected], #28769 [executing]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._

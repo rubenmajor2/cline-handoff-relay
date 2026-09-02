@@ -157,3 +157,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends Step 2 classification: cross-site ping/ARP from a jump host is NOT valid down-evidence for remote-site boxes. WOPR's 192.168.1.x is its own San Diego LAN; the Oceanside Sparks share the same private range but are only reachable via their dial-out reverse tunnels. Before classifying any remote-site host DOWN, verify the probing vantage shares the target's actual L2 (gateway MAC check) or probe via the tunnel/fleet heartbeat — same-numbered private subnets across sites made 6 healthy Romans look LAN-dark on 2026-09-01.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 05:00 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: llm-turns-fleet-assessment-20260901
+- RCA bucket: insufficient probe
+- Trigger pattern: Building a fleet serving-state table from log traffic counts + registry labels instead of per-endpoint live probes, then collapsing "zero rows" into "DOWN" and "high internal running count" into "satu
+- Reversal note: Amends Step 2 (the four-state classification): ZERO TRAFFIC IN A LOG IS NOT A STATE. A box with 0 turns in /var/log/emsu-adapter-upstream.log may be (a) not a member of that pool at all (direct LiteLLM lanes like claudia/julia/cicero are NOT :11510 adapter members, so absence there is expected and meaningless), (b) tunnel-flapping, (c) genuinely down, or (d) serving other traffic. Before any DOWN claim sourced from a traffic table, the agent must FIRST check pool membership (FRANK_TOOLS_UPSTREAMS) and THEN live-probe /v1/models this turn. Also adds a fifth mis-classification to ban: reporting an engine as SATURATED from its own internal running-count while startup-complete=0 — that is the BOOTING/WEDGED state (state 3), never saturation. Source: 2026-09-01, a fleet report declared Julia/Claudia/Nero DOWN off an 8h traffic table while Claudia :11521 was live serving qwen3.8-27b and Nero :11525 was live on MLX; the same report called the GLM-5.3 ring "saturated by design" when docker log
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

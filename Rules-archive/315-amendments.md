@@ -177,3 +177,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends Step 4 (HOST-UP != ENGINE-DOWN): the rule already forbade collapsing the two layers, but its wording let me write "BigMac WEDGED 18h" as a whole-box verdict from an unreachable :8000 plus a stale unit-log line. Step 4 now requires that any DOWN sentence NAME THE LAYER in the sentence itself ("host up, engine not bound") and cite the host-liveness probe (uptime/load/container status) alongside the endpoint probe, so a healthy box can never be described with box-level language. Source: 2026-09-01, Ruben corrected "Big Mac is not wedged, stop the gaslighting"; on-box re-probe showed uptime 12d, load 1.28, container bigmac-vllm Up 19h, i.e. the HOST was fine and only the vLLM engine had not bound :8000.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 21:50 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788373091938
+- RCA bucket: insufficient probe
+- Trigger pattern: Declaring a reverse-tunnel port dead from an empty curl without checking ss -tlnp for the sshd listener
+- Reversal note: Amends Step 2 (classify state) + detector section: an empty curl response plus a command-line grep are NOT evidence a tunnel/listener is down. Run ss -tlnp on the port to see the owning process (a reverse-tunnel forward shows as sshd listening) BEFORE declaring the tunnel dead. Case 2026-09-02: :11513 was declared 'tunnel dead' from empty curl + ps grep; ss -tlnp then showed sshd listening on :11513 — the tunnel was fine, only the engine behind it (Julia vLLM) was down. The two states (tunnel down vs engine down) have completely different repairs.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

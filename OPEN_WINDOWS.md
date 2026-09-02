@@ -6,12 +6,17 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 11:58:40 AM PT | window: last 72h | 81 tasks | index total 1058 (parsed 3, cached 1055)
+Generated: 9/2/2026, 12:58:41 PM PT | window: last 72h | 83 tasks | index total 1060 (parsed 2, cached 1058)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788372387064` | 9/2/2026, 11:58:35 AM | 109 | 763KB | #September 1 Externship Switchover |
-| `1788373091938` | 9/2/2026, 11:58:35 AM | 127 | 509KB | #Frankenstein-llm vision |
+| `1788373091938` | 9/2/2026, 12:44:03 PM | 340 | 1262KB | #Frankenstein-llm vision |
+| `1788376314623` | 9/2/2026, 12:43:42 PM | 56 | 2268KB | #Externship Agremeents: |
+| `1788372387064` | 9/2/2026, 12:21:07 PM | 160 | 893KB | #September 1 Externship Switchover |
+| `1788376752251` | 9/2/2026, 12:19:12 PM | 1 | 800KB | #Deepseek/Qwen Usage on Open Router |
+| `1788336273670` | 9/2/2026, 12:15:32 PM | 178 | 2759KB | #Email CFA |
+| `1788329531146` | 9/2/2026, 12:09:39 PM | 358 | 1534KB | #Joshua Qwen |
+| `1788335512875` | 9/2/2026, 12:04:57 PM | 180 | 599KB | #Bigmac |
 | `1788243351199` | 9/2/2026, 11:33:11 AM | 356 | 2795KB | #TDSHS |
 | `1788370171352` | 9/2/2026, 11:22:44 AM | 234 | 769KB | #GLM Ring |
 | `1788372693610` | 9/2/2026, 11:13:07 AM | 1 | 840KB | #Deepseek/Qwen Usage on Open Router |
@@ -21,14 +26,11 @@ Generated: 9/2/2026, 11:58:40 AM PT | window: last 72h | 81 tasks | index total 
 | `1788335579641` | 9/2/2026, 2:16:21 AM | 182 | 2694KB | #Oceanside Outage Remainder |
 | `1788329209654` | 9/2/2026, 2:14:36 AM | 266 | 5300KB | #Frankenstein LLM not obeying Cline Rules |
 | `1788324547743` | 9/2/2026, 2:14:28 AM | 834 | 2311KB | #Oceanside Outage |
-| `1788335512875` | 9/2/2026, 2:02:55 AM | 146 | 497KB | #Bigmac |
 | `1788326750196` | 9/2/2026, 2:02:39 AM | 589 | 1264KB | #FrankensteinLLM Slow |
-| `1788336273670` | 9/2/2026, 1:59:13 AM | 134 | 1837KB | #Email CFA |
 | `1788327849553` | 9/2/2026, 1:56:46 AM | 214 | 11552KB | #Julia/Claudia TP=2 Qwen |
 | `1788339072931` | 9/2/2026, 1:51:33 AM | 2 | 6KB | How does life treat an llm? |
 | `1788286330120` | 9/2/2026, 1:48:54 AM | 286 | 2275KB | #30 Day Deadline Push out to 90 Days |
 | `1788335898507` | 9/2/2026, 1:41:45 AM | 58 | 1574KB | Anty actionable ideas? |
-| `1788329531146` | 9/2/2026, 1:13:12 AM | 330 | 1366KB | #Joshua Qwen |
 | `1788309157542` | 9/2/2026, 12:59:29 AM | 112 | 1262KB | #Email CFA Issues |
 | `1788298468689` | 9/2/2026, 12:57:43 AM | 267 | 1671KB | #Jon request |
 | `1788332615307` | 9/2/2026, 12:56:57 AM | 106 | 1534KB | #Maximus |
@@ -96,7 +98,125 @@ Generated: 9/2/2026, 11:58:40 AM PT | window: last 72h | 81 tasks | index total 
 
 ## Per-window detail
 
-### `1788372387064` — 9/2/2026, 11:58:35 AM PT — 109 turns
+### `1788373091938` — 9/2/2026, 12:44:03 PM PT — 340 turns
+
+**Original task:**
+
+```
+#Frankenstein-llm vision
+
+Frankenstein-llm vision model appears to be stalling. Can you look and resolve?
+```
+
+**Ideas referenced:** #10108, #10740, #1127, #11741, #11781, #12477, #12573, #12584, #12618, #12824, #12872, #12878, #13202, #15637, #16163, #16265, #16304, #16417, #16844, #17205, #18312, #18326, #1912, #19338, #19686, #1998, #2114, #2168, #2174, #24645, #25097, #2537, #2550, #25764, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #26908, #26923, #26932, #2712, #2714, #2715, #2716, #2719, #27259, #27673, #28586, #28596, #28622, #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29193, #29244, #29247, #29265, #29272, #29273, #29274, #29285 [deployed], #29299 [deployed], #29323, #29327, #29368, #48953, #7173
+
+**Last PICKUP PROMPT:**
+
+```
+cted (physical access needed).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+Pick up task — Frankenstein-llm vision stall: litellm-layer fix complete + EMT AI Grader impact assessed.
+
+Where we left off (verified 2026-09-02 12:43 PT):
+- claudia-qwen38-27b alias repointed dead :11521 → live Julia+Claudia TP=2 :11513 in /etc/litellm/config.yaml.
+- supports_vision:true added to all 5 local Qwen 3.8 27B lanes (claudia, joshua, nero, maximus, julia); YAML valid (56 models); litellm blue :4100 + green :4101 restarted; haproxy :4000 active.
+- vision_doorman.php ladder = local-only round-robin (julia TP=2, joshua, nero, maximus) + openrouter/qwen/qwen3.8-max final fallback; ZERO Anthropic/sonnet/claude in vision path. FPM reloaded.
+- e2e verified: claudia, joshua, julia, frankenstein-llm all return vision content, finish=stop.
+- EMT AI Grader: no impact + no backlog (all queue/item/runs tables = 0); grader is glm-5.2 text over document_text, not vision-dependent.
+
+Open threads to drive next:
+1. Nero (:11525) + Maximus (:11530) MLX lanes physically off-network — doorman ladder already includes them; they rejoin rotation when powered/connected (human-only physical access, no idea filed).
+2. Deeper visibility (optional, human decision): watch vision_doorman_health_log table to confirm post-fix routing before considering full regression suite.
+
+Reference IDs:
+- Ideas filed: none
+- Files touched: /etc/litellm/config.yaml (+ bak-20260902-visionfix), /var/www/emtskills/lib/vision_doorman.php (+ bak-20260902-prelocal4), HANDOFF_NOTES.md
+
+When done, append to cline_task_ledger.md per rule 07 and run order 66 per .clinerules/EXECUTE_ORDER_66.
+═══════════════════════════════════════════════
+</result>
+</attempt_completion>
+```
+
+### `1788376314623` — 9/2/2026, 12:43:42 PM PT — 56 turns
+
+**Original task:**
+
+```
+#Externship Agremeents:
+
+I clicked on the link to view an externship agremeent: https://emsuniversity.com/emtskills/personnel/compliance_doc_proxy.php?id=125 
+
+from here for example: https://emsuniversity.com/emtskills/externship/manage_sites.php 
+
+and says document not found. That needs to be resolved for this and the others.
+```
+
+**Ideas referenced:** #059669, #155724, #2563, #25947, #3498, #856404, #92400
+
+**Last PICKUP PROMPT:**
+
+```
+t summarizing findings, maybe propose actions. Also need to ensure we include a PICKUP PROMPT block with proper formatting, and any open threads must be real idea numbers and tags.
+
+We haven't created any new ideas; perhaps we need to file ideas for those that need action, e.g.,:
+
+- For agreements that are expired or pending_review, we might need to update the document/renew.
+
+- For sites with no doc linked, need toThe query result gives me the non-current / problematic rows. Let me analyze:
+
+Not-current (site_status='expired'):
+1. site 92 (AMR San Antonio) - active site, dated doc 125, but doc_exp missing → dated_expired_review YES. Actually doc 125 expiration date is null → needs a date.
+2. site 42 Brougham Ambulance - expired
+3. site 26 Odessa - expired, exp 2025-06-18
+4. site 54 Ponderosa Fire - expired, doc 36 pending_review
+5. site 32 St. Josephs/Carondelet - expired, exp 2025-02-17, doc 28 pending_review
+
+pending_review sites: 5 (Gila River, no doc), 23 (Heart of Texas, doc 20 unknown), 2 (Mesa Fire Training, no doc), 28 (ProTransport-1, doc 49 unknown), 8 (Regional Fire, no doc), 10 (Sonoita-Elgin, no doc), 35 (Wilson County ESD, doc 12 pending_review), 49 (Gonzales Co EMS - has doc 128)
+
+unknown status sites: 57 (City of Justin), 60 (Dixie EMS), 61 (Compass Phoenix Healthcare)
+
+none status sites: 40 (Allegiance Mobile Health Dallas), 81 (Allen Fire), 82 (Desoto Fire Rescue Station 2), 84 (TEST RECORD - do not assign), 91 (Keller Fire)
+
+Sites without compliance docs: 5, 2, 8, 10, 57, 60, 61, and others (49 has doc 128)
+
+I should also note sites with docs but no issues (active/perpetual), e.g., most others.
+
+The user asked: "I think we need to scan those agreements to make sure they are all current" - i.e., audit the externship agreements for currency. The deliverable is a report identifying which agreements are expired, pending review, unknown, or missing, so action can be taken.
+
+I have enough data now to produce the completion report. The key findings:
+
+1. **4 sites have expired agreements** (properly flagged as `expired` in the system):
+   - Site 26: Odessa Texas Fire Rescue (expired 2025-06-18)
+   - Site 32: St. Josephs / Carondelet Healthcare (expired 2025-02-17)
+   - Site 42: Brougham Ambulance (no expiry date)
+   - Site 54: Ponderosa Fire (no expiry date)
+
+2. **7 sites pending review** (these need human/ops attention):
+   - Site 5: Gila River EMS (no document on file)
+   - Site 23: Heart of Texas Healthcare System
+   - Site 28: ProTransport-1 (PT-1)
+   - Site 35: Wilson County ESD
+   - Site 49: Gonzales Co EMS
+   - Site 2: Mesa Fire Department - Training Division
+   - Site 8: Regional Fire and Medical Department
+   - Site 10: Sonoita-Elgin Fire Department
+
+3. **3 sites with unknown status**: 57 (City of Justin Fire & EMS), 60 (Dixie EMS), 61 (Compass Phoenix Healthcare)
+
+4. **5 sites with no agreement status** ('none'): 40 (Allegiance Mobile Health - Dallas), 81 (Allen Fire), 82 (Desoto Fire Rescue Station 2), 84 (TEST RECORD - do not assign), 91 (Keller Fire)
+
+I should also note that doc 125 (the AMR San Antonio agreement the user originally clicked) is marked active/perpetual with an actual file, so it's current from a document perspective.
+
+Now I need to wrap this up. The user's request is informational - they want a scan/audit. I have the data. I should present the findings clearly. But do I need to do anything else? The user said "scan those agreements to make sure they are all current" - this could imply they want me to check and report. I have the data needed for a comprehensive report.
+
+Let m
+```
+
+### `1788372387064` — 9/2/2026, 12:21:07 PM PT — 160 turns
 
 **Original task:**
 
@@ -109,23 +229,206 @@ If you get to the point to where you need a studnet ID number by the time you ge
 this seems wrong as there should be students in AZ that are waiting, espeically witht he number in CA and TX. Something doesn't add up. Canyou see if you can figure that out? Or is that becasue Ajo is so helpful?-> Zero AZ student
 ```
 
-**Ideas referenced:** #12661, #13977, #1622, #1623, #1624, #1625, #16608, #17580, #178833, #18693, #19492, #20357, #2036, #25185, #28958, #29225 [awaiting_review], #29306 [deployed], #29309 [awaiting_review], #29313 [deployed], #29316 [executing], #29317 [proposed], #29318 [proposed], #29319 [proposed], #29320 [proposed], #29321 [proposed], #29322 [proposed], #29364 [deployed], #29365 [proposed], #29371 [deployed], #9086, #9168, #9339, #9343
+**Ideas referenced:** #12661, #13977, #1622, #1623, #1624, #1625, #1628, #1629, #1630, #1631, #16608, #17580, #178833, #18693, #19492, #20357, #2036, #25185, #28958, #29225 [awaiting_review], #29306 [deployed], #29309 [awaiting_review], #29313 [deployed], #29316 [executing], #29317 [proposed], #29318 [proposed], #29319 [proposed], #29320 [proposed], #29321 [proposed], #29322 [proposed], #29364 [deployed], #29365 [proposed], #29371 [deployed], #9086, #9168, #9339, #9343
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 
-### `1788373091938` — 9/2/2026, 11:58:35 AM PT — 127 turns
+### `1788376752251` — 9/2/2026, 12:19:12 PM PT — 1 turns
 
 **Original task:**
 
 ```
-#Frankenstein-llm vision
+#Deepseek/Qwen Usage on Open Router
 
-Frankenstein-llm vision model appears to be stalling. Can you look and resolve?
+Taking a look at open router, I am seeing charges for DeepSeek and Qwen 3.8. 27B (this one is absolutely dumb because we have local 27B). We should never use Qqwen 3.8 27B on Open Router. Max is fine, but 27B pretty dumb. 
+
+Anyway, we have a direct API for Deepseek so why are we using Open router. Can you find and correct that?
+
+Also, Befroe taking action, give me first a lay of the land as to what's actually going on.
 ```
 
-**Ideas referenced:** #10108, #10740, #1127, #11741, #11781, #12477, #12573, #12584, #12618, #12824, #12872, #12878, #13202, #15637, #16163, #16265, #16304, #16417, #16844, #18312, #18326, #1912, #19338, #19686, #1998, #2114, #2168, #2174, #25097, #2537, #2550, #25764, #2605, #26400, #2647, #2654, #2659, #2662, #2663, #26908, #26923, #26932, #2712, #2714, #2715, #2716, #2719, #27259, #27673, #28586, #28596, #28622, #29101 [rejected], #29106, #29107 [rejected], #29113, #29146 [rejected], #29156 [deployed], #29166 [proposed], #29193, #29244, #29247, #29265, #29272, #29273, #29274, #29285 [deployed], #29299 [deployed], #29323, #29327, #29368, #48953
-
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
+
+### `1788336273670` — 9/2/2026, 12:15:32 PM PT — 178 turns
+
+**Original task:**
+
+```
+#Email CFA
+
+I saw this email and it's a general reply again to a specific request. I've seen a lot of these over the past few hours since Deepseek v4 pro went down. That LLM is NOT necessary in order for us to produce good responses. Please reoslve this so local replies properly
+```
+
+**Ideas referenced:** #10108, #10740, #1113, #1114, #1115, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #1519, #16163, #16265, #16304, #16844, #18312, #18326, #20978 [blocked], #20979 [blocked], #25097, #25185, #2537, #26908, #26923, #27259, #28958, #29244, #29292, #29323 [proposed], #29324 [proposed], #7174
+
+**Last PICKUP PROMPT:**
+
+```
+k_inbound_webhook.php is live.
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #29324 [deployed] - Email CFA local-first fix + frankenstein error-loop guard + legacy hybrid cleanup
+
+Where we left off (verified 2026-09-02 12:14 PT):
+- Email CFA general-reply bug FIXED: lib/EmailAIResponder.php now local-first (line 500 returns on local frankenstein-tools; deepseek-v4-pro demoted to fallback-only at lines 501-515). Confirmed specific replies generate locally.
+- Frankenstein-llm error loop (malformed MCP tool-tag) diagnosed + recorded in bug library.
+- #29323 [executing] - error-loop guard, in the executor queue (status=in_progress, dev_stage=idle).
+- #29324 [deployed] - legacy api/postmark_inbound.php retired (recoverable rename .retired-29324-20260902-120833); active webhook routes/postmark_inbound_webhook.php is live; vrrtr canonical in lib/vapi_recap_reply_thread_router.php.
+
+Open threads to drive next:
+1. #29323 [executing] - watch the executor queue for the error-loop guard to progress so the malformed-tool-tag loop stops.
+2. #29324 [deployed] - no action needed; legacy hybrid retired and clean.
+
+Reference IDs:
+- Ideas filed: #29323 [executing], #29324 [deployed]
+- Files touched: lib/EmailAIResponder.php (local-first fix), /var/www/emtskills/api/postmark_inbound.php (retired to .retired-29324-20260902-120833)
+
+# Reversal Log
+No reversals this window.
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Email CFA local-first fix (deployed + verified)
+- [x] Frankenstein-llm error loop diagnosed + bug library recorded
+- [x] Ideas #29323 + #29324 filed and APPROVED by Ruben
+- [x] Promote #29323 (error-loop guard) to executor - now in_progress
+- [x] Build #29324: retired api/postmark_inbound.php (recoverable) + verified clean
+- [x] Mark #29324 deployed in ledger
+- [x] Reconcile both ideas
+- [x] Got real provenance for Email CFA claim (rule 323)
+- [x] validate_completion ALL PASSED
+- [x] check_gate CLEAR + shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1788329531146` — 9/2/2026, 12:09:39 PM PT — 358 turns
+
+**Original task:**
+
+```
+#Joshua Qwen
+
+Troubleshoot Joshua Qwen 3.8 27B and bring to serving properly and address this issue so it serves as a good model in the mix of Qwen 3.8 27B lanes:
+
+## 3. Joshua "HTTP 200 but 0 tokens" — how can that be?
+
+The behavior, not the box, was the explanation. My earlier probe used max_tokens=8 and got content=None with finish_reason=length while HTTP was 200 (verified: ssh_command curl POST to 10.100.0.4:8001 with max_tokens=8 returned finish_reason=length, content=None, usage completion_tokens=8). With thinking disabled at the request level it answers normally (verified: ssh_command 
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11316, #11741, #11781, #11847, #11991, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12589, #12590, #12618, #12824, #12872, #12878, #13202, #15144, #15776, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16590, #16648, #16778, #16802, #16803, #16839, #16844, #16851, #17078, #17205, #17246, #17300, #1744, #1779, #178805, #178832, #178833, #1798, #1828, #18312, #18326, #18329, #1876, #18820, #1912, #19567, #20042, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #23071, #23172, #25097, #25171, #25186, #2537, #25378, #25381, #2546, #25764, #26400, #2647, #26505, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26908, #26923, #26932, #2712, #2719, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28729, #28894, #28948, #28958, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29054, #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247, #29265, #29274, #29279 [deployed], #29280 [proposed], #29281 [proposed], #29285 [deployed], #29299 [deployed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ning + enable_thinking:false')
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788329531146 — Joshua Qwen 3.8 27B lane tuning + serving verification.
+
+Where we left off (verified 2026-09-02 12:06 PT):
+- Joshua :8001 SERVING with enable_thinking:false injected at LiteLLM lane level
+- Engine tuned: prefix-caching ON, 32K ctx, max-num-seqs 8, gpu-mem 0.90
+- Qwen3.8 multi-system 400 fixed via post-super sanitizer in router_hook.py
+- GLM53_RING_STATE_TRACKER.md updated with Joshua tuning section
+
+Open threads to drive next:
+1. #29280 [deployed] — Joshua engine tuning complete, no further action needed
+2. #29281 [deployed] — Lane config verified, no further action needed
+
+Reference IDs:
+- Ideas filed: #29280 [deployed], #29281 [deployed]
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/router_hook.py, /etc/systemd/system/joshua-qwen38.service, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md
+
+# Reversal Log
+No reversals this window.
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Joshua Qwen 3.8 27B serving properly (verified: PONG via LiteLLM lane)
+- [x] Defect 1 fixed: enable_thinking:false on joshua lane
+- [x] Defect 2 fixed: Qwen3.8 multi-system 400 via post-super sanitizer
+- [x] #29280 [deployed]: Joshua engine tuning
+- [x] #29281 [deployed]: Lane config verified
+- [x] GLM53_RING_STATE_TRACKER.md updated
+- [x] Ideas reconciled: both [deployed]
+- [x] Validation passed, gate clear
+- [x] Completion shipped
+</task_progress>
+</attempt_completion>
+```
+
+### `1788335512875` — 9/2/2026, 12:04:57 PM PT — 180 turns
+
+**Original task:**
+
+```
+#Bigmac
+
+Pick up task #1788305443198 (BigMac breakout) - Oceanside outage: BigMac engine restart + wedge-detector hardening. You own BigMac only: 10.100.0.19 (ssh emsu-big-mac@10.100.0.19 -i /home/emsuserver/.ssh/id_ed25519 from WOPR).
+
+CURRENT STATE (verified 2026-09-02 00:37 PT by the previous window):
+- Host HEALTHY: uptime 12 days 16:38, load average 1.24. Container RUNNING: bigmac-vllm Up 20 hours. Engine NOT BOUND: :8000 listeners = 0, on-box curl 127.0.0.1:8000/v1/models = 000, journalctl 'startup complete' count today = 0 (all from the 00:37 ssh_command on-box probe, which returned exa
+```
+
+**Ideas referenced:** #178694, #178819, #178828, #178830, #178833, #2073, #2298, #25185, #25916 [awaiting_review], #2593, #26349, #2659, #26663, #2704, #27100, #2712, #2713 [investigating], #27142, #27152, #2719, #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28550, #28958, #29017 [deployed], #29026, #29034, #29044 [proposed], #29067, #29247, #29274 [proposed], #29279 [proposed], #29285 [deployed], #29299 [deployed]
+
+**Last PICKUP PROMPT:**
+
+```
+tor HEALTHY, sudo grant live).
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788335512875 - BigMac breakout: engine restart + wedge-detector hardening
+
+Where we left off (verified 2026-09-02 12:02 PT):
+- BigMac ENGINE SERVING since 01:34:00 PT, stable 10+ h (verified: ssh_command 12:02 PT returned container Up 11 hours, CURL=200, STARTUP=1, PORT=1, detector HEALTHY exit 0, sudo -n systemctl status working).
+- No-sudo recovery path proven: docker stop bigmac-vllm (user in docker group) + unit Restart=always = clean relaunch.
+- Durable auto-recovery deployed: ~/bigmac_wedge_detector.sh + ~/bigmac_wedge_autorecover.sh on user crontab */5 (2-consecutive-wedged-verdict docker stop, MIN_UPTIME_MIN=45 gate).
+- NOPASSWD sudoers deployed safely (Ruben-approved): /etc/sudoers.d/bigmac-vllm-restart, 0440 root:root, exact-match systemctl restart/status bigmac-vllm (+ .service variants), visudo -cf parsed OK pre-install, negative test passed.
+- GLM53_RING_STATE_TRACKER.md updated with the BigMac section (verified: sudo tee -a APPEND_RC=0, tail read-back confirms full entry at /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md).
+- #29279 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). #29274 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review, ring window shipped it). Bug library row 2713 resolved. fleet_inventory bigmac=healthy. Ledger appended.
+
+Open threads to drive next:
+None — all work completed this session (engine serving, auto-recovery deployed, sudoers deployed and safety-verified, tracker updated).
+
+Reference IDs:
+- Ideas filed: #29279 [deployed], #29274 [deployed]
+- Bug library: bigmac_never_bound_wedge_ray_placement_group_2026_09_01 (row 2713, resolved)
+- Files touched: ~/bigmac_wedge_detector.sh, ~/bigmac_wedge_autorecover.sh, ~/bigmac-vllm-restart.staged, user crontab, /etc/sudoers.d/bigmac-vllm-restart (on BigMac 10.100.0.19), /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md, /Users/rubenmajor/Documents/Cline/cline_task_ledger.md
+
+# Reversal Log
+- 'blocked on Ruben sudoers entry' -> 'docker-group restart path, no sudo needed' | insufficient probe | causal rule updated: 317 (clause 3, docker-group escalation before declaring a permission wall; clinerules_amend_rule executed for task 1788335512875, INSUFFICIENT_PROBE count 112). Fix also recorded in bug library row 2713 resolution text.
+- 'tracker not updated with BigMac info' -> 'tracker updated and read-back verified' | scope error | no causal rule update needed (rule 317 clause 2 acquisition-gate class, cited not amended; the miss was a deliverable-scope gap, fixed by appending the tracker section and verifying the read-back).
+
+When done, append to cline_task_ledger.md per rule 07, run order 66.
+═══════════════════════════════════════════════</result>
+<task_progress>
+- [x] Engine serving + auto-recovery + sudoers all deployed and verified
+- [x] #29279 [deployed] + #29274 [deployed] (both reconcile-verified)
+- [x] Bug library resolved, ledger, fleet_inventory healthy
+- [x] STEER: tracker updated + read-back verified (APPEND_RC=0)
+- [x] Freshness re-probe BigMac (12:02 PT: Up 11h, CURL=200, detector HEALTHY, sudo grant live)
+- [x] Current task ID identified (1788335512875)
+- [x] Rule 317 clause 3 amended (clinerules_amend_rule, ledger row written)
+- [x] Validate completion — ALL PASSED, GATE CLEAR
+- [x] Ship completion with pickup prompt
+</task_progress>
+</attempt_com
+```
 
 ### `1788243351199` — 9/2/2026, 11:33:11 AM PT — 356 turns
 
@@ -516,68 +819,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Few-minutes-recovery plan mapped to filed ideas (#29247 supervision+alert
 ```
 
-### `1788335512875` — 9/2/2026, 2:02:55 AM PT — 146 turns
-
-**Original task:**
-
-```
-#Bigmac
-
-Pick up task #1788305443198 (BigMac breakout) - Oceanside outage: BigMac engine restart + wedge-detector hardening. You own BigMac only: 10.100.0.19 (ssh emsu-big-mac@10.100.0.19 -i /home/emsuserver/.ssh/id_ed25519 from WOPR).
-
-CURRENT STATE (verified 2026-09-02 00:37 PT by the previous window):
-- Host HEALTHY: uptime 12 days 16:38, load average 1.24. Container RUNNING: bigmac-vllm Up 20 hours. Engine NOT BOUND: :8000 listeners = 0, on-box curl 127.0.0.1:8000/v1/models = 000, journalctl 'startup complete' count today = 0 (all from the 00:37 ssh_command on-box probe, which returned exa
-```
-
-**Ideas referenced:** #178694, #178819, #178828, #178830, #2073, #2298, #25185, #25916 [awaiting_review], #2593, #26349, #26663, #2704, #2713 [investigating], #27142, #27152, #27486, #27488, #27489, #27491, #27492, #27503 [proposed], #27808, #27809, #27810, #27811 [deployed], #27832 [executing], #28023 [proposed], #28212, #28213, #28220, #28233, #28481, #28493, #28550, #28958, #29017 [deployed], #29026, #29034, #29044 [proposed], #29067, #29274 [proposed], #29279 [proposed]
-
-**Last PICKUP PROMPT:**
-
-```
-has it approved and in motion)
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1788305443198 - BigMac breakout: engine restart + wedge-detector hardening
-
-Where we left off (verified 2026-09-02 02:01 PT):
-- BigMac ENGINE SERVING (verified: ssh_command 01:34-01:36 PT returned STARTUP=1, PORT=1, CURL=200, decode probe real tokens, router POST 200s, wedge detector HEALTHY exit 0).
-- No-sudo recovery path proven: docker stop bigmac-vllm (user in docker group) + unit Restart=always = clean relaunch.
-- Durable auto-recovery deployed: ~/bigmac_wedge_detector.sh + ~/bigmac_wedge_autorecover.sh on user crontab */5 (2-consecutive-wedged-verdict docker stop, MIN_UPTIME_MIN=45 gate).
-- NOPASSWD sudoers deployed safely (Ruben-approved): /etc/sudoers.d/bigmac-vllm-restart, 0440 root:root, exact-match systemctl restart/status bigmac-vllm (+ .service variants), visudo -cf parsed OK pre-install, negative test passed (sshd still demands password), engine still serving after install (verified: ssh_command 02:01 PT returned CURL=200 STARTUP=1 PORT=1).
-- #29279 [deployed] (verified: reconcile_ideas returned status=deployed dev_stage=ready_for_review). Bug library row 2713 resolved. fleet_inventory bigmac=healthy. Ledger appended twice (recovery + sudoers).
-
-Open threads to drive next:
-None — all work completed this session (engine serving, auto-recovery deployed, sudoers deployed and safety-verified).
-
-Reference IDs:
-- Ideas filed: #29279 [deployed]
-- Bug library: bigmac_never_bound_wedge_ray_placement_group_2026_09_01 (row 2713, resolved)
-- Files touched: ~/bigmac_wedge_detector.sh, ~/bigmac_wedge_autorecover.sh, ~/bigmac-vllm-restart.staged, user crontab, /etc/sudoers.d/bigmac-vllm-restart (on BigMac 10.100.0.19), /Users/rubenmajor/Documents/Cline/cline_task_ledger.md
-
-# Reversal Log
-- 'blocked on Ruben sudoers entry' -> 'docker-group restart path, no sudo needed' | insufficient probe | The initial claim that a sudoers entry was REQUIRED for restart was wrong: the SSH user has docker group access and the unit has Restart=always, so docker stop is a complete restart lever. Discovered when the steer forced a deeper lever probe. Causal note recorded in the bug library resolution text.
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
-<task_progress>
-- [x] Engine serving verified (01:34-01:36 PT: STARTUP=1, PORT=1, CURL=200, decode tokens, router 200s)
-- [x] Durable auto-recovery deployed (detector + crontab wrapper)
-- [x] #29279 [deployed], bug library resolved, ledger, fleet_inventory healthy
-- [x] STEER: staged sudoers file, visudo -cf → parsed OK
-- [x] Install via docker (0440 root:root), includedir confirmed
-- [x] Verify read-only sudo status works + grant scope narrow
-- [x] Negative test: non-granted command still demands password ✓
-- [x] Re-verify engine still serving (CURL=200, STARTUP=1, PORT=1)
-- [x] Update records (#29279 + ledger x2)
-- [x] Validate completion — ALL PASSED, GATE CLEAR
-- [x] Ship completion with pickup prompt
-</task_progress>
-</attempt_completion>
-```
-
 ### `1788326750196` — 9/2/2026, 2:02:39 AM PT — 589 turns
 
 **Original task:**
@@ -630,60 +871,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Verified the real speedup source: pool grew to 5 healthy (BigMac engine recovered 36.1 tok/s, first cline pick of the night)
 - [x] Current speed measured: cline p50 13.6s / p90 22.2s — best sustained window of the night
 - [x] Cicero/Nero verified against MDM portal 
-```
-
-### `1788336273670` — 9/2/2026, 1:59:13 AM PT — 134 turns
-
-**Original task:**
-
-```
-#Email CFA
-
-I saw this email and it's a general reply again to a specific request. I've seen a lot of these over the past few hours since Deepseek v4 pro went down. That LLM is NOT necessary in order for us to produce good responses. Please reoslve this so local replies properly
-```
-
-**Ideas referenced:** #10108, #10740, #1113, #1114, #1115, #11741, #11781, #12345, #12477, #12618, #12824, #12872, #12878, #13202, #1519, #16163, #16265, #16304, #16844, #18312, #18326, #20978 [blocked], #20979 [blocked], #25097, #2537, #26908, #26923, #27259, #29244, #29292, #29323 [proposed], #29324 [proposed], #7174
-
-**Last PICKUP PROMPT:**
-
-```
-file and restore-or-retire it.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-Pick up task — Email CFA local-first routing fix + frankenstein-llm error-loop repair.
-
-Where we left off (verified 2026-09-02 01:58 PT):
-- EmailAIResponder.php callModel() tools branch now routes frankenstein-tools (local) first, deepseek-v4-pro fallback. php -l clean, FPM reloaded, verified local gpt-oss-120b serving.
-- Frankenstein-llm malformed-MCP-tag error loop diagnosed + recorded in bug library (merged #1519).
-- Fleet at time of fix: deepseek-v4-pro DOWN, glm-5.2-local DOWN, 70B DOWN — local 120B pool (artemis/bigmac/julia) healthy.
-
-Open threads to drive next:
-1. #29323 [proposed] — build the frankenstein-llm malformed-MCP-tool-tag circuit breaker + native-vs-MCP steering injection + routing guard.
-2. #29324 [proposed] — verify nothing points at legacy api/postmark_inbound.php; restore-or-retire it (active webhook is routes/postmark_inbound_webhook.php).
-
-Reference IDs:
-- Ideas filed: #29323 [proposed], #29324 [proposed]
-- Ideas closed: none
-- Files touched: /var/www/emtskills/lib/EmailAIResponder.php (backup: EmailAIResponder.php.bak-localfirst-20260902-015040)
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Diagnose frankenstein-llm error iteration pattern
-- [x] Check frankenstein routing health - DeepSeek v4 pro DOWN, GLM local DOWN, 70B DOWN
-- [x] Record distinct bug in bug library (merged into #1519)
-- [x] ROOT CAUSE: EmailAIResponder callModel() hardcodes deepseek-v4-pro for tool emails
-- [x] Applied local-first fix + php -l passed + verified + FPM reloaded
-- [x] VERIFIED: frankenstein-tools routes to LOCAL gpt-oss-120b; qos_preempt was transient
-- [x] Confirmed active postmark webhook is routes/postmark_inbound_webhook.php
-- [x] Filed idea #29323 (error-loop guard) + #29324 (postmark_inbound cleanup)
-- [x] Updated handoff notes
-- [x] Reconciled both ideas + completed
-</task_progress>
-</attempt_completion>
 ```
 
 ### `1788327849553` — 9/2/2026, 1:56:46 AM PT — 214 turns
@@ -894,75 +1081,6 @@ When done, append to cline_task_ledger.md (rule 07), run order 66.
 - [x] Re-validate → ALL PASSED
 - [x] Check gate → CLEAR
 - [x] Ship attempt_completion
-</task_progress>
-</attempt_completion>
-```
-
-### `1788329531146` — 9/2/2026, 1:13:12 AM PT — 330 turns
-
-**Original task:**
-
-```
-#Joshua Qwen
-
-Troubleshoot Joshua Qwen 3.8 27B and bring to serving properly and address this issue so it serves as a good model in the mix of Qwen 3.8 27B lanes:
-
-## 3. Joshua "HTTP 200 but 0 tokens" — how can that be?
-
-The behavior, not the box, was the explanation. My earlier probe used max_tokens=8 and got content=None with finish_reason=length while HTTP was 200 (verified: ssh_command curl POST to 10.100.0.4:8001 with max_tokens=8 returned finish_reason=length, content=None, usage completion_tokens=8). With thinking disabled at the request level it answers normally (verified: ssh_command 
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11316, #11741, #11781, #11847, #11991, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12589, #12590, #12618, #12824, #12872, #12878, #13202, #15144, #15776, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16590, #16648, #16778, #16802, #16803, #16839, #16844, #16851, #17078, #17205, #17246, #17300, #1744, #1779, #178833, #1798, #1828, #18312, #18326, #18329, #1876, #18820, #19567, #20042, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2299, #23071, #23172, #25097, #25171, #25186, #2537, #25378, #25381, #2546, #26505, #26908, #26923, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #28729, #28958, #29054, #29280 [proposed], #29281 [proposed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-does not block Joshua serving.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1788336000000 — Joshua Qwen 3.8 27B troubleshooting and serving verification.
-
-Where we left off (verified 2026-09-02 01:07 PT):
-- Joshua Qwen 3.8 27B is serving correctly via LiteLLM lane joshua-qwen38-27b (verified: ssh_command curl POST to LiteLLM :4000 returned HTTP 200, content='PONG', finish_reason='stop')
-- enable_thinking:false is injected at lane level (config.yaml extra_body.chat_template_kwargs)
-- Engine tuned: prefix-caching ON, max-model-len 32768, max-num-seqs 8, gpu-mem-util 0.90, TP=2 XPU
-- Registry updated: served_ctx 32768, tuning notes added
-- Claudia tunnel :11521 dead (separate issue, engine behind tunnel not responding)
-
-Open threads to drive next:
-1. Claudia tunnel :11521 investigation — tunnel listening but engine not responding (human-only decision — no idea, separate task)
-
-Reference IDs:
-- Ideas filed: #29280 [deployed], #29281 [deployed]
-- Files touched: /etc/litellm/config.yaml, /etc/litellm/frankenstein_registry.yaml, /etc/systemd/system/joshua-qwen38.service, /etc/litellm/router_hook.py
-
-# Reversal Log
-No reversals this window.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Defect 1 fixed: enable_thinking:false on joshua lane (verified live)
-- [x] Defect 2 fixed: Qwen3.8 multi-system 400 via post-super sanitizer
-- [x] #29280: baseline TTFT (5.15s cold → 0.36s warm)
-- [x] #29280: service file located + read on Joshua
-- [x] #29280: edit service (prefix-caching, max-model-len 32768, max-num-seqs 8, util 0.90) — verified on disk
-- [x] #29280: restart issued — engine UP (startup complete=1, /v1/models 200)
-- [x] #29280: config.yaml max_input_tokens 32768 + notes updated
-- [x] #29280: post-tuning verification: cold TTFT=3.55s, warm TTFT=3.70s, decode working, all flags active
-- [x] #29280: registry notes fixed (clean YAML)
-- [x] #29281: joshua lane config verified correct (api_base 10.100.0.4:8001, enable_thinking false)
-- [x] Comparative probe: Joshua PONG verified direct + via LiteLLM lane
-- [x] Claudia tunnel :11521 dead (separate issue, not blocking Joshua)
-- [x] Update idea statuses to deployed
-- [x] Reconcile ideas: #29280 [deployed], #29281 [deployed]
-- [x] Validate completion: ALL PASSED
-- [x] Check gate: CLEAR
-- [x] attempt_completion
 </task_progress>
 </attempt_completion>
 ```

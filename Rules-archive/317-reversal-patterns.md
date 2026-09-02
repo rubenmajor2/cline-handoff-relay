@@ -5,14 +5,14 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **236**
-- Last generated: 2026-09-01 23:06
+- Reversals tracked: **237**
+- Last generated: 2026-09-02 00:06
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 120 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 121 | 51% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 38 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 31 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 25 | 11% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
@@ -27,7 +27,7 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 - Rule 91: 9 amendment(s)
 - Rule 302: 7 amendment(s)
 - Rule 321: 7 amendment(s)
-- Rule 323: 5 amendment(s)
+- Rule 323: 6 amendment(s)
 
 ## Recent reversals per bucket (newest first)
 
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-02** — Amends obligation 4 (VERIFICATION MUST BE REAL) and obligation 3 (FRESHNESS): when the human reports a system state ('MCPs are back online') that matches what an agent WANTS to be true, agreeing with it still requires a live probe before the agreement becomes 
 - **2026-09-02** — Amends Step 4 (HOST-UP != ENGINE-DOWN): the rule already forbade collapsing the two layers, but its wording let me write "BigMac WEDGED 18h" as a whole-box verdict from an unreachable :8000 plus a stale unit-log line. Step 4 now requires that any DOWN sentence
 - **2026-09-02** — Amends Step 2 (the four-state classification): ZERO TRAFFIC IN A LOG IS NOT A STATE. A box with 0 turns in /var/log/emsu-adapter-upstream.log may be (a) not a member of that pool at all (direct LiteLLM lanes like claudia/julia/cicero are NOT :11510 adapter mem
 - **2026-09-02** — - Claimed 'renders after login' from an anonymous 401 probe -> corrected: the authenticated render fataled with undefined $pdo (HTTP 500) | RCA bucket: insufficient probe | causal
 - **2026-09-02** — Amends clause 2 (acquisition gate): an HTTP 401 on the anonymous surface of an auth-gated route proves only that the route exists and the front controller runs — it is NOT evidence the authenticated surface renders. Shipping 'renders after login' without probi
-- **2026-09-01** — Amends rule 263 (verify before claim): before INSERT into an enumerated column (orchestrator_ideas.domain), probe the column definition first. An unverified enum value is silently rejected and stored as empty, which is an unverified write. Corrected 29208's do
 
 ### wrong premise
 

@@ -6,11 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 7:58:39 AM PT | window: last 72h | 76 tasks | index total 1053 (parsed 0, cached 1053)
+Generated: 9/2/2026, 8:58:39 AM PT | window: last 72h | 76 tasks | index total 1053 (parsed 1, cached 1052)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
-| `1788335461694` | 9/2/2026, 2:28:14 AM | 129 | 336KB | #GLM Ring |
+| `1788335461694` | 9/2/2026, 8:58:24 AM | 133 | 343KB | #GLM Ring |
 | `1788335579641` | 9/2/2026, 2:16:21 AM | 182 | 2694KB | #Oceanside Outage Remainder |
 | `1788329209654` | 9/2/2026, 2:14:36 AM | 266 | 5300KB | #Frankenstein LLM not obeying Cline Rules |
 | `1788324547743` | 9/2/2026, 2:14:28 AM | 834 | 2311KB | #Oceanside Outage |
@@ -91,7 +91,7 @@ Generated: 9/2/2026, 7:58:39 AM PT | window: last 72h | 76 tasks | index total 1
 
 ## Per-window detail
 
-### `1788335461694` — 9/2/2026, 2:28:14 AM PT — 129 turns
+### `1788335461694` — 9/2/2026, 8:58:24 AM PT — 133 turns
 
 **Original task:**
 
@@ -104,7 +104,7 @@ CURRENT STATE (verified 2026-09-02 00:33 PT by the previous window):
 - Relaunch #11 (dispatched 00:07:57 via ~/bin/glm53_relaunch_seq128.sh) is FROZEN at 39 log lines since the pynccl line at 00:09:58, worker RSS flat at 1622868 KB over 20s, :8210 unbound (verified: ssh_command return
 ```
 
-**Ideas referenced:** #11991, #1602, #178805, #178830, #1876, #1912, #1986, #1993, #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #26712, #2675, #2677, #2679, #26932, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
+**Ideas referenced:** #11991, #1602, #178805, #178830, #1876, #1912, #1986, #1993, #2083, #2157, #2159, #2168, #2174, #2185, #2307, #2314, #25764, #2603, #26400, #2647, #2654, #2659, #2662, #2663, #26712, #2675, #2677, #2679, #26932, #2704, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28894, #28948, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247 [executing], #29265, #29274 [proposed], #29284 [proposed], #29285 [executing], #29299 [proposed]
 
 _No PICKUP PROMPT found in this window (never completed, or rule-91 violation)._
 

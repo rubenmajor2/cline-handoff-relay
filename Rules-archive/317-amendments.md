@@ -967,3 +967,23 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 3 (escalation probe before declaring any wall): a single 'sudo: interactive authentication is required' failure is NOT a permission wall when the user holds docker-group membership — the escalation path that exists is `docker stop <container>` against a Restart=always unit (root-equivalent one-shot writes included). Source: BigMac 2026-09-02, the window initially declared the engine restart 'blocked on Ruben sudoers entry' and only found the working lever when a steer forced a deeper probe; engine recovered 2 min later with zero sudo. Any future 'cannot restart / no root access' claim on a docker-group box must first probe the docker path.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 23:39 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: emsu-wrong-section-20260902
+- RCA bucket: insufficient probe
+- Trigger pattern: bulk repair joined intent signal on email with sort -u / awk first-match instead of checking per-email value uniqueness
+- Reversal note: Amends clause 12(e)/adds to INSUFFICIENT_PROBE: when deriving a student's INTENT from form submissions, join on ALL submissions for that identity ordered by time, never on a DISTINCT/first-match aggregate. One student (4 entries, Fast Track on 8/19 and Accelerated on 8/31) was swapped to Fast Track from an arbitrary-row join and had to be reverted within the window. A bulk data repair driven by a per-key lookup must first prove the key maps to exactly one value (GROUP BY key HAVING COUNT(DISTINCT value)>1 = 0) or route those keys to the human-confirm bucket.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-02 23:41 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788373091938
+- RCA bucket: insufficient probe
+- Trigger pattern: bulk repair joined intent signal on email with sort -u / awk first-match instead of per-key value-uniqueness check
+- Reversal note: Amends clause 12(e) / INSUFFICIENT_PROBE: a bulk data repair driven by a per-key lookup (student email -> paid tuition line) must first prove each key maps to exactly one value (GROUP BY key HAVING COUNT(DISTINCT value) > 1 = 0) or route those keys to the human-confirm bucket. One student with 4 form entries (Fast Track 8/19, Accelerated 8/31) was swapped from an arbitrary-row join and reverted within the window.
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.

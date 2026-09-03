@@ -6,7 +6,7 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 4:58:43 PM PT | window: last 72h | 86 tasks | index total 1063 (parsed 1, cached 1062)
+Generated: 9/2/2026, 5:58:43 PM PT | window: last 72h | 85 tasks | index total 1063 (parsed 0, cached 1063)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
@@ -95,7 +95,6 @@ Generated: 9/2/2026, 4:58:43 PM PT | window: last 72h | 86 tasks | index total 1
 | `1788065826964` | 8/30/2026, 9:59:58 PM | 306 | 1273KB | ## — Kaizon Learner — MID-FLIGHT |
 | `1788065980737` | 8/30/2026, 9:57:51 PM | 196 | 793KB | ## Kaizon Learner (fork of window #5) — BLANK |
 | `1788065859789` | 8/30/2026, 6:59:56 PM | 302 | 650KB | ## — Cline Learner / cluster surfacing — COMPLETED |
-| `1788133241066` | 8/30/2026, 5:17:51 PM | 122 | 546KB | #Stuck windows |
 
 ---
 
@@ -3636,51 +3635,5 @@ Reference IDs:
 When done, append to cline_task_ledger.md per rule 07, run order 66.
 ═══════════════════════════════════════════════
 </result>
-</attempt_completion>
-```
-
-### `1788133241066` — 8/30/2026, 5:17:51 PM PT — 122 turns
-
-**Original task:**
-
-```
-#Stuck windows
-
-Some frankenstein-llm windows may be stuck from last night. I can't quite tell, but they seem to be stuck on Thinmking... for several hours.
-```
-
-**Ideas referenced:** #0000, #081020, #10108, #10740, #1110, #11741, #11781, #12477, #12618, #12672, #12824, #12872, #12878, #13121, #13202, #13832, #16163, #16265, #16304, #16844, #17202, #178656, #178671, #178694, #178813, #18312, #18326, #19338, #19426, #19686, #1998, #20251, #21045, #25066, #25097, #2516, #2521, #2537, #25471, #25796, #25797, #25798, #25888, #26696, #2670, #26710, #2672, #26725 [proposed], #26908, #26923, #26925, #26932, #27069, #27152, #27259, #27503 [proposed], #28034, #28543, #28546, #28607, #28760, #28761, #28762, #28763, #28764, #28765, #28766, #28774, #28776, #28778, #28780, #28783, #28891, #28899 [awaiting_review], #28900 [awaiting_review], #28901 [awaiting_review], #6520
-
-**Last PICKUP PROMPT:**
-
-```
- only you can do in Oceanside.
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1788133241066 — Stuck frankenstein windows: GLM ring :8210 saturation (drain decision + Julia power cycle)
-
-Where we left off (verified 2026-08-30 17:16 PT):
-- Root cause proven: 4 fast lanes down -> all reasoning traffic pinned to GLM ring :8210 (verified 17:11 PT: ss -tn counted 76 ESTAB conns on :8210; curl :8210/metrics returned vllm:num_requests_running=30.0 waiting=0.0; canary log /var/log/emsu-frankenstein-canary.log shows recurring http=000 t=45.002s timeouts incl 16:50:51 PT)
-- Fast lanes down: julia-235b :11513 dark (julia_vllm_procs=0, tunnel 2205 dead, physical power cycle required); claudia-qwen38-27b :11521 no listener; cicero-235b :11520 no listener; nero :11525 / maximus :11530 / joshua :8001 quarantine-decayed
-- Adapter restarted via sudo systemctl restart frankenstein-tools (verified 17:03 PT: systemctl is-active returned active; ss -tlnp showed LISTEN 127.0.0.1:11510); pin state cleared but demand re-pinned - supply is the bottleneck
-- 7 LiteLLM model routes point at :8210 with independent max_parallel_requests totaling 12, plus adapter FRANK_BOX_CAPACITY 8210=8 -> theoretical 20 vs measured sustainable ~8 (verified: yaml parse of /etc/litellm/config.yaml + systemctl show Environment)
-
-Open threads to drive next:
-1. #28899 [proposed] - Drain the ring: sudo systemctl restart glm52-tunnel-8210 drops the 76 parked conns; disruptive (kills in-flight ring traffic) so needs Ruben go-ahead by 2026-08-31 09:00 PT
-2. #28900 [proposed] - Consolidate LiteLLM :8210 lane admission budgets (7 routes, sum mpr=12 + adapter 8) into one shared gate so the ring never exceeds ~8 concurrent again
-3. #28901 [proposed] - Julia physical power cycle in Oceanside - the only path back to a fast 235B interactive lane; wedge watchdog cannot relaunch a powered-off box
-
-Reference IDs:
-- Ideas filed: #28899 [proposed], #28900 [proposed], #28901 [proposed]
-- Files touched: none (server read-only diagnosis; 3 rows inserted into orchestrator_ideas)
-
-# Reversal Log
-No reversals this window.
-
-When done, append to cline_task_ledger.md per rule 07, run order 66.
-═══════════════════════════════════════════════</result>
 </attempt_completion>
 ```

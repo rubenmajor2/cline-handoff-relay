@@ -5,14 +5,14 @@
 
 The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG and got corrected: every rule-317 reversal, with the RCA bucket the amending agent assigned. These are the mistake classes most likely to repeat, ranked by how often they actually have.
 
-- Reversals tracked: **244**
-- Last generated: 2026-09-02 17:34
+- Reversals tracked: **245**
+- Last generated: 2026-09-02 18:34
 
 ## Mistake classes by frequency
 
 | RCA bucket | count | share | what it means |
 |---|---|---|---|
-| insufficient probe | 126 | 52% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
+| insufficient probe | 127 | 52% | You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint. |
 | wrong premise | 39 | 16% | The reasoning was sound but rested on a false starting fact. State the premise explicitly and probe THAT before building on it. |
 | unread source | 32 | 13% | The answer was already written down and nobody read it. Search the record (registry, onboarding idea, HANDOFF_NOTES, bug library) BEFORE probing the network or guessing. |
 | scope error | 25 | 10% | The claim was true of a narrower population than stated. Enumerate the outcome space and name the window before quantifying anything. |
@@ -20,7 +20,7 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 ## Causal rules most often amended
 
-- Rule 317: 106 amendment(s)
+- Rule 317: 107 amendment(s)
 - Rule 297: 47 amendment(s)
 - Rule 315: 30 amendment(s)
 - Rule 91: 10 amendment(s)
@@ -35,11 +35,11 @@ The YOLO learner mines tasks that DIED. This file mines tasks that were WRONG an
 
 _You had SOME evidence and stopped early. One auth error is not a dead credential; one EACCES is not a permission wall; a narration column is not an outcome. Before any negative or completion claim, acquire the probative artifact: the structured field, the escalation path, the second endpoint._
 
+- **2026-09-03** — - initial: adapter reasoning-promotion was the sole cause of spec-gen failures → corrected: a second cause (emsu-codegen missing registry row, 8192 default ctx clamping max_tokens
 - **2026-09-02** — Amends clause 12(e) / INSUFFICIENT_PROBE: a bulk data repair driven by a per-key lookup (student email -> paid tuition line) must first prove each key maps to exactly one value (GROUP BY key HAVING COUNT(DISTINCT value) > 1 = 0) or route those keys to the huma
 - **2026-09-02** — Amends clause 12(e)/adds to INSUFFICIENT_PROBE: when deriving a student's INTENT from form submissions, join on ALL submissions for that identity ordered by time, never on a DISTINCT/first-match aggregate. One student (4 entries, Fast Track on 8/19 and Acceler
 - **2026-09-02** — Amends Step 2 (classify state) + detector section: an empty curl response plus a command-line grep are NOT evidence a tunnel/listener is down. Run ss -tlnp on the port to see the owning process (a reverse-tunnel forward shows as sshd listening) BEFORE declarin
 - **2026-09-02** — Amends clause 3 (escalation probe before declaring any wall): a single 'sudo: interactive authentication is required' failure is NOT a permission wall when the user holds docker-group membership — the escalation path that exists is `docker stop <container>` ag
-- **2026-09-02** — Amends step 7 of the 8-step traceback: an issued-certificate row proves a print EVENT occurred, NOT that the tree was satisfied at that instant. When an issued cert conflicts with failing conditions, probe grade_grades_history WHERE timemodified <= <issue epoc
 
 ### wrong premise
 

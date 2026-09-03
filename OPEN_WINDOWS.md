@@ -6,10 +6,11 @@ Do NOT hand-edit. Regenerated every 30 min by launchd `com.emsu.cline-task-index
 **If you are a fresh window recovering lost work: this file IS the recovery artifact.**
 Read it instead of parsing `api_conversation_history.json`. Machine-readable twin: `task_index.json`.
 
-Generated: 9/2/2026, 5:58:43 PM PT | window: last 72h | 85 tasks | index total 1063 (parsed 0, cached 1063)
+Generated: 9/2/2026, 6:58:43 PM PT | window: last 72h | 85 tasks | index total 1063 (parsed 1, cached 1062)
 
 | Task ID | Last active (PT) | Turns | Size | Title (first line) |
 |---|---|---|---|---|
+| `1788329531146` | 9/2/2026, 6:36:27 PM | 366 | 1565KB | #Joshua Qwen |
 | `1788373091938` | 9/2/2026, 4:52:57 PM | 730 | 11940KB | #Frankenstein-llm vision |
 | `1788384231784` | 9/2/2026, 3:41:58 PM | 308 | 625KB | #TeamHub |
 | `1788386436202` | 9/2/2026, 3:37:09 PM | 89 | 626KB | please add Claude Fable 5.1 to my list of choices here in Cline for models to pick from. |
@@ -18,7 +19,6 @@ Generated: 9/2/2026, 5:58:43 PM PT | window: last 72h | 85 tasks | index total 1
 | `1788372387064` | 9/2/2026, 12:21:07 PM | 160 | 893KB | #September 1 Externship Switchover |
 | `1788376752251` | 9/2/2026, 12:19:12 PM | 1 | 800KB | #Deepseek/Qwen Usage on Open Router |
 | `1788336273670` | 9/2/2026, 12:15:32 PM | 178 | 2759KB | #Email CFA |
-| `1788329531146` | 9/2/2026, 12:09:39 PM | 358 | 1534KB | #Joshua Qwen |
 | `1788335512875` | 9/2/2026, 12:04:57 PM | 180 | 599KB | #Bigmac |
 | `1788243351199` | 9/2/2026, 11:33:11 AM | 356 | 2795KB | #TDSHS |
 | `1788370171352` | 9/2/2026, 11:22:44 AM | 234 | 769KB | #GLM Ring |
@@ -99,6 +99,67 @@ Generated: 9/2/2026, 5:58:43 PM PT | window: last 72h | 85 tasks | index total 1
 ---
 
 ## Per-window detail
+
+### `1788329531146` — 9/2/2026, 6:36:27 PM PT — 366 turns
+
+**Original task:**
+
+```
+#Joshua Qwen
+
+Troubleshoot Joshua Qwen 3.8 27B and bring to serving properly and address this issue so it serves as a good model in the mix of Qwen 3.8 27B lanes:
+
+## 3. Joshua "HTTP 200 but 0 tokens" — how can that be?
+
+The behavior, not the box, was the explanation. My earlier probe used max_tokens=8 and got content=None with finish_reason=length while HTTP was 200 (verified: ssh_command curl POST to 10.100.0.4:8001 with max_tokens=8 returned finish_reason=length, content=None, usage completion_tokens=8). With thinking disabled at the request level it answers normally (verified: ssh_command 
+```
+
+**Ideas referenced:** #10108, #10740, #1130, #1131, #11316, #11741, #11781, #11847, #11991, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12589, #12590, #12618, #12824, #12872, #12878, #13202, #15144, #15776, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16590, #16648, #16778, #16802, #16803, #16839, #16844, #16851, #17078, #17205, #17246, #17300, #1744, #1779, #178805, #178832, #178833, #1798, #1828, #18312, #18326, #18329, #1876, #18820, #1912, #19567, #20042, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #23071, #23172, #25097, #25171, #25186, #2537, #25378, #25381, #2546, #25764, #26400, #2647, #26505, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26908, #26923, #26932, #2712, #2719, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28729, #28894, #28948, #28958, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29054, #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247, #29265, #29274, #29279 [deployed], #29280 [proposed], #29281 [proposed], #29285 [deployed], #29299 [deployed], #7142, #7149
+
+**Last PICKUP PROMPT:**
+
+```
+ection at the end of the file)
+
+═══════════════════════════════════════════════
+PICKUP PROMPT (paste into a fresh Cline window)
+═══════════════════════════════════════════════
+
+Pick up task #1788329531146 — Joshua Qwen 3.8 27B lane tuning + serving verification.
+
+Where we left off (verified 2026-09-02 18:35 PT):
+- Joshua :8001 SERVING with enable_thinking:false injected at LiteLLM lane level
+- Engine tuned: prefix-caching ON, 32K ctx, max-num-seqs 8, gpu-mem 0.90
+- Qwen3.8 multi-system 400 fixed via post-super sanitizer in router_hook.py
+- GLM53_RING_STATE_TRACKER.md updated with Joshua tuning section (confirmed present)
+
+Open threads to drive next:
+1. #29280 [deployed] — Joshua engine tuning complete, no further action needed
+2. #29281 [deployed] — Lane config verified, no further action needed
+
+Reference IDs:
+- Ideas filed: #29280 [deployed], #29281 [deployed]
+- Files touched: /etc/litellm/config.yaml, /etc/litellm/router_hook.py, /etc/systemd/system/joshua-qwen38.service, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md
+
+# Reversal Log
+No reversals this window.
+
+When done, append to cline_task_ledger.md (rule 07), run order 66.
+═══════════════════════════════════════════════
+</result>
+<task_progress>
+- [x] Joshua Qwen 3.8 27B serving properly (verified: PONG via LiteLLM lane)
+- [x] Defect 1 fixed: enable_thinking:false on joshua lane
+- [x] Defect 2 fixed: Qwen3.8 multi-system 400 via post-super sanitizer
+- [x] #29280 [deployed]: Joshua engine tuning
+- [x] #29281 [deployed]: Lane config verified
+- [x] GLM53_RING_STATE_TRACKER.md confirmed updated (tail -50 shows Joshua section)
+- [x] Ideas reconciled: both [deployed]
+- [x] Validation passed, gate clear
+- [x] Completion shipped
+</task_progress>
+</attempt_completion>
+```
 
 ### `1788373091938` — 9/2/2026, 4:52:57 PM PT — 730 turns
 
@@ -367,67 +428,6 @@ When done, append to cline_task_ledger.md per rule 07, run order 66.
 - [x] Got real provenance for Email CFA claim (rule 323)
 - [x] validate_completion ALL PASSED
 - [x] check_gate CLEAR + shipped
-</task_progress>
-</attempt_completion>
-```
-
-### `1788329531146` — 9/2/2026, 12:09:39 PM PT — 358 turns
-
-**Original task:**
-
-```
-#Joshua Qwen
-
-Troubleshoot Joshua Qwen 3.8 27B and bring to serving properly and address this issue so it serves as a good model in the mix of Qwen 3.8 27B lanes:
-
-## 3. Joshua "HTTP 200 but 0 tokens" — how can that be?
-
-The behavior, not the box, was the explanation. My earlier probe used max_tokens=8 and got content=None with finish_reason=length while HTTP was 200 (verified: ssh_command curl POST to 10.100.0.4:8001 with max_tokens=8 returned finish_reason=length, content=None, usage completion_tokens=8). With thinking disabled at the request level it answers normally (verified: ssh_command 
-```
-
-**Ideas referenced:** #10108, #10740, #1130, #1131, #11316, #11741, #11781, #11847, #11991, #1241, #12425, #12477, #1248, #1249, #1252, #1258, #12589, #12590, #12618, #12824, #12872, #12878, #13202, #15144, #15776, #15979, #16032, #16033, #16036, #16122, #16163, #16265, #16304, #16338, #16448, #16452, #16590, #16648, #16778, #16802, #16803, #16839, #16844, #16851, #17078, #17205, #17246, #17300, #1744, #1779, #178805, #178832, #178833, #1798, #1828, #18312, #18326, #18329, #1876, #18820, #1912, #19567, #20042, #20549, #2063, #2065, #20662, #2073, #20985, #21038, #2127, #2168, #2174, #2299, #23071, #23172, #25097, #25171, #25186, #2537, #25378, #25381, #2546, #25764, #26400, #2647, #26505, #2654, #2659, #2662, #2663, #2675, #2677, #2679, #26908, #26923, #26932, #2712, #2719, #27236, #27249 [executing], #27250, #27259, #27284, #27503, #28306, #28586, #28596, #28622, #28704, #28705, #28706, #28723, #28729, #28894, #28948, #28958, #29017 [deployed], #29026 [deployed], #29032 [deployed], #29033 [blocked], #29034 [deployed], #29048 [deployed], #29054, #29090 [deployed], #29091, #29094 [blocked], #29096 [blocked], #29102, #29103, #29105, #29113 [executing], #29117, #29147 [deployed], #29193, #29244, #29247, #29265, #29274, #29279 [deployed], #29280 [proposed], #29281 [proposed], #29285 [deployed], #29299 [deployed], #7142, #7149
-
-**Last PICKUP PROMPT:**
-
-```
-ning + enable_thinking:false')
-
-═══════════════════════════════════════════════
-PICKUP PROMPT (paste into a fresh Cline window)
-═══════════════════════════════════════════════
-
-Pick up task #1788329531146 — Joshua Qwen 3.8 27B lane tuning + serving verification.
-
-Where we left off (verified 2026-09-02 12:06 PT):
-- Joshua :8001 SERVING with enable_thinking:false injected at LiteLLM lane level
-- Engine tuned: prefix-caching ON, 32K ctx, max-num-seqs 8, gpu-mem 0.90
-- Qwen3.8 multi-system 400 fixed via post-super sanitizer in router_hook.py
-- GLM53_RING_STATE_TRACKER.md updated with Joshua tuning section
-
-Open threads to drive next:
-1. #29280 [deployed] — Joshua engine tuning complete, no further action needed
-2. #29281 [deployed] — Lane config verified, no further action needed
-
-Reference IDs:
-- Ideas filed: #29280 [deployed], #29281 [deployed]
-- Files touched: /etc/litellm/config.yaml, /etc/litellm/router_hook.py, /etc/systemd/system/joshua-qwen38.service, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md
-
-# Reversal Log
-No reversals this window.
-
-When done, append to cline_task_ledger.md (rule 07), run order 66.
-═══════════════════════════════════════════════
-</result>
-<task_progress>
-- [x] Joshua Qwen 3.8 27B serving properly (verified: PONG via LiteLLM lane)
-- [x] Defect 1 fixed: enable_thinking:false on joshua lane
-- [x] Defect 2 fixed: Qwen3.8 multi-system 400 via post-super sanitizer
-- [x] #29280 [deployed]: Joshua engine tuning
-- [x] #29281 [deployed]: Lane config verified
-- [x] GLM53_RING_STATE_TRACKER.md updated
-- [x] Ideas reconciled: both [deployed]
-- [x] Validation passed, gate clear
-- [x] Completion shipped
 </task_progress>
 </attempt_completion>
 ```

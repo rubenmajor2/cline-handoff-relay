@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-03T00:58:43.452Z",
+ "generated_at": "2026-09-03T01:58:43.869Z",
  "counts": {
-  "parsed": 0,
-  "reused": 1063,
+  "parsed": 1,
+  "reused": 1062,
   "failed": 0,
   "total": 1063
  },
@@ -152451,13 +152451,13 @@
   },
   "1788329531146": {
    "task_id": "1788329531146",
-   "mtime": 1788376179564,
+   "mtime": 1788399387520,
    "created_at": "2026-09-02T06:12:11.146Z",
-   "last_modified": "2026-09-02T19:09:39.564Z",
-   "size_kb": 1534,
-   "turn_count": 358,
+   "last_modified": "2026-09-03T01:36:27.520Z",
+   "size_kb": 1565,
+   "turn_count": 366,
    "title": "#Joshua Qwen\n\nTroubleshoot Joshua Qwen 3.8 27B and bring to serving properly and address this issue so it serves as a good model in the mix of Qwen 3.8 27B lanes:\n\n## 3. Joshua \"HTTP 200 but 0 tokens\" — how can that be?\n\nThe behavior, not the box, was the explanation. My earlier probe used max_tokens=8 and got content=None with finish_reason=length while HTTP was 200 (verified: ssh_command curl POST to 10.100.0.4:8001 with max_tokens=8 returned finish_reason=length, content=None, usage completion_tokens=8). With thinking disabled at the request level it answers normally (verified: ssh_command curl POST to 10.100.0.4:8001 with chat_template_kwargs enable_thinking:false returned finish_reason=",
-   "pickup_prompt": "ning + enable_thinking:false')\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1788329531146 — Joshua Qwen 3.8 27B lane tuning + serving verification.\n\nWhere we left off (verified 2026-09-02 12:06 PT):\n- Joshua :8001 SERVING with enable_thinking:false injected at LiteLLM lane level\n- Engine tuned: prefix-caching ON, 32K ctx, max-num-seqs 8, gpu-mem 0.90\n- Qwen3.8 multi-system 400 fixed via post-super sanitizer in router_hook.py\n- GLM53_RING_STATE_TRACKER.md updated with Joshua tuning section\n\nOpen threads to drive next:\n1. #29280 [deployed] — Joshua engine tuning complete, no further action needed\n2. #29281 [deployed] — Lane config verified, no further action needed\n\nReference IDs:\n- Ideas filed: #29280 [deployed], #29281 [deployed]\n- Files touched: /etc/litellm/config.yaml, /etc/litellm/router_hook.py, /etc/systemd/system/joshua-qwen38.service, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md\n\n# Reversal Log\nNo reversals this window.\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Joshua Qwen 3.8 27B serving properly (verified: PONG via LiteLLM lane)\n- [x] Defect 1 fixed: enable_thinking:false on joshua lane\n- [x] Defect 2 fixed: Qwen3.8 multi-system 400 via post-super sanitizer\n- [x] #29280 [deployed]: Joshua engine tuning\n- [x] #29281 [deployed]: Lane config verified\n- [x] GLM53_RING_STATE_TRACKER.md updated\n- [x] Ideas reconciled: both [deployed]\n- [x] Validation passed, gate clear\n- [x] Completion shipped\n</task_progress>\n</attempt_completion>",
+   "pickup_prompt": "ection at the end of the file)\n\n═══════════════════════════════════════════════\nPICKUP PROMPT (paste into a fresh Cline window)\n═══════════════════════════════════════════════\n\nPick up task #1788329531146 — Joshua Qwen 3.8 27B lane tuning + serving verification.\n\nWhere we left off (verified 2026-09-02 18:35 PT):\n- Joshua :8001 SERVING with enable_thinking:false injected at LiteLLM lane level\n- Engine tuned: prefix-caching ON, 32K ctx, max-num-seqs 8, gpu-mem 0.90\n- Qwen3.8 multi-system 400 fixed via post-super sanitizer in router_hook.py\n- GLM53_RING_STATE_TRACKER.md updated with Joshua tuning section (confirmed present)\n\nOpen threads to drive next:\n1. #29280 [deployed] — Joshua engine tuning complete, no further action needed\n2. #29281 [deployed] — Lane config verified, no further action needed\n\nReference IDs:\n- Ideas filed: #29280 [deployed], #29281 [deployed]\n- Files touched: /etc/litellm/config.yaml, /etc/litellm/router_hook.py, /etc/systemd/system/joshua-qwen38.service, /etc/litellm/frankenstein_registry.yaml, /var/www/emtskills/docs/GLM53_RING_STATE_TRACKER.md\n\n# Reversal Log\nNo reversals this window.\n\nWhen done, append to cline_task_ledger.md (rule 07), run order 66.\n═══════════════════════════════════════════════\n</result>\n<task_progress>\n- [x] Joshua Qwen 3.8 27B serving properly (verified: PONG via LiteLLM lane)\n- [x] Defect 1 fixed: enable_thinking:false on joshua lane\n- [x] Defect 2 fixed: Qwen3.8 multi-system 400 via post-super sanitizer\n- [x] #29280 [deployed]: Joshua engine tuning\n- [x] #29281 [deployed]: Lane config verified\n- [x] GLM53_RING_STATE_TRACKER.md confirmed updated (tail -50 shows Joshua section)\n- [x] Ideas reconciled: both [deployed]\n- [x] Validation passed, gate clear\n- [x] Completion shipped\n</task_progress>\n</attempt_completion>",
    "ideas": {
     "1130": null,
     "1131": null,

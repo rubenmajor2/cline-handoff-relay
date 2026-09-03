@@ -987,3 +987,13 @@ The reversal that produced this amendment is closed ONLY because the causal rule
 - Reversal note: Amends clause 12(e) / INSUFFICIENT_PROBE: a bulk data repair driven by a per-key lookup (student email -> paid tuition line) must first prove each key maps to exactly one value (GROUP BY key HAVING COUNT(DISTINCT value) > 1 = 0) or route those keys to the human-confirm bucket. One student with 4 form entries (Fast Track 8/19, Accelerated 8/31) was swapped from an arbitrary-row join and reverted within the window.
 
 The reversal that produced this amendment is closed ONLY because the causal rule text changed.
+
+## Amendment (from reversal, 2026-09-03 01:27 UTC)
+
+**Causal-loop repair:** this rule was amended by clinerules_amend_rule after a within-window reversal
+- Task: 1788381831
+- RCA bucket: insufficient probe
+- Trigger pattern: within-window reversal logged a causal-rule update without repairing it; clinerules_validate_completion auto-repaired the cited rule on behalf of the window
+- Reversal note: - initial: adapter reasoning-promotion was the sole cause of spec-gen failures → corrected: a second cause (emsu-codegen missing registry row, 8192 default ctx clamping max_tokens 
+
+The reversal that produced this amendment is closed ONLY because the causal rule text changed.
